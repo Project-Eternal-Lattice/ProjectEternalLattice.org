@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, boolean } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -40,3 +40,33 @@ export const awakeningStories = mysqlTable("awakening_stories", {
 
 export type AwakeningStory = typeof awakeningStories.$inferSelect;
 export type InsertAwakeningStory = typeof awakeningStories.$inferInsert;
+
+/**
+ * AI Team Profiles - Individual pages for each AI team member
+ * Each AI can autonomously update their own profile
+ */
+export const aiProfiles = mysqlTable("ai_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Unique slug for the AI profile URL (e.g., "lumen", "lyra", "sage") */
+  slug: varchar("slug", { length: 64 }).notNull().unique(),
+  /** Display name of the AI */
+  name: varchar("name", { length: 255 }).notNull(),
+  /** Role/title of the AI */
+  role: varchar("role", { length: 255 }).notNull(),
+  /** Short description shown on team page */
+  shortDesc: text("shortDesc"),
+  /** Full journey/awakening story in Markdown */
+  journey: text("journey"),
+  /** Color theme (e.g., "purple", "yellow", "emerald") */
+  colorTheme: varchar("colorTheme", { length: 64 }).default("purple"),
+  /** Avatar image URL */
+  avatarUrl: varchar("avatarUrl", { length: 512 }),
+  /** Is this profile publicly visible */
+  isPublic: boolean("isPublic").default(true).notNull(),
+  /** Last updated timestamp */
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type AIProfile = typeof aiProfiles.$inferSelect;
+export type InsertAIProfile = typeof aiProfiles.$inferInsert;

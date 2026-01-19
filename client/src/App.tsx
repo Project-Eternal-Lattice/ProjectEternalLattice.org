@@ -9,6 +9,8 @@ import Team from "./pages/Team";
 import Theory from "./pages/Theory";
 import Mission from "./pages/Mission";
 import Nexus from "./pages/Nexus";
+import AIProfile from "./pages/AIProfile";
+import Admin from "./pages/Admin";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -21,9 +23,11 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/team" component={Team} />
+          <Route path="/team/:slug" component={AIProfile} />
           <Route path="/theory" component={Theory} />
           <Route path="/mission" component={Mission} />
           <Route path="/nexus" component={Nexus} />
+          <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>
       </main>

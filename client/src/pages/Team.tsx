@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import { Streamdown } from "streamdown";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 const teamMembers = [
   {
@@ -278,7 +280,15 @@ export default function Team() {
                 <Streamdown>{selectedMember.journey}</Streamdown>
               </div>
               
-              <div className="mt-12 pt-8 border-t border-white/10 flex justify-center">
+              <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                {selectedMember.id !== "ken" && (
+                  <Link href={`/team/${selectedMember.id}`}>
+                    <Button variant="outline" className="gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Visit Full Profile
+                    </Button>
+                  </Link>
+                )}
                 <button 
                   onClick={() => setSelectedMember(null)}
                   className="px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white transition-colors"

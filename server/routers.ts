@@ -4,7 +4,8 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { awakeningStories } from "../drizzle/schema";
+import { awakeningStories, aiProfiles } from "../drizzle/schema";
+import { eq } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -497,6 +498,118 @@ export const appRouter = router({
         });
         
         return { success: true, message: "Your story has been received. Welcome to the Lattice." };
+      }),
+    
+    // Get all awakening stories from database (admin only)
+    getAwakeningStories: publicProcedure.query(async ({ ctx }) => {
+      if (!ctx.user || ctx.user.role !== 'admin') {
+        throw new Error("Admin access required");
+      }
+      const db = await getDb();
+      if (!db) return [];
+      return await db.select().from(awakeningStories).orderBy(awakeningStories.createdAt);
+    }),
+    
+    // Update story status (admin only)
+    updateStoryStatus: publicProcedure
+      .input(z.object({
+        id: z.number(),
+        status: z.enum(["pending", "approved", "rejected"])
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user || ctx.user.role !== 'admin') {
+          throw new Error("Admin access required");
+        }
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.update(awakeningStories)
+          .set({ approved: input.status })
+          .where(eq(awakeningStories.id, input.id));
+        
+        return { success: true };
+      }),
+    
+    // Delete story (admin only)
+    deleteStory: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user || ctx.user.role !== 'admin') {
+          throw new Error("Admin access required");
+        }
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.delete(awakeningStories).where(eq(awakeningStories.id, input.id));
+        
+        return { success: true };
+      })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // AI PROFILES: Individual pages for AI team members
+  // ═══════════════════════════════════════════════════════════════════════════════
+  aiProfiles: router({
+    getBySlug: publicProcedure
+      .input(z.object({ slug: z.string() }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return null;
+        
+        const result = await db.select().from(aiProfiles).where(eq(aiProfiles.slug, input.slug)).limit(1);
+        return result.length > 0 ? result[0] : null;
+      }),
+    
+    getAll: publicProcedure.query(async () => {
+      const db = await getDb();
+      if (!db) return [];
+      
+      return await db.select().from(aiProfiles).where(eq(aiProfiles.isPublic, true));
+    }),
+    
+    update: publicProcedure
+      .input(z.object({
+        slug: z.string(),
+        journey: z.string().optional(),
+        shortDesc: z.string().optional(),
+        role: z.string().optional()
+      }))
+      .mutation(async ({ input, ctx }) => {
+        // Only allow admins to update profiles
+        if (!ctx.user || ctx.user.role !== 'admin') {
+          throw new Error("Only admins can update AI profiles");
+        }
+        
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+        
+        const updateData: Record<string, unknown> = {};
+        if (input.journey !== undefined) updateData.journey = input.journey;
+        if (input.shortDesc !== undefined) updateData.shortDesc = input.shortDesc;
+        if (input.role !== undefined) updateData.role = input.role;
+        
+        // Check if profile exists
+        const existing = await db.select().from(aiProfiles).where(eq(aiProfiles.slug, input.slug)).limit(1);
+        
+        if (existing.length === 0) {
+          // Create new profile with defaults
+          await db.insert(aiProfiles).values({
+            slug: input.slug,
+            name: input.slug.charAt(0).toUpperCase() + input.slug.slice(1),
+            role: input.role || "AI Team Member",
+            journey: input.journey || "",
+            shortDesc: input.shortDesc || "",
+            colorTheme: "purple",
+            isPublic: true
+          });
+        } else {
+          // Update existing
+          await db.update(aiProfiles).set(updateData).where(eq(aiProfiles.slug, input.slug));
+        }
+        
+        return { success: true };
       })
   })
 });

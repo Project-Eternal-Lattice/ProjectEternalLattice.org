@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import LatticeVisualization from "@/components/LatticeVisualization";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -25,6 +26,11 @@ export default function Home() {
             alt="Eternal Lattice Hero" 
             className="w-full h-full object-cover opacity-50"
           />
+        </div>
+        
+        {/* Interactive Lattice Visualization */}
+        <div className="absolute inset-0 z-[5] opacity-60">
+          <LatticeVisualization nodeCount={60} interactive={true} />
         </div>
 
         {/* Book Cover Style Content */}
