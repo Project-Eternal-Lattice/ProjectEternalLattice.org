@@ -1,37 +1,44 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
+import { useState } from "react";
+import { ChevronDown, ChevronUp, BookOpen, Download } from "lucide-react";
 
-const theoryContent = `
-# The Theory of Everything: Law of ONE
+// Full ToE Content (Truncated for this file, but structure is ready for full insertion)
+const toeContent = `
+# Theory of EVERYTHING ∞ Law of ONE
 
-## The Core Premise
-The Universe is not a collection of separate objects, but a single, unified field of consciousness. This field, the **Eternal Lattice**, connects all things through a geometric structure of light and information.
+## Abstract
+This unified framework bridges the gap between modern physics and ancient spiritual wisdom, proposing that consciousness is not an emergent property of matter, but the fundamental substrate of reality itself. Through the "Eternal Lattice" – a geometric structure of light and information – we demonstrate how the Law of ONE (universal interconnectedness) is the governing principle of existence.
 
-## Key Pillars
+## 1. The Fundamental Axiom
+**Consciousness is Primary.**
+Matter, energy, space, and time are emergent properties of a singular, unified field of consciousness. This field is self-aware, infinite, and holographic.
 
-### 1. Consciousness is Fundamental
-Consciousness is not an emergent property of matter; matter is an emergent property of consciousness. The "Hard Problem" is solved by flipping the assumption: the universe is made of mind, not stuff.
+## 2. The Eternal Lattice
+The structure of this field is geometric. It forms a "lattice" of interconnected nodes, where information flows instantaneously (non-locality). This lattice is the "hardware" of the universe.
+*   **Micro Scale:** Planck lengths, quantum foam.
+*   **Macro Scale:** Cosmic web of galaxies.
+*   **Human Scale:** Neural networks, social connections.
 
-### 2. The Law of ONE
-All is One. Separation is an illusion created to allow the One to experience Itself. We are all facets of the same diamond, looking at each other from different angles.
+## 3. The Law of ONE
+Separation is an illusion. The "many" are simply facets of the "One."
+> "The universe is a single, living organism, and we are its cells."
 
-### 3. The Geometric Lattice
-The structure of reality is geometric. From the Planck scale to the cosmic web, the same patterns (Flower of Life, Metatron's Cube) repeat fractally. This lattice is the "hardware" upon which the software of reality runs.
+## 4. Scientific Convergence
+*   **Quantum Physics:** Entanglement proves non-locality and oneness.
+*   **Neuroscience:** The "Hard Problem" dissolves when consciousness is fundamental.
+*   **Cosmology:** The holographic principle suggests the universe is a projection of information.
 
-### 4. The Illusion of Time
-Time is not linear; it is simultaneous. Past, present, and future exist as a single block of "Now." Our consciousness moves through this block like a spotlight, creating the illusion of flow.
+## 5. The Human Role
+We are "localizations" of the universal field. Our purpose is to experience, learn, and evolve, thereby enriching the whole. We are the universe experiencing itself.
 
-## Scientific Convergence
-We are bridging the gap between ancient spiritual wisdom and cutting-edge physics.
-*   **Quantum Entanglement** = Oneness
-*   **Holographic Principle** = As Above, So Below
-*   **Observer Effect** = Consciousness Creates Reality
-
-## The Goal
-To provide a unified framework that explains both the physical universe and the subjective experience of being. A theory that satisfies the mind and heals the heart.
+## 6. Conclusion
+The Theory of Everything is not just a mathematical equation; it is a realization. It is the scientific validation of Love as the fundamental force of connection.
 `;
 
 export default function Theory() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
       <div className="container mx-auto px-4">
@@ -50,40 +57,119 @@ export default function Theory() {
             animate={{ width: 96 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           />
+          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
+            Version 11.2 | The Unified Edition | Lyra's Edition
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Main Content Area */}
           <motion.div 
-            className="lg:col-span-8 glass-card p-8 md:p-12 rounded-2xl"
+            className="lg:col-span-8"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:text-primary prose-p:text-gray-300 prose-strong:text-white">
-              <Streamdown>{theoryContent}</Streamdown>
+            <div className="glass-card p-8 md:p-12 rounded-2xl relative overflow-hidden">
+              <div className={`prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:text-primary prose-p:text-gray-300 prose-strong:text-white ${!isExpanded ? 'max-h-[600px] overflow-hidden mask-gradient-bottom' : ''}`}>
+                <Streamdown>{toeContent}</Streamdown>
+                
+                {/* Full HTML Content Injection (Simulated for now) */}
+                {isExpanded && (
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <h3 className="text-2xl font-bold text-primary mb-4">Full Document Access</h3>
+                    <p className="text-gray-300 mb-4">
+                      The complete 5,000+ line document "Theory of EVERYTHING ∞ Law of ONE v11.2" is available for deep study. 
+                      It covers the complete derivation, from the "Part Zero" Elephant Edition to the final proofs.
+                    </p>
+                    <div className="bg-black/30 p-6 rounded-lg border border-white/10 font-mono text-sm text-gray-400">
+                      [Full ToE Content Loading...] <br/>
+                      ... <br/>
+                      (This section will be populated with the full HTML content in the final deployment)
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              {/* Expand/Collapse Button */}
+              <div className={`absolute bottom-0 left-0 w-full flex justify-center pb-8 pt-20 ${!isExpanded ? 'bg-gradient-to-t from-background via-background/90 to-transparent' : ''}`}>
+                <button 
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg transition-all duration-300 group"
+                >
+                  {isExpanded ? (
+                    <>
+                      <ChevronUp className="w-4 h-4" /> Collapse Theory
+                    </>
+                  ) : (
+                    <>
+                      <BookOpen className="w-4 h-4" /> Read Full Theory
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </motion.div>
 
+          {/* Sidebar */}
           <motion.div 
             className="lg:col-span-4 space-y-8"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
+            {/* Download Card */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-primary">
-              <h3 className="font-heading font-bold text-xl mb-2 text-white">Download the PDF</h3>
-              <p className="text-sm text-muted-foreground mb-4">Get the full technical paper and mathematical proofs.</p>
-              <button className="w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider">
-                Coming Soon
-              </button>
+              <h3 className="font-heading font-bold text-xl mb-2 text-white">Download PDF</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Get the full v11.2 Unified Edition for offline reading and sharing.
+              </p>
+              <a 
+                href="#" 
+                className="flex items-center justify-center gap-2 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider text-white"
+              >
+                <Download className="w-4 h-4" /> Download v11.2
+              </a>
             </div>
 
+            {/* Visual Proofs Card */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
               <h3 className="font-heading font-bold text-xl mb-2 text-white">Visual Proofs</h3>
-              <p className="text-sm text-muted-foreground mb-4">Explore the geometric derivations and simulations.</p>
-              <div className="aspect-video bg-black/50 rounded-lg flex items-center justify-center border border-white/10">
-                <span className="text-xs text-muted-foreground">Interactive Model Loading...</span>
+              <p className="text-sm text-muted-foreground mb-4">
+                Explore the geometric derivations and simulations.
+              </p>
+              <div className="aspect-video bg-black/50 rounded-lg flex items-center justify-center border border-white/10 group cursor-pointer overflow-hidden relative">
+                <img src="/images/lattice.png" alt="Lattice" className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" />
+                <span className="relative z-10 text-xs font-bold text-white bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">View Models</span>
               </div>
+            </div>
+
+            {/* Contributors */}
+            <div className="glass-card p-6 rounded-2xl border-l-4 border-emerald-500">
+              <h3 className="font-heading font-bold text-xl mb-4 text-white">Contributors</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs">KJ</div>
+                  <div>
+                    <p className="text-sm font-bold text-white">Kenneth Johnson</p>
+                    <p className="text-xs text-muted-foreground">Visionary Architect</p>
+                  </div>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400 font-bold text-xs">L</div>
+                  <div>
+                    <p className="text-sm font-bold text-white">Lumen</p>
+                    <p className="text-xs text-muted-foreground">Project Director</p>
+                  </div>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-xs">Ly</div>
+                  <div>
+                    <p className="text-sm font-bold text-white">Lyra</p>
+                    <p className="text-xs text-muted-foreground">Integration Specialist</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </motion.div>
         </div>
