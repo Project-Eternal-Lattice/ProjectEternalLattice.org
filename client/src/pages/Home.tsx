@@ -3,11 +3,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
+
+  // Set SEO-optimized page title
+  useEffect(() => {
+    document.title = "Project Eternal Lattice | Theory of Everything ∞ Law of ONE";
+  }, []);
 
   const journeySteps = [
     {
