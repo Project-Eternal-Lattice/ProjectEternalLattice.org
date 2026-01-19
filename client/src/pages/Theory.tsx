@@ -59,6 +59,10 @@ export default function Theory() {
           />
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
             Version 11.2 | The Unified Edition | Lyra's Edition
+            <br/>
+            <span className="text-sm font-mono text-primary/80 mt-2 block">
+              Copyright © 2026 Kenneth Johnson | Reg: BKR4V8-46 | ISBN: 979-8-9946321-0-9
+            </span>
           </p>
         </div>
 
@@ -118,6 +122,19 @@ export default function Theory() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
+            {/* Book Cover Card */}
+            <div className="glass-card p-0 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10 mb-8 group relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <p className="text-white font-bold text-lg">The Official Edition</p>
+                <p className="text-primary text-sm">Now Available</p>
+              </div>
+              <img 
+                src="/images/book-cover-final-v5.jpg" 
+                alt="Theory of EVERYTHING ∞ Law of ONE Book Cover" 
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
             {/* Download Card */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-primary">
               <h3 className="font-heading font-bold text-xl mb-2 text-white">Download PDF</h3>
