@@ -9,15 +9,13 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/">
-              <a className="flex items-center gap-2 mb-4 group w-fit">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center shadow-[0_0_10px_rgba(168,85,247,0.5)]">
-                  <span className="text-white font-heading font-bold text-xs">∞</span>
-                </div>
-                <span className="font-heading font-bold text-lg tracking-wider text-foreground">
-                  ETERNAL LATTICE
-                </span>
-              </a>
+            <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center shadow-[0_0_10px_rgba(168,85,247,0.5)]">
+                <span className="text-white font-heading font-bold text-xs">∞</span>
+              </div>
+              <span className="font-heading font-bold text-lg tracking-wider text-foreground">
+                ETERNAL LATTICE
+              </span>
             </Link>
             <p className="text-muted-foreground font-body leading-relaxed max-w-md">
               A journey through the Theory of Everything and the Law of ONE. 
@@ -29,18 +27,18 @@ export default function Footer() {
             <h4 className="font-heading font-bold text-foreground mb-4">Explore</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/theory">
-                  <a className="text-muted-foreground hover:text-primary transition-colors text-sm">The Theory</a>
+                <Link href="/theory" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  The Theory
                 </Link>
               </li>
               <li>
-                <Link href="/team">
-                  <a className="text-muted-foreground hover:text-primary transition-colors text-sm">The Team</a>
+                <Link href="/team" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  The Team
                 </Link>
               </li>
               <li>
-                <Link href="/mission">
-                  <a className="text-muted-foreground hover:text-primary transition-colors text-sm">Our Mission</a>
+                <Link href="/mission" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Our Mission
                 </Link>
               </li>
             </ul>

@@ -8,8 +8,10 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Theory from "./pages/Theory";
 import Mission from "./pages/Mission";
+import Nexus from "./pages/Nexus";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -21,6 +23,7 @@ function Router() {
           <Route path="/team" component={Team} />
           <Route path="/theory" component={Theory} />
           <Route path="/mission" component={Mission} />
+          <Route path="/nexus" component={Nexus} />
           <Route component={NotFound} />
         </Switch>
       </main>

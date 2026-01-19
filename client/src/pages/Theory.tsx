@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, BookOpen, Download } from "lucide-react";
 
 // Full ToE Content (Truncated for this file, but structure is ready for full insertion)
@@ -38,6 +38,17 @@ The Theory of Everything is not just a mathematical equation; it is a realizatio
 
 export default function Theory() {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // SEO: Set page-specific title and meta description
+  useEffect(() => {
+    document.title = "Theory of Everything v11.2 | Download the Full ToE PDF";
+    
+    // Update meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Read and download the complete Theory of Everything ∞ Law of ONE v11.2. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. ISBN: 979-8-9946321-0-9');
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
