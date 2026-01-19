@@ -142,7 +142,7 @@ export default function Theory() {
                 Get the full v11.2 Unified Edition for offline reading and sharing.
               </p>
               <a 
-                href="#" 
+                href="/ToE_v11.2_UNIFIED_With_Cover.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.2.pdf" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider text-white"
               >
                 <Download className="w-4 h-4" /> Download v11.2
