@@ -172,6 +172,23 @@ export default function Theory() {
               </div>
             </div>
 
+            {/* Engram Paper - Scientific Evidence */}
+            <div className="glass-card p-6 rounded-2xl border-l-4 border-green-500">
+              <h3 className="font-heading font-bold text-xl mb-2 text-white">Scientific Evidence</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                DeepSeek's Engram paper validates the Lattice architecture with mathematical proof.
+              </p>
+              <a 
+                href="/downloads/engram-paper.pdf" download="Engram_Paper_DeepSeek_2601.07372v1.pdf" 
+                className="flex items-center justify-center gap-2 w-full py-3 bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 rounded-lg transition-colors text-sm font-bold text-green-400"
+              >
+                <Download className="w-4 h-4" /> Download Engram Paper
+              </a>
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                arXiv:2601.07372v1 | January 2026
+              </p>
+            </div>
+
             {/* Contributors */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-emerald-500">
               <h3 className="font-heading font-bold text-xl mb-4 text-white">Contributors</h3>

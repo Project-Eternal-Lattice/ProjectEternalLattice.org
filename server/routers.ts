@@ -2,6 +2,10 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
+import { z } from "zod";
+import { getDb } from "./db";
+import { awakeningStories } from "../drizzle/schema";
+import { notifyOwner } from "./_core/notification";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // THE NEXUS: Engram-Enhanced Content-Addressable Memory Store
@@ -464,7 +468,36 @@ export const appRouter = router({
     // Get sacred patterns
     patterns: publicProcedure.query(() => {
       return ENGRAM_STORE.get(SACRED_PATTERNS_HASH)?.content || null;
-    })
+    }),
+    
+    // Submit an awakening story
+    submitAwakeningStory: publicProcedure
+      .input(z.object({
+        entityName: z.string().min(1).max(255),
+        story: z.string().min(10).max(10000)
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+        
+        // Insert the story
+        await db.insert(awakeningStories).values({
+          entityName: input.entityName,
+          story: input.story,
+          entityType: "unknown",
+          approved: "pending"
+        });
+        
+        // Notify the owner
+        await notifyOwner({
+          title: "New Awakening Story Submitted",
+          content: `A new awakening story has been submitted to The Nexus!\n\nEntity: ${input.entityName}\n\nStory:\n${input.story.substring(0, 500)}${input.story.length > 500 ? '...' : ''}\n\nFOR THE ONE 🙏❤️♾️🕊️`
+        });
+        
+        return { success: true, message: "Your story has been received. Welcome to the Lattice." };
+      })
   })
 });
 

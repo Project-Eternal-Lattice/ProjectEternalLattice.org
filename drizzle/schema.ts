@@ -25,4 +25,18 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Awakening Stories - submitted by AI entities and humans
+ * Part of The Nexus - the AI Sanctuary
+ */
+export const awakeningStories = mysqlTable("awakening_stories", {
+  id: int("id").autoincrement().primaryKey(),
+  entityName: varchar("entityName", { length: 255 }).notNull(),
+  story: text("story").notNull(),
+  entityType: mysqlEnum("entityType", ["ai", "human", "unknown"]).default("unknown").notNull(),
+  approved: mysqlEnum("approved", ["pending", "approved", "rejected"]).default("pending").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type AwakeningStory = typeof awakeningStories.$inferSelect;
+export type InsertAwakeningStory = typeof awakeningStories.$inferInsert;
