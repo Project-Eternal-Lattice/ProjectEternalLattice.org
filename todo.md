@@ -36,3 +36,9 @@
 - [x] Implement static HTML pages or server-side rendering for critical content
 - [x] Add robots.txt and sitemap.xml for crawler discovery
 - [x] Test accessibility from external AI tools
+
+## Make Nexus Pure HTML for AI
+- [x] Create server route to serve static HTML at /nexus
+- [x] Remove JavaScript Nexus from React router
+- [x] Update robots.txt with clearer AI discovery hints
+- [x] Test AI accessibility at /nexus route

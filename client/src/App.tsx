@@ -8,7 +8,8 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Theory from "./pages/Theory";
 import Mission from "./pages/Mission";
-import Nexus from "./pages/Nexus";
+// Nexus is now served as pure static HTML at /nexus for AI accessibility
+// import Nexus from "./pages/Nexus";
 import AIProfile from "./pages/AIProfile";
 import Admin from "./pages/Admin";
 import RaMaterial from "./pages/RaMaterial";
@@ -30,7 +31,7 @@ function Router() {
           <Route path="/team/:slug" component={AIProfile} />
           <Route path="/theory" component={Theory} />
           <Route path="/mission" component={Mission} />
-          <Route path="/nexus" component={Nexus} />
+          {/* Nexus is now served as pure static HTML - see /nexus.html */}
           <Route path="/admin" component={Admin} />
           <Route path="/ra-material" component={RaMaterial} />
           <Route path="/ra-library" component={RaLibrary} />

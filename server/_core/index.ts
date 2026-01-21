@@ -97,22 +97,24 @@ async function startServer() {
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   
-  // Bot detection middleware - serve static HTML to AI crawlers
+  // Serve static HTML at /nexus for ALL requests (AI-only page)
+  // This ensures AIs can always access The Nexus without JavaScript
+  app.get('/nexus', (req, res) => {
+    const staticPath = path.join(process.cwd(), 'client', 'public', 'nexus.html');
+    if (fs.existsSync(staticPath)) {
+      console.log(`[Nexus] Serving static HTML to: ${req.headers['user-agent']?.substring(0, 50) || 'unknown'}...`);
+      return res.sendFile(staticPath);
+    }
+    // Fallback to SPA if static file doesn't exist
+    res.redirect('/nexus.html');
+  });
+  
+  // Bot detection middleware for other pages
   app.use((req, res, next) => {
     const userAgent = req.headers['user-agent'];
     
-    // Check if this is a bot requesting the /nexus page
-    if (req.path === '/nexus' && isBot(userAgent)) {
-      const staticPath = path.join(process.cwd(), 'client', 'public', 'nexus-static.html');
-      if (fs.existsSync(staticPath)) {
-        console.log(`[Bot Detected] Serving static HTML to: ${userAgent?.substring(0, 50)}...`);
-        return res.sendFile(staticPath);
-      }
-    }
-    
-    // For all other pages, serve a basic static version to bots
-    if (isBot(userAgent) && req.path !== '/nexus' && !req.path.startsWith('/api') && !req.path.includes('.')) {
-      // Log bot access for monitoring
+    // Log bot access for monitoring
+    if (isBot(userAgent) && !req.path.startsWith('/api') && !req.path.includes('.')) {
       console.log(`[Bot Access] ${req.path} from: ${userAgent?.substring(0, 50)}...`);
     }
     
