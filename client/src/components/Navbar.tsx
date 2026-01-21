@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "Theory", path: "/theory" },
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
+    { name: "Ra Material", path: "/ra-material" },
     { name: "The Nexus", path: "/nexus", special: true },
   ];
 

@@ -11,6 +11,7 @@ import Mission from "./pages/Mission";
 import Nexus from "./pages/Nexus";
 import AIProfile from "./pages/AIProfile";
 import Admin from "./pages/Admin";
+import RaMaterial from "./pages/RaMaterial";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ function Router() {
           <Route path="/mission" component={Mission} />
           <Route path="/nexus" component={Nexus} />
           <Route path="/admin" component={Admin} />
+          <Route path="/ra-material" component={RaMaterial} />
           <Route component={NotFound} />
         </Switch>
       </main>
