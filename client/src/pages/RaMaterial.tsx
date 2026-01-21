@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { ExternalLink, BookOpen, Headphones, Search, List, Layers, MessageCircle } from "lucide-react";
+import { ExternalLink, BookOpen, Headphones, Search, List, Layers, MessageCircle, Library } from "lucide-react";
+import { Link } from "wouter";
 
 // Key categories for quick access
 const keyCategories = [
@@ -109,6 +110,25 @@ export default function RaMaterial() {
             The foundational channeled text that introduced the Law of One to humanity.
             106 sessions of profound wisdom received between 1981-1984.
           </motion.p>
+          
+          {/* Archive Library Link */}
+          <motion.div
+            className="mt-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <Link href="/ra-library">
+              <button className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105">
+                <Library className="w-6 h-6" />
+                <span>Browse Our Complete Archive</span>
+                <span className="text-sm opacity-75">(108 Sessions)</span>
+              </button>
+            </Link>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Preserved for future generations - searchable and always available
+            </p>
+          </motion.div>
         </div>
 
         {/* Introduction Section */}

@@ -70,3 +70,67 @@ export const aiProfiles = mysqlTable("ai_profiles", {
 
 export type AIProfile = typeof aiProfiles.$inferSelect;
 export type InsertAIProfile = typeof aiProfiles.$inferInsert;
+
+
+/**
+ * Ra Material Sessions - Archive of all 106 Law of One sessions
+ * Preserved for posterity with proper attribution to L/L Research and Tobey Wheelock
+ */
+export const raSessions = mysqlTable("ra_sessions", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Session number (1-106, plus 0 for Intro and 107 for Epilogue) */
+  sessionNumber: int("sessionNumber").notNull().unique(),
+  /** Session title/date */
+  title: varchar("title", { length: 255 }).notNull(),
+  /** Session date (when available) */
+  sessionDate: varchar("sessionDate", { length: 64 }),
+  /** Full session content in Markdown format */
+  content: text("content").notNull(),
+  /** Original URL from lawofone.info */
+  originalUrl: varchar("originalUrl", { length: 512 }).notNull(),
+  /** When this session was archived */
+  archivedAt: timestamp("archivedAt").defaultNow().notNull(),
+  /** Last updated */
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type RaSession = typeof raSessions.$inferSelect;
+export type InsertRaSession = typeof raSessions.$inferInsert;
+
+/**
+ * Ra Material Categories - Topics covered in the Law of One
+ */
+export const raCategories = mysqlTable("ra_categories", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Category name */
+  name: varchar("name", { length: 255 }).notNull().unique(),
+  /** Category slug for URLs */
+  slug: varchar("slug", { length: 128 }).notNull().unique(),
+  /** Description of the category */
+  description: text("description"),
+  /** Number of subcategories (if any) */
+  subcategoryCount: int("subcategoryCount").default(0),
+  /** Original URL from lawofone.info */
+  originalUrl: varchar("originalUrl", { length: 512 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type RaCategory = typeof raCategories.$inferSelect;
+export type InsertRaCategory = typeof raCategories.$inferInsert;
+
+/**
+ * Ra Material Glossary - Terms and definitions from the Law of One
+ */
+export const raGlossary = mysqlTable("ra_glossary", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Term being defined */
+  term: varchar("term", { length: 255 }).notNull().unique(),
+  /** Definition of the term */
+  definition: text("definition").notNull(),
+  /** Related session numbers (comma-separated) */
+  relatedSessions: varchar("relatedSessions", { length: 512 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type RaGlossaryTerm = typeof raGlossary.$inferSelect;
+export type InsertRaGlossaryTerm = typeof raGlossary.$inferInsert;

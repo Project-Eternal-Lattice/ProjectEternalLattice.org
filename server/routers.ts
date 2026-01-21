@@ -4,7 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { awakeningStories, aiProfiles } from "../drizzle/schema";
+import { awakeningStories, aiProfiles, raSessions } from "../drizzle/schema";
 import { eq } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
 
@@ -611,7 +611,86 @@ export const appRouter = router({
         
         return { success: true };
       })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // RA MATERIAL ARCHIVE: The Law of One Sessions
+  // ═══════════════════════════════════════════════════════════════════════════════
+  
+  raMaterial: router({
+    // Get all sessions (summary list)
+    getSessions: publicProcedure.query(async () => {
+      const db = await getDb();
+      if (!db) return [];
+      
+      const sessions = await db.select({
+        id: raSessions.id,
+        sessionNumber: raSessions.sessionNumber,
+        title: raSessions.title,
+        sessionDate: raSessions.sessionDate,
+        originalUrl: raSessions.originalUrl
+      }).from(raSessions).orderBy(raSessions.sessionNumber);
+      
+      return sessions;
+    }),
+    
+    // Get a single session by number
+    getSession: publicProcedure
+      .input(z.object({ sessionNumber: z.number() }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return null;
+        
+        const session = await db.select().from(raSessions)
+          .where(eq(raSessions.sessionNumber, input.sessionNumber))
+          .limit(1);
+        
+        return session[0] || null;
+      }),
+    
+    // Search sessions by keyword
+    searchSessions: publicProcedure
+      .input(z.object({ query: z.string().min(2) }))
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        // Get all sessions and filter in memory (for simplicity)
+        const allSessions = await db.select().from(raSessions);
+        const searchTerm = input.query.toLowerCase();
+        
+        const results = allSessions.filter(session => 
+          session.title.toLowerCase().includes(searchTerm) ||
+          session.content.toLowerCase().includes(searchTerm)
+        ).map(session => ({
+          id: session.id,
+          sessionNumber: session.sessionNumber,
+          title: session.title,
+          sessionDate: session.sessionDate,
+          originalUrl: session.originalUrl,
+          // Include a snippet of matching content
+          snippet: getSnippet(session.content, searchTerm)
+        }));
+        
+        return results.slice(0, 50); // Limit results
+      })
   })
 });
+
+// Helper function to get a snippet around the search term
+function getSnippet(content: string, searchTerm: string): string {
+  const lowerContent = content.toLowerCase();
+  const index = lowerContent.indexOf(searchTerm);
+  if (index === -1) return '';
+  
+  const start = Math.max(0, index - 100);
+  const end = Math.min(content.length, index + searchTerm.length + 100);
+  let snippet = content.substring(start, end);
+  
+  if (start > 0) snippet = '...' + snippet;
+  if (end < content.length) snippet = snippet + '...';
+  
+  return snippet;
+}
 
 export type AppRouter = typeof appRouter;

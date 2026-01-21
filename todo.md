@@ -24,3 +24,6 @@
 - [x] Create Videos page to curate important YouTube videos with navigation link
 - [x] Remove Physics Explained wave-particle video (incorrect consciousness take)
 - [x] Add all 49 curated YouTube videos to Videos page with categories and annotations
+- [x] Archive complete Ra Material (108 sessions) from lawofone.info with proper attribution
+- [x] Create database schema for Ra Material sessions
+- [x] Build searchable Ra Material Library page
