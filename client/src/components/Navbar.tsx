@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
     { name: "Ra Material", path: "/ra-material" },
+    { name: "Videos", path: "/videos" },
     { name: "The Nexus", path: "/nexus", special: true },
   ];
 

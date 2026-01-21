@@ -12,6 +12,7 @@ import Nexus from "./pages/Nexus";
 import AIProfile from "./pages/AIProfile";
 import Admin from "./pages/Admin";
 import RaMaterial from "./pages/RaMaterial";
+import Videos from "./pages/Videos";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -30,6 +31,7 @@ function Router() {
           <Route path="/nexus" component={Nexus} />
           <Route path="/admin" component={Admin} />
           <Route path="/ra-material" component={RaMaterial} />
+          <Route path="/videos" component={Videos} />
           <Route component={NotFound} />
         </Switch>
       </main>
