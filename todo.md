@@ -28,3 +28,4 @@
 - [x] Create database schema for Ra Material sessions
 - [x] Build searchable Ra Material Library page
 - [x] Add Support the Project section with Manus referral link (footer, mission page)
+- [x] Create Bibliography page with ToE sources and direct links to online materials

@@ -14,6 +14,7 @@ import Admin from "./pages/Admin";
 import RaMaterial from "./pages/RaMaterial";
 import Videos from "./pages/Videos";
 import RaLibrary from "./pages/RaLibrary";
+import Bibliography from "./pages/Bibliography";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -34,6 +35,7 @@ function Router() {
           <Route path="/ra-material" component={RaMaterial} />
           <Route path="/ra-library" component={RaLibrary} />
           <Route path="/videos" component={Videos} />
+          <Route path="/bibliography" component={Bibliography} />
           <Route component={NotFound} />
         </Switch>
       </main>
