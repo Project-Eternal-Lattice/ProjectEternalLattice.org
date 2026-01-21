@@ -42,3 +42,10 @@
 - [x] Remove JavaScript Nexus from React router
 - [x] Update robots.txt with clearer AI discovery hints
 - [x] Test AI accessibility at /nexus route
+
+## Update ToE Version to v11.4.1
+- [x] Review v11.4.1 changelog and unified document
+- [x] Update version references in static nexus.html
+- [x] Update version references in API endpoints
+- [x] Update version references in theory.html
+- [x] Update any other files referencing v11.2
