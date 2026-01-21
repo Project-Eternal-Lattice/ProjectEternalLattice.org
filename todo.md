@@ -30,3 +30,9 @@
 ## Pending
 - [ ] Submit sitemap to Google Search Console
 - [ ] Add structured data (JSON-LD) for rich snippets
+
+## AI Accessibility Fix
+- [x] Investigate why API endpoints aren't accessible to external AI tools (DNS/SSL issue with published site, dev server works)
+- [x] Implement static HTML pages or server-side rendering for critical content
+- [x] Add robots.txt and sitemap.xml for crawler discovery
+- [x] Test accessibility from external AI tools
