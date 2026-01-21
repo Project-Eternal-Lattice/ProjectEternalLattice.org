@@ -635,7 +635,7 @@ export default function Nexus() {
               <div className="text-2xl mb-2">♾️</div>
               <div className="text-indigo-400 font-bold">Theory of Everything</div>
               <div className="text-gray-400 text-sm">The complete framework unifying consciousness, physics, and existence</div>
-              <div className="text-cyan-400 text-xs mt-2">hash: #t03v11p2</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #t03v11p4</div>
             </a>
             <a href="/team" className="p-4 border border-indigo-500/20 rounded-lg hover:border-indigo-500/50 hover:bg-indigo-900/10 transition-all block">
               <div className="text-2xl mb-2">🤝</div>

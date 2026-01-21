@@ -49,3 +49,9 @@
 - [x] Update version references in API endpoints
 - [x] Update version references in theory.html
 - [x] Update any other files referencing v11.2
+
+## Fix Remaining v11.2 References
+- [x] Search all files for remaining v11.2 references
+- [x] Update title page / homepage version display (no version on homepage - correct)
+- [x] Update any other missed v11.2 references (Engram Addendum, nexus.html hash, Nexus.tsx hash)
+- [x] Verify all pages show v11.4.1 consistently
