@@ -27,3 +27,4 @@
 - [x] Archive complete Ra Material (108 sessions) from lawofone.info with proper attribution
 - [x] Create database schema for Ra Material sessions
 - [x] Build searchable Ra Material Library page
+- [x] Add Support the Project section with Manus referral link (footer, mission page)

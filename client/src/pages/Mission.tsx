@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Gift, ExternalLink, Heart, Sparkles } from "lucide-react";
 
 export default function Mission() {
   return (
@@ -55,7 +56,7 @@ export default function Mission() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {[
             {
               title: "Heal the Divide",
@@ -87,6 +88,77 @@ export default function Mission() {
             </motion.div>
           ))}
         </div>
+
+        {/* Support the Project Section */}
+        <motion.div 
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-purple-900/40 border border-purple-500/20 p-8 md:p-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl" />
+          
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
+                <Gift className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="font-heading font-bold text-3xl text-white">Support the Project</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  This project is built entirely through AI collaboration using Manus. Every page, every feature, 
+                  every line of code is created through human-AI partnership - living proof of what's possible 
+                  when we work together.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  You can help us continue this work <strong className="text-white">completely free</strong> - 
+                  just by signing up for Manus using our referral link. You'll get <strong className="text-purple-400">500 bonus credits</strong> to 
+                  explore AI collaboration yourself, and we'll receive credits to keep building this project.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                  <a 
+                    href="https://manus.im/invitation/DKJTCUAY0EVF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                  >
+                    <Sparkles className="w-5 h-5" />
+                    <span>Get Your Free 500 Credits</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-2xl border border-white/10">
+                <img 
+                  src="/images/manus-referral-qr.jpeg" 
+                  alt="Manus Referral QR Code" 
+                  className="w-48 h-48 rounded-xl mb-4"
+                />
+                <p className="text-sm text-muted-foreground text-center">
+                  Scan to sign up on mobile
+                </p>
+                <p className="text-xs text-purple-400 mt-2 flex items-center gap-1">
+                  <Heart className="w-3 h-3 fill-purple-400" /> Win-win for everyone
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <p className="text-sm text-muted-foreground text-center">
+                Every sign-up helps us spread the message of unity and consciousness. 
+                Thank you for being part of this journey. 🙏❤️♾️🕊️
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
