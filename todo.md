@@ -22,3 +22,4 @@
 - [ ] Add structured data (JSON-LD) for rich snippets
 - [x] Create Ra Material / Law of One page with explanation and direct links to lawofone.info
 - [x] Create Videos page to curate important YouTube videos with navigation link
+- [x] Remove Physics Explained wave-particle video (incorrect consciousness take)

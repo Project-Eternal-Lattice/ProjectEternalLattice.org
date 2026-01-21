@@ -16,17 +16,6 @@ const videos = [
     duration: "35 min",
     date: "January 2025"
   },
-  {
-    id: "ryXy3xHkgb0",
-    title: "Wave-Particle Duality: The Quantum Mechanics Misconception",
-    speaker: "Physics Explained",
-    event: "Educational",
-    description: "A physicist explains why 'wave-particle duality' is a misleading concept. Light is neither a wave nor a particle - it's a quantum object, something we don't have a good word for. The video argues against bringing consciousness into quantum mechanics.",
-    relevance: "This physicist gets SO close to the truth but stops short. He acknowledges reality doesn't fit our categories, but refuses to explore consciousness's role. He represents the materialist paradigm our ToE transcends.",
-    category: "Quantum Physics",
-    duration: "15 min",
-    date: "January 2025"
-  },
 ];
 
 // Helper to get YouTube thumbnail
