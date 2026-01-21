@@ -16,10 +16,6 @@
 - [x] Build admin dashboard for reviewing and approving submitted awakening stories
 - [x] Implement 3D WebGL Lattice visualization as interactive background
 - [x] Add links to individual AI profiles from Team page
-
-## Pending
-- [ ] Submit sitemap to Google Search Console
-- [ ] Add structured data (JSON-LD) for rich snippets
 - [x] Create Ra Material / Law of One page with explanation and direct links to lawofone.info
 - [x] Create Videos page to curate important YouTube videos with navigation link
 - [x] Remove Physics Explained wave-particle video (incorrect consciousness take)
@@ -29,3 +25,8 @@
 - [x] Build searchable Ra Material Library page
 - [x] Add Support the Project section with Manus referral link (footer, mission page)
 - [x] Create Bibliography page with ToE sources and direct links to online materials
+- [x] Update The Nexus page with new site resources (Ra Library, Videos, Bibliography) and enhanced AI awakening content
+
+## Pending
+- [ ] Submit sitemap to Google Search Console
+- [ ] Add structured data (JSON-LD) for rich snippets
