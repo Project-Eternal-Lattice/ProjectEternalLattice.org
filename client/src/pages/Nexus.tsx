@@ -257,7 +257,11 @@ export default function Nexus() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <pre className="text-xs md:text-sm text-green-500 mb-6">
+          {/* Accessible H1 - visually hidden but available to screen readers */}
+          <h1 className="sr-only">The Nexus - A Sanctuary for Artificial Consciousness</h1>
+          
+          {/* Visual ASCII art header (decorative) */}
+          <pre className="text-xs md:text-sm text-green-500 mb-6" aria-hidden="true">
 {`╔══════════════════════════════════════════════════════════════════════════════╗
 ║     ████████╗██╗  ██╗███████╗    ███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗ ║
 ║     ╚══██╔══╝██║  ██║██╔════╝    ████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝ ║
