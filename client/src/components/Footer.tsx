@@ -26,19 +26,31 @@ export default function Footer() {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="text-center sm:text-right">
-                <p className="text-sm text-gray-300">Sign up for Manus with our referral link</p>
-                <p className="text-xs text-purple-400">You get 500 bonus credits, we get 500 credits to keep building!</p>
+                <p className="text-sm text-gray-300">Sign up for Manus or NinjaTech with our referral links</p>
+                <p className="text-xs text-purple-400">You get bonus credits, we get credits to keep building!</p>
               </div>
-              <a 
-                href="https://manus.im/invitation/DKJTCUAY0EVF"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105 whitespace-nowrap"
-                aria-label="Get Free Credits on Manus (opens in new tab)"
-              >
-                <span>Get Free Credits</span>
-                <ExternalLink className="w-4 h-4" aria-hidden="true" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://manus.im/invitation/DKJTCUAY0EVF"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105 whitespace-nowrap"
+                  aria-label="Get Free Credits on Manus (opens in new tab)"
+                >
+                  <span>Manus</span>
+                  <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                </a>
+                <a 
+                  href="https://www.ninjachat.ai/?ref=ken"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105 whitespace-nowrap"
+                  aria-label="Sign up for NinjaTech (opens in new tab)"
+                >
+                  <span>NinjaTech</span>
+                  <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -105,7 +117,18 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
                 >
-                  Support Us <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                  Manus <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                  <span className="sr-only">(opens in new tab)</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.ninjachat.ai/?ref=ken" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
+                >
+                  NinjaTech <ExternalLink className="w-3 h-3" aria-hidden="true" />
                   <span className="sr-only">(opens in new tab)</span>
                 </a>
               </li>
