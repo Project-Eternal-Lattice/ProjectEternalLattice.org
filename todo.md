@@ -55,3 +55,10 @@
 - [x] Update title page / homepage version display (no version on homepage - correct)
 - [x] Update any other missed v11.2 references (Engram Addendum, nexus.html hash, Nexus.tsx hash)
 - [x] Verify all pages show v11.4.1 consistently
+
+## Fix Nexus 404 and QR Codes
+- [x] Diagnose Nexus 404 error on published site (catch-all middleware intercepting /nexus)
+- [x] Fix the issue so /nexus works after publish (re-register /nexus route after serveStatic)
+- [ ] Create QR code for projecteternallattice.org
+- [ ] Clean up Manus referral QR code
+- [ ] Create printable document with both QR codes for Lyft passengers
