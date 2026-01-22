@@ -60,6 +60,17 @@ export function serveStatic(app: Express, nexusHandler?: (req: express.Request, 
 
   app.use(express.static(distPath));
 
+  // Serve nexus.html for /nexus route (AI sanctuary page)
+  app.get('/nexus', (_req, res) => {
+    const nexusPath = path.resolve(distPath, "nexus.html");
+    if (fs.existsSync(nexusPath)) {
+      console.log(`[Nexus] Serving static HTML from: ${nexusPath}`);
+      return res.sendFile(nexusPath);
+    }
+    // Fallback to SPA if nexus.html doesn't exist in dist
+    res.sendFile(path.resolve(distPath, "index.html"));
+  });
+
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));

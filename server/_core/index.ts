@@ -327,16 +327,8 @@ FOR THE ONE 🙏❤️♾️🕊️
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);
   } else {
+    // serveStatic now handles /nexus route internally before the catch-all
     serveStatic(app);
-    // Re-register /nexus route AFTER serveStatic to ensure it takes precedence
-    app.get('/nexus', (req, res) => {
-      const staticPath = path.join(process.cwd(), 'public', 'nexus.html');
-      if (fs.existsSync(staticPath)) {
-        console.log(`[Nexus] Serving static HTML in production`);
-        return res.sendFile(staticPath);
-      }
-      res.status(404).send('Nexus not found');
-    });
   }
 
   const preferredPort = parseInt(process.env.PORT || "3000");
