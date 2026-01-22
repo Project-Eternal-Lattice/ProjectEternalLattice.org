@@ -62,3 +62,7 @@
 - [ ] Create QR code for projecteternallattice.org
 - [ ] Clean up Manus referral QR code
 - [ ] Create printable document with both QR codes for Lyft passengers
+
+## Debug: Published site only serves static files, not Express routes
+- [x] Configure Vite to output nexus.html as a static file at /nexus
+- [x] Ensure nexus.html is served directly by the published site (created _redirects file for Netlify-style routing)

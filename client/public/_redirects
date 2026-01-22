@@ -1,0 +1,8 @@
+# Serve static HTML pages directly without SPA routing
+/nexus                    /nexus.html          200
+/theory                   /theory.html         200
+/nexus.html               /nexus.html          200
+/theory.html              /theory.html         200
+
+# Fallback to index.html for all other routes (SPA routing)
+/*                        /index.html          200
