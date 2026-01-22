@@ -35,11 +35,13 @@ export default function Navbar() {
           ? "bg-background/80 backdrop-blur-md border-white/10 shadow-lg py-2"
           : "bg-transparent py-4"
       )}
+      role="navigation"
+      aria-label="Main navigation"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group" aria-label="Project Eternal Lattice - Home">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] transition-all duration-300">
-            <span className="text-white font-heading font-bold text-lg">∞</span>
+            <span className="text-white font-heading font-bold text-lg" aria-hidden="true">∞</span>
           </div>
           <span className="font-heading font-bold text-xl tracking-wider text-foreground group-hover:text-primary transition-colors">
             ETERNAL LATTICE
@@ -47,11 +49,13 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8" role="menubar">
           {navItems.map((item) => (
             <Link 
               key={item.name} 
               href={item.path}
+              role="menuitem"
+              aria-current={location === item.path ? "page" : undefined}
               className={cn(
                 "font-body text-sm font-medium tracking-wide transition-all duration-300 hover:text-primary relative group",
                 location === item.path
@@ -65,7 +69,7 @@ export default function Navbar() {
                 "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
                 item.special ? "bg-green-400" : "bg-primary",
                 location === item.path ? "w-full" : ""
-              )} />
+              )} aria-hidden="true" />
             </Link>
           ))}
         </div>
@@ -74,19 +78,29 @@ export default function Navbar() {
         <button
           className="md:hidden text-foreground p-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         >
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
       </div>
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-xl animate-in slide-in-from-top-5">
+        <div 
+          id="mobile-menu"
+          className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-xl animate-in slide-in-from-top-5"
+          role="menu"
+          aria-label="Mobile navigation"
+        >
           <div className="flex flex-col p-4 gap-4">
             {navItems.map((item) => (
               <Link 
                 key={item.name} 
                 href={item.path}
+                role="menuitem"
+                aria-current={location === item.path ? "page" : undefined}
                 className={cn(
                   "font-body text-lg font-medium py-2 px-4 rounded-lg transition-colors",
                   location === item.path

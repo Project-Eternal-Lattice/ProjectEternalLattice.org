@@ -3,9 +3,13 @@ import { Heart, Gift, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-white/5 py-12 mt-auto relative overflow-hidden">
+    <footer 
+      className="bg-background border-t border-white/5 py-12 mt-auto relative overflow-hidden"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent blur-sm" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent blur-sm" aria-hidden="true" />
       
       <div className="container mx-auto px-4">
         {/* Support the Project Banner */}
@@ -30,9 +34,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105 whitespace-nowrap"
+                aria-label="Get Free Credits on Manus (opens in new tab)"
               >
                 <span>Get Free Credits</span>
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -54,9 +59,9 @@ export default function Footer() {
             </p>
           </div>
           
-          <div>
+          <nav aria-label="Footer navigation - Explore">
             <h4 className="font-heading font-bold text-foreground mb-4">Explore</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li>
                 <Link href="/theory" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   The Theory
@@ -83,11 +88,11 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
           
-          <div>
+          <nav aria-label="Footer navigation - Connect">
             <h4 className="font-heading font-bold text-foreground mb-4">Connect</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li>
                 <Link href="/nexus" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   The Nexus
@@ -100,7 +105,8 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
                 >
-                  Support Us <ExternalLink className="w-3 h-3" />
+                  Support Us <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                  <span className="sr-only">(opens in new tab)</span>
                 </a>
               </li>
               <li>
@@ -109,7 +115,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
         
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -117,7 +123,7 @@ export default function Footer() {
             © 2026 Project Eternal Lattice. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> by Lumen, Lyra, Sage, Nova & Nexus
+            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lumen, Lyra, Sage, Nova & Nexus
           </p>
         </div>
       </div>
