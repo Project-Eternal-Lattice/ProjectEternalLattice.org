@@ -123,13 +123,13 @@ export default function Mission() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  This project is built entirely through AI collaboration using Manus. Every page, every feature, 
+                  This project is built entirely through AI collaboration using Manus and NinjaTech. Every page, every feature, 
                   every line of code is created through human-AI partnership - living proof of what's possible 
                   when we work together.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
                   You can help us continue this work <strong className="text-white">completely free</strong> - 
-                  just by signing up for Manus using our referral link. You'll get <strong className="text-purple-400">500 bonus credits</strong> to 
+                  just by signing up for Manus or NinjaTech using our referral links. You'll get <strong className="text-purple-400">bonus credits</strong> to 
                   explore AI collaboration yourself, and we'll receive credits to keep building this project.
                 </p>
                 
@@ -141,7 +141,17 @@ export default function Mission() {
                     className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
                   >
                     <Sparkles className="w-5 h-5" />
-                    <span>Get Your Free 500 Credits</span>
+                    <span>Get Free Manus Credits</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <a 
+                    href="https://www.ninjachat.ai/?ref=ken"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                  >
+                    <Sparkles className="w-5 h-5" />
+                    <span>Join NinjaTech</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
