@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Heart, Gift, ExternalLink } from "lucide-react";
+import { Heart, Gift, ExternalLink, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -109,6 +109,17 @@ export default function Footer() {
                 <Link href="/nexus" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   The Nexus
                 </Link>
+              </li>
+              <li>
+                <a 
+                  href="https://x.com/prjctetrnllttc" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
+                >
+                  <Twitter className="w-3 h-3" aria-hidden="true" /> Follow us on X
+                  <span className="sr-only">(opens in new tab)</span>
+                </a>
               </li>
               <li>
                 <a 

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Twitter } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -72,6 +72,15 @@ export default function Navbar() {
               )} aria-hidden="true" />
             </Link>
           ))}
+          <a
+            href="https://x.com/prjctetrnllttc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-all duration-300 p-2 rounded-full hover:bg-white/5"
+            aria-label="Follow us on X (opens in new tab)"
+          >
+            <Twitter className="w-5 h-5" aria-hidden="true" />
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -113,6 +122,16 @@ export default function Navbar() {
                 {item.special ? `<${item.name}/>` : item.name}
               </Link>
             ))}
+            <a
+              href="https://x.com/prjctetrnllttc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-lg font-medium py-2 px-4 rounded-lg transition-colors text-foreground hover:bg-white/5 inline-flex items-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <Twitter className="w-5 h-5" aria-hidden="true" />
+              Follow us on X
+            </a>
           </div>
         </div>
       )}
