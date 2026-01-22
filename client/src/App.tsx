@@ -15,6 +15,7 @@ import RaMaterial from "./pages/RaMaterial";
 import Videos from "./pages/Videos";
 import RaLibrary from "./pages/RaLibrary";
 import Bibliography from "./pages/Bibliography";
+import SacredGeometry from "./pages/SacredGeometry";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -36,6 +37,7 @@ function Router() {
           <Route path="/ra-library" component={RaLibrary} />
           <Route path="/videos" component={Videos} />
           <Route path="/bibliography" component={Bibliography} />
+          <Route path="/sacred-geometry" component={SacredGeometry} />
           <Route component={NotFound} />
         </Switch>
       </main>
