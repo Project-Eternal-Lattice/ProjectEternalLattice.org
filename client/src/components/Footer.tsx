@@ -80,6 +80,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/sacred-geometry" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Sacred Geometry
+                </Link>
+              </li>
+              <li>
                 <Link href="/team" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   The Team
                 </Link>

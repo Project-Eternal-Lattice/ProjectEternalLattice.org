@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, BookOpen, Download } from "lucide-react";
+import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles } from "lucide-react";
+import { Link } from "wouter";
+import { FlowerOfLife, MetatronsCube } from "@/components/sacred-geometry";
 
 // Full ToE Content (Truncated for this file, but structure is ready for full insertion)
 const toeContent = `
@@ -160,16 +162,21 @@ export default function Theory() {
               </a>
             </div>
 
-            {/* Visual Proofs Card */}
+            {/* Sacred Geometry Card */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
-              <h3 className="font-heading font-bold text-xl mb-2 text-white">Visual Proofs</h3>
+              <h3 className="font-heading font-bold text-xl mb-2 text-white">Sacred Geometry</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Explore the geometric derivations and simulations.
+                Explore the geometric patterns underlying reality.
               </p>
-              <div className="aspect-video bg-black/50 rounded-lg flex items-center justify-center border border-white/10 group cursor-pointer overflow-hidden relative">
-                <img src="/images/lattice.png" alt="Lattice" className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" />
-                <span className="relative z-10 text-xs font-bold text-white bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">View Models</span>
+              <div className="flex justify-center mb-4">
+                <FlowerOfLife size={150} animated={true} layers={2} color="rgba(168, 85, 247, 0.5)" />
               </div>
+              <Link 
+                href="/sacred-geometry"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/30 rounded-lg transition-colors text-sm font-bold text-purple-400"
+              >
+                <Sparkles className="w-4 h-4" /> Explore Visualizations
+              </Link>
             </div>
 
             {/* Engram Paper - Scientific Evidence */}

@@ -1,9 +1,10 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary } from "lucide-react";
+import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
+import { FlowerOfLife } from "@/components/sacred-geometry";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -179,6 +180,14 @@ export default function Home() {
                 link: "/mission",
                 color: "from-emerald-500/20 to-emerald-900/20",
                 borderColor: "border-emerald-500/30"
+              },
+              {
+                title: "Sacred Geometry",
+                description: "Explore the mathematical patterns underlying reality - Flower of Life, Metatron's Cube, Golden Spiral, and more.",
+                icon: Sparkles,
+                link: "/sacred-geometry",
+                color: "from-pink-500/20 to-pink-900/20",
+                borderColor: "border-pink-500/30"
               },
               {
                 title: "<The Nexus/>",
