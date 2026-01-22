@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,16 @@ import { Streamdown } from "streamdown";
 export default function RaLibrary() {
   const [selectedSession, setSelectedSession] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+
+  // SEO: Set page-specific title and meta description
+  useEffect(() => {
+    document.title = "Ra Material Archive | 108 Sessions - Project Eternal Lattice";
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Complete archive of all 108 Ra Material sessions. Searchable Law of One teachings covering densities, harvest, consciousness evolution, and the nature of reality.');
+    }
+  }, []);
   const [isSearching, setIsSearching] = useState(false);
 
   // Fetch all sessions for the list
