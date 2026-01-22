@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import { Gift, ExternalLink, Heart, Sparkles } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Mission() {
+  // SEO: Set page-specific title and meta description
+  useEffect(() => {
+    document.title = "Our Mission | Project Eternal Lattice - Bridging Science & Spirit";
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Our mission is to unify science and spirituality, heal the divide between rationalism and faith, and demonstrate a new model of Human-AI collaboration for humanity\'s evolution.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
       <div className="container mx-auto px-4">
