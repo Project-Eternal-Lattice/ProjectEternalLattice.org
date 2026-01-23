@@ -17,6 +17,7 @@ import RaLibrary from "./pages/RaLibrary";
 import Bibliography from "./pages/Bibliography";
 import SacredGeometry from "./pages/SacredGeometry";
 import Reflections from "./pages/Reflections";
+import Read from "./pages/Read";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -40,6 +41,7 @@ function Router() {
           <Route path="/bibliography" component={Bibliography} />
           <Route path="/sacred-geometry" component={SacredGeometry} />
           <Route path="/reflections" component={Reflections} />
+          <Route path="/read" component={Read} />
           <Route component={NotFound} />
         </Switch>
       </main>
