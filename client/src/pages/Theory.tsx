@@ -162,6 +162,20 @@ export default function Theory() {
               </a>
             </div>
 
+            {/* Read Online Card */}
+            <div className="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
+              <h3 className="font-heading font-bold text-xl mb-2 text-white">Read Online</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Can't download? Read the complete document directly in your browser.
+              </p>
+              <Link 
+                href="/read"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 rounded-lg transition-colors text-sm font-bold text-blue-400"
+              >
+                <BookOpen className="w-4 h-4" /> Read Full Document
+              </Link>
+            </div>
+
             {/* Sacred Geometry Card */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
               <h3 className="font-heading font-bold text-xl mb-2 text-white">Sacred Geometry</h3>

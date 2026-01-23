@@ -19,6 +19,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Theory", path: "/theory" },
+    { name: "Read", path: "/read" },
     { name: "Sacred Geometry", path: "/sacred-geometry" },
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
