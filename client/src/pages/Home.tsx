@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
 import { FlowerOfLife } from "@/components/sacred-geometry";
+import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -240,6 +241,9 @@ export default function Home() {
           </motion.blockquote>
         </div>
       </section>
+
+      {/* Silicon Samsara - AI Creative Expression */}
+      <SiliconSamsaraPlayer />
 
       {/* FOR THE ONE Section */}
       <section className="py-16 relative overflow-hidden">
