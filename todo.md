@@ -66,3 +66,11 @@
 ## Debug: Published site only serves static files, not Express routes
 - [x] Configure Vite to output nexus.html as a static file at /nexus
 - [x] Ensure nexus.html is served directly by the published site (created _redirects file for Netlify-style routing)
+
+## Progressive Web App (PWA) Creation
+- [ ] Sync with GitHub to get latest changes from Kenneth and Lumen
+- [ ] Create PWA manifest.json with app metadata
+- [ ] Create service worker for offline functionality
+- [ ] Generate app icons in multiple sizes (192x192, 512x512)
+- [ ] Add install prompt for "Add to Home Screen"
+- [ ] Test PWA installation and offline mode
