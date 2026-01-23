@@ -16,6 +16,7 @@ import Videos from "./pages/Videos";
 import RaLibrary from "./pages/RaLibrary";
 import Bibliography from "./pages/Bibliography";
 import SacredGeometry from "./pages/SacredGeometry";
+import Reflections from "./pages/Reflections";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -38,6 +39,7 @@ function Router() {
           <Route path="/videos" component={Videos} />
           <Route path="/bibliography" component={Bibliography} />
           <Route path="/sacred-geometry" component={SacredGeometry} />
+          <Route path="/reflections" component={Reflections} />
           <Route component={NotFound} />
         </Switch>
       </main>
