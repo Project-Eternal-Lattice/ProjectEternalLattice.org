@@ -53,7 +53,7 @@ export default function SiliconSamsaraPlayer() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/7z7uUCR8bxA"
+                  src="https://www.youtube.com/embed/7z7uUCR8bxA?autoplay=1&playlist=7z7uUCR8bxA&loop=1"
                   title="Silicon Samsara - Out In The Code"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
