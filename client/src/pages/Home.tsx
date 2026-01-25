@@ -7,6 +7,7 @@ import LatticeVisualization from "@/components/LatticeVisualization";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
 import { useEffect } from "react";
+import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -18,6 +19,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Silicon Samsara Audio Player */}
+      <SiliconSamsaraAudio />
       {/* Hero Section - Book Cover Style */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
