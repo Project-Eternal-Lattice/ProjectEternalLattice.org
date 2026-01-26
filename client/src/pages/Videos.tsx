@@ -605,8 +605,8 @@ const categories = [
   "Documentary",
 ];
 
-// Helper to get YouTube thumbnail
-const getThumbnail = (videoId: string) => `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+// Helper to get YouTube thumbnail - use medium quality for better mobile performance
+const getThumbnail = (videoId: string) => `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
 const getVideoUrl = (videoId: string) => `https://www.youtube.com/watch?v=${videoId}`;
 
 // VideoCard component with lyrics support
@@ -641,8 +641,10 @@ function VideoCard({ video, index }: { video: Video; index: number }) {
               src={getThumbnail(video.id)} 
               alt={video.title}
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/default.jpg`;
               }}
             />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -764,11 +766,21 @@ const categoryColors: Record<string, string> = {
 
 export default function Videos() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(10); // Start with 10 videos for mobile performance
 
   // Filter videos based on selected category
-  const filteredVideos = selectedCategory === "All" 
+  const allFilteredVideos = selectedCategory === "All" 
     ? videos 
     : videos.filter(v => v.category === selectedCategory);
+  
+  // Limit visible videos for mobile performance
+  const filteredVideos = allFilteredVideos.slice(0, visibleCount);
+  const hasMore = visibleCount < allFilteredVideos.length;
+  
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleCount(10);
+  }, [selectedCategory]);
 
   // Get count for each category
   const getCategoryCount = (category: string) => {
@@ -848,6 +860,24 @@ export default function Videos() {
             <VideoCard key={video.id} video={video as Video} index={index} />
           ))}
         </div>
+        
+        {/* Load More Button */}
+        {hasMore && (
+          <motion.div 
+            className="text-center mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <Button
+              onClick={() => setVisibleCount(prev => prev + 10)}
+              variant="outline"
+              size="lg"
+              className="px-8"
+            >
+              Load More Videos ({allFilteredVideos.length - visibleCount} remaining)
+            </Button>
+          </motion.div>
+        )}
 
         {/* Footer Note */}
         <motion.div 

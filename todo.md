@@ -102,3 +102,9 @@
 - [x] Update Read.tsx download link to v11.5 PDF
 - [x] Update Theory.tsx download link to v11.5 PDF
 - [x] Verify all version references are v11.5 across pages
+
+## iPhone "Can't open this page" Fix
+- [x] Update service worker version to force cache bust
+- [x] Add unregister mechanism for corrupted service workers
+- [x] Fix Videos page memory crash (lazy loading, lower res thumbnails, pagination)
+- [ ] Test on iPhone after republish
