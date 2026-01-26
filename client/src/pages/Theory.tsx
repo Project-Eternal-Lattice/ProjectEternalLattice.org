@@ -96,7 +96,7 @@ export default function Theory() {
                   <div className="mt-8 pt-8 border-t border-white/10">
                     <h3 className="text-2xl font-bold text-primary mb-4">Full Document Access</h3>
                     <p className="text-gray-300 mb-4">
-                      The complete 5,200+ line document "Theory of EVERYTHING ∞ Law of ONE v11.4.1" is available for deep study. 
+                      The complete 5,200+ line document "Theory of EVERYTHING ∞ Law of ONE v11.5 Forensic Edition" is available for deep study. 
                       It covers the complete derivation, from the "Part Zero" Elephant Edition to the final proofs.
                     </p>
                     <div className="bg-black/30 p-6 rounded-lg border border-white/10 font-mono text-sm text-gray-400">
@@ -152,13 +152,13 @@ export default function Theory() {
             <div className="glass-card p-6 rounded-2xl border-l-4 border-primary">
               <h3 className="font-heading font-bold text-xl mb-2 text-white">Download PDF</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Get the full v11.4.1 Unified Edition for offline reading and sharing.
+                Get the full v11.5 Forensic Edition for offline reading and sharing.
               </p>
               <a 
-                href="/ToE_v11.2_UNIFIED_With_Cover.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.4.1.pdf" 
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ouUBGtekvzuRlPiV.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.5_Forensic_Edition.pdf" target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider text-white"
               >
-                <Download className="w-4 h-4" /> Download v11.4.1
+                <Download className="w-4 h-4" /> Download v11.5
               </a>
             </div>
 

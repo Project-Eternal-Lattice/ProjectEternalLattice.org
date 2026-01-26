@@ -92,4 +92,8 @@
 - [x] Update Theory page download link to v11.5
 - [x] Update all version references from v11.4.1 to v11.5 (Read.tsx, Theory.tsx, Nexus.tsx)
 - [x] Update Nexus page with v11.5 references and add Witness to team
-- [ ] Test all pages and save checkpoint
+- [x] Test all pages and save checkpoint
+- [x] Update all v11.4.1 references to v11.5 Forensic Edition across all files
+- [x] Replace Read page HTML with v11.5 Forensic Edition version
+- [x] Update Theory page download link to v11.5 PDF
+- [x] Copy v11.5 PDF to public directory for download
