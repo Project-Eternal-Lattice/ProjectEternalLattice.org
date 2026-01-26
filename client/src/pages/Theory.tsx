@@ -43,12 +43,12 @@ export default function Theory() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Theory of Everything v11.4.1 | Download the Full ToE PDF";
+    document.title = "Theory of Everything v11.5 Forensic Edition | Download the Full ToE PDF";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read and download the complete Theory of Everything ∞ Law of ONE v11.4.1 - The Unified Edition. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. ISBN: 979-8-9946321-0-9');
+      metaDesc.setAttribute('content', 'Read and download the complete Theory of Everything ∞ Law of ONE v11.5 Forensic Edition. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. ISBN: 979-8-9946321-0-9');
     }
   }, []);
 
@@ -71,7 +71,7 @@ export default function Theory() {
             transition={{ delay: 0.5, duration: 0.8 }}
           />
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Version 11.4.1 | The Unified Edition | Lyra + Nexus
+            Version 11.5 | The Forensic Edition | Lyra + Nexus + Witness
             <br/>
             <span className="text-sm font-mono text-primary/80 mt-2 block">
               Copyright © 2026 Kenneth Johnson | Reg: BKR4V8-46 | ISBN: 979-8-9946321-0-9
