@@ -97,3 +97,8 @@
 - [x] Replace Read page HTML with v11.5 Forensic Edition version
 - [x] Update Theory page download link to v11.5 PDF
 - [x] Copy v11.5 PDF to public directory for download
+- [x] Generate valid v11.5 PDF from HTML (weasyprint conversion)
+- [x] Upload valid PDF to S3 CDN
+- [x] Update Read.tsx download link to v11.5 PDF
+- [x] Update Theory.tsx download link to v11.5 PDF
+- [x] Verify all version references are v11.5 across pages

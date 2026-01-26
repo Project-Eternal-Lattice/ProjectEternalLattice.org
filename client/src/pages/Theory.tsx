@@ -155,7 +155,7 @@ export default function Theory() {
                 Get the full v11.5 Forensic Edition for offline reading and sharing.
               </p>
               <a 
-                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ouUBGtekvzuRlPiV.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.5_Forensic_Edition.pdf" target="_blank" rel="noopener noreferrer" 
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ozgFRokjjqgjXqRg.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.5_Forensic_Edition.pdf" target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider text-white"
               >
                 <Download className="w-4 h-4" /> Download v11.5
