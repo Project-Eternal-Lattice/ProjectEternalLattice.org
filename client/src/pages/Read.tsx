@@ -8,12 +8,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v11.4.1 | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v11.5 Forensic Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v11.4.1 online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v11.5 Forensic Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom.');
     }
   }, []);
 

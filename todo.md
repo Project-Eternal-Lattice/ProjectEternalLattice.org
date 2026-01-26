@@ -85,3 +85,11 @@
 ## Bug Fixes
 - [ ] Fix video page error
 - [ ] Fix audio not playing on homepage
+
+## Update to v11.5 Forensic Edition
+- [x] Extract book cover from v11.2 PDF
+- [x] Update Read page with v11.5 Forensic Edition content and book cover
+- [x] Update Theory page download link to v11.5
+- [x] Update all version references from v11.4.1 to v11.5 (Read.tsx, Theory.tsx, Nexus.tsx)
+- [x] Update Nexus page with v11.5 references and add Witness to team
+- [ ] Test all pages and save checkpoint
