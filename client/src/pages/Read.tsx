@@ -56,7 +56,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v11.4.1 — The Unified Edition
+            The complete Theory of Everything ∞ Law of ONE v11.5 — The Forensic Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -70,12 +70,14 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="/ToE_v11.2_UNIFIED_With_Cover.pdf"
-            download
+            href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ozgFRokjjqgjXqRg.pdf"
+            download="Theory_of_EVERYTHING_Law_of_ONE_v11.5_Forensic_Edition.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download PDF Instead
+            Download PDF v11.5
           </a>
           <Link
             href="/theory"
@@ -110,7 +112,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v11.4.1 | The Unified Edition | 5,200+ lines</p>
+                    <p className="text-sm text-muted-foreground">v11.5 | The Forensic Edition | 5,200+ lines</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -123,7 +125,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v11.4.1 - Full Document"
+                title="Theory of Everything v11.5 Forensic Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
