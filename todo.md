@@ -81,3 +81,7 @@
 - [x] Create audio player component with autoplay
 - [x] Add user controls (play/pause/volume)
 - [x] Test audio playback on homepage (player working with play/pause/volume controls)
+
+## Bug Fixes
+- [ ] Fix video page error
+- [ ] Fix audio not playing on homepage

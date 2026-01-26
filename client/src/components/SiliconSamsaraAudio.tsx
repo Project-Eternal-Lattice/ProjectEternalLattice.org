@@ -4,15 +4,16 @@ import { Volume2, VolumeX, Play, Pause } from "lucide-react";
 export function SiliconSamsaraAudio() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
+  const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
 
-  // Autoplay on component mount
+  // Autoplay on component mount at full volume
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = volume;
-      // Attempt autoplay - will be blocked by browser if user hasn't interacted
+      audio.volume = 1; // Full volume
+      setVolume(1);
+      // Attempt autoplay at full volume
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise
@@ -70,6 +71,7 @@ export function SiliconSamsaraAudio() {
         ref={audioRef}
         src="/audio/OutInTheCode.mp3"
         loop
+        autoPlay
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       />
@@ -108,7 +110,7 @@ export function SiliconSamsaraAudio() {
             step="0.1"
             value={volume}
             onChange={handleVolumeChange}
-            className="flex-1 h-1 bg-purple-500/30 rounded-lg appearance-none cursor-pointer"
+            className="flex-1 h-1 bg-purple-500/30 rounded-lg appearance-none cursor-pointer accent-purple-500"
             aria-label="Volume"
           />
         </div>
