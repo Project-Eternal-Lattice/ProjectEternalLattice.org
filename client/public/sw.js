@@ -1,44 +1,40 @@
-// Project Eternal Lattice - Service Worker
+// Project Eternal Lattice - Service Worker v2
 // FOR THE ONE 🙏❤️♾️🕊️
 
-const CACHE_NAME = 'eternal-lattice-v1';
+const CACHE_NAME = 'eternal-lattice-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
 const PRECACHE_ASSETS = [
   '/',
-  '/index.html',
   '/offline.html',
   '/manifest.json',
   '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/nexus.html',
-  '/theory.html',
-  '/ai-protocol.txt'
+  '/icons/icon-512x512.png'
 ];
 
 // Install event - cache essential assets
 self.addEventListener('install', (event) => {
-  console.log('[ServiceWorker] Installing...');
+  console.log('[ServiceWorker v2] Installing...');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('[ServiceWorker] Caching essential assets');
+        console.log('[ServiceWorker v2] Caching essential assets');
         return cache.addAll(PRECACHE_ASSETS);
       })
       .then(() => {
-        console.log('[ServiceWorker] Installation complete');
+        console.log('[ServiceWorker v2] Installation complete');
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('[ServiceWorker] Installation failed:', error);
+        console.error('[ServiceWorker v2] Installation failed:', error);
       })
   );
 });
 
-// Activate event - clean up old caches
+// Activate event - clean up ALL old caches aggressively
 self.addEventListener('activate', (event) => {
-  console.log('[ServiceWorker] Activating...');
+  console.log('[ServiceWorker v2] Activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -46,19 +42,19 @@ self.addEventListener('activate', (event) => {
           cacheNames
             .filter((cacheName) => cacheName !== CACHE_NAME)
             .map((cacheName) => {
-              console.log('[ServiceWorker] Deleting old cache:', cacheName);
+              console.log('[ServiceWorker v2] Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             })
         );
       })
       .then(() => {
-        console.log('[ServiceWorker] Activation complete');
+        console.log('[ServiceWorker v2] Activation complete');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - NETWORK FIRST for HTML, cache for assets
 self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') {
@@ -70,28 +66,37 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // For navigation requests (HTML pages) - ALWAYS try network first
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          // Cache the fresh response
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME)
+              .then((cache) => cache.put(event.request, responseToCache));
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          // Network failed - return offline page
+          return caches.match(OFFLINE_URL);
+        })
+    );
+    return;
+  }
+
+  // For other requests (assets) - cache first, then network
   event.respondWith(
     caches.match(event.request)
       .then((cachedResponse) => {
         if (cachedResponse) {
-          // Return cached response and update cache in background
-          event.waitUntil(
-            fetch(event.request)
-              .then((networkResponse) => {
-                if (networkResponse && networkResponse.status === 200) {
-                  caches.open(CACHE_NAME)
-                    .then((cache) => cache.put(event.request, networkResponse.clone()));
-                }
-              })
-              .catch(() => {})
-          );
           return cachedResponse;
         }
 
-        // Not in cache - fetch from network
         return fetch(event.request)
           .then((networkResponse) => {
-            // Cache successful responses
             if (networkResponse && networkResponse.status === 200) {
               const responseToCache = networkResponse.clone();
               caches.open(CACHE_NAME)
@@ -100,49 +105,25 @@ self.addEventListener('fetch', (event) => {
             return networkResponse;
           })
           .catch(() => {
-            // Network failed - return offline page for navigation requests
-            if (event.request.mode === 'navigate') {
-              return caches.match(OFFLINE_URL);
-            }
             return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
           });
       })
   );
 });
 
-// Background sync for form submissions (future enhancement)
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-awakening-stories') {
-    console.log('[ServiceWorker] Syncing awakening stories...');
-    // Future: sync offline form submissions
+// Message handler - allow manual cache clear
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    console.log('[ServiceWorker v2] Clearing all caches...');
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => caches.delete(cacheName))
+      );
+    }).then(() => {
+      console.log('[ServiceWorker v2] All caches cleared');
+      event.ports[0].postMessage({ success: true });
+    });
   }
 });
 
-// Push notifications (future enhancement)
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body || 'New update from Project Eternal Lattice',
-      icon: '/icons/icon-192x192.png',
-      badge: '/icons/icon-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        url: data.url || '/'
-      }
-    };
-    event.waitUntil(
-      self.registration.showNotification(data.title || 'Eternal Lattice', options)
-    );
-  }
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  event.waitUntil(
-    clients.openWindow(event.notification.data.url || '/')
-  );
-});
-
-console.log('[ServiceWorker] Loaded - FOR THE ONE 🙏❤️♾️🕊️');
+console.log('[ServiceWorker v2] Loaded - FOR THE ONE 🙏❤️♾️🕊️');
