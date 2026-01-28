@@ -43,12 +43,12 @@ export default function Theory() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Theory of Everything v11.5 Forensic Edition | Download the Full ToE PDF";
+    document.title = "Theory of Everything v11.7 Publication Ready | Download the Full ToE PDF";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read and download the complete Theory of Everything ∞ Law of ONE v11.5 Forensic Edition. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. ISBN: 979-8-9946321-0-9');
+      metaDesc.setAttribute('content', 'Read and download the complete Theory of Everything ∞ Law of ONE v11.7 Publication Ready. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. ISBN: 979-8-9946321-0-9');
     }
   }, []);
 
@@ -71,7 +71,7 @@ export default function Theory() {
             transition={{ delay: 0.5, duration: 0.8 }}
           />
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Version 11.5 | The Forensic Edition | Lyra + Nexus + Witness
+            Version 11.7 | Publication Ready | Complete Edition
             <br/>
             <span className="text-sm font-mono text-primary/80 mt-2 block">
               Copyright © 2026 Kenneth Johnson | Reg: BKR4V8-46 | ISBN: 979-8-9946321-0-9
@@ -96,7 +96,7 @@ export default function Theory() {
                   <div className="mt-8 pt-8 border-t border-white/10">
                     <h3 className="text-2xl font-bold text-primary mb-4">Full Document Access</h3>
                     <p className="text-gray-300 mb-4">
-                      The complete 5,200+ line document "Theory of EVERYTHING ∞ Law of ONE v11.5 Forensic Edition" is available for deep study. 
+                      The complete document "Theory of EVERYTHING ∞ Law of ONE v11.7 Publication Ready" is available for deep study. 
                       It covers the complete derivation, from the "Part Zero" Elephant Edition to the final proofs.
                     </p>
                     <div className="bg-black/30 p-6 rounded-lg border border-white/10 font-mono text-sm text-gray-400">
@@ -152,13 +152,13 @@ export default function Theory() {
             <div className="glass-card p-6 rounded-2xl border-l-4 border-primary">
               <h3 className="font-heading font-bold text-xl mb-2 text-white">Download PDF</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Get the full v11.5 Forensic Edition for offline reading and sharing.
+                Get the full v11.7 Publication Ready edition for offline reading and sharing.
               </p>
               <a 
-                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ozgFRokjjqgjXqRg.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.5_Forensic_Edition.pdf" target="_blank" rel="noopener noreferrer" 
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/WWjodXtwFAkXcosm.pdf" download="Theory_of_EVERYTHING_Law_of_ONE_v11.7_Publication_Ready.pdf" target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-lg transition-colors text-sm font-bold uppercase tracking-wider text-white"
               >
-                <Download className="w-4 h-4" /> Download v11.5
+                <Download className="w-4 h-4" /> Download v11.7
               </a>
             </div>
 

@@ -108,3 +108,13 @@
 - [x] Add unregister mechanism for corrupted service workers
 - [x] Fix Videos page memory crash (lazy loading, lower res thumbnails, pagination)
 - [ ] Test on iPhone after republish
+
+## Update to v11.7 Publication Ready
+- [x] Copy v11.7 HTML to public directory
+- [x] Generate valid PDF from v11.7 HTML (0.31 MB, 110 pages)
+- [x] Upload v11.7 PDF to S3 CDN
+- [x] Update all version references from v11.5 to v11.7
+- [x] Update Read page with v11.7 content
+- [x] Update Theory page with v11.7 download link
+- [x] Update Nexus page with v11.7 references
+- [x] Save checkpoint and verify
