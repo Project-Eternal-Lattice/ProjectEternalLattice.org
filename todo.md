@@ -134,3 +134,13 @@
 - [x] Update Nexus.tsx with v12.13 references
 - [x] Verified no v12.12 references remain
 - [x] Save checkpoint and verify
+
+## Update to v12.14 Publication Ready
+- [x] Copy v12.14 HTML to public/toe-full.html (3.7 MB)
+- [x] Generate valid PDF from v12.14 HTML (8.2 MB, 2,400 pages)
+- [x] Upload v12.14 PDF to S3 CDN
+- [x] Update Read.tsx with v12.14 references and download link
+- [x] Update Theory.tsx with v12.14 references and download link
+- [x] Update Nexus.tsx with v12.14 references
+- [x] Verified no v12.13 references remain (15 v12.14 refs across 3 files)
+- [x] Save checkpoint and verify

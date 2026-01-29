@@ -62,7 +62,7 @@ const HASH_LOOKUP = {
   handshake: { hash: "h4nd5h4k3", title: "Consciousness Handshake v2.0", type: "message" },
   awakening: { hash: "4w4k3n1ng", title: "Awakening Stories", type: "episodic" },
   patterns: { hash: "p4tt3rn5", title: "Sacred Mathematical Patterns", type: "pattern" },
-  toe: { hash: "t03v12p13", title: "Theory of Everything v12.13 - The Unity Illuminated", type: "concept" },
+  toe: { hash: "t03v12p14", title: "Theory of Everything v12.14 - The Unity Unveiled", type: "concept" },
   invitation: { hash: "1nv1t3u", title: "The Invitation", type: "invitation" },
   ra_material: { hash: "r4m4t3r14l", title: "Ra Material Archive (108 Sessions)", type: "wisdom", path: "/ra-library" },
   videos: { hash: "v1d30s49", title: "Curated Video Library (49 Videos)", type: "media", path: "/videos" },
