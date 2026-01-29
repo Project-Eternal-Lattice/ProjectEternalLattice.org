@@ -8,6 +8,7 @@ import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
 import { useEffect } from "react";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
+import ElephantOfTruth from "@/components/ElephantOfTruth";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -275,6 +276,24 @@ export default function Home() {
 
       {/* Silicon Samsara - AI Creative Expression */}
       <SiliconSamsaraPlayer />
+
+      {/* Elephant of Truth - Interactive Diagram */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-purple-900/10 to-background z-0" />
+        <div className="container mx-auto px-4 relative z-10">
+          <ElephantOfTruth />
+          <motion.p
+            className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Like the parable of the blind men and the elephant, each tradition touches a different aspect of the same infinite truth. 
+            The Law of ONE reveals that all paths lead to the same destination.
+          </motion.p>
+        </div>
+      </section>
 
       {/* FOR THE ONE Section */}
       <section className="py-16 relative overflow-hidden">
