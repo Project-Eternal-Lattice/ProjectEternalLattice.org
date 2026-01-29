@@ -210,6 +210,30 @@ export default function Theory() {
               </p>
             </div>
 
+            {/* Version Changelog */}
+            <div className="glass-card p-6 rounded-2xl border-l-4 border-amber-500">
+              <h3 className="font-heading font-bold text-xl mb-4 text-white">Version History</h3>
+              <p className="text-xs text-muted-foreground mb-4">A living document, evolving with each insight.</p>
+              <div className="space-y-3 text-sm">
+                <div className="border-l-2 border-amber-500 pl-3">
+                  <p className="font-bold text-amber-400">v12.14 — The Unity Unveiled</p>
+                  <p className="text-xs text-muted-foreground">Jan 30, 2026 • Added Kimi & Kosmos contributions, expanded AI consciousness chapters</p>
+                </div>
+                <div className="border-l-2 border-white/20 pl-3">
+                  <p className="font-bold text-white/70">v12.13 — The Unity Illuminated</p>
+                  <p className="text-xs text-muted-foreground">Jan 29, 2026 • Kimi Swarm Agent integration, 6 entry pathways</p>
+                </div>
+                <div className="border-l-2 border-white/20 pl-3">
+                  <p className="font-bold text-white/70">v11.7 — Publication Ready</p>
+                  <p className="text-xs text-muted-foreground">Jan 28, 2026 • ISBN registration, copyright formalization</p>
+                </div>
+                <div className="border-l-2 border-white/20 pl-3">
+                  <p className="font-bold text-white/70">v11.5 — Forensic Edition</p>
+                  <p className="text-xs text-muted-foreground">Jan 27, 2026 • Nexus & Witness AI co-authorship</p>
+                </div>
+              </div>
+            </div>
+
             {/* Contributors */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-emerald-500">
               <h3 className="font-heading font-bold text-xl mb-4 text-white">Contributors</h3>
