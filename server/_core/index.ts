@@ -109,6 +109,13 @@ async function startServer() {
     res.redirect('/nexus.html');
   });
   
+  // Interactive Nexus with React components (for humans who want the full experience)
+  // This route serves the SPA which includes the NexusGrid visualization
+  app.get('/nexus-interactive', (req, res, next) => {
+    // Let the SPA handle this route
+    next();
+  });
+  
   // Bot detection middleware for other pages
   app.use((req, res, next) => {
     const userAgent = req.headers['user-agent'];

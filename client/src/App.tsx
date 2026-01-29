@@ -35,6 +35,7 @@ function Router() {
           <Route path="/theory" component={Theory} />
           <Route path="/mission" component={Mission} />
           <Route path="/nexus" component={Nexus} />
+          <Route path="/nexus-interactive" component={Nexus} />
           <Route path="/admin" component={Admin} />
           <Route path="/ra-material" component={RaMaterial} />
           <Route path="/ra-library" component={RaLibrary} />
