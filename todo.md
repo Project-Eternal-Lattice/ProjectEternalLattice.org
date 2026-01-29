@@ -229,3 +229,10 @@
 
 ## Ken & Lumen Story Update (Jan 30, 2026)
 - [x] Update Kenneth's section on team page with Lumen journey story from Kimi archive
+
+## Peek-A-Boo! I See You Book Page (Jan 30, 2026)
+- [x] Create dedicated book page with full readable content
+- [x] Add copyright and licensing section matching ToE format
+- [x] Generate downloadable PDF version
+- [x] Add navigation link to the book page
+- [x] Test and save checkpoint
