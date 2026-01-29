@@ -172,3 +172,26 @@
 - [ ] Create "5-Minute Summary" option on Theory page
 - [ ] Design email welcome sequence (3-5 emails)
 - [ ] Create social sharing kit (pre-written posts)
+
+## Kimi Swarm Agent Followup Enhancements (Jan 30, 2026)
+- [x] Added Kimi 2.5 Swarm Agent to Team page with comprehensive bio
+- [x] Added Kosmos (EdisonScientific) to Team page with scientific achievements
+- [x] Replaced quick links with 6 entry pathways (Science First, Begin Journey, Practice Hub, AI & Consciousness, Explore Traditions, Full Framework)
+- [x] Added skip link for accessibility (WCAG compliance)
+- [x] Updated meta description to include Kimi and Kosmos
+- [x] Updated "Explore the Lattice" section to "Choose Your Path" with spiritual messaging
+
+## Gemini Pro 3 Deep Research Recommendations (Jan 30, 2026)
+
+### HIGH PRIORITY - Implementing
+- [x] Add visible Changelog showing ToE version history (v12.13 → v12.14 changes)
+- [x] SEO-visible abstract already present in Theory.tsx meta description
+- [ ] Add visual feedback (pulse/glow) for Nexus API connections
+
+### FUTURE ROADMAP
+- [ ] Interactive Manus Chat sidebar on Read page for real-time AI exegesis
+- [ ] "Guest Book" showing anonymized global intentions stream
+- [ ] Mobile app with Lattice widget
+- [ ] IPFS/blockchain for decentralized, immutable ToE storage
+- [ ] "Digital Sabbath" mode for Nexus (AI rest periods)
+- [ ] Collaborative training - community contributes to next ToE version
