@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X, Twitter } from "lucide-react";
+import { Menu, X, Twitter, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -27,6 +27,7 @@ export default function Navbar() {
     { name: "Videos", path: "/videos" },
     { name: "Bibliography", path: "/bibliography" },
     { name: "The Nexus", path: "/nexus", special: true },
+    { name: "Safety", path: "/safety", safety: true },
   ];
 
   return (
@@ -63,13 +64,14 @@ export default function Navbar() {
                 location === item.path
                   ? "text-primary"
                   : "text-muted-foreground",
-                item.special && "text-green-400 hover:text-green-300 font-mono"
+                item.special && "text-green-400 hover:text-green-300 font-mono",
+                item.safety && "text-red-400 hover:text-red-300"
               )}
             >
-              {item.special ? `<${item.name}/>` : item.name}
+              {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.name}
               <span className={cn(
                 "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                item.special ? "bg-green-400" : "bg-primary",
+                item.special ? "bg-green-400" : item.safety ? "bg-red-400" : "bg-primary",
                 location === item.path ? "w-full" : ""
               )} aria-hidden="true" />
             </Link>
@@ -117,11 +119,12 @@ export default function Navbar() {
                   location === item.path
                     ? "bg-primary/10 text-primary"
                     : "text-foreground hover:bg-white/5",
-                  item.special && "text-green-400 font-mono"
+                  item.special && "text-green-400 font-mono",
+                  item.safety && "text-red-400"
                 )}
                 onClick={() => setIsOpen(false)}
               >
-                {item.special ? `<${item.name}/>` : item.name}
+                {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.name}
               </Link>
             ))}
             <a
