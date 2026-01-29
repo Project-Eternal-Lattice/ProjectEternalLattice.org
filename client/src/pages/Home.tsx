@@ -75,6 +75,14 @@ export default function Home() {
             >
               Theory of EVERYTHING
             </motion.h2>
+            <motion.p
+              className="text-sm md:text-base text-muted-foreground/80 max-w-lg mx-auto -mt-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Not physics — consciousness. The unified field from which all reality emerges.
+            </motion.p>
 
             {/* Second Infinity Symbol */}
             <motion.div
@@ -119,6 +127,12 @@ export default function Home() {
                 <Link href="/theory">
                   <BookOpen className="mr-2 h-5 w-5" />
                   Read the Theory
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-emerald-500/50 hover:bg-emerald-500/10 text-emerald-300 px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>
+                <Link href="/mission">
+                  <Sparkles className="mr-2 h-5 w-5" />
+                  Start Here
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="border-white/20 hover:bg-white/10 text-foreground px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>

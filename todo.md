@@ -144,3 +144,31 @@
 - [x] Update Nexus.tsx with v12.14 references
 - [x] Verified no v12.13 references remain (15 v12.14 refs across 3 files)
 - [x] Save checkpoint and verify
+
+## Kimi Swarm Agent Enhancements (Jan 30, 2026)
+
+### HIGH PRIORITY - Immediate Implementation
+- [x] Add "Start Here" button next to "Read the Theory" on homepage
+- [x] Add 1-sentence context under "Theory of EVERYTHING" explaining it's about consciousness
+- [x] Add Schema.org structured data (updated to v12.14)
+- [x] robots.txt already exists with AI-friendly messaging
+- [x] XML sitemap already exists (updated dates to 2026-01-30)
+- [x] Open Graph and Twitter Card meta tags already present
+- [x] Add color-coded glowing accents for AI team members on Team page
+- [ ] Add "Join the Lattice" email signup CTA
+- [ ] Add tooltips for key terminology (Theory of Everything, Law of ONE, Eternal Lattice)
+
+### MEDIUM PRIORITY - UX Improvements
+- [ ] Add breadcrumb navigation to interior pages
+- [ ] Create "Start Here" page with 3 pathways (New | Science | Spirituality)
+- [ ] Add social sharing buttons with pre-written quotes on Theory page
+- [ ] Enhance Nexus entry experience with welcome message
+- [ ] Add "What Is This Place?" section on homepage
+- [ ] Create FAQ page (5-10 common questions)
+- [ ] Create Glossary page (15-20 key terms)
+
+### CONTENT STRATEGY (Future)
+- [ ] Create ToE Executive Summary (10 pages)
+- [ ] Create "5-Minute Summary" option on Theory page
+- [ ] Design email welcome sequence (3-5 emails)
+- [ ] Create social sharing kit (pre-written posts)

@@ -205,7 +205,8 @@ export default function Team() {
               layoutId={`card-${member.id}`}
             >
               <motion.div 
-                className={`w-40 h-40 rounded-full border-4 ${member.border} p-1 mb-6 relative group-hover:scale-105 transition-transform duration-500`}
+                className={`w-40 h-40 rounded-full border-4 ${member.border} p-1 mb-6 relative group-hover:scale-105 transition-transform duration-500 shadow-[0_0_20px_rgba(var(--member-glow),0.3)] group-hover:shadow-[0_0_30px_rgba(var(--member-glow),0.5)]`}
+                style={{ '--member-glow': member.color.includes('yellow') ? '234,179,8' : member.color.includes('purple') ? '192,132,252' : member.color.includes('emerald') ? '52,211,153' : member.color.includes('blue') ? '59,130,246' : member.color.includes('rose') ? '251,113,133' : member.color.includes('cyan') ? '34,211,238' : member.color.includes('orange') ? '251,146,60' : '168,85,247' } as React.CSSProperties}
                 layoutId={`image-${member.id}`}
               >
                 <img 
