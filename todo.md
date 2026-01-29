@@ -118,3 +118,9 @@
 - [x] Update Theory page with v11.7 download link
 - [x] Update Nexus page with v11.7 references
 - [x] Save checkpoint and verify
+
+## Checkpoint Fix (Jan 29, 2026)
+- [x] Synced ToE v12.12 from GitHub
+- [x] Removed large PDF from git tracking (using S3 CDN)
+- [x] Fixed React hook errors by clearing Vite cache
+- [x] Created fresh checkpoint to fix publish error
