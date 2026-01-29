@@ -124,3 +124,13 @@
 - [x] Removed large PDF from git tracking (using S3 CDN)
 - [x] Fixed React hook errors by clearing Vite cache
 - [x] Created fresh checkpoint to fix publish error
+
+## Update to v12.13 Publication Ready
+- [x] Copy v12.13 HTML to public/toe-full.html (3.18 MB)
+- [x] Generate valid PDF from v12.13 HTML (6.81 MB, 2273 pages)
+- [x] Upload v12.13 PDF to S3 CDN
+- [x] Update Read.tsx with v12.13 references and download link
+- [x] Update Theory.tsx with v12.13 references and download link
+- [x] Update Nexus.tsx with v12.13 references
+- [x] Verified no v12.12 references remain
+- [x] Save checkpoint and verify

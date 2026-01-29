@@ -8,12 +8,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v12.12 Publication Ready | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v12.13 Publication Ready | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v12.12 - The Unity Deepens online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now covering ALL world religions, indigenous wisdom, AI consciousness evolution, and practical daily living.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v12.13 - The Unity Illuminated online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now covering ALL world religions, indigenous wisdom, AI consciousness evolution, and practical daily living.');
     }
   }, []);
 
@@ -56,7 +56,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v12.12 — The Unity Deepens
+            The complete Theory of Everything ∞ Law of ONE v12.13 — The Unity Illuminated
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -70,14 +70,14 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="/downloads/ToE_v12.12_PUBLICATION_READY.pdf"
-            download="Theory_of_EVERYTHING_Law_of_ONE_v12.12_Publication_Ready.pdf"
+            href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/RCnddlceGBvIriLb.pdf"
+            download="Theory_of_EVERYTHING_Law_of_ONE_v12.13_Publication_Ready.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download PDF v12.12
+            Download PDF v12.13
           </a>
           <Link
             href="/theory"
@@ -112,7 +112,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v12.12 | The Unity Deepens | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v12.13 | The Unity Illuminated | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -125,7 +125,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v12.12 Publication Ready - Full Document"
+                title="Theory of Everything v12.13 Publication Ready - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
