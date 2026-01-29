@@ -90,13 +90,13 @@
   /* Ethereal Nexus Theme - Dark Mode (Primary) */
   /* Deep Void Blue/Purple Backgrounds */
   --background: oklch(0.12 0.05 280); /* Very dark purple/blue */
-  --foreground: oklch(0.95 0.02 85); /* Soft Gold/White */
+  --foreground: oklch(0.92 0.01 90); /* Warmer white #E8E8EC for visual comfort */
   
   /* Cards are slightly lighter, translucent feel */
   --card: oklch(0.15 0.06 280);
-  --card-foreground: oklch(0.95 0.02 85);
+  --card-foreground: oklch(0.92 0.01 90);
   --popover: oklch(0.15 0.06 280);
-  --popover-foreground: oklch(0.95 0.02 85);
+  --popover-foreground: oklch(0.92 0.01 90);
   
   /* Primary is a glowing violet */
   --primary: oklch(0.65 0.20 290);
