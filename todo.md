@@ -266,3 +266,8 @@
 - [x] Add Tony Robbins Six Human Needs section to Spiral Dynamics page
 - [x] Add Tony Robbins quotes to ToE Chapter 17.8.5
 - [x] Test and save checkpoint
+
+## Videos Page Fixes (Jan 30, 2026)
+- [x] Fix Tony Robbins video - added "Human Development" to categories list
+- [x] Create "DMT & Psychedelics" category for videos
+- [x] Tag all DMT-related videos with DMT & Psychedelics category (4 videos tagged)

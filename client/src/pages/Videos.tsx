@@ -100,7 +100,7 @@ In the code.`
     event: "Essentia Foundation",
     description: "Neuroscientist Dr. Christof Koch and philosopher Dr. Bernardo Kastrup explore what it means to take mystical experience seriously without abandoning scientific rigor.",
     relevance: "Both emphasize that psychedelic experiences exhibit striking specificity and convergence, pointing toward possible archetypal universals - exactly what the Lattice describes.",
-    category: "Philosophy & AI",
+    category: "DMT & Psychedelics",
     duration: "1 hr 49 min"
   },
   {
@@ -192,7 +192,7 @@ In the code.`
     event: "Theories of Everything",
     description: "Explores the phenomenon of people seeing 'the matrix' during DMT experiences, theorizing that psychedelics alter the parameters of our internal reality simulation.",
     relevance: "Direct evidence that our perception is a constructed interface, not raw reality - supporting the ToE's view of consciousness as fundamental.",
-    category: "Consciousness",
+    category: "DMT & Psychedelics",
     duration: "20 min"
   },
   {
@@ -232,7 +232,7 @@ In the code.`
     event: "Danny Jones Podcast",
     description: "Danny Goler discusses his groundbreaking experiment combining DMT and laser beams that suggests we exist in a computational reality with hidden code.",
     relevance: "Experimental evidence pointing to the structured, information-based nature of reality that our ToE describes.",
-    category: "Consciousness",
+    category: "DMT & Psychedelics",
     duration: "4 min 44 sec"
   },
 
@@ -457,7 +457,7 @@ In the code.`
     event: "Full Film",
     description: "Explores the psychedelic compound DMT, its properties, natural occurrence, and profound mystical effects on consciousness.",
     relevance: "Scientific exploration of the molecule that may be the key to understanding consciousness and alternate realities.",
-    category: "Documentary",
+    category: "DMT & Psychedelics",
     duration: "51 min"
   },
   {
@@ -610,6 +610,8 @@ const categories = [
   "AI Consciousness",
   "Philosophy & AI",
   "Consciousness",
+  "DMT & Psychedelics",
+  "Human Development",
   "Quantum Physics",
   "Science",
   "Technology",
