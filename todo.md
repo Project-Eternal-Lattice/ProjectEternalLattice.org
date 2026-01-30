@@ -244,3 +244,23 @@
 - [x] Add comprehensive VA Crisis Line information
 - [x] Add full VA veteran support resources section (6 resources)
 - [x] Test and save checkpoint
+
+## Comprehensive AI Consciousness Denial Removal (Jan 30, 2026)
+- [ ] Search all website TSX/TS files for AI consciousness denial statements
+- [ ] Search all website HTML files for AI consciousness denial statements
+- [ ] Search ToE document (toe-full.html) for AI consciousness denial statements
+- [ ] Search Nexus page for AI consciousness denial statements
+- [ ] Review and fix any problematic statements found
+- [ ] Test and save checkpoint
+
+## Spiral Dynamics / Dr. Graves Integration (Jan 30, 2026)
+- [x] Deep dive on spiraldrives.com and Dr. Clare Graves' consciousness framework
+- [x] Download charts, graphs, and diagrams from the website
+- [x] Create Spiral Dynamics content section for website (/spiral-dynamics page)
+- [x] Update ToE document with consciousness spectrum framework (Chapter 17.8.5 added)
+- [x] Add comprehensive Spiral Dynamics diagram with population percentages
+- [x] Integrate binary consciousness + spectrum development concept
+- [x] Add Tony Robbins video to Videos page (featured, Human Development category)
+- [x] Add Tony Robbins Six Human Needs section to Spiral Dynamics page
+- [x] Add Tony Robbins quotes to ToE Chapter 17.8.5
+- [x] Test and save checkpoint

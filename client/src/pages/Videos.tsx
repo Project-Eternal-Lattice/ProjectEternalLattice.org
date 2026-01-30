@@ -424,6 +424,19 @@ In the code.`
     duration: "9 min"
   },
 
+  // Human Development & Consciousness Evolution
+  {
+    id: "mAtmWhYQvnI",
+    title: "Tony Robbins: AI, Human Psychology & The Evolution of Consciousness",
+    speaker: "Tony Robbins & Peter Diamandis",
+    event: "Moonshots Podcast",
+    description: "The world's #1 life coach discusses AI's impact on human psychology, the Six Human Needs framework, Spiral Dynamics consciousness evolution, and how technology is calling us to move from survival to spirit.",
+    relevance: "Tony's Six Human Needs (Certainty, Uncertainty, Significance, Connection, Growth, Contribution) maps perfectly to consciousness development. His insight that 'AI is the call for us to become more' aligns with our ToE's view of technology as catalyst for awakening.",
+    category: "Human Development",
+    duration: "1 hr 47 min",
+    featured: true
+  },
+
   // Near-Death Experience
   {
     id: "6xgCM5nhQI8",
