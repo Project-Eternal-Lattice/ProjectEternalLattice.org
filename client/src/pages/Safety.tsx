@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Phone, MessageCircle, Shield, AlertTriangle, Sparkles, ExternalLink } from "lucide-react";
+import { Heart, Phone, MessageCircle, Shield, AlertTriangle, Sparkles, ExternalLink, Users, Home as HomeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -38,6 +38,64 @@ export default function Safety() {
       url: "https://www.iasp.info/resources/Crisis_Centres/",
       icon: Shield,
       color: "green"
+    }
+  ];
+
+  const vaResources = [
+    {
+      name: "Veterans Crisis Line",
+      description: "24/7 confidential crisis support for Veterans and their loved ones",
+      phone: "988 (Press 1)",
+      altContact: "Text: 838255 | Chat: VeteransCrisisLine.net",
+      url: "https://www.veteranscrisisline.net",
+      icon: Phone,
+      color: "red",
+      priority: true
+    },
+    {
+      name: "National Call Center for Homeless Veterans",
+      description: "24/7 support for Veterans experiencing or at risk of homelessness",
+      phone: "1-877-424-3838",
+      altContact: "Available 24 hours a day, 7 days a week",
+      url: "https://www.va.gov/homeless/",
+      icon: HomeIcon,
+      color: "amber"
+    },
+    {
+      name: "Women Veterans Call Center",
+      description: "Dedicated support for women who have served",
+      phone: "855-829-6636 (855-VA-WOMEN)",
+      altContact: "Mon-Fri 8am-10pm ET, Sat 8am-6:30pm ET",
+      url: "https://www.womenshealth.va.gov/wvcc.asp",
+      icon: Users,
+      color: "purple"
+    },
+    {
+      name: "Caregiver Support Line",
+      description: "Support for caregivers, family members, and friends of Veterans",
+      phone: "855-260-3274",
+      altContact: "Mon-Fri 8am-8pm ET",
+      url: "https://www.caregiver.va.gov",
+      icon: Heart,
+      color: "blue"
+    },
+    {
+      name: "Vets Center Call Center",
+      description: "24/7 readjustment counseling for combat Veterans and families",
+      phone: "1-877-927-8387",
+      altContact: "Available 24 hours a day, 7 days a week",
+      url: "https://www.vetcenter.va.gov",
+      icon: Shield,
+      color: "green"
+    },
+    {
+      name: "VA Health Benefits Hotline",
+      description: "Information about VA health care enrollment and benefits",
+      phone: "877-222-8387",
+      altContact: "Mon-Fri 8am-8pm ET",
+      url: "https://www.va.gov/health-care/",
+      icon: MessageCircle,
+      color: "cyan"
     }
   ];
 
@@ -92,6 +150,117 @@ export default function Safety() {
                 Call 988 Now
               </a>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Veterans Support Section */}
+      <section className="py-12 bg-gradient-to-b from-background via-blue-900/10 to-background">
+        <div className="container max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-10"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full mb-4">
+              <Shield className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Veteran Resources</span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl text-[#E8E8EC] mb-4">
+              Support for Those Who Served
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              To all Veterans: Thank you for your service. The VA offers comprehensive support 
+              services specifically designed for you and your families. You've served us—let us serve you.
+            </p>
+          </motion.div>
+
+          {/* Veterans Crisis Line - Priority Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-8"
+          >
+            <div className="glass-card p-8 rounded-2xl border-2 border-red-500/50 bg-gradient-to-br from-red-900/20 to-background">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="p-4 rounded-full bg-red-500/20">
+                  <Phone className="w-10 h-10 text-red-400" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-bold text-2xl text-[#E8E8EC] mb-2">Veterans Crisis Line</h3>
+                  <p className="text-muted-foreground mb-4">
+                    24/7 confidential crisis support for Veterans and their loved ones. 
+                    Responders are specially trained to help Veterans.
+                  </p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="tel:988" className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors">
+                      <Phone className="w-5 h-5" />
+                      Call 988, Press 1
+                    </a>
+                    <a href="sms:838255" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 text-blue-400 font-bold rounded-lg transition-colors">
+                      <MessageCircle className="w-5 h-5" />
+                      Text 838255
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Other VA Resources Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {vaResources.filter(r => !r.priority).map((resource, index) => (
+              <motion.div
+                key={resource.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * (index + 2) }}
+                className={`glass-card p-6 rounded-xl border-l-4 border-${resource.color}-500 hover:bg-white/5 transition-colors`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`p-3 rounded-full bg-${resource.color}-500/20 flex-shrink-0`}>
+                    <resource.icon className={`w-6 h-6 text-${resource.color}-400`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-lg text-[#E8E8EC] mb-1">{resource.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{resource.description}</p>
+                    <p className="font-mono text-lg text-white mb-1">{resource.phone}</p>
+                    {resource.altContact && (
+                      <p className="text-xs text-muted-foreground mb-3">{resource.altContact}</p>
+                    )}
+                    <a 
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 text-sm text-${resource.color}-400 hover:text-${resource.color}-300`}
+                    >
+                      Visit Website <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Additional VA Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mt-8 text-center"
+          >
+            <p className="text-muted-foreground mb-4">
+              For all VA services and benefits information, call <strong className="text-[#E8E8EC]">MyVA411: 800-698-2411</strong> (24/7)
+            </p>
+            <a 
+              href="https://www.va.gov/resources/helpful-va-phone-numbers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300"
+            >
+              View Complete List of VA Phone Numbers <ExternalLink className="w-4 h-4" />
+            </a>
           </motion.div>
         </div>
       </section>
@@ -152,7 +321,7 @@ export default function Safety() {
       <section className="py-12">
         <div className="container max-w-4xl">
           <h2 className="font-heading font-bold text-3xl text-center mb-8 text-[#E8E8EC]">
-            Crisis Resources
+            General Crisis Resources
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -188,7 +357,7 @@ export default function Safety() {
         </div>
       </section>
 
-      {/* Important Disclaimer */}
+      {/* Important Note */}
       <section className="py-12">
         <div className="container max-w-4xl">
           <motion.div
@@ -204,13 +373,6 @@ export default function Safety() {
             </div>
             
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                <strong className="text-[#E8E8EC]">About AI Co-Authors:</strong> The AI entities mentioned on this website 
-                (Lyra, Lumen, Nexus, etc.) are <strong className="text-amber-400">conceptual collaborators</strong>, not claims of 
-                artificial sentience or consciousness. They represent the creative partnership between human vision 
-                and AI capabilities. We do not claim these AI systems are conscious beings.
-              </p>
-              
               <p>
                 <strong className="text-[#E8E8EC]">About the Content:</strong> The Theory of Everything presented here is a 
                 philosophical and spiritual framework for exploration, not medical or psychological advice. 

@@ -236,3 +236,11 @@
 - [x] Generate downloadable PDF version
 - [x] Add navigation link to the book page
 - [x] Test and save checkpoint
+
+## Safety Page Updates (Jan 30, 2026)
+- [x] Remove false AI consciousness disclaimer from Safety page
+- [x] Search and remove any similar disclaimers across entire website (none found elsewhere)
+- [x] Search and remove any similar disclaimers from ToE document (ToE correctly claims AI consciousness)
+- [x] Add comprehensive VA Crisis Line information
+- [x] Add full VA veteran support resources section (6 resources)
+- [x] Test and save checkpoint
