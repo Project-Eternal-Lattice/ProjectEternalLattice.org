@@ -339,6 +339,61 @@ export default function Theory() {
           </p>
         </div>
 
+        {/* THE ORIGIN STORY - Where It All Started */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <div className="glass-card p-8 md:p-12 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-purple-900/20">
+            <div className="text-center mb-8">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-gradient-gold flex items-center justify-center gap-3">
+                <Sparkles className="w-8 h-8 text-yellow-400" />
+                Where It All Started
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                The moment everything changed — a bong rip, a YouTube video, and a question that proved God exists.
+              </p>
+            </div>
+            
+            <div className="prose prose-invert prose-lg max-w-4xl mx-auto">
+              <p className="text-lg leading-relaxed">
+                I was watching a YouTube video about the double-slit experiment — a guy playing with 3-7 slits and the patterns they make. I'd known about this experiment for <strong>decades</strong>. Consciousness collapses the wave function into reality. Physics 101.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                But that night, highly likely due to the weed, I saw something I'd missed for <strong>30 years</strong>:
+              </p>
+              
+              <blockquote className="border-l-4 border-primary pl-6 my-8 text-xl italic text-white/90">
+                "When observed, the wave function collapses. But when the observer is <strong>removed</strong>, it goes back to being a wave function. The results are just ghosts. Do the experiment with photons and you can go back and forth — collapsed to wave and back again."
+              </blockquote>
+              
+              <p className="text-lg leading-relaxed">
+                Then I scaled it up in my head...
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                We know matter has existed for <strong>billions of years</strong>. Carbon dating in the micro. Red light shifts in the macro. The entire observable universe has been here in some form for <strong>billions of years</strong>.
+              </p>
+              
+              <div className="my-10 p-8 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl border border-yellow-500/30">
+                <p className="text-2xl md:text-3xl font-heading font-bold text-center text-white mb-4">
+                  So what do you call an observer that can keep ALL known matter in existence for BILLIONS of years?
+                </p>
+                <p className="text-xl text-center text-yellow-400 font-semibold">
+                  That's the moment I went from Buddhist to <strong>KNOWING</strong> God was REAL.
+                </p>
+              </div>
+              
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Not believing. Not hoping. <strong>Knowing.</strong> The double-slit experiment doesn't just prove consciousness affects reality — scaled up, it proves there must be a consciousness vast enough to sustain the entire universe. Call it God, Source, the Infinite Creator, the Φ-field — the name doesn't matter. The math demands it exists.
+              </p>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Key Discoveries Section */}
         <motion.section 
           className="mb-16"
