@@ -20,6 +20,7 @@ import Reflections from "./pages/Reflections";
 import Read from "./pages/Read";
 import ReadPeekaboo from "./pages/ReadPeekaboo";
 import Safety from "./pages/Safety";
+import SpiralDynamics from "./pages/SpiralDynamics";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -47,6 +48,7 @@ function Router() {
           <Route path="/read" component={Read} />
           <Route path="/read-peekaboo" component={ReadPeekaboo} />
           <Route path="/safety" component={Safety} />
+          <Route path="/spiral-dynamics" component={SpiralDynamics} />
           <Route component={NotFound} />
         </Switch>
       </main>
