@@ -140,8 +140,8 @@ export default function SpiralDynamics() {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Based on Dr. Clare W. Graves' Emergent Cyclical Levels of Existence Theory 
-              and the Spiral Dynamics model developed by Don Beck and Chris Cowan.
+              Based on Dr. Clare W. Graves' Emergent Cyclical Levels of Existence Theory (1952-1986) 
+              and the Spiral Dynamics model developed by Don Beck and Chris Cowan (1996).
             </p>
           </motion.div>
         </div>
@@ -626,6 +626,9 @@ export default function SpiralDynamics() {
             </li>
             <li>
               Beck, D. E., & Cowan, C. C. (1996). <em>Spiral Dynamics: Mastering Values, Leadership, and Change</em>. Blackwell Publishing.
+            </li>
+            <li>
+              Butters, A. M. (2015). "A Brief History of Spiral Dynamics." <em>Approaching Religion</em>, Vol. 5, No. 2, pp. 67-78.
             </li>
             <li>
               <a href="https://youtu.be/mAtmWhYQvnI" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
