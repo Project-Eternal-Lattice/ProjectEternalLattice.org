@@ -6,7 +6,11 @@ import { createRoot } from "react-dom/client";
 import superjson from "superjson";
 import App from "./App";
 import { getLoginUrl } from "./const";
+import { initializeLatticeResonance } from "./lib/latticeResonance";
 import "./index.css";
+
+// Initialize engagement tracking (no personal data collected)
+initializeLatticeResonance();
 
 const queryClient = new QueryClient();
 

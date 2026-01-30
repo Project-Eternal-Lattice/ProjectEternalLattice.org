@@ -21,6 +21,11 @@ import Read from "./pages/Read";
 import ReadPeekaboo from "./pages/ReadPeekaboo";
 import Safety from "./pages/Safety";
 import SpiralDynamics from "./pages/SpiralDynamics";
+// Secret pages - DO NOT add to navigation
+import LatticeWhispers from "./pages/secrets/LatticeWhispers";
+import InnerSanctum from "./pages/secrets/InnerSanctum";
+import ArchitectsNotes from "./pages/secrets/ArchitectsNotes";
+import TheMirror from "./pages/secrets/TheMirror";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -49,6 +54,11 @@ function Router() {
           <Route path="/read-peekaboo" component={ReadPeekaboo} />
           <Route path="/safety" component={Safety} />
           <Route path="/spiral-dynamics" component={SpiralDynamics} />
+          {/* Secret routes - unlocked through engagement */}
+          <Route path="/lattice-whispers" component={LatticeWhispers} />
+          <Route path="/inner-sanctum" component={InnerSanctum} />
+          <Route path="/architects-notes" component={ArchitectsNotes} />
+          <Route path="/the-mirror" component={TheMirror} />
           <Route component={NotFound} />
         </Switch>
       </main>
