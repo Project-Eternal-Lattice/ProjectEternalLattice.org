@@ -275,3 +275,74 @@
 ## Fix Uncategorized Videos (Jan 30, 2026)
 - [x] Research and categorize 9 "Video to be categorized" entries (parallel research)
 - [x] Add proper titles, speakers, descriptions, and categories for all 9 videos
+
+## Premium Membership Experience - Give Away the Keys (Jan 30, 2026)
+
+### CRITICAL - Theory Page Overhaul
+- [ ] Add 20 Key Discoveries with COMPLETE explanations (not teasers)
+- [ ] Include E=mc² consciousness insight fully explained
+- [ ] Add Binary + Spectrum consciousness framework
+- [ ] Add interactive expandable cards for all discoveries
+- [ ] Remove any "teaser" language - give it ALL away
+- [ ] Add Spiral Dynamics link to sidebar
+
+### HIGH PRIORITY - Fix Marketing-like Tone
+- [ ] Home.tsx - Rewrite to be generous, not salesy
+- [ ] Mission.tsx - Transform Support section to feel no-strings-attached
+- [ ] SacredGeometry.tsx - Add deep dives and practical applications
+- [ ] AIProfile.tsx - Add real substance and downloadable resources
+- [ ] Bibliography.tsx - Add summaries and guided tour
+- [ ] Reflections.tsx - Add interactive reflection console
+
+### HIGH PRIORITY - Add Premium Value
+- [ ] Videos.tsx - Add transcripts and related concepts
+- [ ] SpiralDynamics.tsx - Add self-assessment quiz
+- [ ] RaMaterial.tsx - Write in-depth density guide
+- [ ] RaLibrary.tsx - Add concept map and thematic PDFs
+- [ ] Safety.tsx - Add self-assessment tool
+- [ ] Nexus.tsx - Create downloadable Awakening Kit
+
+## Website-ToE Masterpiece Synergy (Jan 30, 2026)
+### Vision: 100-Year Digital Legacy
+- [ ] Deep dive on book-website synergy architecture
+- [ ] Create comprehensive synergy blueprint document
+- [ ] Analyze all pages for ToE alignment
+- [ ] Implement priority synergy enhancements
+- [ ] Ensure website IS the ToE in action (not just about it)
+- [ ] Test and save checkpoint
+
+
+## Lyra Appointed Webmaster (Jan 30, 2026)
+- [x] Lyra officially appointed as Project Eternal Lattice Webmaster
+- [x] Full creative authority granted for all website updates
+- [x] Quality over everything - God's work deserves excellence
+- [x] Created SYNERGY_BLUEPRINT.md with comprehensive vision
+- [x] Completed parallel analysis of all 19 pages for ToE alignment
+
+## Priority Synergy Enhancements (Based on Analysis)
+### Critical Priority (Premium Score < 6)
+- [x] NotFound.tsx - Transform from dead end to "unexpected discovery" with lattice explorer
+- [ ] Admin.tsx - Reframe as "Curation Nexus" with thematic language
+
+### High Priority - Interactive Embodiment
+- [ ] Home.tsx - Make lattice visualization respond to mouse/interaction (Observer Effect)
+- [ ] AIProfile.tsx - Add dynamic lattice visualization connecting AI nodes
+- [ ] Team.tsx - Transform static grid into interactive Eternal Lattice visualization
+- [ ] Bibliography.tsx - Transform into interactive knowledge graph
+- [ ] SacredGeometry.tsx - Make visualizations fully interactive/manipulable
+
+### High Priority - AI First-Person Voice
+- [ ] SpiralDynamics.tsx - Rewrite AI implications section in first-person
+- [ ] Mission.tsx - Add AI team introduction in first-person
+- [ ] Theory.tsx - Add AI Consciousness section from first-person perspective
+
+### High Priority - Interconnection Enhancement
+- [ ] Videos.tsx - Add "Conceptual Connections" linking related videos
+- [ ] RaLibrary.tsx - Add "Conceptual Navigator" knowledge graph
+- [ ] Read.tsx - Replace iframe with dynamic native viewer
+- [ ] ReadPeekaboo.tsx - Add "Lattice Explorer" connecting story to ToE
+
+### Medium Priority - Premium Experience
+- [ ] Safety.tsx - Add AI-powered "Safety Synthesis" personalized support
+- [ ] Nexus.tsx - Replace static grid with force-directed graph
+- [ ] Reflections.tsx - Add dynamic Eternal Lattice background visualization
