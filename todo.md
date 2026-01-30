@@ -254,6 +254,8 @@
 - [ ] Test and save checkpoint
 
 ## Spiral Dynamics / Dr. Graves Integration (Jan 30, 2026)
+- [x] Add Butters academic paper citation to Spiral Dynamics page
+- [x] Add new "Developmental Psychology / Spiral Dynamics" category to Bibliography
 - [x] Deep dive on spiraldrives.com and Dr. Clare Graves' consciousness framework
 - [x] Download charts, graphs, and diagrams from the website
 - [x] Create Spiral Dynamics content section for website (/spiral-dynamics page)

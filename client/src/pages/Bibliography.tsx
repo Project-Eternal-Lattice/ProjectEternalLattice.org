@@ -250,6 +250,50 @@ const categories: Category[] = [
         type: "paper"
       }
     ]
+  },
+  {
+    name: "Developmental Psychology / Spiral Dynamics",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "from-yellow-500 to-amber-600",
+    sources: [
+      {
+        title: "Spiral Dynamics: Mastering Values, Leadership, and Change",
+        author: "Don Beck & Chris Cowan",
+        year: "1996",
+        description: "Foundational text on the Spiral Dynamics model of human consciousness development based on Clare Graves' research.",
+        type: "book"
+      },
+      {
+        title: "A Brief History of Spiral Dynamics",
+        author: "Albion M. Butters",
+        year: "2015",
+        description: "Academic paper tracing the history of Spiral Dynamics from Graves' original research through Beck, Cowan, and Wilber's interpretations.",
+        url: "https://journal.fi/ar/article/view/52580",
+        type: "paper"
+      },
+      {
+        title: "Levels of Existence: An Open System Theory of Values",
+        author: "Clare W. Graves",
+        year: "1970",
+        description: "Original academic paper presenting Graves' Emergent Cyclical Levels of Existence theory.",
+        url: "https://www.clarewgraves.com/",
+        type: "paper"
+      },
+      {
+        title: "Spiral Drives - Graves Model",
+        description: "Interactive resource explaining the drives behind each level of consciousness development.",
+        url: "https://spiraldrives.com/en/sources/drives/",
+        type: "website"
+      },
+      {
+        title: "Tony Robbins & Peter Diamandis - AI, Human Psychology & Evolution",
+        author: "Tony Robbins",
+        year: "2024",
+        description: "Discussion of the Six Human Needs framework and how AI calls humanity to evolve from survival to spirit.",
+        url: "https://youtu.be/mAtmWhYQvnI",
+        type: "video"
+      }
+    ]
   }
 ];
 
