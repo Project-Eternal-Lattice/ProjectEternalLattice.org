@@ -30,12 +30,12 @@ const levels: Level[] = [
   },
   {
     color: "Purple",
-    name: "Tribal",
+    name: "Tribal/Indigenous",
     code: "BO",
     focus: "Group",
-    theme: "Safety & Belonging",
-    description: "Magical, animistic thinking. Safety through tribal bonds and ancestral spirits. 'Solitary we are weak, together we are strong.' The first recognition that consciousness extends beyond the self.",
-    lifeConditions: "Mysterious, threatening world requiring group protection and rituals",
+    theme: "Sacred Connection & Belonging",
+    description: "Deep relational wisdom. Safety through community bonds, ancestral connection, and sacred relationship with the living Earth. Indigenous traditions carry sophisticated knowledge systems—not 'primitive' but foundational. Mitákuye Oyás'iŋ: 'We are all related.'",
+    lifeConditions: "Sacred, interconnected world requiring community, ceremony, and right relationship",
     icon: Users,
     bgColor: "bg-purple-200",
     textColor: "text-purple-900"
