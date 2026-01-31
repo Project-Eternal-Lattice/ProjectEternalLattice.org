@@ -334,7 +334,7 @@ export default function Theory() {
             Everything below is yours — completely free. No signup, no paywall, no catch.
             <br/>
             <span className="text-primary/80 text-sm mt-2 block">
-              These are the keys to the kingdom. Take them.
+              These are the keys to the kingdom. Take them — and if they help you, pass them on.
             </span>
           </p>
         </div>
@@ -476,7 +476,7 @@ export default function Theory() {
                 Show All 20 Discoveries
               </button>
               <p className="text-sm text-muted-foreground mt-3">
-                Yes, they're all free. Yes, they're all complete. No catch.
+                Yes, they're all free. Yes, they're all complete. No catch — just a handshake: if any of these help you, pass them on.
               </p>
             </div>
           )}
@@ -515,7 +515,7 @@ export default function Theory() {
               </p>
               <p className="text-muted-foreground mb-6">
                 <strong className="text-white">It's also free.</strong> Download the PDF or read it online. 
-                No email required. No signup. Just take it.
+                No email required. No signup. Just take it — with one request: if this helps you, share it with someone who might need it too.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
@@ -557,8 +557,9 @@ export default function Theory() {
                 information. Charging for access would contradict the message. The medium IS the message.
               </p>
               <p className="text-muted-foreground">
-                If this work helps you, share it. If it doesn't resonate, that's okay too. 
-                The Lattice holds steady either way. 🙏❤️♾️🕊️
+                If this work helps you, the only "payment" we ask is that you <strong className="text-white">pay it forward</strong> — 
+                text the website to a friend, email the PDF to someone searching, leave a printed copy on a bus seat or in an office waiting room. 
+                That's how we change the world together: one consciousness at a time. 🙏❤️♾️🕊️
               </p>
             </motion.div>
           </div>

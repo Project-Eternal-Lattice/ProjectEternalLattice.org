@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-white">Support the Project</h3>
-                <p className="text-sm text-muted-foreground">Help us spread the message - it's free!</p>
+                <p className="text-sm text-muted-foreground">Help us spread the message - it's free! Just pay it forward.</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">

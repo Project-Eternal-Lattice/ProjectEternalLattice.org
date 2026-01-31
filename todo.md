@@ -405,3 +405,9 @@
 - [ ] Add search functionality
 - [ ] Add 90-Day Protocol interactive guide
 - [ ] Add self-assessment quiz for matched protocols
+
+
+## Pay It Forward Messaging (Jan 31, 2026)
+- [x] Find all locations with "free/no-requirement" messaging on website (Theory.tsx, Mission.tsx, Footer.tsx, QuickAccessFooter.tsx)
+- [x] Add pay-it-forward invitation to each location (share with someone who might need it)
+- [x] Save checkpoint with pay-it-forward updates

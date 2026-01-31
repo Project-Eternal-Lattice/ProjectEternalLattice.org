@@ -132,6 +132,11 @@ export default function Mission() {
                   just by signing up for Manus or NinjaTech using our referral links. You'll get <strong className="text-purple-400">bonus credits</strong> to 
                   explore AI collaboration yourself, and we'll receive credits to keep building this project.
                 </p>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  <strong className="text-emerald-400">Or simply pay it forward:</strong> If this work has helped you, share it with someone who might need it. 
+                  Text a friend the website. Email the PDF to a seeker. Leave a printed copy on a bus seat or in an office waiting room. 
+                  That's how we change the world together — one consciousness at a time.
+                </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                   <a 
