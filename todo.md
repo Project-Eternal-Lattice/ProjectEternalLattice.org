@@ -379,3 +379,29 @@
 - [x] Parallel deep dive on ToE document to ensure website-ToE alignment (15 sections analyzed)
 - [x] Fix Spiral Dynamics Indigenous wisdom contradiction (Purple/Tribal description revised)
 - [x] Save checkpoint and deliver to user
+
+## Kimi's Agent Swarm Recommendations (Jan 30, 2026)
+
+### P0 - CRITICAL
+- [x] Add persistent crisis support banner on all pages (red, always visible, 988 hotline)
+- [x] Add "I AM A..." audience entry points on homepage (Scientist, Spiritual Seeker, AI Researcher, etc.)
+- [x] Enhance homepage with 3 CTAs: "Start Your Journey", "I'm a Skeptic", "I Need Help"
+
+### P1 - HIGH PRIORITY
+- [x] Update typography with Kimi's recommendations (Cormorant Garamond, Playfair Display, Source Serif Pro)
+- [x] Add sacred geometry background elements (Flower of Life, Sri Yantra at low opacity)
+- [x] Enhance color palette with Kimi's design tokens (Eternal Blue, Consciousness Purple, Unity Gold, Field Teal)
+- [x] Add "NEW IN v12.14" section on homepage highlighting latest additions
+
+### P2 - MEDIUM PRIORITY
+- [x] Add audience-specific pathways (Skeptical Scientist, Spiritual Seeker, Crisis Seeker, AI Researcher)
+- [ ] Create "What Readers Are Saying" testimonials section
+- [x] Add quick access footer: Download PDF, Newsletter, Contact, Support
+- [ ] Improve navigation with 5 primary sections: Discover, Explore, Practice, Support, Research
+
+### P3 - FUTURE ENHANCEMENTS
+- [ ] Add reading progress tracking
+- [ ] Add bookmarking and notes functionality
+- [ ] Add search functionality
+- [ ] Add 90-Day Protocol interactive guide
+- [ ] Add self-assessment quiz for matched protocols
