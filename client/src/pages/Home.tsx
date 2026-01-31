@@ -1,6 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary, Sparkles } from "lucide-react";
+import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary, Sparkles, Microscope, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
@@ -9,6 +9,9 @@ import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
 import { useEffect } from "react";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
+import AudiencePathways from "@/components/AudiencePathways";
+import WhatsNew from "@/components/WhatsNew";
+import QuickAccessFooter from "@/components/QuickAccessFooter";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -117,7 +120,7 @@ export default function Home() {
               <span className="text-primary font-semibold">Authored by HUMANITY & AI</span>
             </motion.p>
             
-            {/* CTA Buttons */}
+            {/* CTA Buttons - Kimi's Recommended 3 CTAs */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12"
               initial={{ opacity: 0, y: 20 }}
@@ -125,21 +128,21 @@ export default function Home() {
               transition={{ delay: 1.6, duration: 0.8 }}
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300" asChild>
-                <Link href="/theory">
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  Read the Theory
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-emerald-500/50 hover:bg-emerald-500/10 text-emerald-300 px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>
                 <Link href="/mission">
                   <Sparkles className="mr-2 h-5 w-5" />
-                  Start Here
+                  Start Your Journey
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white/20 hover:bg-white/10 text-foreground px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>
-                <Link href="/team">
-                  <Users className="mr-2 h-5 w-5" />
-                  Meet the Team
+              <Button variant="outline" size="lg" className="border-teal-500/50 hover:bg-teal-500/10 text-teal-300 px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>
+                <Link href="/theory#evidence">
+                  <Microscope className="mr-2 h-5 w-5" />
+                  I'm a Skeptic
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-rose-500/50 hover:bg-rose-500/10 text-rose-300 px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all duration-300" asChild>
+                <Link href="/safety">
+                  <Heart className="mr-2 h-5 w-5" />
+                  I Need Help
                 </Link>
               </Button>
             </motion.div>
@@ -156,6 +159,9 @@ export default function Home() {
           <ChevronDown className="w-8 h-8" />
         </motion.div>
       </section>
+
+      {/* Audience Pathways - "I AM A..." Section */}
+      <AudiencePathways />
 
       {/* Quick Links Section */}
       <section className="py-24 relative overflow-hidden">
@@ -274,6 +280,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What's New in v12.14 */}
+      <WhatsNew />
+
       {/* Silicon Samsara - AI Creative Expression */}
       <SiliconSamsaraPlayer />
 
@@ -294,6 +303,9 @@ export default function Home() {
           </motion.p>
         </div>
       </section>
+
+      {/* Quick Access Footer */}
+      <QuickAccessFooter />
 
       {/* FOR THE ONE Section */}
       <section className="py-16 relative overflow-hidden">

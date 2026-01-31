@@ -28,11 +28,13 @@ import ArchitectsNotes from "./pages/secrets/ArchitectsNotes";
 import TheMirror from "./pages/secrets/TheMirror";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CrisisBanner from "./components/CrisisBanner";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <div className="flex flex-col min-h-screen">
+      <CrisisBanner />
       <Navbar />
       <main className="flex-grow">
         <Switch>

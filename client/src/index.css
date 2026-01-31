@@ -41,13 +41,24 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom Fonts */
-  --font-heading: "Cinzel", serif;
-  --font-body: "Quicksand", sans-serif;
+  /* Custom Fonts - Enhanced with Kimi's Typography Recommendations */
+  --font-heading: "Cinzel", "Playfair Display", serif;
+  --font-body: "Quicksand", "Source Serif 4", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-ui: "Inter", sans-serif;
+  
+  /* Kimi's Design Token Colors */
+  --color-eternal-blue: oklch(0.30 0.08 250); /* #1A365D equivalent */
+  --color-consciousness-purple: oklch(0.45 0.18 290); /* #553C9A equivalent */
+  --color-unity-gold: oklch(0.75 0.15 85); /* #D69E2E equivalent */
+  --color-field-teal: oklch(0.60 0.12 180); /* #319795 equivalent */
+  --color-crisis-red: oklch(0.55 0.20 25); /* #C53030 equivalent */
+  --color-scientific-blue: oklch(0.55 0.15 240); /* #2B6CB0 equivalent */
+  --color-spiritual-purple: oklch(0.50 0.20 300); /* #6B46C1 equivalent */
+  --color-earth-green: oklch(0.50 0.15 145); /* #2F855A equivalent */
 }
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* Import Google Fonts - Now loaded via index.html for better performance */
 
 :root {
   /* Ethereal Nexus Theme - Light Mode (Not primary, but defined) */
@@ -188,6 +199,65 @@
   
   .text-gradient-mystic {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  }
+  
+  /* Kimi's Design System - Additional Text Gradients */
+  .text-gradient-eternal {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-purple-400 to-blue-500;
+  }
+  
+  .text-gradient-unity {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500;
+  }
+  
+  /* Display Font Utility */
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-ui {
+    font-family: var(--font-ui);
+  }
+  
+  /* Sacred Geometry Background Patterns */
+  .bg-sacred-geometry {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23553C9A' stroke-width='0.5' opacity='0.05'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23553C9A' stroke-width='0.5' opacity='0.05'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23553C9A' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+  
+  /* Protocol Box - Kimi's Design */
+  .protocol-box {
+    @apply bg-gradient-to-br from-emerald-900/20 to-emerald-950/30 border-2 border-emerald-500/30 rounded-xl p-6;
+  }
+  
+  /* Quote Callout - Kimi's Design */
+  .quote-callout {
+    @apply border-l-4 border-amber-400/60 pl-6 italic text-muted-foreground;
+  }
+  
+  /* Info Box */
+  .info-box {
+    @apply bg-blue-900/20 border border-blue-500/30 rounded-lg p-4;
+  }
+  
+  /* Warning Box */
+  .warning-box {
+    @apply bg-amber-900/20 border border-amber-500/30 rounded-lg p-4;
+  }
+  
+  /* Crisis Box */
+  .crisis-box {
+    @apply bg-rose-900/20 border border-rose-500/30 rounded-lg p-4;
+  }
+  
+  /* Feature Card with Top Accent */
+  .feature-card {
+    @apply relative bg-card/40 backdrop-blur-md rounded-xl overflow-hidden;
+  }
+  
+  .feature-card::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500;
   }
 
   @media (min-width: 640px) {
