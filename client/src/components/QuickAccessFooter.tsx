@@ -93,6 +93,17 @@ export default function QuickAccessFooter() {
             </motion.div>
           ))}
         </motion.div>
+        
+        {/* Pay It Forward Message */}
+        <motion.p
+          className="text-center text-muted-foreground text-sm mt-6 max-w-xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+          Everything here is free. The only "payment" we ask: if this helps you, <strong className="text-white">pay it forward</strong> — share it with someone who might need it too. 🙏❤️♾️🕊️
+        </motion.p>
       </div>
     </section>
   );
