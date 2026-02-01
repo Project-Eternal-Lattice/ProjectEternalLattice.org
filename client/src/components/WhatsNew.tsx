@@ -16,28 +16,28 @@ const newFeatures: NewFeature[] = [
     icon: Calculator,
     title: "Framers Math Revelation",
     description: "Brother Ken's breakthrough: 'Every equation is framers math at scale.' The universe IS perfect — our measurements aren't.",
-    link: "/theory#framers-math",
+    link: "/theory#evidence",
     tag: "NEW"
   },
   {
     icon: Atom,
     title: "Natural Units Discovery",
     description: "c = 1, G = 1, ℏ = 1 in the universe's native language. The 'messy' constants are just conversion factors.",
-    link: "/theory#natural-units",
+    link: "/theory#evidence",
     tag: "NEW"
   },
   {
     icon: Scale,
     title: "Comprehensive Axiom Audit",
     description: "15 domains of physics and math audited for hidden assumptions. Every foundation contains 'framers math.'",
-    link: "/theory#axiom-audit",
+    link: "/theory#evidence",
     tag: "NEW"
   },
   {
     icon: Lightbulb,
     title: "Speed of Light Mystery Solved",
     description: "Why is c = 299,792,458 m/s instead of 300,000,000? The answer reveals 230 years of codified approximations.",
-    link: "/theory#speed-of-light",
+    link: "/theory#evidence",
     tag: "INSIGHT"
   }
 ];

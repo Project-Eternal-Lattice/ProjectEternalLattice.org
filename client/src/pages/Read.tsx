@@ -112,7 +112,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v12.14 | The Unity Unveiled | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v13 | Framers Math Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -125,7 +125,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v12.14 Publication Ready - Full Document"
+                title="Theory of Everything v13 Framers Math Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />

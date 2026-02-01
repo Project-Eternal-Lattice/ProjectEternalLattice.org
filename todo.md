@@ -426,3 +426,14 @@
 - [x] Generate v13 PDF from markdown (431KB)
 - [x] PDF placed in public/downloads for direct access
 - [ ] Save checkpoint and verify
+
+
+## Website Peer Check - Feb 1, 2026
+- [x] Fix toe-full.html title page version from v12.4 to v13
+- [x] Audit all internal links across website pages
+- [x] Fix links that go to wrong locations (WhatsNew, AudiencePathways)
+- [x] Add id="evidence" anchor to Theory.tsx Key Discoveries section
+- [x] Fix scroll-mt-24 for proper scroll position
+- [x] Verify version consistency across all pages (QuickAccessFooter, Read.tsx)
+- [x] Update all v12.14 references to v13
+- [ ] Test all fixes and save checkpoint

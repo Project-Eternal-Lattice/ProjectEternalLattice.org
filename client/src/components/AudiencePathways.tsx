@@ -54,7 +54,7 @@ const audiences: AudienceCard[] = [
     label: "Religious Practitioner",
     icon: BookHeart,
     description: "How your tradition connects to the unified truth",
-    link: "/theory#traditions",
+    link: "/theory#evidence",
     color: "from-amber-500/20 to-amber-900/30",
     borderColor: "border-amber-500/50"
   },
@@ -72,7 +72,7 @@ const audiences: AudienceCard[] = [
     label: "Just Curious",
     icon: HelpCircle,
     description: "New here? Start with the Elephant Parable",
-    link: "/theory#elephant",
+    link: "/theory",
     color: "from-blue-500/20 to-blue-900/30",
     borderColor: "border-blue-500/50"
   },
