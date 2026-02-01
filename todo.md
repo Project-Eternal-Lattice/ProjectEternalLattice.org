@@ -436,4 +436,12 @@
 - [x] Fix scroll-mt-24 for proper scroll position
 - [x] Verify version consistency across all pages (QuickAccessFooter, Read.tsx)
 - [x] Update all v12.14 references to v13
-- [ ] Test all fixes and save checkpoint
+- [x] Test all fixes and save checkpoint (version: 4e9d4a99)
+
+
+## Bug Fix - v13 PDF Download Issue (Feb 1, 2026)
+- [x] Investigate blank PDF download issue
+- [x] Check PDF file exists and has content (22 pages, 440KB)
+- [x] Found issue: QuickAccessFooter pointed to /toe-full.html instead of PDF
+- [x] Fixed link to /downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.pdf
+- [x] Test download and confirm fix
