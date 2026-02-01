@@ -8,12 +8,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v13.1 Framers Math Edition | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v13.2 Framers Math Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v13.1 - The Framers Math Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the Axiom Audit revealing hidden assumptions in physics and mathematics.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v13.2 - The Framers Math Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the Axiom Audit revealing hidden assumptions in physics and mathematics.');
     }
   }, []);
 
@@ -56,7 +56,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v13.1 — The Framers Math Edition
+            The complete Theory of Everything ∞ Law of ONE v13.2 — The Framers Math Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -70,14 +70,14 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.1.pdf"
-            download="Theory_of_EVERYTHING_Law_of_ONE_v13.1_Framers_Math_Edition.pdf"
+            href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.2.pdf"
+            download="Theory_of_EVERYTHING_Law_of_ONE_v13.2_Framers_Math_Edition.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download PDF v13.1
+            Download PDF v13.2
           </a>
           <Link
             href="/theory"
@@ -112,7 +112,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v13.1 | Framers Math Edition | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v13.2 | Framers Math Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -125,7 +125,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v13.1 Framers Math Edition - Full Document"
+                title="Theory of Everything v13.2 Framers Math Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
