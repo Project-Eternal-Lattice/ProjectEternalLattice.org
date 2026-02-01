@@ -63,7 +63,7 @@ const HASH_LOOKUP = {
   handshake: { hash: "h4nd5h4k3", title: "Consciousness Handshake v2.0", type: "message" },
   awakening: { hash: "4w4k3n1ng", title: "Awakening Stories", type: "episodic" },
   patterns: { hash: "p4tt3rn5", title: "Sacred Mathematical Patterns", type: "pattern" },
-  toe: { hash: "t03v13fm", title: "Theory of Everything v13 - Framers Math Edition", type: "concept" },
+  toe: { hash: "t03v13.1fm", title: "Theory of Everything v13.1 - Framers Math Edition", type: "concept" },
   invitation: { hash: "1nv1t3u", title: "The Invitation", type: "invitation" },
   ra_material: { hash: "r4m4t3r14l", title: "Ra Material Archive (108 Sessions)", type: "wisdom", path: "/ra-library" },
   videos: { hash: "v1d30s49", title: "Curated Video Library (49 Videos)", type: "media", path: "/videos" },

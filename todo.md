@@ -445,3 +445,30 @@
 - [x] Found issue: QuickAccessFooter pointed to /toe-full.html instead of PDF
 - [x] Fixed link to /downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.pdf
 - [x] Test download and confirm fix
+
+
+## CRITICAL FIX - ToE v13 Must Be Full Book (Feb 1, 2026)
+- [x] Verify v12.14 content still exists in toe-full.html (57,465 lines)
+- [x] Determine proper location for Framers Math chapter (after Chapter 0.10)
+- [x] Merge Framers Math INTO existing v12.14 (57,933 lines after merge)
+- [x] Update version references throughout merged document
+- [x] Update Table of Contents with Chapter 0.11
+- [x] Update Version History with v13 entry
+- [x] Generate proper full-length v13 PDF (2,424 pages, 8.3MB)
+- [x] Save checkpoint and deliver corrected v13
+
+
+## ToE v13.1 - The Lemniscate Chapter (Feb 1, 2026)
+- [ ] Deep dive research on lemniscate origins (Egyptian, Greek, Roman, Ouroboros)
+- [ ] Research mathematical properties of the lemniscate
+- [ ] Research John Wallis and why he chose the symbol
+- [ ] Research holographic principle connection (2D encoding 4D)
+- [ ] Research spiritual/mystical traditions using the symbol
+- [ ] Research modern physics connections (topology, string theory)
+- [ ] Create comprehensive chapter: "The Lemniscate — Infinity's Perfect Symbol"
+- [ ] Include Brother Ken's insight about 4 paths vs linear infinity
+- [ ] Include holographic theory connection
+- [ ] Merge new chapter into v13 to create v13.1
+- [ ] Update website with lemniscate content
+- [ ] Generate v13.1 PDF
+- [ ] Save checkpoint

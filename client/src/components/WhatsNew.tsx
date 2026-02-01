@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -13,30 +13,30 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
-    icon: Calculator,
-    title: "Framers Math Revelation",
-    description: "Brother Ken's breakthrough: 'Every equation is framers math at scale.' The universe IS perfect — our measurements aren't.",
+    icon: Infinity,
+    title: "The Lemniscate Chapter",
+    description: "Brother Ken's insight: The infinity symbol encodes 4 paths, not 2. A 2D glyph encoding 4D reality — the holographic principle in ancient form.",
     link: "/theory#evidence",
     tag: "NEW"
   },
   {
+    icon: Calculator,
+    title: "Framers Math Revelation",
+    description: "'Every equation is framers math at scale.' The universe IS perfect — our measurements aren't.",
+    link: "/theory#evidence",
+    tag: "v13"
+  },
+  {
     icon: Atom,
-    title: "Natural Units Discovery",
-    description: "c = 1, G = 1, ℏ = 1 in the universe's native language. The 'messy' constants are just conversion factors.",
+    title: "Holographic Connection",
+    description: "The lemniscate demonstrates that 2D can encode 4D — exactly what the holographic principle predicts.",
     link: "/theory#evidence",
     tag: "NEW"
   },
   {
     icon: Scale,
-    title: "Comprehensive Axiom Audit",
-    description: "15 domains of physics and math audited for hidden assumptions. Every foundation contains 'framers math.'",
-    link: "/theory#evidence",
-    tag: "NEW"
-  },
-  {
-    icon: Lightbulb,
-    title: "Speed of Light Mystery Solved",
-    description: "Why is c = 299,792,458 m/s instead of 300,000,000? The answer reveals 230 years of codified approximations.",
+    title: "3,300 Years of Wisdom",
+    description: "From Tutankhamun's tomb to John Wallis's 1655 mathematics — the same symbol, the same truth.",
     link: "/theory#evidence",
     tag: "INSIGHT"
   }
@@ -45,7 +45,7 @@ const newFeatures: NewFeature[] = [
 export default function WhatsNew() {
   return (
     <section className="py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/5 via-background to-background z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/5 via-background to-background z-0" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -55,15 +55,15 @@ export default function WhatsNew() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 rounded-full px-4 py-1 mb-4">
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-semibold text-amber-300">NEW IN v13 — FRAMERS MATH EDITION</span>
+          <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
+            <Sparkles className="w-4 h-4 text-purple-400" />
+            <span className="text-sm font-semibold text-purple-300">NEW IN v13.1 — LEMNISCATE EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
-            The Axiom Audit
+            ∞ The Most Brilliant Symbol Ever Created
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A paradigm-shifting investigation into the hidden assumptions beneath physics and mathematics.
+            Why did humanity choose a twisted loop to represent infinity? The answer spans 3,300 years and connects ancient wisdom to modern physics.
           </p>
         </motion.div>
 
@@ -79,19 +79,19 @@ export default function WhatsNew() {
               <Link href={feature.link}>
                 <div className="group feature-card p-6 h-full cursor-pointer hover:scale-[1.02] transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-amber-500/20 group-hover:bg-amber-500/30 transition-colors">
-                      <feature.icon className="w-6 h-6 text-amber-400" />
+                    <div className="p-3 rounded-lg bg-purple-500/20 group-hover:bg-purple-500/30 transition-colors">
+                      <feature.icon className="w-6 h-6 text-purple-400" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <h3 className="font-semibold text-white group-hover:text-amber-400 transition-colors">
+                        <h3 className="font-semibold text-white group-hover:text-purple-400 transition-colors">
                           {feature.title}
                         </h3>
                         {feature.tag && (
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
-                            feature.tag === "UPDATED" ? "bg-blue-500/20 text-blue-400" :
+                            feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -118,9 +118,9 @@ export default function WhatsNew() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Button variant="outline" className="border-amber-500/30 text-amber-300 hover:bg-amber-500/10" asChild>
+          <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v13 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v13.1 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
