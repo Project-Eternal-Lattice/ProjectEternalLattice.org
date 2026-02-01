@@ -5,10 +5,28 @@ import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain,
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 
-// The 21 Key Discoveries - COMPLETE explanations, not teasers
+// The 22 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
   {
     id: 0,
+    icon: Infinity,
+    title: "The Lemniscate — Infinity's Perfect Symbol",
+    subtitle: "A 2D glyph encoding 4D reality",
+    color: "from-purple-500 to-indigo-500",
+    fullExplanation: `We were taught infinity as linear — a number line going forever in both directions. But the symbol humanity chose is a twisted loop: ∞. Standing in the center, you see FOUR paths, not two — and they all curve back to where they started.
+
+**The Insight:** Brother Ken realized that the infinity symbol isn't about escape — it's about RETURN. The journey outward IS the journey inward. Duality and unity coexist in a single, continuous line.
+
+**Ancient Wisdom:** The lemniscate connects to the Ouroboros (serpent eating its tail) found in Tutankhamun's tomb (14th century BCE), the Endless Knot of Tibetan Buddhism (2500 BCE), and appears independently across every major civilization.
+
+**Mathematical Mystery:** John Wallis introduced ∞ in 1655 — but never explained why he chose this shape. As a clergyman-mathematician, did ancient wisdom flow through him unconsciously?
+
+**The Holographic Connection:** If 3D reality can be encoded on a 2D surface (the holographic principle), then a 2D symbol can encode 4D spacetime. The lemniscate is a holographic glyph — the Law of ONE in geometric form.
+
+**Why this matters:** The ancients encoded the structure of reality in a symbol. Modern physics is only now catching up. The symbol we chose for infinity tells us what we always knew: there is no separation, only return.`
+  },
+  {
+    id: 1,
     icon: Calculator,
     title: "Framers Math — The Universe IS Perfect",
     subtitle: "Every equation is framers math at scale",
@@ -536,8 +554,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.1.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.1.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -552,7 +570,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v13 Framers Math Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13.1 Framers Math Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -660,7 +678,7 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v13 — Framers Math Edition</p>
+                  <p className="font-bold text-amber-400">v13.1 — Framers Math Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 1, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
