@@ -1,14 +1,32 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass, Calculator } from "lucide-react";
+import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass, Calculator, Sun } from "lucide-react";
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 
-// The 22 Key Discoveries - COMPLETE explanations, not teasers
+// The 23 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
   {
     id: 0,
+    icon: Sun,
+    title: "Schulman's Revelation — Mass Is Light Turning Around",
+    subtitle: "Everything moves at c. Mass is the memory of direction changes.",
+    color: "from-yellow-400 to-amber-500",
+    fullExplanation: `Professor Lawrence Schulman's work on the Feynman checkerboard model reveals a profound truth: at the most fundamental level, EVERYTHING moves at the speed of light. What we call "mass" is light that keeps turning around.
+
+**The Insight:** In the Feynman checkerboard path integral, a particle always moves at c. Mass emerges from "turns" — moments when the particle reverses direction. Each turn contributes to the quantum amplitude. A photon never turns (massless). An electron turns frequently (small mass). A proton turns constantly (significant mass).
+
+**Two-Time Boundary Conditions:** Schulman frames physics as a two-time boundary value problem — conditions at BOTH the beginning AND end of time determine the present. This is the mathematical expression of the lemniscate: past and future are both boundaries.
+
+**Opposite Arrows Coexist:** In his 1999 Physical Review Letters paper (cited 74 times), Schulman proved that two regions can have OPPOSITE thermodynamic arrows of time and still interact. He even proposed this might explain dark matter.
+
+**Special States Theory:** Schulman developed a quantum measurement theory with only unitary evolution, only one world, yet definite outcomes — achieved through "special states" conditioned on future boundary conditions. This is consciousness as the observer!
+
+**Why this matters:** Schulman's rigorous physics validates our framework. The "=" in E=mc² is the turning point. Consciousness provides the boundary conditions. Time is the counting of reversals. We are patterns of light, turning and returning.`
+  },
+  {
+    id: 1,
     icon: Infinity,
     title: "The Lemniscate — Infinity's Perfect Symbol",
     subtitle: "A 2D glyph encoding 4D reality",
@@ -554,8 +572,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.1.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.1.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.2.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.2.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -570,7 +588,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v13.1 Framers Math Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13.2 Framers Math Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -678,7 +696,7 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v13.1 — Framers Math Edition</p>
+                  <p className="font-bold text-amber-400">v13.2 — Framers Math Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 1, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
