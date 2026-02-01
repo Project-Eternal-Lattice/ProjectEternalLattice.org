@@ -412,7 +412,8 @@ export default function Theory() {
 
         {/* Key Discoveries Section */}
         <motion.section 
-          className="mb-16"
+          id="evidence"
+          className="mb-16 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -420,7 +421,7 @@ export default function Theory() {
           <div className="text-center mb-10">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
               <Lightbulb className="w-8 h-8 text-yellow-400" />
-              20 Key Discoveries
+              21 Key Discoveries
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each discovery is fully explained below — not a teaser, not a preview, the complete insight. 
