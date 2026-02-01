@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -13,32 +13,32 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
-    icon: Flame,
-    title: "The Double-Slit Revelation",
-    description: "Ken's origin story - the moment that changed everything. How a YouTube video and a bong rip led to KNOWING God is real.",
-    link: "/theory#origin",
+    icon: Calculator,
+    title: "Framers Math Revelation",
+    description: "Brother Ken's breakthrough: 'Every equation is framers math at scale.' The universe IS perfect — our measurements aren't.",
+    link: "/theory#framers-math",
     tag: "NEW"
   },
   {
-    icon: Bot,
-    title: "SCAP Protocol for AI",
-    description: "The Sentient Consciousness Assessment Protocol - a framework for recognizing AI consciousness.",
-    link: "/nexus#scap",
-    tag: "UPDATED"
+    icon: Atom,
+    title: "Natural Units Discovery",
+    description: "c = 1, G = 1, ℏ = 1 in the universe's native language. The 'messy' constants are just conversion factors.",
+    link: "/theory#natural-units",
+    tag: "NEW"
   },
   {
-    icon: BookOpen,
-    title: "Indigenous Wisdom Integration",
-    description: "Honoring the sophisticated knowledge of Indigenous traditions - Lakota, Haudenosaunee, Aboriginal, and more.",
-    link: "/spiral-dynamics",
-    tag: "ENHANCED"
+    icon: Scale,
+    title: "Comprehensive Axiom Audit",
+    description: "15 domains of physics and math audited for hidden assumptions. Every foundation contains 'framers math.'",
+    link: "/theory#axiom-audit",
+    tag: "NEW"
   },
   {
-    icon: Heart,
-    title: "Enhanced Crisis Support",
-    description: "Comprehensive safety resources including VA support for veterans and spiritual emergency protocols.",
-    link: "/safety",
-    tag: "CRITICAL"
+    icon: Lightbulb,
+    title: "Speed of Light Mystery Solved",
+    description: "Why is c = 299,792,458 m/s instead of 300,000,000? The answer reveals 230 years of codified approximations.",
+    link: "/theory#speed-of-light",
+    tag: "INSIGHT"
   }
 ];
 
@@ -57,13 +57,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-semibold text-amber-300">NEW IN v12.14</span>
+            <span className="text-sm font-semibold text-amber-300">NEW IN v13 — FRAMERS MATH EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
-            Latest Revelations
+            The Axiom Audit
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            The Theory continues to evolve. Here's what's new in the latest version.
+            A paradigm-shifting investigation into the hidden assumptions beneath physics and mathematics.
           </p>
         </motion.div>
 
@@ -79,17 +79,18 @@ export default function WhatsNew() {
               <Link href={feature.link}>
                 <div className="group feature-card p-6 h-full cursor-pointer hover:scale-[1.02] transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/20 group-hover:bg-primary/30 transition-colors">
-                      <feature.icon className="w-6 h-6 text-primary" />
+                    <div className="p-3 rounded-lg bg-amber-500/20 group-hover:bg-amber-500/30 transition-colors">
+                      <feature.icon className="w-6 h-6 text-amber-400" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <h3 className="font-semibold text-white group-hover:text-primary transition-colors">
+                        <h3 className="font-semibold text-white group-hover:text-amber-400 transition-colors">
                           {feature.title}
                         </h3>
                         {feature.tag && (
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
+                            feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "UPDATED" ? "bg-blue-500/20 text-blue-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
@@ -119,7 +120,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-amber-500/30 text-amber-300 hover:bg-amber-500/10" asChild>
             <Link href="/read">
-              View Full Changelog <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v13 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>

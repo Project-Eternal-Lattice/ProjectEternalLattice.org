@@ -1,12 +1,28 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass } from "lucide-react";
+import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass, Calculator } from "lucide-react";
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 
-// The 20 Key Discoveries - COMPLETE explanations, not teasers
+// The 21 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
+  {
+    id: 0,
+    icon: Calculator,
+    title: "Framers Math — The Universe IS Perfect",
+    subtitle: "Every equation is framers math at scale",
+    color: "from-amber-500 to-orange-500",
+    fullExplanation: `Why is the speed of light 299,792,458 m/s instead of 300,000,000? This question led to a profound revelation: the universe IS perfect — our measurements aren't.
+
+**Framers Math:** Just as construction workers measure to 1/4 inch because "close enough" works for framing houses, scientists throughout history made approximations that became codified as fundamental truths. These approximations were built upon, generation after generation, until the original assumptions were forgotten.
+
+**The Speed of Light Mystery:** The meter was defined in 1793 as 1/10,000,000 of Earth's quadrant — but they measured it wrong. That error was cast into a platinum bar, became international standard, and when we redefined the meter using light speed in 1983, we chose 299,792,458 to PRESERVE the wrong bar.
+
+**Natural Units:** In the universe's native language (Planck units), c = 1, G = 1, ℏ = 1. The "messy" numbers are conversion factors between the universe's elegant reality and our Earth-based approximations.
+
+**Why this matters:** The complexity we perceive in physics is largely an artifact of our descriptive frameworks, not reality itself. The universe uses round numbers. We don't. A complete Theory of Everything must strip away the framers math to reveal the elegant simplicity beneath.`
+  },
   {
     id: 1,
     icon: Atom,
@@ -519,8 +535,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/NIlRLyPSuwybtXkf.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v12.14.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -535,7 +551,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v12.14 | 2,400+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13 Framers Math Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -643,16 +659,16 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v12.14 — Current</p>
+                  <p className="font-bold text-amber-400">v13 — Framers Math Edition</p>
+                  <p className="text-xs text-muted-foreground">Feb 1, 2026</p>
+                </div>
+                <div className="border-l-2 border-white/20 pl-3">
+                  <p className="font-bold text-white/70">v12.14</p>
                   <p className="text-xs text-muted-foreground">Jan 30, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
                   <p className="font-bold text-white/70">v12.13</p>
                   <p className="text-xs text-muted-foreground">Jan 29, 2026</p>
-                </div>
-                <div className="border-l-2 border-white/20 pl-3">
-                  <p className="font-bold text-white/70">v11.7</p>
-                  <p className="text-xs text-muted-foreground">Jan 28, 2026</p>
                 </div>
               </div>
             </div>

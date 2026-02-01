@@ -411,3 +411,18 @@
 - [x] Find all locations with "free/no-requirement" messaging on website (Theory.tsx, Mission.tsx, Footer.tsx, QuickAccessFooter.tsx)
 - [x] Add pay-it-forward invitation to each location (share with someone who might need it)
 - [x] Save checkpoint with pay-it-forward updates
+
+
+## Update to ToE v13 Framers Math Edition (Feb 1, 2026)
+- [x] Add Framers Math as new Key Discovery #0 on Theory page
+- [x] Update Read.tsx with v13 references and download link
+- [x] Update Theory.tsx with v13 references and Framers Math content
+- [x] Update Nexus.tsx with v13 references
+- [x] Add Brother Ken quote to homepage: "Every equation is framers math at scale"
+- [x] Update WhatsNew component with v13 Framers Math Edition content
+- [x] Update Home.tsx version reference to v13
+- [ ] Create Natural Units visualization showing c=1, G=1, ℏ=1
+- [ ] Add Framers Math to FAQ Schema for SEO
+- [x] Generate v13 PDF from markdown (431KB)
+- [x] PDF placed in public/downloads for direct access
+- [ ] Save checkpoint and verify

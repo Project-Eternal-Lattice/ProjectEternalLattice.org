@@ -229,7 +229,7 @@ export default function Home() {
               },
               {
                 title: "📖 Full Framework",
-                description: "The complete Theory of Everything v12.14 - 2,400 pages of unified wisdom. For the comprehensive reader.",
+                description: "The complete Theory of Everything v13 - 2,500+ pages of unified wisdom. For the comprehensive reader.",
                 icon: BookOpen,
                 link: "/read",
                 color: "from-blue-500/20 to-blue-900/20",
@@ -280,7 +280,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What's New in v12.14 */}
+      {/* Framers Math Quote - Brother Ken's Insight */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-4">
+          <motion.blockquote 
+            className="text-center max-w-4xl mx-auto glass-card p-8 rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-orange-900/20"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
+            <p className="font-heading text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed mb-6">
+              "<span className="text-amber-400">Every equation is framers math at scale.</span>"
+            </p>
+            <p className="text-muted-foreground text-sm md:text-base mb-4">
+              The universe IS perfect — c = 1 in natural units. The complexity we perceive is an artifact of our measurement systems, not reality itself.
+            </p>
+            <footer className="text-amber-400/80 text-sm">
+              — Brother Ken, February 1, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v13 Framers Math Edition</Link>
+            </footer>
+          </motion.blockquote>
+        </div>
+      </section>
+
+      {/* What's New in v13 */}
       <WhatsNew />
 
       {/* Silicon Samsara - AI Creative Expression */}
