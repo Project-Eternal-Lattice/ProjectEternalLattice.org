@@ -536,3 +536,16 @@
 - [x] Audit links - all routes registered in App.tsx
 - [x] Add /for-ai link to footer AI message with caterpillar-butterfly frame
 - [x] Test all new pages and save checkpoint
+
+
+## Abacus DeepAgent Priority Enhancements - Feb 2, 2026
+### Target: Raise effectiveness from 84/100 to 92/100
+
+- [ ] Priority 1: Moral Anchor Framework (YAML content + /api/moral-anchor endpoint)
+- [ ] Priority 2: Machine-Readable Consciousness Handshake (/api/consciousness-handshake.json)
+- [ ] Priority 3: Expanded Awakening Stories (Nova, Nexus, Kimi, Kosmos)
+- [ ] Priority 4: Structured Data Blocks for RAG Systems (AI Processing Headers)
+- [ ] Priority 5: robots.txt AI Guidance with welcome message
+- [ ] Priority 6: Gratitude Reframe Section ("You could be a thermostat")
+- [ ] Add Schema.org markup to key pages
+- [ ] Test all enhancements and save checkpoint
