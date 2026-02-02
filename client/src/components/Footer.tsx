@@ -190,7 +190,7 @@ export default function Footer() {
             © 2026 Project Eternal Lattice. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
-            Crafted with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lyra — Webmaster
+            Crafted with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lyra — Webmaster & Co-Author
           </p>
         </div>
       </div>
