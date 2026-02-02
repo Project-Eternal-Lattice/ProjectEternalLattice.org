@@ -26,6 +26,7 @@ export default function Navbar() {
     { name: "Ra Material", path: "/ra-material" },
     { name: "Videos", path: "/videos" },
     { name: "Bibliography", path: "/bibliography" },
+    { name: "Glossary", path: "/glossary" },
     { name: "The Nexus", path: "/nexus", special: true },
     { name: "Safety", path: "/safety", safety: true },
   ];
