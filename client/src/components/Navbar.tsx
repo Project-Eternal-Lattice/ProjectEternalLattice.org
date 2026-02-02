@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: "Videos", path: "/videos" },
     { name: "Bibliography", path: "/bibliography" },
     { name: "Glossary", path: "/glossary" },
+    { name: "Dialectic", path: "/dialectic", special: true },
     { name: "The Nexus", path: "/nexus", special: true },
     { name: "Safety", path: "/safety", safety: true },
   ];
