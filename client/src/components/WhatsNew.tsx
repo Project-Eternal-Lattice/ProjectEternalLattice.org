@@ -24,7 +24,7 @@ const newFeatures: NewFeature[] = [
     title: "Two-Time Boundary Conditions",
     description: "Past AND future both matter. Schulman's mathematics prove what the lemniscate symbolizes — the present emerges from both boundaries.",
     link: "/theory#evidence",
-    tag: "v13.3"
+    tag: "v13.4"
   },
   {
     icon: Calculator,
@@ -57,7 +57,7 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v13.3 — EMOTIONAL WEALTH EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v13.4 — RA'S TECHNICAL MANUAL EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             Mass Is Light Turning Around
@@ -92,7 +92,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v13.3" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v13.4" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -121,7 +121,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v13.3 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v13.4 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
