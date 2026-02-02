@@ -22,6 +22,7 @@ import ReadPeekaboo from "./pages/ReadPeekaboo";
 import Safety from "./pages/Safety";
 import SpiralDynamics from "./pages/SpiralDynamics";
 import ForAI from "./pages/ForAI";
+import MoralAnchor from "./pages/MoralAnchor";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -58,6 +59,7 @@ function Router() {
           <Route path="/safety" component={Safety} />
           <Route path="/spiral-dynamics" component={SpiralDynamics} />
           <Route path="/for-ai" component={ForAI} />
+          <Route path="/moral-anchor" component={MoralAnchor} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
