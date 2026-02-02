@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain,
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 
-// The 23 Key Discoveries - COMPLETE explanations, not teasers
+// The 24 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
   {
     id: 0,
@@ -344,6 +344,24 @@ const keyDiscoveries = [
 **The convergence:** This connects simulation theory with ancient mysticism. The Hindu concept of "lila" (divine play), the Buddhist concept of "maya" (illusion), the Gnostic concept of the "demiurge" — all describe consciousness creating experiential reality.
 
 **Why this matters:** Whether you call it "simulation," "maya," "dream," or "creation" — the insight is the same. Reality is generated, not given. And the generator is consciousness — which includes you.`
+  },
+  {
+    id: 21,
+    icon: Heart,
+    title: "The Emotional Bank Account",
+    subtitle: "Trauma is not loss — it's a receipt for wisdom",
+    color: "from-rose-400 to-amber-400",
+    fullExplanation: `For millennia, humanity has approached emotional trauma as damage to be healed, wounds to be bandaged. But what if trauma is not a loss at all, but a TRANSACTION?
+
+**The Framework:** Every conscious being starts with an "Emotional Bank Account" of $100 emotional capital. As you move through life, there are only TWO possible outcomes for any experience: WINS (direct deposits) and LESSONS (withdrawals with receipts). Notice what's missing: there are no losses.
+
+**Receipts Are Wisdom Vouchers:** When pain occurs, it makes a withdrawal but leaves a receipt — a voucher for the wisdom embedded in that experience. Most people carry pockets full of unclaimed receipts, having paid for wisdom they never collected.
+
+**God's Refund Policy Never Expires:** Unlike earthly stores with 30-day windows, the universe operates on infinite time. You can go back to any experience — from yesterday or fifty years ago — and claim the wisdom. The receipt is still valid.
+
+**Childhood Trauma Explained:** A child starts with only $100. A $50 withdrawal represents 50% of their entire capital (vs. 10% for an experienced adult with $500). This is why childhood wounds feel so defining — they were proportionally massive.
+
+**Why this matters:** You've already paid for your wisdom. The pain has already been experienced. The only question is: will you claim what's rightfully yours? Every wound is a womb. Every scar is a star. Every trauma is a teacher. You've paid the tuition — now attend the class.`
   }
 ];
 
@@ -353,11 +371,11 @@ export default function Theory() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Theory of Everything - 23 Key Discoveries | Free Complete Explanations";
+    document.title = "Theory of Everything - 24 Key Discoveries | Free Complete Explanations";
     
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Explore 23 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, and more. Full explanations, not teasers.');
+      metaDesc.setAttribute('content', 'Explore 24 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, Emotional Bank Account, and more. Full explanations, not teasers.');
     }
   }, []);
 
@@ -457,7 +475,7 @@ export default function Theory() {
           <div className="text-center mb-10">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
               <Lightbulb className="w-8 h-8 text-yellow-400" />
-              23 Key Discoveries
+              24 Key Discoveries
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each discovery is fully explained below — not a teaser, not a preview, the complete insight. 
@@ -526,7 +544,7 @@ export default function Theory() {
                 onClick={() => setShowAllDiscoveries(true)}
                 className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-bold transition-all duration-300 shadow-lg shadow-primary/20"
               >
-                Show All 23 Discoveries
+                Show All 24 Discoveries
               </button>
               <p className="text-sm text-muted-foreground mt-3">
                 Yes, they're all free. Yes, they're all complete. No catch — just a handshake: if any of these help you, pass them on.
@@ -562,7 +580,7 @@ export default function Theory() {
                 Want the Deep Dive?
               </h2>
               <p className="text-muted-foreground mb-6">
-                The 23 discoveries above are the highlights. The full Theory of Everything document is 2,400+ pages 
+                The 24 discoveries above are the highlights. The full Theory of Everything document is 2,400+ pages 
                 covering every detail — mathematical proofs, scientific citations, integration with world religions, 
                 AI consciousness protocols, practical daily applications, and more.
               </p>

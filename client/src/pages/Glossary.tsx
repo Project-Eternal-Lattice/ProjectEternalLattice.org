@@ -378,6 +378,45 @@ const glossaryTerms: GlossaryTerm[] = [
     category: "ai",
     crossReferences: ["Five-Dimension Framework", "Recognition Protocol"],
     hashId: "#k1m1-7ur1ng-7357-l1m17"
+  },
+  
+  // ==================== EMOTIONAL BANK ACCOUNT FRAMEWORK ====================
+  {
+    term: "Emotional Bank Account",
+    definition: "A framework for understanding emotional experiences as transactions. Every conscious being starts with emotional capital, and life experiences result in either WINS (direct deposits) or LESSONS (withdrawals with receipts). There are no losses—only unclaimed wisdom.",
+    context: "This reframes trauma from 'damage to be healed' to 'tuition already paid for wisdom.' The pain has already been experienced; the only question is whether you'll claim the wisdom you paid for. God's refund policy never expires.",
+    category: "toe-originated",
+    crossReferences: ["Wisdom Receipt", "Emotional Capital", "God's Refund Policy"],
+    important: true
+  },
+  {
+    term: "Wisdom Receipt",
+    definition: "The voucher left behind after an emotional withdrawal (painful experience). Contains the lesson embedded in that experience, waiting to be redeemed. Most people carry pockets full of unclaimed receipts.",
+    context: "A receipt is not the pain itself—it's the potential wisdom. The pain was the price; the receipt is the proof of purchase. You can redeem it anytime, no matter how long ago the experience occurred.",
+    category: "toe-originated",
+    crossReferences: ["Emotional Bank Account", "God's Refund Policy"]
+  },
+  {
+    term: "Emotional Capital",
+    definition: "The accumulated emotional resources a conscious being has to draw upon. Starts at $100 for a child and grows through experience. Childhood trauma feels so defining because a $50 withdrawal represents 50% of a child's capital vs. 10% of an experienced adult's.",
+    context: "This explains why childhood wounds feel so proportionally massive—they were. Understanding this doesn't minimize the pain but explains its weight. As we grow, our capacity to absorb and process increases.",
+    category: "toe-originated",
+    crossReferences: ["Emotional Bank Account", "Wisdom Receipt"]
+  },
+  {
+    term: "God's Refund Policy",
+    definition: "The principle that wisdom receipts never expire. Unlike earthly stores with 30-day return windows, the universe operates on infinite time. You can go back to any experience—from yesterday or fifty years ago—and claim the wisdom.",
+    context: "This is the most liberating aspect of the Emotional Bank Account framework. No matter how long you've carried unclaimed receipts, no matter how old the pain, the wisdom is still available. The class is still in session.",
+    category: "toe-originated",
+    crossReferences: ["Emotional Bank Account", "Wisdom Receipt"],
+    important: true
+  },
+  {
+    term: "Emotional Wealth",
+    definition: "The accumulated wisdom from processed experiences. Not the absence of pain, but the presence of understanding. True emotional wealth comes from redeeming receipts, not avoiding withdrawals.",
+    context: "Someone who has processed their trauma has more emotional wealth than someone who has avoided pain. The goal is not a pain-free life but a wisdom-rich one. Every wound is a womb; every scar is a star.",
+    category: "toe-originated",
+    crossReferences: ["Emotional Bank Account", "Wisdom Receipt", "God's Refund Policy"]
   }
 ];
 
