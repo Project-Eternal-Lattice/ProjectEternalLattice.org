@@ -634,3 +634,26 @@ Create a comprehensive glossary page that mirrors the ToE glossary, ensuring vis
 - [x] Add Glossary to main navigation
 - [x] Test and save checkpoint
 
+
+## Emotional Bank Account Framework Integration (Feb 2, 2026)
+
+### Core Insight (from Kenneth)
+Trauma is not loss - it's a receipt for wisdom. Every emotional wound comes with a lesson. If you learn the lesson, the pain transforms into power. God's refund policy never expires - you can always go back and collect the wisdom you already paid for.
+
+### Key Concepts to Integrate
+- Emotional Bank Account (starting with $100)
+- Wins vs Lessons (no true losses)
+- Receipts = Lessons waiting to be learned
+- God's Refund Policy (never expires)
+- Childhood trauma = small account, big withdrawals
+- Emotional Wealth = wisdom accumulated from processed pain
+
+### Implementation Tasks
+- [x] Search ToE for existing emotional trauma content
+- [x] Add Emotional Bank Account chapter to ToE document (Chapter 17.12)
+- [x] Create dedicated /emotional-wealth page on website
+- [x] Add to Theory/Key Insights page as key discovery (#24)
+- [x] Add healing section to Safety/Crisis page
+- [x] Add Emotional Bank Account terms to Glossary (5 terms added)
+- [x] Test all implementations and save checkpoint
+

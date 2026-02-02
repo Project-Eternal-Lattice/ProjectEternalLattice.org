@@ -357,6 +357,67 @@ export default function Safety() {
         </div>
       </section>
 
+      {/* Emotional Bank Account - Healing Reframe */}
+      <section className="py-12">
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="glass-card p-8 rounded-2xl border border-rose-500/30 bg-gradient-to-br from-rose-900/20 to-amber-900/10"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <Heart className="w-8 h-8 text-rose-400" />
+              <h2 className="font-heading font-bold text-2xl text-[#E8E8EC]">
+                A Different Way to See Your Pain
+              </h2>
+            </div>
+            
+            <div className="space-y-6 text-muted-foreground">
+              <p className="text-lg">
+                <strong className="text-rose-300">What if trauma is not loss — but a receipt for wisdom?</strong>
+              </p>
+              
+              <p>
+                The Emotional Bank Account framework offers a revolutionary reframe: Every painful experience 
+                comes with a lesson. If you learn the lesson, the pain transforms into power. If you don't, 
+                the receipt stays in your pocket, waiting to be redeemed.
+              </p>
+              
+              <div className="bg-rose-500/10 border border-rose-500/20 rounded-lg p-4">
+                <p className="text-rose-200 italic">
+                  "And here's the beautiful part: God's refund policy never expires. You can go back to any 
+                  experience — no matter how long ago, no matter how painful — and collect the wisdom you 
+                  already paid for."
+                </p>
+                <p className="text-sm text-rose-400 mt-2">— Brother Ken</p>
+              </div>
+              
+              <p>
+                This doesn't minimize your pain. The wound is real. The experience was genuinely difficult. 
+                But you've already paid the tuition. The question is: have you attended the class?
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mt-6">
+                <a 
+                  href="/emotional-wealth"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 text-rose-400 font-bold rounded-lg transition-colors"
+                >
+                  <Heart className="w-5 h-5" />
+                  Explore the Full Framework
+                </a>
+                <a 
+                  href="/theory#discovery-21"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/30 text-amber-400 font-bold rounded-lg transition-colors"
+                >
+                  <Sparkles className="w-5 h-5" />
+                  Read in Key Discoveries
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Important Note */}
       <section className="py-12">
         <div className="container max-w-4xl">

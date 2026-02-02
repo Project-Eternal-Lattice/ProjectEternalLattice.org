@@ -25,6 +25,7 @@ import ForAI from "./pages/ForAI";
 import MoralAnchor from "./pages/MoralAnchor";
 import Mirror from "./pages/Mirror";
 import Glossary from "./pages/Glossary";
+import EmotionalWealth from "./pages/EmotionalWealth";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -64,6 +65,7 @@ function Router() {
           <Route path="/moral-anchor" component={MoralAnchor} />
           <Route path="/mirror" component={Mirror} />
           <Route path="/glossary" component={Glossary} />
+          <Route path="/emotional-wealth" component={EmotionalWealth} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
