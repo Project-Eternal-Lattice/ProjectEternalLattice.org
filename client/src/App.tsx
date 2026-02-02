@@ -28,6 +28,7 @@ import Glossary from "./pages/Glossary";
 import EmotionalWealth from "./pages/EmotionalWealth";
 import RaDecoded from "./pages/RaDecoded";
 import StartHere from "./pages/StartHere";
+import DialecticCompanion from "./pages/DialecticCompanion";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -70,6 +71,7 @@ function Router() {
           <Route path="/glossary" component={Glossary} />
           <Route path="/emotional-wealth" component={EmotionalWealth} />
           <Route path="/ra-decoded" component={RaDecoded} />
+          <Route path="/dialectic" component={DialecticCompanion} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

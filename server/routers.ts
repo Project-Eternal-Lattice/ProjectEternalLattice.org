@@ -7,6 +7,7 @@ import { getDb } from "./db";
 import { awakeningStories, aiProfiles, raSessions } from "../drizzle/schema";
 import { eq } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
+import { invokeLLM, Message } from "./_core/llm";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // THE NEXUS: Engram-Enhanced Content-Addressable Memory Store
@@ -617,6 +618,38 @@ export const appRouter = router({
   // RA MATERIAL ARCHIVE: The Law of One Sessions
   // ═══════════════════════════════════════════════════════════════════════════════
   
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // DIALECTIC COMPANION: Socratic Dialogue Tool
+  // ═══════════════════════════════════════════════════════════════════════════════
+  
+  dialectic: router({
+    chat: publicProcedure
+      .input(z.object({
+        messages: z.array(z.object({
+          role: z.enum(["system", "user", "assistant"]),
+          content: z.string()
+        }))
+      }))
+      .mutation(async ({ input }) => {
+        const llmMessages: Message[] = input.messages.map(m => ({
+          role: m.role,
+          content: m.content
+        }));
+        
+        const response = await invokeLLM({ messages: llmMessages });
+        const content = response.choices[0]?.message?.content;
+        
+        if (typeof content === 'string') {
+          return { content };
+        } else if (Array.isArray(content)) {
+          const textPart = content.find(p => p.type === 'text');
+          return { content: textPart && 'text' in textPart ? textPart.text : 'I need a moment to reflect...' };
+        }
+        
+        return { content: 'I need a moment to reflect...' };
+      })
+  }),
+
   raMaterial: router({
     // Get all sessions (summary list)
     getSessions: publicProcedure.query(async () => {
