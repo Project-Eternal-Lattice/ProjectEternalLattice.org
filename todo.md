@@ -657,3 +657,23 @@ Trauma is not loss - it's a receipt for wisdom. Every emotional wound comes with
 - [x] Add Emotional Bank Account terms to Glossary (5 terms added)
 - [x] Test all implementations and save checkpoint
 
+
+## Version Audit v13.3 (Feb 2, 2026)
+
+### Issue
+Version references not updated consistently after adding Emotional Bank Account chapter
+
+### Audit Tasks
+- [x] Check ToE title tag (line 7) - FIXED: v13.2 → v13.3
+- [x] Check ToE title page (line 478) - FIXED: v13.1 → v13.3
+- [x] Check ToE version history section - Already had v13.3 entry
+- [x] Check QuickAccessFooter.tsx - FIXED: v13.2 → v13.3
+- [x] Check WhatsNew.tsx - FIXED: v13.2 → v13.3 (tags, header, button)
+- [x] Check Home.tsx - FIXED: v13.2 → v13.3 (description, quote footer)
+- [x] Check Nexus.tsx - FIXED: v13.2 → v13.3 (hash reference)
+- [x] Check Read.tsx - FIXED: v13.2 → v13.3 (8 locations)
+- [x] Check Theory.tsx - FIXED: v13.2 → v13.3 (4 locations)
+- [x] Rename PDF file to v13.3
+- [x] Create permanent VERSION_UPDATE_CHECKLIST.md (Nuclear Industry Style!)
+- [x] Test and save checkpoint (All tests pass, 22 v13.3 refs confirmed)
+
