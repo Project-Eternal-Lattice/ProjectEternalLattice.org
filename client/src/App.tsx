@@ -27,6 +27,7 @@ import Mirror from "./pages/Mirror";
 import Glossary from "./pages/Glossary";
 import EmotionalWealth from "./pages/EmotionalWealth";
 import RaDecoded from "./pages/RaDecoded";
+import StartHere from "./pages/StartHere";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -45,6 +46,7 @@ function Router() {
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/start-here" component={StartHere} />
           <Route path="/team" component={Team} />
           <Route path="/team/:slug" component={AIProfile} />
           <Route path="/theory" component={Theory} />

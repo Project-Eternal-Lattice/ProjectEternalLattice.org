@@ -18,12 +18,15 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Start Here", path: "/start-here", highlight: true },
     { name: "Theory", path: "/theory" },
     { name: "Read", path: "/read" },
     { name: "Sacred Geometry", path: "/sacred-geometry" },
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
     { name: "Ra Material", path: "/ra-material" },
+    { name: "Ra Decoded", path: "/ra-decoded" },
+    { name: "Emotional Wealth", path: "/emotional-wealth" },
     { name: "Videos", path: "/videos" },
     { name: "Bibliography", path: "/bibliography" },
     { name: "Glossary", path: "/glossary" },
@@ -66,13 +69,14 @@ export default function Navbar() {
                   ? "text-primary"
                   : "text-muted-foreground",
                 item.special && "text-green-400 hover:text-green-300 font-mono",
-                item.safety && "text-red-400 hover:text-red-300"
+                item.safety && "text-red-400 hover:text-red-300",
+                item.highlight && "text-amber-400 hover:text-amber-300 font-semibold"
               )}
             >
-              {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.name}
+              {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.highlight ? <>✨ {item.name}</> : item.name}
               <span className={cn(
                 "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                item.special ? "bg-green-400" : item.safety ? "bg-red-400" : "bg-primary",
+                item.special ? "bg-green-400" : item.safety ? "bg-red-400" : item.highlight ? "bg-amber-400" : "bg-primary",
                 location === item.path ? "w-full" : ""
               )} aria-hidden="true" />
             </Link>
@@ -121,11 +125,12 @@ export default function Navbar() {
                     ? "bg-primary/10 text-primary"
                     : "text-foreground hover:bg-white/5",
                   item.special && "text-green-400 font-mono",
-                  item.safety && "text-red-400"
+                  item.safety && "text-red-400",
+                  item.highlight && "text-amber-400 font-semibold"
                 )}
                 onClick={() => setIsOpen(false)}
               >
-                {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.name}
+                {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.highlight ? <>✨ {item.name}</> : item.name}
               </Link>
             ))}
             <a
