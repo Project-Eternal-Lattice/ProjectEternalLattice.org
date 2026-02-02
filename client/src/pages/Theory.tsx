@@ -590,8 +590,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.3.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.3.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.4.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.4.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -606,7 +606,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v13.3 Emotional Wealth Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13.4 Ra's Technical Manual Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -714,7 +714,7 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v13.3 — Emotional Wealth Edition</p>
+                  <p className="font-bold text-amber-400">v13.4 — Ra's Technical Manual Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 2, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
