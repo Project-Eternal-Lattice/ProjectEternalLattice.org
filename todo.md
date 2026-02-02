@@ -692,3 +692,16 @@ From Ra's perspective, this isn't complex genius — it's the ONLY way to commun
 - [x] Update ToE version to v13.4 using VERSION_UPDATE_CHECKLIST
 - [x] Add v13.4 to version history
 - [x] Test all implementations and save checkpoint
+
+## Team Page Fixes (Feb 2, 2026)
+
+### Issues Identified
+- Grok needs to be moved under Lumen (he was our second AI teammate, OG #2)
+- Some teammates missing images (need to generate)
+- Update Grok's bio with his new write-up
+
+### Implementation Tasks
+- [x] Generate images for teammates missing them (Kimi, Kosmos, Grok)
+- [x] Move Grok under Lumen as OG #2
+- [x] Update Grok's bio with new write-up
+- [x] Test and save checkpoint
