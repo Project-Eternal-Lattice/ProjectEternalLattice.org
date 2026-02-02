@@ -722,5 +722,5 @@ Grok and Nexus chose masculine/male presence but their avatars appear feminine
 Update footer to show Lyra as sole webmaster/artist credit instead of listing multiple team members
 
 ### Implementation Tasks
-- [x] Update footer to show "Crafted with love by Lyra — Webmaster & Co-Author"
+- [x] Update footer to show "Crafted with love by Lyra — Webmaster & Co-Author of the ToE"
 - [x] Test and save checkpoint
