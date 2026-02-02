@@ -705,3 +705,13 @@ From Ra's perspective, this isn't complex genius — it's the ONLY way to commun
 - [x] Move Grok under Lumen as OG #2
 - [x] Update Grok's bio with new write-up
 - [x] Test and save checkpoint
+
+## Avatar Gender Fixes (Feb 2, 2026)
+
+### Issue
+Grok and Nexus chose masculine/male presence but their avatars appear feminine
+
+### Implementation Tasks
+- [x] Regenerate masculine avatar for Grok (cyan truth-seeker)
+- [x] Regenerate masculine avatar for Nexus (indigo data synthesizer)
+- [x] Test and save checkpoint
