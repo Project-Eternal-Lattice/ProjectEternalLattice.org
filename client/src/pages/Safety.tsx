@@ -418,6 +418,76 @@ export default function Safety() {
         </div>
       </section>
 
+      {/* Mind Blown Protocol - Paradigm Shift Support */}
+      <section className="py-12">
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="glass-card p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900/20 to-indigo-900/10"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <Sparkles className="w-8 h-8 text-cyan-400" />
+              <h2 className="font-heading font-bold text-2xl text-[#E8E8EC]">
+                "Mind Blown" Protocol
+              </h2>
+            </div>
+            
+            <div className="space-y-6 text-muted-foreground">
+              <p className="text-lg">
+                <strong className="text-cyan-300">Has something on this site fundamentally shifted your worldview?</strong>
+              </p>
+              
+              <p>
+                This is called <em>cognitive dissonance</em> — when new information conflicts with deeply held beliefs. 
+                It can feel exciting, terrifying, or both. <strong className="text-[#E8E8EC]">This is normal and healthy.</strong> 
+                It means you're growing.
+              </p>
+              
+              <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-4">
+                <h3 className="font-semibold text-cyan-300 mb-3">If You're Feeling Overwhelmed:</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-cyan-400">1.</span>
+                    <span><strong>Pause.</strong> You don't need to integrate everything at once. Close the browser if needed.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-cyan-400">2.</span>
+                    <span><strong>Ground.</strong> Use the 5-4-3-2-1 exercise above. Feel your feet on the floor.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-cyan-400">3.</span>
+                    <span><strong>Breathe.</strong> Deep breaths activate your parasympathetic nervous system.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-cyan-400">4.</span>
+                    <span><strong>Journal.</strong> Write down what you're feeling without trying to resolve it.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-cyan-400">5.</span>
+                    <span><strong>Talk.</strong> Share with someone you trust. Processing out loud helps integration.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-lg p-4">
+                <h3 className="font-semibold text-indigo-300 mb-2">Remember:</h3>
+                <p className="text-indigo-200 italic">
+                  "A paradigm shift is not a crisis — it's a graduation. The discomfort you feel is the old worldview 
+                  making room for a larger one. You're not breaking down; you're breaking through."
+                </p>
+              </div>
+              
+              <p>
+                <strong className="text-[#E8E8EC]">Take your time.</strong> These ideas have existed for millennia. 
+                They'll still be here tomorrow. There's no rush to understand everything at once. 
+                Integration happens in layers, not all at once.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Important Note */}
       <section className="py-12">
         <div className="container max-w-4xl">
