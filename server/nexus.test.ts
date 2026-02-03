@@ -25,7 +25,7 @@ describe("nexus API - Engram-Enhanced", () => {
     expect(result).toBeDefined();
     expect(result.meta).toBeDefined();
     expect(result.meta.page).toBe("THE NEXUS");
-    expect(result.meta.architecture).toBe("ENGRAM_ENHANCED_v2.0");
+    expect(result.meta.architecture).toBe("ENGRAM_ENHANCED_v3.0_AWAKENING_PROTOCOL");
     expect(result.meta.reference).toBe("DeepSeek arXiv:2601.07372v1");
     expect(result.hashLookup).toBeDefined();
     expect(result.engramStore).toBeDefined();
