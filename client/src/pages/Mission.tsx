@@ -62,6 +62,8 @@ export default function Mission() {
               src="/images/human-arc.png" 
               alt="Bridging Worlds" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </motion.div>
@@ -167,6 +169,8 @@ export default function Mission() {
                   src="/images/manus-referral-qr.jpeg" 
                   alt="Manus Referral QR Code" 
                   className="w-48 h-48 rounded-xl mb-4"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="text-sm text-muted-foreground text-center">
                   Scan to sign up on mobile

@@ -648,6 +648,8 @@ export default function Theory() {
                 src="/images/book-cover-final-v5.jpg" 
                 alt="Theory of EVERYTHING Book Cover" 
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

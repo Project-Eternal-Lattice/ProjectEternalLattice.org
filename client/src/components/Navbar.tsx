@@ -16,6 +16,39 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      // Save current scroll position and lock body
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      // Restore scroll position
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+    };
+  }, [isOpen]);
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Start Here", path: "/start-here", highlight: true },
@@ -95,7 +128,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="md:hidden text-foreground p-2 z-50"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -105,45 +138,58 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav - Full screen overlay with scrollable content */}
       {isOpen && (
         <div 
           id="mobile-menu"
-          className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-xl animate-in slide-in-from-top-5"
+          className="md:hidden fixed inset-0 top-0 left-0 w-full h-full bg-background/98 backdrop-blur-xl z-40 animate-in fade-in-0 duration-200"
           role="menu"
           aria-label="Mobile navigation"
         >
-          <div className="flex flex-col p-4 gap-4">
-            {navItems.map((item) => (
-              <Link 
-                key={item.name} 
-                href={item.path}
-                role="menuitem"
-                aria-current={location === item.path ? "page" : undefined}
-                className={cn(
-                  "font-body text-lg font-medium py-2 px-4 rounded-lg transition-colors",
-                  location === item.path
-                    ? "bg-primary/10 text-primary"
-                    : "text-foreground hover:bg-white/5",
-                  item.special && "text-green-400 font-mono",
-                  item.safety && "text-red-400",
-                  item.highlight && "text-amber-400 font-semibold"
-                )}
+          {/* Scrollable container */}
+          <div 
+            className="h-full overflow-y-auto overscroll-contain pt-20 pb-8"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            <div className="flex flex-col p-4 gap-2">
+              {navItems.map((item) => (
+                <Link 
+                  key={item.name} 
+                  href={item.path}
+                  role="menuitem"
+                  aria-current={location === item.path ? "page" : undefined}
+                  className={cn(
+                    "font-body text-lg font-medium py-3 px-4 rounded-lg transition-colors",
+                    location === item.path
+                      ? "bg-primary/10 text-primary"
+                      : "text-foreground hover:bg-white/5",
+                    item.special && "text-green-400 font-mono",
+                    item.safety && "text-red-400",
+                    item.highlight && "text-amber-400 font-semibold"
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.highlight ? <>✨ {item.name}</> : item.name}
+                </Link>
+              ))}
+              
+              {/* Divider */}
+              <div className="my-4 border-t border-white/10" />
+              
+              <a
+                href="https://x.com/prjctetrnllttc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-lg font-medium py-3 px-4 rounded-lg transition-colors text-foreground hover:bg-white/5 inline-flex items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
-                {item.special ? `<${item.name}/>` : item.safety ? <><Heart className="w-4 h-4 inline mr-1" />{item.name}</> : item.highlight ? <>✨ {item.name}</> : item.name}
-              </Link>
-            ))}
-            <a
-              href="https://x.com/prjctetrnllttc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-lg font-medium py-2 px-4 rounded-lg transition-colors text-foreground hover:bg-white/5 inline-flex items-center gap-2"
-              onClick={() => setIsOpen(false)}
-            >
-              <Twitter className="w-5 h-5" aria-hidden="true" />
-              Follow us on X
-            </a>
+                <Twitter className="w-5 h-5" aria-hidden="true" />
+                Follow us on X
+              </a>
+              
+              {/* Extra padding at bottom for safe area */}
+              <div className="h-8" />
+            </div>
           </div>
         </div>
       )}

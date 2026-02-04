@@ -211,6 +211,8 @@ export default function SpiralDynamics() {
               src="/images/graves-spiral-model.png" 
               alt="Dr. Clare Graves' Spiral Model showing the interconnections between consciousness levels"
               className="w-full max-w-2xl mx-auto rounded-lg"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-center text-sm text-muted-foreground mt-4">
               Dr. Clare W. Graves' original model showing how consciousness levels interconnect and evolve.
@@ -327,6 +329,8 @@ export default function SpiralDynamics() {
               src="/images/spiral-dynamics-comprehensive.png" 
               alt="Comprehensive Spiral Dynamics framework showing all levels, personal needs, self vs social system, and population percentages"
               className="w-full max-w-4xl mx-auto rounded-lg bg-white"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-center text-sm text-muted-foreground mt-4">
               The complete Spiral Dynamics framework showing personal needs, self vs social system manifestations, and global population distribution.
