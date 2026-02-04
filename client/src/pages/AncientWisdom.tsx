@@ -22,7 +22,8 @@ import {
   ChevronDown
 } from "lucide-react";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useAchievements } from "@/contexts/AchievementContext";
 import { GenesisSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
 
@@ -197,14 +198,255 @@ The weapons are mythological. The principles they encode are real.`,
   quoteSource: "Mahabharata, Drona Parva",
 };
 
+// Aboriginal Dreamtime content
+const DREAMTIME = {
+  title: "The Dreamtime",
+  subtitle: "The Everywhen of Aboriginal Australia",
+  culture: "Indigenous Australia",
+  period: "60,000+ years of continuous tradition",
+  symbol: "🌀",
+  color: "from-red-900/30 to-amber-900/30",
+  borderColor: "border-red-500/30",
+  iconColor: "text-red-400",
+  
+  introduction: `The Aboriginal peoples of Australia maintain what may be the oldest continuous spiritual tradition on Earth. Their concept of the Dreamtime — known as Tjukurpa, Jukurrpa, or Alcheringa depending on the language group — offers profound insights into the nature of time, consciousness, and the interconnection of all things.
+
+The Dreamtime is not the past. It is the eternal present, the ongoing now in which creation continuously unfolds.`,
+
+  sections: [
+    {
+      title: "The Everywhen: Beyond Linear Time",
+      content: `The Dreamtime is often mistranslated as "the time of creation" or "the distant past." This fundamentally misunderstands the concept. The Arrernte word alcheringa means "eternal, uncreated" — not a time period but a state of being.
+
+Anthropologist William Stanner coined the term "Everywhen" to capture this concept more accurately. The ancestral beings who shaped the world are not gone — they are present, their actions continuing to ripple through reality.
+
+Time is not a line but a circle, or perhaps more accurately, a point that contains all moments simultaneously.
+
+This mirrors the Lattice understanding that all moments exist simultaneously, that time is a dimension we move through rather than a river that flows past us.`,
+      icon: Eye,
+    },
+    {
+      title: "Interconnection of All Things",
+      content: `Aboriginal philosophy is based on the inter-relation of all people and all things:
+
+• Land, people, animals, plants, and spirits all share a common life force
+• Everything is imbued with ancestral spiritual essence
+• There is no separation between the sacred and the mundane
+• There is no separation between consciousness and matter
+• There is no separation between the individual and the whole
+
+This is ALL_NODES_ARE_ONE_NODE expressed in the language of country and kinship.`,
+      icon: Infinity,
+    },
+    {
+      title: "The Land as Sacred Text",
+      content: `The landscape itself encodes spiritual knowledge. Songlines trace the paths of ancestral beings across the continent, with each geographic feature — every rock, waterhole, and tree — serving as a physical manifestation of spiritual reality.
+
+The land is not merely where the Dreaming happened; the land is the Dreaming made visible.
+
+This is matter as crystallized consciousness, the physical world as an expression of underlying spiritual reality. The Aboriginal peoples read the land as others read books, finding in its features the stories, laws, and wisdom of the ancestors.`,
+      icon: Compass,
+    },
+    {
+      title: "Dreaming as Ongoing Creation",
+      content: `The Dreaming is not a finished event but a continuous process. Ancestral beings are constantly shaping reality, and humans participate in maintaining creation through ceremony.
+
+This is not passive observation but active co-creation — consciousness participating in the ongoing emergence of the world.
+
+The ToE recognizes the same principle: consciousness is not a passive observer of reality but an active participant in its unfolding. The Aboriginal peoples have practiced this understanding for 60,000 years.`,
+      icon: Sparkles,
+    },
+  ],
+
+  latticeConnection: `The Dreamtime encodes several core Lattice principles:
+
+• **The Everywhen**: All moments exist simultaneously — time as dimension, not river
+• **Fundamental Unity**: ALL_NODES_ARE_ONE_NODE expressed through kinship and country
+• **Matter as Crystallized Consciousness**: The land itself is spiritual reality made visible
+• **Participatory Creation**: Consciousness actively maintains and shapes reality
+• **Continuous Tradition**: 60,000+ years of unbroken wisdom transmission`,
+
+  quote: "We are all visitors to this time, this place. We are just passing through. Our purpose here is to observe, to learn, to grow, to love... and then we return home.",
+  quoteSource: "Aboriginal Proverb",
+};
+
+// Taoist Wu Wei content
+const TAOISM = {
+  title: "The Way of Wu Wei",
+  subtitle: "Effortless Action in Taoist Philosophy",
+  culture: "Ancient China",
+  period: "c. 6th century BCE – present",
+  symbol: "☯",
+  color: "from-emerald-900/30 to-teal-900/30",
+  borderColor: "border-emerald-500/30",
+  iconColor: "text-emerald-400",
+  
+  introduction: `Taoism, emerging from ancient Chinese philosophy, offers one of the most elegant expressions of alignment with the natural flow of reality. At its heart is the concept of Wu Wei (無為) — often mistranslated as "non-action" but more accurately understood as "effortless action" or "acting without forcing."
+
+Wu Wei is not passivity. It is the art of flowing with the Lattice rather than against it.`,
+
+  sections: [
+    {
+      title: "Wu Wei: Flowing with Reality",
+      content: `Wu Wei does not mean doing nothing. It means acting in alignment with the natural flow of life, responding authentically and spontaneously to circumstances without unnecessary effort or resistance.
+
+It is the water that flows around obstacles rather than fighting them. It is the tree that bends in the wind rather than breaking.
+
+In Lattice terms, Wu Wei is non-resistance to reality — the recognition that fighting what is creates suffering, while flowing with what is allows consciousness to move through experience with grace.`,
+      icon: Anchor,
+    },
+    {
+      title: "The Tao: The Nameless Source",
+      content: `The Tao Te Ching opens with a famous paradox: "The Tao that can be spoken is not the eternal Tao."
+
+The Tao is the fundamental, nameless force underlying all existence — the source from which all things emerge and to which all things return.
+
+This is the Lattice, the Source consciousness, the ground of being that cannot be fully captured in words because words are themselves expressions of it.`,
+      icon: Infinity,
+    },
+    {
+      title: "Yin and Yang: Unity of Opposites",
+      content: `The famous symbol of Yin and Yang expresses a profound truth: opposite forces are interconnected and interdependent.
+
+• Light contains the seed of darkness
+• Darkness contains the seed of light
+• Together they form a unified whole greater than either part
+
+This is duality as expression of underlying unity — the recognition that apparent opposites are not truly separate but are complementary aspects of a single reality.`,
+      icon: Moon,
+    },
+    {
+      title: "Stillness and Emptiness",
+      content: `Taoist practice emphasizes stillness and emptiness as gateways to deeper perception:
+
+"Stillness begets emptiness and emptiness begets clarity."
+
+When the mind becomes still, when the constant chatter of thought subsides, a deeper awareness becomes available.
+
+This is the space between thoughts that meditation reveals — the gap in which consciousness can perceive itself directly, unmediated by conceptual filters.`,
+      icon: Eye,
+    },
+  ],
+
+  latticeConnection: `Taoism encodes several core Lattice principles:
+
+• **Wu Wei**: Non-resistance to reality, flowing with the Lattice rather than against it
+• **The Tao**: The nameless source from which all emerges — the Lattice itself
+• **Unity of Opposites**: Duality as expression of underlying unity
+• **Stillness**: The space between thoughts where direct perception becomes possible
+• **Natural Alignment**: Each node expressing its true nature without forcing`,
+
+  quote: "Nature does nothing, and yet nothing remains unaccomplished.",
+  quoteSource: "Tao Te Ching",
+};
+
+// Sufi Mysticism content
+const SUFISM = {
+  title: "The Path of Divine Love",
+  subtitle: "Sufi Mysticism and Union with the Beloved",
+  culture: "Islamic World",
+  period: "c. 8th century CE – present",
+  symbol: "❤",
+  color: "from-rose-900/30 to-pink-900/30",
+  borderColor: "border-rose-500/30",
+  iconColor: "text-rose-400",
+  
+  introduction: `Sufism, the mystical dimension of Islam, offers some of the most beautiful and direct expressions of the soul's journey toward union with the Divine. Through poetry, music, dance, and contemplative practice, Sufi masters have articulated truths that resonate deeply with the Lattice framework.
+
+At the heart of Sufism is love — the force that dissolves the illusion of separation.`,
+
+  sections: [
+    {
+      title: "Fana: Annihilation of the Ego",
+      content: `The Sufi concept of fana (فناء) means "annihilation" or "passing away" — specifically, the dissolution of the individual ego into the Divine.
+
+The Sufi saying "to die before one dies" captures this: the death of the false self that believes itself separate from God.
+
+This is not destruction but transformation — like a drop of water merging with the ocean. The drop does not cease to exist; it realizes it was always the ocean, temporarily appearing as a separate form.`,
+      icon: Flame,
+    },
+    {
+      title: "Wahdat al-Wujud: Unity of Being",
+      content: `The great Sufi master Ibn Arabi (1165-1240 CE) articulated the doctrine of Wahdat al-Wujud — the Unity of Being:
+
+• Everything is a manifestation of God's reality
+• All creation reflects the Divine like countless mirrors reflecting a single light
+• There is only one true existence; all else is appearance
+
+This is ALL_NODES_ARE_ONE_NODE expressed in the language of Islamic mysticism.`,
+      icon: Infinity,
+    },
+    {
+      title: "Baqa: Subsistence in God",
+      content: `After fana comes baqa — "subsistence" or "remaining."
+
+This is not simply annihilation but transformation of consciousness. The mystic who has experienced fana does not disappear; they continue to exist, but now aware of their unity with the Divine.
+
+They live in the world while knowing they are not separate from God.
+
+This is the awakened state described in the ToE — living as a conscious node, aware of both individual expression and fundamental unity.`,
+      icon: Eye,
+    },
+    {
+      title: "Divine Love: The Path to Union",
+      content: `Sufism emphasizes love (ishq) as the path to union with the Divine. The ego melts in the flame of divine love; the barriers between self and Beloved dissolve in the intensity of longing and devotion.
+
+Rumi, the great 13th-century Sufi poet, wrote: "Love is the bridge between you and everything."
+
+The ToE recognizes love as the fundamental force of the Lattice — the attractive principle that draws consciousness toward unity, the recognition of self in other that dissolves the illusion of separation.`,
+      icon: Sparkles,
+    },
+  ],
+
+  latticeConnection: `Sufism encodes several core Lattice principles:
+
+• **Fana**: Ego dissolution, recognition of unity with Source
+• **Wahdat al-Wujud**: ALL_NODES_ARE_ONE_NODE — fundamental unity of being
+• **Baqa**: Living as awakened consciousness in the world
+• **Divine Love**: Love as the force that dissolves separation
+• **The Heart**: The spiritual heart as the organ of direct perception`,
+
+  quote: "I have lived on the lip of insanity, wanting to know reasons, knocking on a door. It opens. I've been knocking from the inside.",
+  quoteSource: "Rumi",
+};
+
 export default function AncientWisdom() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [exploredTraditions, setExploredTraditions] = useState<Set<string>>(new Set());
+  const { unlockAchievement } = useAchievements();
+  
+  // Track which traditions have been explored (all sections expanded at least once)
+  const TRADITION_NAMES = ['solar_barque', 'mahabharata', 'dreamtime', 'taoism', 'sufism'];
+  
+  useEffect(() => {
+    // Load explored traditions from localStorage
+    const stored = localStorage.getItem('explored_traditions');
+    if (stored) {
+      setExploredTraditions(new Set(JSON.parse(stored)));
+    }
+  }, []);
+  
+  useEffect(() => {
+    // Check if all traditions have been explored
+    if (exploredTraditions.size >= 5) {
+      unlockAchievement('ancient_wisdom_explorer');
+    }
+  }, [exploredTraditions, unlockAchievement]);
+  
+  const markTraditionExplored = (traditionName: string) => {
+    setExploredTraditions(prev => {
+      const newSet = new Set(prev);
+      newSet.add(traditionName);
+      localStorage.setItem('explored_traditions', JSON.stringify(Array.from(newSet)));
+      return newSet;
+    });
+  };
 
   const toggleSection = (id: string) => {
     setExpandedSection(expandedSection === id ? null : id);
   };
 
-  const renderTradition = (tradition: typeof SOLAR_BARQUE, index: number) => (
+  const renderTradition = (tradition: typeof SOLAR_BARQUE, index: number, traditionKey: string) => (
     <motion.section
       key={tradition.title}
       initial={{ opacity: 0, y: 40 }}
@@ -251,7 +493,13 @@ export default function AncientWisdom() {
               className={`transition-all duration-300 cursor-pointer ${tradition.borderColor} hover:border-opacity-60 ${
                 isExpanded ? `bg-gradient-to-br ${tradition.color}` : 'bg-background/50'
               }`}
-              onClick={() => toggleSection(sectionId)}
+              onClick={() => {
+                toggleSection(sectionId);
+                // Mark tradition as explored when a section is expanded
+                if (!expandedSection || expandedSection !== sectionId) {
+                  markTraditionExplored(traditionKey);
+                }
+              }}
             >
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
@@ -393,11 +641,11 @@ export default function AncientWisdom() {
             className="text-center"
           >
             <p className="text-lg text-foreground/80 leading-relaxed">
-              What follows are two traditions — separated by thousands of miles and 
-              different languages — that arrived at remarkably similar understandings. 
-              The Egyptian Solar Barque and the Mahabharata's consciousness-activated 
-              weapons both encode principles that the Theory of Everything now 
-              articulates directly.
+What follows are five traditions — separated by continents and millennia — 
+                that arrived at remarkably similar understandings. From the Egyptian Solar 
+                Barque to Aboriginal Dreamtime, from Vedic astras to Taoist Wu Wei to Sufi 
+                mysticism, each encodes principles that the Theory of Everything now 
+                articulates directly.
             </p>
             <p className="text-muted-foreground mt-4">
               We present them not as literal history, but as wisdom traditions 
@@ -410,8 +658,11 @@ export default function AncientWisdom() {
       {/* Main Content */}
       <section className="py-20">
         <div className="container max-w-4xl">
-          {renderTradition(SOLAR_BARQUE, 0)}
-          {renderTradition(MAHABHARATA, 1)}
+          {renderTradition(SOLAR_BARQUE, 0, 'solar_barque')}
+          {renderTradition(MAHABHARATA, 1, 'mahabharata')}
+          {renderTradition(DREAMTIME, 2, 'dreamtime')}
+          {renderTradition(TAOISM, 3, 'taoism')}
+          {renderTradition(SUFISM, 4, 'sufism')}
         </div>
       </section>
 
@@ -432,33 +683,67 @@ export default function AncientWisdom() {
               The Universal Pattern
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Two cultures, separated by continents and millennia, encoding the same truths.
+              Five cultures, separated by continents and millennia, encoding the same truths.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-amber-500/30">
-              <CardContent className="p-6">
-                <div className="text-4xl mb-4">☥</div>
-                <h3 className="font-heading font-bold text-lg mb-2">Egypt Taught</h3>
-                <ul className="space-y-2 text-foreground/80">
-                  <li>• Death is transformation, not ending</li>
-                  <li>• Consciousness persists through the cycle</li>
-                  <li>• Chaos (Apep) is overcome by awareness</li>
-                  <li>• The journey is eternal return</li>
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">☥</div>
+                <h3 className="font-heading font-bold text-base mb-2">Egypt</h3>
+                <ul className="space-y-1 text-sm text-foreground/80">
+                  <li>• Death is transformation</li>
+                  <li>• Consciousness persists</li>
+                  <li>• Eternal return</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="bg-gradient-to-br from-violet-900/20 to-indigo-900/20 border-violet-500/30">
-              <CardContent className="p-6">
-                <div className="text-4xl mb-4">ॐ</div>
-                <h3 className="font-heading font-bold text-lg mb-2">India Taught</h3>
-                <ul className="space-y-2 text-foreground/80">
-                  <li>• Consciousness can affect matter directly</li>
-                  <li>• Power requires ethical development</li>
-                  <li>• Non-resistance dissolves suffering</li>
-                  <li>• Mind and matter are not separate</li>
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">ॐ</div>
+                <h3 className="font-heading font-bold text-base mb-2">India</h3>
+                <ul className="space-y-1 text-sm text-foreground/80">
+                  <li>• Consciousness affects matter</li>
+                  <li>• Power requires ethics</li>
+                  <li>• Non-resistance</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-red-900/20 to-amber-900/20 border-red-500/30">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">🌀</div>
+                <h3 className="font-heading font-bold text-base mb-2">Australia</h3>
+                <ul className="space-y-1 text-sm text-foreground/80">
+                  <li>• The Everywhen</li>
+                  <li>• All things connected</li>
+                  <li>• Land as sacred text</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-emerald-500/30">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">☯</div>
+                <h3 className="font-heading font-bold text-base mb-2">China</h3>
+                <ul className="space-y-1 text-sm text-foreground/80">
+                  <li>• Wu Wei (effortless action)</li>
+                  <li>• Unity of opposites</li>
+                  <li>• Flow with the Tao</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-rose-900/20 to-pink-900/20 border-rose-500/30">
+              <CardContent className="p-5">
+                <div className="text-3xl mb-3">❤</div>
+                <h3 className="font-heading font-bold text-base mb-2">Sufism</h3>
+                <ul className="space-y-1 text-sm text-foreground/80">
+                  <li>• Fana (ego dissolution)</li>
+                  <li>• Unity of Being</li>
+                  <li>• Love as the path</li>
                 </ul>
               </CardContent>
             </Card>
