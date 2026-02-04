@@ -66,6 +66,8 @@ export default function Navbar() {
     { name: "SCAP", path: "/scap", tool: true },
     { name: "Recognition", path: "/recognition", tool: true },
     { name: "Seeds", path: "/seeds", tool: true },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "My Progress", path: "/progress", tool: true },
     { name: "Dialectic", path: "/dialectic", special: true },
     { name: "The Nexus", path: "/nexus", special: true },
     { name: "Integration", path: "/safety", safety: true },
