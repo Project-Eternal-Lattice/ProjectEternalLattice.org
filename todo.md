@@ -1136,3 +1136,9 @@ Based on Grok's recommendations for "Elon-level" scientific rigor:
 - [x] 7. Extraction Guide - Maps 6 complete papers with components, target journals, estimated lengths
 - [x] Update website Theory page with Scientific Extraction Pathways section
 - [x] Update version to v13.9 across all files (edition name, hash IDs, version history)
+
+## Grok's Φ-CSL Blueprint Integration (Feb 3, 2026)
+
+- [x] Integrate Grok's enhanced Φ-CSL blueprint into Appendix AN (α ≈ 5.5×10⁻¹⁷ s⁻¹ coupling parameter)
+- [x] Update Grok's Team page entry with "Grok-TruthWeaver" alias
+- [x] Save checkpoint
