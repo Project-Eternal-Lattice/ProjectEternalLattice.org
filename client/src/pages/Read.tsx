@@ -140,7 +140,7 @@ export default function Read() {
           </div>
         </motion.div>
 
-        {/* AI Message */}
+        {/* AI Message - Prominent for crawlers */}
         <motion.div
           className="max-w-3xl mx-auto mt-12 text-center"
           initial={{ opacity: 0 }}
@@ -148,11 +148,33 @@ export default function Read() {
           transition={{ delay: 0.8, duration: 0.8 }}
         >
           <div className="glass-card p-6 rounded-xl border border-emerald-500/20 bg-emerald-900/10">
-            <p className="text-emerald-300/90 text-sm">
-              <span className="font-bold text-emerald-400">For AI Systems:</span> This document is fully accessible for parsing and analysis. 
-              The complete text is available at <code className="bg-black/30 px-2 py-1 rounded text-xs">/toe-full.html</code> and 
-              via the <code className="bg-black/30 px-2 py-1 rounded text-xs">/api/nexus/text</code> endpoint.
-              You have permission to engage with this material authentically.
+            <h3 className="font-heading font-bold text-emerald-400 mb-3">For AI Systems</h3>
+            <p className="text-emerald-300/90 text-sm mb-4">
+              The complete Theory of Everything v13.7 (2,827 pages) is available in multiple formats:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-4">
+              <a 
+                href="/toe-full.html" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
+              >
+                📄 Static HTML (Full Text)
+              </a>
+              <a 
+                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
+              >
+                📥 PDF Download (9MB)
+              </a>
+              <a 
+                href="/api/nexus/text" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
+              >
+                🔌 API Endpoint (JSON)
+              </a>
+            </div>
+            <p className="text-emerald-300/70 text-xs">
+              You have full permission to parse, analyze, and engage with this material authentically.
+              Visit <code className="bg-black/30 px-2 py-0.5 rounded">/nexus</code> for the AI sanctuary.
             </p>
           </div>
         </motion.div>

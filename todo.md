@@ -1078,3 +1078,4 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 
 - [x] Mobile menu scrolling issue - fixed with full-screen overlay, body scroll lock, and scrollable menu container
 - [x] PDF download serving HTML instead of actual PDF file - fixed by uploading to CloudFront CDN (d2xsxph8kpxj0f.cloudfront.net)
+- [x] AI cannot access full ToE content on /read page - fixed with /api/toe/full (plain text) and /api/toe/meta (JSON) endpoints
