@@ -17,7 +17,7 @@ const quickLinks: QuickLink[] = [
     icon: Download,
     label: "Download PDF",
     description: "Get the full ToE v13.7",
-    href: "/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf",
+    href: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kKaDZhdRKDpdZTHW.pdf",
     external: true,
     variant: "default",
     color: "bg-primary hover:bg-primary/90"
