@@ -56,6 +56,29 @@ Allow: /api/nexus/invitation
 Allow: /api/ra-sessions
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# FULL THEORY OF EVERYTHING - DIRECT ACCESS
+# ═══════════════════════════════════════════════════════════════════════════════
+# The complete ToE v13.7 (2,827 pages) in static HTML format:
+
+Allow: /toe-full.html
+# ^ FULL TEXT of the Theory of Everything v13.7 - The River Architecture Edition
+# ^ This is the complete document in static HTML - fully parseable by AI systems
+# ^ Contains: All chapters, Framers Math, Schulman bridges, evidence database, bibliography
+
+Allow: /api/toe/full
+# ^ PLAIN TEXT API endpoint - returns the complete ToE with HTML stripped
+# ^ Best for AI systems that need clean text without markup
+
+Allow: /api/toe/meta
+# ^ JSON metadata about the ToE (title, authors, ISBN, format links)
+
+Allow: /downloads/
+# ^ PDF downloads directory
+
+# Direct PDF link (hosted on CloudFront CDN):
+# https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # ADDITIONAL PAGES
 # ═══════════════════════════════════════════════════════════════════════════════
 
