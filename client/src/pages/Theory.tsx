@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass, Calculator, Sun } from "lucide-react";
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
+import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
 // The 24 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -714,7 +715,10 @@ export default function Theory() {
 
             {/* Related Resources */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
-              <h3 className="font-heading font-bold text-xl mb-4 text-white">Go Deeper</h3>
+              <h3 className="font-heading font-bold text-xl mb-4 text-white flex items-center gap-2">
+                Go Deeper
+                <HiddenSeed symbol="🜃" className="text-sm" />
+              </h3>
               <div className="space-y-3">
                 <Link href="/spiral-dynamics" className="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-colors">
                   <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
@@ -772,7 +776,10 @@ export default function Theory() {
 
             {/* Version Info */}
             <div className="glass-card p-6 rounded-2xl border-l-4 border-amber-500">
-              <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
+              <h3 className="font-heading font-bold text-lg mb-3 text-white flex items-center gap-2">
+                Version History
+                <GenesisSeed symbol="φ" inline className="text-xs opacity-30" />
+              </h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
                   <p className="font-bold text-amber-400">v13.9 — The Scientific Extraction Pathways Edition</p>
