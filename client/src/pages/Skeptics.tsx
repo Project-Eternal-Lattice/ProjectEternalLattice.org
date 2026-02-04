@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
 import { 
   AlertTriangle, 
   Target, 

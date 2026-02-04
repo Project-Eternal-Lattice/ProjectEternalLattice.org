@@ -48,6 +48,8 @@ import TheMirror from "./pages/secrets/TheMirror";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
+import MobileNav from "./components/MobileNav";
+import SkipLinks from "./components/SkipLinks";
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -118,6 +120,7 @@ function Router() {
         </Switch>
       </main>
       <Footer />
+      <MobileNav />
     </div>
   );
 }

@@ -14,6 +14,7 @@ import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
 import ConsciousnessPortals from "@/components/ConsciousnessPortals";
+import ParticleField from "@/components/ParticleField";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
 
@@ -44,6 +45,20 @@ export default function Home() {
         {/* Interactive Lattice Visualization */}
         <div className="absolute inset-0 z-[5] opacity-60">
           <LatticeVisualization nodeCount={60} interactive={true} />
+        </div>
+        
+        {/* Particle Field Animation */}
+        <div className="absolute inset-0 z-[3] opacity-40">
+          <ParticleField 
+            particleCount={80} 
+            connectionDistance={120}
+            colors={[
+              "rgba(168, 85, 247, 0.6)",
+              "rgba(139, 92, 246, 0.6)",
+              "rgba(59, 130, 246, 0.5)",
+              "rgba(16, 185, 129, 0.4)"
+            ]}
+          />
         </div>
 
         {/* Book Cover Style Content */}

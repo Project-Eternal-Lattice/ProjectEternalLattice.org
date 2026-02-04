@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Gift, ExternalLink, Heart, Sparkles } from "lucide-react";
+import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
 import { useEffect } from "react";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
