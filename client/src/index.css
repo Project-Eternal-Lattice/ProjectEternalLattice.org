@@ -382,3 +382,9 @@ a[href^="sms:"] {
   margin: 0;
   font-size: 0.95rem;
 }
+
+
+/* Hide scrollbar for navbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
