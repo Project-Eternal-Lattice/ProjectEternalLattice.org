@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
 import { Sparkles, Lock, Unlock, ArrowLeft, Gift, Eye, EyeOff } from "lucide-react";
+import SeedTracker from "@/components/SeedTracker";
 
 // Genesis Seeds - Hidden symbols that unlock exclusive content
 // These seeds can be found throughout the ToE document, website, and other materials
@@ -425,6 +426,11 @@ export default function Seeds() {
             </div>
           </motion.div>
         )}
+
+        {/* Seed Tracker Widget */}
+        <div className="max-w-xl mx-auto mb-16">
+          <SeedTracker variant="full" showMap={showHints} />
+        </div>
 
         {/* Footer CTA */}
         <div className="text-center mt-16">

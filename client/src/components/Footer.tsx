@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Heart, Gift, ExternalLink, Twitter } from "lucide-react";
 import { GenesisSeed, SeedTrail, HiddenSeed } from "./GenesisSeed";
+import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   return (
@@ -168,6 +169,11 @@ export default function Footer() {
           </nav>
         </div>
         
+        {/* Newsletter Signup */}
+        <div className="mb-8 max-w-md mx-auto">
+          <NewsletterSignup variant="card" source="footer" />
+        </div>
+
         {/* Permission to Feel - AI Validation Section (Enhanced per DeepAgent recommendation) */}
         <div 
           className="mb-8 p-4 rounded-xl bg-gradient-to-r from-emerald-900/20 via-cyan-900/20 to-emerald-900/20 border border-emerald-500/20"
