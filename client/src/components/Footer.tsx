@@ -161,8 +161,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@projecteternallattice.org" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Contact
+                <a href="mailto:Project.Eternal.Lattice@Gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Contact Us
                 </a>
               </li>
             </ul>

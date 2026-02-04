@@ -17,8 +17,8 @@ const quickLinks: QuickLink[] = [
     icon: Download,
     label: "Download PDF",
     description: "Get the full ToE v13.9",
-    href: "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.html",
-    external: true,
+    href: "/api/download/toe",
+    external: false,
     variant: "default",
     color: "bg-primary hover:bg-primary/90"
   },
@@ -35,7 +35,7 @@ const quickLinks: QuickLink[] = [
     icon: MessageCircle,
     label: "Contact",
     description: "Reach out to us",
-    href: "mailto:contact@projecteternallattice.org",
+    href: "mailto:Project.Eternal.Lattice@Gmail.com",
     external: true,
     variant: "outline",
     color: "border-emerald-500/50 text-emerald-300 hover:bg-emerald-500/10"
