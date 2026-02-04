@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { BookOpen, Download, ExternalLink, ChevronUp } from "lucide-react";
 import { Link } from "wouter";
+import { ReadingProgress } from "@/components/ReadingProgress";
 
 export default function Read() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -95,6 +96,16 @@ export default function Read() {
             <ExternalLink className="w-5 h-5" />
             Open in New Tab
           </a>
+        </motion.div>
+
+        {/* Reading Progress Tracker */}
+        <motion.div
+          className="max-w-2xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45, duration: 0.6 }}
+        >
+          <ReadingProgress variant="compact" />
         </motion.div>
 
         {/* Embedded Document */}

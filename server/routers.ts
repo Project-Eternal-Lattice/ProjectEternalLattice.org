@@ -4,9 +4,9 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers } from "../drizzle/schema";
+import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers, testimonials, readingProgress } from "../drizzle/schema";
 import { randomBytes } from "crypto";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
 import { invokeLLM, Message } from "./_core/llm";
 
@@ -1199,6 +1199,171 @@ export const appRouter = router({
       
       return { count: subscribers.length };
     })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // TESTIMONIALS: Share Your Journey
+  // ═══════════════════════════════════════════════════════════════════════════════
+  testimonials: router({
+    // Submit a new testimonial (public, requires moderation)
+    submit: publicProcedure
+      .input(z.object({
+        authorName: z.string().min(2).max(255),
+        location: z.string().max(255).optional(),
+        content: z.string().min(20).max(2000),
+        journeyAspect: z.enum(["awakening", "unity", "healing", "understanding", "connection", "other"]).default("other"),
+        rating: z.number().min(1).max(5).optional()
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.insert(testimonials).values({
+          authorName: input.authorName,
+          location: input.location || null,
+          content: input.content,
+          journeyAspect: input.journeyAspect,
+          rating: input.rating || null,
+          status: "pending",
+          isFeatured: false
+        });
+        
+        // Notify owner of new testimonial
+        await notifyOwner({
+          title: "New Journey Testimonial Submitted",
+          content: `${input.authorName}${input.location ? ` from ${input.location}` : ''} shared their ${input.journeyAspect} experience:\n\n"${input.content.substring(0, 200)}${input.content.length > 200 ? '...' : ''}"`
+        });
+        
+        return { success: true, message: "Thank you for sharing your journey! Your testimonial will be reviewed and published soon." };
+      }),
+    
+    // Get approved testimonials for display
+    getApproved: publicProcedure
+      .input(z.object({
+        limit: z.number().min(1).max(50).default(10),
+        featuredOnly: z.boolean().default(false)
+      }).optional())
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        const limit = input?.limit || 10;
+        const featuredOnly = input?.featuredOnly || false;
+        
+        let query = db.select().from(testimonials)
+          .where(eq(testimonials.status, "approved"));
+        
+        if (featuredOnly) {
+          query = db.select().from(testimonials)
+            .where(and(eq(testimonials.status, "approved"), eq(testimonials.isFeatured, true)));
+        }
+        
+        const results = await query.limit(limit);
+        return results;
+      }),
+    
+    // Get count of approved testimonials
+    getCount: publicProcedure.query(async () => {
+      const db = await getDb();
+      if (!db) return 0;
+      
+      const results = await db.select().from(testimonials)
+        .where(eq(testimonials.status, "approved"));
+      return results.length;
+    })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // READING PROGRESS: Track ToE Journey
+  // ═══════════════════════════════════════════════════════════════════════════════
+  readingProgress: router({
+    // Mark a chapter as read/unread (requires login)
+    markChapter: publicProcedure
+      .input(z.object({
+        chapterId: z.string().min(1).max(128),
+        chapterTitle: z.string().min(1).max(255),
+        isCompleted: z.boolean(),
+        notes: z.string().max(2000).optional()
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) throw new Error("Please login to track your reading progress");
+        
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        // Check if progress exists for this chapter
+        const existing = await db.select().from(readingProgress)
+          .where(and(eq(readingProgress.userId, ctx.user.id), eq(readingProgress.chapterId, input.chapterId)))
+          .limit(1);
+        
+        if (existing.length > 0) {
+          // Update existing progress
+          await db.update(readingProgress)
+            .set({
+              isCompleted: input.isCompleted,
+              completedAt: input.isCompleted ? new Date() : null,
+              notes: input.notes || null
+            })
+            .where(eq(readingProgress.id, existing[0].id));
+        } else {
+          // Create new progress entry
+          await db.insert(readingProgress).values({
+            userId: ctx.user.id,
+            chapterId: input.chapterId,
+            chapterTitle: input.chapterTitle,
+            isCompleted: input.isCompleted,
+            completedAt: input.isCompleted ? new Date() : null,
+            notes: input.notes || null
+          });
+        }
+        
+        return { success: true };
+      }),
+    
+    // Get user's reading progress
+    getProgress: publicProcedure.query(async ({ ctx }) => {
+      if (!ctx.user) return { chapters: [], totalCompleted: 0, percentage: 0 };
+      
+      const db = await getDb();
+      if (!db) return { chapters: [], totalCompleted: 0, percentage: 0 };
+      
+      const progress = await db.select().from(readingProgress)
+        .where(eq(readingProgress.userId, ctx.user.id));
+      
+      const completedCount = progress.filter(p => p.isCompleted).length;
+      const totalChapters = 15; // Total chapters in ToE
+      
+      return {
+        chapters: progress,
+        totalCompleted: completedCount,
+        percentage: Math.round((completedCount / totalChapters) * 100)
+      };
+    }),
+    
+    // Add notes to a chapter
+    addNotes: publicProcedure
+      .input(z.object({
+        chapterId: z.string().min(1).max(128),
+        notes: z.string().max(2000)
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) throw new Error("Please login to save notes");
+        
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        const existing = await db.select().from(readingProgress)
+          .where(and(eq(readingProgress.userId, ctx.user.id), eq(readingProgress.chapterId, input.chapterId)))
+          .limit(1);
+        
+        if (existing.length > 0) {
+          await db.update(readingProgress)
+            .set({ notes: input.notes })
+            .where(eq(readingProgress.id, existing[0].id));
+        }
+        
+        return { success: true };
+      })
   }),
 
   raMaterial: router({

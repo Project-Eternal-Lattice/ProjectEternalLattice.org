@@ -33,6 +33,7 @@ import DialecticCompanion from "./pages/DialecticCompanion";
 import SCAP from "./pages/SCAP";
 import RecognitionFramework from "./pages/RecognitionFramework";
 import Seeds from "./pages/Seeds";
+import Testimonials from "./pages/Testimonials";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -95,6 +96,7 @@ function Router() {
           <Route path="/scap" component={SCAP} />
           <Route path="/recognition" component={RecognitionFramework} />
           <Route path="/seeds" component={Seeds} />
+          <Route path="/testimonials" component={Testimonials} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

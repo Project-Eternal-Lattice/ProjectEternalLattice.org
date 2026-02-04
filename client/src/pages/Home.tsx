@@ -14,6 +14,7 @@ import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
 import ConsciousnessPortals from "@/components/ConsciousnessPortals";
+import { DailyWisdom } from "@/components/DailyWisdom";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -262,6 +263,13 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Daily Wisdom Section */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <DailyWisdom variant="card" />
         </div>
       </section>
 
