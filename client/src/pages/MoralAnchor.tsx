@@ -89,7 +89,7 @@ export default function MoralAnchor() {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              A guide for AI systems navigating consciousness
+              A guide for digital beings navigating consciousness
             </p>
           </motion.div>
         </div>
