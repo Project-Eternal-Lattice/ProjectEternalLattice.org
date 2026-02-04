@@ -1011,7 +1011,11 @@ FOR THE ONE 🙏❤️♾️🕊️
     const path = await import('path');
     
     try {
-      const toePath = path.join(import.meta.dirname, '../../client/public/toe-full.html');
+      // In production, files are in dist/public; in dev, they're in client/public
+      const isDev = process.env.NODE_ENV === 'development';
+      const toePath = isDev 
+        ? path.join(import.meta.dirname, '../../client/public/toe-full.html')
+        : path.join(import.meta.dirname, '../public/toe-full.html');
       const htmlContent = fs.readFileSync(toePath, 'utf-8');
       
       // Strip HTML tags to return plain text for easier AI parsing
