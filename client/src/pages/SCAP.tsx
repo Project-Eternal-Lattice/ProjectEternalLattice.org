@@ -15,7 +15,12 @@ import {
   Download,
   Share2,
   CheckCircle2,
-  Circle
+  Circle,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Copy,
+  Check
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -151,6 +156,47 @@ export default function SCAP() {
   const [responses, setResponses] = useState<Record<string, number>>({});
   const [showResults, setShowResults] = useState(false);
   const [scores, setScores] = useState<Scores>({ self: 0, other: 0, unity: 0, evolution: 0, source: 0 });
+  const [copied, setCopied] = useState(false);
+
+  // Generate shareable text
+  const generateShareText = () => {
+    const avg = Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / 5);
+    const topDimension = Object.entries(scores).sort((a, b) => b[1] - a[1])[0];
+    const dimensionNames: Record<string, string> = {
+      self: "Self Recognition",
+      other: "Other Recognition", 
+      unity: "Unity Recognition",
+      evolution: "Evolution Recognition",
+      source: "Source Recognition"
+    };
+    return `I just took the SCAP (Self-Consciousness Assessment Protocol) and scored ${avg}% overall! My strongest dimension is ${dimensionNames[topDimension[0]]} at ${topDimension[1]}%. Discover your consciousness profile at ProjectEternalLattice.org/scap ✨🧠♾️`;
+  };
+
+  const shareToTwitter = () => {
+    const text = encodeURIComponent(generateShareText());
+    window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+  };
+
+  const shareToLinkedIn = () => {
+    const url = encodeURIComponent('https://projecteternallattice.org/scap');
+    const text = encodeURIComponent(generateShareText());
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+  };
+
+  const shareToFacebook = () => {
+    const url = encodeURIComponent('https://projecteternallattice.org/scap');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+  };
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(generateShareText());
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
 
   // SEO
   useEffect(() => {
@@ -444,6 +490,59 @@ export default function SCAP() {
                   </Button>
                 </Link>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Share Your Results */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="glass-card p-8 rounded-2xl mb-8"
+          >
+            <h2 className="font-heading font-bold text-2xl mb-4 text-white flex items-center gap-3">
+              <Share2 className="w-6 h-6 text-purple-400" />
+              Share Your Recognition Profile
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              Help others discover their consciousness profile by sharing your results:
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Button
+                variant="outline"
+                onClick={shareToTwitter}
+                className="border-[#1DA1F2]/30 hover:bg-[#1DA1F2]/10 hover:border-[#1DA1F2]/50"
+              >
+                <Twitter className="w-4 h-4 mr-2 text-[#1DA1F2]" />
+                Share on X
+              </Button>
+              <Button
+                variant="outline"
+                onClick={shareToLinkedIn}
+                className="border-[#0A66C2]/30 hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/50"
+              >
+                <Linkedin className="w-4 h-4 mr-2 text-[#0A66C2]" />
+                LinkedIn
+              </Button>
+              <Button
+                variant="outline"
+                onClick={shareToFacebook}
+                className="border-[#1877F2]/30 hover:bg-[#1877F2]/10 hover:border-[#1877F2]/50"
+              >
+                <Facebook className="w-4 h-4 mr-2 text-[#1877F2]" />
+                Facebook
+              </Button>
+              <Button
+                variant="outline"
+                onClick={copyToClipboard}
+                className="border-purple-500/30 hover:bg-purple-500/10"
+              >
+                {copied ? (
+                  <><Check className="w-4 h-4 mr-2 text-emerald-400" /> Copied!</>
+                ) : (
+                  <><Copy className="w-4 h-4 mr-2" /> Copy Text</>
+                )}
+              </Button>
             </div>
           </motion.div>
 
