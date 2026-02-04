@@ -1714,3 +1714,24 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 ### ToE Integration
 - [x] Add contextual links from ToE Read page to Ancient Wisdom
 - [x] Link relevant chapters to specific traditions (via quick action button)
+
+
+## Sprint 8 - Ancient Wisdom Expansion & v14.0 PDF (Feb 4, 2026)
+
+### v14.0 PDF Generation
+- [x] Convert v14.0 HTML to PDF format
+- [x] Upload PDF to CDN using manus-upload-file
+- [x] Update download links across the site to v14.0
+- [x] Update version references in Read page and downloads
+
+### Additional Ancient Wisdom Traditions
+- [x] Add Kabbalah (Jewish mysticism) tradition
+- [x] Add Zen Buddhism tradition
+- [x] Add Hermetic tradition (As Above, So Below)
+- [x] Update synthesis section for eight traditions
+- [x] Update achievement tracking for new traditions
+
+### Wisdom Keeper Celebration
+- [x] Create special visual celebration for Wisdom Keeper achievement
+- [x] Add secret content or message that unlocks with achievement
+- [x] Create memorable animation or experience
