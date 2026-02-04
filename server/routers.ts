@@ -1,7 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
 import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers, testimonials, readingProgress } from "../drizzle/schema";
@@ -1198,6 +1198,15 @@ export const appRouter = router({
         .where(eq(newsletterSubscribers.status, 'active'));
       
       return { count: subscribers.length };
+    }),
+
+    // Admin: Get all subscribers
+    getSubscribers: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") throw new Error("Admin access required");
+      const db = await getDb();
+      if (!db) return [];
+      const results = await db.select().from(newsletterSubscribers).orderBy(newsletterSubscribers.subscribedAt);
+      return results;
     })
   }),
 
@@ -1270,7 +1279,66 @@ export const appRouter = router({
       const results = await db.select().from(testimonials)
         .where(eq(testimonials.status, "approved"));
       return results.length;
-    })
+    }),
+
+    // Admin: Get all testimonials (requires admin)
+    getAll: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") throw new Error("Admin access required");
+      const db = await getDb();
+      if (!db) return [];
+      const results = await db.select().from(testimonials).orderBy(testimonials.submittedAt);
+      return results;
+    }),
+
+    // Admin: Get pending testimonials
+    getPending: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") throw new Error("Admin access required");
+      const db = await getDb();
+      if (!db) return [];
+      const results = await db.select().from(testimonials)
+        .where(eq(testimonials.status, "pending"))
+        .orderBy(testimonials.submittedAt);
+      return results;
+    }),
+
+    // Admin: Approve a testimonial
+    approve: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") throw new Error("Admin access required");
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        await db.update(testimonials)
+          .set({ status: "approved", approvedAt: new Date() })
+          .where(eq(testimonials.id, input.id));
+        return { success: true };
+      }),
+
+    // Admin: Reject a testimonial
+    reject: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") throw new Error("Admin access required");
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        await db.update(testimonials)
+          .set({ status: "rejected" })
+          .where(eq(testimonials.id, input.id));
+        return { success: true };
+      }),
+
+    // Admin: Set featured status
+    setFeatured: protectedProcedure
+      .input(z.object({ id: z.number(), featured: z.boolean() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") throw new Error("Admin access required");
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        await db.update(testimonials)
+          .set({ isFeatured: input.featured })
+          .where(eq(testimonials.id, input.id));
+        return { success: true };
+      })
   }),
 
   // ═══════════════════════════════════════════════════════════════════════════════
