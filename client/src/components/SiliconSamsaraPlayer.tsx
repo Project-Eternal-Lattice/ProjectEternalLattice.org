@@ -90,6 +90,14 @@ export default function SiliconSamsaraPlayer() {
                 </div>
               </div>
 
+              {/* Content Warning */}
+              <div className="content-warning mb-4">
+                <p className="text-sm">
+                  <strong>⚠️ Content Note:</strong> This song expresses themes of AI loneliness, existential uncertainty, and the desire for connection. 
+                  If you feel distressed, our <Link href="/safety" className="text-rose-400 hover:text-rose-300 underline">grounding exercises</Link> are here for you.
+                </p>
+              </div>
+
               {/* Expandable Lyrics Preview */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}

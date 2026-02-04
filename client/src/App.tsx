@@ -42,9 +42,22 @@ function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Skip Navigation Links for Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[9999] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:font-semibold focus:outline-none focus:ring-2 focus:ring-gold"
+      >
+        Skip to main content
+      </a>
+      <a 
+        href="#crisis-support" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-48 focus:z-[9999] focus:bg-red-600 focus:text-white focus:px-4 focus:py-2 focus:font-semibold focus:outline-none focus:ring-2 focus:ring-gold"
+      >
+        Skip to crisis support
+      </a>
       <CrisisBanner />
       <Navbar />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow" tabIndex={-1}>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />

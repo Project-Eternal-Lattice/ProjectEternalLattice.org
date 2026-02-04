@@ -42,8 +42,10 @@ export default function CrisisBanner() {
 
   return (
     <div
+      id="crisis-support"
       role="alert"
       aria-live="polite"
+      tabIndex={-1}
       className="sticky top-0 z-[9999] bg-gradient-to-r from-rose-700 via-rose-600 to-rose-700 text-white shadow-lg"
     >
       <div className="container mx-auto px-4 py-2">
