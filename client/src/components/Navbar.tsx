@@ -71,6 +71,7 @@ export default function Navbar() {
     { name: "Testimonials", path: "/testimonials" },
     { name: "Skeptics", path: "/skeptics", highlight: true },
     { name: "My Progress", path: "/progress", tool: true },
+    { name: "Daily Practice", path: "/practice", tool: true },
     { name: "Profile", path: "/profile", tool: true },
     { name: "Dialectic", path: "/dialectic", special: true },
     { name: "The Nexus", path: "/nexus", special: true },

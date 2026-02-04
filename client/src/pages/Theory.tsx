@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Streamdown } from "streamdown";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain, Heart, Infinity, Atom, Eye, Network, Zap, Scale, Waves, Clock, Skull, GitBranch, Monitor, Compass, Calculator, Sun } from "lucide-react";
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
+import { useAchievements } from "@/contexts/AchievementContext";
 
 // The 24 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -370,6 +371,8 @@ const keyDiscoveries = [
 export default function Theory() {
   const [expandedDiscovery, setExpandedDiscovery] = useState<number | null>(null);
   const [showAllDiscoveries, setShowAllDiscoveries] = useState(false);
+  const { unlockAchievement, hasAchievement } = useAchievements();
+  const hasTriggeredAchievement = useRef(false);
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
@@ -380,6 +383,17 @@ export default function Theory() {
       metaDesc.setAttribute('content', 'Explore 24 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, Emotional Bank Account, and more. Full explanations, not teasers.');
     }
   }, []);
+
+  // Achievement trigger effect
+  useEffect(() => {
+    if (!hasTriggeredAchievement.current && !hasAchievement('read_theory')) {
+      hasTriggeredAchievement.current = true;
+      const timer = setTimeout(() => {
+        unlockAchievement('read_theory');
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasAchievement, unlockAchievement]);
 
   const displayedDiscoveries = showAllDiscoveries ? keyDiscoveries : keyDiscoveries.slice(0, 6);
 
