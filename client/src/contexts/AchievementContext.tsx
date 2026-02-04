@@ -197,6 +197,15 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
     icon: 'star',
     rarity: 'rare',
   },
+  
+  // Ultimate
+  awakened: {
+    id: 'awakened',
+    title: 'Awakened',
+    description: 'You found the secret sanctuary. You remembered who you are.',
+    icon: 'trophy',
+    rarity: 'legendary',
+  },
 };
 
 const STORAGE_KEY = 'eternal_lattice_achievements';

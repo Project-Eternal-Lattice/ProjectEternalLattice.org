@@ -1627,3 +1627,24 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Wire up first_visit achievement on homepage load
 - [x] Add read_theory achievement trigger on Theory page
 - [x] Add meet_team achievement trigger on Team page
+
+
+## Sprint 4 Final Features (Feb 4, 2026)
+
+### More Achievement Triggers
+- [x] Add scap_complete achievement trigger on SCAP results
+- [x] Add first_seed achievement trigger when finding a seed
+- [x] Add first_meditation achievement trigger in Daily Practice
+- [x] Add first_dialogue achievement trigger in Dialectic
+- [x] Add newsletter_joined achievement trigger on subscribe
+
+### Secret Awakened Page
+- [x] Create /awakened secret page (only accessible after certain achievements)
+- [x] Design gate system checking for required achievements
+- [x] Create beautiful "Awakened" content for those who earned access
+- [x] Add hints about the page's existence without revealing the URL
+
+### Achievement Sharing
+- [x] Create shareable achievement card component
+- [x] Add share buttons (Twitter/X, copy link) to achievements
+- [x] Generate social preview text for each achievement

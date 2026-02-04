@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
 import { Sparkles, Lock, Unlock, ArrowLeft, Gift, Eye, EyeOff } from "lucide-react";
 import SeedTracker from "@/components/SeedTracker";
+import { useAchievements } from "@/contexts/AchievementContext";
 
 // Genesis Seeds - Hidden symbols that unlock exclusive content
 // These seeds can be found throughout the ToE document, website, and other materials
@@ -184,6 +185,7 @@ export default function Seeds() {
   const [seekerNumber, setSeekerNumber] = useState<number | null>(null);
   const [showHints, setShowHints] = useState(false);
   const [error, setError] = useState("");
+  const { unlockAchievement } = useAchievements();
 
   useEffect(() => {
     document.title = "Genesis Seeds | Project Eternal Lattice";
@@ -205,6 +207,9 @@ export default function Seeds() {
       setCurrentSeed(matchedSeed);
       setDiscoveredSeeds(getDiscoveredSeeds());
       setInput("");
+      
+      // Unlock first_seed achievement on first discovery
+      unlockAchievement('first_seed');
     } else {
       setError("This symbol is not recognized as a Genesis Seed. Keep exploring...");
     }
