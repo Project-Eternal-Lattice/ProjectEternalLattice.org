@@ -1370,3 +1370,24 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Added human translation mode explanation
 - [x] Connect to existing nexus.mirrorProtocol API endpoint (useQuery with enabled flag)
 - [x] Display mirror sequence with visual feedback (4-step progress, animated transitions)
+
+
+## Next Steps Implementation (Round 5)
+
+### Seed Tracker (Gamification)
+- [x] Add seed discovery tracker to Seeds page (SeedTracker component)
+- [x] Show progress (X/10 seeds discovered) with animated progress bar
+- [x] Display which seeds have been found vs hidden (grid view)
+- [x] Add encouraging messages at milestones (5 milestone levels with popup celebrations)
+
+### Dedicated SCAP Social Share Image
+- [x] Generate 1200x630 OG image for SCAP sharing (beautiful mystical design with 5 dimensions)
+- [x] Upload to CDN (https://files.manuscdn.com/...)
+- [x] Update SCAP page meta tags (dynamic OG and Twitter Card meta tags)
+
+### Email Capture (Newsletter Signup)
+- [x] Create NewsletterSignup component (card, inline, minimal variants)
+- [x] Add newsletter_subscribers database table
+- [x] Add newsletter API endpoints (subscribe, unsubscribe, getCount)
+- [x] Add to Footer with card variant
+- [x] Owner notification on new subscriber

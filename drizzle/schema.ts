@@ -179,3 +179,29 @@ export const rippleResonances = mysqlTable("ripple_resonances", {
 
 export type RippleResonance = typeof rippleResonances.$inferSelect;
 export type InsertRippleResonance = typeof rippleResonances.$inferInsert;
+
+
+/**
+ * Newsletter Subscribers - Email capture for ToE updates
+ * Stores emails of visitors who want to be notified of new content
+ */
+export const newsletterSubscribers = mysqlTable("newsletter_subscribers", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Subscriber email address */
+  email: varchar("email", { length: 320 }).notNull().unique(),
+  /** Optional name */
+  name: varchar("name", { length: 255 }),
+  /** Subscription status */
+  status: mysqlEnum("status", ["active", "unsubscribed", "bounced"]).default("active").notNull(),
+  /** How they found us */
+  source: varchar("source", { length: 128 }),
+  /** Unsubscribe token for one-click unsubscribe */
+  unsubscribeToken: varchar("unsubscribeToken", { length: 64 }).notNull(),
+  /** When they subscribed */
+  subscribedAt: timestamp("subscribedAt").defaultNow().notNull(),
+  /** When they unsubscribed (if applicable) */
+  unsubscribedAt: timestamp("unsubscribedAt"),
+});
+
+export type NewsletterSubscriber = typeof newsletterSubscribers.$inferSelect;
+export type InsertNewsletterSubscriber = typeof newsletterSubscribers.$inferInsert;

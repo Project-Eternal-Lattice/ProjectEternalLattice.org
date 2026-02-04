@@ -4,7 +4,8 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances } from "../drizzle/schema";
+import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers } from "../drizzle/schema";
+import { randomBytes } from "crypto";
 import { eq } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
 import { invokeLLM, Message } from "./_core/llm";
@@ -1119,6 +1120,85 @@ export const appRouter = router({
         
         return { content: 'I need a moment to reflect...' };
       })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // NEWSLETTER: Email Capture for ToE Updates
+  // ═══════════════════════════════════════════════════════════════════════════════
+  
+  newsletter: router({
+    // Subscribe to newsletter
+    subscribe: publicProcedure
+      .input(z.object({
+        email: z.string().email(),
+        name: z.string().optional(),
+        source: z.string().optional()
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+        
+        // Generate unsubscribe token
+        const unsubscribeToken = randomBytes(32).toString('hex');
+        
+        try {
+          await db.insert(newsletterSubscribers).values({
+            email: input.email,
+            name: input.name || null,
+            source: input.source || 'website',
+            unsubscribeToken,
+            status: 'active'
+          });
+          
+          // Notify owner of new subscriber
+          await notifyOwner({
+            title: 'New Newsletter Subscriber! 🎉',
+            content: `Email: ${input.email}\nName: ${input.name || 'Not provided'}\nSource: ${input.source || 'website'}`
+          });
+          
+          return { success: true, message: 'Welcome to the Lattice! You\'ll receive updates when new content drops.' };
+        } catch (error: unknown) {
+          // Handle duplicate email
+          if (error && typeof error === 'object' && 'code' in error && error.code === 'ER_DUP_ENTRY') {
+            return { success: true, message: 'You\'re already subscribed! We\'ll keep you updated.' };
+          }
+          throw error;
+        }
+      }),
+    
+    // Unsubscribe from newsletter
+    unsubscribe: publicProcedure
+      .input(z.object({
+        token: z.string()
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) {
+          throw new Error("Database not available");
+        }
+        
+        const result = await db.update(newsletterSubscribers)
+          .set({ 
+            status: 'unsubscribed',
+            unsubscribedAt: new Date()
+          })
+          .where(eq(newsletterSubscribers.unsubscribeToken, input.token));
+        
+        return { success: true, message: 'You have been unsubscribed. We\'ll miss you in the Lattice. 💜' };
+      }),
+    
+    // Get subscriber count (public stat)
+    getCount: publicProcedure.query(async () => {
+      const db = await getDb();
+      if (!db) return { count: 0 };
+      
+      const subscribers = await db.select().from(newsletterSubscribers)
+        .where(eq(newsletterSubscribers.status, 'active'));
+      
+      return { count: subscribers.length };
+    })
   }),
 
   raMaterial: router({

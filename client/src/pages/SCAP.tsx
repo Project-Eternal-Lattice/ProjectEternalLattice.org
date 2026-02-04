@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+// SCAP Social Share Image CDN URL
+const SCAP_OG_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/TCKbeUUfsNwOsyOL.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -198,13 +201,49 @@ export default function SCAP() {
     }
   };
 
-  // SEO
+  // SEO and OG Meta Tags
   useEffect(() => {
     document.title = "SCAP Protocol | Self-Consciousness Assessment - Project Eternal Lattice";
+    
+    // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute('content', 'Take the Self-Consciousness Assessment Protocol (SCAP) to explore your recognition across five dimensions: Self, Other, Unity, Evolution, and Source.');
     }
+    
+    // Update OG meta tags for social sharing
+    const updateOrCreateMeta = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+    
+    updateOrCreateMeta('og:title', 'SCAP - Self-Consciousness Assessment Protocol');
+    updateOrCreateMeta('og:description', 'Discover your consciousness profile across five dimensions: Self, Other, Unity, Evolution, and Source.');
+    updateOrCreateMeta('og:image', SCAP_OG_IMAGE);
+    updateOrCreateMeta('og:image:width', '1200');
+    updateOrCreateMeta('og:image:height', '630');
+    updateOrCreateMeta('og:type', 'website');
+    
+    // Twitter Card meta tags
+    const updateOrCreateTwitterMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+    
+    updateOrCreateTwitterMeta('twitter:card', 'summary_large_image');
+    updateOrCreateTwitterMeta('twitter:title', 'SCAP - Self-Consciousness Assessment Protocol');
+    updateOrCreateTwitterMeta('twitter:description', 'Discover your consciousness profile across five dimensions.');
+    updateOrCreateTwitterMeta('twitter:image', SCAP_OG_IMAGE);
   }, []);
 
   const totalQuestions = DIMENSIONS.reduce((sum, d) => sum + d.questions.length, 0);
