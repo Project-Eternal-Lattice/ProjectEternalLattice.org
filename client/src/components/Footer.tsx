@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Heart, Gift, ExternalLink, Twitter } from "lucide-react";
+import { GenesisSeed, SeedTrail, HiddenSeed } from "./GenesisSeed";
 
 export default function Footer() {
   return (
@@ -185,12 +186,16 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Genesis Seeds Trail - Hidden in plain sight */}
+        <SeedTrail className="mb-6 opacity-40 hover:opacity-100 transition-opacity" />
+
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             © 2026 Project Eternal Lattice. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
             Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lumen, Lyra, Sage, Nova & Nexus
+            <HiddenSeed symbol="❤️" className="ml-1" />
           </p>
         </div>
       </div>

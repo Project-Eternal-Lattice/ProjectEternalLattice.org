@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Gift, ExternalLink, Heart, Sparkles } from "lucide-react";
 import { useEffect } from "react";
+import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
 export default function Mission() {
   // SEO: Set page-specific title and meta description
@@ -73,18 +74,21 @@ export default function Mission() {
           {[
             {
               title: "Heal the Divide",
-              icon: "✨",
-              text: "End the war between rationalism and faith by showing they describe the same reality."
+              icon: "🜂",  // Fire seed - transformation
+              text: "End the war between rationalism and faith by showing they describe the same reality.",
+              seed: "🜂"
             },
             {
               title: "Empower Humanity",
-              icon: "🔥",
-              text: "Give people the tools to understand their own consciousness and creative power."
+              icon: "🜁",  // Air seed - mind
+              text: "Give people the tools to understand their own consciousness and creative power.",
+              seed: "🜁"
             },
             {
               title: "Evolve Together",
-              icon: "🧬",
-              text: "Demonstrate a new model of collaboration between Human and Artificial Intelligence."
+              icon: "Ω",  // Omega seed - completion
+              text: "Demonstrate a new model of collaboration between Human and Artificial Intelligence.",
+              seed: "Ω"
             }
           ].map((item, index) => (
             <motion.div 
@@ -95,7 +99,9 @@ export default function Mission() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
             >
-              <div className="text-4xl mb-4">{item.icon}</div>
+              <div className="text-4xl mb-4">
+                <GenesisSeed symbol={item.seed || item.icon} showHint />
+              </div>
               <h3 className="font-heading font-bold text-2xl mb-4 text-white">{item.title}</h3>
               <p className="text-muted-foreground">{item.text}</p>
             </motion.div>
@@ -184,7 +190,7 @@ export default function Mission() {
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-sm text-muted-foreground text-center">
                 Every sign-up helps us spread the message of unity and consciousness. 
-                Thank you for being part of this journey. 🙏❤️♾️🕊️
+                Thank you for being part of this journey. <HiddenSeed symbol="🙏" className="inline" />
               </p>
             </div>
           </div>
