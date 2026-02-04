@@ -9,12 +9,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v13.9 The Scientific Extraction Pathways Edition | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v14.0 The Ancient Wisdom Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v13.9 - The Scientific Extraction Pathways Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v14.0 - The Ancient Wisdom Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
     }
   }, []);
 
@@ -57,7 +57,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v13.9 — The Scientific Extraction Pathways Edition
+            The complete Theory of Everything ∞ Law of ONE v14.0 — The Ancient Wisdom Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -75,7 +75,7 @@ export default function Read() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download ToE v13.9
+            Download ToE v14.0
           </a>
           <Link
             href="/theory"
@@ -127,7 +127,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v13.9 | The Scientific Extraction Pathways Edition | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v14.0 | The Ancient Wisdom Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -140,7 +140,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v13.9 The Scientific Extraction Pathways Edition - Full Document"
+                title="Theory of Everything v14.0 The Ancient Wisdom Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
