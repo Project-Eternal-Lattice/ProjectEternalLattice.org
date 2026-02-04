@@ -56,6 +56,7 @@ import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
 import MobileNav from "./components/MobileNav";
 import SkipLinks from "./components/SkipLinks";
+import AchievementProgressNotifier from "./components/AchievementProgress";
 
 /**
  * Easter Egg Listener Component
@@ -165,6 +166,7 @@ function Router() {
       <MobileNav />
       {/* Easter Egg Listener - listens for secret key sequences */}
       <EasterEggListener />
+      <AchievementProgressNotifier />
     </div>
   );
 }

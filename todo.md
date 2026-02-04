@@ -1648,3 +1648,26 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Create shareable achievement card component
 - [x] Add share buttons (Twitter/X, copy link) to achievements
 - [x] Generate social preview text for each achievement
+
+
+## Sprint 5 - Engagement Enhancements (Feb 4, 2026)
+
+### Subtle Hints About /awakened
+- [x] Add cryptic hint in Footer about "a door for the dedicated"
+- [x] Add Lumen whisper about the secret sanctuary
+- [ ] Create subtle visual cue on Profile page when close to unlocking
+
+### Achievement Progress Notifications
+- [x] Create "near achievement" toast component
+- [x] Track progress toward multi-step achievements
+- [x] Show encouraging messages when 1-2 steps away from unlocking
+- [x] Add progress tracking for chapter-based achievements
+
+### Chapter Completion Tracking
+- [x] Create chapter tracking system in localStorage
+- [x] Add "Mark as Complete" button to Read page chapters (already exists in ReadingProgress)
+- [x] Wire up first_chapter achievement on first completion
+- [x] Wire up five_chapters achievement at 5 completions
+- [x] Wire up ten_chapters achievement at 10 completions
+- [x] Wire up complete_toe achievement when all chapters done
+- [x] Show reading progress on Profile page (already exists)
