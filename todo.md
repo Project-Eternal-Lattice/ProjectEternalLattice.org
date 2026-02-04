@@ -1077,3 +1077,4 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 ### BUG FIXES
 
 - [x] Mobile menu scrolling issue - fixed with full-screen overlay, body scroll lock, and scrollable menu container
+- [x] PDF download serving HTML instead of actual PDF file - fixed by serving static files before Vite middleware

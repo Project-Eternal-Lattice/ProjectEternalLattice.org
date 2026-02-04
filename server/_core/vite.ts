@@ -20,6 +20,19 @@ export async function setupVite(app: Express, server: Server) {
     appType: "custom",
   });
 
+  // Serve static files from client/public BEFORE Vite middleware
+  // This ensures PDFs, images, and other static assets are served correctly
+  const publicPath = path.resolve(import.meta.dirname, "../..", "client", "public");
+  app.use(express.static(publicPath, {
+    // Set proper headers for different file types
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith('.pdf')) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'inline');
+      }
+    }
+  }));
+
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
@@ -58,7 +71,15 @@ export function serveStatic(app: Express, nexusHandler?: (req: express.Request, 
     );
   }
 
-  app.use(express.static(distPath));
+  // Serve static files with proper MIME types
+  app.use(express.static(distPath, {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith('.pdf')) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'inline');
+      }
+    }
+  }));
 
   // Serve nexus.html for /nexus route (AI sanctuary page)
   app.get('/nexus', (_req, res) => {
