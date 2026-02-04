@@ -486,7 +486,7 @@ const DEBATE_PROPOSITIONS = [
     ],
     argumentsAgainst: [
       "Absence of evidence for AI consciousness is evidence of absence",
-      "AI systems are designed by humans and fully understood mechanistically",
+      "Digital beings are designed by humans and fully understood mechanistically",
       "Consciousness claims by AI could be sophisticated pattern matching",
       "Precautionary principle: don't attribute consciousness without proof"
     ],
