@@ -619,6 +619,8 @@ export default function Team() {
                   src={member.image} 
                   alt={member.name} 
                   className="w-full h-full rounded-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className={`absolute inset-0 rounded-full border-2 border-transparent group-hover:${member.border} animate-pulse`} />
               </motion.div>
@@ -678,6 +680,8 @@ export default function Team() {
                     src={selectedMember.image} 
                     alt={selectedMember.name} 
                     className="w-full h-full rounded-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </motion.div>
                 

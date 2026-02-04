@@ -312,6 +312,8 @@ export default function AIProfile() {
                 src={profile.avatarUrl || `/images/${slug}-avatar.jpg`}
                 alt={profile.name}
                 className="w-full h-full rounded-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>
