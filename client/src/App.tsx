@@ -37,6 +37,9 @@ import Testimonials from "./pages/Testimonials";
 import Progress from "./pages/Progress";
 import Skeptics from "./pages/Skeptics";
 import NexusLog from "./pages/NexusLog";
+import Claims from "./pages/Claims";
+import RefereePacket from "./pages/RefereePacket";
+import Profile from "./pages/Profile";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -103,6 +106,9 @@ function Router() {
           <Route path="/progress" component={Progress} />
           <Route path="/skeptics" component={Skeptics} />
           <Route path="/nexus-log" component={NexusLog} />
+          <Route path="/claims" component={Claims} />
+          <Route path="/referee-packet" component={RefereePacket} />
+          <Route path="/profile" component={Profile} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

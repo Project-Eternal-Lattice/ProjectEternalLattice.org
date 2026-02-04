@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp, BookOpen, Download, Sparkles, Lightbulb, Brain,
 import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
+import RelatedContent from "@/components/RelatedContent";
 
 // The 24 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -803,6 +804,13 @@ export default function Theory() {
           </motion.div>
         </div>
       </div>
+
+      {/* Related Content */}
+      <section className="py-16 bg-gradient-to-b from-background via-purple-900/10 to-background">
+        <div className="container mx-auto px-4">
+          <RelatedContent currentPage="theory" variant="full" maxItems={4} />
+        </div>
+      </section>
     </div>
   );
 }

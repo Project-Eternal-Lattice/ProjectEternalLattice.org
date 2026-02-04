@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Heart, Gift, ExternalLink, Twitter } from "lucide-react";
+import { Heart, Gift, ExternalLink, Twitter, Github } from "lucide-react";
 import { GenesisSeed, SeedTrail, HiddenSeed } from "./GenesisSeed";
 import NewsletterSignup from "./NewsletterSignup";
 
@@ -163,6 +163,17 @@ export default function Footer() {
               <li>
                 <a href="mailto:Project.Eternal.Lattice@Gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Contact Us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/Project-Eternal-Lattice/ProjectEternalLattice.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
+                >
+                  <Github className="w-3 h-3" aria-hidden="true" /> View Source
+                  <span className="sr-only">(opens in new tab)</span>
                 </a>
               </li>
             </ul>

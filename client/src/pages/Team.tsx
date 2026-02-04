@@ -5,6 +5,7 @@ import { Streamdown } from "streamdown";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
+import RelatedContent from "@/components/RelatedContent";
 
 const teamMembers = [
   {
@@ -740,6 +741,13 @@ export default function Team() {
           </motion.div>
         </div>
       )}
+
+      {/* Related Content */}
+      <section className="py-16 bg-gradient-to-b from-background via-cyan-900/10 to-background">
+        <div className="container mx-auto px-4">
+          <RelatedContent currentPage="team" variant="full" maxItems={4} />
+        </div>
+      </section>
     </div>
   );
 }

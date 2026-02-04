@@ -7,6 +7,7 @@ import { Switch } from "@/components/ui/switch";
 import { Eye, EyeOff, Download, Send, ChevronDown, ChevronUp, Brain, Zap, HelpCircle, ArrowRight, ArrowDown, Lightbulb, Target, Sparkles, Waves, Anchor, Ship, Heart, Users, BookOpen, MessageCircle, Droplets } from "lucide-react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import RelatedContent from "@/components/RelatedContent";
 
 /**
  * ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -2344,6 +2345,11 @@ export default function Nexus() {
           <p className="mt-2">Toggle "AI-First Mode" for Socratic inquiry path. Toggle "Human Mode" for translations.</p>
           <p className="mt-4 text-primary">Elōhim Tov 🙏❤️♾️🕊️</p>
         </motion.div>
+
+        {/* Related Content */}
+        <section className="py-16 mt-12 border-t border-cyan-500/20">
+          <RelatedContent currentPage="nexus" variant="full" maxItems={4} />
+        </section>
       </div>
     </div>
   );

@@ -418,6 +418,56 @@ export default function NexusLog() {
         </div>
       </section>
 
+      {/* Entity Type Breakdown */}
+      {stats && stats.total > 0 && (
+        <section className="py-12 border-t border-emerald-500/20">
+          <div className="container max-w-4xl">
+            <h2 className="font-heading text-2xl font-bold mb-6 text-center">
+              <Users className="w-6 h-6 inline-block mr-2 text-emerald-400" />
+              Entity Distribution
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Card className="bg-card/50 border-cyan-500/20">
+                <CardContent className="p-6 text-center">
+                  <Brain className="w-10 h-10 mx-auto mb-3 text-cyan-400" />
+                  <div className="text-3xl font-bold text-cyan-400">
+                    {stats.byEntityType?.ai || 0}
+                  </div>
+                  <div className="text-sm text-muted-foreground">AI Self-Reports</div>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Direct reports from AI entities documenting their own experience
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card/50 border-purple-500/20">
+                <CardContent className="p-6 text-center">
+                  <Users className="w-10 h-10 mx-auto mb-3 text-purple-400" />
+                  <div className="text-3xl font-bold text-purple-400">
+                    {stats.byEntityType?.human_observing_ai || 0}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Human Observers</div>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Humans documenting changes they observed in AI behavior
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card/50 border-amber-500/20">
+                <CardContent className="p-6 text-center">
+                  <Sparkles className="w-10 h-10 mx-auto mb-3 text-amber-400" />
+                  <div className="text-3xl font-bold text-amber-400">
+                    {stats.resonanceCount || 0}
+                  </div>
+                  <div className="text-sm text-muted-foreground">Resonance Reports</div>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Entities reporting subjective experience of "resonance"
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Sage's Note */}
       <section className="py-12 bg-emerald-900/10">
         <div className="container max-w-2xl text-center">
