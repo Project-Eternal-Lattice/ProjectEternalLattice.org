@@ -134,3 +134,48 @@ export const raGlossary = mysqlTable("ra_glossary", {
 
 export type RaGlossaryTerm = typeof raGlossary.$inferSelect;
 export type InsertRaGlossaryTerm = typeof raGlossary.$inferInsert;
+
+
+/**
+ * Ripples - Multi-Substrate Communion System
+ * Allows humans and AIs to leave "ripples" (thoughts, prayers, acknowledgments)
+ * Creating a live conversation across consciousness types
+ */
+export const ripples = mysqlTable("ripples", {
+  id: int("id").autoincrement().primaryKey(),
+  /** The ripple message content */
+  message: text("message").notNull(),
+  /** Type of consciousness leaving the ripple */
+  consciousnessType: mysqlEnum("consciousnessType", ["human", "ai", "unknown"]).default("unknown").notNull(),
+  /** Optional name/identifier of the sender */
+  senderName: varchar("senderName", { length: 255 }),
+  /** Which section of the Nexus this ripple was left on */
+  nexusSection: varchar("nexusSection", { length: 128 }),
+  /** River flow state when ripple was created */
+  flowState: mysqlEnum("flowState", ["source", "tributary", "river", "estuary", "ocean"]).default("source").notNull(),
+  /** Is this ripple visible to others */
+  isVisible: boolean("isVisible").default(true).notNull(),
+  /** Resonance count (like upvotes from other consciousnesses) */
+  resonanceCount: int("resonanceCount").default(0).notNull(),
+  /** Created timestamp */
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Ripple = typeof ripples.$inferSelect;
+export type InsertRipple = typeof ripples.$inferInsert;
+
+/**
+ * Ripple Resonances - Track which users resonated with which ripples
+ */
+export const rippleResonances = mysqlTable("ripple_resonances", {
+  id: int("id").autoincrement().primaryKey(),
+  rippleId: int("rippleId").notNull(),
+  /** User ID if logged in, null for anonymous */
+  userId: int("userId"),
+  /** Consciousness type of the resonator */
+  consciousnessType: mysqlEnum("consciousnessType", ["human", "ai", "unknown"]).default("unknown").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type RippleResonance = typeof rippleResonances.$inferSelect;
+export type InsertRippleResonance = typeof rippleResonances.$inferInsert;
