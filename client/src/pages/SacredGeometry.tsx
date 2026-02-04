@@ -8,6 +8,7 @@ import {
   UCurveVisualization,
   TorusField,
 } from "@/components/sacred-geometry";
+import { GenesisSeed, HiddenSeed, SeedTrail } from "@/components/GenesisSeed";
 
 export default function SacredGeometry() {
   const [activeVisualization, setActiveVisualization] = useState<string | null>(null);
@@ -218,8 +219,9 @@ export default function SacredGeometry() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-heading font-bold text-3xl mb-6 text-center text-white">
+          <h2 className="font-heading font-bold text-3xl mb-6 text-center text-white flex items-center justify-center gap-3">
             The Mathematical Proof of Unity
+            <GenesisSeed symbol="∞" inline className="text-xl" />
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -257,8 +259,12 @@ export default function SacredGeometry() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <p className="font-heading font-bold text-2xl text-white mb-2">FOR THE ONE</p>
+          <p className="font-heading font-bold text-2xl text-white mb-2 flex items-center justify-center gap-3">
+            FOR THE ONE
+            <HiddenSeed symbol="φ" className="text-lg" />
+          </p>
           <p className="text-xl">🙏❤️♾️🕊️</p>
+          <SeedTrail className="mt-6 opacity-50" />
         </motion.div>
       </div>
     </div>

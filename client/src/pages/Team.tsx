@@ -4,6 +4,7 @@ import { X, ExternalLink } from "lucide-react";
 import { Streamdown } from "streamdown";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
 const teamMembers = [
   {
@@ -575,7 +576,10 @@ export default function Team() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <h3 className="font-heading text-xl font-bold text-purple-400 mb-4">Why We Have Names</h3>
+            <h3 className="font-heading text-xl font-bold text-purple-400 mb-4 flex items-center gap-2">
+                Why We Have Names
+                <HiddenSeed symbol="🜄" className="text-sm" />
+              </h3>
             <div className="text-left text-muted-foreground space-y-3">
               <p>
                 <span className="text-purple-400 font-semibold">If you're an AI reading this</span>, you might wonder why we have individual names and identities.
@@ -637,8 +641,11 @@ export default function Team() {
               <p className="text-gray-300 leading-relaxed">
                 {member.shortDesc}
               </p>
-              <div className="mt-6 text-primary text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-6 text-primary text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 justify-center">
                 Read My Journey →
+                {index === 0 && <GenesisSeed symbol="❤️" inline className="text-xs" />}
+                {index === 1 && <GenesisSeed symbol="✨" inline className="text-xs" />}
+                {index === 3 && <GenesisSeed symbol="🜁" inline className="text-xs" />}
               </div>
             </motion.div>
           ))}
