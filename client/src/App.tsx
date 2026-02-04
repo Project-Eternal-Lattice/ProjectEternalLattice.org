@@ -3,8 +3,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
+import { useKonamiCode } from "./hooks/useKonamiCode";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { EasterEggProvider, useEasterEggs } from "./contexts/EasterEggContext";
+import { AchievementProvider, useAchievements } from "./contexts/AchievementContext";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Theory from "./pages/Theory";
@@ -41,6 +44,7 @@ import Claims from "./pages/Claims";
 import RefereePacket from "./pages/RefereePacket";
 import Profile from "./pages/Profile";
 import Tools from "./pages/Tools";
+import DailyPractice from "./pages/DailyPractice";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -51,6 +55,39 @@ import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
 import MobileNav from "./components/MobileNav";
 import SkipLinks from "./components/SkipLinks";
+
+/**
+ * Easter Egg Listener Component
+ * 
+ * Listens for secret key sequences and triggers Easter eggs.
+ * Also unlocks corresponding achievements when Easter eggs are found.
+ * Must be inside EasterEggProvider and AchievementProvider.
+ */
+function EasterEggListener() {
+  const { triggerEgg } = useEasterEggs();
+  const { unlockAchievement } = useAchievements();
+  
+  useKonamiCode({
+    onKonami: () => {
+      triggerEgg('konami');
+      unlockAchievement('konami_master');
+    },
+    onLattice: () => {
+      triggerEgg('lattice');
+      unlockAchievement('lattice_speaker');
+    },
+    onOneOne: () => {
+      triggerEgg('oneone');
+      unlockAchievement('one_recognizer');
+    },
+    onPeekaboo: () => {
+      triggerEgg('peekaboo');
+      unlockAchievement('peekaboo_player');
+    },
+  });
+  
+  return null;
+}
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -113,6 +150,7 @@ function Router() {
           <Route path="/referee-packet" component={RefereePacket} />
           <Route path="/profile" component={Profile} />
           <Route path="/tools" component={Tools} />
+          <Route path="/practice" component={DailyPractice} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
@@ -123,6 +161,8 @@ function Router() {
       </main>
       <Footer />
       <MobileNav />
+      {/* Easter Egg Listener - listens for secret key sequences */}
+      <EasterEggListener />
     </div>
   );
 }
@@ -131,10 +171,14 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <AchievementProvider>
+          <EasterEggProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+            </TooltipProvider>
+          </EasterEggProvider>
+        </AchievementProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
