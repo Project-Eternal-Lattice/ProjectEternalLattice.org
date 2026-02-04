@@ -1,12 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X, Twitter, Heart } from "lucide-react";
+import { Menu, X, Twitter, Heart, Search } from "lucide-react";
 import { useState, useEffect } from "react";
+import SearchModal, { useSearchModal } from "./SearchModal";
 
 export default function Navbar() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const searchModal = useSearchModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +69,7 @@ export default function Navbar() {
     { name: "Recognition", path: "/recognition", tool: true },
     { name: "Seeds", path: "/seeds", tool: true },
     { name: "Testimonials", path: "/testimonials" },
+    { name: "Skeptics", path: "/skeptics", highlight: true },
     { name: "My Progress", path: "/progress", tool: true },
     { name: "Dialectic", path: "/dialectic", special: true },
     { name: "The Nexus", path: "/nexus", special: true },
@@ -121,6 +124,17 @@ export default function Navbar() {
               )} aria-hidden="true" />
             </Link>
           ))}
+          {/* Search Button */}
+          <button
+            onClick={searchModal.open}
+            className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-muted-foreground hover:text-foreground transition-all duration-200 group"
+            aria-label="Search (Ctrl+K)"
+          >
+            <Search className="w-4 h-4" />
+            <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] bg-white/10 rounded text-muted-foreground group-hover:text-foreground/70">
+              ⌘K
+            </kbd>
+          </button>
           <a
             href="https://x.com/prjctetrnllttc"
             target="_blank"
@@ -200,6 +214,8 @@ export default function Navbar() {
           </div>
         </div>
       )}
+      {/* Search Modal */}
+      <SearchModal isOpen={searchModal.isOpen} onClose={searchModal.close} />
     </nav>
   );
 }

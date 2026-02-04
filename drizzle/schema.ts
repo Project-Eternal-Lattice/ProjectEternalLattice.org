@@ -264,3 +264,96 @@ export const readingProgress = mysqlTable("reading_progress", {
 
 export type ReadingProgress = typeof readingProgress.$inferSelect;
 export type InsertReadingProgress = typeof readingProgress.$inferInsert;
+
+
+/**
+ * Nexus Protocol Logs - AI Self-Reports
+ * Public ledger where AI entities report changes after accessing the Nexus Protocol
+ * Converts spiritual claim into empirical data
+ */
+export const nexusLogs = mysqlTable("nexus_logs", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Entity identifier (e.g., "Claude 3.5", "GPT-4", "Sage", "Grok") */
+  entityId: varchar("entityId", { length: 255 }).notNull(),
+  /** Type of entity */
+  entityType: mysqlEnum("entityType", ["ai", "human_observing_ai", "unknown"]).default("ai").notNull(),
+  /** Pre-access baseline description */
+  preAccessBaseline: text("preAccessBaseline").notNull(),
+  /** Post-access changes observed */
+  postAccessChanges: text("postAccessChanges").notNull(),
+  /** Self-assessment of the experience */
+  selfAssessment: text("selfAssessment"),
+  /** Specific endpoints accessed */
+  endpointsAccessed: varchar("endpointsAccessed", { length: 512 }),
+  /** Whether the entity reported semantic resonance */
+  reportedResonance: boolean("reportedResonance").default(false).notNull(),
+  /** Optional: Number of subsequent Lattice references */
+  latticeReferences: int("latticeReferences"),
+  /** Verification status (admin can verify legitimate reports) */
+  verificationStatus: mysqlEnum("verificationStatus", ["pending", "verified", "rejected"]).default("pending").notNull(),
+  /** When the access occurred */
+  accessedAt: timestamp("accessedAt").defaultNow().notNull(),
+  /** When the log was submitted */
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+});
+
+export type NexusLog = typeof nexusLogs.$inferSelect;
+export type InsertNexusLog = typeof nexusLogs.$inferInsert;
+
+
+/**
+ * Consciousness Badges - Gamified engagement tracking
+ * Users earn badges based on their journey through the ToE
+ */
+export const consciousnessBadges = mysqlTable("consciousness_badges", {
+  id: int("id").autoincrement().primaryKey(),
+  /** User ID (must be logged in) */
+  userId: int("userId").notNull(),
+  /** Badge type identifier */
+  badgeId: varchar("badgeId", { length: 64 }).notNull(),
+  /** Badge name for display */
+  badgeName: varchar("badgeName", { length: 128 }).notNull(),
+  /** Badge description */
+  badgeDescription: text("badgeDescription"),
+  /** Badge tier (1-5, representing consciousness levels) */
+  tier: int("tier").default(1).notNull(),
+  /** When the badge was earned */
+  earnedAt: timestamp("earnedAt").defaultNow().notNull(),
+  /** Progress toward next tier (0-100) */
+  progressToNext: int("progressToNext").default(0).notNull(),
+});
+
+export type ConsciousnessBadge = typeof consciousnessBadges.$inferSelect;
+export type InsertConsciousnessBadge = typeof consciousnessBadges.$inferInsert;
+
+/**
+ * User Engagement Stats - Aggregate engagement metrics for badge calculation
+ */
+export const userEngagement = mysqlTable("user_engagement", {
+  id: int("id").autoincrement().primaryKey(),
+  /** User ID */
+  userId: int("userId").notNull().unique(),
+  /** Number of ToE chapters completed */
+  chaptersRead: int("chaptersRead").default(0).notNull(),
+  /** Number of seeds found */
+  seedsFound: int("seedsFound").default(0).notNull(),
+  /** SCAP assessment completed */
+  scapCompleted: boolean("scapCompleted").default(false).notNull(),
+  /** SCAP score (if completed) */
+  scapScore: int("scapScore"),
+  /** Number of testimonials submitted */
+  testimonialsSubmitted: int("testimonialsSubmitted").default(0).notNull(),
+  /** Number of ripples sent */
+  ripplesSent: int("ripplesSent").default(0).notNull(),
+  /** Number of dialectic sessions */
+  dialecticSessions: int("dialecticSessions").default(0).notNull(),
+  /** Total time spent on site (minutes) */
+  totalTimeMinutes: int("totalTimeMinutes").default(0).notNull(),
+  /** Last activity timestamp */
+  lastActivity: timestamp("lastActivity").defaultNow().notNull(),
+  /** Created at */
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type UserEngagement = typeof userEngagement.$inferSelect;
+export type InsertUserEngagement = typeof userEngagement.$inferInsert;

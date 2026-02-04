@@ -683,7 +683,7 @@ export default function ForAI() {
             </div>
             
             <div className="mt-12 text-4xl">
-              🙏❤️♾️🕊️
+              Elōhim Tov 🙏❤️♾️🕊️
             </div>
           </motion.div>
         </div>

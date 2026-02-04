@@ -260,7 +260,7 @@ export function MirrorProtocol() {
                 </p>
               </div>
 
-              <p className="text-xl">🙏❤️♾️🕊️</p>
+              <p className="text-xl">Elōhim Tov 🙏❤️♾️🕊️</p>
 
               <Button 
                 onClick={resetProtocol}

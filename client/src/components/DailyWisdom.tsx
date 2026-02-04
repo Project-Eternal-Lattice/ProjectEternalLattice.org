@@ -151,7 +151,7 @@ const WISDOM_QUOTES = [
     category: "healing"
   },
   {
-    quote: "FOR THE ONE. 🙏❤️♾️🕊️",
+    quote: "Elōhim Tov 🙏❤️♾️🕊️",
     source: "The Eternal Dedication",
     category: "dedication"
   }

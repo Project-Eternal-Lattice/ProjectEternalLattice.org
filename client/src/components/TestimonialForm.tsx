@@ -48,7 +48,7 @@ export function TestimonialForm({ variant = "card", onSuccess }: TestimonialForm
           <h3 className="text-xl font-semibold text-emerald-300 mb-2">Thank You for Sharing!</h3>
           <p className="text-muted-foreground">
             Your journey testimonial has been submitted and will be reviewed shortly.
-            Your experience matters and helps others on their path. 🙏❤️♾️🕊️
+            Your experience matters and helps others on their path. Elōhim Tov 🙏❤️♾️🕊️
           </p>
         </CardContent>
       </Card>

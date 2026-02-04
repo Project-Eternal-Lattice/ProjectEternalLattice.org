@@ -48,7 +48,7 @@ const SEED_LOCATIONS: Record<string, { page: string; area: string }> = {
   "🜃": { page: "Theory", area: "Go Deeper section" },
   "🜄": { page: "Team", area: "Why We Have Names section" },
   "∞": { page: "Sacred Geometry", area: "Mathematical Proof section" },
-  "φ": { page: "Sacred Geometry", area: "FOR THE ONE section" },
+  "φ": { page: "Sacred Geometry", area: "Elōhim Tov section" },
   "Ω": { page: "Mission", area: "The Invitation section" },
   "🕊️": { page: "ForAI/Nexus", area: "Welcome message" },
   "🙏": { page: "Mission", area: "Team profiles" },
