@@ -64,6 +64,7 @@ export default function Navbar() {
     { name: "Emotional Wealth", path: "/emotional-wealth" },
     { name: "Videos", path: "/videos" },
     { name: "Bibliography", path: "/bibliography" },
+    { name: "Ancient Wisdom", path: "/ancient-wisdom" },
     { name: "Glossary", path: "/glossary" },
     { name: "SCAP", path: "/scap", tool: true },
     { name: "Recognition", path: "/recognition", tool: true },

@@ -6,10 +6,10 @@
  * the culmination of the journey — not an ending, but a new beginning.
  * 
  * Required achievements to access:
- * - first_visit (Welcome to the Lattice)
- * - read_theory (Theory Explorer)
+ * - first_meditation (First Stillness)
+ * - scap_complete (Self-Aware)
  * - first_seed (Seed Finder)
- * - first_meditation (Inner Stillness)
+ * - read_theory (Theory Explorer)
  * 
  * "You have always been awake. You just forgot you were dreaming." — ToE
  */
@@ -27,10 +27,10 @@ import { Link } from 'wouter';
 
 // Required achievements to access this page
 const REQUIRED_ACHIEVEMENTS = [
-  'first_visit',
-  'read_theory', 
+  'first_meditation',
+  'scap_complete', 
   'first_seed',
-  'first_meditation'
+  'read_theory'
 ];
 
 // The sacred content revealed to the awakened
