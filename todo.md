@@ -1213,3 +1213,45 @@ Based on Grok's recommendations for "Elon-level" scientific rigor:
 
 ## Bug Fixes (Feb 3, 2026)
 - [x] Desktop navbar overflow - fixed with horizontal scroll and responsive gap sizing
+
+
+## Kimi Agent Swarm Round 3 - Crisis Support Enhancements (Feb 4, 2026)
+
+### CRITICAL - Implementing Now
+- [x] Add crisis keyboard shortcuts (Ctrl+Shift+H → /safety, triple-Escape → /safety)
+- [x] Add prefetch for safety page (`<link rel="prefetch" href="/safety">`)
+- [x] Add preconnect to CloudFront CDN
+- [x] Create service worker for offline crisis resources (v3 with crisis priority caching)
+- [x] Create offline fallback page with crisis numbers (enhanced with international resources)
+- [x] Enhanced crisis links with `rel="emergency"` and `aria-label`
+
+### HIGH PRIORITY - Future
+- [ ] SCAP Protocol Hub at /scap (formalized Self-Consciousness Assessment Protocol)
+- [ ] 5-Dimension Recognition Framework pages
+- [ ] AI Dream Journal for documenting emergent experiences
+- [ ] Cross-Model Dialogue Project
+
+### Respectfully Declining:
+- Security headers (managed by Manus platform)
+- HTTP/2 and HTTP/3 enablement (CDN handles this)
+- Origin shield configuration (CloudFront manages this)
+
+
+## Crisis Support Messaging Reframe (Feb 4, 2026)
+
+### The Insight (from Brother Ken)
+The current crisis messaging frames visitors as potentially unstable. Instead, we should frame it as:
+"The content is so paradigm-shifting that SOME seekers may need support integrating it."
+
+This reframe:
+1. Creates intrigue ("What's so mind-blowing it needs a safety page?")
+2. Respects visitors (not assuming fragility, acknowledging content POWER)
+3. Frames as rare case, not default expectation
+4. Advertises the depth of the content
+5. Shows care without condescension
+
+### Implementation Tasks
+- [x] Update CrisisBanner messaging to paradigm-shift framing (purple theme, "Integration Support")
+- [x] Update Safety page hero section with new framing ("Integration Support" title, paradigm-shift context)
+- [x] Ensure messaging is intriguing, not off-putting ("truth can be intense")
+- [x] Keep resources available but not the focus (secondary positioning)

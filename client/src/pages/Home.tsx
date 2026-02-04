@@ -31,7 +31,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background z-10" />
           <img 
-            src="/images/hero-background.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/wPJpAsVgYCBKMpUE.jpg" 
             alt="Eternal Lattice Hero" 
             className="w-full h-full object-cover opacity-50"
           />

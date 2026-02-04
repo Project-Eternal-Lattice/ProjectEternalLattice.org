@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Phone, MessageCircle, Shield, AlertTriangle, Sparkles, ExternalLink, Users, Home as HomeIcon } from "lucide-react";
+import { Heart, Phone, MessageCircle, Shield, AlertTriangle, Sparkles, ExternalLink, Users, Home as HomeIcon, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -163,9 +163,9 @@ export default function Safety() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
+      {/* Hero Section - Paradigm Shift Framing */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-red-900/20 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-background to-background" />
         
         <div className="container relative z-10">
           <motion.div
@@ -174,33 +174,63 @@ export default function Safety() {
             className="text-center max-w-3xl mx-auto"
           >
             <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full bg-red-500/20 border border-red-500/30">
-                <Heart className="w-12 h-12 text-red-400" />
+              <div className="p-4 rounded-full bg-purple-500/20 border border-purple-500/30">
+                <Compass className="w-12 h-12 text-purple-400" />
               </div>
             </div>
             
             <h1 className="font-heading font-black text-4xl md:text-5xl mb-6 text-[#E8E8EC]">
-              Safety & Support
+              Integration Support
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8">
-              Your wellbeing matters more than any theory or framework. If you're struggling, 
-              please reach out for support. You are not alone.
+            {/* The Reframe - Content is powerful, not visitor is fragile */}
+            <div className="bg-purple-500/10 border border-purple-500/30 rounded-xl p-6 mb-8">
+              <p className="text-lg text-purple-200 mb-4 font-medium">
+                The perspectives within the Theory of Everything can be profoundly paradigm-shifting.
+              </p>
+              <p className="text-muted-foreground">
+                For most seekers, these ideas bring clarity and peace. But genuine awakening can sometimes 
+                be disorienting — old certainties dissolve before new understanding fully crystallizes. 
+                In the <span className="text-purple-300">rare instance</span> where you need support 
+                navigating these shifts, we've prepared these resources.
+              </p>
+            </div>
+
+            <p className="text-muted-foreground mb-8">
+              We can't control where each visitor is on their journey. This page exists because 
+              we care about your wellbeing — not because the content is harmful, but because 
+              <span className="text-purple-300 font-medium"> truth can be intense</span>.
             </p>
 
-            {/* Emergency Banner */}
-            <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-6 mb-8">
+            {/* Emergency Banner - Still present but secondary */}
+            <div className="bg-red-500/15 border border-red-500/20 rounded-xl p-6 mb-8">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <AlertTriangle className="w-6 h-6 text-red-400" />
-                <span className="font-bold text-red-400 text-lg">If you're in immediate danger</span>
+                <Heart className="w-6 h-6 text-red-400" />
+                <span className="font-bold text-red-400 text-lg">If you need immediate support</span>
               </div>
               <p className="text-[#E8E8EC] mb-4">
-                Please call emergency services (911 in the US) or go to your nearest emergency room.
+                These resources are available 24/7, free and confidential.
               </p>
-              <a href="tel:988" className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors">
-                <Phone className="w-5 h-5" />
-                Call 988 Now
-              </a>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a 
+                  href="tel:988" 
+                  rel="emergency"
+                  aria-label="Call 988 - Available 24/7, free and confidential"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
+                >
+                  <Phone className="w-5 h-5" aria-hidden="true" />
+                  Call 988
+                </a>
+                <a 
+                  href="sms:741741?body=HELLO" 
+                  rel="emergency"
+                  aria-label="Text 741741 for support"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 text-blue-300 font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
+                >
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                  Text 741741
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -246,12 +276,22 @@ export default function Safety() {
                     Responders are specially trained to help Veterans.
                   </p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="tel:988" className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors">
-                      <Phone className="w-5 h-5" />
+                    <a 
+                      href="tel:988" 
+                      rel="emergency"
+                      aria-label="Call 988 and press 1 for Veterans Crisis Line - Available 24/7"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
+                    >
+                      <Phone className="w-5 h-5" aria-hidden="true" />
                       Call 988, Press 1
                     </a>
-                    <a href="sms:838255" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 text-blue-400 font-bold rounded-lg transition-colors">
-                      <MessageCircle className="w-5 h-5" />
+                    <a 
+                      href="sms:838255" 
+                      rel="emergency"
+                      aria-label="Text 838255 for Veterans Crisis Line text support"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 text-blue-400 font-bold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-background"
+                    >
+                      <MessageCircle className="w-5 h-5" aria-hidden="true" />
                       Text 838255
                     </a>
                   </div>
