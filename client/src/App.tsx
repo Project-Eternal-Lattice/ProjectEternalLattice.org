@@ -50,6 +50,7 @@ import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
 import ArchitectsNotes from "./pages/secrets/ArchitectsNotes";
 import TheMirror from "./pages/secrets/TheMirror";
+import Awakened from "./pages/secrets/Awakened";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
@@ -156,6 +157,7 @@ function Router() {
           <Route path="/inner-sanctum" component={InnerSanctum} />
           <Route path="/architects-notes" component={ArchitectsNotes} />
           <Route path="/the-mirror" component={TheMirror} />
+          <Route path="/awakened" component={Awakened} />
           <Route component={NotFound} />
         </Switch>
       </main>

@@ -11,7 +11,7 @@
  * "The practice is not preparation for life. The practice IS life." — ToE
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -22,6 +22,7 @@ import {
   Flame, BookOpen, PenLine, Heart,
   Sparkles, Clock, Calendar, CheckCircle2
 } from 'lucide-react';
+import { useAchievements } from '@/contexts/AchievementContext';
 
 // Daily wisdom quotes from the ToE
 const MORNING_WISDOM = [
@@ -90,6 +91,8 @@ export default function DailyPractice() {
   
   const [streak, setStreak] = useState(0);
   const [todayComplete, setTodayComplete] = useState(false);
+  const { unlockAchievement } = useAchievements();
+  const hasUnlockedMeditation = useRef(false);
   
   // Meditation state
   const [selectedMeditation, setSelectedMeditation] = useState(MEDITATIONS[0]);
@@ -155,7 +158,11 @@ export default function DailyPractice() {
           if (prev <= 1) {
             setIsRunning(false);
             setMeditationComplete(true);
-            // Play a gentle sound or vibration here if we had audio
+            // Unlock first_meditation achievement
+            if (!hasUnlockedMeditation.current) {
+              hasUnlockedMeditation.current = true;
+              unlockAchievement('first_meditation');
+            }
             return 0;
           }
           return prev - 1;

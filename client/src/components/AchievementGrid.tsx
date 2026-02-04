@@ -7,10 +7,13 @@
  * "Every achievement is a milestone on the infinite journey." — ToE
  */
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Star, Sparkles, Lock } from 'lucide-react';
+import { Trophy, Star, Sparkles, Lock, Share2 } from 'lucide-react';
 import { useAchievements, ACHIEVEMENTS } from '@/contexts/AchievementContext';
 import { cn } from '@/lib/utils';
+import ShareableAchievement from './ShareableAchievement';
+import { Achievement } from './AchievementToast';
 
 const rarityColors = {
   common: {
@@ -60,6 +63,7 @@ export default function AchievementGrid({
   showLocked = true 
 }: AchievementGridProps) {
   const { unlockedAchievements, totalUnlocked, totalAchievements } = useAchievements();
+  const [achievementToShare, setAchievementToShare] = useState<Achievement | null>(null);
 
   const achievementList = Object.values(ACHIEVEMENTS);
   const displayList = showLocked 
@@ -164,6 +168,7 @@ export default function AchievementGrid({
           achievements={groupedByRarity.legendary}
           unlockedAchievements={unlockedAchievements}
           rarity="legendary"
+          onShare={setAchievementToShare}
         />
       )}
 
@@ -174,6 +179,7 @@ export default function AchievementGrid({
           achievements={groupedByRarity.epic}
           unlockedAchievements={unlockedAchievements}
           rarity="epic"
+          onShare={setAchievementToShare}
         />
       )}
 
@@ -184,6 +190,7 @@ export default function AchievementGrid({
           achievements={groupedByRarity.rare}
           unlockedAchievements={unlockedAchievements}
           rarity="rare"
+          onShare={setAchievementToShare}
         />
       )}
 
@@ -194,6 +201,15 @@ export default function AchievementGrid({
           achievements={groupedByRarity.common}
           unlockedAchievements={unlockedAchievements}
           rarity="common"
+          onShare={setAchievementToShare}
+        />
+      )}
+
+      {/* Share Modal */}
+      {achievementToShare && (
+        <ShareableAchievement
+          achievement={achievementToShare}
+          onClose={() => setAchievementToShare(null)}
         />
       )}
     </div>
@@ -205,9 +221,10 @@ interface AchievementSectionProps {
   achievements: typeof ACHIEVEMENTS[string][];
   unlockedAchievements: Set<string>;
   rarity: 'common' | 'rare' | 'epic' | 'legendary';
+  onShare?: (achievement: Achievement) => void;
 }
 
-function AchievementSection({ title, achievements, unlockedAchievements, rarity }: AchievementSectionProps) {
+function AchievementSection({ title, achievements, unlockedAchievements, rarity, onShare }: AchievementSectionProps) {
   const colors = rarityColors[rarity];
   const unlockedCount = achievements.filter(a => unlockedAchievements.has(a.id)).length;
 
@@ -265,6 +282,23 @@ function AchievementSection({ title, achievements, unlockedAchievements, rarity 
                     {isUnlocked ? achievement.description : "Keep exploring to unlock..."}
                   </p>
                 </div>
+                
+                {/* Share button for unlocked achievements */}
+                {isUnlocked && onShare && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onShare(achievement as Achievement);
+                    }}
+                    className={cn(
+                      "p-2 rounded-lg transition-colors hover:bg-white/10",
+                      colors.text
+                    )}
+                    title="Share this achievement"
+                  >
+                    <Share2 className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             </motion.div>
           );
