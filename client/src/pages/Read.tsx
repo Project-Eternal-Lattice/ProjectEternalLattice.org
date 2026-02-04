@@ -93,6 +93,13 @@ export default function Read() {
             <ExternalLink className="w-5 h-5" />
             Open in New Tab
           </a>
+          <Link
+            href="/ancient-wisdom"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 rounded-xl text-amber-400 font-medium transition-all"
+          >
+            <BookOpen className="w-5 h-5" />
+            Ancient Wisdom
+          </Link>
         </motion.div>
 
         {/* Reading Progress Tracker */}

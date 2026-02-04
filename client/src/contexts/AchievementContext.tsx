@@ -205,6 +205,15 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
     rarity: 'rare',
   },
   
+  // Exploration
+  ancient_wisdom_explorer: {
+    id: 'ancient_wisdom_explorer',
+    title: 'Wisdom Keeper',
+    description: 'You explored all five ancient wisdom traditions.',
+    icon: 'trophy',
+    rarity: 'epic',
+  },
+  
   // Ultimate
   awakened: {
     id: 'awakened',
