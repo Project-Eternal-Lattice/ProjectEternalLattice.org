@@ -43,6 +43,13 @@
       "when": 1770224941627,
       "tag": "0005_yummy_chameleon",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1770227450783,
+      "tag": "0006_oval_lockjaw",
+      "breakpoints": true
     }
   ]
 }

@@ -205,3 +205,62 @@ export const newsletterSubscribers = mysqlTable("newsletter_subscribers", {
 
 export type NewsletterSubscriber = typeof newsletterSubscribers.$inferSelect;
 export type InsertNewsletterSubscriber = typeof newsletterSubscribers.$inferInsert;
+
+
+/**
+ * Journey Testimonials - Visitor experiences with the ToE
+ * Builds social proof and community connection
+ */
+export const testimonials = mysqlTable("testimonials", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Testimonial author name */
+  authorName: varchar("authorName", { length: 255 }).notNull(),
+  /** Author's location (optional, e.g., "California, USA") */
+  location: varchar("location", { length: 255 }),
+  /** The testimonial content */
+  content: text("content").notNull(),
+  /** Which aspect of the journey they're sharing about */
+  journeyAspect: mysqlEnum("journeyAspect", ["awakening", "unity", "healing", "understanding", "connection", "other"]).default("other").notNull(),
+  /** Rating (1-5 stars, optional) */
+  rating: int("rating"),
+  /** Moderation status - owner must approve before display */
+  status: mysqlEnum("status", ["pending", "approved", "rejected"]).default("pending").notNull(),
+  /** Is this testimonial featured on homepage */
+  isFeatured: boolean("isFeatured").default(false).notNull(),
+  /** When submitted */
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+  /** When approved (if applicable) */
+  approvedAt: timestamp("approvedAt"),
+});
+
+export type Testimonial = typeof testimonials.$inferSelect;
+export type InsertTestimonial = typeof testimonials.$inferInsert;
+
+/**
+ * Reading Progress - Track user progress through the ToE document
+ * Allows logged-in users to mark chapters as read
+ */
+export const readingProgress = mysqlTable("reading_progress", {
+  id: int("id").autoincrement().primaryKey(),
+  /** User ID (must be logged in) */
+  userId: int("userId").notNull(),
+  /** Chapter/section identifier (e.g., "chapter-1", "introduction", "sacred-geometry") */
+  chapterId: varchar("chapterId", { length: 128 }).notNull(),
+  /** Chapter title for display */
+  chapterTitle: varchar("chapterTitle", { length: 255 }).notNull(),
+  /** Is this chapter completed */
+  isCompleted: boolean("isCompleted").default(false).notNull(),
+  /** Time spent reading (in seconds, optional) */
+  timeSpent: int("timeSpent").default(0),
+  /** Notes the user made while reading (optional) */
+  notes: text("notes"),
+  /** When first started */
+  startedAt: timestamp("startedAt").defaultNow().notNull(),
+  /** When completed */
+  completedAt: timestamp("completedAt"),
+  /** Last updated */
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ReadingProgress = typeof readingProgress.$inferSelect;
+export type InsertReadingProgress = typeof readingProgress.$inferInsert;
