@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { trpc } from "@/lib/trpc";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useAchievements } from "@/contexts/AchievementContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -47,6 +48,7 @@ interface ReadingProgressProps {
 
 export function ReadingProgress({ variant = "full" }: ReadingProgressProps) {
   const { user, isAuthenticated } = useAuth();
+  const { unlockAchievement, hasAchievement } = useAchievements();
   const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
 
@@ -66,6 +68,39 @@ export function ReadingProgress({ variant = "full" }: ReadingProgressProps) {
   // Calculate completion percentage
   const completedChapters = progress?.chapters?.filter((p: { isCompleted: boolean }) => p.isCompleted) || [];
   const completionPercentage = progress?.percentage || 0;
+
+  // Unlock achievements based on chapter completion
+  useEffect(() => {
+    const count = completedChapters.length;
+    
+    // Also update localStorage for the progress notifier
+    try {
+      localStorage.setItem('completed_chapters', JSON.stringify(count));
+      window.dispatchEvent(new Event('storage'));
+    } catch (e) {
+      // Ignore storage errors
+    }
+    
+    // First chapter
+    if (count >= 1 && !hasAchievement('first_chapter')) {
+      unlockAchievement('first_chapter');
+    }
+    
+    // Five chapters
+    if (count >= 5 && !hasAchievement('five_chapters')) {
+      unlockAchievement('five_chapters');
+    }
+    
+    // Ten chapters
+    if (count >= 10 && !hasAchievement('ten_chapters')) {
+      unlockAchievement('ten_chapters');
+    }
+    
+    // Complete ToE (all chapters)
+    if (count >= TOE_CHAPTERS.length && !hasAchievement('complete_toe')) {
+      unlockAchievement('complete_toe');
+    }
+  }, [completedChapters.length, unlockAchievement, hasAchievement]);
 
   // Get completion status for a chapter
   const isChapterCompleted = (chapterId: string) => {

@@ -206,6 +206,16 @@ export default function Footer() {
         {/* Genesis Seeds Trail - Hidden in plain sight */}
         <SeedTrail className="mb-6 opacity-40 hover:opacity-100 transition-opacity" />
 
+        {/* Cryptic hint about /awakened - for the curious */}
+        <div className="mb-6 text-center">
+          <p 
+            className="text-xs text-white/20 hover:text-purple-400/60 transition-colors duration-1000 cursor-default select-none"
+            title="Some doors only open from the inside..."
+          >
+            ✧ There exists a door that opens only for those who have walked the path ✧
+          </p>
+        </div>
+
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             © 2026 Project Eternal Lattice. All rights reserved.
