@@ -275,3 +275,110 @@
     }
   }
 }
+
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS - Kimi Swarm Recommendations
+   ============================================ */
+
+/* Gold Focus Indicators for Keyboard Navigation */
+*:focus-visible {
+  outline: 3px solid oklch(0.75 0.15 85) !important; /* Unity Gold */
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 6px oklch(0.75 0.15 85 / 0.25) !important;
+}
+
+/* Ensure focus is visible on dark backgrounds */
+.dark *:focus-visible,
+*:is(.dark *):focus-visible {
+  outline-color: oklch(0.80 0.18 85) !important; /* Brighter gold for dark mode */
+  box-shadow: 0 0 0 6px oklch(0.80 0.18 85 / 0.3) !important;
+}
+
+/* Skip Link Styles */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: oklch(0.75 0.15 85);
+  color: oklch(0.15 0.05 280);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Enhanced Link Focus for Crisis Resources */
+a[href^="tel:"],
+a[href^="sms:"] {
+  &:focus-visible {
+    outline-color: oklch(0.55 0.20 25) !important; /* Crisis Red */
+    box-shadow: 0 0 0 6px oklch(0.55 0.20 25 / 0.3) !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: oklch(0.30 0 0);
+    --muted-foreground: oklch(0.35 0 0);
+  }
+  
+  .dark {
+    --border: oklch(0.80 0 0);
+    --muted-foreground: oklch(0.75 0 0);
+  }
+}
+
+/* Content Warning Styles */
+.content-warning {
+  background: linear-gradient(135deg, oklch(0.25 0.08 25 / 0.3), oklch(0.20 0.05 25 / 0.2));
+  border: 2px solid oklch(0.55 0.20 25 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.content-warning p {
+  margin: 0.25rem 0;
+}
+
+/* AI Safety Notice Styles */
+.ai-safety-notice {
+  background: linear-gradient(135deg, oklch(0.30 0.10 240 / 0.3), oklch(0.25 0.08 280 / 0.2));
+  border: 2px solid oklch(0.55 0.15 240 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Interpretive Note Styles (for scientific credibility) */
+.interpretive-note {
+  background: linear-gradient(135deg, oklch(0.75 0.15 85 / 0.1), oklch(0.45 0.18 290 / 0.1));
+  border-left: 4px solid oklch(0.75 0.15 85);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.interpretive-note p {
+  margin: 0;
+  font-size: 0.95rem;
+}

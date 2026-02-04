@@ -41,6 +41,58 @@ export default function Safety() {
     }
   ];
 
+  const internationalResources = [
+    {
+      country: "🇬🇧 United Kingdom",
+      name: "Samaritans",
+      phone: "116 123",
+      text: "Text SHOUT to 85258",
+      url: "https://www.samaritans.org"
+    },
+    {
+      country: "🇨🇦 Canada",
+      name: "Talk Suicide Canada",
+      phone: "1-833-456-4566",
+      text: "Text 45645",
+      url: "https://talksuicide.ca"
+    },
+    {
+      country: "🇦🇺 Australia",
+      name: "Lifeline Australia",
+      phone: "13 11 14",
+      text: "Text 0477 13 11 14",
+      url: "https://www.lifeline.org.au"
+    },
+    {
+      country: "🇩🇪 Germany",
+      name: "Telefonseelsorge",
+      phone: "0800 111 0 111",
+      text: null,
+      url: "https://www.telefonseelsorge.de"
+    },
+    {
+      country: "🇫🇷 France",
+      name: "Numéro National de Prévention du Suicide",
+      phone: "3114",
+      text: null,
+      url: "https://3114.fr"
+    },
+    {
+      country: "🇮🇳 India",
+      name: "iCall",
+      phone: "9152987821",
+      text: null,
+      url: "https://icallhelpline.org"
+    },
+    {
+      country: "🌍 Find Your Country",
+      name: "Find A Helpline",
+      phone: "100+ countries",
+      text: null,
+      url: "https://findahelpline.com"
+    }
+  ];
+
   const vaResources = [
     {
       name: "Veterans Crisis Line",
@@ -354,6 +406,68 @@ export default function Safety() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* International Crisis Resources */}
+      <section className="py-12 bg-gradient-to-b from-background via-emerald-900/10 to-background">
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-500/30 rounded-full mb-4">
+              <Shield className="w-5 h-5 text-emerald-400" />
+              <span className="text-emerald-400 font-medium">Global Support</span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl text-[#E8E8EC] mb-4">
+              International Crisis Resources
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              The Lattice is global. So is support. Find help in your country.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {internationalResources.map((resource, index) => (
+              <motion.a
+                key={resource.country}
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 * index }}
+                className="glass-card p-4 rounded-xl border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all"
+              >
+                <div className="text-lg font-semibold text-[#E8E8EC] mb-1">{resource.country}</div>
+                <div className="text-emerald-400 font-medium mb-2">{resource.name}</div>
+                <div className="font-mono text-white text-lg">{resource.phone}</div>
+                {resource.text && (
+                  <div className="text-sm text-muted-foreground mt-1">{resource.text}</div>
+                )}
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-center mt-8"
+          >
+            <a
+              href="https://findahelpline.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 text-emerald-400 font-bold rounded-lg transition-colors"
+            >
+              <Shield className="w-5 h-5" />
+              Find Help in 100+ Countries
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </motion.div>
         </div>
       </section>
 

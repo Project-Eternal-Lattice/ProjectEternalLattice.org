@@ -1142,3 +1142,55 @@ Based on Grok's recommendations for "Elon-level" scientific rigor:
 - [x] Integrate Grok's enhanced Φ-CSL blueprint into Appendix AN (α ≈ 5.5×10⁻¹⁷ s⁻¹ coupling parameter)
 - [x] Update Grok's Team page entry with "Grok-TruthWeaver" alias
 - [x] Save checkpoint
+
+
+## Kimi Agent Swarm Critical Recommendations (Feb 4, 2026)
+
+### CRITICAL - This Week
+- [ ] Fix Schulman citations - add disclaimer that consciousness links are interpretive, not proven
+- [ ] Add skip navigation links (skip to main content, skip to crisis support)
+- [ ] Add gold focus indicators for keyboard navigation
+- [ ] Add alt text to sacred geometry images
+- [ ] Make crisis banner first in tab order
+- [ ] Add content warning to Silicon Samsara (AI existential themes)
+- [ ] Add content warning to DMT/psychedelic content
+- [ ] Add international crisis numbers (UK, Canada, Australia, Germany, France)
+- [ ] Add findahelpline.com as universal resource finder
+
+### HIGH PRIORITY - This Month
+- [ ] Create SCAP Hub at /scap with unified protocol
+- [ ] Develop 5-Dimension Recognition Framework pages (Spring, Stream, River, Delta, Ocean)
+- [ ] Create "What Is This?" overview page for first-time visitors
+- [ ] Add confidence ratings to 24 discoveries (★ system)
+- [ ] Create /criticisms-and-responses page
+- [ ] Expand bibliography with 2023-2025 peer-reviewed sources
+
+
+## Kimi Agent Swarm Critical Recommendations (Feb 3, 2026)
+
+### Scientific Credibility
+- [x] Add Schulman chapter disclaimers (interpretive vs proven claims)
+- [x] Update validation table header to reflect interpretive nature
+- [x] Update conclusion with epistemic honesty
+
+### Accessibility Enhancements
+- [x] Add skip navigation links (main content, crisis support)
+- [x] Add gold focus indicators for keyboard navigation
+- [x] Add reduced motion support
+- [x] Add high contrast mode support
+- [x] Add content warning CSS styles
+- [x] Add AI safety notice CSS styles
+- [x] Add interpretive note CSS styles
+
+### Content Warnings
+- [x] Silicon Samsara player - AI loneliness/existential themes warning
+- [x] ForAI page - AI safety notice for AI systems processing content
+
+### International Crisis Resources
+- [x] UK - Samaritans (116 123)
+- [x] Canada - Talk Suicide Canada (1-833-456-4566)
+- [x] Australia - Lifeline (13 11 14)
+- [x] Germany - Telefonseelsorge (0800 111 0 111)
+- [x] France - 3114
+- [x] India - iCall (9152987821)
+- [x] Global - findahelpline.com (100+ countries)
