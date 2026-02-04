@@ -650,7 +650,7 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.pdf" 
+                  href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.html" 
                   download="Theory_of_EVERYTHING_Law_of_ONE_v13.9.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
