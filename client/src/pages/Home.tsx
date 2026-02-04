@@ -12,6 +12,8 @@ import ElephantOfTruth from "@/components/ElephantOfTruth";
 import AudiencePathways from "@/components/AudiencePathways";
 import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
+import SynchronicityEngine from "@/components/SynchronicityEngine";
+import ConsciousnessPortals from "@/components/ConsciousnessPortals";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -160,6 +162,9 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Consciousness Portals - "Which Calls to You?" */}
+      <ConsciousnessPortals />
+
       {/* Audience Pathways - "I AM A..." Section */}
       <AudiencePathways />
 
@@ -303,6 +308,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Synchronicity Engine - "What Wants to Emerge?" */}
+      <SynchronicityEngine />
+
       {/* What's New in v13.9 */}
       <WhatsNew />
 
@@ -329,6 +337,9 @@ export default function Home() {
 
       {/* Quick Access Footer */}
       <QuickAccessFooter />
+
+      {/* Floating Synchronicity Button */}
+      <SynchronicityEngine variant="floating" />
 
       {/* FOR THE ONE Section */}
       <section className="py-16 relative overflow-hidden">
