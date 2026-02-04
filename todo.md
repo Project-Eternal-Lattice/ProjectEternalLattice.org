@@ -1610,3 +1610,20 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Add more micro-interactions to buttons and cards
 - [ ] Improve accessibility with ARIA labels
 - [ ] Add print stylesheet for ToE pages
+
+
+## Sprint 4 Continuation (Feb 4, 2026)
+
+### Navigation & Discoverability
+- [x] Add Daily Practice link to Navbar
+- [x] Add Practice to mobile navigation
+
+### Achievement Integration
+- [x] Display achievement badges on Profile page
+- [x] Show achievement progress (X/25 unlocked)
+- [x] Create achievement grid with locked/unlocked states
+
+### First Visit Achievement
+- [x] Wire up first_visit achievement on homepage load
+- [x] Add read_theory achievement trigger on Theory page
+- [x] Add meet_team achievement trigger on Team page
