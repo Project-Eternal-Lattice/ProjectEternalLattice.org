@@ -1500,3 +1500,10 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update all CloudFront download links to use new S3 URLs
 - [x] Test download functionality
 - [x] Create toe-preservation skill for mandatory verification
+
+## Fix ToE Download Prompt (Feb 4, 2026)
+- [x] Create server-side download endpoint with Content-Disposition header
+- [x] Update all download links to use /api/download/toe endpoint
+
+## Add Contact Email (Feb 4, 2026)
+- [x] Add Project.Eternal.Lattice@Gmail.com to website (footer, contact sections)

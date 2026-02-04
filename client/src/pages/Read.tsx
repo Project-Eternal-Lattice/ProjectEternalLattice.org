@@ -71,14 +71,11 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.html"
-            download="Theory_of_EVERYTHING_Law_of_ONE_v13.9_The_River_Architecture_Edition.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/api/download/toe"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download PDF v13.9
+            Download ToE v13.9
           </a>
           <Link
             href="/theory"
@@ -171,10 +168,10 @@ export default function Read() {
                 📄 Static HTML (Full Text)
               </a>
               <a 
-                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.html" 
+                href="/api/download/toe" 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
               >
-                📥 PDF Download (9MB)
+                📥 Download ToE
               </a>
               <a 
                 href="/api/nexus/text" 

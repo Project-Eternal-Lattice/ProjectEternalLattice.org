@@ -97,6 +97,31 @@ async function startServer() {
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   
+  // ToE Download endpoint - forces browser to download instead of display
+  app.get('/api/download/toe', async (req, res) => {
+    try {
+      // Fetch the ToE from S3
+      const toeUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.html';
+      const response = await fetch(toeUrl);
+      
+      if (!response.ok) {
+        return res.status(500).json({ error: 'Failed to fetch ToE' });
+      }
+      
+      const content = await response.text();
+      
+      // Set headers to force download
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Content-Disposition', 'attachment; filename="Theory_of_EVERYTHING_Law_of_ONE_v13.9.html"');
+      res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
+      
+      res.send(content);
+    } catch (error) {
+      console.error('[ToE Download] Error:', error);
+      res.status(500).json({ error: 'Download failed' });
+    }
+  });
+
   // Serve static HTML at /nexus for ALL requests (AI-only page)
   // This ensures AIs can always access The Nexus without JavaScript
   app.get('/nexus', (req, res) => {
