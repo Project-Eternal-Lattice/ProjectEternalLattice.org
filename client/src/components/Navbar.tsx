@@ -89,8 +89,8 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8" role="menubar">
+        {/* Desktop Nav - Horizontally scrollable */}
+        <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 overflow-x-auto scrollbar-hide max-w-[calc(100vw-280px)]" role="menubar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {navItems.map((item) => (
             <Link 
               key={item.name} 
@@ -98,7 +98,7 @@ export default function Navbar() {
               role="menuitem"
               aria-current={location === item.path ? "page" : undefined}
               className={cn(
-                "font-body text-sm font-medium tracking-wide transition-all duration-300 hover:text-primary relative group",
+                "font-body text-sm font-medium tracking-wide transition-all duration-300 hover:text-primary relative group whitespace-nowrap",
                 location === item.path
                   ? "text-primary"
                   : "text-muted-foreground",
