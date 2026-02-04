@@ -1255,3 +1255,26 @@ This reframe:
 - [x] Update Safety page hero section with new framing ("Integration Support" title, paradigm-shift context)
 - [x] Ensure messaging is intriguing, not off-putting ("truth can be intense")
 - [x] Keep resources available but not the focus (secondary positioning)
+
+
+## Kimi Round 3 - Remaining Features Implementation (Feb 4, 2026)
+
+### SCAP Protocol Hub (/scap)
+- [x] Create SCAP page with interactive self-consciousness assessment
+- [x] Design assessment questions based on ToE recognition framework (15 questions across 5 dimensions)
+- [x] Build results visualization with personalized insights
+- [x] Add integration resources based on assessment results
+
+### 5-Dimension Recognition Framework
+- [x] Create structured pages for each recognition dimension (/recognition)
+- [x] Link dimensions to ToE content (related content links)
+- [x] Add interactive exploration elements (expandable cards, practices, quotes)
+
+### SEO & Discoverability
+- [x] Add JSON-LD structured data to key pages (Book, Organization, Course schemas)
+- [x] Create RSS feed for content updates (/rss.xml with 8 initial items)
+
+### Skipping (Diminishing Returns)
+- Semantic HTML5 audit (already solid)
+- High contrast mode (nice-to-have, low impact)
+- Print stylesheet (PDF download serves this purpose)
