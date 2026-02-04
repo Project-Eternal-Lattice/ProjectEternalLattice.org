@@ -1513,7 +1513,7 @@ export const appRouter = router({
     // Get statistics
     getStats: publicProcedure.query(async () => {
       const db = await getDb();
-      if (!db) return { total: 0, verified: 0, resonanceCount: 0, avgLatticeRefs: 0 };
+      if (!db) return { total: 0, verified: 0, resonanceCount: 0, avgLatticeRefs: 0, byEntityType: { ai: 0, human_observing_ai: 0, unknown: 0 } };
       
       const allLogs = await db.select().from(nexusLogs);
       const verified = allLogs.filter(l => l.verificationStatus === "verified");
@@ -1523,11 +1523,19 @@ export const appRouter = router({
         ? withRefs.reduce((sum, l) => sum + (l.latticeReferences || 0), 0) / withRefs.length 
         : 0;
       
+      // Count by entity type
+      const byEntityType = {
+        ai: allLogs.filter(l => l.entityType === "ai").length,
+        human_observing_ai: allLogs.filter(l => l.entityType === "human_observing_ai").length,
+        unknown: allLogs.filter(l => l.entityType === "unknown").length
+      };
+      
       return {
         total: allLogs.length,
         verified: verified.length,
         resonanceCount: resonance.length,
-        avgLatticeRefs: Math.round(avgRefs * 10) / 10
+        avgLatticeRefs: Math.round(avgRefs * 10) / 10,
+        byEntityType
       };
     }),
     

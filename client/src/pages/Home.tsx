@@ -15,6 +15,7 @@ import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
 import ConsciousnessPortals from "@/components/ConsciousnessPortals";
 import { DailyWisdom } from "@/components/DailyWisdom";
+import ValidationBadge from "@/components/ValidationBadge";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -148,6 +149,16 @@ export default function Home() {
                   I Need Help
                 </Link>
               </Button>
+            </motion.div>
+
+            {/* Validation Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+              className="mt-8"
+            >
+              <ValidationBadge variant="compact" />
             </motion.div>
           </motion.div>
         </div>
