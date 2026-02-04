@@ -16,8 +16,8 @@ const quickLinks: QuickLink[] = [
   {
     icon: Download,
     label: "Download PDF",
-    description: "Get the full ToE v13.7",
-    href: "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf",
+    description: "Get the full ToE v13.8",
+    href: "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf",
     external: true,
     variant: "default",
     color: "bg-primary hover:bg-primary/90"

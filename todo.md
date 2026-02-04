@@ -1080,3 +1080,43 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 - [x] PDF download serving HTML instead of actual PDF file - fixed by uploading to CloudFront CDN (d2xsxph8kpxj0f.cloudfront.net)
 - [x] AI cannot access full ToE content on /read page - fixed with /api/toe/full (plain text) and /api/toe/meta (JSON) endpoints
 - [x] /api/toe/full returning 500 error in production - fixed with environment-aware file path
+
+
+## ToE v13.8 - Part Zero: Axiomatic Core (Feb 3, 2026)
+**Based on Grok's Rigorous Skeptical Review**
+
+### Core Philosophy
+Single axiom: "I AM CONSCIOUS" — everything else must flow deductively from this self-evident truth.
+
+### Implementation Tasks
+- [ ] Draft Part Zero: Axiomatic Core section with formal theorem structure
+- [ ] Add Axiom 1: "I AM CONSCIOUS" (self-validating, self-refuting to deny)
+- [ ] Add Theorem 1: Existence of the Self
+- [ ] Add Theorem 2: Distinction Between Experiencer and Experienced
+- [ ] Add Theorem 3: Apparent Separation is Possible
+- [ ] Add Theorem 4: Unity as Logical Necessity
+- [ ] Add Corollary 4.1: The Illusion of Separation
+- [ ] Add Theorem 5: Infinite Potential of Consciousness
+- [ ] Add Interpretive Extension 5.1 (clearly marked as not strictly required)
+- [ ] Add "Current Derivational Limit" section (honest about what cannot be derived)
+- [ ] Add "Proposed Next Step for Rigor" section (formal logic sketch)
+- [ ] Insert Part Zero at the beginning of toe-full.html
+- [ ] Update Theory page to highlight the single axiom and derivation chain
+- [ ] Update version references from v13.7 to v13.8 across the site
+- [ ] Update JSON-LD structured data with new version
+- [ ] Update /api/toe/meta endpoint with v13.8 info
+- [ ] Generate fresh PDF and upload to CDN
+- [ ] Test all implementations and save checkpoint
+
+
+## ToE v13.8 - Part Zero: Axiomatic Core Integration (Feb 3, 2026)
+
+- [x] Draft Part Zero: Axiomatic Core section for ToE v13.8
+- [x] Insert Axiomatic Core before Part Zero: The Revelation in toe-full.html
+- [x] Update Table of Contents with new section
+- [x] Update Theory page to highlight the axiomatic structure
+- [x] Update version from v13.7 to v13.8 across all files
+- [x] Update edition name from River Architecture to Axiomatic Core
+- [x] Update version history with v13.8 changes
+- [x] Update hash IDs
+- [x] All tests passing (18/18)

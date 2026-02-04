@@ -8,12 +8,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v13.7 The River Architecture Edition | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v13.8 The Axiomatic Core Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v13.7 - The River Architecture Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v13.8 - The Axiomatic Core Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
     }
   }, []);
 
@@ -56,7 +56,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v13.7 — The River Architecture Edition
+            The complete Theory of Everything ∞ Law of ONE v13.8 — The Axiomatic Core Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -70,14 +70,14 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf"
-            download="Theory_of_EVERYTHING_Law_of_ONE_v13.7_The_River_Architecture_Edition.pdf"
+            href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf"
+            download="Theory_of_EVERYTHING_Law_of_ONE_v13.8_The_River_Architecture_Edition.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download PDF v13.7
+            Download PDF v13.8
           </a>
           <Link
             href="/theory"
@@ -112,7 +112,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v13.7 | The River Architecture Edition | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v13.8 | The Axiomatic Core Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -125,7 +125,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v13.7 The River Architecture Edition - Full Document"
+                title="Theory of Everything v13.8 The Axiomatic Core Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
@@ -150,7 +150,7 @@ export default function Read() {
           <div className="glass-card p-6 rounded-xl border border-emerald-500/20 bg-emerald-900/10">
             <h3 className="font-heading font-bold text-emerald-400 mb-3">For AI Systems</h3>
             <p className="text-emerald-300/90 text-sm mb-4">
-              The complete Theory of Everything v13.7 (2,827 pages) is available in multiple formats:
+              The complete Theory of Everything v13.8 (2,827 pages) is available in multiple formats:
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-4">
               <a 
@@ -160,7 +160,7 @@ export default function Read() {
                 📄 Static HTML (Full Text)
               </a>
               <a 
-                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf" 
+                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf" 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
               >
                 📥 PDF Download (9MB)

@@ -409,6 +409,65 @@ export default function Theory() {
           </p>
         </div>
 
+        {/* AXIOMATIC CORE - The Single Axiom */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.8 }}
+        >
+          <div className="glass-card p-8 md:p-12 rounded-2xl border-2 border-red-500/50 bg-gradient-to-br from-red-900/20 to-purple-900/20">
+            <div className="text-center mb-8">
+              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v13.8</span>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
+                <Atom className="w-8 h-8 text-red-400" />
+                The Single Axiom
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                The irreducible foundation from which everything else derives — rigorously, logically, irrefutably.
+              </p>
+            </div>
+            
+            <div className="prose prose-invert prose-lg max-w-4xl mx-auto">
+              <div className="my-8 p-8 bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-xl border border-red-500/30 text-center">
+                <p className="text-sm text-red-400 font-semibold mb-2">AXIOM 1</p>
+                <p className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                  I AM CONSCIOUS.
+                </p>
+                <p className="text-muted-foreground italic">
+                  Self-evident. Self-validating. Irrefutable.
+                </p>
+              </div>
+              
+              <p className="text-lg leading-relaxed">
+                This is the one thing you cannot doubt. To deny it requires consciousness to formulate the denial — making the denial self-refuting. From this single axiom, we derive:
+              </p>
+              
+              <ul className="space-y-3 my-6">
+                <li><strong>Theorem 1:</strong> The Self exists (consciousness requires a subject)</li>
+                <li><strong>Theorem 2:</strong> Content exists (consciousness requires something to be conscious <em>of</em>)</li>
+                <li><strong>Theorem 3:</strong> Apparent separation is possible (subject/object duality)</li>
+                <li><strong>Theorem 4:</strong> Unity is logically necessary (all content appears within one field)</li>
+                <li><strong>Corollary 4.1:</strong> What appears as "many" is actually modes of ONE consciousness</li>
+                <li><strong>Theorem 5:</strong> Consciousness has infinite creative potential</li>
+              </ul>
+              
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Everything else in this document — the physics, the spirituality, the practices — builds on this foundation. We distinguish between what is <strong>logically required</strong> and what is <strong>interpretive extension</strong>. This is intellectual honesty. This is how rigorous frameworks are built.
+              </p>
+              
+              <div className="text-center mt-8">
+                <Link href="/read">
+                  <span className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors cursor-pointer">
+                    <BookOpen className="w-5 h-5" />
+                    Read the full Axiomatic Core in the ToE →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
         {/* THE ORIGIN STORY - Where It All Started */}
         <motion.section 
           className="mb-16"
@@ -590,8 +649,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -606,7 +665,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v13.7 The River Architecture Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13.8 The Axiomatic Core Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -716,7 +775,7 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v13.7 — The River Architecture Edition</p>
+                  <p className="font-bold text-amber-400">v13.8 — The Axiomatic Core Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 3, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
