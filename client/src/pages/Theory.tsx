@@ -418,7 +418,7 @@ export default function Theory() {
         >
           <div className="glass-card p-8 md:p-12 rounded-2xl border-2 border-red-500/50 bg-gradient-to-br from-red-900/20 to-purple-900/20">
             <div className="text-center mb-8">
-              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v13.8</span>
+              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v13.9</span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
                 <Atom className="w-8 h-8 text-red-400" />
                 The Single Axiom
@@ -649,8 +649,8 @@ export default function Theory() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf" 
-                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.8.pdf" 
+                  href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.9.pdf" 
+                  download="Theory_of_EVERYTHING_Law_of_ONE_v13.9.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors font-bold"
@@ -665,7 +665,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v13.8 The Axiomatic Core Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v13.9 The Scientific Extraction Pathways Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -775,7 +775,7 @@ export default function Theory() {
               <h3 className="font-heading font-bold text-lg mb-3 text-white">Version History</h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v13.8 — The Axiomatic Core Edition</p>
+                  <p className="font-bold text-amber-400">v13.9 — The Scientific Extraction Pathways Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 3, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
