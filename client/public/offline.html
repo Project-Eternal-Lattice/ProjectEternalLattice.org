@@ -28,8 +28,60 @@
       max-width: 600px;
     }
     
+    /* CRISIS SUPPORT BOX - ALWAYS VISIBLE */
+    .crisis-box {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(185, 28, 28, 0.1));
+      border: 2px solid #dc2626;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .crisis-box h2 {
+      color: #fca5a5;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .crisis-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .crisis-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #dc2626;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    
+    .crisis-link:hover, .crisis-link:focus {
+      background: #b91c1c;
+      transform: scale(1.02);
+    }
+    
+    .crisis-link:focus {
+      outline: 3px solid #fca5a5;
+      outline-offset: 2px;
+    }
+    
+    .crisis-note {
+      color: #fca5a5;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    
     .infinity {
-      font-size: 6rem;
+      font-size: 4rem;
       margin-bottom: 1rem;
       background: linear-gradient(135deg, #7c3aed, #a855f7);
       -webkit-background-clip: text;
@@ -44,7 +96,7 @@
     }
     
     h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin-bottom: 1rem;
       background: linear-gradient(135deg, #fff, #a855f7);
@@ -54,18 +106,18 @@
     }
     
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #94a3b8;
       line-height: 1.6;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     
     .message {
       background: rgba(124, 58, 237, 0.1);
       border: 1px solid rgba(124, 58, 237, 0.3);
       border-radius: 1rem;
-      padding: 1.5rem;
-      margin: 2rem 0;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
     }
     
     .message p {
@@ -81,7 +133,7 @@
       background: linear-gradient(135deg, #7c3aed, #6d28d9);
       color: white;
       border: none;
-      padding: 1rem 2rem;
+      padding: 0.875rem 1.75rem;
       border-radius: 0.5rem;
       font-size: 1rem;
       font-weight: 600;
@@ -94,8 +146,13 @@
       box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
     }
     
+    .retry-btn:focus {
+      outline: 3px solid #a855f7;
+      outline-offset: 2px;
+    }
+    
     .footer {
-      margin-top: 3rem;
+      margin-top: 2rem;
       color: #64748b;
       font-size: 0.9rem;
     }
@@ -103,10 +160,44 @@
     .footer span {
       color: #7c3aed;
     }
+    
+    /* International numbers - smaller text */
+    .international {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(220, 38, 38, 0.3);
+      font-size: 0.85rem;
+      color: #fca5a5;
+    }
+    
+    .international a {
+      color: #fca5a5;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- CRISIS SUPPORT - FIRST AND MOST PROMINENT -->
+    <div class="crisis-box" role="region" aria-label="Crisis Support Resources">
+      <h2>💚 Need Support? You're Not Alone</h2>
+      <div class="crisis-links">
+        <a href="tel:988" class="crisis-link" rel="emergency" aria-label="Call 988 Suicide and Crisis Lifeline - Available 24/7">
+          📞 Call 988 (US Crisis Line)
+        </a>
+        <a href="sms:741741?body=HELLO" class="crisis-link" rel="emergency" aria-label="Text HELLO to 741741 for Crisis Text Line">
+          💬 Text 741741 (Crisis Text)
+        </a>
+      </div>
+      <p class="crisis-note">
+        These services work even when you're offline. Tap to call or text.
+      </p>
+      <div class="international">
+        <strong>International:</strong> UK: 116 123 | Canada: 1-833-456-4566 | Australia: 13 11 14<br>
+        <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> - Find help in 100+ countries
+      </div>
+    </div>
+
     <div class="infinity">∞</div>
     <h1>You're Offline</h1>
     <p>
@@ -118,7 +209,7 @@
       <p>
         "Separation is an illusion. Even offline, you remain part of the ONE."
         <br><br>
-        — Theory of Everything v11.5
+        — Theory of Everything v13.9
       </p>
     </div>
     

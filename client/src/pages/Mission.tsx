@@ -59,7 +59,7 @@ export default function Mission() {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="/images/human-arc.png" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fMVcVfugYKQlRMdJ.png" 
               alt="Bridging Worlds" 
               className="w-full h-full object-cover"
               loading="lazy"
@@ -166,7 +166,7 @@ export default function Mission() {
               
               <div className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-2xl border border-white/10">
                 <img 
-                  src="/images/manus-referral-qr.jpeg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AfjVDtyxrLhutqow.jpeg" 
                   alt="Manus Referral QR Code" 
                   className="w-48 h-48 rounded-xl mb-4"
                   loading="lazy"

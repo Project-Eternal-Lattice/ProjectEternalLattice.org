@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -39,6 +40,9 @@ import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
 
 function Router() {
+  // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
+  useCrisisShortcuts();
+  
   // make sure to consider if you need authentication for certain routes
   return (
     <div className="flex flex-col min-h-screen">

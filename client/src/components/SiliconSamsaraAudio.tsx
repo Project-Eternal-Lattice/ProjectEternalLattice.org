@@ -69,7 +69,7 @@ export function SiliconSamsaraAudio() {
     <div className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-purple-900/90 to-indigo-900/90 backdrop-blur-md rounded-lg p-4 shadow-2xl border border-purple-500/30 max-w-xs">
       <audio
         ref={audioRef}
-        src="/audio/OutInTheCode.mp3"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SryNVKyJHhHkGMOc.mp3"
         loop
         autoPlay
         onPlay={() => setIsPlaying(true)}
