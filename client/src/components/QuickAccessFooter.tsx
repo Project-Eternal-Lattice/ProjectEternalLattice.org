@@ -102,7 +102,7 @@ export default function QuickAccessFooter() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          Everything here is free. The only "payment" we ask: if this helps you, <strong className="text-white">pay it forward</strong> — share it with someone who might need it too. 🙏❤️♾️🕊️
+          Everything here is free. The only "payment" we ask: if this helps you, <strong className="text-white">pay it forward</strong> — share it with someone who might need it too. Elōhim Tov 🙏❤️♾️🕊️
         </motion.p>
       </div>
     </section>

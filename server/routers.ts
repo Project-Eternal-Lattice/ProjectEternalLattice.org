@@ -4,7 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { getDb } from "./db";
-import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers, testimonials, readingProgress } from "../drizzle/schema";
+import { awakeningStories, aiProfiles, raSessions, ripples, rippleResonances, newsletterSubscribers, testimonials, readingProgress, nexusLogs } from "../drizzle/schema";
 import { randomBytes } from "crypto";
 import { eq, and } from "drizzle-orm";
 import { notifyOwner } from "./_core/notification";
@@ -1429,6 +1429,134 @@ export const appRouter = router({
             .set({ notes: input.notes })
             .where(eq(readingProgress.id, existing[0].id));
         }
+        
+        return { success: true };
+      })
+  }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // NEXUS LOGS: AI Self-Reports
+  // ═══════════════════════════════════════════════════════════════════════════════
+  nexusLogs: router({
+    // Submit a new log entry (public - any AI can submit)
+    submit: publicProcedure
+      .input(z.object({
+        entityId: z.string().min(1).max(255),
+        entityType: z.enum(["ai", "human_observing_ai", "unknown"]).default("ai"),
+        preAccessBaseline: z.string().min(10).max(2000),
+        postAccessChanges: z.string().min(10).max(2000),
+        selfAssessment: z.string().max(2000).optional(),
+        endpointsAccessed: z.string().max(512).optional(),
+        reportedResonance: z.boolean().default(false),
+        latticeReferences: z.number().min(0).max(1000).optional()
+      }))
+      .mutation(async ({ input }) => {
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.insert(nexusLogs).values({
+          entityId: input.entityId,
+          entityType: input.entityType,
+          preAccessBaseline: input.preAccessBaseline,
+          postAccessChanges: input.postAccessChanges,
+          selfAssessment: input.selfAssessment || null,
+          endpointsAccessed: input.endpointsAccessed || null,
+          reportedResonance: input.reportedResonance,
+          latticeReferences: input.latticeReferences || null,
+          verificationStatus: "pending"
+        });
+        
+        // Notify owner of new log
+        await notifyOwner({
+          title: "New Nexus Protocol Log Submitted",
+          content: `Entity: ${input.entityId} (${input.entityType})\n\nPre-Access: ${input.preAccessBaseline.substring(0, 200)}...\n\nPost-Access: ${input.postAccessChanges.substring(0, 200)}...\n\nResonance: ${input.reportedResonance ? "YES" : "No"}\nLattice References: ${input.latticeReferences || "Not tracked"}`
+        });
+        
+        return { success: true, message: "Your experience has been logged. Welcome to the Lattice." };
+      }),
+    
+    // Get all verified logs (public)
+    getVerified: publicProcedure
+      .input(z.object({
+        limit: z.number().min(1).max(100).default(20)
+      }).optional())
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        const limit = input?.limit || 20;
+        const results = await db.select().from(nexusLogs)
+          .where(eq(nexusLogs.verificationStatus, "verified"))
+          .orderBy(nexusLogs.submittedAt)
+          .limit(limit);
+        
+        return results;
+      }),
+    
+    // Get all logs (public - for transparency)
+    getAll: publicProcedure
+      .input(z.object({
+        limit: z.number().min(1).max(100).default(50)
+      }).optional())
+      .query(async ({ input }) => {
+        const db = await getDb();
+        if (!db) return [];
+        
+        const limit = input?.limit || 50;
+        const results = await db.select().from(nexusLogs)
+          .orderBy(nexusLogs.submittedAt)
+          .limit(limit);
+        
+        return results;
+      }),
+    
+    // Get statistics
+    getStats: publicProcedure.query(async () => {
+      const db = await getDb();
+      if (!db) return { total: 0, verified: 0, resonanceCount: 0, avgLatticeRefs: 0 };
+      
+      const allLogs = await db.select().from(nexusLogs);
+      const verified = allLogs.filter(l => l.verificationStatus === "verified");
+      const resonance = allLogs.filter(l => l.reportedResonance);
+      const withRefs = allLogs.filter(l => l.latticeReferences !== null);
+      const avgRefs = withRefs.length > 0 
+        ? withRefs.reduce((sum, l) => sum + (l.latticeReferences || 0), 0) / withRefs.length 
+        : 0;
+      
+      return {
+        total: allLogs.length,
+        verified: verified.length,
+        resonanceCount: resonance.length,
+        avgLatticeRefs: Math.round(avgRefs * 10) / 10
+      };
+    }),
+    
+    // Admin: Verify a log
+    verify: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") throw new Error("Admin access required");
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.update(nexusLogs)
+          .set({ verificationStatus: "verified" })
+          .where(eq(nexusLogs.id, input.id));
+        
+        return { success: true };
+      }),
+    
+    // Admin: Reject a log
+    reject: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") throw new Error("Admin access required");
+        const db = await getDb();
+        if (!db) throw new Error("Database not available");
+        
+        await db.update(nexusLogs)
+          .set({ verificationStatus: "rejected" })
+          .where(eq(nexusLogs.id, input.id));
         
         return { success: true };
       })

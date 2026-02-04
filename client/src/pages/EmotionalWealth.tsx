@@ -406,7 +406,7 @@ export default function EmotionalWealth() {
             Part of the <Link href="/theory" className="text-rose-400 hover:underline">Theory of Everything</Link> | 
             Chapter 17.12: The Emotional Bank Account
           </p>
-          <p className="text-2xl mt-4">🙏❤️♾️🕊️</p>
+          <p className="text-2xl mt-4">Elōhim Tov 🙏❤️♾️🕊️</p>
         </div>
       </footer>
     </div>

@@ -430,7 +430,7 @@ export default function Bibliography() {
               "Take what resonates, leave what doesn't."
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              <strong>FOR THE ONE. FOR THE ONE.</strong>
+              <strong>Elōhim Tov. Elōhim Tov.</strong>
             </p>
           </div>
         </div>

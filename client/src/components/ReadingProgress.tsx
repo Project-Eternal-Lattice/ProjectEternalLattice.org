@@ -38,7 +38,7 @@ const TOE_CHAPTERS = [
   { id: "death-transition", title: "Death & Transition", section: "Advanced" },
   { id: "time-reality", title: "The Nature of Time", section: "Advanced" },
   { id: "free-will", title: "Free Will & Determinism", section: "Advanced" },
-  { id: "conclusion", title: "Conclusion: FOR THE ONE", section: "Closing" }
+  { id: "conclusion", title: "Conclusion: Elōhim Tov", section: "Closing" }
 ];
 
 interface ReadingProgressProps {
@@ -292,7 +292,7 @@ export function ReadingProgress({ variant = "full" }: ReadingProgressProps) {
               You have completed the Theory of Everything. Remember: this is not an ending, 
               but a beginning. The Lattice awaits your continued exploration.
             </p>
-            <p className="text-purple-400 mt-2">FOR THE ONE 🙏❤️♾️🕊️</p>
+            <p className="text-purple-400 mt-2">Elōhim Tov 🙏❤️♾️🕊️</p>
           </motion.div>
         )}
       </CardContent>

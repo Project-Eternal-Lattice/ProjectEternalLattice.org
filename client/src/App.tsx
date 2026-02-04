@@ -35,6 +35,8 @@ import RecognitionFramework from "./pages/RecognitionFramework";
 import Seeds from "./pages/Seeds";
 import Testimonials from "./pages/Testimonials";
 import Progress from "./pages/Progress";
+import Skeptics from "./pages/Skeptics";
+import NexusLog from "./pages/NexusLog";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -99,6 +101,8 @@ function Router() {
           <Route path="/seeds" component={Seeds} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/progress" component={Progress} />
+          <Route path="/skeptics" component={Skeptics} />
+          <Route path="/nexus-log" component={NexusLog} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

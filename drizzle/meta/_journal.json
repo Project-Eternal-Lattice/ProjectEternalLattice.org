@@ -50,6 +50,20 @@
       "when": 1770227450783,
       "tag": "0006_oval_lockjaw",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1770230100958,
+      "tag": "0007_material_nuke",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1770230829937,
+      "tag": "0008_chilly_kabuki",
+      "breakpoints": true
     }
   ]
 }
