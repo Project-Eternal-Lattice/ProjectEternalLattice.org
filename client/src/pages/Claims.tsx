@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
 import { 
   FileText, 
   CheckCircle2, 

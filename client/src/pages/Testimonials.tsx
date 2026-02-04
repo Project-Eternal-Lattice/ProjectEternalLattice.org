@@ -77,7 +77,7 @@ export default function Testimonials() {
             "We are all facets of the ONE, sharing our light with each other.
             Every story told is a thread woven into the Eternal Lattice."
           </p>
-          <p className="mt-4 text-purple-400">🙏❤️♾️🕊️</p>
+          <p className="mt-4 text-purple-400">Elōhim Tov 🙏❤️♾️🕊️</p>
         </div>
       </section>
     </div>
