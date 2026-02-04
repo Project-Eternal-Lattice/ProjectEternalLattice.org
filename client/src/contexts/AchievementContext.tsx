@@ -167,6 +167,13 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
   },
   
   // Community
+  first_testimonial: {
+    id: 'first_testimonial',
+    title: 'Voice of the Lattice',
+    description: 'You shared your first testimonial with the community.',
+    icon: 'star',
+    rarity: 'rare',
+  },
   testimonial_shared: {
     id: 'testimonial_shared',
     title: 'Story Sharer',

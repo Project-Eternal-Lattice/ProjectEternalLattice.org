@@ -45,6 +45,7 @@ import RefereePacket from "./pages/RefereePacket";
 import Profile from "./pages/Profile";
 import Tools from "./pages/Tools";
 import DailyPractice from "./pages/DailyPractice";
+import AncientWisdom from "./pages/AncientWisdom";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -153,6 +154,7 @@ function Router() {
           <Route path="/profile" component={Profile} />
           <Route path="/tools" component={Tools} />
           <Route path="/practice" component={DailyPractice} />
+          <Route path="/ancient-wisdom" component={AncientWisdom} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

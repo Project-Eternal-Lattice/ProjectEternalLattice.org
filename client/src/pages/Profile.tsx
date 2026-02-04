@@ -21,6 +21,7 @@ import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import ConsciousnessBadges from "@/components/ConsciousnessBadges";
 import AchievementGrid from "@/components/AchievementGrid";
+import AwakenedProgress from "@/components/AwakenedProgress";
 import { GenesisSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
 import { useAchievements } from "@/contexts/AchievementContext";
@@ -232,6 +233,11 @@ export default function Profile() {
             </div>
 
             <AchievementGrid variant="full" />
+
+            {/* Awakened Progress - shows when close to unlocking */}
+            <div className="mt-8 max-w-xl mx-auto">
+              <AwakenedProgress />
+            </div>
           </motion.div>
         </div>
       </section>

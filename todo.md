@@ -1671,3 +1671,28 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Wire up ten_chapters achievement at 10 completions
 - [x] Wire up complete_toe achievement when all chapters done
 - [x] Show reading progress on Profile page (already exists)
+
+
+## Sprint 6 - Engagement Enhancements (Feb 4, 2026)
+
+### Visual Cue for /awakened Progress
+- [x] Add glowing indicator on Profile when 3/4 achievements unlocked
+- [x] Show progress bar toward Awakened page access
+- [x] Create subtle animation for the progress indicator
+
+### Awakened Achievement
+- [x] Add "awakened" legendary achievement to AchievementContext (already exists)
+- [x] Trigger achievement when user first accesses /awakened page
+- [x] Create special visual treatment for legendary achievement (handled by AchievementToast)
+
+### Testimonial Submission Achievement
+- [x] Add "first_testimonial" achievement to AchievementContext
+- [x] Wire up achievement trigger in testimonial submission flow
+- [x] Test achievement unlocking on testimonial submit
+
+
+### Ancient Wisdom Section
+- [x] Create AncientWisdom page with Egyptian Solar Barque content
+- [x] Add Mahabharata Consciousness-Activated Weapons content
+- [x] Add navigation link to Ancient Wisdom page
+- [x] Create beautiful visual design for the cultural bridges
