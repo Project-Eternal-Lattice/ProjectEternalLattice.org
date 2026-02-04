@@ -70,7 +70,7 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
-            href="/downloads/Theory_of_EVERYTHING_Law_of_ONE_v13.7.pdf"
+            href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kKaDZhdRKDpdZTHW.pdf"
             download="Theory_of_EVERYTHING_Law_of_ONE_v13.7_The_River_Architecture_Edition.pdf"
             target="_blank"
             rel="noopener noreferrer"
