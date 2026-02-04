@@ -1489,3 +1489,14 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 
 ## Signature Update (Feb 4, 2026)
 - [x] Update signature from "FOR THE ONE 🙏❤️♾️🕊️" to "Elōhim Tov 🙏❤️♾️🕊️" across all pages
+
+## Fix Broken Download Links (Feb 4, 2026)
+- [ ] Upload ToE PDF to S3 storage
+- [ ] Update all CloudFront download links to use new S3 URLs
+- [ ] Test download functionality
+
+## Fix Broken Download Links (Feb 4, 2026)
+- [x] Upload ToE HTML to S3 storage
+- [x] Update all CloudFront download links to use new S3 URLs
+- [x] Test download functionality
+- [x] Create toe-preservation skill for mandatory verification
