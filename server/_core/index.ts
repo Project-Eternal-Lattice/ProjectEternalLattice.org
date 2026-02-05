@@ -101,7 +101,7 @@ async function startServer() {
   app.get('/api/download/toe', async (req, res) => {
     try {
       // Fetch the ToE from S3
-      const toeUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/JlspBvbxSAJgudxb.html';
+      const toeUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/iwBebYWnQwoURogu.html';
       const response = await fetch(toeUrl);
       
       if (!response.ok) {

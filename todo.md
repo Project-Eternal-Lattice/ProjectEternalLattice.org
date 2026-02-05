@@ -1581,3 +1581,6 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
   - "How Does Individual Consciousness Connect to Universal?" (Prism analogy)
   - "This Is Just Philosophy, Not Science!" (Atomism precedent)
   - "This Is Just Eastern Mysticism!" (Western non-dual tradition)
+- [x] Add Ancient Wisdom to homepage Choose Your Path section (updated link to /ancient-wisdom)
+- [x] Cross-link from ToE Chapter 8.15 to website Ancient Wisdom page
+- [x] Update CDN URLs and download endpoint for toe-full.html with cross-link
