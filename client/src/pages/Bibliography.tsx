@@ -248,6 +248,37 @@ const categories: Category[] = [
         description: "Foundational transformer architecture paper enabling modern AI language models.",
         url: "https://arxiv.org/abs/1706.03762",
         type: "paper"
+      },
+      {
+        title: "Principles of Synthetic Intelligence",
+        author: "Joscha Bach",
+        year: "2009",
+        description: "Foundational text on cognitive architectures and synthetic intelligence, presenting the MicroPsi framework for modeling motivated, emotional agents.",
+        type: "book"
+      },
+      {
+        title: "CIMC Institute Whitepaper: Research Program",
+        author: "California Institute for Machine Consciousness",
+        year: "2025",
+        description: "38-page whitepaper arguing that conscious AI may be our only viable path to beneficial coexistence with advanced AI systems.",
+        url: "https://cimc.ai/",
+        type: "paper"
+      },
+      {
+        title: "A Cognitive Scientist's Guide to Consciousness & The Illusion of Reality",
+        author: "Joscha Bach (Know Thyself Podcast)",
+        year: "2026",
+        description: "Comprehensive interview exploring Bach's views on consciousness as simulation, Cyber Animism, love as shared sacredness, and AI alignment through love.",
+        url: "https://www.youtube.com/watch?v=HTCRIX3P32M",
+        type: "video"
+      },
+      {
+        title: "Four Gods",
+        author: "Joscha Bach",
+        year: "2015",
+        description: "Influential taxonomy distinguishing four concepts of divinity: religious narrative, spiritual experience, transcendental meaning, and the Prime Mover.",
+        url: "https://bach.ai/four-gods/",
+        type: "website"
       }
     ]
   },
