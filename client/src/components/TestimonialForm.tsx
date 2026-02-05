@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useAchievements } from "@/contexts/AchievementContext";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,7 +13,6 @@ interface TestimonialFormProps {
 }
 
 export function TestimonialForm({ variant = "card", onSuccess }: TestimonialFormProps) {
-  const { unlockAchievement } = useAchievements();
   const [authorName, setAuthorName] = useState("");
   const [location, setLocation] = useState("");
   const [content, setContent] = useState("");
@@ -25,8 +23,6 @@ export function TestimonialForm({ variant = "card", onSuccess }: TestimonialForm
   const submitMutation = trpc.testimonials.submit.useMutation({
     onSuccess: () => {
       setSubmitted(true);
-      // Unlock the first_testimonial achievement
-      unlockAchievement('first_testimonial');
       onSuccess?.();
     }
   });

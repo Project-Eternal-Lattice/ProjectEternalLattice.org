@@ -1,11 +1,10 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowLeft, Sparkles, Brain, Heart, Atom, Infinity, Eye, Lightbulb, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AIChatBox, Message } from "@/components/AIChatBox";
 import { trpc } from "@/lib/trpc";
-import { useAchievements } from "@/contexts/AchievementContext";
 
 const topics = [
   {
@@ -104,8 +103,6 @@ Begin by welcoming the seeker and asking an opening question about their current
 export default function DialecticCompanion() {
   const [selectedTopic, setSelectedTopic] = useState<typeof topics[0] | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
-  const { unlockAchievement } = useAchievements();
-  const hasUnlockedDialogue = useRef(false);
 
   const chatMutation = trpc.dialectic.chat.useMutation({
     onSuccess: (response: { content: string }) => {
@@ -141,12 +138,6 @@ export default function DialecticCompanion() {
     const newMessages: Message[] = [...messages, { role: "user", content }];
     setMessages(newMessages);
     chatMutation.mutate({ messages: newMessages });
-    
-    // Unlock first_dialogue achievement on first user message
-    if (!hasUnlockedDialogue.current) {
-      hasUnlockedDialogue.current = true;
-      unlockAchievement('first_dialogue');
-    }
   };
 
   const handleReset = () => {

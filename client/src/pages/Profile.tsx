@@ -14,18 +14,13 @@ import {
   Clock,
   TrendingUp,
   Award,
-  Calendar,
-  Trophy
+  Calendar
 } from "lucide-react";
 import { Link } from "wouter";
 import { getLoginUrl } from "@/const";
 import ConsciousnessBadges from "@/components/ConsciousnessBadges";
-import AchievementGrid from "@/components/AchievementGrid";
-import AwakenedProgress from "@/components/AwakenedProgress";
 import { GenesisSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
-import { useAchievements } from "@/contexts/AchievementContext";
-import { useEffect } from "react";
 
 /**
  * ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -39,7 +34,6 @@ import { useEffect } from "react";
 
 export default function Profile() {
   const { user, loading, isAuthenticated, logout } = useAuth();
-  const { totalUnlocked, totalAchievements } = useAchievements();
 
   // Get engagement stats from localStorage
   const pagesVisited = parseInt(localStorage.getItem("lattice-pages-visited") || "0");
@@ -54,11 +48,9 @@ export default function Profile() {
     : 0;
 
   // Set first visit if not set
-  useEffect(() => {
-    if (!localStorage.getItem("lattice-first-visit")) {
-      localStorage.setItem("lattice-first-visit", String(Date.now()));
-    }
-  }, []);
+  if (!firstVisit) {
+    localStorage.setItem("lattice-first-visit", String(Date.now()));
+  }
 
   if (loading) {
     return (
@@ -139,7 +131,7 @@ export default function Profile() {
       {/* Stats Overview */}
       <section className="py-12 border-y border-border/50">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -187,20 +179,6 @@ export default function Profile() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Card className="text-center border-amber-500/30 bg-amber-500/5">
-                <CardContent className="pt-6">
-                  <Trophy className="w-8 h-8 mx-auto mb-2 text-amber-400" />
-                  <div className="text-3xl font-bold text-amber-400">{totalUnlocked}</div>
-                  <div className="text-sm text-muted-foreground">Achievements</div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
               <Card className="text-center border-blue-500/30 bg-blue-500/5">
                 <CardContent className="pt-6">
                   <Calendar className="w-8 h-8 mx-auto mb-2 text-blue-400" />
@@ -213,7 +191,7 @@ export default function Profile() {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      {/* Consciousness Badges */}
       <section className="py-16">
         <div className="container">
           <motion.div
@@ -222,42 +200,13 @@ export default function Profile() {
             transition={{ delay: 0.5 }}
           >
             <div className="text-center mb-8">
-              <Badge variant="outline" className="mb-4 text-amber-400 border-amber-400/30">
-                <Trophy className="w-3 h-3 mr-1" />
-                Achievement System
-              </Badge>
-              <h2 className="text-3xl font-bold mb-2">Your Achievements</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Unlock achievements as you explore the Lattice. Each one marks a milestone on your journey of awakening.
-              </p>
-            </div>
-
-            <AchievementGrid variant="full" />
-
-            {/* Awakened Progress - shows when close to unlocking */}
-            <div className="mt-8 max-w-xl mx-auto">
-              <AwakenedProgress />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Consciousness Badges */}
-      <section className="py-16 bg-gradient-to-b from-background via-purple-900/10 to-background">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div className="text-center mb-8">
               <Badge variant="outline" className="mb-4 text-primary border-primary/30">
                 <Award className="w-3 h-3 mr-1" />
-                Consciousness Levels
+                Achievement System
               </Badge>
               <h2 className="text-3xl font-bold mb-2">Consciousness Badges</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                These badges represent dimensions of your awakening journey based on your engagement.
+                Earn badges as you explore the Lattice. Each badge represents a dimension of your awakening journey.
               </p>
             </div>
 
@@ -267,16 +216,16 @@ export default function Profile() {
       </section>
 
       {/* Quick Actions */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-background via-purple-900/10 to-background">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 0.6 }}
           >
             <h2 className="text-2xl font-bold text-center mb-8">Continue Your Journey</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <Link href="/read">
                 <Card className="cursor-pointer hover:scale-[1.02] transition-all border-purple-500/30 h-full">
                   <CardContent className="pt-6 text-center">
@@ -284,18 +233,6 @@ export default function Profile() {
                     <h3 className="font-bold mb-2">Read the ToE</h3>
                     <p className="text-sm text-muted-foreground">
                       Continue reading where you left off
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="/practice">
-                <Card className="cursor-pointer hover:scale-[1.02] transition-all border-green-500/30 h-full">
-                  <CardContent className="pt-6 text-center">
-                    <Heart className="w-10 h-10 mx-auto mb-4 text-green-400" />
-                    <h3 className="font-bold mb-2">Daily Practice</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Meditation, wisdom & journaling
                     </p>
                   </CardContent>
                 </Card>
@@ -330,7 +267,7 @@ export default function Profile() {
       </section>
 
       {/* Related Content */}
-      <section className="py-16 bg-gradient-to-b from-background via-purple-900/5 to-background">
+      <section className="py-16">
         <div className="container">
           <RelatedContent currentPage="progress" variant="full" maxItems={4} />
         </div>

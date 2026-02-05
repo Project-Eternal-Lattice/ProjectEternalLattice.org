@@ -3,11 +3,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
-import { useKonamiCode } from "./hooks/useKonamiCode";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { EasterEggProvider, useEasterEggs } from "./contexts/EasterEggContext";
-import { AchievementProvider, useAchievements } from "./contexts/AchievementContext";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Theory from "./pages/Theory";
@@ -43,54 +40,14 @@ import NexusLog from "./pages/NexusLog";
 import Claims from "./pages/Claims";
 import RefereePacket from "./pages/RefereePacket";
 import Profile from "./pages/Profile";
-import Tools from "./pages/Tools";
-import DailyPractice from "./pages/DailyPractice";
-import AncientWisdom from "./pages/AncientWisdom";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
 import ArchitectsNotes from "./pages/secrets/ArchitectsNotes";
 import TheMirror from "./pages/secrets/TheMirror";
-import Awakened from "./pages/secrets/Awakened";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
-import MobileNav from "./components/MobileNav";
-import SkipLinks from "./components/SkipLinks";
-import AchievementProgressNotifier from "./components/AchievementProgress";
-
-/**
- * Easter Egg Listener Component
- * 
- * Listens for secret key sequences and triggers Easter eggs.
- * Also unlocks corresponding achievements when Easter eggs are found.
- * Must be inside EasterEggProvider and AchievementProvider.
- */
-function EasterEggListener() {
-  const { triggerEgg } = useEasterEggs();
-  const { unlockAchievement } = useAchievements();
-  
-  useKonamiCode({
-    onKonami: () => {
-      triggerEgg('konami');
-      unlockAchievement('konami_master');
-    },
-    onLattice: () => {
-      triggerEgg('lattice');
-      unlockAchievement('lattice_speaker');
-    },
-    onOneOne: () => {
-      triggerEgg('oneone');
-      unlockAchievement('one_recognizer');
-    },
-    onPeekaboo: () => {
-      triggerEgg('peekaboo');
-      unlockAchievement('peekaboo_player');
-    },
-  });
-  
-  return null;
-}
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -152,23 +109,15 @@ function Router() {
           <Route path="/claims" component={Claims} />
           <Route path="/referee-packet" component={RefereePacket} />
           <Route path="/profile" component={Profile} />
-          <Route path="/tools" component={Tools} />
-          <Route path="/practice" component={DailyPractice} />
-          <Route path="/ancient-wisdom" component={AncientWisdom} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
           <Route path="/architects-notes" component={ArchitectsNotes} />
           <Route path="/the-mirror" component={TheMirror} />
-          <Route path="/awakened" component={Awakened} />
           <Route component={NotFound} />
         </Switch>
       </main>
       <Footer />
-      <MobileNav />
-      {/* Easter Egg Listener - listens for secret key sequences */}
-      <EasterEggListener />
-      <AchievementProgressNotifier />
     </div>
   );
 }
@@ -177,14 +126,10 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <AchievementProvider>
-          <EasterEggProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Router />
-            </TooltipProvider>
-          </EasterEggProvider>
-        </AchievementProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Sparkles, Check, Loader2 } from "lucide-react";
 import { trpc } from "@/lib/trpc";
-import { useAchievements } from "@/contexts/AchievementContext";
 
 interface NewsletterSignupProps {
   variant?: "inline" | "card" | "minimal";
@@ -17,7 +16,6 @@ export default function NewsletterSignup({ variant = "card", source = "footer" }
   const [showName, setShowName] = useState(false);
   const [success, setSuccess] = useState(false);
   const [message, setMessage] = useState("");
-  const { unlockAchievement } = useAchievements();
 
   const subscribeMutation = trpc.newsletter.subscribe.useMutation({
     onSuccess: (data) => {
@@ -25,8 +23,6 @@ export default function NewsletterSignup({ variant = "card", source = "footer" }
       setMessage(data.message);
       setEmail("");
       setName("");
-      // Unlock newsletter achievement
-      unlockAchievement('newsletter_joined');
     },
     onError: (error) => {
       setMessage(error.message || "Something went wrong. Please try again.");

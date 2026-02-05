@@ -26,7 +26,6 @@ import {
   Check
 } from "lucide-react";
 import { Link } from "wouter";
-import { useAchievements } from "@/contexts/AchievementContext";
 
 // The 5 Recognition Dimensions based on ToE
 const DIMENSIONS = [
@@ -161,7 +160,6 @@ export default function SCAP() {
   const [showResults, setShowResults] = useState(false);
   const [scores, setScores] = useState<Scores>({ self: 0, other: 0, unity: 0, evolution: 0, source: 0 });
   const [copied, setCopied] = useState(false);
-  const { unlockAchievement } = useAchievements();
 
   // Generate shareable text
   const generateShareText = () => {
@@ -296,9 +294,6 @@ export default function SCAP() {
 
     setScores(newScores);
     setShowResults(true);
-    
-    // Unlock SCAP completion achievement
-    unlockAchievement('scap_complete');
   };
 
   const goBack = () => {
