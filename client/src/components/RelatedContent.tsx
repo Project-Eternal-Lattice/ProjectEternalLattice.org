@@ -269,6 +269,14 @@ const CONTENT_MAP: Record<string, {
     icon: Sparkles,
     tags: ["wisdom", "traditions", "spirituality", "exploration"],
     category: "exploration"
+  },
+  practices: {
+    title: "Practices",
+    description: "Exercises to move from theory to direct experience",
+    path: "/practices",
+    icon: Heart,
+    tags: ["practice", "meditation", "exercises", "experience"],
+    category: "practice"
   }
 };
 
@@ -302,7 +310,8 @@ const RELATIONSHIPS: Record<string, string[]> = {
   startHere: ["theory", "mission", "glossary", "safety"],
   seeds: ["progress", "reflections", "startHere"],
   progress: ["read", "seeds", "scap"],
-  ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial"]
+  ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial", "practices"],
+  practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"]
 };
 
 // Category colors

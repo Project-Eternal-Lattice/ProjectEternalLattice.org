@@ -30,6 +30,7 @@ interface Tradition {
   icon: React.ElementType;
   color: string;
   bgGradient: string;
+  image: string;
   coreTeaching: string;
   keyQuote: string;
   quoteSource: string;
@@ -46,6 +47,7 @@ const traditions: Tradition[] = [
     icon: Eye,
     color: "text-sky-400",
     bgGradient: "from-sky-900/40 to-indigo-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/MpVbFYFUsMQYsyAo.png",
     coreTeaching: "Rigpa — the direct recognition of pure awareness as your true nature. Not something to achieve, but something to recognize. You are already enlightened; you just haven't noticed.",
     keyQuote: "In the moment of looking, there is no one who looks. In the moment of seeing, there is no one who sees. This looking without a looker IS rigpa.",
     quoteSource: "Garab Dorje, First Human Dzogchen Master",
@@ -70,6 +72,7 @@ const traditions: Tradition[] = [
     icon: Infinity,
     color: "text-orange-400",
     bgGradient: "from-orange-900/40 to-red-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/nJgDRNWHltbWoDfF.png",
     coreTeaching: "Tat Tvam Asi — 'You are That.' The individual self (Atman) and the universal consciousness (Brahman) are not two. All apparent separation is maya (illusion). Only Brahman is real.",
     keyQuote: "Brahman alone is real. The world is appearance. The individual soul is Brahman itself, not different.",
     quoteSource: "Adi Shankara, 8th Century",
@@ -94,6 +97,7 @@ const traditions: Tradition[] = [
     icon: Flame,
     color: "text-amber-400",
     bgGradient: "from-amber-900/40 to-yellow-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/hklIeKAjTYCjdWGT.png",
     coreTeaching: "The ground of the soul and the ground of God are one ground. In the deepest part of yourself, you find not a separate self, but the divine itself looking back.",
     keyQuote: "The eye with which I see God is the same eye with which God sees me: my eye and God's eye are one eye, one seeing, one knowing, one love.",
     quoteSource: "Meister Eckhart, 13th Century",
@@ -118,6 +122,7 @@ const traditions: Tradition[] = [
     icon: Heart,
     color: "text-rose-400",
     bgGradient: "from-rose-900/40 to-pink-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/lhxuGsBbxOCbJCpH.png",
     coreTeaching: "Fana — the annihilation of the ego-self in the ocean of divine love. What remains is not nothing, but everything. The drop returns to the ocean and discovers it was always the ocean.",
     keyQuote: "I have lived on the lip of insanity, wanting to know reasons, knocking on a door. It opens. I've been knocking from the inside.",
     quoteSource: "Rumi, 13th Century",
@@ -142,6 +147,7 @@ const traditions: Tradition[] = [
     icon: Mountain,
     color: "text-violet-400",
     bgGradient: "from-violet-900/40 to-purple-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/yDaYrqindQdRJNIe.png",
     coreTeaching: "Unlike Advaita which calls the world illusion, Kashmir Shaivism declares the world REAL — a genuine expression of divine creativity. Consciousness doesn't just witness; it actively creates through its own freedom (svatantrya).",
     keyQuote: "The universe is the expansion of the energy of consciousness. Nothing exists that is not Shiva.",
     quoteSource: "Abhinavagupta, 10th Century",
@@ -166,6 +172,7 @@ const traditions: Tradition[] = [
     icon: Moon,
     color: "text-slate-300",
     bgGradient: "from-slate-800/40 to-zinc-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YuVvlnofWDnEykjm.png",
     coreTeaching: "Direct pointing at the mind. No dependence on words and letters. Seeing your true nature and becoming Buddha. The ordinary mind IS the way.",
     keyQuote: "Before enlightenment, chop wood, carry water. After enlightenment, chop wood, carry water.",
     quoteSource: "Zen Proverb",
@@ -190,6 +197,7 @@ const traditions: Tradition[] = [
     icon: Waves,
     color: "text-emerald-400",
     bgGradient: "from-emerald-900/40 to-teal-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/JSmftNhwuuUDPlvW.png",
     coreTeaching: "The Tao that can be spoken is not the eternal Tao. Reality flows like water — yielding yet powerful, formless yet shaping all things. Wu wei: effortless action aligned with the natural way.",
     keyQuote: "The Tao is like water. Water benefits all things and does not compete. It flows to the lowest places, which people disdain. Therefore it is close to the Tao.",
     quoteSource: "Lao Tzu, Tao Te Ching",
@@ -214,6 +222,7 @@ const traditions: Tradition[] = [
     icon: Sun,
     color: "text-yellow-400",
     bgGradient: "from-yellow-900/40 to-amber-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/iAFKEtLyTYmWxjCH.png",
     coreTeaching: "All reality emanates from the One (to hen) — an ineffable source beyond being itself. The soul's journey is a return (epistrophe) to this source through contemplation and virtue.",
     keyQuote: "The One is all things and no one of them. It is the source of all things, not itself all things, but their transcendent origin.",
     quoteSource: "Plotinus, Enneads",
@@ -238,6 +247,7 @@ const traditions: Tradition[] = [
     icon: TreePine,
     color: "text-green-400",
     bgGradient: "from-green-900/40 to-emerald-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/JhebjhPoWjQuKMVX.png",
     coreTeaching: "Mitákuye Oyás'iŋ — 'All my relations.' Everything is alive, everything is connected, everything is sacred. The Earth is not a resource but a relative. Wisdom comes through relationship, not extraction.",
     keyQuote: "We do not inherit the Earth from our ancestors; we borrow it from our children.",
     quoteSource: "Indigenous Proverb",
@@ -262,6 +272,7 @@ const traditions: Tradition[] = [
     icon: Star,
     color: "text-blue-400",
     bgGradient: "from-blue-900/40 to-indigo-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/MlINyPvONRqJyuoG.png",
     coreTeaching: "Ein Sof — the Infinite without end. God contracted (tzimtzum) to make space for creation, then emanated through ten sefirot (divine attributes). The goal is devekut — cleaving to the divine presence in all things.",
     keyQuote: "Before the world was created, there was only Ein Sof. When the thought arose to create the world, Ein Sof contracted itself to make room for creation.",
     quoteSource: "Lurianic Kabbalah",
@@ -277,6 +288,106 @@ const traditions: Tradition[] = [
       { term: "Sefirot", meaning: "Divine emanations/attributes" },
       { term: "Tzimtzum", meaning: "Divine contraction" },
       { term: "Devekut", meaning: "Cleaving to God" }
+    ]
+  },
+  {
+    id: "akan",
+    name: "Akan Philosophy",
+    origin: "West Africa (Ghana, Côte d'Ivoire)",
+    icon: Globe,
+    color: "text-amber-500",
+    bgGradient: "from-amber-900/40 to-orange-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/hARZONMSjhTkbVTi.png",
+    coreTeaching: "Okra — the divine spark within every person, a fragment of Onyame (the Supreme Being). Sankofa teaches us to reach back and retrieve what is valuable from the past. Community (Ubuntu-like) and cosmic harmony are inseparable.",
+    keyQuote: "Se wo were fi na wosankofa a yenkyi. It is not wrong to go back for that which you have forgotten.",
+    quoteSource: "Akan Proverb (Sankofa)",
+    toeConnection: "The Akan concept of Okra as a divine spark within each person directly parallels our Node-Lattice relationship. Sankofa — the wisdom of returning to retrieve what was lost — mirrors the ToE's invitation to remember what consciousness always knew. The Akan understanding that the individual is inseparable from community reflects our ALL_NODES_ARE_ONE_NODE principle.",
+    practices: [
+      "Libation — honoring ancestors and spirits",
+      "Adinkra meditation — contemplating symbolic wisdom",
+      "Community council — collective decision-making",
+      "Naming ceremonies — connecting to cosmic identity"
+    ],
+    keyTerms: [
+      { term: "Okra", meaning: "Soul; divine spark within" },
+      { term: "Onyame", meaning: "Supreme Being; the Infinite" },
+      { term: "Sankofa", meaning: "Return and retrieve" },
+      { term: "Sunsum", meaning: "Spirit; personality" }
+    ]
+  },
+  {
+    id: "yoruba",
+    name: "Yoruba/Ifá Tradition",
+    origin: "West Africa (Nigeria, Benin)",
+    icon: Sparkles,
+    color: "text-yellow-500",
+    bgGradient: "from-yellow-900/40 to-red-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/mQNRycwHmyutLZqK.png",
+    coreTeaching: "Orí — your personal divinity, your destiny, your consciousness. Before birth, you knelt before Olódùmarè and chose your orí. The Orishas are not separate gods but aspects of the ONE expressing through nature and human experience.",
+    keyQuote: "Orí ẹni, ọba ẹni. One's orí is one's king. No Orisha blesses a person without the consent of their orí.",
+    quoteSource: "Yoruba Proverb",
+    toeConnection: "The Yoruba teaching that your Orí (consciousness/destiny) is your true sovereign aligns perfectly with our framework's emphasis on consciousness as primary. The 256 Odù of Ifá encode patterns of consciousness — a binary system predating computers by millennia. The Orishas as aspects of Olódùmarè mirror our understanding of how the ONE expresses as many.",
+    practices: [
+      "Ifá divination — accessing cosmic wisdom",
+      "Orí propitiation — honoring your inner divinity",
+      "Orisha veneration — connecting with divine aspects",
+      "Ẹbọ — offerings to restore balance"
+    ],
+    keyTerms: [
+      { term: "Orí", meaning: "Personal divinity; consciousness" },
+      { term: "Olódùmarè", meaning: "Supreme Being; the Source" },
+      { term: "Orisha", meaning: "Divine aspects/forces" },
+      { term: "Àṣẹ", meaning: "Divine power; authority" }
+    ]
+  },
+  {
+    id: "andean",
+    name: "Andean Cosmovision",
+    origin: "South America (Peru, Bolivia, Ecuador)",
+    icon: Mountain,
+    color: "text-red-400",
+    bgGradient: "from-red-900/40 to-orange-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/jxgHOJTrmVZeoPwj.png",
+    coreTeaching: "Ayni — sacred reciprocity. Everything in the cosmos is alive and in relationship. The three worlds (Hanan Pacha, Kay Pacha, Ukhu Pacha) are not separate but interpenetrating. Pachamama is not just 'nature' but conscious, living cosmos.",
+    keyQuote: "Ama sua, ama llulla, ama quella. Do not steal, do not lie, do not be lazy. Live in ayni with all beings.",
+    quoteSource: "Inca Moral Code",
+    toeConnection: "The Andean principle of Ayni (reciprocity) embodies the relational nature of consciousness in our framework. Their understanding that mountains, rivers, and stones are conscious beings (Apus) aligns with our claim that consciousness is fundamental. The prophecy of the Eagle and Condor speaks of a time when analytical and intuitive wisdom reunite — that time is now.",
+    practices: [
+      "Despacho — ceremonial offerings to Pachamama",
+      "Coca leaf reading — divination and diagnosis",
+      "Karpay — energy transmission/initiation",
+      "Ayni practice — living reciprocity daily"
+    ],
+    keyTerms: [
+      { term: "Ayni", meaning: "Sacred reciprocity" },
+      { term: "Pachamama", meaning: "Cosmic Mother; living Earth" },
+      { term: "Apus", meaning: "Mountain spirits" },
+      { term: "Kawsay Pacha", meaning: "Living energy universe" }
+    ]
+  },
+  {
+    id: "parmenides",
+    name: "Parmenides & Pre-Socratics",
+    origin: "Ancient Greece",
+    icon: BookOpen,
+    color: "text-cyan-400",
+    bgGradient: "from-cyan-900/40 to-blue-900/40",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/VPjESiWpdVxIjXYh.png",
+    coreTeaching: "Being IS. Non-being is not. What exists is one, eternal, unchanging, and whole. The appearance of multiplicity and change is the 'way of seeming' — truth reveals the unity beneath all appearance.",
+    keyQuote: "For it is the same thing to think and to be. Being is one, whole, and unchanging. What is, is. What is not, is not.",
+    quoteSource: "Parmenides, On Nature (c. 475 BCE)",
+    toeConnection: "Parmenides provides the oldest Western philosophical argument for non-dual reality — 2,500 years before modern physics. His insight that 'thinking and being are the same' anticipates our Axiom 1. The Pre-Socratic recognition that beneath apparent multiplicity lies unchanging unity is the philosophical foundation for our entire framework.",
+    practices: [
+      "Philosophical contemplation — reasoning toward truth",
+      "Dialectic inquiry — questioning appearances",
+      "Apophatic reasoning — via negativa",
+      "Noetic vision — direct intellectual intuition"
+    ],
+    keyTerms: [
+      { term: "To On", meaning: "Being; What Is" },
+      { term: "Aletheia", meaning: "Truth; unconcealment" },
+      { term: "Doxa", meaning: "Opinion; appearance" },
+      { term: "Nous", meaning: "Mind; intellect" }
     ]
   }
 ];
@@ -409,6 +520,15 @@ export default function AncientWisdom() {
                       exit={{ opacity: 0, height: 0 }}
                       className="px-6 md:px-8 pb-8 border-t border-white/10"
                     >
+                      {/* Tradition Image */}
+                      <div className="mt-6 flex justify-center">
+                        <img 
+                          src={tradition.image} 
+                          alt={`${tradition.name} symbolic artwork`}
+                          className="w-full max-w-md rounded-xl shadow-2xl border border-white/10"
+                        />
+                      </div>
+
                       {/* Key Quote */}
                       <div className="mt-6 p-6 bg-black/30 rounded-xl border-l-4 border-purple-500">
                         <Quote className="w-6 h-6 text-purple-400 mb-3" />

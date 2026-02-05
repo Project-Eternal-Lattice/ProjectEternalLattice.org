@@ -1584,3 +1584,5 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add Ancient Wisdom to homepage Choose Your Path section (updated link to /ancient-wisdom)
 - [x] Cross-link from ToE Chapter 8.15 to website Ancient Wisdom page
 - [x] Update CDN URLs and download endpoint for toe-full.html with cross-link
+- [x] Create Practices page with 8 exercises from wisdom traditions
+- [x] Add Practices to navigation and RelatedContent
