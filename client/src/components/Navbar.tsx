@@ -57,6 +57,7 @@ export default function Navbar() {
     { name: "Theory", path: "/theory" },
     { name: "Read", path: "/read" },
     { name: "Sacred Geometry", path: "/sacred-geometry" },
+    { name: "Ancient Wisdom", path: "/ancient-wisdom" },
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
     { name: "Ra Material", path: "/ra-material" },

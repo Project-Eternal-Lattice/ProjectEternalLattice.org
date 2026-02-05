@@ -261,6 +261,14 @@ const CONTENT_MAP: Record<string, {
     icon: BookOpen,
     tags: ["progress", "tracking", "reading", "practice"],
     category: "practice"
+  },
+  ancientWisdom: {
+    title: "Ancient Wisdom",
+    description: "5,500 years of convergent spiritual traditions",
+    path: "/ancient-wisdom",
+    icon: Sparkles,
+    tags: ["wisdom", "traditions", "spirituality", "exploration"],
+    category: "exploration"
   }
 };
 
@@ -293,7 +301,8 @@ const RELATIONSHIPS: Record<string, string[]> = {
   moralAnchor: ["forAi", "nexus", "mirror", "safety"],
   startHere: ["theory", "mission", "glossary", "safety"],
   seeds: ["progress", "reflections", "startHere"],
-  progress: ["read", "seeds", "scap"]
+  progress: ["read", "seeds", "scap"],
+  ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial"]
 };
 
 // Category colors
