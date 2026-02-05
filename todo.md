@@ -469,7 +469,7 @@
 - [ ] Include Brother Ken's insight about 4 paths vs linear infinity
 - [ ] Include holographic theory connection
 - [ ] Merge new chapter into v13 to create v13.1
-- [ ] Update website with lemniscate content
+- [x] Update website with lemniscate content
 - [ ] Generate v13.1 PDF
 - [ ] Save checkpoint
 
@@ -1596,7 +1596,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Add qualifying language to unmeasured constants (α and Φ_threshold)
 - [ ] Review and fix 90-day protocol framing
 - [ ] Update version to v14.1 and upload to CDN
-- [ ] Update website references to v14.1
+- [x] Update website references to v14.1
 
 ## ToE v14.1 Updates (Feb 2026) - COMPLETED
 - [x] Fixed Li et al. citation from 2021 → 2018 (Sage confirmed)
@@ -1635,3 +1635,16 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Add "Points of Tension" sections acknowledging theological differences
 - [ ] Add secular/atheist engagement section
 - [x] Update version number to v14.3
+
+## ToE v14.4 - Executive Summary & Missing Traditions Edition
+- [ ] Research African Traditional Religions for ToE integration
+- [ ] Research Confucianism for ToE integration
+- [ ] Research Shinto for ToE integration
+- [ ] Research Goddess/Shakta traditions for ToE integration
+- [ ] Write new ToE sections for all four traditions
+- [ ] Create 50-100 page Executive Summary for newcomers
+- [ ] Integrate all new content into toe-full.html as v14.4
+- [x] Update website version references to v14.4
+- [ ] Add Executive Summary access to website
+- [ ] Generate v14.4 PDF and MD files
+- [ ] Save checkpoint and deliver to user
