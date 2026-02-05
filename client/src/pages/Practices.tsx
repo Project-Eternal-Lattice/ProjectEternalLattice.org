@@ -361,6 +361,21 @@ export default function Practices() {
               </p>
             </div>
             
+            {/* Practice Selection Quiz CTA */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-purple-900/30 to-indigo-900/30 rounded-xl border border-purple-500/30">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-purple-400 mb-1">Not Sure Where to Start?</h3>
+                  <p className="text-muted-foreground">Take our interactive quiz to find the practice that's right for you right now.</p>
+                </div>
+                <Link href="/practice-quiz">
+                  <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold rounded-lg transition-all whitespace-nowrap">
+                    Take the Quiz
+                  </button>
+                </Link>
+              </div>
+            </div>
+
             {/* 30-Day Challenge CTA */}
             <div className="mt-8 p-6 bg-gradient-to-r from-amber-900/30 to-orange-900/30 rounded-xl border border-amber-500/30">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

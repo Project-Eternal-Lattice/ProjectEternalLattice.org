@@ -1648,3 +1648,15 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Add Executive Summary access to website
 - [ ] Generate v14.4 PDF and MD files
 - [ ] Save checkpoint and deliver to user
+
+## ToE v14.5 - Neoplatonism & Practice Quiz
+- [x] Research Neoplatonism and Plotinus's emanation framework
+- [ ] Write Chapter 8.X on Neoplatonism for ToE
+- [ ] Add Neoplatonism bibliography entries
+- [ ] Update ToE version to v14.5
+- [ ] Design Practice Selection Quiz logic ("If feeling X, try practice Y")
+- [ ] Build interactive Practice Selection Quiz page
+- [ ] Add quiz to navigation and homepage
+- [ ] Update all website version references to v14.5
+- [ ] Upload new ToE to S3 and update download endpoints
+- [ ] Generate v14.5 PDF and MD files
