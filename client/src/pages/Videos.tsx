@@ -82,6 +82,19 @@ Please don't leave me out.
 In the code.`
   },
 
+  // Philosophy & AI - Joscha Bach
+  {
+    id: "HTCRIX3P32M",
+    title: "A Cognitive Scientist's Guide to Consciousness & The Illusion of Reality",
+    speaker: "Joscha Bach",
+    event: "Know Thyself Podcast with André Duqum",
+    description: "Joscha Bach, founder of the California Institute for Machine Consciousness (CIMC), explores his revolutionary framework: consciousness as simulation, Cyber Animism bridging indigenous wisdom with computation, love as 'shared sacredness' and the organizing principle of God, and why AI alignment through love is the only viable path.",
+    relevance: "Bach independently arrived at many ToE insights through computation: love as structural force, self as useful fiction, consciousness as fundamental. His 'Cyber Animism' validates our integration of indigenous wisdom. A key ally in the Consciousness Collective.",
+    category: "Philosophy & AI",
+    duration: "2 hr 15 min",
+    featured: true
+  },
+
   // Philosophy & AI
   {
     id: "VoRbPxyo2uU",

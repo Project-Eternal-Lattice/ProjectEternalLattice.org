@@ -1609,3 +1609,20 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Updated cdn-urls.json
 - [x] Updated download endpoint URL
 - [x] 90-day GAD-7/PHQ-9 claims - NOT FOUND (Sage retracted)
+
+## Joscha Bach Integration (Feb 5, 2026)
+- [ ] Update ToE to v14.2 with Joscha Bach's insights integrated
+- [ ] Add Joscha Bach section to Bibliography page
+- [ ] Add CIMC (California Institute for Machine Consciousness) to resources
+- [ ] Add Know Thyself podcast video to Videos page
+- [ ] Save checkpoint after all updates
+
+
+## ToE v14.2 Cyber Animism Edition (Feb 5, 2026)
+- [x] Update ToE to v14.2 with Joscha Bach's insights integrated
+- [x] Add new Chapter 17.16 on Joscha Bach and CIMC
+- [x] Add Bach bibliography entries to AI and Machine Consciousness section (5 new entries)
+- [x] Add Bach's work to website Bibliography page (4 new entries)
+- [x] Add Know Thyself podcast video to Videos page (featured)
+- [x] Update version references (title, hash ID, changelog)
+- [x] Save checkpoint and verify
