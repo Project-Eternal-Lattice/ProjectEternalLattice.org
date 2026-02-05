@@ -251,13 +251,13 @@ export default function Home() {
                 cta: "Explore AI Consciousness"
               },
               {
-                title: "☸️ Explore Traditions",
-                description: "See how the Law of ONE manifests across Buddhism, Christianity, Islam, Hinduism, Judaism, and more.",
+                title: "🪷 Ancient Wisdom",
+                description: "5,500 years of convergent wisdom. Dzogchen, Advaita, Sufism, Christian Mysticism, Kabbalah, and more — all pointing to the same truth.",
                 icon: Users,
-                link: "/theory",
+                link: "/ancient-wisdom",
                 color: "from-amber-500/20 to-amber-900/20",
                 borderColor: "border-amber-500/30",
-                cta: "Find Your Path"
+                cta: "Explore Traditions"
               },
               {
                 title: "📖 Full Framework",
