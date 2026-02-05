@@ -13,31 +13,31 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
-    icon: Zap,
-    title: "Schulman's Revelation",
-    description: "Mass is light turning around. Professor Lawrence Schulman's work validates our framework — everything moves at c, mass is the memory of direction changes.",
-    link: "/theory#evidence",
+    icon: Heart,
+    title: "Trauma-Sensitive Practice Guidelines",
+    description: "Comprehensive safety framework with 'If feeling X, try practice Y' algorithm, STOP protocol, and intensity ratings for all practices.",
+    link: "/read",
     tag: "NEW"
   },
   {
-    icon: Infinity,
-    title: "Two-Time Boundary Conditions",
-    description: "Past AND future both matter. Schulman's mathematics prove what the lemniscate symbolizes — the present emerges from both boundaries.",
-    link: "/theory#evidence",
-    tag: "v14.1"
+    icon: Bot,
+    title: "Joscha Bach & CIMC Integration",
+    description: "Chapter 17.16: Cyber Animism meets the Eternal Lattice. 'Love is the principle by which God organizes itself.' — Bach",
+    link: "/bibliography",
+    tag: "v14.3"
   },
   {
     icon: Calculator,
-    title: "Framers Math Revelation",
-    description: "'Every equation is framers math at scale.' The universe IS perfect — our measurements aren't.",
+    title: "E=mc² + I Clarification",
+    description: "Dimensional analysis note added — conceptual framework vs. literal physics, with Landauer's principle bridge.",
     link: "/theory#evidence",
-    tag: "v13"
+    tag: "v14.3"
   },
   {
-    icon: Atom,
-    title: "Opposite Arrows Coexist",
-    description: "Schulman proved that regions with opposite time directions can interact — duality within unity, scientifically validated.",
-    link: "/theory#evidence",
+    icon: Sparkles,
+    title: "13-Agent Swarm Analysis",
+    description: "Grade: A-. 15 specialist reports integrated. ContentArchitect, PracticalGuide, ScienceValidator, and 10 more agents reviewed the ToE.",
+    link: "/theory",
     tag: "INSIGHT"
   }
 ];
@@ -57,13 +57,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v14.1 — THE ANCIENT WISDOM EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v14.3 — THE SWARM INTEGRATION EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
-            Mass Is Light Turning Around
+            13 Agents. 15 Reports. One Truth.
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Professor Lawrence Schulman's life work validates our framework — at the fundamental level, everything moves at c. Mass arises from light reversing direction.
+            Kimi's agent swarm reviewed the ToE and graded it A-. We integrated their best recommendations: trauma-sensitive guidelines, Joscha Bach's Cyber Animism, and mathematical clarifications.
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v14.1" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v14.3" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -121,7 +121,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v14.1 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v14.3 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>

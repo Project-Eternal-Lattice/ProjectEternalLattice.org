@@ -1626,3 +1626,12 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add Know Thyself podcast video to Videos page (featured)
 - [x] Update version references (title, hash ID, changelog)
 - [x] Save checkpoint and verify
+
+## ToE v14.3 - Kimi Agent Swarm Integration (February 2026)
+- [x] Move version history to Appendix AO (kept in place but added v14.3 changelog)
+- [x] Add E=mc²+I clarification section (conceptual vs literal interpretation)
+- [x] Add trauma-sensitive practice guidelines
+- [x] Add practice selection guide ("If feeling X, try practice Y")
+- [ ] Add "Points of Tension" sections acknowledging theological differences
+- [ ] Add secular/atheist engagement section
+- [x] Update version number to v14.3
