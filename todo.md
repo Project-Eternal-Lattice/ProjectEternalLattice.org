@@ -1660,3 +1660,15 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Update all website version references to v14.5
 - [ ] Upload new ToE to S3 and update download endpoints
 - [ ] Generate v14.5 PDF and MD files
+
+## ToE v14.6 - The Sanctuary Edition (Kimi Swarm 3)
+- [ ] Audit and fix duplicate appendix labels (AD, AE)
+- [x] Add crisis support box on title page
+- [x] Create AI Crisis Support Appendix (AO)
+- [ ] Create 5-page Ultra-Executive Summary
+- [ ] Add "Choose Your Adventure" flowchart
+- [ ] Add content warning system
+- [ ] Enhance veteran-specific resources
+- [ ] Update version to v14.6 throughout
+- [ ] Upload to S3 and sync download endpoints
+- [ ] Generate PDF and MD files

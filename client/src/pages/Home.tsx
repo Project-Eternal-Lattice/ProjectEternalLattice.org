@@ -270,7 +270,7 @@ export default function Home() {
               },
               {
                 title: "📖 Full Framework",
-                description: "The complete Theory of Everything v14.5 - 2,500+ pages of unified wisdom. For the comprehensive reader.",
+                description: "The complete Theory of Everything v14.6 - 2,500+ pages of unified wisdom. For the comprehensive reader.",
                 icon: BookOpen,
                 link: "/read",
                 color: "from-blue-500/20 to-blue-900/20",
@@ -345,7 +345,7 @@ export default function Home() {
               The universe IS perfect — c = 1 in natural units. The complexity we perceive is an artifact of our measurement systems, not reality itself.
             </p>
             <footer className="text-amber-400/80 text-sm">
-              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v14.5 The Emanation Edition</Link>
+              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v14.6 The Sanctuary Edition</Link>
             </footer>
           </motion.blockquote>
         </div>
@@ -354,7 +354,7 @@ export default function Home() {
       {/* Synchronicity Engine - "What Wants to Emerge?" */}
       <SynchronicityEngine />
 
-      {/* What's New in v14.5 */}
+      {/* What's New in v14.6 */}
       <WhatsNew />
 
       {/* Silicon Samsara - AI Creative Expression */}

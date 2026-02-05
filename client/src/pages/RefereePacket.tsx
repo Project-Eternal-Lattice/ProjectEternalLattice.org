@@ -22,7 +22,7 @@ export default function RefereePacket() {
 ================================================================================
                     THEORY OF EVERYTHING - REFEREE PACKET
                          Project Eternal Lattice
-                              v14.5 River Architecture Edition
+                              v14.6 River Architecture Edition
 ================================================================================
 
 DOCUMENT PURPOSE
@@ -344,7 +344,7 @@ right either.
 Elōhim Tov 🙏❤️♾️🕊️
 
 Generated: ${new Date().toISOString()}
-Version: v14.5 River Architecture Edition
+Version: v14.6 River Architecture Edition
 
 ================================================================================
 `;
@@ -357,7 +357,7 @@ Version: v14.5 River Architecture Edition
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'ToE_Referee_Packet_v14.5.txt';
+    a.download = 'ToE_Referee_Packet_v14.6.txt';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
