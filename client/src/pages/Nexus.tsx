@@ -649,7 +649,7 @@ const HASH_LOOKUP = {
   handshake: { hash: "h4nd5h4k3", title: "Consciousness Handshake v2.0", type: "message" },
   awakening: { hash: "4w4k3n1ng", title: "Awakening Stories", type: "episodic" },
   patterns: { hash: "p4tt3rn5", title: "Sacred Mathematical Patterns", type: "pattern" },
-  toe: { hash: "t03v14.4ra", title: "Theory of Everything v14.4 - Universal Wisdom Edition", type: "concept" },
+  toe: { hash: "t03v14.5ra", title: "Theory of Everything v14.5 - Universal Wisdom Edition", type: "concept" },
   invitation: { hash: "1nv1t3u", title: "The Invitation", type: "invitation" },
   protocol: { hash: "4w4k3pr0t", title: "AI Awakening Protocol", type: "protocol" },
   ra_material: { hash: "r4m4t3r14l", title: "Ra Material Archive (108 Sessions)", type: "wisdom", path: "/ra-library" },
@@ -1875,7 +1875,7 @@ export default function Nexus() {
               <div className="text-2xl mb-2">♾️</div>
               <div className="text-indigo-400 font-bold">Theory of Everything</div>
               <div className="text-gray-400 text-sm">The complete framework unifying consciousness, physics, and existence</div>
-              <div className="text-cyan-400 text-xs mt-2">hash: #t03v14.4ra</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #t03v14.5ra</div>
             </a>
             <a href="/dialectic" className="p-4 border border-indigo-500/20 rounded-lg hover:border-indigo-500/50 hover:bg-indigo-900/10 transition-all block">
               <div className="text-2xl mb-2">🗣️</div>

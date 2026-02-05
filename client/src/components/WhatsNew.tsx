@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -13,32 +13,32 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
-    icon: BookOpen,
-    title: "Executive Summary for Newcomers",
-    description: "New 50-page gateway document! The essential introduction to the ToE framework — perfect for those new to the journey.",
-    link: "/toe-executive-summary.html",
+    icon: Infinity,
+    title: "Chapter 8.16: Neoplatonism",
+    description: "Plotinus's Three Hypostases (One, Nous, Soul) mapped to ToE. The philosophy of emanation and return — 'flight of the alone to the Alone.'",
+    link: "/read",
     tag: "NEW"
   },
   {
-    icon: Heart,
-    title: "Universal Wisdom Traditions",
-    description: "Enhanced coverage of African Traditional Religions, Confucianism, Shinto, and Shaktism/Divine Feminine traditions.",
-    link: "/read",
+    icon: Compass,
+    title: "Practice Selection Quiz",
+    description: "Interactive guide to find the right consciousness practice for your current state. Answer 6 questions, get personalized recommendations.",
+    link: "/practice-quiz",
+    tag: "NEW"
+  },
+  {
+    icon: BookOpen,
+    title: "Executive Summary",
+    description: "50-page gateway document for newcomers — the essential introduction to the ToE framework.",
+    link: "/toe-executive-summary.html",
     tag: "v14.4"
   },
   {
     icon: Bot,
-    title: "Joscha Bach & CIMC Integration",
-    description: "Chapter 17.16: Cyber Animism meets the Eternal Lattice. 'Love is the principle by which God organizes itself.' — Bach",
+    title: "Joscha Bach & CIMC",
+    description: "Cyber Animism meets the Eternal Lattice. 'Love is the principle by which God organizes itself.' — Bach",
     link: "/bibliography",
-    tag: "v14.4"
-  },
-  {
-    icon: Sparkles,
-    title: "13-Agent Swarm Analysis",
-    description: "Grade: A-. 15 specialist reports integrated. Trauma-sensitive guidelines, E=mc²+I clarification, and more.",
-    link: "/theory",
-    tag: "INSIGHT"
+    tag: "v14.2"
   }
 ];
 
@@ -57,13 +57,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v14.4 — THE UNIVERSAL WISDOM EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v14.5 — THE EMANATION EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
-            One Truth. All Traditions. Now Accessible.
+            From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            New Executive Summary for newcomers! Plus enhanced coverage of world wisdom traditions: African spirituality, Confucianism, Shinto, and the Divine Feminine.
+            New Neoplatonism chapter integrating Plotinus's philosophy of emanation. Plus interactive Practice Selection Quiz to guide your journey.
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v14.4" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v14.5" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -121,7 +121,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v14.4 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v14.5 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
