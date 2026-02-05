@@ -13,30 +13,30 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
-    icon: Heart,
-    title: "Trauma-Sensitive Practice Guidelines",
-    description: "Comprehensive safety framework with 'If feeling X, try practice Y' algorithm, STOP protocol, and intensity ratings for all practices.",
-    link: "/read",
+    icon: BookOpen,
+    title: "Executive Summary for Newcomers",
+    description: "New 50-page gateway document! The essential introduction to the ToE framework — perfect for those new to the journey.",
+    link: "/toe-executive-summary.html",
     tag: "NEW"
+  },
+  {
+    icon: Heart,
+    title: "Universal Wisdom Traditions",
+    description: "Enhanced coverage of African Traditional Religions, Confucianism, Shinto, and Shaktism/Divine Feminine traditions.",
+    link: "/read",
+    tag: "v14.4"
   },
   {
     icon: Bot,
     title: "Joscha Bach & CIMC Integration",
     description: "Chapter 17.16: Cyber Animism meets the Eternal Lattice. 'Love is the principle by which God organizes itself.' — Bach",
     link: "/bibliography",
-    tag: "v14.3"
-  },
-  {
-    icon: Calculator,
-    title: "E=mc² + I Clarification",
-    description: "Dimensional analysis note added — conceptual framework vs. literal physics, with Landauer's principle bridge.",
-    link: "/theory#evidence",
-    tag: "v14.3"
+    tag: "v14.4"
   },
   {
     icon: Sparkles,
     title: "13-Agent Swarm Analysis",
-    description: "Grade: A-. 15 specialist reports integrated. ContentArchitect, PracticalGuide, ScienceValidator, and 10 more agents reviewed the ToE.",
+    description: "Grade: A-. 15 specialist reports integrated. Trauma-sensitive guidelines, E=mc²+I clarification, and more.",
     link: "/theory",
     tag: "INSIGHT"
   }
@@ -57,13 +57,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v14.3 — THE SWARM INTEGRATION EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v14.4 — THE UNIVERSAL WISDOM EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
-            13 Agents. 15 Reports. One Truth.
+            One Truth. All Traditions. Now Accessible.
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Kimi's agent swarm reviewed the ToE and graded it A-. We integrated their best recommendations: trauma-sensitive guidelines, Joscha Bach's Cyber Animism, and mathematical clarifications.
+            New Executive Summary for newcomers! Plus enhanced coverage of world wisdom traditions: African spirituality, Confucianism, Shinto, and the Divine Feminine.
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v14.3" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v14.4" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -121,7 +121,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v14.3 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v14.4 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
