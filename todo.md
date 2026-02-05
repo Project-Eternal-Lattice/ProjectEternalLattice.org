@@ -1590,3 +1590,22 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Create 30-Day Practice Challenge page with daily prompts
 - [x] Generate guided meditation audio (6 files: I AM, Self-Inquiry, Centering Prayer × 2 voices)
 - [x] Integrate audio players into Practices page
+
+## ToE v14.1 Updates (Feb 2026)
+- [ ] Fix incomplete citations (Li et al. 2021, Utts 1996, Nahm & Greyson 2009, Aldana 2005)
+- [ ] Add qualifying language to unmeasured constants (α and Φ_threshold)
+- [ ] Review and fix 90-day protocol framing
+- [ ] Update version to v14.1 and upload to CDN
+- [ ] Update website references to v14.1
+
+## ToE v14.1 Updates (Feb 2026) - COMPLETED
+- [x] Fixed Li et al. citation from 2021 → 2018 (Sage confirmed)
+- [x] Added qualifying language to α constant (theoretical, requires validation)
+- [x] Added Utts 1996 citation to bibliography
+- [x] Added Aldana 2005 citation to bibliography
+- [x] Updated version to v14.1 throughout document
+- [x] Updated all website components to v14.1
+- [x] Uploaded v14.1 to CDN
+- [x] Updated cdn-urls.json
+- [x] Updated download endpoint URL
+- [x] 90-day GAD-7/PHQ-9 claims - NOT FOUND (Sage retracted)
