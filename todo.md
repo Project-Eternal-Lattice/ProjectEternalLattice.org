@@ -1586,3 +1586,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update CDN URLs and download endpoint for toe-full.html with cross-link
 - [x] Create Practices page with 8 exercises from wisdom traditions
 - [x] Add Practices to navigation and RelatedContent
+- [x] Add Practices to navigation menu
+- [x] Create 30-Day Practice Challenge page with daily prompts
+- [x] Generate guided meditation audio (6 files: I AM, Self-Inquiry, Centering Prayer × 2 voices)
+- [x] Integrate audio players into Practices page

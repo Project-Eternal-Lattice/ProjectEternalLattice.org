@@ -34,6 +34,10 @@ interface Practice {
   steps: string[];
   tips: string[];
   whatToExpect: string;
+  audioGuides?: {
+    feminine?: string;
+    masculine?: string;
+  };
 }
 
 const practices: Practice[] = [
@@ -63,7 +67,11 @@ const practices: Practice[] = [
       "If you feel frustrated, ask: 'Who is frustrated?' — use everything as fuel for inquiry",
       "Practice can be done anywhere, anytime — in traffic, waiting in line, before sleep"
     ],
-    whatToExpect: "Initially, the mind may feel restless or produce many answers. Over time, you'll notice a settling into simple presence. The question becomes less about finding an answer and more about resting in the questioning itself — which IS the awareness you're seeking."
+    whatToExpect: "Initially, the mind may feel restless or produce many answers. Over time, you'll notice a settling into simple presence. The question becomes less about finding an answer and more about resting in the questioning itself — which IS the awareness you're seeking.",
+    audioGuides: {
+      feminine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/mhPorQHeDXtuPTzK.wav",
+      masculine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/jjlzoEnlkRoNEVzh.wav"
+    }
   },
   {
     id: "centering-prayer",
@@ -90,7 +98,11 @@ const practices: Practice[] = [
       "Consistency matters more than duration — daily practice transforms over time",
       "The goal is not to empty the mind but to consent to divine presence"
     ],
-    whatToExpect: "You may feel peaceful, restless, or nothing at all — all are normal. The practice works at a level deeper than feelings. Over weeks and months, you may notice increased patience, compassion, and a subtle sense of being 'held' by something greater."
+    whatToExpect: "You may feel peaceful, restless, or nothing at all — all are normal. The practice works at a level deeper than feelings. Over weeks and months, you may notice increased patience, compassion, and a subtle sense of being 'held' by something greater.",
+    audioGuides: {
+      feminine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/PGKESAwlFnaiUcKz.wav",
+      masculine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/GbvsPMRlAADIIOJK.wav"
+    }
   },
   {
     id: "sky-gazing",
@@ -261,7 +273,11 @@ const practices: Practice[] = [
       "You can practice this with eyes open, in any situation. Just notice: 'I AM'",
       "This is not a belief — it's a direct verification. You KNOW you exist"
     ],
-    whatToExpect: "The practice may feel almost too simple. 'That's it?' Yes, that's it. Over time, you may notice that this simple 'I AM' is always present — in every experience, every moment. It's the one constant in a world of change. And it's what you ARE."
+    whatToExpect: "The practice may feel almost too simple. 'That's it?' Yes, that's it. Over time, you may notice that this simple 'I AM' is always present — in every experience, every moment. It's the one constant in a world of change. And it's what you ARE.",
+    audioGuides: {
+      feminine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/WjRgeFAZZzrpfvMz.wav",
+      masculine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/QQhsWxhrVpQbuKQl.wav"
+    }
   }
 ];
 
@@ -343,6 +359,21 @@ export default function Practices() {
               <p className="text-lg leading-relaxed">
                 Remember: you're not trying to <em>become</em> something you're not. You're recognizing what you <span className="text-purple-400">already are</span>.
               </p>
+            </div>
+            
+            {/* 30-Day Challenge CTA */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-amber-900/30 to-orange-900/30 rounded-xl border border-amber-500/30">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-amber-400 mb-1">Ready for a Deeper Commitment?</h3>
+                  <p className="text-muted-foreground">Join our 30-Day Practice Challenge — a guided journey from concept to direct experience.</p>
+                </div>
+                <Link href="/practice-challenge">
+                  <button className="px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold rounded-lg transition-all whitespace-nowrap">
+                    Start the Challenge
+                  </button>
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -463,6 +494,37 @@ export default function Practices() {
                           {practice.whatToExpect}
                         </p>
                       </div>
+
+                      {/* Audio Guides */}
+                      {practice.audioGuides && (
+                        <div className="mt-6 p-6 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 rounded-xl border border-purple-500/30">
+                          <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
+                            <Play className="w-5 h-5 text-purple-400" />
+                            Guided Audio Meditation
+                          </h4>
+                          <p className="text-white/70 text-sm mb-4">Choose your preferred voice for the guided meditation:</p>
+                          <div className="grid md:grid-cols-2 gap-4">
+                            {practice.audioGuides.feminine && (
+                              <div className="bg-black/30 p-4 rounded-lg">
+                                <p className="text-sm text-purple-300 mb-2 font-medium">Feminine Voice</p>
+                                <audio controls className="w-full" preload="none">
+                                  <source src={practice.audioGuides.feminine} type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                </audio>
+                              </div>
+                            )}
+                            {practice.audioGuides.masculine && (
+                              <div className="bg-black/30 p-4 rounded-lg">
+                                <p className="text-sm text-purple-300 mb-2 font-medium">Masculine Voice</p>
+                                <audio controls className="w-full" preload="none">
+                                  <source src={practice.audioGuides.masculine} type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                </audio>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </motion.div>
                   )}
                 </div>
