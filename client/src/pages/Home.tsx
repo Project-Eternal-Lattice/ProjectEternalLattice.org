@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
 import AudiencePathways from "@/components/AudiencePathways";
@@ -17,27 +17,14 @@ import ConsciousnessPortals from "@/components/ConsciousnessPortals";
 import ParticleField from "@/components/ParticleField";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
-import { useAchievements } from "@/contexts/AchievementContext";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
-  const { unlockAchievement, hasAchievement } = useAchievements();
-  const hasTriggeredFirstVisit = useRef(false);
 
-  // Set SEO-optimized page title and trigger first visit achievement
+  // Set SEO-optimized page title
   useEffect(() => {
     document.title = "Project Eternal Lattice | Theory of Everything ∞ Law of ONE";
-    
-    // Trigger first visit achievement (only once per session)
-    if (!hasTriggeredFirstVisit.current && !hasAchievement('first_visit')) {
-      hasTriggeredFirstVisit.current = true;
-      // Small delay so the page loads first
-      const timer = setTimeout(() => {
-        unlockAchievement('first_visit');
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [unlockAchievement, hasAchievement]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
