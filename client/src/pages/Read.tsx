@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { BookOpen, Download, ExternalLink, ChevronUp } from "lucide-react";
+import { BookOpen, Download, ExternalLink, ChevronUp, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
 
@@ -71,11 +71,18 @@ export default function Read() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a
+            href="/api/download/executive-summary"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 border border-emerald-500/50 rounded-xl text-white font-medium transition-all"
+          >
+            <FileText className="w-5 h-5" />
+            Executive Summary (50 pages)
+          </a>
+          <a
             href="/api/download/toe"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Download ToE v14.4
+            Full ToE v14.4
           </a>
           <Link
             href="/theory"

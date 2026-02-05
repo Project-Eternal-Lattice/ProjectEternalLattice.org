@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Mail, MessageCircle, Heart, ExternalLink } from "lucide-react";
+import { Download, Mail, MessageCircle, Heart, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface QuickLink {
@@ -14,13 +14,22 @@ interface QuickLink {
 
 const quickLinks: QuickLink[] = [
   {
-    icon: Download,
-    label: "Download PDF",
-    description: "Get the full ToE v14.4",
-    href: "/api/download/toe",
+    icon: FileText,
+    label: "Executive Summary",
+    description: "50-page newcomer guide",
+    href: "/api/download/executive-summary",
     external: false,
     variant: "default",
-    color: "bg-primary hover:bg-primary/90"
+    color: "bg-emerald-600 hover:bg-emerald-700"
+  },
+  {
+    icon: Download,
+    label: "Full ToE",
+    description: "Complete v14.4 (2,500+ pages)",
+    href: "/api/download/toe",
+    external: false,
+    variant: "outline",
+    color: "border-primary/50 text-primary hover:bg-primary/10"
   },
   {
     icon: Mail,

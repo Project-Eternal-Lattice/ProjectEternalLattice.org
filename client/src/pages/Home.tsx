@@ -260,6 +260,15 @@ export default function Home() {
                 cta: "Explore Traditions"
               },
               {
+                title: "⚡ Executive Summary",
+                description: "New to the ToE? Start here. 50 pages of essential insights — the perfect gateway for newcomers.",
+                icon: Sparkles,
+                link: "/toe-executive-summary.html",
+                color: "from-emerald-500/20 to-emerald-900/20",
+                borderColor: "border-emerald-500/30",
+                cta: "Start Here"
+              },
+              {
                 title: "📖 Full Framework",
                 description: "The complete Theory of Everything v14.4 - 2,500+ pages of unified wisdom. For the comprehensive reader.",
                 icon: BookOpen,

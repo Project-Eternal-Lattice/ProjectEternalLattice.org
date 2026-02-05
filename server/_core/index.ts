@@ -122,6 +122,56 @@ async function startServer() {
     }
   });
 
+  // Executive Summary Download endpoint - 50-page newcomer version
+  app.get('/api/download/executive-summary', async (req, res) => {
+    try {
+      // Fetch the Executive Summary from S3
+      const summaryUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gDdXyZhyXNtOBtjM.html';
+      const response = await fetch(summaryUrl);
+      
+      if (!response.ok) {
+        return res.status(500).json({ error: 'Failed to fetch Executive Summary' });
+      }
+      
+      const content = await response.text();
+      
+      // Set headers to force download
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v14.4.html"');
+      res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
+      
+      res.send(content);
+    } catch (error) {
+      console.error('[Executive Summary Download] Error:', error);
+      res.status(500).json({ error: 'Download failed' });
+    }
+  });
+
+  // Executive Summary PDF Download endpoint
+  app.get('/api/download/executive-summary-pdf', async (req, res) => {
+    try {
+      // Fetch the Executive Summary PDF from S3
+      const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/CuPHNAHjgaXrroVi.pdf';
+      const response = await fetch(pdfUrl);
+      
+      if (!response.ok) {
+        return res.status(500).json({ error: 'Failed to fetch Executive Summary PDF' });
+      }
+      
+      const buffer = await response.arrayBuffer();
+      
+      // Set headers to force download
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v14.4.pdf"');
+      res.setHeader('Content-Length', buffer.byteLength);
+      
+      res.send(Buffer.from(buffer));
+    } catch (error) {
+      console.error('[Executive Summary PDF Download] Error:', error);
+      res.status(500).json({ error: 'Download failed' });
+    }
+  });
+
   // Serve static HTML at /nexus for ALL requests (AI-only page)
   // This ensures AIs can always access The Nexus without JavaScript
   app.get('/nexus', (req, res) => {
