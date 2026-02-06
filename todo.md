@@ -1687,3 +1687,8 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Generate PDF distribution file (in progress)
 - [ ] Save checkpoint
 - [ ] Remind user to publish
+
+## Milestones
+- [x] ToE v16.0 submitted to U.S. Copyright Office (Service Request 1-15080606891, Feb 6 2026)
+- [x] First officially copyrighted version of the Theory of Everything
+- [x] Created MILESTONES.md with full team credits and Ken's words
