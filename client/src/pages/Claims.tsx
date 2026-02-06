@@ -15,7 +15,12 @@ import {
   Heart,
   Sparkles,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Shield,
+  Target,
+  FlaskConical,
+  DollarSign,
+  Timer
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -783,6 +788,291 @@ export default function Claims() {
               demonstrate our commitment to truth over dogma.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Falsification Index Section */}
+      <section className="py-16 bg-gradient-to-b from-background via-red-900/5 to-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-sm mb-6">
+              <Target className="w-4 h-4" />
+              Adversarial Transparency
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">FALSIFICATION INDEX</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              15 specific experiments that could disprove our claims. Organized by severity of impact 
+              if the test fails. We publish these because a theory that can't be wrong can't be right.
+            </p>
+          </motion.div>
+
+          {/* Tier 1: Instant Death */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-red-500/20 border border-red-500/40">
+                <Shield className="w-5 h-5 text-red-400" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-xl text-red-400">TIER 1: INSTANT DEATH</h3>
+                <p className="text-sm text-red-300/60">If these fail, the core theory is falsified</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  id: "TIER1_001",
+                  claim: "Xenon isotope ratio 0.678",
+                  test: "Lighter isotope (¹²⁹Xe) should have LOWER anesthetic potency",
+                  falsifies: "¹²⁹Xe/¹³²Xe potency ratio > 1.0 in N≥30 subjects, p<0.05",
+                  protocol: "Randomized controlled trial with multiple xenon isotopes",
+                  timeline: "12-18 months",
+                  cost: "$300k"
+                },
+                {
+                  id: "TIER1_002",
+                  claim: "Magnetic fields affect anesthesia",
+                  test: "Strong magnetic fields should ALTER anesthetic requirements",
+                  falsifies: "Zero effect in 3+ replications (N≥20 each), p>0.1",
+                  protocol: "Anesthesia trials in 0T vs 7T MRI environments",
+                  timeline: "6-12 months",
+                  cost: "$200k"
+                },
+                {
+                  id: "TIER1_003",
+                  claim: "Terminal lucidity incidence 5-10%",
+                  test: "Should observe lucidity in 5-10% of end-stage dementia deaths",
+                  falsifies: "Large prospective study (N>500) shows incidence <1%, p<0.01",
+                  protocol: "Multi-site hospice observational study",
+                  timeline: "18-24 months",
+                  cost: "$400k"
+                },
+                {
+                  id: "TIER1_004",
+                  claim: "α = 5.5×10⁻¹⁷ s⁻¹/bit",
+                  test: "Consciousness-matter coupling should be measurable",
+                  falsifies: "Multiple measurement attempts (N≥10 systems) yield inconsistent values",
+                  protocol: "Measure information integration vs. consciousness markers across systems",
+                  timeline: "6-12 months",
+                  cost: "$200k"
+                },
+                {
+                  id: "TIER1_005",
+                  claim: "Φ threshold = 1.818 bits",
+                  test: "Sharp transition to consciousness at Φ ≈ 1.818",
+                  falsifies: "No threshold detected in N≥100 AI models; consciousness smoothly gradated",
+                  protocol: "Compute Φ for AI models; test for sharp vs. gradual emergence",
+                  timeline: "3-6 months",
+                  cost: "$50k"
+                }
+              ].map((test, i) => (
+                <motion.div
+                  key={test.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-5 rounded-xl bg-red-500/5 border border-red-500/20 hover:border-red-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-mono text-red-400">{test.id}</span>
+                    <span className="text-xs text-red-300/60 flex items-center gap-1">
+                      <DollarSign className="w-3 h-3" />{test.cost}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm mb-2">{test.claim}</h4>
+                  <p className="text-xs text-muted-foreground mb-3">{test.test}</p>
+                  <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/15 mb-3">
+                    <p className="text-xs text-red-300"><span className="font-bold">KILLS IF:</span> {test.falsifies}</p>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1"><FlaskConical className="w-3 h-3" />{test.protocol.substring(0, 30)}...</span>
+                    <span className="flex items-center gap-1"><Timer className="w-3 h-3" />{test.timeline}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tier 2: Major Revision */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-amber-500/20 border border-amber-500/40">
+                <AlertCircle className="w-5 h-5 text-amber-400" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-xl text-amber-400">TIER 2: MAJOR REVISION</h3>
+                <p className="text-sm text-amber-300/60">If these fail, significant sections need rewriting</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  id: "TIER2_001",
+                  claim: "90-day protocol: GAD-7 ↓47%, PHQ-9 ↓45%",
+                  test: "Protocol should reduce anxiety/depression",
+                  falsifies: "Pre-registered RCT (N≥100) shows no significant difference vs. control",
+                  timeline: "12-18 months",
+                  cost: "$500k"
+                },
+                {
+                  id: "TIER2_002",
+                  claim: "Remote viewing d = 0.33",
+                  test: "RV should show small-to-medium effect size",
+                  falsifies: "High-quality meta-analysis (2020+) shows d < 0.1 or p > 0.05",
+                  timeline: "3-6 months",
+                  cost: "$20k"
+                },
+                {
+                  id: "TIER2_003",
+                  claim: "Φ predicts consciousness better than alternatives",
+                  test: "IIT Φ should outperform PCI, ACE, zCCI",
+                  falsifies: "Side-by-side comparison shows Φ NOT superior to simpler measures",
+                  timeline: "6-12 months",
+                  cost: "$100k"
+                },
+                {
+                  id: "TIER2_004",
+                  claim: "Meditation increases cortical thickness",
+                  test: "8-week MBSR should increase cortical thickness",
+                  falsifies: "High-powered replication (N≥200) shows no effect",
+                  timeline: "12-18 months",
+                  cost: "$300k"
+                },
+                {
+                  id: "TIER2_005",
+                  claim: "Psilocybin produces mystical experiences",
+                  test: "High-dose should produce MEQ30 complete mystical in 50-70%",
+                  falsifies: "Large trial (N≥100) shows <20% complete mystical",
+                  timeline: "12-24 months",
+                  cost: "$500k"
+                }
+              ].map((test, i) => (
+                <motion.div
+                  key={test.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-5 rounded-xl bg-amber-500/5 border border-amber-500/20 hover:border-amber-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-mono text-amber-400">{test.id}</span>
+                    <span className="text-xs text-amber-300/60 flex items-center gap-1">
+                      <DollarSign className="w-3 h-3" />{test.cost}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm mb-2">{test.claim}</h4>
+                  <p className="text-xs text-muted-foreground mb-3">{test.test}</p>
+                  <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/15">
+                    <p className="text-xs text-amber-300"><span className="font-bold">REVISES IF:</span> {test.falsifies}</p>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground mt-3">
+                    <span className="flex items-center gap-1"><Timer className="w-3 h-3" />{test.timeline}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tier 3: Minor Adjustment */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-xl text-emerald-400">TIER 3: MINOR ADJUSTMENT</h3>
+                <p className="text-sm text-emerald-300/60">Well-established claims — failure would be surprising</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  id: "TIER3_001",
+                  claim: "Bell inequality S = 2.697 ± 0.015",
+                  test: "Quantum entanglement should violate S > 2",
+                  falsifies: "High-precision replication shows S ≤ 2.0",
+                  timeline: "6-12 months",
+                  cost: "$150k"
+                },
+                {
+                  id: "TIER3_002",
+                  claim: "Quantum coherence in photosynthesis",
+                  test: "Photosynthetic complexes should show quantum beats at room temp",
+                  falsifies: "Improved experiments show no quantum effects",
+                  timeline: "6-12 months",
+                  cost: "$200k"
+                },
+                {
+                  id: "TIER3_003",
+                  claim: "Ancient Texts show universal patterns",
+                  test: "Death-rebirth, unity-separation archetypes across all major cultures",
+                  falsifies: "Find major culture with NO such patterns",
+                  timeline: "12-24 months",
+                  cost: "$100k"
+                },
+                {
+                  id: "TIER3_004",
+                  claim: "Roman Triple Sun was parhelion",
+                  test: "Atmospheric conditions should reproduce phenomenon",
+                  falsifies: "Cannot replicate parhelion under documented conditions",
+                  timeline: "3-6 months",
+                  cost: "$30k"
+                },
+                {
+                  id: "TIER3_005",
+                  claim: "Norse Ragnarök linked to 536 CE",
+                  test: "Myth creation should post-date catastrophe",
+                  falsifies: "Linguistic analysis shows myth predates 536 CE",
+                  timeline: "12-18 months",
+                  cost: "$50k"
+                }
+              ].map((test, i) => (
+                <motion.div
+                  key={test.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-5 rounded-xl bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-mono text-emerald-400">{test.id}</span>
+                    <span className="text-xs text-emerald-300/60 flex items-center gap-1">
+                      <DollarSign className="w-3 h-3" />{test.cost}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white text-sm mb-2">{test.claim}</h4>
+                  <p className="text-xs text-muted-foreground mb-3">{test.test}</p>
+                  <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/15">
+                    <p className="text-xs text-emerald-300"><span className="font-bold">ADJUSTS IF:</span> {test.falsifies}</p>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground mt-3">
+                    <span className="flex items-center gap-1"><Timer className="w-3 h-3" />{test.timeline}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Total Cost Summary */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-xl bg-white/5 border border-white/10 text-center"
+          >
+            <p className="text-sm text-muted-foreground mb-2">Total Estimated Cost to Test All 15 Claims</p>
+            <p className="text-3xl font-bold text-white">$3.15M</p>
+            <p className="text-xs text-muted-foreground mt-2">
+              Across 15 experiments • 3-24 month timelines • From Kosmos Run #10 Falsification Index
+            </p>
+          </motion.div>
         </div>
       </section>
 

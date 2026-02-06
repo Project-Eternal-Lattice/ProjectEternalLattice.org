@@ -1723,3 +1723,9 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Prepare batched Kosmos follow-up questions v2.0 (18 questions across 6 task batches)
 - [x] Re-upload updated ToE to S3 (new URL with α constant softening)
 - [x] Save checkpoint and remind user to Publish
+
+## Falsification Index + Kosmos Q1 + Kimi Review (Feb 2026)
+- [x] Integrate falsification_index_seed.json (15 tests in 3 tiers) into website Claims page
+- [x] Deliver Kosmos Task 87 Q1 for Ken to paste (batched format with Q2-Q4 ready)
+- [x] Prepare Kimi Agent Swarm v16.1 review package (23KB zip, 6 files, 6 focused questions)
+- [x] Save checkpoint
