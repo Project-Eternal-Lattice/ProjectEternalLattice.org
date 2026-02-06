@@ -913,6 +913,166 @@ export default function Theory() {
               </p>
             </div>
           </motion.div>
+
+          {/* ΦG vs Φ: Understanding the Two Measures */}
+          <motion.div
+            className="mt-12 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <div className="glass-card p-8 rounded-2xl border border-purple-500/30">
+              <h3 className="font-heading font-bold text-2xl text-white mb-6 text-center">
+                Understanding ΦG vs Φ: Two Measures of Integration
+              </h3>
+              <p className="text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
+                A critical distinction in our computational work. These are NOT the same metric — confusing them is the most common error in IIT research.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="p-6 rounded-xl bg-blue-900/20 border border-blue-500/20">
+                  <h4 className="font-heading font-bold text-lg text-blue-300 mb-3">ΦG (Gaussian Approximation)</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="text-blue-400 mt-0.5">→</span> Measures statistical dependencies via covariance</li>
+                    <li className="flex items-start gap-2"><span className="text-blue-400 mt-0.5">→</span> Computationally fast — scales to N~1000 nodes</li>
+                    <li className="flex items-start gap-2"><span className="text-blue-400 mt-0.5">→</span> Detects patterns in reducible systems</li>
+                    <li className="flex items-start gap-2"><span className="text-blue-400 mt-0.5">→</span> Can be &gt; 0 even when exact Φ = 0</li>
+                    <li className="flex items-start gap-2"><span className="text-blue-400 mt-0.5">→</span> May measure "proto-integration" (hypothesis)</li>
+                  </ul>
+                  <div className="mt-4 p-3 rounded-lg bg-blue-900/30 border border-blue-500/10">
+                    <p className="text-xs text-blue-300/80 font-mono">Status: VALIDATED — 6/20 networks showed ΦG &gt; 0</p>
+                  </div>
+                </div>
+                <div className="p-6 rounded-xl bg-purple-900/20 border border-purple-500/20">
+                  <h4 className="font-heading font-bold text-lg text-purple-300 mb-3">Φ (Exact IIT)</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="text-purple-400 mt-0.5">→</span> Measures irreducible cause-effect power</li>
+                    <li className="flex items-start gap-2"><span className="text-purple-400 mt-0.5">→</span> Computationally explosive — N&gt;6 intractable</li>
+                    <li className="flex items-start gap-2"><span className="text-purple-400 mt-0.5">→</span> The "gold standard" of IIT 4.0</li>
+                    <li className="flex items-start gap-2"><span className="text-purple-400 mt-0.5">→</span> Requires exhaustive partition search</li>
+                    <li className="flex items-start gap-2"><span className="text-purple-400 mt-0.5">→</span> Only meaningful for small systems currently</li>
+                  </ul>
+                  <div className="mt-4 p-3 rounded-lg bg-purple-900/30 border border-purple-500/10">
+                    <p className="text-xs text-purple-300/80 font-mono">Status: 20/20 sparse networks → Φ = 0 (expected for ~32% density)</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-amber-900/15 border border-amber-500/20">
+                <p className="text-sm text-amber-200/90 text-center">
+                  <strong>Key Insight:</strong> ΦG &gt; 0 with Φ = 0 is NOT a contradiction — it's a <em>refinement</em>. ΦG detects statistical structure that doesn't survive the irreducibility test. This is science working exactly as it should.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Run 87 Summary Table */}
+          <motion.div
+            className="mt-10 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <div className="glass-card p-8 rounded-2xl border border-slate-500/30">
+              <h3 className="font-heading font-bold text-xl text-white mb-2 text-center">
+                Kosmos Run #10 — Complete Results Summary
+              </h3>
+              <p className="text-muted-foreground text-center mb-6 text-sm">
+                20 networks tested with exact PyPhi. All sparse networks (≤32% connectivity) returned Φ = 0.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="text-left py-3 px-4 text-muted-foreground font-semibold">Architecture</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">N</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Density</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">ΦG</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Φ (Exact)</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-muted-foreground">
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Feedforward (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">33%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">0.00</td>
+                      <td className="text-center py-2 px-4 text-red-400 font-bold">0.00</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Reducible</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Ring (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">67%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">0.02</td>
+                      <td className="text-center py-2 px-4 text-amber-400 font-bold">0.02</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Minimal</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Fully Connected (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">0.26</td>
+                      <td className="text-center py-2 px-4 text-emerald-400 font-bold">0.26</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Integrated</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5 bg-white/[0.02]">
+                      <td className="py-2 px-4">Sparse Random (4-node, ×5)</td>
+                      <td className="text-center py-2 px-4">4</td>
+                      <td className="text-center py-2 px-4">~32%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">Mixed</td>
+                      <td className="text-center py-2 px-4 text-red-400 font-bold">0.00</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Reducible</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5 bg-white/[0.02]">
+                      <td className="py-2 px-4">Sparse Random (5-node, ×15)</td>
+                      <td className="text-center py-2 px-4">5</td>
+                      <td className="text-center py-2 px-4">~32%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">6/15 &gt; 0</td>
+                      <td className="text-center py-2 px-4 text-red-400 font-bold">0.00</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Reducible</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4 font-semibold text-white">XOR TPM (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">—</td>
+                      <td className="text-center py-2 px-4 text-red-400 font-bold">0.00</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Paradox!</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Random TPM (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">—</td>
+                      <td className="text-center py-2 px-4 text-amber-400 font-bold">0.87</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Moderate</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Copy TPM (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">—</td>
+                      <td className="text-center py-2 px-4 text-emerald-400 font-bold">1.00</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Integrated</span></td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4 font-semibold text-white">Majority TPM (3-node)</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4 text-blue-400">—</td>
+                      <td className="text-center py-2 px-4 text-emerald-400 font-bold">2.05</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Highest!</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-muted-foreground/70 text-center mt-4">
+                Data from Kosmos Run #10 (EdisonScientific Platform). Computed using PyPhi v1.2.1. All results independently reproducible.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -1729,3 +1729,11 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Deliver Kosmos Task 87 Q1 for Ken to paste (batched format with Q2-Q4 ready)
 - [x] Prepare Kimi Agent Swarm v16.1 review package (23KB zip, 6 files, 6 focused questions)
 - [x] Save checkpoint
+
+## Kimi Tier 2 Improvements (Feb 2026 — while waiting for Kosmos)
+- [x] Add ΦG vs Φ comparison section to Theory page (side-by-side cards with status badges)
+- [x] Add Run 87 summary table to Theory page (9-row table with architecture, N, density, ΦG, Φ, status)
+- [x] Expand "What does ΦG measure?" discussion in ToE Section 5.2 (3 hypotheses: Proto-Integration, Complementary, Artifact)
+- [x] Clarify primary vs emergence distinction (ontological vs epistemological) in Convergence Pattern section
+- [x] Re-upload updated ToE v16.1 to S3
+- [x] Save checkpoint
