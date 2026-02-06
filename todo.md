@@ -1737,3 +1737,14 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Clarify primary vs emergence distinction (ontological vs epistemological) in Convergence Pattern section
 - [x] Re-upload updated ToE v16.1 to S3
 - [x] Save checkpoint
+
+## Kimi v16.1 Synthesis — Immediate Fixes (Feb 2026)
+- [x] Fix "exponential growth" → "non-linear increase" in ToE Section 5.2 (with functional form caveat)
+- [x] Add size-confound acknowledgment to Architecture Paradox (XOR 2-input vs Majority 3-input confound)
+- [x] Strengthen α constant warnings ("Coupling Constant" → "Proposed Coupling Parameter", "Theoretical Construct")
+- [x] Add "Proposed" prefix to Keith Jarrett Principle (→ "Keith Jarrett Hypothesis (working title)" with status note)
+- [x] Upload minimum Φ configuration chart + regression analysis to S3 and add to Theory page
+- [x] Add minimum Φ predictions table to Theory page (4 configurations with confidence levels)
+- [x] Strengthen primary vs emergence argument (gravity analogy, panpsychism/idealism positioning, open problem acknowledgment)
+- [x] Re-upload ToE v16.1 to S3
+- [x] Save checkpoint (82 tests passing)

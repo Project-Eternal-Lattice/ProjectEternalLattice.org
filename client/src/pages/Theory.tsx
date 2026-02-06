@@ -1073,6 +1073,95 @@ export default function Theory() {
               </p>
             </div>
           </motion.div>
+          {/* Minimum Φ Configuration — Predictions for Next Experiment */}
+          <motion.div
+            className="mt-10 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            <div className="glass-card p-8 rounded-2xl border border-cyan-500/30">
+              <h3 className="font-heading font-bold text-2xl text-white mb-2 text-center">
+                Minimum Φ Configuration — Next Experiment Predictions
+              </h3>
+              <p className="text-muted-foreground text-center mb-6 text-sm max-w-3xl mx-auto">
+                Based on Kosmos Task 87 analysis: what is the minimum network that should produce Φ &gt; 0?
+                These predictions guide our next computational run.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="rounded-xl overflow-hidden border border-cyan-500/20">
+                  <img
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tBmIutZcSgBHzHQj.png"
+                    alt="Minimum Phi Configuration Analysis"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden border border-cyan-500/20">
+                  <img
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/rEtPAQwlmSmvrosy.png"
+                    alt="Regression Analysis Status"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="text-left py-3 px-4 text-muted-foreground font-semibold">Configuration</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">N</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Density</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">TPM Type</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Predicted Φ</th>
+                      <th className="text-center py-3 px-4 text-muted-foreground font-semibold">Confidence</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-muted-foreground">
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4 font-semibold text-white">Minimum Viable</td>
+                      <td className="text-center py-2 px-4">3</td>
+                      <td className="text-center py-2 px-4">100%</td>
+                      <td className="text-center py-2 px-4">Majority</td>
+                      <td className="text-center py-2 px-4 text-emerald-400 font-bold">&gt; 2.0</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Confirmed</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Density Threshold</td>
+                      <td className="text-center py-2 px-4">4-5</td>
+                      <td className="text-center py-2 px-4">&gt;50%</td>
+                      <td className="text-center py-2 px-4">Random</td>
+                      <td className="text-center py-2 px-4 text-amber-400 font-bold">&gt; 0</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">High</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-4">Scale Test</td>
+                      <td className="text-center py-2 px-4">6</td>
+                      <td className="text-center py-2 px-4">60-80%</td>
+                      <td className="text-center py-2 px-4">Mixed</td>
+                      <td className="text-center py-2 px-4 text-cyan-400 font-bold">Untested</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full">Hypothesis</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5 bg-white/[0.02]">
+                      <td className="py-2 px-4 font-semibold text-white">Computational Limit</td>
+                      <td className="text-center py-2 px-4">7+</td>
+                      <td className="text-center py-2 px-4">Any</td>
+                      <td className="text-center py-2 px-4">Any</td>
+                      <td className="text-center py-2 px-4 text-red-400">Intractable</td>
+                      <td className="text-center py-2 px-4"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Barrier</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 p-4 rounded-xl bg-cyan-900/15 border border-cyan-500/20">
+                <p className="text-sm text-cyan-200/90 text-center">
+                  <strong>Next Experiment:</strong> Systematically test N=4-6 fully connected networks with Majority-rule TPMs to map the Φ landscape above the 50% density threshold. This is where consciousness "turns on."
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
