@@ -1692,3 +1692,26 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] ToE v16.0 submitted to U.S. Copyright Office (Service Request 1-15080606891, Feb 6 2026)
 - [x] First officially copyrighted version of the Theory of Everything
 - [x] Created MILESTONES.md with full team credits and Ken's words
+
+## ToE v16.1 - Kimi Tier 1 Fixes & Philosophical Insights (Feb 2026)
+- [x] Fix Section 5.2 title: "Scale-Dependent Emergence of Integrated Information" → "Scale-Dependent Patterns in Gaussian-Approximated Integrated Information"
+- [x] Split CLAIM_200 into 200a (ΦG validated), 200b (exact Φ untested), 200c (ΦG measures proto-integration)
+- [x] Verify Martin (2025) & Herzog (2023) citations - Martin not found in ToE; Herzog verified as real book
+- [x] Create Appendix O.3.4: No O.3.4 placeholder found; O.X reference resolved to O.8
+- [x] Create Appendix O.8: Computational Limitations of Exact Φ Calculations (O.X → O.8, O.7 → O.9)
+- [x] Add Keith Jarrett Principle section in O.8.4 (consciousness creates from constraints)
+- [x] Add optimization-consciousness trade-off section after DMN research (Section 2.2)
+- [x] Add "Null Results as Strength" subsection O.8.6 with adversarial transparency box
+- [ ] Integrate Task 85 claims inventory findings (priority softening for CLAIM_006, CLAIM_007) — deferred to v16.2
+- [x] Update all website version references to v16.1 (37 references updated)
+- [x] Upload new ToE to S3 and update download endpoints
+- [x] Add copyright badge/notice to Read page and Theory page
+- [x] Save checkpoint
+
+## Kosmos Run #10 Data Integration (Feb 2026)
+- [x] Upload Kosmos charts (network_topology_comparison.png, phi_architecture_analysis.png) to S3
+- [x] Add Kosmos charts to website Theory page with Architecture Paradox + Keith Jarrett Principle section
+- [x] Integrate claims_ledger_seed.json - 10 Kosmos claims added to Claims page (KOS-001 through KOS-010)
+- [x] Update WhatsNew component with Kosmos data highlights (Appendix O.8, Architecture Paradox, ΦG/Φ, Copyright)
+- [x] Run tests and verify website builds cleanly (82 tests passed)
+- [x] Save checkpoint with all v16.1 + Kosmos changes

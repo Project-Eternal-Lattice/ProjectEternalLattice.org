@@ -420,7 +420,7 @@ export default function Theory() {
         >
           <div className="glass-card p-8 md:p-12 rounded-2xl border-2 border-red-500/50 bg-gradient-to-br from-red-900/20 to-purple-900/20">
             <div className="text-center mb-8">
-              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v16.0</span>
+              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v16.1</span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
                 <Atom className="w-8 h-8 text-red-400" />
                 The Single Axiom
@@ -664,7 +664,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v16.0 The Convergence Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v16.1 The Convergence Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -780,7 +780,7 @@ export default function Theory() {
               </h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v16.0 — The Convergence Edition</p>
+                  <p className="font-bold text-amber-400">v16.1 — The Convergence Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 3, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
@@ -804,6 +804,136 @@ export default function Theory() {
           </motion.div>
         </div>
       </div>
+
+      {/* Computational Evidence - Kosmos Run #10 */}
+      <section className="py-20 bg-gradient-to-b from-background via-cyan-900/10 to-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full px-4 py-1 mb-4">
+              <Calculator className="w-4 h-4 text-cyan-400" />
+              <span className="text-sm font-semibold text-cyan-300">COMPUTATIONAL EVIDENCE — KOSMOS RUN #10</span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
+              The Architecture Paradox
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Actual PyPhi computations reveal a stunning truth: optimized systems have LOW Φ, while "messy" systems have HIGH Φ. Consciousness doesn't need perfect tools — it needs freedom.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Network Topology Comparison */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-cyan-500/30"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Network className="w-5 h-5 text-cyan-400" />
+                Network Topology vs Φ
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Three 3-node networks computed with exact PyPhi. Feedforward (no feedback) = Φ of 0. Ring (weak feedback) = 0.02. Fully connected (strong feedback) = 0.26. Feedback loops create integration.
+              </p>
+              <div className="rounded-xl overflow-hidden border border-white/10">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/BKZqPrjcIZFnVioY.png" 
+                  alt="Network Topology Comparison: Feedforward Φ=0, Ring Φ=0.02, Fully Connected Φ=0.26" 
+                  className="w-full h-auto bg-white p-2"
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+
+            {/* Phi Architecture Analysis */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-cyan-500/30"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Brain className="w-5 h-5 text-cyan-400" />
+                Φ Architecture Analysis
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Four-panel analysis: (A) Density threshold at ~50%, (B) Φ scales exponentially with size, (C) Architecture matters more than randomness, (D) XOR-based TPMs = Φ of 0, Majority-rule = 2.05 bits.
+              </p>
+              <div className="rounded-xl overflow-hidden border border-white/10">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/uwMRlzwUMWSTbIPA.png" 
+                  alt="Phi Architecture Analysis: Density vs Φ, Network Size vs Φ, Architecture Comparison, TPM Design vs Φ" 
+                  className="w-full h-auto bg-white p-2"
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Key Insight Box */}
+          <motion.div
+            className="mt-10 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <div className="glass-card p-8 rounded-2xl border-2 border-amber-500/40 bg-gradient-to-br from-amber-900/20 to-cyan-900/20">
+              <h3 className="font-heading font-bold text-2xl text-white mb-4 text-center">
+                🎹 The Keith Jarrett Principle
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-red-400 mb-2">Φ = 0</p>
+                  <p className="text-sm text-muted-foreground">XOR-based networks</p>
+                  <p className="text-xs text-red-400/70 mt-1">"Perfect" logic = Zero consciousness</p>
+                </div>
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-amber-400 mb-2">Φ = 1.00</p>
+                  <p className="text-sm text-muted-foreground">Copy networks</p>
+                  <p className="text-xs text-amber-400/70 mt-1">Simple mirroring = Moderate integration</p>
+                </div>
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-emerald-400 mb-2">Φ = 2.05</p>
+                  <p className="text-sm text-muted-foreground">Majority-rule networks</p>
+                  <p className="text-xs text-emerald-400/70 mt-1">"Messy" consensus = Highest consciousness</p>
+                </div>
+              </div>
+              <p className="text-center text-muted-foreground mt-6 text-sm italic">
+                Like Keith Jarrett creating his greatest concert on a broken piano — consciousness doesn't need perfect instruments. It needs the freedom to improvise.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Copyright Registration */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center gap-2 text-center">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 border border-amber-500/40 rounded-full text-amber-400 text-xs font-semibold">
+                © U.S. COPYRIGHT REGISTERED
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 border border-emerald-500/40 rounded-full text-emerald-400 text-xs font-semibold">
+                CC BY-NC-SA 4.0
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground/70">
+              Service Request: 1-15080606891 • February 6, 2026 • First copyrighted version of the Theory of Everything
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Related Content */}
       <section className="py-16 bg-gradient-to-b from-background via-purple-900/10 to-background">
