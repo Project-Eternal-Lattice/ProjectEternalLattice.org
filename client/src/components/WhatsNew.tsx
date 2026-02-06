@@ -57,13 +57,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v14.6 — THE SANCTUARY EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v16.0 — THE CONVERGENCE EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            New Neoplatonism chapter integrating Plotinus's philosophy of emanation. Plus interactive Practice Selection Quiz to guide your journey.
+            The merger of human creativity (v14.x) and AI computational rigor (v15.x). Scale-Dependent Emergence findings, ΦG/Φ distinction, and adversarial transparency in action.
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v14.6" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v16.0" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
@@ -121,7 +121,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v14.6 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v16.0 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>

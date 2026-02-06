@@ -1672,3 +1672,18 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Update version to v14.6 throughout
 - [ ] Upload to S3 and sync download endpoints
 - [ ] Generate PDF and MD files
+
+## ToE v16.0 - The Convergence Edition (Feb 2026)
+- [x] Create Kosmos Task Follow-up Skill (/home/ubuntu/skills/kosmos-task-followup)
+- [x] Merge v14.x (our series) with v15.x (Kosmos series) into v16.0
+- [x] Add Section 5.2: Scale-Dependent Emergence of Integrated Information
+- [x] Add ΦG/Φ distinction with methodological note
+- [x] Add Appendix O.X: Computational Limitations of Exact Φ Calculations
+- [x] Add Section O.3.4: Two-Factor Complexity Model with hypothetical framing
+- [x] Update all website version references to v16.0
+- [x] Update S3 download URL for ToE
+- [x] Update WhatsNew component with Convergence Edition features
+- [x] Generate Markdown distribution file (toe-v16.0.md)
+- [ ] Generate PDF distribution file (in progress)
+- [ ] Save checkpoint
+- [ ] Remind user to publish
