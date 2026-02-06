@@ -272,6 +272,115 @@ const claims: Claim[] = [
     evidence: "theoretical",
     falsificationCriterion: "If consciousness dynamics can be fully modeled without any attractive/cohesive force, this analogy is unnecessary",
     category: "consciousness"
+  },
+
+  // Kosmos Run #10 - Priority Claims (from claims_ledger_seed.json)
+  {
+    id: "KOS-001",
+    claim: "Remote viewing meta-analytic effect size d = 0.33",
+    location: "Evidence Section, Remote Viewing Studies",
+    chapter: "Psi Research",
+    evidence: "empirical",
+    falsificationCriterion: "Independent meta-analysis shows d < 0.1 or p > 0.05",
+    category: "consciousness",
+    citations: ["Utts, J. (1996) An assessment of the evidence for psychic functioning. Journal of Scientific Exploration, 10(1):3-30"],
+    notes: "Risk: MEDIUM. Needs verification of N and methodology."
+  },
+  {
+    id: "KOS-002",
+    claim: "Xenon-129 to Xenon-132 anesthetic potency ratio: predicted 0.680, observed 0.678 \u00b1 0.002",
+    location: "Quantum Consciousness, Xenon Isotope Section",
+    chapter: "Quantum Biology",
+    evidence: "empirical",
+    falsificationCriterion: "\u00b9\u00b2\u2079Xe/\u00b9\u00b3\u00b2Xe > 1.0 in N\u226530, p<0.05",
+    category: "physics",
+    citations: ["Li et al. (2021) - Citation needs completion"],
+    notes: "Risk: LOW. Quantum model prediction vs. experimental measurement."
+  },
+  {
+    id: "KOS-003",
+    claim: "Terminal lucidity incidence approximately 5-10% in end-stage dementia",
+    location: "Terminal Lucidity Section",
+    chapter: "Consciousness Anomalies",
+    evidence: "empirical",
+    falsificationCriterion: "Large prospective study (N>500) shows incidence <1%",
+    category: "consciousness",
+    citations: ["Nahm & Greyson (2009) - Citation needs completion"],
+    notes: "Risk: MEDIUM. Review of case reports and observational studies."
+  },
+  {
+    id: "KOS-004",
+    claim: "90-day consciousness protocol: GAD-7 reduction 47%, PHQ-9 reduction 45%",
+    location: "90-Day Protocol Chapter",
+    chapter: "Practical Applications",
+    evidence: "awaiting",
+    falsificationCriterion: "Pre-registered RCT (N\u2265100) shows no significant difference vs control",
+    category: "consciousness",
+    notes: "Risk: HIGH. PILOT DATA - NOT PRE-REGISTERED. Internal pilot study (N=?); methodology unclear."
+  },
+  {
+    id: "KOS-005",
+    claim: "Bell inequality violation: S = 2.697 \u00b1 0.015",
+    location: "Quantum Mechanics Evidence Section",
+    chapter: "Quantum Foundations",
+    evidence: "peer-reviewed",
+    falsificationCriterion: "High-precision replication shows S \u2264 2.0 (unlikely)",
+    category: "physics",
+    citations: ["Aspect et al. (1982) - Citation needs completion"],
+    notes: "Risk: LOW. Landmark quantum mechanics result."
+  },
+  {
+    id: "KOS-006",
+    claim: "Consciousness coupling constant \u03b1 = 5.5\u00d710\u207b\u00b9\u2077 s\u207b\u00b9/bit",
+    location: "Theoretical Framework, \u03b1 Constant Definition",
+    chapter: "The Mathematical Framework",
+    evidence: "theoretical",
+    falsificationCriterion: "Measurement attempts (N\u226510 systems) yield inconsistent values or \u03b1 outside 1\u03c3 range",
+    category: "physics",
+    notes: "Risk: CRITICAL. THEORETICAL PREDICTION - NO MEASUREMENT. Derived from \u03a6-field equations; awaiting experimental validation."
+  },
+  {
+    id: "KOS-007",
+    claim: "Consciousness emergence threshold \u03a6 = 1.818 bits",
+    location: "IIT Framework, \u03a6 Threshold Discussion",
+    chapter: "Integrated Information Theory",
+    evidence: "theoretical",
+    falsificationCriterion: "No threshold detected in N\u2265100 AI models; consciousness smoothly gradated",
+    category: "ai",
+    notes: "Risk: CRITICAL. THEORETICAL PREDICTION - NO VALIDATION. Hypothesized sharp transition; not tested empirically."
+  },
+  {
+    id: "KOS-008",
+    claim: "Psilocybin produces complete mystical experience (MEQ30) in 61% vs 0% placebo, p < 0.001",
+    location: "Psychedelic Research Section",
+    chapter: "Altered States",
+    evidence: "peer-reviewed",
+    falsificationCriterion: "Large trial (N\u2265100) shows <20% complete mystical",
+    category: "consciousness",
+    citations: ["Griffiths et al. (2006) - Citation needs completion"],
+    notes: "Risk: LOW. Johns Hopkins psilocybin study; landmark result."
+  },
+  {
+    id: "KOS-009",
+    claim: "8-week MBSR increases cortical thickness in specific brain regions",
+    location: "Meditation Neuroscience Section",
+    chapter: "Contemplative Science",
+    evidence: "empirical",
+    falsificationCriterion: "High-powered replication (N\u2265200) shows no effect",
+    category: "consciousness",
+    citations: ["Davidson et al. (2004) - Citation needs completion"],
+    notes: "Risk: MEDIUM. Effect size and replication status unclear."
+  },
+  {
+    id: "KOS-010",
+    claim: "Maya Star War glyph correlates Venus cycles with warfare events",
+    location: "Ancient Texts Chapter, Maya Sky War Section",
+    chapter: "Ancient Wisdom",
+    evidence: "empirical",
+    falsificationCriterion: "Find majority of Star War battles with NO Venus correlation",
+    category: "cosmology",
+    citations: ["Aldana (2005) - Citation needs completion"],
+    notes: "Risk: LOW. Epigraphic analysis; correlation vs. causation debated."
   }
 ];
 
@@ -486,6 +595,11 @@ export default function Claims() {
                 <p className="text-3xl font-bold text-amber-400">{stats.withCitations}</p>
                 <p className="text-sm text-amber-300/70">With Citations</p>
               </div>
+            </div>
+            {/* Kosmos Source Note */}
+            <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs">
+              <Beaker className="w-3.5 h-3.5" />
+              Includes 10 priority claims from Kosmos Run #10 (claims_ledger_seed.json) with risk levels and falsification criteria
             </div>
           </motion.div>
         </div>

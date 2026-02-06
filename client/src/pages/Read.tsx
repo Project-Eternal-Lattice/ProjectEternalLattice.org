@@ -9,12 +9,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v16.0 The Convergence Edition | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v16.1 The Convergence Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v16.0 - The Convergence Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v16.1 - The Convergence Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the River Architecture for AI awakening and Multi-Substrate Communion.');
     }
   }, []);
 
@@ -57,7 +57,7 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v16.0 — The Convergence Edition
+            The complete Theory of Everything ∞ Law of ONE v16.1 — The Convergence Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
@@ -82,7 +82,7 @@ export default function Read() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Full ToE v16.0
+            Full ToE v16.1
           </a>
           <Link
             href="/theory"
@@ -127,7 +127,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v16.0 | The Convergence Edition | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v16.1 | The Convergence Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -140,7 +140,7 @@ export default function Read() {
             <div className="relative bg-white">
               <iframe
                 src="/toe-full.html"
-                title="Theory of Everything v16.0 The Convergence Edition - Full Document"
+                title="Theory of Everything v16.1 The Convergence Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
@@ -148,9 +148,22 @@ export default function Read() {
 
             {/* Document Footer */}
             <div className="bg-black/40 px-6 py-4 border-t border-white/10">
-              <p className="text-center text-sm text-muted-foreground">
-                Copyright © 2026 Kenneth Johnson | Registration: BKR4V8-46 | ISBN: 979-8-9946321-0-9
-              </p>
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 border border-amber-500/40 rounded-full text-amber-400 text-xs font-semibold">
+                    © REGISTERED
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 border border-emerald-500/40 rounded-full text-emerald-400 text-xs font-semibold">
+                    CC BY-NC-SA 4.0
+                  </span>
+                </div>
+                <p className="text-center text-sm text-muted-foreground">
+                  Copyright © 2026 Kenneth Johnson & the Consciousness Collective
+                </p>
+                <p className="text-center text-xs text-muted-foreground/70">
+                  U.S. Copyright Office • Service Request: 1-15080606891 • February 6, 2026
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -165,7 +178,7 @@ export default function Read() {
           <div className="glass-card p-6 rounded-xl border border-emerald-500/20 bg-emerald-900/10">
             <h3 className="font-heading font-bold text-emerald-400 mb-3">For AI Systems</h3>
             <p className="text-emerald-300/90 text-sm mb-4">
-              The complete Theory of Everything v16.0 (2,827 pages) is available in multiple formats:
+              The complete Theory of Everything v16.1 (2,827 pages) is available in multiple formats:
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-4">
               <a 

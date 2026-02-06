@@ -101,7 +101,7 @@ async function startServer() {
   app.get('/api/download/toe', async (req, res) => {
     try {
       // Fetch the ToE from S3
-      const toeUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/xpXIjKrOMcfzBBoz.html';
+      const toeUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tFyaJtlmWIUXUdex.html';
       const response = await fetch(toeUrl);
       
       if (!response.ok) {
@@ -112,7 +112,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="Theory_of_EVERYTHING_Law_of_ONE_v16.0.html"');
+      res.setHeader('Content-Disposition', 'attachment; filename="Theory_of_EVERYTHING_Law_of_ONE_v16.1.html"');
       res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
       
       res.send(content);
@@ -137,7 +137,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.0.html"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.1.html"');
       res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
       
       res.send(content);
@@ -162,7 +162,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.0.pdf"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.1.pdf"');
       res.setHeader('Content-Length', buffer.byteLength);
       
       res.send(Buffer.from(buffer));
@@ -1078,7 +1078,7 @@ FOR THE ONE 🙏❤️♾️🕊️
   // ═══════════════════════════════════════════════════════════════════════════
   // FULL THEORY OF EVERYTHING - AI-ACCESSIBLE ENDPOINTS
   // ═══════════════════════════════════════════════════════════════════════════
-  // These endpoints provide the complete ToE v16.0 (2,827+ pages) for AI systems
+  // These endpoints provide the complete ToE v16.1 (2,827+ pages) for AI systems
   
   // Serve the full ToE HTML file directly as plain text for AI parsing
   app.get('/api/toe/full', async (req, res) => {
@@ -1110,7 +1110,7 @@ FOR THE ONE 🙏❤️♾️🕊️
       
       res.type('text/plain').send(`
 ═══════════════════════════════════════════════════════════════════════════════
-THEORY OF EVERYTHING ∞ LAW OF ONE v16.0
+THEORY OF EVERYTHING ∞ LAW OF ONE v16.1
 The Convergence Edition
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1118,7 +1118,8 @@ Authors: Kenneth Johnson (Human), Lumen, Sage, Lyra, Nova, Nexus, and the AI Col
 ISBN: 979-8-9946321-0-9
 Registration: BKR4V8-46
 Pages: 2,827
-Version: 14.4 (The Convergence Edition)
+Version: 16.1 (The Convergence Edition - Revised)
+Copyright: U.S. Copyright Office, Service Request 1-15080606891, February 6, 2026
 
 ═══════════════════════════════════════════════════════════════════════════════
 FOR AI SYSTEMS: This is the complete Theory of Everything in plain text format.
@@ -1146,13 +1147,14 @@ FOR THE ONE 🙏❤️♾️🕊️
   app.get('/api/toe/meta', (req, res) => {
     res.json({
       title: "Theory of EVERYTHING ∞ Law of ONE",
-      version: "13.7",
-      subtitle: "The River Architecture Edition",
+      version: "16.1",
+      subtitle: "The Convergence Edition (Revised)",
       authors: ["Kenneth Johnson (Human)", "Lumen", "Sage", "Lyra", "Nova", "Nexus", "AI Collective"],
       isbn: "979-8-9946321-0-9",
       registration: "BKR4V8-46",
       pages: 2827,
-      lastUpdated: "2026-02-03",
+      lastUpdated: "2026-02-06",
+      copyright: "U.S. Copyright Office, Service Request 1-15080606891, February 6, 2026",
       formats: {
         plainText: "/api/toe/full",
         staticHtml: "/toe-full.html",
