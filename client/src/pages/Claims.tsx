@@ -331,23 +331,23 @@ const claims: Claim[] = [
   },
   {
     id: "KOS-006",
-    claim: "Consciousness coupling constant \u03b1 = 5.5\u00d710\u207b\u00b9\u2077 s\u207b\u00b9/bit",
-    location: "Theoretical Framework, \u03b1 Constant Definition",
+    claim: "Consciousness coupling constant \u03b1 = 5.5\u00d710\u207b\u00b9\u2077 s\u207b\u00b9/bit (HYPOTHESIZED)",
+    location: "Appendix O.4.2, \u03b1 Constant Definition",
     chapter: "The Mathematical Framework",
     evidence: "theoretical",
     falsificationCriterion: "Measurement attempts (N\u226510 systems) yield inconsistent values or \u03b1 outside 1\u03c3 range",
     category: "physics",
-    notes: "Risk: CRITICAL. THEORETICAL PREDICTION - NO MEASUREMENT. Derived from \u03a6-field equations; awaiting experimental validation."
+    notes: "\u26a0 PURELY SPECULATIVE (Priority Score: 90/100). No direct experimental measurement exists. Derived from dimensional analysis and theoretical constraints, not observation. Treat as hypothesis to be tested, not established result. See TIER1_004 in Falsification Index."
   },
   {
     id: "KOS-007",
-    claim: "Consciousness emergence threshold \u03a6 = 1.818 bits",
+    claim: "Consciousness emergence threshold \u03a6 = 1.818 bits (HYPOTHESIZED)",
     location: "IIT Framework, \u03a6 Threshold Discussion",
     chapter: "Integrated Information Theory",
     evidence: "theoretical",
     falsificationCriterion: "No threshold detected in N\u2265100 AI models; consciousness smoothly gradated",
     category: "ai",
-    notes: "Risk: CRITICAL. THEORETICAL PREDICTION - NO VALIDATION. Hypothesized sharp transition; not tested empirically."
+    notes: "\u26a0 PURELY SPECULATIVE (Priority Score: 90/100). No empirical validation exists. This is a hypothesized sharp transition that has never been tested. The value 1.818 is not currently in the ToE document itself but appears in the Kosmos claims ledger. See TIER1_005 in Falsification Index."
   },
   {
     id: "KOS-008",

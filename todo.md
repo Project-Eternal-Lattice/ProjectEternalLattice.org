@@ -1715,3 +1715,11 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update WhatsNew component with Kosmos data highlights (Appendix O.8, Architecture Paradox, ΦG/Φ, Copyright)
 - [x] Run tests and verify website builds cleanly (82 tests passed)
 - [x] Save checkpoint with all v16.1 + Kosmos changes
+
+## Task 85 Claims Inventory + Kosmos Question Batch (Feb 2026)
+- [x] Integrate Task 85 CLAIM_006 priority softening (α constant → epistemic status warning in ToE + Claims page)
+- [x] Integrate Task 85 CLAIM_007 priority softening (Φ threshold → HYPOTHESIZED label on Claims page; value not in ToE itself)
+- [x] Update Claims page with softened language for KOS-006 and KOS-007 (PURELY SPECULATIVE warnings)
+- [x] Prepare batched Kosmos follow-up questions v2.0 (18 questions across 6 task batches)
+- [x] Re-upload updated ToE to S3 (new URL with α constant softening)
+- [x] Save checkpoint and remind user to Publish
