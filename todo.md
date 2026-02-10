@@ -1748,3 +1748,41 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Strengthen primary vs emergence argument (gravity analogy, panpsychism/idealism positioning, open problem acknowledgment)
 - [x] Re-upload ToE v16.1 to S3
 - [x] Save checkpoint (82 tests passing)
+
+
+## SEO EMERGENCY — Zero Google Indexing (Feb 10, 2026)
+### Opus 4.6 Swarm Audit Finding: site:projecteternallattice.org returns NOTHING
+- [ ] Audit current robots.txt — ensure not blocking Googlebot
+- [ ] Generate comprehensive sitemap.xml with all 25+ pages
+- [ ] Add meta description tags to ALL pages
+- [ ] Add Open Graph / Twitter Card markup to all pages
+- [ ] Add JSON-LD structured data (ScholarlyArticle, Book, CreativeWork, FAQPage)
+- [ ] Set up Google Search Console and verify domain
+- [ ] Submit sitemap to Google Search Console
+- [ ] Submit URL inspection for top 5 pages (/, /theory, /nexus, /read, /skeptics)
+- [ ] Register with Bing Webmaster Tools
+- [ ] Add explicit AI crawler welcome in robots.txt
+- [ ] Ensure SSR/pre-rendering for SPA pages so crawlers can parse content
+
+## Opus 4.6 Swarm Mode Exploration (Feb 10, 2026)
+- [ ] Explore Claude Opus 4.6 swarm mode hands-on (curiosity-first)
+- [ ] Document findings and capabilities discovered
+
+## Opus 4.6 Audit — Design Recommendations (Feb 10, 2026)
+- [ ] Consolidate 3 redundant homepage path-selection sections into 1
+- [ ] Move Silicon Samsara to dedicated subpage with teaser on homepage
+- [ ] Restructure navigation into 5-6 dropdown categories
+- [ ] Create unified AI Hub page (consolidate /nexus, /for-ai, /scap, /dialectic)
+- [ ] Add micro-citations to daily wisdom quotes
+- [ ] Context-dependent attribution (Brother Ken vs K. Johnson)
+- [ ] Label ⌘K as "Search" with keyboard shortcut as secondary
+- [ ] Create clear reading ladder (Executive Summary → Full ToE)
+
+
+## ToE v16.1 Formatting Issue (Feb 10, 2026)
+- [ ] Investigate why ToE v16.1 lost clean formatting on website
+- [ ] Check if HTML format is causing display/download issues
+- [ ] Generate properly formatted PDF from v16.1
+- [ ] Upload formatted PDF to S3 CDN
+- [ ] Update download links to point to properly formatted PDF
+- [ ] Verify formatting on Read page and download
