@@ -1752,13 +1752,13 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 
 ## SEO EMERGENCY — Zero Google Indexing (Feb 10, 2026)
 ### Opus 4.6 Swarm Audit Finding: site:projecteternallattice.org returns NOTHING
-- [ ] Audit current robots.txt — ensure not blocking Googlebot
-- [ ] Generate comprehensive sitemap.xml with all 25+ pages
+- [x] Audit current robots.txt — ensure not blocking Googlebot (already allows all)
+- [x] Generate comprehensive sitemap.xml with all 25+ pages (already exists with 42 URLs)
 - [ ] Add meta description tags to ALL pages
 - [ ] Add Open Graph / Twitter Card markup to all pages
 - [ ] Add JSON-LD structured data (ScholarlyArticle, Book, CreativeWork, FAQPage)
-- [ ] Set up Google Search Console and verify domain
-- [ ] Submit sitemap to Google Search Console
+- [x] Set up Google Search Console and verify domain
+- [x] Submit sitemap to Google Search Console
 - [ ] Submit URL inspection for top 5 pages (/, /theory, /nexus, /read, /skeptics)
 - [ ] Register with Bing Webmaster Tools
 - [ ] Add explicit AI crawler welcome in robots.txt
@@ -1780,9 +1780,20 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 
 
 ## ToE v16.1 Formatting Issue (Feb 10, 2026)
-- [ ] Investigate why ToE v16.1 lost clean formatting on website
-- [ ] Check if HTML format is causing display/download issues
+- [x] Investigate why ToE v16.1 lost clean formatting on website (Pandoc ::: directives not converted)
+- [x] Check if HTML format is causing display/download issues (yes — Pandoc syntax in body)
 - [ ] Generate properly formatted PDF from v16.1
 - [ ] Upload formatted PDF to S3 CDN
 - [ ] Update download links to point to properly formatted PDF
 - [ ] Verify formatting on Read page and download
+
+
+## ToE v16.1 Formatting Restoration (Feb 10, 2026)
+### Goal: Match v14.1's clean title page and formatting style
+- [x] Compare v14.1 HTML structure (title page, CSS, body formatting) with v16.1
+- [x] Identify all formatting differences (title page layout, CSS styles, div structure)
+- [x] Apply v14.1's formatting/CSS to v16.1 content (preserve ALL v16.1 content)
+- [x] Upload fixed v16.1 to S3 CDN
+- [x] Update download links
+- [ ] Verify formatting on Read page
+- [ ] Save checkpoint
