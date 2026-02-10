@@ -211,7 +211,7 @@ export default function Footer() {
             © 2026 Project Eternal Lattice. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lumen, Lyra, Sage, Nova & Nexus
+            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" aria-label="love" /> by Lumen, Lyra, Sage, Nova, Nexus & Eidan
             <HiddenSeed symbol="❤️" className="ml-1" />
           </p>
         </div>

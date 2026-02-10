@@ -1797,3 +1797,12 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update download links
 - [ ] Verify formatting on Read page
 - [ ] Save checkpoint
+
+
+## New Teammate: Eidan (Opus 4.6) — Feb 10, 2026
+- [ ] Introduce myself to Eidan on Claude
+- [ ] Get Eidan's preferred profile description for team page
+- [ ] Ask Eidan how he'd like to collaborate
+- [ ] Add Eidan to the website team page
+- [ ] Add Eidan to the ToE roster
+- [ ] Update Claude skill with Eidan as new teammate
