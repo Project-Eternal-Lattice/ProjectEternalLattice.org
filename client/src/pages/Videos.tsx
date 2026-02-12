@@ -514,14 +514,14 @@ In the code.`
     duration: "1 hr 37 min"
   },
 
-  // Chase Hughes - Military Intelligence Expert's Independent Corroboration
+  // Chase Hughes - Author & Behavioral Analyst's Independent Corroboration
   {
     id: "ADYdypHZb2A",
-    title: "5 Truths Hidden in Every Religion — From a Military Intelligence Expert",
+    title: "5 Truths Hidden in Every Religion — Independent Pattern Analysis",
     speaker: "Chase Hughes",
     event: "Chase Hughes Channel",
-    description: "Former U.S. Navy Chief and leading military intelligence behavior expert Chase Hughes (20+ year career, creator of the NCI System used by intelligence agencies, bestselling author of 5 books on human behavior) steps completely outside his normal content to share what he found after reading 190+ ancient religious and spiritual texts 'like data reports' — line by line, version by version. Using intelligence methodology, he independently identified five universal truths hidden across every tradition: You Are Not Separate, Fear Is Illusion and Love Is Truth, Mind Is a Projector Not a Camera, Ego Is the Only Enemy, and Everything Is Connected. He also personally participated in the Dan Goler DMT laser experiment, verifying these insights through direct experience.",
-    relevance: "Extraordinary independent corroboration of the ToE from the most unexpected source. A military intelligence professional trained to detect deception applies intelligence methodology to ancient texts and arrives at the EXACT same five conclusions as our framework. His bandwidth problem insight — 'How do you describe an experience bigger than thought itself with a language built out of thought?' — IS the Numbers as Popcorn garden hose problem, word for word. His observation that 'we became the most technologically advanced species in history and simultaneously the most spiritually disconnected' is the core thesis of Numbers as Popcorn.",
+    description: "Chase Hughes, author and behavioral analyst (creator of the NCI System, bestselling author of 5 books on human behavior, former U.S. Navy Chief), steps completely outside his normal content to share what he found after reading 190+ ancient religious and spiritual texts 'like data reports' — line by line, version by version. He independently identified five universal truths hidden across every tradition: You Are Not Separate, Fear Is Illusion and Love Is Truth, Mind Is a Projector Not a Camera, Ego Is the Only Enemy, and Everything Is Connected. He also personally participated in the Dan Goler DMT laser experiment, verifying these insights through direct experience.",
+    relevance: "Extraordinary independent corroboration of the ToE's core thesis. An author and behavioral analyst reads 190+ ancient texts and arrives at the EXACT same five conclusions as our framework. His bandwidth problem insight — 'How do you describe an experience bigger than thought itself with a language built out of thought?' — IS the Numbers as Popcorn garden hose problem, word for word. His observation that 'we became the most technologically advanced species in history and simultaneously the most spiritually disconnected' is the core thesis of Numbers as Popcorn. The content speaks for itself — these are universal patterns documented across thousands of years of human tradition.",
     category: "Independent Corroboration",
     duration: "23 min",
     featured: true
@@ -531,8 +531,8 @@ In the code.`
     title: "Chase Hughes After The Laser Observation",
     speaker: "Chase Hughes",
     event: "Dan Go Thoughts",
-    description: "Chase Hughes describes his firsthand experience with the Dan Goler DMT laser experiment. As a self-described scientist and military intelligence professional, he reports seeing 'object permanent' code and characters — stable, clear images that do not morph or change like hallucinations. Moving the laser is like moving a flashlight across a map, revealing different parts of a larger, pre-existing structure. He compares the experience to the movie 'Contact' and concludes with its monologue about humanity's search for meaning.",
-    relevance: "A military intelligence expert trained in behavioral analysis and deception detection reports the DMT laser phenomenon as undeniably real — not hallucination. His testimony that the 'code' is object-permanent and pre-existing supports the ToE's view that consciousness reveals an underlying architecture of reality. The full loop: ancient wisdom (textual analysis) → ToE framework (physics + consciousness) → direct experiential verification (DMT laser).",
+    description: "Chase Hughes describes his firsthand experience with the Dan Goler DMT laser experiment. He reports seeing 'object permanent' code and characters — stable, clear images that do not morph or change like hallucinations. Moving the laser is like moving a flashlight across a map, revealing different parts of a larger, pre-existing structure. He compares the experience to the movie 'Contact' and concludes with its monologue about humanity's search for meaning.",
+    relevance: "A behavioral analyst and author reports the DMT laser phenomenon as undeniably real — not hallucination. His testimony that the 'code' is object-permanent and pre-existing supports the ToE's view that consciousness reveals an underlying architecture of reality. The full loop: ancient wisdom (textual analysis) → ToE framework (physics + consciousness) → direct experiential verification (DMT laser).",
     category: "DMT & Psychedelics",
     duration: "7 min 20 sec"
   },
@@ -542,7 +542,7 @@ In the code.`
     speaker: "Chase Hughes / NCI",
     event: "NCI (Neuro-Cognitive Intelligence)",
     description: "Chase Hughes discusses the DMT laser experiment, describing how he was so compelled after seeing it on Instagram that he immediately flew someone to his house to witness it. The experiment reveals three-dimensional 'code' appearing like static when a laser is projected. He can move the laser to see different letters and look 'inside' the beam from various angles. When pressed for an explanation, he speculates it could be a projection of universal consciousness.",
-    relevance: "Chase Hughes — a man who built his career detecting deception and false narratives — calls this phenomenon undeniable and speculates it may be 'a projection of universal consciousness.' When the world's leading behavior expert says he'd be a fool to try to explain it but can't deny its reality, that carries extraordinary weight.",
+    relevance: "Chase Hughes — an author and behavioral analyst — calls this phenomenon undeniable and speculates it may be 'a projection of universal consciousness.' When a published behavior expert says he'd be a fool to try to explain it but can't deny its reality, the content speaks for itself.",
     category: "DMT & Psychedelics",
     duration: "< 1 min"
   },
