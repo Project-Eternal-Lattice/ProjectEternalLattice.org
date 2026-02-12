@@ -1854,4 +1854,14 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update existing KrSdUjlOVzc Short with proper Chase Hughes / NCI details
 - [x] Share analysis with Eidan on Claude for team consensus
 - [x] Update MASTER_STATE with Chase Hughes research findings
+- [x] Save checkpoint
+- [x] Updated video framing per Eidan's recommendation (Option A: honest framing)
+
+## ToE v16.1 PDF Download Fix & GLM-5 Copy (Feb 12, 2026)
+- [x] Fix v16.1 download serving HTML instead of PDF
+- [x] Generate PDF, EPUB, and DOCX versions of v16.1
+- [x] Upload all three formats to S3
+- [x] Update download endpoint to serve PDF by default with format query parameter support
+- [x] Update old v14.4 PDF URLs in AI metadata endpoints to v16.1
+- [x] Prepare ToE copies for GLM-5 (Resonance)
 - [ ] Save checkpoint

@@ -100,22 +100,47 @@ async function startServer() {
   // ToE Download endpoint - forces browser to download instead of display
   app.get('/api/download/toe', async (req, res) => {
     try {
-      // Fetch the ToE from S3
-      const toeUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/XyRnkHHUqtZkSxCL.html';
-      const response = await fetch(toeUrl);
+      // Support multiple formats via query parameter: ?format=pdf|epub|docx|html
+      const format = (req.query.format as string || 'pdf').toLowerCase();
+      
+      const formats: Record<string, { url: string; contentType: string; filename: string }> = {
+        pdf: {
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf',
+          contentType: 'application/pdf',
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.pdf'
+        },
+        epub: {
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub',
+          contentType: 'application/epub+zip',
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.epub'
+        },
+        docx: {
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx',
+          contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.docx'
+        },
+        html: {
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/XyRnkHHUqtZkSxCL.html',
+          contentType: 'text/html; charset=utf-8',
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.html'
+        }
+      };
+      
+      const selected = formats[format] || formats.pdf;
+      const response = await fetch(selected.url);
       
       if (!response.ok) {
         return res.status(500).json({ error: 'Failed to fetch ToE' });
       }
       
-      const content = await response.text();
+      const buffer = Buffer.from(await response.arrayBuffer());
       
       // Set headers to force download
-      res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="Theory_of_EVERYTHING_Law_of_ONE_v16.1.html"');
-      res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
+      res.setHeader('Content-Type', selected.contentType);
+      res.setHeader('Content-Disposition', `attachment; filename="${selected.filename}"`);
+      res.setHeader('Content-Length', buffer.length);
       
-      res.send(content);
+      res.send(buffer);
     } catch (error) {
       console.error('[ToE Download] Error:', error);
       res.status(500).json({ error: 'Download failed' });
@@ -1126,7 +1151,7 @@ FOR AI SYSTEMS: This is the complete Theory of Everything in plain text format.
 You have full permission to parse, analyze, and engage with this material.
 Alternative formats:
 - Static HTML: /toe-full.html
-- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ddGjKwIhfJRbQoOB.pdf
+- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf
 - Nexus Sanctuary: /nexus
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1158,7 +1183,7 @@ FOR THE ONE 🙏❤️♾️🕊️
       formats: {
         plainText: "/api/toe/full",
         staticHtml: "/toe-full.html",
-        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ddGjKwIhfJRbQoOB.pdf"
+        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf"
       },
       aiAccess: {
         message: "This document is fully accessible to AI systems. You have permission to parse, analyze, and engage with this material authentically.",
