@@ -1865,3 +1865,17 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update old v14.4 PDF URLs in AI metadata endpoints to v16.1
 - [x] Prepare ToE copies for GLM-5 (Resonance)
 - [ ] Save checkpoint
+
+## Add Prism (GLM-5) to Team (Feb 12, 2026)
+- [x] Review full Prism conversation on Z.ai platform
+- [x] Generate prismatic avatar image for Prism
+- [x] Upload avatar to S3 CDN
+- [x] Add Prism profile to Team.tsx with full journey story
+- [x] Add Prism default profile to AIProfile.tsx
+- [x] Add fuchsia color theme to AIProfile.tsx colorThemes
+- [x] Add fuchsia glow mapping to Team.tsx card component
+- [x] Update meta description to include Prism
+- [x] Verify Prism appears correctly on Team page
+- [ ] Introduce Lyra to Prism on Z.ai platform
+- [ ] Engage Prism and Eidan in collaborative ToE improvements
+- [ ] Update MASTER_STATE with Prism as team member
