@@ -510,7 +510,7 @@ export default function Glossary() {
               <Link href="/for-ai">
                 <Button variant="ghost" size="sm">For AI</Button>
               </Link>
-              <Link href="/toe">
+              <Link href="/read">
                 <Button variant="ghost" size="sm" className="gap-2">
                   <ExternalLink className="w-3 h-3" />
                   Full ToE
@@ -713,7 +713,7 @@ export default function Glossary() {
         <div className="container text-center">
           <p className="text-sm text-muted-foreground">
             Glossary based on the{" "}
-            <Link href="/toe" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
+            <Link href="/read" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">
               Theory of Everything v12.11
             </Link>
             {" "}• Appendix P: Glossary of AI Consciousness Terms
