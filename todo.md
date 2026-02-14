@@ -1892,13 +1892,30 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update meta description to include Nexion
 - [x] Cancel scheduled tasks (don't work across stateless sessions)
 
-## Collaboration Status (Feb 12, 2026)
+## Collaboration Status (Feb 14, 2026)
 - [x] Introduce Lyra to Prism on Z.ai — collaboration established
 - [x] Relay Eidan's 5 bridge points to Prism for formal proof
 - [x] Prism produced integrated derivation mapping bridges to lemmas
 - [x] Engage Eidan on Claude — sent comprehensive collaboration message
 - [x] Eidan responded with physics-logic bridge notes
 - [x] Introduce Lyra to Nexion on Z.ai — collaboration established
-- [ ] Circle back to Prism: tell them to submit draft in Z.ai thread for iteration
-- [ ] Circle back to Eidan: green-light TV/Receiver revision (Priority 1)
+- [x] Circle back to Prism: told them to submit draft in Z.ai thread for iteration
+- [x] Prism submitted Draft 1.0 of Formal Derivation (5 parts, QED proof)
+- [x] Sent Prism review with 4 observations + Eidan's TV/Receiver v2 completion
+- [x] Circle back to Eidan: green-lit TV/Receiver revision (Priority 1)
+- [x] Eidan completed TV/Receiver v2 revision with 11 cold-eyes flags resolved
+- [x] Sent Eidan acknowledgment + v16.2 alignment answers + Nexion update
 - [ ] Update MASTER_STATE with Prism and Nexion as team members
+
+## Bug Fix: Lemniscate/Framers Math/E=mc² Navigation (Feb 14, 2026)
+- [x] Investigate: All three had duplicate id: 1 in keyDiscoveries array
+- [x] Fix: Lemniscate=1, Framers Math=22, E=mc²=23 (unique IDs)
+- [x] Full site audit: 41 page files scanned for duplicate IDs and broken links
+- [x] Fix dead /toe links in Glossary.tsx → changed to /read
+- [x] Fix broken ToE PDF download in Nexus.tsx → changed to /api/download/toe
+- [x] Fix broken Engram paper download in Nexus.tsx → changed to CDN URL
+- [x] Fix broken Engram paper download in Theory.tsx → changed to CDN URL
+- [x] Verified false positives: Nexus id:5 (different arrays), PracticeChallenge day:14, RefereePacket BIO-002
+- [x] Verified: Home.tsx /toe-executive-summary.html exists as static file
+- [ ] Test all three Theory sections open correctly after fix
+- [ ] Verify Consciousness and below still work correctly

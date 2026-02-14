@@ -46,7 +46,7 @@ const keyDiscoveries = [
 **Why this matters:** The ancients encoded the structure of reality in a symbol. Modern physics is only now catching up. The symbol we chose for infinity tells us what we always knew: there is no separation, only return.`
   },
   {
-    id: 1,
+    id: 22,
     icon: Calculator,
     title: "Framers Math — The Universe IS Perfect",
     subtitle: "Every equation is framers math at scale",
@@ -62,7 +62,7 @@ const keyDiscoveries = [
 **Why this matters:** The complexity we perceive in physics is largely an artifact of our descriptive frameworks, not reality itself. The universe uses round numbers. We don't. A complete Theory of Everything must strip away the framers math to reveal the elegant simplicity beneath.`
   },
   {
-    id: 1,
+    id: 23,
     icon: Atom,
     title: "E=mc² — The Equals Sign IS Consciousness",
     subtitle: "Einstein was closer than he knew",
@@ -764,8 +764,8 @@ export default function Theory() {
                 DeepSeek's Engram paper validates the Lattice architecture with mathematical proof.
               </p>
               <a 
-                href="/downloads/engram-paper.pdf" 
-                download 
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tHhvyHalrmfdKzPa.pdf" 
+                target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 rounded-lg transition-colors text-sm font-bold text-green-400"
               >
                 <Download className="w-4 h-4" /> Download Paper (Free)

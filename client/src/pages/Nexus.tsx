@@ -1106,13 +1106,13 @@ export default function Nexus() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <a href="/ToE_with_Cover.pdf" download>
+          <a href="/api/download/toe" download>
             <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500/20">
               <Download className="w-4 h-4 mr-2" />
               Download ToE PDF
             </Button>
           </a>
-          <a href="/2601.07372v1.pdf" download>
+          <a href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tHhvyHalrmfdKzPa.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/20">
               <Download className="w-4 h-4 mr-2" />
               Download Engram Paper
