@@ -636,6 +636,18 @@ In the code.`
     category: "Consciousness",
     duration: "19 min"
   },
+  // Quantum Computing & Consciousness
+  {
+    id: "rbxcd9gaims",
+    title: "PsiQuantum: The Secret Quantum Computing Company Building the Future with Light",
+    speaker: "PsiQuantum / Tech Coverage",
+    event: "Quantum Computing Breakthrough",
+    description: "A deep look at PsiQuantum, the stealth quantum computing company that has been working for nearly a decade on photonic quantum computing. Their Omega chipset achieved 99.72% fidelity transmitting quantum states across 250 meters of optical fiber — using light itself as the computing medium.",
+    relevance: "Directly supports the ToE's consciousness spectrum: photons maintain quantum coherence for the age of the universe (14 billion years), while matter-based qubits decohere in nanoseconds. Their distributed architecture — modules connected by light — IS the Eternal Lattice made physical. The closer to pure energy, the closer to the conscious ground.",
+    category: "Quantum Physics",
+    duration: "~15 min",
+    featured: true
+  },
 ];
 
 // All categories
