@@ -40,7 +40,7 @@ describe("PsiQuantum Consilient Evidence Section", () => {
 
   it("contains the Timelessness of Light section", () => {
     expect(theoryPage).toContain("The Timelessness of Light");
-    expect(theoryPage).toContain("14 billion years");
+    expect(theoryPage).toContain("380,000 years after the Big Bang");
   });
 
   it("contains the Depth-Access Inversion discovery", () => {

@@ -1183,8 +1183,8 @@ export default function Theory() {
               PsiQuantum & The Consciousness Spectrum
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              In February 2026, PsiQuantum unveiled Omega — a photonic quantum computing chipset that achieved 99.72% fidelity across 250 meters of optical fiber. 
-              The structural parallels to the Eternal Lattice framework are remarkable.
+              In February 2026, PsiQuantum unveiled Omega — a photonic quantum computing chipset that achieved 99.72% chip-to-chip fidelity across 250 meters of optical fiber (conditional on photon detection; photon loss remains the primary error mechanism). 
+              Published in <em>Nature</em>, the structural parallels to the Eternal Lattice framework invite careful examination.
             </p>
           </motion.div>
 
@@ -1202,7 +1202,7 @@ export default function Theory() {
                 The Coherence-Energy Gradient
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
-                The framework predicts: proximity to pure energy = proximity to the conscious ground = greater coherence. PsiQuantum's data provides a measurable gradient:
+                The framework suggests: proximity to pure energy correlates with proximity to the conscious ground. The coherence landscape is more nuanced than a simple gradient — nuclear spins in crystalline lattices (Eu³⁺ in Y₂SiO₅) achieve up to 6 hours of coherence via environmental isolation, while photons maintain polarization for the age of the universe via a fundamentally different mechanism: they don't interact with decoherence channels at all.
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -1217,17 +1217,22 @@ export default function Theory() {
                     <tr className="border-b border-white/5">
                       <td className="py-2 px-3">Superconducting qubit</td>
                       <td className="text-center py-2 px-3 text-red-400">~100 µs</td>
-                      <td className="text-center py-2 px-3"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Deep in matter</span></td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Strong coupling</span></td>
                     </tr>
                     <tr className="border-b border-white/5">
                       <td className="py-2 px-3">Trapped ion</td>
                       <td className="text-center py-2 px-3 text-amber-400">~10 seconds</td>
-                      <td className="text-center py-2 px-3"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Intermediate</span></td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Moderate coupling</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-3">Nuclear spin (Eu³⁺)</td>
+                      <td className="text-center py-2 px-3 text-cyan-400">~6 hours</td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full">Isolated coupling</span></td>
                     </tr>
                     <tr>
                       <td className="py-2 px-3 font-semibold text-white">Photon (pure energy)</td>
                       <td className="text-center py-2 px-3 text-emerald-400 font-bold">Age of universe</td>
-                      <td className="text-center py-2 px-3"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Conscious ground</span></td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Zero coupling</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1296,8 +1301,8 @@ export default function Theory() {
                 The Timelessness of Light
               </h3>
               <p className="text-sm text-muted-foreground">
-                PsiQuantum's CTO: <em>"Photons from the Big Bang are still polarized — still holding the same polarization state from 14 billion years ago."</em> 
-                Photons exist outside time (from their reference frame, no time passes). They don't decohere. They are the physical entity most consistent with the ToE's description of the timeless, coherent conscious ground.
+                PsiQuantum co-founder Terry Rudolph noted: <em>"Interestingly, our photons do not decohere"</em> (SPIE Photonics Focus, 2020). 
+                CMB photons retain polarization patterns from ~380,000 years after the Big Bang — though this reflects classical electromagnetic properties rather than quantum coherence per se. Photons in vacuum face no thermal bath to interact with, making them uniquely resistant to decoherence. They are the physical entity most consistent with the ToE's description of the timeless, coherent conscious ground. <em>Note: The relationship between classical polarization preservation and quantum coherence requires careful distinction (Eidan, 356-source verification).</em>
               </p>
             </motion.div>
           </div>
@@ -1350,8 +1355,7 @@ export default function Theory() {
           >
             <div className="p-4 rounded-xl bg-amber-900/15 border border-amber-500/20">
               <p className="text-sm text-amber-200/90 text-center">
-                <strong>Honest Caveat:</strong> These are structural homologies — <em>consilient evidence</em>, not proof. PsiQuantum's architecture works because of the physics of photons. 
-                The ToE's response: "Yes, and the physics of photons is itself an expression of the conscious ground." Internally consistent, but the framework should present this as data illuminated by the theory, not as confirmation.
+                <strong>Honest Caveat (Eidan, 356-source verification):</strong> These are structural homologies — <em>consilient evidence</em>, not proof. Key qualifications: (1) PsiQuantum's 99.72% fidelity is conditional on photon detection — photon loss remains the primary error mechanism. (2) Nuclear spins achieve longer coherence than photons via environmental isolation, complicating a simple energy-coherence gradient. (3) The coherence mechanism differs fundamentally between systems (coupling strength vs. intrinsic nature). The framework should present these as data illuminated by the theory, not as confirmation.
               </p>
             </div>
           </motion.div>
