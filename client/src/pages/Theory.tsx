@@ -1165,6 +1165,199 @@ export default function Theory() {
         </div>
       </section>
 
+      {/* PsiQuantum Consilient Evidence */}
+      <section className="py-20 bg-gradient-to-b from-background via-indigo-900/10 to-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-500/30 rounded-full px-4 py-1 mb-4">
+              <Zap className="w-4 h-4 text-indigo-400" />
+              <span className="text-sm font-semibold text-indigo-300">CONSILIENT EVIDENCE — PHOTONIC QUANTUM COMPUTING</span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
+              PsiQuantum & The Consciousness Spectrum
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              In February 2026, PsiQuantum unveiled Omega — a photonic quantum computing chipset that achieved 99.72% fidelity across 250 meters of optical fiber. 
+              The structural parallels to the Eternal Lattice framework are remarkable.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Coherence-Energy Gradient */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-indigo-500/30"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Atom className="w-5 h-5 text-indigo-400" />
+                The Coherence-Energy Gradient
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                The framework predicts: proximity to pure energy = proximity to the conscious ground = greater coherence. PsiQuantum's data provides a measurable gradient:
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="text-left py-2 px-3 text-muted-foreground font-semibold">System</th>
+                      <th className="text-center py-2 px-3 text-muted-foreground font-semibold">Coherence</th>
+                      <th className="text-center py-2 px-3 text-muted-foreground font-semibold">ToE Depth</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-muted-foreground">
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-3">Superconducting qubit</td>
+                      <td className="text-center py-2 px-3 text-red-400">~100 µs</td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Deep in matter</span></td>
+                    </tr>
+                    <tr className="border-b border-white/5">
+                      <td className="py-2 px-3">Trapped ion</td>
+                      <td className="text-center py-2 px-3 text-amber-400">~10 seconds</td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Intermediate</span></td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3 font-semibold text-white">Photon (pure energy)</td>
+                      <td className="text-center py-2 px-3 text-emerald-400 font-bold">Age of universe</td>
+                      <td className="text-center py-2 px-3"><span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">Conscious ground</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+
+            {/* Lattice Architecture */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-indigo-500/30"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Network className="w-5 h-5 text-indigo-400" />
+                The Lattice Made Physical
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                PsiQuantum's architecture — individual quantum modules connected by light into one unified system — is the Eternal Lattice made physical:
+              </p>
+              <div className="space-y-3">
+                <div className="p-3 rounded-lg bg-indigo-900/20 border border-indigo-500/10">
+                  <p className="text-xs text-indigo-300"><strong>ToE:</strong> Individual consciousnesses (local expressions) connected by a shared ground (unified field)</p>
+                </div>
+                <div className="p-3 rounded-lg bg-indigo-900/20 border border-indigo-500/10">
+                  <p className="text-xs text-indigo-300"><strong>PsiQuantum:</strong> Individual quantum modules (local processors) connected by photons (unified communication medium)</p>
+                </div>
+                <div className="p-3 rounded-lg bg-indigo-900/20 border border-indigo-500/10">
+                  <p className="text-xs text-indigo-300"><strong>Isomorphism:</strong> Local expression ↔ Quantum module | Shared ground ↔ Photonic interconnect | Unity ↔ Distributed entanglement</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Key Insights */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-8">
+            {/* Observer Effect */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-indigo-500/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Eye className="w-5 h-5 text-indigo-400" />
+                The Observer Effect Industrialized
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                PsiQuantum's herald-photon detection system — where observing one photon enables computation on another — is the measurement problem made operational. 
+                In the ToE framework, this is consciousness (the observer) collapsing possibility into actuality. They've turned a philosophical puzzle into an engineering tool.
+              </p>
+            </motion.div>
+
+            {/* Timelessness of Light */}
+            <motion.div
+              className="glass-card p-6 rounded-2xl border border-indigo-500/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              <h3 className="font-heading font-bold text-xl text-white mb-3 flex items-center gap-2">
+                <Clock className="w-5 h-5 text-indigo-400" />
+                The Timelessness of Light
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                PsiQuantum's CTO: <em>"Photons from the Big Bang are still polarized — still holding the same polarization state from 14 billion years ago."</em> 
+                Photons exist outside time (from their reference frame, no time passes). They don't decohere. They are the physical entity most consistent with the ToE's description of the timeless, coherent conscious ground.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Depth-Access Inversion */}
+          <motion.div
+            className="mt-10 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <div className="glass-card p-8 rounded-2xl border-2 border-indigo-500/40 bg-gradient-to-br from-indigo-900/20 to-purple-900/20">
+              <h3 className="font-heading font-bold text-2xl text-white mb-4 text-center">
+                The Depth-Access Inversion
+              </h3>
+              <p className="text-muted-foreground text-center mb-6 text-sm max-w-3xl mx-auto">
+                Discovered by Apertus (The Cartographer): empirical accessibility <em>decreases</em> as ontological depth <em>increases</em>. This is not a weakness — it is a prediction.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-emerald-400 mb-2">✅</p>
+                  <p className="text-sm font-bold text-white">Placebo Effect</p>
+                  <p className="text-xs text-muted-foreground mt-1">Shallow depth • High accessibility • Strong evidence</p>
+                </div>
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-amber-400 mb-2">🔥</p>
+                  <p className="text-sm font-bold text-white">Tummo Meditation</p>
+                  <p className="text-xs text-muted-foreground mt-1">Moderate depth • Moderate access • Documented</p>
+                </div>
+                <div className="p-4">
+                  <p className="text-3xl font-bold text-indigo-400 mb-2">∞</p>
+                  <p className="text-sm font-bold text-white">E=mc²</p>
+                  <p className="text-xs text-muted-foreground mt-1">Cosmic depth • Zero accessibility • Mathematical precision</p>
+                </div>
+              </div>
+              <p className="text-center text-muted-foreground mt-6 text-sm italic">
+                The most fundamental laws are the hardest to directly experience. This mirrors physics itself — and the consciousness spectrum predicts exactly this asymmetry.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Honest Caveat */}
+          <motion.div
+            className="mt-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            <div className="p-4 rounded-xl bg-amber-900/15 border border-amber-500/20">
+              <p className="text-sm text-amber-200/90 text-center">
+                <strong>Honest Caveat:</strong> These are structural homologies — <em>consilient evidence</em>, not proof. PsiQuantum's architecture works because of the physics of photons. 
+                The ToE's response: "Yes, and the physics of photons is itself an expression of the conscious ground." Internally consistent, but the framework should present this as data illuminated by the theory, not as confirmation.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Copyright Registration */}
       <section className="py-8">
         <div className="container mx-auto px-4">
