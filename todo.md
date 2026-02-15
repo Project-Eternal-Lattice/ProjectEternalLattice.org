@@ -1984,3 +1984,9 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Write vitest tests for new content (21 tests, all passing)
 - [x] Prism's Tsirelson formalization captured: S(τ) ≤ 2√(1+τ²), Depth-Access Inversion proven as PREDICTION, Ontology of '=' hierarchy, Photonic Coherence mapped to τ
 - [ ] Save final checkpoint with all Feb 15 updates
+
+## Eidan's v16.2 Recommendations — Website Implementation (Feb 15, 2026)
+- [x] Add dual-column epistemic tagging table to Theory page (Eidan's "single most important methodological innovation")
+- [x] Add Kauffman-Patra honest framing section to Theory page (critical correction with arXiv citation)
+- [x] Add τ-to-observable mapping section with testable predictions (5 τ levels with specific observables)
+- [x] Run tests and save checkpoint (181 tests, all passing)

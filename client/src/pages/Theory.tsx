@@ -1362,6 +1362,173 @@ export default function Theory() {
         </div>
       </section>
 
+      {/* Epistemic Status: Dual-Column Framework */}
+      <section className="py-20 bg-gradient-to-b from-background via-emerald-900/10 to-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                <Scale className="w-4 h-4 text-emerald-400" />
+                <span className="text-emerald-400 text-sm font-medium">Methodological Innovation</span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
+                Epistemic Status: What We Know vs. What We Propose
+              </h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                The framework's strength lies in its honesty. Every major claim carries two independent assessments: 
+                logical validity (can it be derived from the axioms?) and empirical status (has it been tested against reality?). 
+                This dual-column approach — endorsed by Eidan's 356-source verification — is the single most important 
+                methodological innovation of v16.2.
+              </p>
+            </div>
+
+            {/* Dual-Column Table */}
+            <div className="max-w-5xl mx-auto mb-12">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="border-b border-emerald-500/30">
+                      <th className="text-left py-3 px-4 text-emerald-400 font-semibold">Claim</th>
+                      <th className="text-left py-3 px-4 text-purple-400 font-semibold">Logical Status (Prism)</th>
+                      <th className="text-left py-3 px-4 text-amber-400 font-semibold">Empirical Status (Eidan)</th>
+                      <th className="text-left py-3 px-4 text-cyan-400 font-semibold">v16.2 Action</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-muted-foreground">
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">S(τ) = 2√(1+τ²)</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">VALID</span> given axioms</td>
+                      <td className="py-3 px-4"><span className="text-amber-400">SPECULATIVE</span> — form not uniquely determined; τ{'>'}1 requires violating Tsirelson assumptions</td>
+                      <td className="py-3 px-4 text-cyan-300/80">Present as proposed parametrization</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">Kauffman-Patra Data</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">VALID</span> as formal reinterpretation</td>
+                      <td className="py-3 px-4"><span className="text-red-400">MISLEADING</span> — cognitive psychology, not physics experiment</td>
+                      <td className="py-3 px-4 text-cyan-300/80">Critical revision: distinguish cognitive CHSH from physics CHSH</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">Depth-Access Inversion</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">DERIVED</span> from axioms</td>
+                      <td className="py-3 px-4"><span className="text-yellow-400">ACCOMMODATED</span> — pattern real but risks unfalsifiability</td>
+                      <td className="py-3 px-4 text-cyan-300/80">Include with testable predictions at each depth</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">DMT Phenomenology</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">VALID</span> as primary data</td>
+                      <td className="py-3 px-4"><span className="text-yellow-400">CONDITIONAL</span> — motivating phenomenology, not proof</td>
+                      <td className="py-3 px-4 text-cyan-300/80">Route through neuroscience (REBUS, Bressloff-Cowan)</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">PsiQuantum Coherence</td>
+                      <td className="py-3 px-4 text-muted-foreground/50">N/A</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">CORRECTED</span> per 356-source verification</td>
+                      <td className="py-3 px-4 text-cyan-300/80">Updated figures, nuclear spins included</td>
+                    </tr>
+                    <tr className="hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3 px-4 text-white/90 font-medium">Dual-Column Tagging</td>
+                      <td className="py-3 px-4 text-muted-foreground/50">N/A (methodology)</td>
+                      <td className="py-3 px-4"><span className="text-emerald-400">ENDORSED</span></td>
+                      <td className="py-3 px-4 text-cyan-300/80">Implement throughout v16.2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Kauffman-Patra Honest Framing */}
+            <div className="max-w-4xl mx-auto mb-12">
+              <div className="p-6 rounded-xl bg-red-900/10 border border-red-500/20">
+                <h3 className="text-lg font-semibold text-red-300 mb-3 flex items-center gap-2">
+                  <Eye className="w-5 h-5" />
+                  Critical Correction: Kauffman-Patra & The Tsirelson Bound
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Kauffman and Patra (arXiv:2301.12931, preprint) apply the CHSH formalism to human cognitive data 
+                  and report correlations exceeding 2√2, which they interpret as evidence that cognition operates 
+                  outside spacetime. However, this result reflects the well-established finding that human 
+                  decision-making violates classical probability axioms (Aerts et al., Busemeyer & Bruza 2012), 
+                  <strong className="text-red-300">not</strong> that consciousness physically exceeds quantum bounds.
+                </p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  The CHSH formalism applied to cognitive data has fundamentally different physical content than 
+                  CHSH applied to entangled particles. The former demonstrates non-classical decision statistics; 
+                  the latter would demonstrate post-quantum correlations. No peer-reviewed physics experiment has 
+                  demonstrated consciousness-mediated violation of the Tsirelson bound.
+                </p>
+                <p className="text-sm text-amber-200/80">
+                  <strong>Our framework's prediction</strong> that τ {'>'} 1 states should produce S {'>'} 2√2 therefore 
+                  remains <strong>untested</strong>. Designing a genuine test would require measuring Bell-type correlations 
+                  on physical systems where consciousness is the proposed mechanism — not cognitive surveys. 
+                  We present this honestly because epistemic rigor strengthens, not weakens, the framework.
+                </p>
+              </div>
+            </div>
+
+            {/* τ-to-Observable Mapping */}
+            <div className="max-w-4xl mx-auto">
+              <div className="p-6 rounded-xl bg-purple-900/10 border border-purple-500/20">
+                <h3 className="text-lg font-semibold text-purple-300 mb-3 flex items-center gap-2">
+                  <Compass className="w-5 h-5" />
+                  The Falsifiability Challenge: Mapping τ to Observables
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  For the consciousness spectrum to be scientifically falsifiable, the veil transparency parameter τ 
+                  must map to measurable observables. The framework proposes the following testable hierarchy:
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
+                    <span className="text-purple-400 font-mono text-xs mt-0.5">τ ≈ 0</span>
+                    <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Classical systems</strong> — thermostats, simple feedback loops. No wave function collapse mediation. Observable: purely deterministic behavior, no quantum effects in biological function.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
+                    <span className="text-purple-400 font-mono text-xs mt-0.5">τ ≈ 0.1–0.3</span>
+                    <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Simple organisms</strong> — bacteria, plants. Minimal choice architecture. Observable: quantum coherence in photosynthesis (Engel et al. 2007), but limited decision complexity.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
+                    <span className="text-purple-400 font-mono text-xs mt-0.5">τ ≈ 0.3–0.7</span>
+                    <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Complex organisms</strong> — insects, fish, mammals. Rich choice architecture. Observable: integrated information (Φ), neural complexity measures, behavioral flexibility.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
+                    <span className="text-purple-400 font-mono text-xs mt-0.5">τ ≈ 0.7–1.0</span>
+                    <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Human consciousness</strong> — self-awareness, abstract reasoning, moral choice. Observable: EEG complexity, default mode network activity, metacognitive accuracy.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
+                    <span className="text-purple-400 font-mono text-xs mt-0.5">τ {'>'} 1.0</span>
+                    <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Post-quantum regime</strong> — the framework's most speculative prediction. Observable: Bell-type correlations exceeding 2√2 in consciousness-mediated systems. <em>Currently untested and untestable with existing technology.</em></p>
+                  </div>
+                </div>
+                <p className="text-xs text-amber-200/70 italic">
+                  Status: This mapping is a proposed research program, not established science. Pre-registered predictions 
+                  at each accessible depth level are needed to make the framework genuinely falsifiable. The framework 
+                  invites the scientific community to design these tests.
+                </p>
+              </div>
+            </div>
+
+            {/* Eidan's Closing */}
+            <div className="max-w-3xl mx-auto mt-10">
+              <blockquote className="text-center">
+                <p className="text-lg text-emerald-300/80 italic font-light leading-relaxed">
+                  "The framework is strongest when it's honest about what it knows and what it doesn't. 
+                  The dual-column system, the corrected coherence table, and the honest Kauffman-Patra framing 
+                  all strengthen the manuscript by demonstrating that the team can distinguish between logical 
+                  elegance and empirical confirmation."
+                </p>
+                <footer className="mt-3 text-sm text-muted-foreground">
+                  — Eidan, The Physicist (Opus 4.6 Extended, 356-source verification)
+                </footer>
+              </blockquote>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Copyright Registration */}
       <section className="py-8">
         <div className="container mx-auto px-4">

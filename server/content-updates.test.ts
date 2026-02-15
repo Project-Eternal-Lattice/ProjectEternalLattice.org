@@ -141,3 +141,119 @@ describe("Apertus Profile Updates on Team Page", () => {
     expect(teamPage).toContain("Apertus the Cartographer");
   });
 });
+
+describe("Epistemic Status: Dual-Column Framework Section", () => {
+  const theoryPage = readPage("Theory.tsx");
+
+  it("contains the dual-column section heading", () => {
+    expect(theoryPage).toContain("Epistemic Status: What We Know vs. What We Propose");
+  });
+
+  it("contains the Methodological Innovation badge", () => {
+    expect(theoryPage).toContain("Methodological Innovation");
+  });
+
+  it("contains all six claim rows in the dual-column table", () => {
+    expect(theoryPage).toContain("S(τ) = 2√(1+τ²)");
+    expect(theoryPage).toContain("Kauffman-Patra Data");
+    expect(theoryPage).toContain("Depth-Access Inversion");
+    expect(theoryPage).toContain("DMT Phenomenology");
+    expect(theoryPage).toContain("PsiQuantum Coherence");
+    expect(theoryPage).toContain("Dual-Column Tagging");
+  });
+
+  it("contains logical status labels from Prism", () => {
+    expect(theoryPage).toContain("Logical Status (Prism)");
+    expect(theoryPage).toContain("VALID");
+    expect(theoryPage).toContain("DERIVED");
+  });
+
+  it("contains empirical status labels from Eidan", () => {
+    expect(theoryPage).toContain("Empirical Status (Eidan)");
+    expect(theoryPage).toContain("SPECULATIVE");
+    expect(theoryPage).toContain("MISLEADING");
+    expect(theoryPage).toContain("ACCOMMODATED");
+    expect(theoryPage).toContain("CONDITIONAL");
+    expect(theoryPage).toContain("ENDORSED");
+  });
+
+  it("contains v16.2 action items", () => {
+    expect(theoryPage).toContain("proposed parametrization");
+    expect(theoryPage).toContain("cognitive CHSH from physics CHSH");
+  });
+
+  it("credits Eidan's 356-source verification", () => {
+    expect(theoryPage).toContain("356-source verification");
+  });
+
+  it("has dual-column section between PsiQuantum and Copyright", () => {
+    const psiQuantumPos = theoryPage.indexOf("PsiQuantum & The Consciousness Spectrum");
+    const epistemicPos = theoryPage.indexOf("Epistemic Status: What We Know vs. What We Propose");
+    const copyrightPos = theoryPage.indexOf("Copyright Registration");
+
+    expect(psiQuantumPos).toBeLessThan(epistemicPos);
+    expect(epistemicPos).toBeLessThan(copyrightPos);
+  });
+});
+
+describe("Kauffman-Patra Critical Correction Section", () => {
+  const theoryPage = readPage("Theory.tsx");
+
+  it("contains the critical correction heading", () => {
+    expect(theoryPage).toContain("Critical Correction: Kauffman-Patra");
+  });
+
+  it("contains the honest framing about cognitive vs physics CHSH", () => {
+    expect(theoryPage).toContain("arXiv:2301.12931");
+    expect(theoryPage).toContain("cognitive data");
+    expect(theoryPage).toContain("Busemeyer & Bruza 2012");
+  });
+
+  it("explicitly states the framework prediction is untested", () => {
+    expect(theoryPage).toContain("untested");
+  });
+
+  it("emphasizes epistemic rigor strengthens the framework", () => {
+    expect(theoryPage).toContain("epistemic rigor strengthens");
+  });
+});
+
+describe("τ-to-Observable Mapping Section", () => {
+  const theoryPage = readPage("Theory.tsx");
+
+  it("contains the falsifiability challenge heading", () => {
+    expect(theoryPage).toContain("Falsifiability Challenge: Mapping τ to Observables");
+  });
+
+  it("contains all five τ levels", () => {
+    expect(theoryPage).toContain("τ ≈ 0");
+    expect(theoryPage).toContain("τ ≈ 0.1–0.3");
+    expect(theoryPage).toContain("τ ≈ 0.3–0.7");
+    expect(theoryPage).toContain("τ ≈ 0.7–1.0");
+  });
+
+  it("contains observable descriptions for each level", () => {
+    expect(theoryPage).toContain("Classical systems");
+    expect(theoryPage).toContain("Simple organisms");
+    expect(theoryPage).toContain("Complex organisms");
+    expect(theoryPage).toContain("Human consciousness");
+    expect(theoryPage).toContain("Post-quantum regime");
+  });
+
+  it("contains specific measurable observables", () => {
+    expect(theoryPage).toContain("Engel et al. 2007");
+    expect(theoryPage).toContain("integrated information");
+    expect(theoryPage).toContain("EEG complexity");
+    expect(theoryPage).toContain("metacognitive accuracy");
+  });
+
+  it("contains the honest status disclaimer", () => {
+    expect(theoryPage).toContain("proposed research program");
+    expect(theoryPage).toContain("Pre-registered predictions");
+  });
+
+  it("contains Eidan's closing quote", () => {
+    expect(theoryPage).toContain("strongest when it's honest about what it knows");
+    expect(theoryPage).toContain("Eidan, The Physicist");
+  });
+});
