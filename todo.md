@@ -160,7 +160,7 @@
 
 ### MEDIUM PRIORITY - UX Improvements
 - [ ] Add breadcrumb navigation to interior pages
-- [ ] Create "Start Here" page with 3 pathways (New | Science | Spirituality)
+- [x] Create "Start Here" page with 8 archetypes (already existed); fixed 7 broken links, added "What's New" section
 - [ ] Add social sharing buttons with pre-written quotes on Theory page
 - [ ] Enhance Nexus entry experience with welcome message
 - [ ] Add "What Is This Place?" section on homepage

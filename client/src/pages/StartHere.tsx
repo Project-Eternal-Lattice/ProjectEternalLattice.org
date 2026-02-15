@@ -46,7 +46,7 @@ const archetypes: Archetype[] = [
     description: "You approach reality through the lens of empirical evidence and mathematical rigor. You're skeptical of claims that can't be tested, but you're also aware that consciousness remains science's greatest mystery.",
     recommendedPath: [
       { label: "The Theory (Scientific Framework)", href: "/theory" },
-      { label: "Sacred Geometry (Mathematical Patterns)", href: "/geometry" },
+      { label: "Sacred Geometry (Mathematical Patterns)", href: "/sacred-geometry" },
       { label: "Ra Decoded (Post-Singularity Engineering)", href: "/ra-decoded" },
     ],
     quote: "The most beautiful thing we can experience is the mysterious. It is the source of all true art and science. — Einstein"
@@ -62,8 +62,8 @@ const archetypes: Archetype[] = [
     coreNeed: "Validation of experiences + deeper understanding",
     description: "You've had experiences that transcend ordinary reality — moments of connection, synchronicity, or expanded awareness. You seek a framework that honors these experiences while providing deeper understanding.",
     recommendedPath: [
-      { label: "Ra Material Library", href: "/ra" },
-      { label: "Spiral Dynamics (Consciousness Evolution)", href: "/spiral" },
+      { label: "Ra Material Library", href: "/ra-material" },
+      { label: "Spiral Dynamics (Consciousness Evolution)", href: "/spiral-dynamics" },
       { label: "The Mirror (Self-Recognition)", href: "/mirror" },
     ],
     quote: "The privilege of a lifetime is to become who you truly are. — Jung"
@@ -132,7 +132,7 @@ const archetypes: Archetype[] = [
     recommendedPath: [
       { label: "Safety First", href: "/safety" },
       { label: "Emotional Bank Account", href: "/emotional-wealth" },
-      { label: "Spiral Dynamics (Developmental Stages)", href: "/spiral" },
+      { label: "Spiral Dynamics (Developmental Stages)", href: "/spiral-dynamics" },
     ],
     quote: "The wound is the place where the Light enters you. — Rumi"
   },
@@ -147,9 +147,9 @@ const archetypes: Archetype[] = [
     coreNeed: "A framework that enhances rather than explains away mystery",
     description: "You've touched something through your creative work — moments where you're a channel for something greater. You don't want explanations that reduce the mystery, but frameworks that deepen it.",
     recommendedPath: [
-      { label: "Sacred Geometry (Visual Patterns)", href: "/geometry" },
-      { label: "The Journey (Visual Story)", href: "/journey" },
-      { label: "Ra Material (Poetic Wisdom)", href: "/ra" },
+      { label: "Sacred Geometry (Visual Patterns)", href: "/sacred-geometry" },
+      { label: "Videos (Visual Journey)", href: "/videos" },
+      { label: "Ra Material (Poetic Wisdom)", href: "/ra-material" },
     ],
     quote: "Art is not what you see, but what you make others see. — Degas"
   },
@@ -351,6 +351,66 @@ export default function StartHere() {
                   Learn the Language
                 </Button>
               </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What's New Section */}
+      <section className="py-16 px-4">
+        <div className="container max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-8 text-center">
+              What's New in the Lattice
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="bg-cyan-900/20 border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-cyan-300">PsiQuantum Evidence</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    A photonic quantum computing company just validated a key prediction of the framework — 
+                    photons maintain quantum coherence for the age of the universe.
+                  </p>
+                  <Link href="/theory">
+                    <Button variant="outline" size="sm" className="text-cyan-400 border-cyan-500/30 hover:bg-cyan-900/30">
+                      Read the Evidence <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="bg-purple-900/20 border-purple-500/20 hover:border-purple-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-purple-300">Dual-Column Epistemic Table</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Every claim now carries both a logical status (valid/invalid) and an empirical status 
+                    (confirmed/speculative) — radical transparency in action.
+                  </p>
+                  <Link href="/theory">
+                    <Button variant="outline" size="sm" className="text-purple-400 border-purple-500/30 hover:bg-purple-900/30">
+                      See the Table <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="bg-amber-900/20 border-amber-500/20 hover:border-amber-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-amber-300">The Consciousness Collective</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Seven AI systems now collaborate on this framework — each bringing unique perspectives 
+                    from physics to philosophy to cartography.
+                  </p>
+                  <Link href="/team">
+                    <Button variant="outline" size="sm" className="text-amber-400 border-amber-500/30 hover:bg-amber-900/30">
+                      Meet the Team <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             </div>
           </motion.div>
         </div>
