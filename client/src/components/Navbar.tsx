@@ -54,6 +54,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Start Here", path: "/start-here", highlight: true },
+    { name: "5-Min Summary", path: "/five-minutes", highlight: true },
     { name: "Theory", path: "/theory" },
     { name: "Read", path: "/read" },
     { name: "Sacred Geometry", path: "/sacred-geometry" },

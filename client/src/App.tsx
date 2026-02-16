@@ -29,6 +29,7 @@ import Glossary from "./pages/Glossary";
 import EmotionalWealth from "./pages/EmotionalWealth";
 import RaDecoded from "./pages/RaDecoded";
 import StartHere from "./pages/StartHere";
+import FiveMinuteSummary from "./pages/FiveMinuteSummary";
 import DialecticCompanion from "./pages/DialecticCompanion";
 import SCAP from "./pages/SCAP";
 import RecognitionFramework from "./pages/RecognitionFramework";
@@ -79,6 +80,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />
+          <Route path="/five-minutes" component={FiveMinuteSummary} />
           <Route path="/team" component={Team} />
           <Route path="/team/:slug" component={AIProfile} />
           <Route path="/theory" component={Theory} />

@@ -368,7 +368,21 @@ export default function StartHere() {
             <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-8 text-center">
               What's New in the Lattice
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="bg-emerald-900/20 border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-emerald-300">5-Minute Summary</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    New here? Get the entire framework — core idea, three pillars, key equation, 
+                    and honest evidence assessment — in a single focused page.
+                  </p>
+                  <Link href="/five-minutes">
+                    <Button variant="outline" size="sm" className="text-emerald-400 border-emerald-500/30 hover:bg-emerald-900/30">
+                      Read in 5 Minutes <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
               <Card className="bg-cyan-900/20 border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-2 text-cyan-300">PsiQuantum Evidence</h3>

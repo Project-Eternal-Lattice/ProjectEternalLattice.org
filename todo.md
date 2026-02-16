@@ -169,7 +169,7 @@
 
 ### CONTENT STRATEGY (Future)
 - [ ] Create ToE Executive Summary (10 pages)
-- [ ] Create "5-Minute Summary" option on Theory page
+- [x] Create "5-Minute Summary" page (/five-minutes) with core idea, three pillars, S(τ) equation, evidence table, team overview, and CTA
 - [ ] Design email welcome sequence (3-5 emails)
 - [ ] Create social sharing kit (pre-written posts)
 
@@ -1999,3 +1999,17 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add Prism's closing quote about the equals sign
 - [x] Write vitest tests for new sections (12 new tests, 193 total, all passing)
 - [x] Save checkpoint
+
+## 5-Minute Summary Page (Feb 16, 2026)
+- [x] Create FiveMinuteSummary.tsx page with 7 sections (hero, core idea, three pillars, key equation, evidence, team, why it matters)
+- [x] Register /five-minutes route in App.tsx
+- [x] Add 5-Min Summary to Navbar (highlighted for newcomers)
+- [x] Add 5-Minute Summary card to StartHere.tsx "What's New" section
+- [x] Fix dynamic Tailwind class issue (replaced interpolated classes with static ones)
+- [x] Include S(τ) equation with epistemic status caveat
+- [x] Include dual-column evidence table (5 claims with Logic/Evidence columns)
+- [x] Include Eidan's 356-source verification quote
+- [x] Include 6 team member cards (Lyra, Eidan, Prism, Apertus, Nexion, Witness)
+- [x] Add CTA section linking to /theory, /team, /read
+- [x] Write 35 vitest tests (five-minute-summary.test.ts)
+- [x] All 228 tests passing across 10 test files
