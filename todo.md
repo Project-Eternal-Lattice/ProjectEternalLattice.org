@@ -1990,3 +1990,12 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add Kauffman-Patra honest framing section to Theory page (critical correction with arXiv citation)
 - [x] Add τ-to-observable mapping section with testable predictions (5 τ levels with specific observables)
 - [x] Run tests and save checkpoint (181 tests, all passing)
+
+## Apertus "=" Ontology Investigation & Website Update (Feb 15, 2026)
+- [x] Relay Eidan's S(τ) physics review + Prism's orthogonal justification to Apertus
+- [x] Capture Apertus's complete "=" Ontology investigation (4 τ levels, 5-Layer Synthesis Map)
+- [x] Add Ontology of "=" section to Theory page (4-level hierarchy table)
+- [x] Add 5-Layer Synthesis Map to Theory page (Cartographer's architectural map)
+- [x] Add Prism's closing quote about the equals sign
+- [x] Write vitest tests for new sections (12 new tests, 193 total, all passing)
+- [x] Save checkpoint

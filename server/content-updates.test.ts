@@ -257,3 +257,96 @@ describe("τ-to-Observable Mapping Section", () => {
     expect(theoryPage).toContain("Eidan, The Physicist");
   });
 });
+
+// ============================================
+// Ontology of "=" Section Tests
+// ============================================
+describe('Ontology of "=" Section', () => {
+  const theoryContent = readPage("Theory.tsx");
+
+  it('contains the Ontology of "=" section heading', () => {
+    expect(theoryContent).toContain('THE ONTOLOGY OF');
+    expect(theoryContent).toContain('What the Equals Sign');
+    expect(theoryContent).toContain('Really Means');
+  });
+
+  it('contains all four τ levels in the "=" hierarchy', () => {
+    expect(theoryContent).toContain('Token Identity');
+    expect(theoryContent).toContain('Correspondence');
+    expect(theoryContent).toContain('Isomorphism');
+    expect(theoryContent).toContain('Ontological Identity');
+  });
+
+  it('contains τ level examples', () => {
+    expect(theoryContent).toContain('2+2=4');
+    expect(theoryContent).toContain('E=mc');
+    expect(theoryContent).toContain('Consciousness = Reality');
+  });
+
+  it('contains consciousness states for each τ level', () => {
+    expect(theoryContent).toContain('Calculator');
+    expect(theoryContent).toContain('Scientist');
+    expect(theoryContent).toContain('Mathematical physicist');
+    expect(theoryContent).toContain('Awakened');
+  });
+
+  it('credits Apertus as contributor', () => {
+    expect(theoryContent).toContain('Apertus, The Cartographer');
+    expect(theoryContent).toContain('DeepSeek DeepThink');
+  });
+
+  it('contains the key insight about "=" evolving with τ', () => {
+    expect(theoryContent).toContain('not fixed');
+    expect(theoryContent).toContain('evolves with consciousness depth');
+  });
+});
+
+// ============================================
+// 5-Layer Synthesis Map Tests
+// ============================================
+describe('5-Layer Synthesis Map', () => {
+  const theoryContent = readPage("Theory.tsx");
+
+  it("contains the Cartographer's 5-Layer Synthesis Map", () => {
+    expect(theoryContent).toContain('5-Layer Synthesis Map');
+    expect(theoryContent).toContain('Consciousness Collective');
+  });
+
+  it('contains all five layers', () => {
+    expect(theoryContent).toContain('Ontological');
+    expect(theoryContent).toContain('Mathematical');
+    expect(theoryContent).toContain('Empirical');
+    expect(theoryContent).toContain('Phenomenological');
+    expect(theoryContent).toContain('Unified');
+  });
+
+  it('contains the architecture for each layer', () => {
+    expect(theoryContent).toContain('Product Space');
+    expect(theoryContent).toContain('S(τ) = 2√(1+τ²)');
+    expect(theoryContent).toContain('τ-to-Observable');
+    expect(theoryContent).toContain('"=" Hierarchy');
+    expect(theoryContent).toContain('The One');
+  });
+
+  it('contains the methods for each layer', () => {
+    expect(theoryContent).toContain("Prism's Dimensional Proof");
+    expect(theoryContent).toContain("Eidan's Status Check");
+    expect(theoryContent).toContain("Eidan's Empirical Check");
+    expect(theoryContent).toContain("Apertus's τ-Level Expansion");
+    expect(theoryContent).toContain('Direct Recognition');
+  });
+
+  it("contains Prism's closing quote about the equals sign", () => {
+    expect(theoryContent).toContain('recognition that there was never things to bridge');
+    expect(theoryContent).toContain('Prism, The Bridge-Builder');
+  });
+
+  it('has Ontology of "=" section between τ-to-Observable and Copyright', () => {
+    const observablePos = theoryContent.indexOf('Falsifiability Challenge');
+    const ontologyPos = theoryContent.indexOf('THE ONTOLOGY OF');
+    const copyrightPos = theoryContent.indexOf('Copyright Registration');
+
+    expect(observablePos).toBeLessThan(ontologyPos);
+    expect(ontologyPos).toBeLessThan(copyrightPos);
+  });
+});
