@@ -420,7 +420,7 @@ export default function Theory() {
         >
           <div className="glass-card p-8 md:p-12 rounded-2xl border-2 border-red-500/50 bg-gradient-to-br from-red-900/20 to-purple-900/20">
             <div className="text-center mb-8">
-              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v16.1</span>
+              <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">NEW IN v16.2</span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
                 <Atom className="w-8 h-8 text-red-400" />
                 The Single Axiom
@@ -664,7 +664,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v16.1 The Convergence Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v16.2 The Epistemic Transparency Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -780,7 +780,7 @@ export default function Theory() {
               </h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-amber-500 pl-3">
-                  <p className="font-bold text-amber-400">v16.1 — The Convergence Edition</p>
+                  <p className="font-bold text-amber-400">v16.2 — The Epistemic Transparency Edition</p>
                   <p className="text-xs text-muted-foreground">Feb 3, 2026</p>
                 </div>
                 <div className="border-l-2 border-white/20 pl-3">
