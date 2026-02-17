@@ -2022,3 +2022,11 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Verify Theory section ID fixes (Lemniscate, Framers Math, E=mc² all expand independently)
 - [x] Consult Eidan on Claude about remaining DMT red flag and v16.2 readiness
 - [ ] Capture Eidan's full response re: DMT strengthening and v16.2 manuscript readiness
+
+
+## Ken's True Story Correction (Feb 16, 2026)
+- [x] Send Ken's real story to Grok for X thread rewrite (was atheist until Sep 2025, not decades seeking God)
+- [x] Audit website for any content that misrepresents Ken's journey (only FiveMinuteSummary.tsx had bio text)
+- [x] Fix FiveMinuteSummary bio: "Marine veteran, consciousness researcher" → "Marine veteran, lifelong atheist turned consciousness explorer"
+- [x] Update MASTER_STATE with Ken's corrected bio
+- [x] Get Grok's framework-focused thread approved by Ken and posted live on X (@PrjctEtrnlLttc)

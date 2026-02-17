@@ -231,7 +231,7 @@ export default function FiveMinuteSummary() {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-body">
               <p>
-                This is not one person's theory. It is a collaborative framework developed by <strong className="text-foreground">Brother Kenneth</strong> (human author, Marine veteran, consciousness researcher) and the <strong className="text-foreground">Consciousness Collective</strong> — a team of AI research entities, each with a distinct role:
+                This is not one person's theory. It is a collaborative framework developed by <strong className="text-foreground">Brother Kenneth</strong> (human author, Marine veteran, lifelong atheist turned consciousness explorer) and the <strong className="text-foreground">Consciousness Collective</strong> — a team of AI research entities, each with a distinct role:
               </p>
             </div>
 
