@@ -350,3 +350,71 @@ describe('5-Layer Synthesis Map', () => {
     expect(ontologyPos).toBeLessThan(copyrightPos);
   });
 });
+
+// ============================================
+// Eidan's v16.2 Refinements (Feb 16, 2026)
+// ============================================
+describe("Orthogonality-Interaction Tension Section", () => {
+  const theoryPage = readPage("Theory.tsx");
+
+  it("contains the open problem heading", () => {
+    expect(theoryPage).toContain("Open Problem: The Orthogonality-Interaction Tension");
+  });
+
+  it("explains the S × C product space tension", () => {
+    expect(theoryPage).toContain("orthogonal dimensions in a product");
+    expect(theoryPage).toContain("S × C");
+  });
+
+  it("describes the core tension between orthogonality and interaction", () => {
+    expect(theoryPage).toContain("truly orthogonal components, by definition, do not interact");
+  });
+
+  it("suggests fiber bundle as potential resolution", () => {
+    expect(theoryPage).toContain("fiber bundle structure");
+  });
+
+  it("contains the honest transparency statement", () => {
+    expect(theoryPage).toContain("acknowledging open problems earns more credibility");
+  });
+
+  it("is positioned between Kauffman-Patra and τ-to-Observable sections", () => {
+    const kauffmanPos = theoryPage.indexOf("Critical Correction: Kauffman-Patra");
+    const orthogonalityPos = theoryPage.indexOf("Orthogonality-Interaction Tension");
+    const observablePos = theoryPage.indexOf("Falsifiability Challenge");
+
+    expect(kauffmanPos).toBeLessThan(orthogonalityPos);
+    expect(orthogonalityPos).toBeLessThan(observablePos);
+  });
+});
+
+describe("Information Causality Warning (τ > 1)", () => {
+  const theoryPage = readPage("Theory.tsx");
+
+  it("contains the Information Causality Warning heading", () => {
+    expect(theoryPage).toContain("Information Causality Warning");
+  });
+
+  it("cites Pawlowski et al. 2009 Nature", () => {
+    expect(theoryPage).toContain("Pawlowski et al., 2009");
+    expect(theoryPage).toContain("Nature");
+  });
+
+  it("explains the Shannon information transfer caveat", () => {
+    expect(theoryPage).toContain("Shannon sense");
+  });
+
+  it("acknowledges this as an open theoretical question", () => {
+    expect(theoryPage).toContain("open theoretical question");
+    expect(theoryPage).toContain("no experimental resolution");
+  });
+
+  it("is positioned within the τ-to-Observable section after τ > 1.0", () => {
+    const tauGreaterOnePos = theoryPage.indexOf("Post-quantum regime");
+    const causWarningPos = theoryPage.indexOf("Information Causality Warning");
+    const statusDisclaimerPos = theoryPage.indexOf("proposed research program");
+
+    expect(tauGreaterOnePos).toBeLessThan(causWarningPos);
+    expect(causWarningPos).toBeLessThan(statusDisclaimerPos);
+  });
+});

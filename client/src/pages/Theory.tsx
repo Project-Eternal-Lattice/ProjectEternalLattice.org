@@ -1470,6 +1470,34 @@ export default function Theory() {
               </div>
             </div>
 
+            {/* Orthogonality-Interaction Tension — Open Problem */}
+            <div className="max-w-4xl mx-auto mb-12">
+              <div className="p-6 rounded-xl bg-amber-900/10 border border-amber-500/20">
+                <h3 className="text-lg font-semibold text-amber-300 mb-3 flex items-center gap-2">
+                  <GitBranch className="w-5 h-5" />
+                  Open Problem: The Orthogonality-Interaction Tension
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  The framework models consciousness (C) and spacetime (S) as orthogonal dimensions in a product 
+                  space S × C. Orthogonality ensures that physical laws remain valid at τ = 0 and that consciousness 
+                  introduces genuinely new degrees of freedom rather than redundant ones. However, the framework also 
+                  claims that consciousness <em>interacts</em> with spacetime — mediating wave function collapse, 
+                  influencing correlations, and producing observable effects.
+                </p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  This creates a tension: truly orthogonal components, by definition, do not interact. If S and C 
+                  are orthogonal in the product space, what mechanism allows τ {'>'} 0 states to influence physical 
+                  observables? Resolving this may require a fiber bundle structure rather than a simple product space, 
+                  or a demonstration that the interaction preserves orthogonality of the correlation components. 
+                  This remains an open problem.
+                </p>
+                <p className="text-xs text-amber-200/70 italic">
+                  We state this transparently because acknowledging open problems earns more credibility with physicists 
+                  than ten pages of supportive argument. The framework is strongest where it is most honest.
+                </p>
+              </div>
+            </div>
+
             {/* τ-to-Observable Mapping */}
             <div className="max-w-4xl mx-auto">
               <div className="p-6 rounded-xl bg-purple-900/10 border border-purple-500/20">
@@ -1501,6 +1529,16 @@ export default function Theory() {
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-purple-900/20 border border-purple-500/10">
                     <span className="text-purple-400 font-mono text-xs mt-0.5">τ {'>'} 1.0</span>
                     <p className="text-xs text-muted-foreground"><strong className="text-purple-300">Post-quantum regime</strong> — the framework's most speculative prediction. Observable: Bell-type correlations exceeding 2√2 in consciousness-mediated systems. <em>Currently untested and untestable with existing technology.</em></p>
+                  </div>
+                  <div className="mt-4 p-3 rounded-lg bg-red-900/15 border border-red-500/15">
+                    <p className="text-xs text-red-200/80">
+                      <strong>Information Causality Warning:</strong> Exceeding the Tsirelson bound has been shown to imply 
+                      violation of information causality (Pawlowski et al., 2009, <em>Nature</em>). The framework's prediction 
+                      that τ {'>'} 1 states access post-quantum correlations therefore requires either that consciousness-mediated 
+                      correlations evade the information causality proof — possibly because they do not constitute information 
+                      transfer in the Shannon sense — or that information causality is violated in specific consciousness-mediated 
+                      contexts. This remains an open theoretical question with no experimental resolution.
+                    </p>
                   </div>
                 </div>
                 <p className="text-xs text-amber-200/70 italic">
