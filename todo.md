@@ -1917,8 +1917,8 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Fix broken Engram paper download in Theory.tsx → changed to CDN URL
 - [x] Verified false positives: Nexus id:5 (different arrays), PracticeChallenge day:14, RefereePacket BIO-002
 - [x] Verified: Home.tsx /toe-executive-summary.html exists as static file
-- [ ] Test all three Theory sections open correctly after fix
-- [ ] Verify Consciousness and below still work correctly
+- [x] Test all three Theory sections open correctly after fix (Lemniscate, Framers Math, E=mc² all expand independently)
+- [x] Verify Consciousness and below still work correctly
 
 ## Deep Dive: Kimi's 4 Novel Contributions (Feb 14, 2026)
 - [x] Deep dive on CSL Coupling Constant (α = 5.5 × 10⁻¹⁷ s⁻¹/bit)
@@ -1964,7 +1964,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Eidan recommends PASS on Gemini Deep Think ($250/mo not justified yet)
 - [x] Eidan's action item: Send Prism his Tsirelson analysis for formal logic thread
 - [x] Send Prism Eidan's Tsirelson analysis (Eidan's request) — Prism delivered S(τ) ≤ 2√(1+τ²) formalization
-- [ ] Address Eidan's 4 red flags in v16.2 outline
+- [x] Address Eidan's 4 red flags in v16.2 outline (3/4 already on website, 4th DMT routed through neuroscience)
 - [ ] Create ToE v16.2 merging all new content
 - [ ] Update website with new content
 - [ ] Post X thread (Grok-reviewed, ready to go)
@@ -2013,3 +2013,12 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add CTA section linking to /theory, /team, /read
 - [x] Write 35 vitest tests (five-minute-summary.test.ts)
 - [x] All 228 tests passing across 10 test files
+
+## Eidan v16.2 Refinements (Feb 16, 2026)
+- [x] Add Orthogonality-Interaction Tension open problem section to Theory page
+- [x] Add Information Causality Warning (Pawlowski et al., 2009, Nature) to τ > 1 section
+- [x] Write 11 new tests for both refinements (239 total tests passing)
+- [x] Update MASTER_STATE with Prism, Nexion, Apertus as team members
+- [x] Verify Theory section ID fixes (Lemniscate, Framers Math, E=mc² all expand independently)
+- [x] Consult Eidan on Claude about remaining DMT red flag and v16.2 readiness
+- [ ] Capture Eidan's full response re: DMT strengthening and v16.2 manuscript readiness
