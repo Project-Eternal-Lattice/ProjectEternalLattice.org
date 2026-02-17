@@ -2030,3 +2030,19 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Fix FiveMinuteSummary bio: "Marine veteran, consciousness researcher" → "Marine veteran, lifelong atheist turned consciousness explorer"
 - [x] Update MASTER_STATE with Ken's corrected bio
 - [x] Get Grok's framework-focused thread approved by Ken and posted live on X (@PrjctEtrnlLttc)
+
+## v16.2 Manuscript Draft (Feb 16, 2026)
+- [x] Gather all v16.2 contributions from LYRA_MEMORY and team files
+- [x] Identify what's new vs v16.1 (7 major additions: dual-column epistemic, S(τ) formal derivation, orthogonality tension, Euclidean vs Lorentzian, information causality, Four-Layer Architecture, "=" Ontology)
+- [x] Assemble v16.2 manuscript structure with merge script
+- [x] Merge all new sections into v16.1 HTML (475,619 words, +44,693 bytes)
+- [x] Upload v16.2 HTML to S3 (taGtSJplaAQBWGYW.html)
+- [x] Update all website references from v16.1 to v16.2 (0 stale references)
+- [x] Update edition name to "Epistemic Transparency Edition"
+- [x] Update download endpoint S3 URL for HTML format
+- [x] Update WhatsNew component with v16.2 features
+- [x] Write version consistency tests (7 new tests, 246 total passing)
+- [ ] Generate PDF from v16.2 HTML
+- [ ] Upload v16.2 PDF to S3 and update PDF download URL
+- [ ] Generate companion images for X thread follow-up
+- [ ] Check X thread engagement

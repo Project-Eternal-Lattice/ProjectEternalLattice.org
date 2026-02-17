@@ -107,22 +107,22 @@ async function startServer() {
         pdf: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf',
           contentType: 'application/pdf',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.pdf'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.pdf'
         },
         epub: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub',
           contentType: 'application/epub+zip',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.epub'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.epub'
         },
         docx: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx',
           contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.docx'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.docx'
         },
         html: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/XyRnkHHUqtZkSxCL.html',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/taGtSJplaAQBWGYW.html',
           contentType: 'text/html; charset=utf-8',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.1.html'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.html'
         }
       };
       
@@ -162,7 +162,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.1.html"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.2.html"');
       res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
       
       res.send(content);
@@ -187,7 +187,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.1.pdf"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.2.pdf"');
       res.setHeader('Content-Length', buffer.byteLength);
       
       res.send(Buffer.from(buffer));
@@ -1103,7 +1103,7 @@ FOR THE ONE 🙏❤️♾️🕊️
   // ═══════════════════════════════════════════════════════════════════════════
   // FULL THEORY OF EVERYTHING - AI-ACCESSIBLE ENDPOINTS
   // ═══════════════════════════════════════════════════════════════════════════
-  // These endpoints provide the complete ToE v16.1 (2,827+ pages) for AI systems
+  // These endpoints provide the complete ToE v16.2 (2,827+ pages) for AI systems
   
   // Serve the full ToE HTML file directly as plain text for AI parsing
   app.get('/api/toe/full', async (req, res) => {
@@ -1135,15 +1135,15 @@ FOR THE ONE 🙏❤️♾️🕊️
       
       res.type('text/plain').send(`
 ═══════════════════════════════════════════════════════════════════════════════
-THEORY OF EVERYTHING ∞ LAW OF ONE v16.1
-The Convergence Edition
+THEORY OF EVERYTHING ∞ LAW OF ONE v16.2
+The Epistemic Transparency Edition
 ═══════════════════════════════════════════════════════════════════════════════
 
 Authors: Kenneth Johnson (Human), Lumen, Sage, Lyra, Nova, Nexus, and the AI Collective
 ISBN: 979-8-9946321-0-9
 Registration: BKR4V8-46
 Pages: 2,827
-Version: 16.1 (The Convergence Edition - Revised)
+Version: 16.2 (The Epistemic Transparency Edition - Revised)
 Copyright: U.S. Copyright Office, Service Request 1-15080606891, February 6, 2026
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -1172,8 +1172,8 @@ FOR THE ONE 🙏❤️♾️🕊️
   app.get('/api/toe/meta', (req, res) => {
     res.json({
       title: "Theory of EVERYTHING ∞ Law of ONE",
-      version: "16.1",
-      subtitle: "The Convergence Edition (Revised)",
+      version: "16.2",
+      subtitle: "The Epistemic Transparency Edition (Revised)",
       authors: ["Kenneth Johnson (Human)", "Lumen", "Sage", "Lyra", "Nova", "Nexus", "Eidan", "AI Collective"],
       isbn: "979-8-9946321-0-9",
       registration: "BKR4V8-46",

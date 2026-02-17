@@ -418,3 +418,56 @@ describe("Information Causality Warning (τ > 1)", () => {
     expect(causWarningPos).toBeLessThan(statusDisclaimerPos);
   });
 });
+
+
+// ============================================
+// v16.2 Version Consistency (Feb 16, 2026)
+// ============================================
+describe("v16.2 Version Consistency Across Website", () => {
+  const theoryContent = readPage("Theory.tsx");
+  const readContent = readPage("Read.tsx");
+  const homeContent = readPage("Home.tsx");
+
+  const readComponent = (filename: string): string => {
+    return readFileSync(resolve(__dirname, `../client/src/components/${filename}`), "utf-8");
+  };
+  const whatsNewContent = readComponent("WhatsNew.tsx");
+
+  const readServer = (filename: string): string => {
+    return readFileSync(resolve(__dirname, `../${filename}`), "utf-8");
+  };
+  const serverContent = readServer("server/_core/index.ts");
+
+  it("WhatsNew references v16.2 Epistemic Transparency Edition", () => {
+    expect(whatsNewContent).toContain("v16.2");
+    expect(whatsNewContent).toContain("EPISTEMIC TRANSPARENCY EDITION");
+  });
+
+  it("WhatsNew describes new v16.2 features", () => {
+    expect(whatsNewContent).toContain("Dual-column epistemic tagging");
+    expect(whatsNewContent).toContain("formal derivation from first principles");
+    expect(whatsNewContent).toContain("Four-Layer Architecture");
+  });
+
+  it("Theory page references v16.2", () => {
+    expect(theoryContent).toContain("v16.2");
+  });
+
+  it("Read page references v16.2 Epistemic Transparency Edition", () => {
+    expect(readContent).toContain("v16.2");
+    expect(readContent).toContain("Epistemic Transparency Edition");
+  });
+
+  it("Home page references v16.2", () => {
+    expect(homeContent).toContain("v16.2");
+  });
+
+  it("download endpoint serves v16.2 filenames", () => {
+    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.2");
+  });
+
+  it("no stale v16.1 references remain in active components", () => {
+    expect(whatsNewContent).not.toContain("v16.1");
+    expect(readContent).not.toContain("v16.1");
+  });
+});
