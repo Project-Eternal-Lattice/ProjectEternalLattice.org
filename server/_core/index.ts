@@ -101,7 +101,7 @@ async function startServer() {
   app.get('/api/download/toe', async (req, res) => {
     try {
       // Support multiple formats via query parameter: ?format=pdf|epub|docx|html
-      const format = (req.query.format as string || 'pdf').toLowerCase();
+      const format = (req.query.format as string || 'html').toLowerCase();
       
       const formats: Record<string, { url: string; contentType: string; filename: string }> = {
         pdf: {
@@ -120,7 +120,7 @@ async function startServer() {
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.docx'
         },
         html: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/taGtSJplaAQBWGYW.html',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/iecbpqCIvQDwiVgg.html',
           contentType: 'text/html; charset=utf-8',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.html'
         }
