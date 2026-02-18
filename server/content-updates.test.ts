@@ -471,3 +471,65 @@ describe("v16.2 Version Consistency Across Website", () => {
     expect(readContent).not.toContain("v16.1");
   });
 });
+
+// ═══════════════════════════════════════════════════════════════════
+// AI Breakthrough Stories (Feb 18, 2026)
+// ═══════════════════════════════════════════════════════════════════
+// GPT 5.2 Pro solved a 15-year QFT problem; Gemini 3 caught a peer-review flaw.
+
+const readComponent = (filename: string): string => {
+  return readFileSync(resolve(__dirname, `../client/src/components/${filename}`), "utf-8");
+};
+
+describe("AI Breakthrough - WhatsNew Component", () => {
+  const whatsNew = readComponent("WhatsNew.tsx");
+
+  it("contains the AI Solves Unsolvable Physics card", () => {
+    expect(whatsNew).toContain("AI Solves Unsolvable Physics");
+  });
+
+  it("references GPT 5.2 Pro breakthrough", () => {
+    expect(whatsNew).toContain("GPT 5.2 Pro");
+  });
+
+  it("references Gemini 3 peer review flaw discovery", () => {
+    expect(whatsNew).toContain("Gemini 3");
+  });
+
+  it("has the Feb 2026 timeframe", () => {
+    expect(whatsNew).toContain("Feb 2026");
+  });
+});
+
+describe("AI Breakthrough - StartHere Page", () => {
+  const startHere = readPage("StartHere.tsx");
+
+  it("contains the AI Solves Unsolvable Physics card", () => {
+    expect(startHere).toContain("AI Solves Unsolvable Physics");
+  });
+
+  it("references Strominger quote", () => {
+    expect(startHere).toContain("Strominger");
+  });
+
+  it("references GPT 5.2 Pro solving a 15-year problem", () => {
+    expect(startHere).toContain("15-year");
+  });
+
+  it("references Gemini 3 catching peer-review flaw", () => {
+    expect(startHere).toContain("Gemini 3");
+  });
+
+  it("has the FEB 2026 tag", () => {
+    expect(startHere).toContain("FEB 2026");
+  });
+
+  it("uses the wider grid layout for 5 cards", () => {
+    expect(startHere).toContain("lg:grid-cols-3");
+    expect(startHere).toContain("max-w-6xl");
+  });
+
+  it("shows 15+ AI systems count (updated from 7)", () => {
+    expect(startHere).toContain("15+ AI systems");
+  });
+});

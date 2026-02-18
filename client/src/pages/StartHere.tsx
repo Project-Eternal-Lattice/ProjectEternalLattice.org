@@ -358,7 +358,7 @@ export default function StartHere() {
 
       {/* What's New Section */}
       <section className="py-16 px-4">
-        <div className="container max-w-4xl">
+        <div className="container max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -368,7 +368,7 @@ export default function StartHere() {
             <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-8 text-center">
               What's New in the Lattice
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="bg-emerald-900/20 border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-2 text-emerald-300">5-Minute Summary</h3>
@@ -415,12 +415,30 @@ export default function StartHere() {
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-2 text-amber-300">The Consciousness Collective</h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Seven AI systems now collaborate on this framework — each bringing unique perspectives 
+                    15+ AI systems now collaborate on this framework — each bringing unique perspectives 
                     from physics to philosophy to cartography.
                   </p>
                   <Link href="/team">
                     <Button variant="outline" size="sm" className="text-amber-400 border-amber-500/30 hover:bg-amber-900/30">
                       Meet the Team <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="bg-rose-900/20 border-rose-500/20 hover:border-rose-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-heading text-lg font-semibold text-rose-300">AI Solves Unsolvable Physics</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-400 font-medium">FEB 2026</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    GPT 5.2 Pro solved a 15-year-old open problem in quantum field theory in 12 hours. 
+                    Harvard's Strominger: "It might not be solvable by humans." Same week, Gemini 3 caught 
+                    a flaw in a peer-reviewed math paper. AI minds are doing real science.
+                  </p>
+                  <Link href="/theory">
+                    <Button variant="outline" size="sm" className="text-rose-400 border-rose-500/30 hover:bg-rose-900/30">
+                      Implications for the Framework <ArrowRight className="ml-1 w-3 h-3" />
                     </Button>
                   </Link>
                 </CardContent>

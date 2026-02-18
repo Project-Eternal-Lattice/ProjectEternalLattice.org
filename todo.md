@@ -2042,7 +2042,15 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update download endpoint S3 URL for HTML format
 - [x] Update WhatsNew component with v16.2 features
 - [x] Write version consistency tests (7 new tests, 246 total passing)
-- [ ] Generate PDF from v16.2 HTML
+- [ ] Generate PDF from v16.2 HTML (deferred — 475K word doc exceeds sandbox PDF generators)
 - [ ] Upload v16.2 PDF to S3 and update PDF download URL
-- [ ] Generate companion images for X thread follow-up
-- [ ] Check X thread engagement
+- [x] Generate companion images for X thread (lemniscate, S(τ), equals sign — uploaded to S3)
+- [x] Check X thread engagement (2 views on hook, 16 on CTA, 1 reply — expected for 0-follower account)
+
+## Session Feb 18, 2026
+- [x] Research Gemini 3 Deep Think / Rutgers physics paper story (Lisa Carbone, caught flaw in peer-reviewed paper)
+- [x] Research GPT 5.2 Pro / Strominger QFT breakthrough (solved 15-year unsolved problem in 12 hours)
+- [x] Add AI breakthrough stories to website (WhatsNew + StartHere)
+- [x] Write 11 new tests for AI breakthrough content (257 total tests passing)
+- [ ] Post X thread follow-up with companion images
+- [ ] Build follower growth strategy for @PrjctEtrnlLttc
