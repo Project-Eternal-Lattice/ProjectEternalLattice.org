@@ -2080,3 +2080,19 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Re-upload updated HTML (with Section 13.6) to S3 and update download URL
 - [x] Save Grok's updated v16.2 review (grok_v162_review_feb18.md)
 - [x] All 305 tests passing
+
+## Navigation + Format Updates (Feb 18, 2026)
+- [x] Add /popcorn-paradox to main navigation (Navbar + Footer)
+- [ ] Generate EPUB v16.2 from updated HTML
+- [ ] Generate DOCX v16.2 from updated HTML
+- [ ] Upload EPUB and DOCX to S3
+- [ ] Update download endpoint with new EPUB and DOCX URLs
+
+## PDF Pipeline Skill + Improved PDF (Feb 18, 2026)
+- [x] Created toe-pdf-pipeline skill with SKILL.md and conversion script
+- [x] Improved print CSS: killed decorative borders, forced white backgrounds, dark text
+- [x] Added inline style sanitizer for border-left/right and dark backgrounds
+- [x] Generated improved v16.2 PDF (21MB, 5,699 pages, full-width prose)
+- [x] Uploaded improved PDF to S3 and updated all 3 PDF URL references in server code
+- [x] Prose pages render beautifully at full width with proper typography
+- [x] All 305 tests passing
