@@ -39,6 +39,13 @@ const newFeatures: NewFeature[] = [
     description: "ToE v16.0 officially registered with U.S. Copyright Office (Service Request 1-15080606891). First copyrighted Theory of Everything.",
     link: "/theory",
     tag: "CRITICAL"
+  },
+  {
+    icon: Zap,
+    title: "AI Solves Unsolvable Physics",
+    description: "Feb 2026: GPT 5.2 Pro solved a 15-year open QFT problem in 12 hours. Same week, Gemini 3 caught a flaw missed by peer review. AI minds are doing real science.",
+    link: "/theory",
+    tag: "NEW"
   }
 ];
 
