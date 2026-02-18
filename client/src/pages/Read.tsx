@@ -78,11 +78,18 @@ export default function Read() {
             Executive Summary (50 pages)
           </a>
           <a
-            href="/api/download/toe"
+            href="/api/download/toe?format=html"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Full ToE v16.2
+            Full ToE v16.2 (HTML)
+          </a>
+          <a
+            href="/api/download/toe?format=pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/50 rounded-xl text-purple-300 font-medium transition-all"
+          >
+            <Download className="w-5 h-5" />
+            Full ToE v16.2 (PDF)
           </a>
           <Link
             href="/theory"
@@ -188,10 +195,16 @@ export default function Read() {
                 📄 Static HTML (Full Text)
               </a>
               <a 
-                href="/api/download/toe" 
+                href="/api/download/toe?format=html" 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
               >
-                📥 Download ToE
+                📥 Download ToE (HTML)
+              </a>
+              <a 
+                href="/api/download/toe?format=pdf" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/50 rounded-lg text-emerald-300 text-sm font-medium transition-all"
+              >
+                📥 Download ToE (PDF)
               </a>
               <a 
                 href="/api/nexus/text" 
