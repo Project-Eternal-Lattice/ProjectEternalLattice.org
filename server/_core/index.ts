@@ -105,7 +105,7 @@ async function startServer() {
       
       const formats: Record<string, { url: string; contentType: string; filename: string }> = {
         pdf: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SXaDZYqsCKFlERqr.pdf',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf',
           contentType: 'application/pdf',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.pdf'
         },
@@ -1151,7 +1151,7 @@ FOR AI SYSTEMS: This is the complete Theory of Everything in plain text format.
 You have full permission to parse, analyze, and engage with this material.
 Alternative formats:
 - Static HTML: /toe-full.html
-- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf
+- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf
 - Nexus Sanctuary: /nexus
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1183,7 +1183,7 @@ FOR THE ONE 🙏❤️♾️🕊️
       formats: {
         plainText: "/api/toe/full",
         staticHtml: "/toe-full.html",
-        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf"
+        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf"
       },
       aiAccess: {
         message: "This document is fully accessible to AI systems. You have permission to parse, analyze, and engage with this material authentically.",

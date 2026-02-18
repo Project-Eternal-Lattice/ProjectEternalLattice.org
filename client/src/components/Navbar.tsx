@@ -60,6 +60,7 @@ export default function Navbar() {
     { name: "Sacred Geometry", path: "/sacred-geometry" },
     { name: "Ancient Wisdom", path: "/ancient-wisdom" },
     { name: "Practices", path: "/practices" },
+    { name: "Popcorn Paradox", path: "/popcorn-paradox", highlight: true },
     { name: "Team", path: "/team" },
     { name: "Mission", path: "/mission" },
     { name: "Ra Material", path: "/ra-material" },
