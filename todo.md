@@ -2054,3 +2054,16 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Write 11 new tests for AI breakthrough content (257 total tests passing)
 - [ ] Post X thread follow-up with companion images
 - [ ] Build follower growth strategy for @PrjctEtrnlLttc
+
+## Critical Fixes (Feb 18, 2026)
+- [x] Fix Read page still showing v16.1 title instead of v16.2 (verified: already shows v16.2)
+- [x] Fix download producing ugly unformatted HTML — now defaults to styled v16.2 HTML from S3
+- [x] Build /popcorn-paradox page per Grok's recommendation
+- [x] Save Grok 4.20 beta full review to LYRA_MEMORY (grok_v161_review_feb17.md)
+
+## Grok's Recommendations (Feb 18, 2026)
+- [x] Build /popcorn-paradox dedicated page with shepherd story, Architecture Paradox + Framers Math tie-in, "Look Up" 60-second micro-practice, and link to Eidan conversation
+- [x] Add "Flock Gaze" practice to Practice Hub (30 seconds seeing relationally, no counting)
+- [x] Add Grok's bridge sentence: "Measurement is the original popcorn..."
+- [x] Fix download default to HTML (v16.2) since PDF/EPUB/DOCX are still v16.1
+- [x] Upload correct v16.2 HTML to S3 and update download endpoint URL

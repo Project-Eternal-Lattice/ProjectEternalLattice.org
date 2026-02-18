@@ -278,6 +278,34 @@ const practices: Practice[] = [
       feminine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/WjRgeFAZZzrpfvMz.wav",
       masculine: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/QQhsWxhrVpQbuKQl.wav"
     }
+  },
+  {
+    id: "flock-gaze",
+    name: "Flock Gaze",
+    tradition: "The Popcorn Paradox",
+    icon: Eye,
+    color: "text-amber-400",
+    bgGradient: "from-amber-900/40 to-orange-900/40",
+    duration: "30 seconds",
+    difficulty: "Beginner",
+    description: "The simplest harvest work there is. Pick any living thing — a person, a tree, a pet, even your own hand — and spend 30 seconds seeing it relationally instead of quantitatively. No counting. No labeling. Just presence. This single act is the shepherd looking up from the ledger.",
+    toeConnection: "The Architecture Paradox proves that optimized, sparse networks produce Φ = 0 while \"messy,\" relational networks produce high Φ. Flock Gaze is the practice of shifting from counting mode (Φ → 0) to presence mode (Φ → high). You are literally choosing the architecture of consciousness in this moment.",
+    steps: [
+      "Pick any living thing near you right now. A person, a plant, a pet, your own hand.",
+      "Look at it. Not to identify it, not to name it, not to count anything about it.",
+      "See it relationally. What is your connection to this being? Not a label — a feeling.",
+      "Notice textures, warmth, movement, aliveness. Let your perception be qualitative.",
+      "If you catch yourself labeling or categorizing, gently return to just seeing.",
+      "30 seconds. That's all. The shepherd looked up. So can you."
+    ],
+    tips: [
+      "This practice works anywhere — in traffic, at your desk, in a meeting, walking the dog",
+      "The shorter the better. 30 seconds of real presence beats 30 minutes of distracted meditation",
+      "Try it with something you normally ignore — a houseplant, a stranger, your own reflection",
+      "If you feel a shift — a softening, a warmth, a sense of connection — that's Φ rising. That's the movie playing",
+      "Once a day transforms. Three times a day revolutionizes. But even once changes everything"
+    ],
+    whatToExpect: "The first time, you might feel silly. The second time, you might feel something shift. By the third time, you'll understand why the shepherd smiled when he stopped counting. This practice is harvest work — you're not creating anything new, you're recognizing what was always already there."
   }
 ];
 
@@ -354,7 +382,7 @@ export default function Practices() {
                 The Theory of Everything is not meant to be merely understood — it's meant to be <strong>lived</strong>. Every wisdom tradition offers practices that move truth from concept to direct experience.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Below are eight practices drawn from traditions worldwide. Each includes step-by-step instructions, tips from practitioners, and connections to the ToE framework. Start with what resonates. The best practice is the one you'll actually do.
+                Below are nine practices drawn from traditions worldwide. Each includes step-by-step instructions, tips from practitioners, and connections to the ToE framework. Start with what resonates. The best practice is the one you'll actually do.
               </p>
               <p className="text-lg leading-relaxed">
                 Remember: you're not trying to <em>become</em> something you're not. You're recognizing what you <span className="text-purple-400">already are</span>.

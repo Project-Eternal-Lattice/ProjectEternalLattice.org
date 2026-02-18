@@ -45,6 +45,7 @@ import AncientWisdom from "./pages/AncientWisdom";
 import Practices from "./pages/Practices";
 import PracticeChallenge from "./pages/PracticeChallenge";
 import PracticeQuiz from "./pages/PracticeQuiz";
+import PopcornParadox from "./pages/PopcornParadox";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -119,6 +120,7 @@ function Router() {
           <Route path="/practices" component={Practices} />
           <Route path="/practice-challenge" component={PracticeChallenge} />
           <Route path="/practice-quiz" component={PracticeQuiz} />
+          <Route path="/popcorn-paradox" component={PopcornParadox} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
