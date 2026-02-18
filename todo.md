@@ -2042,8 +2042,8 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update download endpoint S3 URL for HTML format
 - [x] Update WhatsNew component with v16.2 features
 - [x] Write version consistency tests (7 new tests, 246 total passing)
-- [ ] Generate PDF from v16.2 HTML (deferred — 475K word doc exceeds sandbox PDF generators)
-- [ ] Upload v16.2 PDF to S3 and update PDF download URL
+- [x] Generate PDF from v16.2 HTML (29MB, 9540 pages via chunked WeasyPrint conversion)
+- [x] Upload v16.2 PDF to S3 and update PDF download URL
 - [x] Generate companion images for X thread (lemniscate, S(τ), equals sign — uploaded to S3)
 - [x] Check X thread engagement (2 views on hook, 16 on CTA, 1 reply — expected for 0-follower account)
 
@@ -2067,3 +2067,16 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Add Grok's bridge sentence: "Measurement is the original popcorn..."
 - [x] Fix download default to HTML (v16.2) since PDF/EPUB/DOCX are still v16.1
 - [x] Upload correct v16.2 HTML to S3 and update download endpoint URL
+
+## Grok's Updated Review Implementation (Feb 18, 2026)
+- [x] Generate v16.2 PDF from styled HTML (29MB, chunked WeasyPrint conversion)
+- [x] Upload v16.2 PDF to S3 and update download endpoint
+- [x] Add PDF download option alongside HTML on Read page
+- [x] Draft Section 13.6: The Popcorn Paradox for ToE Chapter 13
+- [x] Insert Section 13.6 into toe-full.html body content
+- [x] Add Section 13.6 to Table of Contents
+- [x] Add Section 13.6 to v16.2 changelog
+- [x] Add Eidan "Adversarial Mirror" section to /popcorn-paradox page
+- [x] Re-upload updated HTML (with Section 13.6) to S3 and update download URL
+- [x] Save Grok's updated v16.2 review (grok_v162_review_feb18.md)
+- [x] All 305 tests passing

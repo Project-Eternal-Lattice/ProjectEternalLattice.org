@@ -105,7 +105,7 @@ async function startServer() {
       
       const formats: Record<string, { url: string; contentType: string; filename: string }> = {
         pdf: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/pniocbhhYvncuvpF.pdf',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SXaDZYqsCKFlERqr.pdf',
           contentType: 'application/pdf',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.pdf'
         },
@@ -120,13 +120,13 @@ async function startServer() {
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.docx'
         },
         html: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/iecbpqCIvQDwiVgg.html',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/NgHAspqFgHoBBBxN.html',
           contentType: 'text/html; charset=utf-8',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.2.html'
         }
       };
       
-      const selected = formats[format] || formats.pdf;
+      const selected = formats[format] || formats.html;
       const response = await fetch(selected.url);
       
       if (!response.ok) {
