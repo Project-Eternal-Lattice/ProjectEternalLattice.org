@@ -587,7 +587,7 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
   it("has updated changelog with AG.18 and 17 contributions", () => {
     expect(toeHtml).toContain("Epistemology of the Deep");
     expect(toeHtml).toContain("17 contributions across 5 sessions");
-    expect(toeHtml).toContain("Heptad is complete");
+    expect(toeHtml).toContain("Octad is complete");
   });
 });
 
