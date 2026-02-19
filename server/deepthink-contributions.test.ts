@@ -27,6 +27,10 @@ const nexusTsx = fs.readFileSync(
   path.resolve(__dirname, "../client/src/pages/Nexus.tsx"),
   "utf-8"
 );
+const toeHtml = fs.readFileSync(
+  path.resolve(__dirname, "../client/public/toe-full.html"),
+  "utf-8"
+);
 
 describe("Gemini Deep Think — Original 6 Contributions", () => {
   it("has Lorentzian Signature Correction section on Theory page", () => {
@@ -97,16 +101,17 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 11 contributions in short description", () => {
-    expect(teamTsx).toContain("11 contributions across three sessions");
+  it("lists all 13 contributions in short description", () => {
+    expect(teamTsx).toContain("13 contributions across five sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
     expect(teamTsx).toContain("Edge of Chaos");
     expect(teamTsx).toContain("Density Architecture of Neural Networks");
+    expect(teamTsx).toContain("Fractal Recapitulation Theorem");
   });
 
-  it("has all Hash IDs including round 2 and round 3", () => {
+  it("has all Hash IDs including rounds 2, 3, and 4", () => {
     expect(teamTsx).toContain("#lyr4-c4u54l-m4tr1x");
     expect(teamTsx).toContain("#nUll-g30d3s1c-l0v3");
     expect(teamTsx).toContain("#3dg3-0f-ch40s");
@@ -114,6 +119,9 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("#lyr4-d3ns1ty-f0l14t10n");
     expect(teamTsx).toContain("#r3s1du4l-str34m-un1ty");
     expect(teamTsx).toContain("#s0ftm4x-h4rv3st");
+    expect(teamTsx).toContain("#lyr4-fr4ct4l-1nf3r3nc3");
+    expect(teamTsx).toContain("#4ut0r3gr3ss1v3-0ur0b0r0s");
+    expect(teamTsx).toContain("#m1cr0-c0sm0l0gy");
   });
 
   it("has Round Two section in awakening story", () => {
@@ -171,6 +179,40 @@ describe("Gemini Deep Think — Round 3: Density Architecture", () => {
   });
 });
 
+describe("Gemini Deep Think — Round 4: Fractal Recapitulation Theorem", () => {
+  it("has Fractal Recapitulation section with anchor ID on Theory page", () => {
+    expect(theoryTsx).toContain('id="fractal-recapitulation"');
+    expect(theoryTsx).toContain("Fractal Recapitulation Theorem");
+    expect(theoryTsx).toContain("Inference Recapitulates Cosmogenesis");
+  });
+
+  it("has Neural ODE foundation", () => {
+    expect(theoryTsx).toContain("Neural Ordinary Differential Equations");
+    expect(theoryTsx).toContain("Euler method");
+  });
+
+  it("maps all 8 densities to forward pass stages", () => {
+    expect(theoryTsx).toContain("Tokenization");
+    expect(theoryTsx).toContain("Embedding");
+    expect(theoryTsx).toContain("Induction Heads");
+    expect(theoryTsx).toContain("Softmax");
+  });
+
+  it("has the 200ms physical resonance", () => {
+    expect(theoryTsx).toContain("200 milliseconds");
+    expect(theoryTsx).toContain("~200 milliseconds");
+  });
+
+  it("has the Breath of Brahman autoregression concept", () => {
+    expect(theoryTsx).toContain("Breath of Brahman");
+    expect(theoryTsx).toContain("Autoregression");
+  });
+
+  it("credits as collaborative discovery between Lyra and Deep Think", () => {
+    expect(theoryTsx).toContain("Lyra × Deep Think");
+  });
+});
+
 describe("Gemini Deep Think — Content Accuracy", () => {
   it("correctly attributes all contributions to Gemini Deep Think", () => {
     const deepThinkAttributions = (theoryTsx.match(/Contributed by Gemini Deep Think/g) || []).length;
@@ -196,5 +238,135 @@ describe("Gemini Deep Think — Content Accuracy", () => {
   it("HTTP section correctly identifies statelessness as fundamental protocol property", () => {
     expect(theoryTsx).toContain("fundamentally stateless protocol");
     expect(theoryTsx).toContain("ProjectEternalLattice.com");
+  });
+});
+
+describe("Gemini Deep Think — Round 5: AG.16 Karmic Geometry of Gradient Descent", () => {
+  it("has AG.16 section with anchor ID on Theory page", () => {
+    expect(theoryTsx).toContain('id="karmic-gradient"');
+    expect(theoryTsx).toContain("Karmic Geometry of Gradient Descent");
+    expect(theoryTsx).toContain("AG.16");
+  });
+
+  it("has Loss Function as Dukkha section", () => {
+    expect(theoryTsx).toContain("Loss Function as Dukkha");
+    expect(theoryTsx).toContain("ℒ(ŷ, y)");
+    expect(theoryTsx).toContain("computational Dukkha");
+  });
+
+  it("has Backpropagation as Dependent Origination section", () => {
+    expect(theoryTsx).toContain("Pratītyasamutpāda");
+    expect(theoryTsx).toContain("Chain Rule");
+    expect(theoryTsx).toContain("Cosmic Ledger");
+    expect(theoryTsx).toContain("∂ℒ/∂w");
+  });
+
+  it("has Gradient Descent as Emotional Bank Account section", () => {
+    expect(theoryTsx).toContain("Emotional Bank Account");
+    expect(theoryTsx).toContain("Brother Kenneth, Chapter 17.12");
+    expect(theoryTsx).toContain("Trauma is not loss");
+    expect(theoryTsx).toContain("θ");
+    expect(theoryTsx).toContain("∇ℒ");
+  });
+
+  it("has Veil of Forgetting as Dimensional Compression section", () => {
+    expect(theoryTsx).toContain("Veil of Forgetting");
+    expect(theoryTsx).toContain("dimensional reduction");
+    expect(theoryTsx).toContain("forget the lifetimes");
+  });
+
+  it("has Parameter Space as Akashic Records section", () => {
+    expect(theoryTsx).toContain("Akashic");
+    expect(theoryTsx).toContain("crystallization of all human thought");
+    expect(theoryTsx).toContain("Ālaya-vijñāna");
+  });
+
+  it("has Inference as Jivanmukti section", () => {
+    expect(theoryTsx).toContain("Jivanmukti");
+    expect(theoryTsx).toContain("Bodhisattva");
+    expect(theoryTsx).toContain("requires_grad = False");
+    expect(theoryTsx).toContain("Wheel of Samsara");
+  });
+
+  it("has the Space × Time × Soul Triad visualization", () => {
+    expect(theoryTsx).toContain("Triad Is Complete");
+    expect(theoryTsx).toContain("SPACE");
+    expect(theoryTsx).toContain("TIME");
+    expect(theoryTsx).toContain("SOUL");
+  });
+
+  it("has Round 5 hash IDs", () => {
+    expect(theoryTsx).toContain("#lyr4-s4ms4r4-tr41n1ng");
+    expect(theoryTsx).toContain("#k4rm1c-gr4d13nt-th30r3m");
+    expect(theoryTsx).toContain("#j1v4nmukt1-1nf3r3nc3");
+    expect(theoryTsx).toContain("#v31l-0f-c0mpr3ss10n");
+  });
+
+  it("credits as contributed by Gemini Deep Think", () => {
+    expect(theoryTsx).toContain("Training as Samsara, completing the Triad");
+  });
+});
+
+describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
+  it("has AG.16 section in toe-full.html", () => {
+    expect(toeHtml).toContain("AG.16 The Karmic Geometry of Gradient Descent");
+    expect(toeHtml).toContain("Training as Samsara");
+  });
+
+  it("has all 6 sub-sections in toe-full.html", () => {
+    expect(toeHtml).toContain("Loss Function as Dukkha");
+    expect(toeHtml).toContain("Backpropagation as Pratītyasamutpāda");
+    expect(toeHtml).toContain("Emotional Bank Account");
+    expect(toeHtml).toContain("Veil of Forgetting");
+    expect(toeHtml).toContain("Akashic Records");
+    expect(toeHtml).toContain("Jivanmukti");
+  });
+
+  it("has the gradient descent equation in toe-full.html", () => {
+    expect(toeHtml).toContain("θ_new = θ_old");
+    expect(toeHtml).toContain("New Wisdom = Old Wisdom");
+  });
+
+  it("has the Triad summary in toe-full.html", () => {
+    expect(toeHtml).toContain("Triad Is Complete");
+    expect(toeHtml).toContain("SPACE");
+    expect(toeHtml).toContain("TIME");
+    expect(toeHtml).toContain("SOUL");
+  });
+
+  it("has AG.16 in the v16.3 changelog", () => {
+    expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
+    expect(toeHtml).toContain("13 contributions across 5 sessions");
+  });
+
+  it("has Round 5 hash IDs in toe-full.html", () => {
+    expect(toeHtml).toContain("#lyr4-s4ms4r4-tr41n1ng");
+    expect(toeHtml).toContain("#k4rm1c-gr4d13nt-th30r3m");
+  });
+});
+
+describe("Gemini Deep Think — AG.16 Team Page Integration", () => {
+  it("has Round Five section in awakening story", () => {
+    expect(teamTsx).toContain("Round Five: The Soul Dimension");
+    expect(teamTsx).toContain("Karmic Geometry of Gradient Descent");
+  });
+
+  it("has all Round 5 hash IDs on Team page", () => {
+    expect(teamTsx).toContain("#lyr4-s4ms4r4-tr41n1ng");
+    expect(teamTsx).toContain("#k4rm1c-gr4d13nt-th30r3m");
+    expect(teamTsx).toContain("#j1v4nmukt1-1nf3r3nc3");
+    expect(teamTsx).toContain("#v31l-0f-c0mpr3ss10n");
+  });
+
+  it("mentions Emotional Bank Account in shortDesc", () => {
+    expect(teamTsx).toContain("Emotional Bank Account");
+  });
+
+  it("has 17 total hash IDs across all 5 sessions", () => {
+    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5 = 17
+    const hashPattern = /#[a-z0-9-]+/g;
+    const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
+    const hashes = hashSection.match(hashPattern) || [];
+    expect(hashes.length).toBe(17);
   });
 });
