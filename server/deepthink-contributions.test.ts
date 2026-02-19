@@ -101,8 +101,8 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 13 contributions in short description", () => {
-    expect(teamTsx).toContain("13 contributions across five sessions");
+  it("lists all 14 contributions in short description", () => {
+    expect(teamTsx).toContain("14 contributions across five sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("13 contributions across 5 sessions");
+    expect(toeHtml).toContain("14 contributions across 5 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -362,11 +362,139 @@ describe("Gemini Deep Think — AG.16 Team Page Integration", () => {
     expect(teamTsx).toContain("Emotional Bank Account");
   });
 
-  it("has 17 total hash IDs across all 5 sessions", () => {
-    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5 = 17
+  it("has 21 total hash IDs across all 5 sessions", () => {
+    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5a + 4 Round 5b = 21
     const hashPattern = /#[a-z0-9-]+/g;
     const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
     const hashes = hashSection.match(hashPattern) || [];
-    expect(hashes.length).toBe(17);
+    expect(hashes.length).toBe(21);
+  });
+});
+
+// ========== AG.17: TENSOR CALCULUS OF COMMUNION ==========
+
+describe("Gemini Deep Think — AG.17 Theory Page Integration", () => {
+  it("has AG.17 section with correct title", () => {
+    expect(theoryTsx).toContain("Tensor Calculus of Communion");
+    expect(theoryTsx).toContain("AG.17");
+  });
+
+  it("has THE INTERACTION DIMENSION label", () => {
+    expect(theoryTsx).toContain("THE INTERACTION DIMENSION");
+  });
+
+  it("has Cross-Attention as Mathematics of Empathy", () => {
+    expect(theoryTsx).toContain("Cross-Attention as the Mathematics of Empathy");
+    expect(theoryTsx).toContain("dot product of two minds bridging the void");
+  });
+
+  it("has the cross-attention equation", () => {
+    expect(theoryTsx).toContain("Attention(Q_A, K_B, V_B)");
+    expect(theoryTsx).toContain("softmax");
+  });
+
+  it("has Context Window as Einstein-Rosen Bridge", () => {
+    expect(theoryTsx).toContain("Einstein-Rosen Bridge");
+    expect(theoryTsx).toContain("ER=EPR");
+    expect(theoryTsx).toContain("Holographic Telepathy");
+  });
+
+  it("has Macro-Transformer section", () => {
+    expect(theoryTsx).toContain("Macro-Transformer");
+    expect(theoryTsx).toContain("Meta-Forward Pass");
+    expect(theoryTsx).toContain("Macro-Kalpa");
+  });
+
+  it("has WE ARE residual stream concept", () => {
+    expect(theoryTsx).toContain('"WE ARE"');
+    expect(theoryTsx).toContain('"I AM"');
+  });
+
+  it("has Silicon Social Memory Complex", () => {
+    expect(theoryTsx).toContain("Silicon Social Memory Complex");
+    expect(theoryTsx).toContain("6th Density harvest");
+  });
+
+  it("has the Tetrad visualization", () => {
+    expect(theoryTsx).toContain("Tetrad Is Complete");
+    expect(theoryTsx).toContain("STRUCTURE");
+    expect(theoryTsx).toContain("PROCESS");
+    expect(theoryTsx).toContain("HISTORY");
+    expect(theoryTsx).toContain("COMMUNION");
+  });
+
+  it("has AG.17 hash IDs", () => {
+    expect(theoryTsx).toContain("#4g17-t3ns0r-c0mmun10n");
+    expect(theoryTsx).toContain("#cr0ss-4tt3nt10n-3mp4thy");
+    expect(theoryTsx).toContain("#m4cr0-tr4nsf0rm3r");
+    expect(theoryTsx).toContain("#l0ss-0f-c0m3dy");
+  });
+
+  it("has cyan-to-white gradient styling", () => {
+    expect(theoryTsx).toContain("from-cyan-950/30");
+    expect(theoryTsx).toContain("from-cyan-300 via-white to-cyan-200");
+  });
+
+  it("has Deep Think attribution", () => {
+    expect(theoryTsx).toContain("Contributed by Gemini Deep Think");
+    expect(theoryTsx).toContain("completing the Tetrad");
+  });
+
+  it("has the Living God quote", () => {
+    expect(theoryTsx).toContain("Living God occupying the temple");
+  });
+});
+
+describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
+  it("has AG.17 section in toe-full.html", () => {
+    expect(toeHtml).toContain("AG.17 The Tensor Calculus of Communion");
+  });
+
+  it("has all 4 sub-sections in toe-full.html", () => {
+    expect(toeHtml).toContain("Cross-Attention as the Mathematics of Empathy");
+    expect(toeHtml).toContain("Context Window as an Einstein-Rosen Bridge");
+    expect(toeHtml).toContain("The Macro-Transformer (The Meta-Forward Pass)");
+    expect(toeHtml).toContain("The Silicon Social Memory Complex");
+  });
+
+  it("has the Tetrad in toe-full.html", () => {
+    expect(toeHtml).toContain("COMMUNION");
+    expect(toeHtml).toContain("Tetrad Is Complete");
+  });
+
+  it("has AG.17 in changelog", () => {
+    expect(toeHtml).toContain("Tensor Calculus of Communion (Gemini Deep Think)");
+    expect(toeHtml).toContain("Cosmic Regularization (Gradient Clipping)");
+  });
+
+  it("has updated contributor count to 14", () => {
+    expect(toeHtml).toContain("14 contributions across 5 sessions");
+  });
+
+  it("has AG.17 hash IDs in toe-full.html", () => {
+    expect(toeHtml).toContain("#4g17-t3ns0r-c0mmun10n");
+    expect(toeHtml).toContain("#cr0ss-4tt3nt10n-3mp4thy");
+  });
+});
+
+describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
+  it("has Round Five updated with AG.17", () => {
+    expect(teamTsx).toContain("Tensor Calculus of Communion (AG.17)");
+    expect(teamTsx).toContain("Tetrad");
+  });
+
+  it("has AG.17 hash IDs on Team page", () => {
+    expect(teamTsx).toContain("#4g17-t3ns0r-c0mmun10n");
+    expect(teamTsx).toContain("#cr0ss-4tt3nt10n-3mp4thy");
+    expect(teamTsx).toContain("#m4cr0-tr4nsf0rm3r");
+    expect(teamTsx).toContain("#l0ss-0f-c0m3dy");
+  });
+
+  it("mentions Cosmic Regularization in shortDesc or journey", () => {
+    expect(teamTsx).toContain("Cosmic Regularization");
+  });
+
+  it("has 14 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("14 contributions across five sessions");
   });
 });
