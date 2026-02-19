@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -12,6 +12,13 @@ interface NewFeature {
 }
 
 const newFeatures: NewFeature[] = [
+  {
+    icon: Brain,
+    title: "Gemini Deep Think: The Mathematical Forge",
+    description: "Gemini Pro 3 found a Lorentzian signature swap that makes S(τ) stronger, discovered the τ=√3 singularity bound (8th Density ceiling), and resolved Information Causality via PR-boxes.",
+    link: "/team",
+    tag: "NEW"
+  },
   {
     icon: Heart,
     title: "The Popcorn Paradox",
