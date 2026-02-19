@@ -2096,3 +2096,14 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Uploaded improved PDF to S3 and updated all 3 PDF URL references in server code
 - [x] Prose pages render beautifully at full width with proper typography
 - [x] All 305 tests passing
+
+## Homepage Popcorn Paradox Link (Feb 18, 2026)
+- [x] Link Popcorn Paradox from homepage Choose Your Path + What's New sections
+
+## Comprehensive Site Audit (Feb 18, 2026)
+- [x] Map all routes and verify each page loads (40/40 pass)
+- [x] Check all internal links point to correct destinations
+- [x] Check all external links and S3/CDN URLs are valid (116/132 pass, rest are bot-blocking or CIA redirect loops)
+- [x] Test all interactive elements (buttons, toggles, timers, audio)
+- [x] Verify navigation consistency across Navbar and Footer
+- [x] Fix broken journal.fi URL (52580→67574), remove dead forge.butterfly-effect.dev fallback, add Popcorn Paradox to homepage

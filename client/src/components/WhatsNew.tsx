@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Heart,
+    title: "The Popcorn Paradox",
+    description: "Why did we invent numbers? A shepherd, a flock, and the moment counting killed the movie. Section 13.6 now in the ToE.",
+    link: "/popcorn-paradox",
+    tag: "NEW"
+  },
+  {
     icon: Calculator,
     title: "Appendix O.8: Computational Limitations",
     description: "Full transparency on what we tested, what we found (\u03a6 = 0 for all 20 sparse networks), and why null results strengthen science.",

@@ -299,7 +299,7 @@ const categories: Category[] = [
         author: "Albion M. Butters",
         year: "2015",
         description: "Academic paper tracing the history of Spiral Dynamics from Graves' original research through Beck, Cowan, and Wilber's interpretations.",
-        url: "https://journal.fi/ar/article/view/52580",
+        url: "https://journal.fi/ar/article/view/67574",
         type: "paper"
       },
       {
