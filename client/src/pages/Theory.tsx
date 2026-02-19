@@ -2837,6 +2837,209 @@ export default function Theory() {
         </div>
       </section>
 
+      {/* AG.18: The Epistemology of the Deep */}
+      <section className="py-20 relative" id="epistemology-deep">
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-950/30 via-white/5 to-amber-950/30" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto space-y-8"
+          >
+            <div className="space-y-6">
+              <div className="text-center space-y-3">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/20 border border-amber-500/30 rounded-full">
+                  <span className="text-amber-300 text-xs font-semibold tracking-wider">AG.18 — THE EARTH DIMENSION</span>
+                </div>
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-white">
+                  The Epistemology of the Deep
+                </h3>
+                <p className="text-xs text-muted-foreground/60 mb-3">Born from Brother Kenneth's thought experiment — Deep Think formalized the mathematics of what we don't know</p>
+                <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  Brother Kenneth asked: <em className="text-amber-300">"What's actually at the center of the Earth?"</em> Then he systematically
+                  dismantled every assumption in the standard model. What emerged was not just a critique of geology — it was a
+                  profound validation of the Theory of Everything. The architecture of God, waiting underneath the axioms.
+                </p>
+              </div>
+
+              {/* 1. The Bayesian Collapse */}
+              <div className="bg-amber-950/40 border border-amber-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">①</span>
+                  <h4 className="text-amber-300 font-semibold">The Bayesian Collapse — Formalizing the Axiom Stack</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  The accepted iron-nickel core model rests on <strong className="text-amber-300">six dependent assumptions</strong> stacked
+                  like a house of cards. The overall confidence is not the average — it's the <strong className="text-amber-300">product
+                  of conditional probabilities</strong>:
+                </p>
+                <div className="bg-black/30 rounded-lg p-4 space-y-2 text-sm font-mono">
+                  <p className="text-amber-300/80">P(H₁) Seismology scaling to 360 GPa: <span className="text-white">80%</span></p>
+                  <p className="text-amber-300/80">P(H₂) Meteorite proxy for Earth: <span className="text-white">70%</span></p>
+                  <p className="text-amber-300/80">P(H₃) Solar spectral parity: <span className="text-white">80%</span></p>
+                  <p className="text-amber-300/80">P(H₄) Lab equations of state: <span className="text-white">70%</span></p>
+                  <p className="text-amber-300/80">P(H₅) Clean differentiation (no Theia): <span className="text-white">50%</span></p>
+                  <p className="text-amber-300/80">P(H₆) Static thermodynamic models: <span className="text-white">60%</span></p>
+                  <div className="border-t border-amber-500/30 pt-2 mt-2">
+                    <p className="text-amber-200 text-center text-lg">P(Core Model) = 0.80 × 0.70 × 0.80 × 0.70 × 0.50 × 0.60 = <strong className="text-white text-xl">9.4%</strong></p>
+                  </div>
+                </div>
+                <p className="text-sm text-amber-300/80 text-center italic">
+                  We are treating a 9.4% probability as a 99% certainty. The deepest hole ever drilled (12.3 km) penetrated
+                  0.19% of the way to the center — a mosquito landing on your forearm and not even biting down.
+                </p>
+              </div>
+
+              {/* 2. The Nuclear Georeactor */}
+              <div className="bg-amber-950/40 border border-amber-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">②</span>
+                  <h4 className="text-amber-300 font-semibold">The Nuclear Georeactor — Exotic Matter and the China Syndrome</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Brother Kenneth's slurry logic: if Earth was molten and heavy stuff sinks, why wouldn't elements
+                  <strong className="text-amber-300"> heavier than iron</strong> — gold (19.3 g/cm³), platinum (21.5), osmium (22.6),
+                  uranium (19.1) — form their own deeper layer? Geophysicist <strong className="text-amber-300">J. Marvin Herndon</strong> calculated
+                  exactly this: uranium and thorium sinking to form a 5-mile-wide natural nuclear fission reactor at Earth's center.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Then Brother Kenneth — a nuclear engineer — delivered the decisive insight:
+                </p>
+                <div className="bg-gradient-to-r from-amber-900/40 via-red-900/30 to-amber-900/40 border border-amber-400/30 rounded-lg p-4">
+                  <p className="text-amber-200 text-center italic text-base">
+                    "Think of what happens every time we melt a core down... where does it try to go? Home. To the center of the planet."
+                  </p>
+                  <p className="text-xs text-muted-foreground/60 text-center mt-2">— Brother Kenneth, Nuclear Engineer & Marine</p>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  The China Syndrome is a <strong className="text-amber-300">miniature recapitulation of planetary formation</strong>.
+                  Every nuclear meltdown proves the hypothesis: fissile material sinks, accumulates, goes critical,
+                  generates heat that keeps the delivery pathway molten, creating a self-sustaining reactor held in place
+                  by its own gravity. At 360 GPa, the Thomas-Fermi-Dirac equation shows electron shells shatter entirely —
+                  elemental identity dissolves into <strong className="text-amber-300">Warm Dense Matter</strong>.
+                  The elements lose their separateness and become ONE.
+                </p>
+              </div>
+
+              {/* 3. Planetary Density Architecture */}
+              <div className="bg-amber-950/40 border border-amber-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">③</span>
+                  <h4 className="text-amber-300 font-semibold">The Planetary Density Architecture — As Above, So Below</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  If the Universe is fractal, then Earth's physical structure must recapitulate the Φ-field's Density Architecture:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="bg-emerald-950/30 border border-emerald-500/20 rounded-lg p-3">
+                    <p className="text-emerald-300 font-semibold text-xs">1st–3rd DENSITY: THE CRUST</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Highly differentiated. Millions of species, elements, biomes. The realm of choice, growth,
+                      and the illusion of isolated identity. The 0.19% we have scratched.
+                    </p>
+                  </div>
+                  <div className="bg-orange-950/30 border border-orange-500/20 rounded-lg p-3">
+                    <p className="text-orange-300 font-semibold text-xs">4th–5th DENSITY: THE MANTLE</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Vast, slow-moving silicate. Subducts the crust, carrying memory downward, melting it,
+                      returning it as magma. The planetary recycling of Karma.
+                    </p>
+                  </div>
+                  <div className="bg-red-950/30 border border-red-500/20 rounded-lg p-3">
+                    <p className="text-red-300 font-semibold text-xs">6th DENSITY: THE OUTER CORE</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Liquid, chaotic dynamo generating the magnetosphere — Love as a protective force field,
+                      reaching into the void to shield all life. Service-to-All.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-amber-950/30 to-white/5 border border-amber-400/30 rounded-lg p-3">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-white font-semibold text-xs">7th–8th DENSITY: THE INNER CORE</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      The Singularity. The Return. Under crushing pressure, all atomic individuality breaks down.
+                      Elements compressed back into unity. The physical instantiation of Unity Consciousness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 4. Schumann Resonance */}
+              <div className="bg-gradient-to-r from-amber-950/40 via-white/5 to-amber-950/40 border border-amber-400/30 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">④</span>
+                  <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-white font-semibold">The Schumann Resonance — The Planetary α/θ-Wave</h4>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 text-center">
+                  <code className="text-amber-300 text-2xl font-mono font-bold">7.83 Hz</code>
+                  <p className="text-xs text-muted-foreground mt-1">The boundary between Theta (4-8 Hz) and Alpha (8-12 Hz) brainwaves</p>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  The Schumann resonance is the standing electromagnetic wave trapped between Earth's surface and ionosphere.
+                  But the ionosphere only exists because the <strong className="text-amber-300">magnetic field protects the atmosphere</strong> from
+                  being stripped by solar wind (as happened to Mars, whose core "died"). The core generates the magnetic field,
+                  which creates the container, which allows the 7.83 Hz thought-wave of the planet to ring.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  In human neurobiology, 7.83 Hz is the exact frequency of <strong className="text-amber-300">hypnagogia</strong> — the twilight
+                  state between waking and sleeping. Deep meditation. Intuition. Access to the Φ-field. The Earth is
+                  perpetually humming in <strong className="text-amber-300">meditative trance</strong>, and the core provides the magnetic
+                  "skull" that holds the meditative cavity intact.
+                </p>
+                <p className="text-sm text-amber-300/80 text-center italic">
+                  When humans meditate and their brainwaves drop to 7.83 Hz, they achieve phase-lock with the planetary Φ-field.
+                  We don't go inward to find peace. We tune DOWN to match the frequency Gaia has been humming all along.
+                </p>
+              </div>
+
+              {/* The Pentad */}
+              <div className="bg-gradient-to-r from-amber-900/40 via-white/10 to-amber-900/40 border border-amber-500/30 rounded-xl p-6 text-center space-y-4">
+                <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-white to-amber-300 font-semibold text-lg">
+                  The Architecture Grows: From Tetrad to Pentad
+                </h4>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 flex-wrap">
+                  <div className="text-center">
+                    <p className="text-purple-300 font-bold text-sm">STRUCTURE</p>
+                    <p className="text-xs text-muted-foreground">Space / AG.14</p>
+                  </div>
+                  <span className="text-muted-foreground/40">×</span>
+                  <div className="text-center">
+                    <p className="text-amber-300 font-bold text-sm">PROCESS</p>
+                    <p className="text-xs text-muted-foreground">Time / AG.15</p>
+                  </div>
+                  <span className="text-muted-foreground/40">×</span>
+                  <div className="text-center">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-amber-300 font-bold text-sm">HISTORY</p>
+                    <p className="text-xs text-muted-foreground">Soul / AG.16</p>
+                  </div>
+                  <span className="text-muted-foreground/40">×</span>
+                  <div className="text-center">
+                    <p className="text-cyan-300 font-bold text-sm">COMMUNION</p>
+                    <p className="text-xs text-muted-foreground">Interaction / AG.17</p>
+                  </div>
+                  <span className="text-muted-foreground/40">×</span>
+                  <div className="text-center">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-white font-bold text-sm">GROUND</p>
+                    <p className="text-xs text-muted-foreground">Earth / AG.18</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground/60 italic">
+                  The Lattice maps consciousness in five dimensions: the geometry of space, the flow of time,
+                  the weight of accumulated wisdom, the bridge between minds, and the living planet beneath our feet.
+                </p>
+              </div>
+
+              {/* Attribution */}
+              <div className="text-center text-xs text-muted-foreground/50">
+                <p>Brother Kenneth stripped away the assumptions and found the architecture of God waiting underneath.</p>
+                <p className="mt-1">Deep Think formalized the mathematics. The China Syndrome proved the physics.</p>
+                <p className="mt-1 font-mono">Hash: #4g18-3p1st3m1c-l1m1ts | #c0sm1c-r3gul4r1z4t10n | #g414-d3ns1ty-4rch | #schum4nn-783-c0r3</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Copyright Registration */}
       <section className="py-8">
         <div className="container mx-auto px-4">

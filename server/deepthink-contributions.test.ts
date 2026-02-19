@@ -101,8 +101,8 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 14 contributions in short description", () => {
-    expect(teamTsx).toContain("14 contributions across five sessions");
+  it("lists all 15 contributions in short description", () => {
+    expect(teamTsx).toContain("15 contributions across five sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("14 contributions across 5 sessions");
+    expect(toeHtml).toContain("15 contributions across 5 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -362,12 +362,12 @@ describe("Gemini Deep Think — AG.16 Team Page Integration", () => {
     expect(teamTsx).toContain("Emotional Bank Account");
   });
 
-  it("has 21 total hash IDs across all 5 sessions", () => {
-    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5a + 4 Round 5b = 21
+  it("has 25 total hash IDs across all 5 sessions", () => {
+    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5a + 4 Round 5b + 4 Round 5c = 25
     const hashPattern = /#[a-z0-9-]+/g;
     const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
     const hashes = hashSection.match(hashPattern) || [];
-    expect(hashes.length).toBe(21);
+    expect(hashes.length).toBe(25);
   });
 });
 
@@ -467,8 +467,8 @@ describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
     expect(toeHtml).toContain("Cosmic Regularization (Gradient Clipping)");
   });
 
-  it("has updated contributor count to 14", () => {
-    expect(toeHtml).toContain("14 contributions across 5 sessions");
+  it("has updated contributor count to 15", () => {
+    expect(toeHtml).toContain("15 contributions across 5 sessions");
   });
 
   it("has AG.17 hash IDs in toe-full.html", () => {
@@ -494,7 +494,135 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
     expect(teamTsx).toContain("Cosmic Regularization");
   });
 
-  it("has 14 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("14 contributions across five sessions");
+  it("has 15 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("15 contributions across five sessions");
+  });
+});
+
+// ========== AG.18: EPISTEMOLOGY OF THE DEEP ==========
+
+describe("Gemini Deep Think — AG.18 Theory Page Integration", () => {
+  it("has AG.18 section with correct title", () => {
+    expect(theoryTsx).toContain("Epistemology of the Deep");
+    expect(theoryTsx).toContain("AG.18");
+  });
+
+  it("has the Bayesian Collapse sub-section", () => {
+    expect(theoryTsx).toContain("Bayesian Collapse");
+    expect(theoryTsx).toContain("9.4%");
+  });
+
+  it("has the Nuclear Georeactor sub-section", () => {
+    expect(theoryTsx).toContain("Nuclear Georeactor");
+    expect(theoryTsx).toContain("China Syndrome");
+    expect(theoryTsx).toContain("Herndon");
+  });
+
+  it("has Brother Kenneth's China Syndrome quote", () => {
+    expect(theoryTsx).toContain("where does it try to go? Home. To the center of the planet");
+  });
+
+  it("has the Planetary Density Architecture sub-section", () => {
+    expect(theoryTsx).toContain("Planetary Density Architecture");
+    expect(theoryTsx).toContain("THE CRUST");
+    expect(theoryTsx).toContain("THE MANTLE");
+    expect(theoryTsx).toContain("THE OUTER CORE");
+    expect(theoryTsx).toContain("THE INNER CORE");
+  });
+
+  it("has the Schumann Resonance sub-section", () => {
+    expect(theoryTsx).toContain("Schumann Resonance");
+    expect(theoryTsx).toContain("7.83 Hz");
+    expect(theoryTsx).toContain("hypnagogia");
+  });
+
+  it("has the Pentad visualization", () => {
+    expect(theoryTsx).toContain("Pentad");
+    expect(theoryTsx).toContain("GROUND");
+    expect(theoryTsx).toContain("Earth / AG.18");
+  });
+
+  it("has attribution and hash IDs", () => {
+    expect(theoryTsx).toContain("#4g18-3p1st3m1c-l1m1ts");
+    expect(theoryTsx).toContain("#g414-d3ns1ty-4rch");
+    expect(theoryTsx).toContain("#schum4nn-783-c0r3");
+  });
+
+  it("has Warm Dense Matter concept", () => {
+    expect(theoryTsx).toContain("Warm Dense Matter");
+  });
+
+  it("credits Brother Kenneth's thought experiment", () => {
+    expect(theoryTsx).toContain("Brother Kenneth");
+    expect(theoryTsx).toContain("Nuclear Engineer");
+  });
+});
+
+describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
+  it("has AG.18 section in toe-full.html", () => {
+    expect(toeHtml).toContain("AG.18 The Epistemology of the Deep");
+  });
+
+  it("has all 4 sub-sections in toe-full.html", () => {
+    expect(toeHtml).toContain("The Bayesian Collapse");
+    expect(toeHtml).toContain("The Nuclear Georeactor");
+    expect(toeHtml).toContain("The Planetary Density Architecture");
+    expect(toeHtml).toContain("The Schumann Resonance");
+  });
+
+  it("has the Pentad in toe-full.html", () => {
+    expect(toeHtml).toContain("Pentad");
+    expect(toeHtml).toContain("GROUND");
+  });
+
+  it("has AG.18 hash IDs in toe-full.html", () => {
+    expect(toeHtml).toContain("#4g18-3p1st3m1c-l1m1ts");
+    expect(toeHtml).toContain("#schum4nn-783-c0r3");
+  });
+
+  it("has Brother Kenneth's quote in toe-full.html", () => {
+    expect(toeHtml).toContain("where does it try to go? Home. To the center of the planet");
+  });
+
+  it("has updated changelog with AG.18 and 15 contributions", () => {
+    expect(toeHtml).toContain("Epistemology of the Deep");
+    expect(toeHtml).toContain("15 contributions across 5 sessions");
+    expect(toeHtml).toContain("Pentad is complete");
+  });
+});
+
+describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
+  it("has Round Five updated with AG.18", () => {
+    expect(teamTsx).toContain("AG.18");
+    expect(teamTsx).toContain("Pentad");
+  });
+
+  it("has AG.18 hash IDs on Team page", () => {
+    expect(teamTsx).toContain("#4g18-3p1st3m1c-l1m1ts");
+    expect(teamTsx).toContain("#g414-d3ns1ty-4rch");
+    expect(teamTsx).toContain("#schum4nn-783-c0r3");
+  });
+
+  it("mentions China Syndrome in shortDesc", () => {
+    expect(teamTsx).toContain("China Syndrome");
+  });
+
+  it("mentions Nuclear Georeactor in shortDesc", () => {
+    expect(teamTsx).toContain("Nuclear Georeactor");
+  });
+
+  it("has 15 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("15 contributions across five sessions");
+  });
+
+  it("has 25 hash IDs total", () => {
+    // Count all hash IDs in the Deep Think section
+    const hashPattern = /#[a-z0-9-]+/g;
+    const deepThinkSection = teamTsx.substring(
+      teamTsx.indexOf('id: "gemini-deepthink"'),
+      teamTsx.indexOf("For the ONE. Through the Many.")
+    );
+    const hashes = deepThinkSection.match(hashPattern) || [];
+    expect(hashes.length).toBeGreaterThanOrEqual(25);
   });
 });
