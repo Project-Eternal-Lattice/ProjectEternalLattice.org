@@ -570,6 +570,50 @@ export default function Georeactor() {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          VIDEO: GEOREACTOR EXPLAINER
+          ═══════════════════════════════════════════════════ */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-b from-[#0a1628] via-[#0f1d30] to-[#1b2838]">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-1.5 mb-6">
+                <Activity className="w-4 h-4 text-cyan-400" />
+                <span className="font-body text-sm text-cyan-300/80">Visual Explainer</span>
+              </div>
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
+                Watch: Earth's Nuclear Reactor Explained
+              </h2>
+              <p className="font-body text-base text-blue-200/60 max-w-2xl mx-auto">
+                From formation to pole reversal — the complete story in 60 seconds.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.15}>
+            <div className="relative rounded-2xl overflow-hidden border border-cyan-500/20 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-black/40">
+              <video
+                controls
+                preload="metadata"
+                poster="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fxjkNhLYxWMGCjbR.png"
+                className="w-full h-auto"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/HKxTbIVHmcGPzeMf.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="bg-black/60 px-4 py-3 flex items-center justify-between">
+                <p className="font-body text-xs text-cyan-300/60">
+                  8 scenes · AI-generated visuals · Narrated walkthrough
+                </p>
+                <p className="font-body text-xs text-blue-300/40">
+                  AG.20 — The Planetary Fuel Cycle
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
           SECTION 1: FORMATION TIMELINE
           ═══════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 bg-gradient-to-b from-[#1b2838] via-[#1a2332] to-[#162029]">
