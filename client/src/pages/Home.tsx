@@ -260,6 +260,15 @@ export default function Home() {
                 cta: "Explore Traditions"
               },
               {
+                title: "🍿 The Popcorn Paradox",
+                description: "Why did we invent numbers? A shepherd, a flock, and the moment counting killed the movie. The insight that bridges science and soul.",
+                icon: Heart,
+                link: "/popcorn-paradox",
+                color: "from-rose-500/20 to-rose-900/20",
+                borderColor: "border-rose-500/30",
+                cta: "Discover the Paradox"
+              },
+              {
                 title: "⚡ Executive Summary",
                 description: "New to the ToE? Start here. 50 pages of essential insights — the perfect gateway for newcomers.",
                 icon: Sparkles,
