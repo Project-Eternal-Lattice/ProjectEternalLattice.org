@@ -453,8 +453,8 @@ describe("v16.2 Version Consistency Across Website", () => {
     expect(theoryContent).toContain("v16.2");
   });
 
-  it("Read page references v16.2 Epistemic Transparency Edition", () => {
-    expect(readContent).toContain("v16.2");
+  it("Read page references v16.3 Epistemic Transparency Edition", () => {
+    expect(readContent).toContain("v16.3");
     expect(readContent).toContain("Epistemic Transparency Edition");
   });
 

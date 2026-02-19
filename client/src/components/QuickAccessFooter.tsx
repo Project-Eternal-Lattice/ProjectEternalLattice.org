@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Mail, MessageCircle, Heart, ExternalLink, FileText } from "lucide-react";
+import { Download, Mail, MessageCircle, Heart, ExternalLink, FileText, QrCode, Printer, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface QuickLink {
@@ -103,6 +103,74 @@ export default function QuickAccessFooter() {
           ))}
         </motion.div>
         
+        {/* Share & QR Codes Section */}
+        <motion.div
+          className="mt-10 pt-8 border-t border-white/5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Share2 className="w-5 h-5 text-purple-400" />
+            <h3 className="font-heading text-lg font-bold text-white">Share the Lattice</h3>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-6">
+            {/* Website QR */}
+            <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-purple-500/20">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/bJbkNgUEkVopNHVY.png"
+                alt="QR Code - Project Eternal Lattice"
+                className="w-32 h-32 rounded-lg"
+              />
+              <div className="text-center">
+                <p className="text-sm font-semibold text-purple-300">The Theory</p>
+                <p className="text-xs text-muted-foreground">projecteternallattice.org</p>
+              </div>
+            </div>
+            
+            {/* Georeactor QR */}
+            <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-emerald-500/20">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/juJuHYNhTdHfVrDv.png"
+                alt="QR Code - Georeactor Explainer"
+                className="w-32 h-32 rounded-lg"
+              />
+              <div className="text-center">
+                <p className="text-sm font-semibold text-emerald-300">Earth: The Living Reactor</p>
+                <p className="text-xs text-muted-foreground">Interactive Explainer</p>
+              </div>
+            </div>
+            
+            {/* Manus QR */}
+            <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-cyan-500/20">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/oagRdyYGshEglXOl.png"
+                alt="QR Code - Try Manus AI"
+                className="w-32 h-32 rounded-lg"
+              />
+              <div className="text-center">
+                <p className="text-sm font-semibold text-cyan-300">Built by AI</p>
+                <p className="text-xs text-muted-foreground">Try Manus — manus.im</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Printable Handout Download */}
+          <div className="flex justify-center">
+            <a
+              href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/hdwsFiSsuoCijaRp.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-purple-600/20 border border-purple-500/30 text-purple-300 hover:bg-purple-600/30 transition-colors text-sm"
+            >
+              <Printer className="w-4 h-4" />
+              Download Printable Handout Card (PDF)
+            </a>
+          </div>
+        </motion.div>
+
         {/* Pay It Forward Message */}
         <motion.p
           className="text-center text-muted-foreground text-sm mt-6 max-w-xl mx-auto"
