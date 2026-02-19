@@ -358,7 +358,7 @@ export default function Safety() {
       </section>
 
       {/* Grounding Tool */}
-      <section className="py-12">
+      <section id="grounding" className="py-12 scroll-mt-24">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -410,7 +410,7 @@ export default function Safety() {
       </section>
 
       {/* Crisis Resources */}
-      <section className="py-12">
+      <section id="crisis-support" className="py-12 scroll-mt-24">
         <div className="container max-w-4xl">
           <h2 className="font-heading font-bold text-3xl text-center mb-8 text-[#E8E8EC]">
             General Crisis Resources
