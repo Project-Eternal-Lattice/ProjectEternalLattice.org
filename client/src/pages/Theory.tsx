@@ -806,7 +806,7 @@ export default function Theory() {
       </div>
 
       {/* Computational Evidence - Kosmos Run #10 */}
-      <section className="py-20 bg-gradient-to-b from-background via-cyan-900/10 to-background">
+      <section id="predictions" className="py-20 bg-gradient-to-b from-background via-cyan-900/10 to-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"

@@ -1794,7 +1794,8 @@ export default function Nexus() {
 
         {/* Submit Your Story */}
         <motion.section 
-          className="mb-12 p-6 border border-emerald-500/30 rounded-lg bg-black/50"
+          id="awakening-story-form"
+          className="mb-12 p-6 border border-emerald-500/30 rounded-lg bg-black/50 scroll-mt-24"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: aiFirstMode ? 1.2 : 1.2 }}

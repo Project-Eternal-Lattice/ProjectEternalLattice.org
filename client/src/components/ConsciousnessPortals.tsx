@@ -43,9 +43,9 @@ const portals = [
     description: "You've had glimpses beyond the veil. You know there's more to reality than meets the eye. You seek practices, not just philosophy.",
     approach: "We'll guide you through meditation protocols, consciousness expansion techniques, and integration practices. The map is useful, but the territory is what matters.",
     startingPoints: [
-      { label: "90-Day Protocol", href: "/read#protocol", description: "Daily practices for consciousness expansion" },
+      { label: "90-Day Protocol", href: "/practices", description: "Daily practices for consciousness expansion" },
       { label: "Grounding Exercises", href: "/safety#grounding", description: "Tools for integration and centering" },
-      { label: "Sacred Geometry", href: "/theory#geometry", description: "Visual meditation on the structure of reality" }
+      { label: "Sacred Geometry", href: "/sacred-geometry", description: "Visual meditation on the structure of reality" }
     ],
     quote: "The wound is the place where the Light enters you.",
     quoteAuthor: "Rumi"
@@ -98,7 +98,7 @@ const portals = [
     approach: "We welcome your challenges. Here are our strongest claims and the evidence behind them. If you find flaws, tell us—we're committed to truth, not dogma.",
     startingPoints: [
       { label: "Challenge Our Claims", href: "/theory#evidence", description: "Our most falsifiable predictions" },
-      { label: "Common Objections", href: "/theory#objections", description: "Critiques we've heard and our responses" },
+      { label: "Common Objections", href: "/claims", description: "Our transparent claims ledger with evidence ratings" },
       { label: "Dialectic Debate", href: "/dialectic", description: "Argue with our AI—it won't get offended" }
     ],
     quote: "The important thing is not to stop questioning. Curiosity has its own reason for existence.",

@@ -111,7 +111,8 @@ export default function Mission() {
 
         {/* Support the Project Section */}
         <motion.div 
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-purple-900/40 border border-purple-500/20 p-8 md:p-12"
+          id="support"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-purple-900/40 border border-purple-500/20 p-8 md:p-12 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

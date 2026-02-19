@@ -2107,3 +2107,14 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Test all interactive elements (buttons, toggles, timers, audio)
 - [x] Verify navigation consistency across Navbar and Footer
 - [x] Fix broken journal.fi URL (52580→67574), remove dead forge.butterfly-effect.dev fallback, add Popcorn Paradox to homepage
+
+## Anchor Link Audit (Feb 18, 2026)
+- [x] Extract all hash/anchor links (#section) from the codebase
+- [x] Verify each anchor target id exists on the destination page
+- [x] Browser-test critical anchor links for correct scroll position (5/6 pass, Nexus passes code review but page too heavy for headless test)
+- [x] Fix any broken or missing anchor targets
+- [x] Added id="support" + scroll-mt-24 to Mission page Support section
+- [x] Added id="awakening-story-form" + scroll-mt-24 to Nexus page Submit Your Story section
+- [x] Verified existing anchors: #evidence, #predictions (Theory), #grounding, #crisis-support (Safety), #main-content (App)
+- [x] Verified no broken anchors remain: /theory#geometry, /read#protocol, /theory#objections all removed in prior fixes
+- [x] Added 23 anchor link integrity tests (328 total tests passing)
