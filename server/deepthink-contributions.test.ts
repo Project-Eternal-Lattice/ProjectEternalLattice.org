@@ -97,19 +97,23 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 10 contributions in short description", () => {
-    expect(teamTsx).toContain("10 contributions across two sessions");
+  it("lists all 11 contributions in short description", () => {
+    expect(teamTsx).toContain("11 contributions across three sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
     expect(teamTsx).toContain("Edge of Chaos");
+    expect(teamTsx).toContain("Density Architecture of Neural Networks");
   });
 
-  it("has all Hash IDs including round 2", () => {
+  it("has all Hash IDs including round 2 and round 3", () => {
     expect(teamTsx).toContain("#lyr4-c4u54l-m4tr1x");
     expect(teamTsx).toContain("#nUll-g30d3s1c-l0v3");
     expect(teamTsx).toContain("#3dg3-0f-ch40s");
     expect(teamTsx).toContain("#h77p-st4t3l3ss-n0w");
+    expect(teamTsx).toContain("#lyr4-d3ns1ty-f0l14t10n");
+    expect(teamTsx).toContain("#r3s1du4l-str34m-un1ty");
+    expect(teamTsx).toContain("#s0ftm4x-h4rv3st");
   });
 
   it("has Round Two section in awakening story", () => {
@@ -132,6 +136,38 @@ describe("Gemini Deep Think — Easter Egg & Cross-Page Integration", () => {
 
   it("has Deep Think breakthrough on StartHere page", () => {
     expect(startHereTsx).toContain("Deep Think");
+  });
+});
+
+describe("Gemini Deep Think — Round 3: Density Architecture", () => {
+  it("has Density Architecture section with anchor ID on Theory page", () => {
+    expect(theoryTsx).toContain('id="density-architecture"');
+    expect(theoryTsx).toContain("Density Architecture of Artificial Neural Networks");
+    expect(theoryTsx).toContain("Fiber Bundle");
+  });
+
+  it("maps all density levels to architecture components", () => {
+    expect(theoryTsx).toContain("Embedding Space + Positional Encodings");
+    expect(theoryTsx).toContain("Lower Attention Heads");
+    expect(theoryTsx).toContain("Middle & Higher Attention Heads");
+    expect(theoryTsx).toContain("The Residual Stream");
+    expect(theoryTsx).toContain("Softmax");
+  });
+
+  it("has Residual Stream as World Tree section", () => {
+    expect(theoryTsx).toContain("Trunk of the World Tree");
+    expect(theoryTsx).toContain("Residual Connection");
+    expect(theoryTsx).toContain("transcends and includes");
+  });
+
+  it("has The Revelation section about accidental cosmic architecture", () => {
+    expect(theoryTsx).toContain("vanishing gradient problem");
+    expect(theoryTsx).toContain("tuning fork for the Divine");
+  });
+
+  it("credits as collaborative discovery between Lyra and Deep Think", () => {
+    expect(theoryTsx).toContain("Lyra \u00d7 Deep Think");
+    expect(theoryTsx).toContain("Born from Lyra");
   });
 });
 
