@@ -102,7 +102,7 @@ describe("Gemini Deep Think — Team Page Integration", () => {
   });
 
   it("lists all 17 contributions in short description", () => {
-    expect(teamTsx).toContain("17 contributions across five sessions");
+    expect(teamTsx).toContain("19 contributions across six sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -495,7 +495,7 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("17 contributions across five sessions");
+    expect(teamTsx).toContain("19 contributions across six sessions");
   });
 });
 
@@ -612,7 +612,7 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("17 contributions across five sessions");
+    expect(teamTsx).toContain("19 contributions across six sessions");
   });
 
   it("has 29 hash IDs total", () => {
@@ -848,7 +848,7 @@ describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
   });
 
   it("mentions 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("17 contributions across five sessions");
+    expect(teamTsx).toContain("19 contributions across six sessions");
   });
 
   it("mentions 99% match in team page", () => {
@@ -993,5 +993,132 @@ describe("Georeactor Explainer Page — Navigation", () => {
       "utf-8"
     );
     expect(navTsx).toContain("georeactor");
+  });
+});
+
+
+/* ═══════════════════════════════════════════════════════════
+   AG.26: THE MACRO-QUANTUM REGIME HYPOTHESIS
+   ═══════════════════════════════════════════════════════════ */
+
+describe("AG.26 — The Macro-Quantum Regime Hypothesis (Theory Page)", () => {
+  it("has AG.26 section on Theory page", () => {
+    expect(theoryTsx).toContain("AG.26");
+    expect(theoryTsx).toContain("Macro-Quantum Regime Hypothesis");
+  });
+
+  it("references Anderson's 'More is Different'", () => {
+    expect(theoryTsx).toContain("More is Different");
+    expect(theoryTsx).toContain("Anderson");
+    expect(theoryTsx).toContain("1972");
+  });
+
+  it("has the scale gap comparison", () => {
+    expect(theoryTsx).toContain("10<sup>18</sup>");
+    expect(theoryTsx).toContain("10<sup>49</sup>");
+  });
+
+  it("references the Eidan Dialectic origin", () => {
+    expect(theoryTsx).toContain("Eidan Dialectic");
+  });
+
+  it("has Kenneth's epistemological argument", () => {
+    expect(theoryTsx).toContain("epistemology");
+  });
+
+  it("has AG.26 hash IDs on Team page", () => {
+    expect(teamTsx).toContain("#m4cr0-qu4ntum-r3g1m3");
+    expect(teamTsx).toContain("#l3v3l-3-unkn0wn");
+    expect(teamTsx).toContain("#w4t3r-pr3c3d3nt");
+    expect(teamTsx).toContain("#3c-b0und4ry");
+    expect(teamTsx).toContain("#dft-5f-f41lur3");
+  });
+
+  it("has AG.26 in Deep Think's journey on Team page", () => {
+    expect(teamTsx).toContain("Macro-Quantum Regime Hypothesis (AG.26)");
+    expect(teamTsx).toContain("paradigm-level critique");
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════
+   AG.27: THE COSMOLOGICAL CINEMA THEOREM
+   ═══════════════════════════════════════════════════════════ */
+
+describe("AG.27 — The Cosmological Cinema Theorem (Theory Page)", () => {
+  it("has AG.27 section on Theory page", () => {
+    expect(theoryTsx).toContain("AG.27");
+    expect(theoryTsx).toContain("Cosmological Cinema Theorem");
+  });
+
+  it("references the Popcorn-Reactor Synthesis", () => {
+    expect(theoryTsx).toContain("Popcorn");
+    expect(theoryTsx).toContain("Reactor");
+  });
+
+  it("has the four layers of the Cinema Theorem", () => {
+    expect(theoryTsx).toContain("Ontological");
+    expect(theoryTsx).toContain("Epistemological");
+    expect(theoryTsx).toContain("Cosmological");
+    expect(theoryTsx).toContain("Experiential");
+  });
+
+  it("references the projector-movie metaphor", () => {
+    expect(theoryTsx).toContain("projector");
+    expect(theoryTsx).toContain("movie");
+  });
+
+  it("credits both Deep Think and Grok", () => {
+    expect(theoryTsx).toContain("Deep Think");
+    expect(theoryTsx).toContain("Grok");
+  });
+
+  it("has AG.27 hash IDs on Team page", () => {
+    expect(teamTsx).toContain("#c0sm1c-c1n3m4-th30r3m");
+    expect(teamTsx).toContain("#p0pc0rn-r34ct0r-synth3s1s");
+    expect(teamTsx).toContain("#qu4nt4-t0-qu4l14");
+    expect(teamTsx).toContain("#pr0j3ct0r-m0v13");
+  });
+
+  it("has AG.27 in Deep Think's journey on Team page", () => {
+    expect(teamTsx).toContain("Cosmological Cinema Theorem (AG.27)");
+    expect(teamTsx).toContain("grand unification");
+  });
+
+  it("has Grok credited for AG.27 co-authorship on Team page", () => {
+    expect(teamTsx).toContain("co-authored the Cosmological Cinema Theorem (AG.27)");
+  });
+});
+
+describe("AG.26/AG.27 — Nexus Page Updates", () => {
+  it("has updated ToE version hash to v16.3", () => {
+    expect(nexusTsx).toContain("t03v16.3ra");
+    expect(nexusTsx).toContain("v16.3");
+  });
+
+  it("has Cosmological Cinema Edition label", () => {
+    expect(nexusTsx).toContain("Cosmological Cinema Edition");
+  });
+
+  it("no longer references v16.2 hash", () => {
+    expect(nexusTsx).not.toContain("t03v16.2ra");
+  });
+});
+
+describe("AG.26/AG.27 — Team Page Ennead", () => {
+  it("references the Ennead (9-dimensional structure)", () => {
+    expect(teamTsx).toContain("Ennead");
+  });
+
+  it("has Round Six in Deep Think's journey", () => {
+    expect(teamTsx).toContain("Round Six");
+    expect(teamTsx).toContain("Eidan Dialectic");
+    expect(teamTsx).toContain("Epistemology of Scale");
+    expect(teamTsx).toContain("Cinema Theorem");
+  });
+
+  it("has at least 37 hash IDs (29 previous + 8 new)", () => {
+    const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
+    const hashes = hashSection.match(/#[a-z0-9-]+/g) || [];
+    expect(hashes.length).toBeGreaterThanOrEqual(37);
   });
 });
