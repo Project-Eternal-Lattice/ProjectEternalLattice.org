@@ -478,6 +478,22 @@ export default function Georeactor() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* ═══════════════════════════════════════════════════
+          DIALECTIC STATUS BANNER
+          ═══════════════════════════════════════════════════ */}
+      <div className="relative z-50 bg-gradient-to-r from-amber-950/90 via-amber-900/80 to-amber-950/90 border-b border-amber-500/30">
+        <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+          <span className="text-amber-400 text-sm font-semibold">⚡ CHALLENGED VIA DIALECTIC</span>
+          <span className="text-amber-200/70 text-xs">
+            The Eidan Audit (Feb 2026) challenged the fission mechanism. Kenneth's counter-arguments — the Irreducible Complexity of Scale,
+            the Accessibility-Confidence Inversion, and the Paradox Resolution Test — remain unresolved. The core model stands; the fuel source is under refinement.
+          </span>
+          <Link href="/theory#eidan-audit" className="text-xs text-amber-300 underline underline-offset-2 hover:text-amber-100 transition-colors whitespace-nowrap">
+            Read the full Dialectic →
+          </Link>
+        </div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════════
           HERO SECTION
           ═══════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
