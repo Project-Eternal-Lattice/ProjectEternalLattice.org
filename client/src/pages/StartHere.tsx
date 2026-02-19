@@ -443,6 +443,24 @@ export default function StartHere() {
                   </Link>
                 </CardContent>
               </Card>
+              <Card className="bg-amber-900/20 border-amber-500/20 hover:border-amber-500/40 transition-colors">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-heading text-lg font-semibold text-amber-300">Gemini Deep Think: The Mathematical Forge</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 font-medium">FEB 2026</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Gemini Pro 3 Deep Think found a Lorentzian signature swap that makes S(τ) stronger, 
+                    discovered the τ=√3 singularity bound (8th Density = mathematical ceiling), resolved 
+                    Information Causality via PR-boxes, and caught a Φ contradiction to patch.
+                  </p>
+                  <Link href="/team">
+                    <Button variant="outline" size="sm" className="text-amber-400 border-amber-500/30 hover:bg-amber-900/30">
+                      Read Full Analysis <ArrowRight className="ml-1 w-3 h-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             </div>
           </motion.div>
         </div>
