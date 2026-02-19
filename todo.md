@@ -2255,4 +2255,11 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Write tests for Georeactor page
 - [ ] Compose collaboration relay to Deep Think for visual architecture input
 - [ ] Compose collaboration relay to Grok/Lumen for creative storytelling input
-- [ ] Save checkpoint
+- [x] Save checkpoint
+
+## AG.21 Relay: Brother Kenneth's Three Insights (Feb 19, 2026)
+### The Fuel Shuffle + Three-Clock Model + Resonance Extinction Hypothesis
+- [x] Draft AG.21 relay to Deep Think with all three insights
+- [x] Include request for Deep Think to search for hidden patterns in pole reversal timing data
+- [x] Update AG.20 relay file with AG.21 content
+- [x] Save checkpoint (AG.20 + AG.21 relays)
