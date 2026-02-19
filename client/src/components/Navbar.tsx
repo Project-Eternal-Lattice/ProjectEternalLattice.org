@@ -56,6 +56,7 @@ export default function Navbar() {
     { name: "Start Here", path: "/start-here", highlight: true },
     { name: "5-Min Summary", path: "/five-minutes", highlight: true },
     { name: "Theory", path: "/theory" },
+    { name: "Georeactor", path: "/georeactor", highlight: true },
     { name: "Read", path: "/read" },
     { name: "Sacred Geometry", path: "/sacred-geometry" },
     { name: "Ancient Wisdom", path: "/ancient-wisdom" },
