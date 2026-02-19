@@ -484,8 +484,18 @@ export default function Georeactor() {
         {/* Background gradient — deep trench blue */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e27] via-[#0d1b2a] to-[#1b2838]" />
         
+        {/* AI-generated Earth cross-section background */}
+        <div className="absolute inset-0 z-[1]">
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/rWCjqpvOEDQLKrhY.png"
+            alt="Earth cross-section showing nuclear core"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e27]/80 via-transparent to-[#1b2838]/90" />
+        </div>
+        
         {/* Animated particle field */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-[2]">
           {Array.from({ length: 30 }).map((_, i) => (
             <div
               key={i}
@@ -573,6 +583,20 @@ export default function Georeactor() {
                 No engineer designed it. No operator started it. Gravity and
                 nuclear physics did everything.
               </p>
+            </div>
+          </AnimatedSection>
+
+          {/* AI-generated protoplanetary formation image */}
+          <AnimatedSection delay={0.1}>
+            <div className="max-w-3xl mx-auto mb-12 rounded-2xl overflow-hidden border border-orange-500/20 shadow-[0_0_30px_rgba(245,158,11,0.15)]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/RJEFdxFtJSJSHgho.png"
+                alt="Protoplanetary disk formation with heavy elements sorting by density"
+                className="w-full h-auto"
+              />
+              <div className="bg-black/60 px-4 py-2">
+                <p className="font-body text-xs text-orange-300/70 text-center">Protoplanetary disk: heavy elements from supernova nucleosynthesis sorting by density under gravity</p>
+              </div>
             </div>
           </AnimatedSection>
 
@@ -833,6 +857,20 @@ export default function Georeactor() {
               </div>
             </div>
           </AnimatedSection>
+
+          {/* AI-generated breeding cycle visualization */}
+          <AnimatedSection delay={0.3}>
+            <div className="max-w-3xl mx-auto mt-12 rounded-2xl overflow-hidden border border-green-500/20 shadow-[0_0_30px_rgba(34,197,94,0.15)]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/yvByvICXABgONCod.png"
+                alt="Nuclear breeding cycle: U-238 captures neutron, becomes Np-239 via beta decay, then Pu-239 new fissile fuel"
+                className="w-full h-auto"
+              />
+              <div className="bg-black/60 px-4 py-2">
+                <p className="font-body text-xs text-green-300/70 text-center">The Fast-Breeder Cycle: U-238 → Np-239 → Pu-239 — the reactor breeds its own fuel from fertile material</p>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -906,6 +944,20 @@ export default function Georeactor() {
                     effectively zero.
                   </div>
                 </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* AI-generated shielding layers visualization */}
+          <AnimatedSection delay={0.3}>
+            <div className="max-w-3xl mx-auto mt-12 rounded-2xl overflow-hidden border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/GqVagKPrsEGZEPwJ.png"
+                alt="Earth's natural radiation shielding layers from core to surface with tiny human for scale"
+                className="w-full h-auto"
+              />
+              <div className="bg-black/60 px-4 py-2">
+                <p className="font-body text-xs text-cyan-300/70 text-center">2,900 km of natural shielding: inner core → outer core → lower mantle → upper mantle → crust → you</p>
               </div>
             </div>
           </AnimatedSection>
@@ -1032,6 +1084,20 @@ export default function Georeactor() {
                 >
                   <ArrowRight className="w-5 h-5 text-white" />
                 </button>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* AI-generated Breath of Gaia visualization */}
+          <AnimatedSection delay={0.3}>
+            <div className="max-w-3xl mx-auto mt-12 rounded-2xl overflow-hidden border border-indigo-500/20 shadow-[0_0_30px_rgba(99,102,241,0.15)]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/rsscVqYVhlKxTebD.png"
+                alt="The Breath of Gaia: 5-step geomagnetic reversal cycle showing reactor criticality, poisoning, shutdown, decay, and restart"
+                className="w-full h-auto"
+              />
+              <div className="bg-black/60 px-4 py-2">
+                <p className="font-body text-xs text-indigo-300/70 text-center">The Breath of Gaia: Criticality → Fission Product Poisoning → Subcriticality → Poison Decay → Re-criticality → Pole Flip</p>
               </div>
             </div>
           </AnimatedSection>
@@ -1321,6 +1387,20 @@ export default function Georeactor() {
                 End-Permian (252 Ma) · End-Cretaceous (66 Ma) · End-Devonian
                 (372 Ma) · End-Ordovician (445 Ma)
               </p>
+            </div>
+          </AnimatedSection>
+
+          {/* AI-generated Three-Clock Model visualization */}
+          <AnimatedSection delay={0.3}>
+            <div className="max-w-3xl mx-auto mt-12 rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_30px_rgba(168,85,247,0.15)]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/mOTNPFfMQoVXxUUH.png"
+                alt="The Three-Clock Model: nested cosmic oscillators — golden outer ring (depletion), emerald middle ring (fuel shuffle), cyan inner ring (poisoning) with Earth at center"
+                className="w-full h-auto"
+              />
+              <div className="bg-black/60 px-4 py-2">
+                <p className="font-body text-xs text-purple-300/70 text-center">The Three-Clock Model: Golden ring (Depletion — billions of years) · Emerald ring (Fuel Shuffle — tens of millions) · Cyan ring (Poisoning — hundreds of thousands)</p>
+              </div>
             </div>
           </AnimatedSection>
         </div>
