@@ -101,8 +101,8 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 16 contributions in short description", () => {
-    expect(teamTsx).toContain("16 contributions across five sessions");
+  it("lists all 17 contributions in short description", () => {
+    expect(teamTsx).toContain("17 contributions across five sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("16 contributions across 5 sessions");
+    expect(toeHtml).toContain("17 contributions across 5 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -468,7 +468,7 @@ describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
   });
 
   it("has updated contributor count to 16", () => {
-    expect(toeHtml).toContain("16 contributions across 5 sessions");
+    expect(toeHtml).toContain("17 contributions across 5 sessions");
   });
 
   it("has AG.17 hash IDs in toe-full.html", () => {
@@ -494,8 +494,8 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
     expect(teamTsx).toContain("Cosmic Regularization");
   });
 
-  it("has 16 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("16 contributions across five sessions");
+  it("has 17 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("17 contributions across five sessions");
   });
 });
 
@@ -584,10 +584,10 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
     expect(toeHtml).toContain("where does it try to go? Home. To the center of the planet");
   });
 
-  it("has updated changelog with AG.18 and 16 contributions", () => {
+  it("has updated changelog with AG.18 and 17 contributions", () => {
     expect(toeHtml).toContain("Epistemology of the Deep");
-    expect(toeHtml).toContain("16 contributions across 5 sessions");
-    expect(toeHtml).toContain("Hexad is complete");
+    expect(toeHtml).toContain("17 contributions across 5 sessions");
+    expect(toeHtml).toContain("Heptad is complete");
   });
 });
 
@@ -611,8 +611,8 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
     expect(teamTsx).toContain("Nuclear Georeactor");
   });
 
-  it("has 16 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("16 contributions across five sessions");
+  it("has 17 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("17 contributions across five sessions");
   });
 
   it("has 29 hash IDs total", () => {
@@ -695,8 +695,8 @@ describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
     expect(toeHtml).toContain("Herndon");
   });
 
-  it("has 16 contributions in changelog", () => {
-    expect(toeHtml).toContain("16 contributions across 5 sessions");
+  it("has 17 contributions in changelog", () => {
+    expect(toeHtml).toContain("17 contributions across 5 sessions");
   });
 
   it("mentions Hexad in changelog", () => {
@@ -723,5 +723,135 @@ describe("AG.19 — Planetary Georeactor (Team page)", () => {
   it("includes Round Five AG.19 section", () => {
     expect(teamTsx).toContain("Planetary Georeactor");
     expect(teamTsx).toContain("relief valve");
+  });
+});
+
+// ============================================================
+// AG.20: The Planetary Fuel Cycle — Breeder Dynamics and the Breath of Gaia
+// ============================================================
+
+describe("AG.20 — Planetary Fuel Cycle (Theory page)", () => {
+  it("has AG.20 section header", () => {
+    expect(theoryTsx).toContain("Planetary Fuel Cycle");
+    expect(theoryTsx).toContain("planetary-fuel-cycle");
+  });
+
+  it("contains Slurry Criticality Law sub-section", () => {
+    expect(theoryTsx).toContain("Slurry Criticality");
+    expect(theoryTsx).toContain("19.1");
+  });
+
+  it("contains Thermodynamic Circuit sub-section", () => {
+    expect(theoryTsx).toContain("Thermodynamic Circuit");
+    expect(theoryTsx).toContain("Coolant");
+  });
+
+  it("contains Fast-Breeder Georeactor sub-section", () => {
+    expect(theoryTsx).toContain("Fast-Breeder");
+    expect(theoryTsx).toContain("Plutonium-239");
+  });
+
+  it("contains Subduction as Reprocessing sub-section", () => {
+    expect(theoryTsx).toContain("Subduction");
+    expect(theoryTsx).toContain("Reprocessing");
+  });
+
+  it("contains Breath of Gaia sub-section", () => {
+    expect(theoryTsx).toContain("Breath of Gaia");
+    expect(theoryTsx).toContain("Subcriticality");
+  });
+
+  it("contains Fifth Smoking Gun — He-3 Budget Proof", () => {
+    expect(theoryTsx).toContain("Fifth Smoking Gun");
+    expect(theoryTsx).toContain("990 moles/year");
+    expect(theoryTsx).toContain("99% match");
+  });
+
+  it("mentions the Heptad", () => {
+    expect(theoryTsx).toContain("Heptad");
+  });
+
+  it("has the breeding equation", () => {
+    expect(theoryTsx).toContain("Plutonium-239");
+    expect(theoryTsx).toContain("Neptunium-239");
+  });
+
+  it("mentions 4 Terawatt reactor power", () => {
+    expect(theoryTsx).toContain("4.0 TW");
+  });
+
+  it("mentions ternary fission", () => {
+    expect(theoryTsx).toContain("Ternary Fission");
+  });
+});
+
+describe("AG.20 — Planetary Fuel Cycle (ToE HTML)", () => {
+  it("has AG.20 section in ToE HTML", () => {
+    expect(toeHtml).toContain("The Planetary Fuel Cycle");
+    expect(toeHtml).toContain("Breeder Dynamics and the Breath of Gaia");
+  });
+
+  it("contains all six sub-sections", () => {
+    expect(toeHtml).toContain("Slurry Criticality Law");
+    expect(toeHtml).toContain("Thermodynamic Circuit");
+    expect(toeHtml).toContain("Fast-Breeder Georeactor");
+    expect(toeHtml).toContain("Subduction as the Reprocessing Facility");
+    expect(toeHtml).toContain("Breath of Gaia");
+    expect(toeHtml).toContain("FIFTH SMOKING GUN");
+  });
+
+  it("has the He-3 budget calculation", () => {
+    expect(toeHtml).toContain("990 moles/year");
+    expect(toeHtml).toContain("1,000 Moles per year");
+  });
+
+  it("has the Heptad section", () => {
+    expect(toeHtml).toContain("Heptad");
+    expect(toeHtml).toContain("CYCLE");
+  });
+
+  it("has 17 contributions in changelog", () => {
+    expect(toeHtml).toContain("17 contributions across 5 sessions");
+  });
+
+  it("mentions Heptad in changelog", () => {
+    expect(toeHtml).toContain("Heptad");
+  });
+
+  it("has the breeding equation in ToE", () => {
+    expect(toeHtml).toContain("Plutonium-239");
+    expect(toeHtml).toContain("Neptunium-239");
+  });
+});
+
+describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
+  it("mentions Planetary Fuel Cycle in shortDesc", () => {
+    expect(teamTsx).toContain("Planetary Fuel Cycle");
+  });
+
+  it("mentions Heptad in shortDesc", () => {
+    expect(teamTsx).toContain("Heptad");
+  });
+
+  it("has AG.20 hash IDs", () => {
+    expect(teamTsx).toContain("#4g20-pl4n3t4ry-fu3l-cycl3");
+    expect(teamTsx).toContain("#h3l1um-3-budg3t-pr00f");
+    expect(teamTsx).toContain("#f4st-br33d3r-g414");
+    expect(teamTsx).toContain("#s3ttl1ng-t4nk-th30r3m");
+    expect(teamTsx).toContain("#v0lc4n0-r3l13f-v4lv3");
+  });
+
+  it("includes Round Five AG.20 section", () => {
+    expect(teamTsx).toContain("Planetary Fuel Cycle");
+    expect(teamTsx).toContain("FIFTH SMOKING GUN");
+    expect(teamTsx).toContain("Helium-3 Budget Proof");
+  });
+
+  it("mentions 17 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("17 contributions across five sessions");
+  });
+
+  it("mentions 99% match in team page", () => {
+    expect(teamTsx).toContain("99%");
   });
 });

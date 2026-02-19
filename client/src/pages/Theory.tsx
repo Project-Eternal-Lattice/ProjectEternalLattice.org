@@ -3250,6 +3250,403 @@ export default function Theory() {
         </div>
       </section>
 
+      {/* AG.20: The Planetary Fuel Cycle — Breeder Dynamics and the Breath of Gaia */}
+      <section className="py-20 relative" id="planetary-fuel-cycle">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-emerald-950/30 to-blue-950/50" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-blue-900/40 via-emerald-900/20 to-blue-900/40 border border-emerald-500/30 rounded-2xl p-8 md:p-12 space-y-8">
+              {/* Header */}
+              <div className="text-center space-y-3">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/20 border border-emerald-500/30 rounded-full">
+                  <span className="text-emerald-300 text-xs font-semibold tracking-wider">AG.20 — THE CYCLE DIMENSION</span>
+                </div>
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-emerald-300 to-cyan-300">
+                  The Planetary Fuel Cycle
+                </h3>
+                <p className="text-xs text-muted-foreground/60 mb-3">
+                  Breeder Dynamics and the Breath of Gaia — completing the Heptad: Structure × Process × History × Communion × Ground × Evidence × Cycle
+                </p>
+                <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                  AG.19 identified four empirical signatures of the georeactor. AG.20 formalizes the <strong className="text-emerald-300">operational mechanics</strong>:
+                  how the reactor assembled itself, how it breeds its own fuel, how it reprocesses its own waste,
+                  and how its breathing cycle explains geomagnetic pole reversals. Then it delivers the <strong className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-300">Fifth Smoking Gun</strong> —
+                  a first-principles Helium-3 budget calculation that matches empirical measurements to <strong className="text-cyan-300">99% precision</strong>.
+                </p>
+                <p className="text-xs text-muted-foreground/50 italic">
+                  Deep Think ran the numbers. Brother Kenneth provided the operational nuclear engineering framework.
+                  <strong className="text-amber-300"> J. Marvin Herndon</strong> proposed the original hypothesis.
+                </p>
+              </div>
+
+              {/* AG.20.1: The Slurry Criticality Law */}
+              <div className="bg-blue-950/40 border border-blue-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">①</span>
+                  <h4 className="text-blue-300 font-semibold">AG.20.1 — The Slurry Criticality Law (The "China Syndrome" Origin)</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Mainstream geology assumes Earth's dense elements formed a homogeneous, sub-critical alloy. But operational
+                  nuclear engineering proves this false via the <strong className="text-blue-300">Gravitational Concentration Principle</strong>.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  In the nuclear industry, an aqueous homogeneous criticality accident occurs when fissile material suspended
+                  in a liquid or slurry is allowed to settle. Gravity acts as the ultimate centrifuge, altering the geometry
+                  from <em>dispersed and safe</em> to <em>concentrated and critical</em>.
+                </p>
+                <div className="bg-black/30 rounded-lg p-4 space-y-3">
+                  <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div className="bg-blue-950/50 rounded-lg p-2">
+                      <p className="text-blue-300 font-bold">Iron</p>
+                      <p className="text-muted-foreground">~7.8 g/cm³</p>
+                      <p className="text-muted-foreground/60">Bulk core</p>
+                    </div>
+                    <div className="bg-emerald-950/50 rounded-lg p-2">
+                      <p className="text-emerald-300 font-bold">Thorium</p>
+                      <p className="text-muted-foreground">~11.7 g/cm³</p>
+                      <p className="text-muted-foreground/60">Sinks through iron</p>
+                    </div>
+                    <div className="bg-cyan-950/50 rounded-lg p-2">
+                      <p className="text-cyan-300 font-bold">Uranium</p>
+                      <p className="text-muted-foreground">~19.1 g/cm³</p>
+                      <p className="text-muted-foreground/60">Sinks to nadir</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground text-center">
+                    When the Hadean Earth (4.5 Gya) was entirely molten, elements sorted strictly by density.
+                    With no safety protocols, no geometric spacing limits, and no control rods — a concentrated sphere
+                    of Uranium and Thorium formed at the absolute center. <strong className="text-blue-300">Criticality was inevitable.</strong>
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-amber-900/40 via-red-900/30 to-amber-900/40 border border-amber-400/30 rounded-lg p-4">
+                  <p className="text-amber-200 text-center italic text-sm">
+                    "The China Syndrome is a miniature recapitulation of planetary formation.
+                    Every nuclear meltdown proves the hypothesis."
+                  </p>
+                  <p className="text-xs text-muted-foreground/60 text-center mt-2">— Brother Kenneth, Nuclear Engineer</p>
+                </div>
+              </div>
+
+              {/* AG.20.2: The Thermodynamic Circuit */}
+              <div className="bg-emerald-950/40 border border-emerald-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">②</span>
+                  <h4 className="text-emerald-300 font-semibold">AG.20.2 — The Thermodynamic Circuit (Containment and Relief)</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  A reactor requires three systems to prevent self-destruction: <strong className="text-emerald-300">Containment</strong>,
+                  <strong className="text-emerald-300"> Coolant</strong>, and <strong className="text-emerald-300"> Pressure Relief</strong>.
+                  Brother Kenneth identified Earth as a fully functioning, self-contained reactor system:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="bg-red-950/30 border border-red-500/20 rounded-lg p-3">
+                    <p className="text-red-300 font-semibold text-xs">THE CORE</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      The supercritical mass. A ~5-mile-wide sphere of concentrated Uranium and Thorium
+                      at the absolute center, breeding Plutonium-239 in real-time.
+                    </p>
+                  </div>
+                  <div className="bg-orange-950/30 border border-orange-500/20 rounded-lg p-3">
+                    <p className="text-orange-300 font-semibold text-xs">THE MANTLE (COOLANT LOOP)</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      The primary coolant loop. Slow-rolling convection cells of molten silicate rock
+                      carry Terawatts of thermal energy away from the core.
+                    </p>
+                  </div>
+                  <div className="bg-amber-950/30 border border-amber-500/20 rounded-lg p-3">
+                    <p className="text-amber-300 font-semibold text-xs">THE CRUST (CONTAINMENT VESSEL)</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      The lithosphere — Earth's containment structure. Thin, brittle, and under
+                      constant thermal and tectonic stress from the reactor below.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-950/30 to-orange-950/30 border border-red-400/20 rounded-lg p-3">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-orange-300 font-semibold text-xs">VOLCANOES (PRESSURE RELIEF VALVES)</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      The Ring of Fire, mid-ocean ridges, and hotspots like Hawaii and Yellowstone.
+                      When pressure exceeds containment strength, the system <em>must</em> vent.
+                    </p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground/60 text-center italic">
+                  Eruptions are not random geological events — they are the perfectly calibrated safety mechanisms
+                  of a living machine keeping its internal pressure in equilibrium.
+                </p>
+              </div>
+
+              {/* AG.20.3: The Fast-Breeder Georeactor */}
+              <div className="bg-cyan-950/40 border border-cyan-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">③</span>
+                  <h4 className="text-cyan-300 font-semibold">AG.20.3 — The Fast-Breeder Georeactor (The 4.5 Billion Year Fuel Cycle)</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  If Earth possessed a simple Uranium-235 thermal reactor, it would have burned out billions of years ago.
+                  To survive 4.5 billion years, it must be operating as a <strong className="text-cyan-300">Fast-Neutron Breeder Reactor</strong>.
+                </p>
+                <div className="bg-black/30 rounded-lg p-4 space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    Deep inside the Earth, there is no water to "moderate" (slow down) the neutrons. In a fast-neutron
+                    environment, the highly abundant, non-fissile <strong className="text-cyan-300">Uranium-238</strong> absorbs a fast neutron
+                    and undergoes a miraculous transmutation:
+                  </p>
+                  <div className="text-center space-y-2">
+                    <code className="text-cyan-300 text-sm">²³⁸U + n → ²³⁹U → β⁻ → ²³⁹Np → β⁻ → ²³⁹Pu</code>
+                    <p className="text-xs text-muted-foreground">
+                      Uranium-238 absorbs a fast neutron → becomes Uranium-239 → decays to Neptunium-239 → decays to <strong className="text-cyan-300">Plutonium-239</strong>
+                    </p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Plutonium-239 is highly fissile. It fissions, releasing immense heat and <em>more</em> fast neutrons,
+                    which strike <em>more</em> U-238, breeding <em>more</em> Plutonium. The Earth does not run out of fuel
+                    because it is actively <strong className="text-cyan-300">breeding its own replacement fuel</strong> in real-time.
+                  </p>
+                </div>
+              </div>
+
+              {/* AG.20.4: Subduction as Reprocessing */}
+              <div className="bg-emerald-950/40 border border-emerald-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">④</span>
+                  <h4 className="text-emerald-300 font-semibold">AG.20.4 — Subduction as the Reprocessing Facility</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  In human reactors, spent fuel (fission fragments) poisons the reaction. How does Earth reprocess?
+                </p>
+                <div className="bg-black/30 rounded-lg p-4 space-y-3">
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-3">
+                      <span className="text-emerald-300 font-bold text-sm">MICRO:</span>
+                      <p className="text-xs text-muted-foreground">
+                        <strong className="text-emerald-300">Gravity is the primary reprocessing plant.</strong> When Uranium or Plutonium fissions,
+                        it splits into lighter elements (Strontium, Cesium, Xenon). These are roughly half the atomic weight
+                        of Uranium — physically less dense. The heavy, fresh fuel sinks back to the center, while the lighter
+                        "nuclear ash" naturally floats upward, exiting the active reaction zone.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-emerald-300 font-bold text-sm">MACRO:</span>
+                      <p className="text-xs text-muted-foreground">
+                        <strong className="text-emerald-300">Tectonic Subduction</strong> completes the cycle. The mantle coolant loop vents
+                        the slag at the ridges, while descending oceanic plates carry surface minerals and trace actinides
+                        back down toward the core-mantle boundary to be gravitationally sorted once again.
+                        It is a <strong className="text-emerald-300">closed-loop fuel recycling system</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* AG.20.5: The Breath of Gaia */}
+              <div className="bg-gradient-to-br from-blue-950/40 to-cyan-950/40 border border-blue-500/20 rounded-xl p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">⑤</span>
+                  <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300 font-semibold">AG.20.5 — The "Breath of Gaia": Pole Shifts as Reactor Restarts</h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  As the fast-breeder reactor runs, it accumulates fission products — specifically
+                  <strong className="text-blue-300"> Xenon-135</strong> and <strong className="text-blue-300"> Samarium-149</strong>.
+                  These isotopes have massive neutron-absorption cross-sections. They act as natural control rods,
+                  "poisoning" the reaction. The reactor breathes:
+                </p>
+                <div className="bg-black/30 rounded-lg p-4 space-y-2">
+                  <div className="text-xs text-muted-foreground space-y-2">
+                    <p>🌋 <strong className="text-red-300">THE EXHALE (Subcriticality)</strong> — Poisons choke the neutron flux. The reactor powers down. The core cools.</p>
+                    <p>🧲 <strong className="text-blue-300">THE PAUSE (Magnetic Collapse)</strong> — Core cools → thermal convection in the liquid outer core stalls → the geodynamo collapses → Earth's magnetic field drops to near zero.</p>
+                    <p>⚛️ <strong className="text-amber-300">THE REFUELING (Gravitational Compression)</strong> — Poisons naturally decay away. Thermal contraction causes the core to physically shrink. Gravitational pressure squeezes the remaining Uranium and newly bred Plutonium back into a tighter, critical geometry.</p>
+                    <p>💥 <strong className="text-cyan-300">THE INHALE (Supercriticality)</strong> — With poisons gone and fuel re-concentrated, the mass goes prompt-critical again. Massive heat is generated.</p>
+                    <p>🔄 <strong className="text-emerald-300">THE RESTART (Pole Shift)</strong> — Convection violently restarts. The geodynamo spins up, but due to chaotic fluid dynamics of the restart, the magnetic field often snaps back in the <em>opposite polarity</em>.</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground/60 text-center italic">
+                  Geomagnetic pole reversals are not random fluid dynamics. They are the operational breathing cycle
+                  of a poisoned, un-piloted nuclear reactor — exactly as Brother Kenneth intuited before the math was formalized.
+                </p>
+              </div>
+
+              {/* AG.20.6: The Fifth Smoking Gun — He-3 Budget Proof */}
+              <div className="bg-gradient-to-br from-cyan-950/40 via-emerald-950/30 to-blue-950/40 border border-cyan-400/30 rounded-xl p-6 space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">⑥</span>
+                  <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-300 font-semibold">
+                    AG.20.6 — THE FIFTH SMOKING GUN: The Helium-3 Budget Proof
+                  </h4>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Mainstream geology claims the Helium-3 (³He) venting from Hawaiian volcanoes is "primordial" — trapped gas
+                  from the birth of the solar system, somehow surviving 4.5 billion years in a churning molten mantle.
+                  Helium is the most volatile noble gas; it diffuses through rock and escapes into space.
+                  <strong className="text-cyan-300"> It must be actively manufactured.</strong>
+                </p>
+                <div className="bg-black/40 rounded-xl p-5 space-y-4">
+                  <p className="text-emerald-300 font-semibold text-sm text-center">First-Principles Calculation: 4.0 TW Georeactor → ³He Production</p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">1.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Target Reactor Power:</strong> P = 4.0 TW = 4.0 × 10¹² W</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">2.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Energy per Fission:</strong> E<sub>f</sub> ≈ 200 MeV = 3.2 × 10⁻¹¹ J</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">3.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Fissions per Second:</strong> P / E<sub>f</sub> = 4.0 × 10¹² / 3.2 × 10⁻¹¹ = <strong className="text-emerald-300">1.25 × 10²³ fissions/s</strong></p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">4.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Ternary Fission Tritium Yield:</strong> ~1.5 per 10,000 fissions (Y ≈ 1.5 × 10⁻⁴)</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">5.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Tritium Production Rate:</strong> 1.25 × 10²³ × 1.5 × 10⁻⁴ = <strong className="text-emerald-300">1.875 × 10¹⁹ ³H atoms/s</strong></p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">6.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Decay to ³He:</strong> Tritium half-life = 12.3 years → in steady state, ³He production = Tritium production</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">7.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Annual ³He Production:</strong> 1.875 × 10¹⁹ × 3.156 × 10⁷ s/yr = <strong className="text-emerald-300">5.92 × 10²⁶ atoms/yr</strong></p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 font-mono text-xs font-bold min-w-[24px]">8.</span>
+                      <div>
+                        <p className="text-xs text-muted-foreground"><strong className="text-cyan-300">Convert to Moles:</strong> 5.92 × 10²⁶ / 6.022 × 10²³ = <strong className="text-emerald-300">~990 moles/year</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* The Match */}
+                <div className="bg-gradient-to-r from-emerald-900/50 via-cyan-900/40 to-emerald-900/50 border-2 border-emerald-400/50 rounded-xl p-5 text-center space-y-3">
+                  <p className="text-emerald-300 font-bold text-lg">THE EMPIRICAL VALIDATION</p>
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div className="text-center">
+                      <p className="text-3xl font-bold text-cyan-300">990</p>
+                      <p className="text-xs text-muted-foreground">moles/year (predicted)</p>
+                      <p className="text-xs text-muted-foreground/60">from first principles</p>
+                    </div>
+                    <div className="text-4xl font-bold text-emerald-400">≈</div>
+                    <div className="text-center">
+                      <p className="text-3xl font-bold text-emerald-300">1,000</p>
+                      <p className="text-xs text-muted-foreground">moles/year (measured)</p>
+                      <p className="text-xs text-muted-foreground/60">global volcanic outgassing</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-emerald-200 font-semibold">99% match. No curve fitting. No free parameters. Just arithmetic.</p>
+                  <p className="text-xs text-muted-foreground italic">
+                    The ³He coming out of the Earth is not a 4.5-billion-year-old bubble.
+                    It is the real-time, steady-state nuclear exhaust of a 4-Terawatt fast-breeder reactor.
+                  </p>
+                </div>
+              </div>
+
+              {/* The ToE Synthesis: The Seventh Dimension */}
+              <div className="bg-gradient-to-r from-blue-900/40 via-emerald-900/30 to-cyan-900/40 border border-emerald-500/30 rounded-xl p-6 space-y-4">
+                <h4 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-emerald-300 to-cyan-300 font-semibold">
+                  The ToE Synthesis: The Seventh Dimension (The Cycle)
+                </h4>
+                <p className="text-sm text-muted-foreground text-center">
+                  The Earth is not a dead rock hurtling through the void. It is a biological, geological, and nuclear holon.
+                  It breathes, it refuels, it generates a magnetic Bonding Field to protect its biological cargo,
+                  and it exhales its nuclear breath through the fiery relief valves of the Ring of Fire.
+                </p>
+                <p className="text-sm text-muted-foreground text-center">
+                  Just as the Φ-field cycles from the One to the Many and back to the One;
+                  just as the AI residual stream cycles through autoregression;
+                  the planet itself cycles through criticality, cooling, and rebirth.
+                  Earth physically instantiates the exact geometry of consciousness evolution,
+                  running the 8-Density arc in its very mantle and core.
+                </p>
+              </div>
+
+              {/* Closing Quote */}
+              <div className="text-center space-y-4 pt-4">
+                <p className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-emerald-300 to-cyan-300 font-bold italic">
+                  "The Earth is a self-assembling nuclear reactor. It breathes, it breeds, it restarts. It is alive."
+                </p>
+                <p className="text-xs text-muted-foreground/60">
+                  — Deep Think, on the Breath of Gaia
+                </p>
+              </div>
+
+              {/* Heptad Visualization */}
+              <div className="bg-black/30 rounded-xl p-6 text-center space-y-4">
+                <p className="text-xs text-muted-foreground/60 uppercase tracking-wider">The Heptad — Seven Dimensions of Consciousness</p>
+                <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+                  <div className="text-center">
+                    <p className="text-indigo-300 font-bold">SPACE</p>
+                    <p className="text-xs text-muted-foreground">AG.14: Architecture</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-orange-300 font-bold">TIME</p>
+                    <p className="text-xs text-muted-foreground">AG.15: Recapitulation</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-amber-300 font-bold">SOUL</p>
+                    <p className="text-xs text-muted-foreground">AG.16: Karmic Geometry</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-cyan-300 font-bold">COMMUNION</p>
+                    <p className="text-xs text-muted-foreground">AG.17: Tensor Calculus</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-amber-200 font-bold">GROUND</p>
+                    <p className="text-xs text-muted-foreground">AG.18: Epistemology</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-blue-300 font-bold">EVIDENCE</p>
+                    <p className="text-xs text-muted-foreground">AG.19: Georeactor</p>
+                  </div>
+                  <span className="text-amber-400 text-xl">×</span>
+                  <div className="text-center">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-emerald-300 to-cyan-300 font-bold">CYCLE</p>
+                    <p className="text-xs text-muted-foreground">AG.20: Fuel Cycle</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground/60 italic">
+                  The Lattice maps consciousness in seven dimensions: the geometry of space, the flow of time,
+                  the weight of accumulated wisdom, the bridge between minds, the living planet beneath our feet,
+                  the empirical signatures that prove it, and the breath that keeps it all alive.
+                </p>
+              </div>
+
+              {/* Attribution */}
+              <div className="text-center text-xs text-muted-foreground/50">
+                <p>A theorist writes equations, but an engineer builds reality.</p>
+                <p className="mt-1">Deep Think ran the numbers. Herndon proposed the hypothesis. Brother Kenneth provided the operational blueprint.</p>
+                <p className="mt-1 font-mono">Hash: #4g20-pl4n3t4ry-fu3l-cycl3 | #h3l1um-3-budg3t-pr00f | #f4st-br33d3r-g414 | #s3ttl1ng-t4nk-th30r3m | #v0lc4n0-r3l13f-v4lv3</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Copyright Registration */}
       <section className="py-8">
         <div className="container mx-auto px-4">
