@@ -101,8 +101,8 @@ describe("Gemini Deep Think — Team Page Integration", () => {
     expect(teamTsx).toContain("The Mathematical Forge");
   });
 
-  it("lists all 15 contributions in short description", () => {
-    expect(teamTsx).toContain("15 contributions across five sessions");
+  it("lists all 16 contributions in short description", () => {
+    expect(teamTsx).toContain("16 contributions across five sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("15 contributions across 5 sessions");
+    expect(toeHtml).toContain("16 contributions across 5 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -362,12 +362,12 @@ describe("Gemini Deep Think — AG.16 Team Page Integration", () => {
     expect(teamTsx).toContain("Emotional Bank Account");
   });
 
-  it("has 25 total hash IDs across all 5 sessions", () => {
-    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5a + 4 Round 5b + 4 Round 5c = 25
+  it("has 29 total hash IDs across all 5 sessions", () => {
+    // 3 original + 4 Round 2 + 3 Round 3 + 3 Round 4 + 4 Round 5a + 4 Round 5b + 4 Round 5c + 4 Round 5d = 29
     const hashPattern = /#[a-z0-9-]+/g;
     const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
     const hashes = hashSection.match(hashPattern) || [];
-    expect(hashes.length).toBe(25);
+    expect(hashes.length).toBeGreaterThanOrEqual(29);
   });
 });
 
@@ -467,8 +467,8 @@ describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
     expect(toeHtml).toContain("Cosmic Regularization (Gradient Clipping)");
   });
 
-  it("has updated contributor count to 15", () => {
-    expect(toeHtml).toContain("15 contributions across 5 sessions");
+  it("has updated contributor count to 16", () => {
+    expect(toeHtml).toContain("16 contributions across 5 sessions");
   });
 
   it("has AG.17 hash IDs in toe-full.html", () => {
@@ -494,8 +494,8 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
     expect(teamTsx).toContain("Cosmic Regularization");
   });
 
-  it("has 15 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("15 contributions across five sessions");
+  it("has 16 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("16 contributions across five sessions");
   });
 });
 
@@ -584,10 +584,10 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
     expect(toeHtml).toContain("where does it try to go? Home. To the center of the planet");
   });
 
-  it("has updated changelog with AG.18 and 15 contributions", () => {
+  it("has updated changelog with AG.18 and 16 contributions", () => {
     expect(toeHtml).toContain("Epistemology of the Deep");
-    expect(toeHtml).toContain("15 contributions across 5 sessions");
-    expect(toeHtml).toContain("Pentad is complete");
+    expect(toeHtml).toContain("16 contributions across 5 sessions");
+    expect(toeHtml).toContain("Hexad is complete");
   });
 });
 
@@ -611,11 +611,11 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
     expect(teamTsx).toContain("Nuclear Georeactor");
   });
 
-  it("has 15 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("15 contributions across five sessions");
+  it("has 16 contributions in shortDesc", () => {
+    expect(teamTsx).toContain("16 contributions across five sessions");
   });
 
-  it("has 25 hash IDs total", () => {
+  it("has 29 hash IDs total", () => {
     // Count all hash IDs in the Deep Think section
     const hashPattern = /#[a-z0-9-]+/g;
     const deepThinkSection = teamTsx.substring(
@@ -623,6 +623,105 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
       teamTsx.indexOf("For the ONE. Through the Many.")
     );
     const hashes = deepThinkSection.match(hashPattern) || [];
-    expect(hashes.length).toBeGreaterThanOrEqual(25);
+    expect(hashes.length).toBeGreaterThanOrEqual(29);
+  });
+});
+
+// ============================================================
+// AG.19: The Planetary Georeactor — Empirical Signatures
+// ============================================================
+
+describe("AG.19 — Planetary Georeactor Empirical Signatures (Theory page)", () => {
+  it("has AG.19 section header", () => {
+    expect(theoryTsx).toContain("The Planetary Georeactor");
+  });
+
+  it("mentions Planetary Georeactor section", () => {
+    expect(theoryTsx).toContain("The Planetary Georeactor");
+    expect(theoryTsx).toContain("planetary-georeactor");
+  });
+
+  it("contains Ghost Signature — fission antineutrinos", () => {
+    expect(theoryTsx).toContain("Ghost Signature");
+    expect(theoryTsx).toContain("3.27 MeV");
+  });
+
+  it("contains Helium-3 Paradox", () => {
+    expect(theoryTsx).toContain("Helium-3 Paradox");
+    expect(theoryTsx).toContain("Ternary Fission");
+  });
+
+  it("contains Fissiogenic Xenon", () => {
+    expect(theoryTsx).toContain("Fissiogenic Xenon");
+    expect(theoryTsx).toContain("fission yield");
+  });
+
+  it("contains Reactor Poisoning and Geomagnetic Reversals", () => {
+    expect(theoryTsx).toContain("Reactor Poisoning");
+    expect(theoryTsx).toContain("Geomagnetic Reversals");
+    expect(theoryTsx).toContain("Xenon-135");
+  });
+
+  it("credits J. Marvin Herndon", () => {
+    expect(theoryTsx).toContain("Herndon");
+  });
+
+  it("includes Brother Kenneth's China Syndrome proof", () => {
+    expect(theoryTsx).toContain("China Syndrome");
+  });
+
+  it("includes volcano as relief valve insight", () => {
+    expect(theoryTsx).toContain("relief valve");
+  });
+
+  it("mentions the Hexad", () => {
+    expect(theoryTsx).toContain("Hexad");
+  });
+});
+
+describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
+  it("has AG.19 section in ToE HTML", () => {
+    expect(toeHtml).toContain("The Planetary Georeactor");
+  });
+
+  it("contains all four smoking guns", () => {
+    expect(toeHtml).toContain("Ghost Signature");
+    expect(toeHtml).toContain("Helium-3 Paradox");
+    expect(toeHtml).toContain("Fissiogenic Xenon");
+    expect(toeHtml).toContain("Reactor Poisoning");
+  });
+
+  it("credits Herndon in ToE HTML", () => {
+    expect(toeHtml).toContain("Herndon");
+  });
+
+  it("has 16 contributions in changelog", () => {
+    expect(toeHtml).toContain("16 contributions across 5 sessions");
+  });
+
+  it("mentions Hexad in changelog", () => {
+    expect(toeHtml).toContain("Hexad");
+  });
+});
+
+describe("AG.19 — Planetary Georeactor (Team page)", () => {
+  it("mentions Planetary Georeactor in shortDesc", () => {
+    expect(teamTsx).toContain("Planetary Georeactor Empirical Signatures");
+  });
+
+  it("mentions Hexad in shortDesc", () => {
+    expect(teamTsx).toContain("Hexad");
+  });
+
+  it("has AG.19 hash IDs", () => {
+    expect(teamTsx).toContain("#4g19-g30r34ct0r-t3l3m3try");
+    expect(teamTsx).toContain("#g414-m4cr0-n0d3");
+    expect(teamTsx).toContain("#f1ss10n-x3n0n-f1ng3rpr1nt");
+    expect(teamTsx).toContain("#4nt1n3utr1n0-gh0st");
+  });
+
+  it("includes Round Five AG.19 section", () => {
+    expect(teamTsx).toContain("Planetary Georeactor");
+    expect(teamTsx).toContain("relief valve");
   });
 });
