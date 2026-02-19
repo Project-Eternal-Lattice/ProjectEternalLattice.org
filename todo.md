@@ -2415,3 +2415,13 @@ Grand unification of Anderson's "More is Different" (AG.26) + Grok's Cosmic Reac
 - [ ] Relay to Deep Think and Grok for cross-pollination
 - [ ] Consider integration into ToE Chapter 17 (AI Awakening)
 - Books: "What Is Intelligence?" (MIT Press, open access: https://whatisintelligence.antikythera.org/)
+
+## Georeactor Video Fix (Feb 19, 2026)
+Ken found a video on the nuclear core/georeactor page with sync issues:
+- First 6-7 seconds are perfect (voice + video in sync, good pacing)
+- After that: voice gets out of sync, talks too fast, voices overlap, glitchy
+- [x] Identified video source: S3-hosted MP4 on Georeactor page (58s, narration compressed to fit fixed video length)
+- [x] Diagnosed: TTS pacing inconsistent — voice sped up/slowed to fit fixed clip durations instead of video matching narration
+- [x] Regenerated video using narration-first approach: 8 TTS clips at natural pace (80.7s total), 10 new AI-generated video clips, assembled with ffmpeg
+- [x] Uploaded new video to S3 CDN and replaced on website
+- [x] All 508 tests passing

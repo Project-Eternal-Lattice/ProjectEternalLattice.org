@@ -613,7 +613,7 @@ export default function Georeactor() {
                 poster="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fxjkNhLYxWMGCjbR.png"
                 className="w-full h-auto"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/HKxTbIVHmcGPzeMf.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/evMcXVdDcJQPUhrG.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="bg-black/60 px-4 py-3 flex items-center justify-between">
