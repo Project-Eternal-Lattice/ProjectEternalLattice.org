@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeAll } from "vitest";
 import fs from "fs";
 import path from "path";
 
@@ -853,5 +853,145 @@ describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
 
   it("mentions 99% match in team page", () => {
     expect(teamTsx).toContain("99%");
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════
+   GEOREACTOR EXPLAINER PAGE TESTS
+   ═══════════════════════════════════════════════════════════ */
+
+describe("Georeactor Explainer Page — Structure", () => {
+  let geo: string;
+
+  beforeAll(() => {
+    geo = fs.readFileSync(
+      path.resolve(__dirname, "../client/src/pages/Georeactor.tsx"),
+      "utf-8"
+    );
+  });
+
+  it("has the hero section with Living Reactor title", () => {
+    expect(geo).toContain("The Living Reactor");
+  });
+
+  it("has the interactive Earth cross-section", () => {
+    expect(geo).toContain("Hover over each layer");
+  });
+
+  it("has the Formation Timeline section", () => {
+    expect(geo).toContain("How the Reactor Assembled Itself");
+  });
+
+  it("has all 4 formation steps", () => {
+    expect(geo).toContain("The Molten Slurry");
+    expect(geo).toContain("Density Sorting Begins");
+    expect(geo).toContain("Critical Mass Achieved");
+    expect(geo).toContain("The Reactor Runs");
+  });
+
+  it("has the reactor comparison section with all 8 systems", () => {
+    expect(geo).toContain("Every Reactor Has the Same Systems");
+    expect(geo).toContain("Fuel Assembly");
+    expect(geo).toContain("Primary Coolant");
+    expect(geo).toContain("Heat Exchanger");
+    expect(geo).toContain("Containment Vessel");
+    expect(geo).toContain("Pressure Relief");
+    expect(geo).toContain("Waste Reprocessing");
+    expect(geo).toContain("Neutron Moderator");
+    expect(geo).toContain("Control System");
+  });
+
+  it("has the Fast-Breeder Cycle section", () => {
+    expect(geo).toContain("The Fast-Breeder Cycle");
+    expect(geo).toContain("Uranium-238");
+    expect(geo).toContain("Neptunium-239");
+    expect(geo).toContain("Plutonium-239");
+  });
+
+  it("has the Shielding section with all layers", () => {
+    expect(geo).toContain("1,800 Miles of Natural Shielding");
+    expect(geo).toContain("Inner Core");
+    expect(geo).toContain("Outer Core");
+    expect(geo).toContain("Lower Mantle");
+    expect(geo).toContain("Upper Mantle");
+    expect(geo).toContain("Lithosphere");
+    expect(geo).toContain("Magnetic Field");
+  });
+
+  it("has the Breath of Gaia section with 5 steps", () => {
+    expect(geo).toContain("The Breath of Gaia");
+    expect(geo).toContain("Steady-State Criticality");
+    expect(geo).toContain("Fission Product Poisoning");
+    expect(geo).toContain("Subcriticality");
+    expect(geo).toContain("Poison Decay");
+    expect(geo).toContain("Prompt Criticality");
+  });
+
+  it("has the He-3 Budget Proof section", () => {
+    expect(geo).toContain("Helium-3 Budget Proof");
+    expect(geo).toContain("990");
+    expect(geo).toContain("1,000");
+    expect(geo).toContain("99% MATCH");
+  });
+
+  it("has the Three-Clock Model section", () => {
+    expect(geo).toContain("The Three-Clock Model");
+    expect(geo).toContain("Poisoning Cycle");
+    expect(geo).toContain("Fuel Shuffle Cycle");
+    expect(geo).toContain("Depletion Cycle");
+  });
+
+  it("has the resonance extinction hypothesis", () => {
+    expect(geo).toContain("When All Three Hands Align");
+    expect(geo).toContain("mass extinction");
+  });
+});
+
+describe("Georeactor Explainer Page — Scientific Accuracy", () => {
+  let geo: string;
+
+  beforeAll(() => {
+    geo = fs.readFileSync(
+      path.resolve(__dirname, "../client/src/pages/Georeactor.tsx"),
+      "utf-8"
+    );
+  });
+
+  it("references correct U-238 half-life", () => {
+    expect(geo).toContain("4.47");
+  });
+
+  it("references correct Xe-135 half-life", () => {
+    expect(geo).toContain("9.2 hours");
+  });
+
+  it("references 4 TW reactor power", () => {
+    expect(geo).toContain("4 TW");
+  });
+
+  it("references Ternary fission", () => {
+    expect(geo).toContain("Ternary fission");
+  });
+
+  it("references tritium half-life", () => {
+    expect(geo).toContain("12.3 years");
+  });
+});
+
+describe("Georeactor Explainer Page — Navigation", () => {
+  it("has /georeactor route in App.tsx", () => {
+    const appTsx = fs.readFileSync(
+      path.resolve(__dirname, "../client/src/App.tsx"),
+      "utf-8"
+    );
+    expect(appTsx).toContain("/georeactor");
+  });
+
+  it("has Georeactor link in Navbar", () => {
+    const navTsx = fs.readFileSync(
+      path.resolve(__dirname, "../client/src/components/Navbar.tsx"),
+      "utf-8"
+    );
+    expect(navTsx).toContain("georeactor");
   });
 });
