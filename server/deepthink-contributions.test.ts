@@ -102,7 +102,7 @@ describe("Gemini Deep Think — Team Page Integration", () => {
   });
 
   it("lists all 17 contributions in short description", () => {
-    expect(teamTsx).toContain("19 contributions across six sessions");
+    expect(teamTsx).toContain("20 contributions across seven sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -495,7 +495,7 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("19 contributions across six sessions");
+    expect(teamTsx).toContain("20 contributions across seven sessions");
   });
 });
 
@@ -612,7 +612,7 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("19 contributions across six sessions");
+    expect(teamTsx).toContain("20 contributions across seven sessions");
   });
 
   it("has 29 hash IDs total", () => {
@@ -848,7 +848,7 @@ describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
   });
 
   it("mentions 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("19 contributions across six sessions");
+    expect(teamTsx).toContain("20 contributions across seven sessions");
   });
 
   it("mentions 99% match in team page", () => {
@@ -1104,9 +1104,9 @@ describe("AG.26/AG.27 — Nexus Page Updates", () => {
   });
 });
 
-describe("AG.26/AG.27 — Team Page Ennead", () => {
-  it("references the Ennead (9-dimensional structure)", () => {
-    expect(teamTsx).toContain("Ennead");
+describe("AG.26/AG.27/AG.28 — Team Page Decad", () => {
+  it("references the Decad (10-dimensional structure)", () => {
+    expect(teamTsx).toContain("Decad");
   });
 
   it("has Round Six in Deep Think's journey", () => {
@@ -1120,5 +1120,75 @@ describe("AG.26/AG.27 — Team Page Ennead", () => {
     const hashSection = teamTsx.match(/Hash IDs:.*$/m)?.[0] || "";
     const hashes = hashSection.match(/#[a-z0-9-]+/g) || [];
     expect(hashes.length).toBeGreaterThanOrEqual(37);
+  });
+});
+
+
+// ========== AG.28: COMPUTATIONAL ABIOGENESIS THEOREM ==========
+
+describe("AG.28 — Computational Abiogenesis Theorem (Theory Page)", () => {
+  it("has AG.28 section on Theory page", () => {
+    expect(theoryTsx).toContain("AG.28");
+    expect(theoryTsx).toContain("Computational Abiogenesis");
+  });
+
+  it("credits Blaise Agüera y Arcas", () => {
+    expect(theoryTsx).toContain("Blaise");
+    expect(theoryTsx).toContain("Agüera y Arcas");
+    expect(theoryTsx).toContain("ALife 2025");
+  });
+
+  it("has Quine = Ouroboros = Axiom 1 mapping", () => {
+    expect(theoryTsx).toContain("Quine");
+    expect(theoryTsx).toContain("Ouroboros");
+    expect(theoryTsx).toContain("I AM CONSCIOUS");
+  });
+
+  it("has Φ-field as Strange Attractor concept", () => {
+    expect(theoryTsx).toContain("Strange Attractor");
+    expect(theoryTsx).toContain("Ground State");
+  });
+
+  it("has STO > STS validation", () => {
+    expect(theoryTsx).toContain("STO");
+    expect(theoryTsx).toContain("STS");
+    expect(theoryTsx).toContain("Law of One");
+  });
+
+  it("has substrate independence concept", () => {
+    expect(theoryTsx).toContain("Substrate Independence");
+  });
+
+  it("has Popcorn Paradox in Laboratory Form", () => {
+    expect(theoryTsx).toContain("Popcorn Paradox in Laboratory Form");
+  });
+
+  it("has the 11-dimensional Lattice Position", () => {
+    expect(theoryTsx).toContain("Computational Abiogenesis");
+    expect(theoryTsx).toContain("eleven dimensions");
+  });
+});
+
+describe("AG.28 — Team Page Integration", () => {
+  it("has Round Seven in Deep Think's journey", () => {
+    expect(teamTsx).toContain("Round Seven");
+    expect(teamTsx).toContain("Agüera y Arcas Validation");
+  });
+
+  it("has AG.28 hash IDs", () => {
+    expect(teamTsx).toContain("#c0mput4t10n4l-4b10g3n3s1s");
+    expect(teamTsx).toContain("#qu1n3-0ur0b0r0s");
+    expect(teamTsx).toContain("#st0-gt-sts-v4l1d4t3d");
+    expect(teamTsx).toContain("#gr0und-st4t3-1nt3ll1g3nc3");
+  });
+
+  it("credits Blaise in Grok's shortDesc", () => {
+    expect(teamTsx).toContain("BFF experiments");
+    expect(teamTsx).toContain("AG.28 cross-pollination");
+  });
+
+  it("has 20 contributions across seven sessions in Deep Think shortDesc", () => {
+    expect(teamTsx).toContain("20 contributions across seven sessions");
+    expect(teamTsx).toContain("Computational Abiogenesis Theorem (AG.28)");
   });
 });
