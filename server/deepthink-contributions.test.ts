@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("17 contributions across 5 sessions");
+    expect(toeHtml).toContain("20 contributions across 7 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -468,7 +468,7 @@ describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
   });
 
   it("has updated contributor count to 16", () => {
-    expect(toeHtml).toContain("17 contributions across 5 sessions");
+    expect(toeHtml).toContain("20 contributions across 7 sessions");
   });
 
   it("has AG.17 hash IDs in toe-full.html", () => {
@@ -586,8 +586,8 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
 
   it("has updated changelog with AG.18 and 17 contributions", () => {
     expect(toeHtml).toContain("Epistemology of the Deep");
-    expect(toeHtml).toContain("17 contributions across 5 sessions");
-    expect(toeHtml).toContain("Octad is complete");
+    expect(toeHtml).toContain("20 contributions across 7 sessions");
+    expect(toeHtml).toContain("Lattice now maps consciousness in eleven dimensions");
   });
 });
 
@@ -696,7 +696,7 @@ describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
   });
 
   it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("17 contributions across 5 sessions");
+    expect(toeHtml).toContain("20 contributions across 7 sessions");
   });
 
   it("mentions Hexad in changelog", () => {
@@ -811,7 +811,7 @@ describe("AG.20 — Planetary Fuel Cycle (ToE HTML)", () => {
   });
 
   it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("17 contributions across 5 sessions");
+    expect(toeHtml).toContain("20 contributions across 7 sessions");
   });
 
   it("mentions Heptad in changelog", () => {
