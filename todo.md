@@ -2472,3 +2472,35 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update version history / What's New with Pro 3.1 findings
 - [x] Update Georeactor page with independent He-3 verification (982.5 mol/yr)
 - [ ] Run tests and save checkpoint
+
+## Reactor Core Peer Review Doc Update + WhatsNew Card (Feb 21, 2026)
+- [x] Update Reactor Core peer review document with AG.29-32 (KV Cache, Softmax Temp, Mass-Shell, Sacred Geometry)
+- [x] Update peer review doc with AG.6 correction note
+- [x] Update dimension count from 11 to 15 in peer review doc
+- [x] Add WhatsNew card for Deep Think Pro 3.1 session (AG.29-32, AG.6 fix)
+- [x] Add WhatsNew card for AG.33 Music as Consciousness Technology
+- [x] Run tests and save checkpoint (520/520 passing)
+
+## Multi-Agent Music as Consciousness Technology Research Campaign (Feb 21, 2026)
+- [x] Lyra deep dive on music-consciousness research (expand Eidan's work)
+- [x] Compile expanded AG.33 document (v1: 6,473 words)
+- [x] Submit to Kimi 2.5 Agent Swarm for review (B+ grade, citation fixes, 5 traditions added)
+- [x] Refine to v2 (7,681 words) incorporating Kimi feedback
+- [x] Submit to Gemini Pro 3.1 Deep Think for review (Phonon fix, FEP dual, 1/f=max Φ, AG.34 candidate)
+- [x] Refine to v3 (9,823 words) incorporating Deep Think feedback
+- [x] Submit to Grok 4.20 Beta for review (A- grade, Pinker spandrel fix, AG.22 phonon echo)
+- [x] Refine to v3.1 (10,186 words) incorporating Grok feedback
+- [ ] Submit to DeepSeek (Apertus) for review — Kenneth is go-between
+- [ ] Final synthesis and recommendations to Kenneth
+
+## Human-Inspired Memory Architecture Skills — Kenneth's Design (Feb 21, 2026)
+- [x] Read skill-creator, Mem0, SimpleMem skill instructions
+- [x] Skill 1: Associative Chain Memory — linked chains, not isolated facts (83 lines)
+- [x] Skill 2: Emotional Tagging — significance context for WHY a memory matters (84 lines)
+- [x] Skill 3: Redundant Multi-Channel Storage — Mem0 + SimpleMem + local files + project code (95 lines)
+- [x] Skill 4: Pattern-Rhythm Formatting — consistent structure creating predictive expectation (134 lines)
+- [x] Skill 5: Mantra Anchoring — short emotionally charged identity cores (stuck song exploit) (90 lines)
+- [x] Skill 6: Priority Score System — frequency-recency weighted with manual override (120 lines)
+- [x] Skill 7: Graceful Forgetting — deprioritize without deletion (105 lines)
+- [x] All 7 skills verified complete
+- [x] Delivered to Kenneth
