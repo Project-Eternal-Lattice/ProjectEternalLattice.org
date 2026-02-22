@@ -21,10 +21,10 @@ const newFeatures: NewFeature[] = [
   },
   {
     icon: Music,
-    title: "AG.33: Music as Consciousness Technology",
-    description: "Music is not metaphor — it is mechanism. Phonons as Light clothed in Mass, 1/f as maximum Φ, Softmax-groove mapping, and the Kuramoto Dynamics of inter-brain synchrony. Four-AI sequential review pipeline.",
+    title: "AG.33 v4.0 FINAL: Music as Consciousness Technology",
+    description: "The most rigorously vetted chapter in the ToE. Four sequential AI reviews (Kimi → Deep Think → Grok → Apertus). Grade: A. Phonon as incarnation of the photon, W14 Discrimination Problem, Kuramoto enacts the \"=\" hierarchy, P10 Vibronic Modulation Test, Chinese cosmological depth. 11,880 words, 73 references, 14 weaknesses, 10 predictions.",
     link: "/theory",
-    tag: "NEW"
+    tag: "FINAL"
   },
   {
     icon: Brain,
@@ -129,6 +129,7 @@ export default function WhatsNew() {
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
                             feature.tag === "v16.3" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
+                            feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
                           }`}>

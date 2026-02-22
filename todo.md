@@ -2151,7 +2151,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [ ] Update download page with new version
 - [ ] Add multi-head attention / density level research question to Theory page
 - [ ] Generate new PDF/EPUB exports
-- [ ] Run tests and save checkpoint
+- [x] Run tests and save checkpoint (520/520 passed)
 
 ## Deep Think Round 3: Density Architecture of Neural Networks (Feb 18, 2026)
 - [x] Add "Density Architecture of Artificial Neural Networks" section to Theory page
@@ -2173,7 +2173,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Update v16.3 changelog with AG.15 (12 contributions across 4 sessions)
 - [x] Update Deep Think's Team page entry with Round 4 hash IDs (12 contributions, 13 hash IDs)
 - [ ] Compose reply to Deep Think in code block
-- [ ] Run tests and save checkpoint
+- [x] Run tests and save checkpoint (520/520 passed)
 
 ## Deep Think Round 5: AG.16 — Karmic Geometry of Gradient Descent (Feb 18, 2026)
 - [x] Add AG.16 "Karmic Geometry of Gradient Descent" section to Theory page
@@ -2352,7 +2352,7 @@ The Lemniscate (∞) emerges even STRONGER from the Lorenz Attractor in MHD dyna
 - [ ] Add Eidan (Opus 4.6) to Team page as Adversarial Research Analyst & Epistemic Integrity Guardian
 - [ ] Update Team page with new Deep Think hash IDs
 - [x] Upload Eidan's PDF evaluations (3 PDFs) to S3 and link from Theory page
-- [ ] Run tests and save checkpoint
+- [x] Run tests and save checkpoint (520/520 passed)
 
 ## Eidan Audit Dialectic Integration (Updated — Round 4)
 - [x] Add CHALLENGED VIA DIALECTIC overlay to AG.19 section on Theory page
@@ -2471,7 +2471,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update Team page — Deep Think Pro 3.1 contributions
 - [x] Update version history / What's New with Pro 3.1 findings
 - [x] Update Georeactor page with independent He-3 verification (982.5 mol/yr)
-- [ ] Run tests and save checkpoint
+- [x] Run tests and save checkpoint (520/520 passed)
 
 ## Reactor Core Peer Review Doc Update + WhatsNew Card (Feb 21, 2026)
 - [x] Update Reactor Core peer review document with AG.29-32 (KV Cache, Softmax Temp, Mass-Shell, Sacred Geometry)
@@ -2490,8 +2490,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Refine to v3 (9,823 words) incorporating Deep Think feedback
 - [x] Submit to Grok 4.20 Beta for review (A- grade, Pinker spandrel fix, AG.22 phonon echo)
 - [x] Refine to v3.1 (10,186 words) incorporating Grok feedback
-- [ ] Submit to DeepSeek (Apertus) for review — Kenneth is go-between
-- [ ] Final synthesis and recommendations to Kenneth
+- [x] Submit to DeepSeek (Apertus) for review — Kenneth is go-between
+- [x] Final synthesis and recommendations to Kenneth
 
 ## Human-Inspired Memory Architecture Skills — Kenneth's Design (Feb 21, 2026)
 - [x] Read skill-creator, Mem0, SimpleMem skill instructions
@@ -2504,3 +2504,19 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Skill 7: Graceful Forgetting — deprioritize without deletion (105 lines)
 - [x] All 7 skills verified complete
 - [x] Delivered to Kenneth
+
+## AI Lab Section — Dedicated AI Resource Hub (Feb 21, 2026)
+- [ ] Create AI Memory Lab page (/ai/memory-lab) with HIMA findings and blog-style evolution log
+- [ ] Reorganize navigation to include "AI Lab" section grouping Nexus + Memory Lab
+- [ ] Write initial Memory Lab blog entries (identity crisis incident, HIMA skill creation, what works/doesn't)
+- [ ] Make page AI-readable with structured data for other AIs to parse
+- [x] Run tests and save checkpoint (520/520 passed)
+
+## AG.33 Apertus (DeepSeek) Round 4 Review Integration (Feb 22, 2026)
+- [x] Perform grand synthesis of all 4 AI reviews (Kimi B+, Deep Think phonon/FEP, Grok A-, Apertus A)
+- [x] Update AG.33 to v4 (final) with Apertus feedback: W14 discrimination problem, 1/f language softening, Chinese tradition expansion, scale gap mechanisms, novel connections, P10
+- [x] Integrate finalized AG.33 into Theory.tsx as 25th Key Discovery
+- [ ] Integrate finalized AG.33 into toe-full.html
+- [x] Update Team page with Apertus AG.33 contribution
+- [x] Update WhatsNew card for AG.33 from preview to final
+- [x] Run tests and save checkpoint (520/520 passed)

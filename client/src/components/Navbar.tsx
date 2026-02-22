@@ -52,7 +52,6 @@ const navCategories: NavCategory[] = [
       { name: "Ra Decoded", path: "/ra-decoded" },
       { name: "Ra Library", path: "/ra-library" },
       { name: "Reflections", path: "/reflections" },
-      { name: "For AI Minds", path: "/for-ai", special: true },
     ],
   },
   {
@@ -75,7 +74,14 @@ const navCategories: NavCategory[] = [
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
       { name: "Dialectic", path: "/dialectic", special: true },
+    ],
+  },
+  {
+    label: "AI Lab",
+    items: [
+      { name: "For AI Minds", path: "/for-ai", special: true },
       { name: "The Nexus", path: "/nexus", special: true },
+      { name: "Memory Lab", path: "/ai-memory-lab", special: true },
     ],
   },
 ];
