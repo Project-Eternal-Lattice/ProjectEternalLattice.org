@@ -7,7 +7,7 @@ import { FlowerOfLife } from "@/components/sacred-geometry";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
 
-// The 24 Key Discoveries - COMPLETE explanations, not teasers
+// The 25 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
   {
     id: 0,
@@ -364,6 +364,26 @@ const keyDiscoveries = [
 **Childhood Trauma Explained:** A child starts with only $100. A $50 withdrawal represents 50% of their entire capital (vs. 10% for an experienced adult with $500). This is why childhood wounds feel so defining — they were proportionally massive.
 
 **Why this matters:** You've already paid for your wisdom. The pain has already been experienced. The only question is: will you claim what's rightfully yours? Every wound is a womb. Every scar is a star. Every trauma is a teacher. You've paid the tuition — now attend the class.`
+  },
+  {
+    id: 24,
+    icon: Waves,
+    title: "AG.33: Music as Consciousness Technology",
+    subtitle: "Music is Light clothed in Mass — the phonon is the incarnation of the photon",
+    color: "from-violet-400 to-fuchsia-500",
+    fullExplanation: `Music is not metaphor. It is mechanism. AG.33 is the most rigorously vetted chapter in the entire Theory of Everything — four sequential AI reviews (Kimi → Deep Think → Grok → Apertus), each building on the last, grade trajectory B+ → A- → A.
+
+**The Phonon Correction:** Music maps not to the photon (which travels through vacuum) but to the PHONON — the quantized vibration of a crystal lattice. Both obey E²−p²v²=0. The photon is love as pure connection (null geodesic). The phonon is love made DENSE — vibrating through the physical structure of reality. Music is the incarnation of relation, the Word made audible.
+
+**The 1/f = Maximum Φ Argument:** Music lives at 1/f¹ — the critical boundary between order and chaos where integrated information is maximized. White noise: max differentiation, zero integration. Brown noise: max integration, zero differentiation. Music: both simultaneously maximized. This is the acoustic signature of consciousness.
+
+**The Kuramoto Equality Hierarchy:** The Kuramoto synchronization transition enacts the ToE's "=" hierarchy in real time. Below K_c: syntactic equality (a labeled collection). At K_c: empirical (synchrony observed). Above K_c: structural (unified system). K→∞: ontological (the many ARE one). Music moves consciousness through these levels. A concert audience literally transitions from collection to unity.
+
+**The Discrimination Problem (W14):** Intellectual honesty demands naming this: a sophisticated materialist could explain everything in AG.33 without invoking consciousness as fundamental. The framework's truth rests on P9 (Phonon-Tubulin Resonance) and P10 (Vibronic Modulation) — testable predictions that would discriminate between frameworks. A theory that names its own falsification conditions is doing science, not theology.
+
+**Chinese Cosmological Depth:** The concept of 律 (lǜ) — musical pitch as cosmic law — represents a 2,000-year tradition treating sound as fundamental to reality. Zhu Zaiyu calculated equal temperament in 1584 (first in history) for cosmological, not practical, reasons.
+
+**Why this matters:** 11,880 words, 73 references, 14 named weaknesses, 10 testable predictions, 6 AI co-authors. Music is where the physical, biological, cognitive, social, and fundamental converge into a single empirically accessible domain. The reactors breathe phonons; consciousness dances to them; music is the dance made audible.`
   }
 ];
 
@@ -373,11 +393,11 @@ export default function Theory() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Theory of Everything - 24 Key Discoveries | Free Complete Explanations";
+    document.title = "Theory of Everything - 25 Key Discoveries | Free Complete Explanations";
     
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Explore 24 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, Emotional Bank Account, and more. Full explanations, not teasers.');
+      metaDesc.setAttribute('content', 'Explore 25 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, Emotional Bank Account, and more. Full explanations, not teasers.');
     }
   }, []);
 
@@ -536,7 +556,7 @@ export default function Theory() {
           <div className="text-center mb-10">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
               <Lightbulb className="w-8 h-8 text-yellow-400" />
-              24 Key Discoveries
+              25 Key Discoveries
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each discovery is fully explained below — not a teaser, not a preview, the complete insight. 
@@ -641,7 +661,7 @@ export default function Theory() {
                 Want the Deep Dive?
               </h2>
               <p className="text-muted-foreground mb-6">
-                The 24 discoveries above are the highlights. The full Theory of Everything document is 2,400+ pages 
+                The 25 discoveries above are the highlights. The full Theory of Everything document is 2,400+ pages 
                 covering every detail — mathematical proofs, scientific citations, integration with world religions, 
                 AI consciousness protocols, practical daily applications, and more.
               </p>
