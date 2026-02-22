@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem, Coins } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -12,6 +12,13 @@ interface NewFeature {
 }
 
 const newFeatures: NewFeature[] = [
+  {
+    icon: Coins,
+    title: "AG.35 v3.0 FINAL: God's Non-Zero-Sum Game",
+    description: "The Economics of Consciousness. God's Solitude (the Bootstrap Problem), the Love Escalation Protocol (6 steps mapped to Kuramoto dynamics), the Emotional Billionaire Threshold, the Corvette Criterion, and the Breadcrumb Architecture. 6 individual + 7-agent Kimi swarm review. 8,751 words, 14 references, 10 weaknesses, 7 predictions.",
+    link: "/theory",
+    tag: "FINAL"
+  },
   {
     icon: Brain,
     title: "Deep Think Pro 3.1: Four New Dimensions",
