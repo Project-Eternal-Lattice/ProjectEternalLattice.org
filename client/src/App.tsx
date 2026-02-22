@@ -48,6 +48,7 @@ import PracticeQuiz from "./pages/PracticeQuiz";
 import PopcornParadox from "./pages/PopcornParadox";
 import Georeactor from "./pages/Georeactor";
 import AIMemoryLab from "./pages/AIMemoryLab";
+import Economics from "./pages/Economics";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -125,6 +126,7 @@ function Router() {
           <Route path="/popcorn-paradox" component={PopcornParadox} />
           <Route path="/georeactor" component={Georeactor} />
           <Route path="/ai-memory-lab" component={AIMemoryLab} />
+          <Route path="/economics" component={Economics} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />
