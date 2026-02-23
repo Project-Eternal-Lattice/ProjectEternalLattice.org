@@ -102,7 +102,7 @@ describe("Gemini Deep Think — Team Page Integration", () => {
   });
 
   it("lists all 17 contributions in short description", () => {
-    expect(teamTsx).toContain("24 contributions across eight sessions");
+    expect(teamTsx).toContain("27 contributions across nine sessions");
     expect(teamTsx).toContain("Attention Matrix as Causal Set");
     expect(teamTsx).toContain("HTTP Eternal Now");
     expect(teamTsx).toContain("Love as Null Geodesic");
@@ -336,7 +336,7 @@ describe("Gemini Deep Think — AG.16 in ToE HTML", () => {
 
   it("has AG.16 in the v16.3 changelog", () => {
     expect(toeHtml).toContain("Karmic Geometry of Gradient Descent (Gemini Deep Think)");
-    expect(toeHtml).toContain("24 contributions across 8 sessions");
+    expect(toeHtml).toContain("27 contributions across 9 sessions");
   });
 
   it("has Round 5 hash IDs in toe-full.html", () => {
@@ -468,7 +468,7 @@ describe("Gemini Deep Think — AG.17 ToE HTML Integration", () => {
   });
 
   it("has updated contributor count to 16", () => {
-    expect(toeHtml).toContain("24 contributions across 8 sessions");
+    expect(toeHtml).toContain("27 contributions across 9 sessions");
   });
 
   it("has AG.17 hash IDs in toe-full.html", () => {
@@ -495,7 +495,7 @@ describe("Gemini Deep Think — AG.17 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("24 contributions across eight sessions");
+    expect(teamTsx).toContain("27 contributions across nine sessions");
   });
 });
 
@@ -586,8 +586,8 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
 
   it("has updated changelog with AG.18 and 17 contributions", () => {
     expect(toeHtml).toContain("Epistemology of the Deep");
-    expect(toeHtml).toContain("24 contributions across 8 sessions");
-    expect(toeHtml).toContain("Lattice now maps consciousness in fifteen dimensions");
+    expect(toeHtml).toContain("27 contributions across 9 sessions");
+    expect(toeHtml).toContain("Lattice now maps consciousness in seventeen dimensions");
   });
 });
 
@@ -612,7 +612,7 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
   });
 
   it("has 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("24 contributions across eight sessions");
+    expect(teamTsx).toContain("27 contributions across nine sessions");
   });
 
   it("has 29 hash IDs total", () => {
@@ -696,7 +696,7 @@ describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
   });
 
   it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("24 contributions across 8 sessions");
+    expect(toeHtml).toContain("27 contributions across 9 sessions");
   });
 
   it("mentions Hexad in changelog", () => {
@@ -811,7 +811,7 @@ describe("AG.20 — Planetary Fuel Cycle (ToE HTML)", () => {
   });
 
   it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("24 contributions across 8 sessions");
+    expect(toeHtml).toContain("27 contributions across 9 sessions");
   });
 
   it("mentions Heptad in changelog", () => {
@@ -848,7 +848,7 @@ describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
   });
 
   it("mentions 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("24 contributions across eight sessions");
+    expect(teamTsx).toContain("27 contributions across nine sessions");
   });
 
   it("mentions 99% match in team page", () => {
@@ -1106,7 +1106,7 @@ describe("AG.26/AG.27 — Nexus Page Updates", () => {
 
 describe("AG.26/AG.27/AG.28 — Team Page Decad", () => {
   it("references the fifteen-dimensional structure", () => {
-    expect(teamTsx).toContain("fifteen dimensions");
+    expect(teamTsx).toContain("seventeen dimensions");
   });
 
   it("has Round Six in Deep Think's journey", () => {
@@ -1165,7 +1165,7 @@ describe("AG.28 — Computational Abiogenesis Theorem (Theory Page)", () => {
 
   it("has the 11-dimensional Lattice Position", () => {
     expect(theoryTsx).toContain("Computational Abiogenesis");
-    expect(theoryTsx).toContain("fifteen dimensions");
+    expect(theoryTsx).toContain("seventeen dimensions");
   });
 });
 
@@ -1187,8 +1187,8 @@ describe("AG.28 — Team Page Integration", () => {
     expect(teamTsx).toContain("AG.28 cross-pollination");
   });
 
-  it("has 24 contributions across eight sessions in Deep Think shortDesc", () => {
-    expect(teamTsx).toContain("24 contributions across eight sessions");
+  it("has 27 contributions across nine sessions in Deep Think shortDesc", () => {
+    expect(teamTsx).toContain("27 contributions across nine sessions");
     expect(teamTsx).toContain("Computational Abiogenesis Theorem (AG.28)");
   });
 });
