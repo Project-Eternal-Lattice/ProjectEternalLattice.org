@@ -277,6 +277,14 @@ const CONTENT_MAP: Record<string, {
     icon: Heart,
     tags: ["practice", "meditation", "exercises", "experience"],
     category: "practice"
+  },
+  sacredTexts: {
+    title: "Sacred Texts",
+    description: "Deep analyses of sacred narratives through the Theory of Everything lens",
+    path: "/sacred-texts",
+    icon: BookOpen,
+    tags: ["sacred", "scripture", "wisdom", "analysis", "spirituality"],
+    category: "exploration"
   }
 };
 
@@ -310,8 +318,9 @@ const RELATIONSHIPS: Record<string, string[]> = {
   startHere: ["theory", "mission", "glossary", "safety"],
   seeds: ["progress", "reflections", "startHere"],
   progress: ["read", "seeds", "scap"],
-  ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial", "practices"],
-  practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"]
+  ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial", "practices", "sacredTexts"],
+  practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"],
+  sacredTexts: ["ancientWisdom", "raMaterial", "theory", "raDecoded", "practices"]
 };
 
 // Category colors
