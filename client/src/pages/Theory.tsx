@@ -706,7 +706,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v16.3 The Cosmological Cinema Edition | 2,500+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v16.4 The Resonance Edition | 2,827+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
