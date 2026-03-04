@@ -112,6 +112,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/sacred-texts" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Sacred Texts
+                </Link>
+              </li>
+              <li>
                 <Link href="/videos" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Videos
                 </Link>

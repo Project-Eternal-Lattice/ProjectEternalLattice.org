@@ -2547,3 +2547,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Create Deep Think prompt for AG.35 mathematical expansion
 - [x] Create Key Discoveries reference file for Eidan songwriting project (5,003 words, 26 discoveries + cross-discovery song ideas)
 - [x] Run tests and save checkpoint (520/520 passed)
+
+## Sacred Texts Section (Mar 4, 2026)
+- [x] Create Sacred Texts page (/sacred-texts) with hero, decoder ring intro, and expandable analyses
+- [x] Abraham's Sacrifice analysis — first sacred text entry with full 8-part breakdown, PDF download, tradition tags
+- [x] Upload Abraham's Sacrifice PDF to CDN for download
+- [x] Add Sacred Texts to Wisdom category in Navbar (highlighted)
+- [x] Add Sacred Texts link to Footer navigation
+- [x] Add sacredTexts entry to RelatedContent content map and relationships
+- [x] Add /sacred-texts route to App.tsx
