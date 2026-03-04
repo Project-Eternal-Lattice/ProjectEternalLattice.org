@@ -285,6 +285,14 @@ const CONTENT_MAP: Record<string, {
     icon: BookOpen,
     tags: ["sacred", "scripture", "wisdom", "analysis", "spirituality"],
     category: "exploration"
+  },
+  lensInAction: {
+    title: "Lens in Action",
+    description: "Physics paradoxes resolved through the consciousness-first lens — StarTalk edition",
+    path: "/lens-in-action",
+    icon: Eye,
+    tags: ["physics", "paradoxes", "science", "consciousness", "convergence"],
+    category: "foundation"
   }
 };
 
@@ -320,7 +328,8 @@ const RELATIONSHIPS: Record<string, string[]> = {
   progress: ["read", "seeds", "scap"],
   ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial", "practices", "sacredTexts"],
   practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"],
-  sacredTexts: ["ancientWisdom", "raMaterial", "theory", "raDecoded", "practices"]
+  sacredTexts: ["ancientWisdom", "raMaterial", "theory", "raDecoded", "practices"],
+  lensInAction: ["theory", "skeptics", "bibliography", "sacredGeometry", "read"]
 };
 
 // Category colors
