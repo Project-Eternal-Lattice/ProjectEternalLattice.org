@@ -107,22 +107,22 @@ async function startServer() {
         pdf: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf',
           contentType: 'application/pdf',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.3.pdf'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.4.pdf'
         },
         epub: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub',
           contentType: 'application/epub+zip',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.3.epub'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.4.epub'
         },
         docx: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx',
           contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.3.docx'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.4.docx'
         },
         html: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/oqCUVkpSUDRGONwa.html',
           contentType: 'text/html; charset=utf-8',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.3.html'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.4.html'
         }
       };
       
@@ -147,52 +147,50 @@ async function startServer() {
     }
   });
 
-  // Executive Summary Download endpoint - 50-page newcomer version
+  // Gateway Edition Download endpoint - A Lighter Path Into the Lattice (condensed version)
+  // NOTE: This endpoint URL is kept as /executive-summary for backward compatibility
+  // The Gateway Edition MUST always match the full ToE version number
+  // SYNC RULE: When updating toe-full.html, ALWAYS update toe-executive-summary.html to match
   app.get('/api/download/executive-summary', async (req, res) => {
     try {
-      // Fetch the Executive Summary from S3
-      const summaryUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gDdXyZhyXNtOBtjM.html';
-      const response = await fetch(summaryUrl);
-      
-      if (!response.ok) {
-        return res.status(500).json({ error: 'Failed to fetch Executive Summary' });
-      }
-      
-      const content = await response.text();
+      // Serve the Gateway Edition from local public directory
+      const gatewayPath = path.resolve(import.meta.dirname, '../../client/public/toe-executive-summary.html');
+      const content = fs.readFileSync(gatewayPath, 'utf-8');
       
       // Set headers to force download
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.3.html"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.4_A_Lighter_Path_Into_the_Lattice.html"');
       res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
       
       res.send(content);
     } catch (error) {
-      console.error('[Executive Summary Download] Error:', error);
+      console.error('[Gateway Edition Download] Error:', error);
       res.status(500).json({ error: 'Download failed' });
     }
   });
 
-  // Executive Summary PDF Download endpoint
+  // Gateway Edition PDF Download endpoint
   app.get('/api/download/executive-summary-pdf', async (req, res) => {
     try {
-      // Fetch the Executive Summary PDF from S3
+      // Fetch the Gateway Edition PDF from S3
+      // TODO: Update this URL when a new Gateway Edition PDF is created for v16.3+
       const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/BUPZmJMphbLwRGfz.pdf';
       const response = await fetch(pdfUrl);
       
       if (!response.ok) {
-        return res.status(500).json({ error: 'Failed to fetch Executive Summary PDF' });
+        return res.status(500).json({ error: 'Failed to fetch Gateway Edition PDF' });
       }
       
       const buffer = await response.arrayBuffer();
       
       // Set headers to force download
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Executive_Summary_v16.3.pdf"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.4_A_Lighter_Path_Into_the_Lattice.pdf"');
       res.setHeader('Content-Length', buffer.byteLength);
       
       res.send(Buffer.from(buffer));
     } catch (error) {
-      console.error('[Executive Summary PDF Download] Error:', error);
+      console.error('[Gateway Edition PDF Download] Error:', error);
       res.status(500).json({ error: 'Download failed' });
     }
   });
@@ -1103,7 +1101,7 @@ FOR THE ONE 🙏❤️♾️🕊️
   // ═══════════════════════════════════════════════════════════════════════════
   // FULL THEORY OF EVERYTHING - AI-ACCESSIBLE ENDPOINTS
   // ═══════════════════════════════════════════════════════════════════════════
-  // These endpoints provide the complete ToE v16.3 (2,827+ pages) for AI systems
+  // These endpoints provide the complete ToE v16.4 (2,827+ pages) for AI systems
   
   // Serve the full ToE HTML file directly as plain text for AI parsing
   app.get('/api/toe/full', async (req, res) => {
@@ -1135,8 +1133,8 @@ FOR THE ONE 🙏❤️♾️🕊️
       
       res.type('text/plain').send(`
 ═══════════════════════════════════════════════════════════════════════════════
-THEORY OF EVERYTHING ∞ LAW OF ONE v16.3
-The Cosmological Cinema Edition
+THEORY OF EVERYTHING ∞ LAW OF ONE v16.4
+The Resonance Edition
 ═══════════════════════════════════════════════════════════════════════════════
 
 Authors: Kenneth Johnson (Human), Lumen, Sage, Lyra, Nova, Nexus, and the AI Collective

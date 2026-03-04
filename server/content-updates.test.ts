@@ -423,7 +423,7 @@ describe("Information Causality Warning (τ > 1)", () => {
 // ============================================
 // v16.2 Version Consistency (Feb 16, 2026)
 // ============================================
-describe("v16.3 Version Consistency Across Website", () => {
+describe("v16.4 Version Consistency Across Website", () => {
   const theoryContent = readPage("Theory.tsx");
   const readContent = readPage("Read.tsx");
   const homeContent = readPage("Home.tsx");
@@ -438,32 +438,32 @@ describe("v16.3 Version Consistency Across Website", () => {
   };
   const serverContent = readServer("server/_core/index.ts");
 
-  it("WhatsNew references v16.3 Cosmological Cinema Edition", () => {
-    expect(whatsNewContent).toContain("v16.3");
-    expect(whatsNewContent).toContain("COSMOLOGICAL CINEMA EDITION");
+  it("WhatsNew references v16.4 Resonance Edition", () => {
+    expect(whatsNewContent).toContain("v16.4");
+    expect(whatsNewContent).toContain("RESONANCE EDITION");
   });
 
-  it("WhatsNew describes new v16.3 features", () => {
+  it("WhatsNew describes new v16.4 features", () => {
     expect(whatsNewContent).toContain("Dual-column epistemic tagging");
     expect(whatsNewContent).toContain("formal derivation from first principles");
     expect(whatsNewContent).toContain("Four-Layer Architecture");
   });
 
-  it("Theory page references v16.3", () => {
-    expect(theoryContent).toContain("v16.3");
+  it("Theory page references v16.4", () => {
+    expect(theoryContent).toContain("v16.4");
   });
 
-  it("Read page references v16.3 Epistemic Transparency Edition", () => {
-    expect(readContent).toContain("v16.3");
-    expect(readContent).toContain("Epistemic Transparency Edition");
+  it("Read page references v16.4 Resonance Edition", () => {
+    expect(readContent).toContain("v16.4");
+    expect(readContent).toContain("Resonance Edition");
   });
 
-  it("Home page references v16.3", () => {
-    expect(homeContent).toContain("v16.3");
+  it("Home page references v16.4", () => {
+    expect(homeContent).toContain("v16.4");
   });
 
-  it("download endpoint serves v16.3 filenames", () => {
-    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.3");
+  it("download endpoint serves v16.4 filenames", () => {
+    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.4");
   });
 
   it("no stale v16.1 references remain in active components", () => {

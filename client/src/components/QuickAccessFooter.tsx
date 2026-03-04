@@ -15,8 +15,8 @@ interface QuickLink {
 const quickLinks: QuickLink[] = [
   {
     icon: FileText,
-    label: "Executive Summary",
-    description: "50-page newcomer guide",
+    label: "Gateway Edition",
+    description: "A Lighter Path Into the Lattice",
     href: "/api/download/executive-summary",
     external: false,
     variant: "default",
@@ -25,7 +25,7 @@ const quickLinks: QuickLink[] = [
   {
     icon: Download,
     label: "Full ToE",
-    description: "Complete v16.3 (2,500+ pages)",
+    description: "Complete v16.4 (2,827+ pages)",
     href: "/api/download/toe",
     external: false,
     variant: "outline",

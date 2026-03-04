@@ -2567,6 +2567,17 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Test and checkpoint all Eidan integration changes (520 tests passing)
 
 ## Condensed ToE Sync & Skill Creation (Mar 2026)
-- [ ] Audit current condensed/executive summary ToE version vs full ToE
-- [ ] Update condensed version to mirror current full ToE
-- [ ] Create ToE Update Synchronization skill for permanent process
+- [x] Audit current condensed/executive summary ToE version vs full ToE (was at v14.4!)
+- [x] Update condensed version to mirror current full ToE (complete rewrite to v16.4)
+- [x] Create ToE Update Synchronization skill (toe-version-sync)
+
+## Gateway Edition Rename (Mar 2026)
+- [x] Rename "Executive Summary" to "The Gateway Edition: A Lighter Path Into the Lattice" across all website references
+- [x] Update server download endpoints with new Gateway Edition naming
+- [x] Update QuickAccessFooter component
+- [x] Update Read page references
+- [x] Update Gateway Edition content to v16.4 (complete rewrite from v14.4)
+- [x] Create ToE Update Synchronization skill (toe-version-sync)
+- [x] Version-lock Gateway Edition to always match full ToE version (now v16.4)
+- [x] Update all v16.3 references to v16.4 across website (Theory, Home, Read, WhatsNew, SynchronicityEngine, server endpoints)
+- [x] Update all tests to v16.4 (520/520 passing)
