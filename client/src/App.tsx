@@ -3,6 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
+import { useCanonical } from "./hooks/useCanonical";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -64,6 +65,8 @@ import CrisisBanner from "./components/CrisisBanner";
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
   useCrisisShortcuts();
+  // Dynamic canonical URL: tells search engines .org is the preferred domain
+  useCanonical();
   
   // make sure to consider if you need authentication for certain routes
   return (

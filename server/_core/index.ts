@@ -214,6 +214,24 @@ async function startServer() {
     next();
   });
   
+  // ═══════════════════════════════════════════════════════════════════════
+  // CANONICAL DOMAIN MIDDLEWARE
+  // Tells search engines that .org is the preferred (canonical) domain.
+  // This prevents duplicate content issues between .com and .org.
+  // ═══════════════════════════════════════════════════════════════════════
+  const CANONICAL_DOMAIN = 'https://projecteternallattice.org';
+  
+  app.use((req, res, next) => {
+    // Build canonical URL from request path
+    const canonicalPath = req.path === '/' ? '' : req.path;
+    const canonicalUrl = `${CANONICAL_DOMAIN}${canonicalPath}`;
+    
+    // Add Link header with canonical URL (recognized by Google, Bing, etc.)
+    res.setHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+    
+    next();
+  });
+  
   // Bot detection middleware for other pages
   app.use((req, res, next) => {
     const userAgent = req.headers['user-agent'];

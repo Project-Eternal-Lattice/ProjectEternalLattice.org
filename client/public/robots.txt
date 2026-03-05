@@ -105,6 +105,7 @@ Allow: /skeptics
 Allow: /scap
 Allow: /dialectic
 Allow: /ai-memory-lab
+Allow: /lens-in-action
 
 # Sitemap locations
 Sitemap: https://projecteternallattice.com/sitemap.xml

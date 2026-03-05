@@ -2604,4 +2604,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Updated robots.txt with all sitemap references for both domains
 - [x] Verified sitemap-com.xml serves correctly with all .com URLs
 - [x] All 520 tests passing
+- [x] Checkpoint (version c23443b2)
+
+## Canonical Domain (.org) & SEO Best Practices (Mar 2026)
+- [x] Add dynamic <link rel="canonical"> via useCanonical() hook (updates per-page)
+- [x] Add server-side canonical HTTP header (Link: rel=canonical) for all responses
+- [x] Open Graph og:url already points to .org (dynamically updated by useCanonical hook)
+- [x] Add hreflang alternate tags for .com/.org relationship in index.html
+- [x] JSON-LD structured data already uses .org as canonical (verified)
+- [x] Added lens-in-action to robots.txt Allow list
+- [x] All 520 tests passing, canonical headers verified via curl
+- [ ] Provide Kenneth with Google Search Console instructions
 - [ ] Checkpoint
