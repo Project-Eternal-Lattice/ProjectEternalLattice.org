@@ -2589,3 +2589,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update Read page and QuickAccessFooter download links to PDF endpoint
 - [x] Test PDF download works correctly (520 tests passing, CDN verified)
 - [x] Save checkpoint
+
+## Sacred Text Entry #2: Bhagavad Gita (Mar 2026)
+- [x] Research key Bhagavad Gita passages and ToE parallels
+- [x] Write 8-part multi-tradition analysis through the ToE decoder ring
+- [x] Generate PDF of analysis (338KB, uploaded to S3 CDN)
+- [x] Integrate into Sacred Texts page as second entry (with PDF download)
+- [x] Test and checkpoint (520 tests passing)
