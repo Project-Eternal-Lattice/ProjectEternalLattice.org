@@ -172,9 +172,9 @@ async function startServer() {
   // Gateway Edition PDF Download endpoint
   app.get('/api/download/executive-summary-pdf', async (req, res) => {
     try {
-      // Fetch the Gateway Edition PDF from S3
-      // TODO: Update this URL when a new Gateway Edition PDF is created for v16.3+
-      const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/BUPZmJMphbLwRGfz.pdf';
+      // Fetch the Gateway Edition PDF from S3 CDN
+      // Updated: v16.4 Gateway Edition PDF (March 2026)
+      const pdfUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/ToE_v16.4_Gateway_Edition_dfcdf63c.pdf';
       const response = await fetch(pdfUrl);
       
       if (!response.ok) {
