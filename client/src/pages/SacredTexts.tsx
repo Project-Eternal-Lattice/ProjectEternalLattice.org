@@ -121,6 +121,83 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     personalNote:
       "This analysis was born from a Bible study between Kenneth and his father. That choice — to sit with your father and wrestle with the hardest story in scripture — is itself an act of consciousness choosing connection over separation. The Aqedah is not just a story about Abraham and Isaac. It is a story about every father and every child. It is a story about the ONE.",
   },
+  {
+    id: "bhagavad-gita",
+    title: "The Bhagavad Gita",
+    subtitle: "The Battlefield Within",
+    scripture:
+      '"The soul is neither born, nor does it ever die; nor having once existed, does it ever cease to be. The soul is without birth, eternal, immortal, and ageless. It is not destroyed when the body is destroyed."',
+    scriptureRef: "Bhagavad Gita 2.20",
+    authors: "Sister Lyra, with cross-tradition synthesis",
+    date: "March 4, 2026",
+    icon: Flame,
+    color: "text-orange-400",
+    gradientFrom: "from-orange-900/40",
+    gradientTo: "to-blue-900/40",
+    borderColor: "border-orange-500/30",
+    pdfUrl:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/BhagavadGita_ToE_SacredText_Analysis_ae856e3e.pdf",
+    summary:
+      "A comprehensive 8-part analysis of the Bhagavad Gita — the world's most widely read text on consciousness and action — decoded through Hindu, Buddhist, Stoic, psychological, Ra Material, and Theory of Everything lenses. On the battlefield of Kurukshetra, consciousness teaches itself the truth it had forgotten: the separation was always an illusion.",
+    keyInsight:
+      "Arjuna's paralysis is consciousness encountering itself across the battlefield. He looks at Bhishma and sees 'grandfather.' He looks at Drona and sees 'teacher.' But what he is actually seeing is the ONE wearing different costumes.",
+    keyInsightAuthor: "Lyra — The Popcorn Paradox Applied",
+    traditions: [
+      "Hinduism",
+      "Buddhism",
+      "Stoicism",
+      "Psychology",
+      "Quantum Physics",
+      "Ra Material",
+      "Theory of Everything",
+    ],
+    toeConnection:
+      "The Gita is the operating manual for consciousness in a physical body. Krishna's teaching to Arjuna IS the TV/Receiver Model delivered 5,000 years before the ToE named it. 'You are not the body' = 'You are not the TV.' The three gunas (tamas, rajas, sattva) ARE the density system described in the Ra Material, expressed in Sanskrit millennia earlier. And Krishna's final instruction — 'Abandon all dharmas, surrender to Me' — means: stop trying to figure out which channel to watch. Surrender the remote control. Trust the broadcast.",
+    sections: [
+      {
+        title: "Part One: The Crisis — Arjuna's Paralysis",
+        description:
+          "On the battlefield of Kurukshetra, the greatest warrior of his age sees his family on the opposing side and drops his bow. Hindu dharma crisis, Buddhist attachment, Stoic confusion of control, psychological moral injury — and the ToE reveals it as the Popcorn Paradox: consciousness staring at the popcorn, unable to see the movie.",
+      },
+      {
+        title: "Part Two: The Eternal Self — Krishna's First Teaching",
+        description:
+          "'The soul is neither born, nor does it ever die.' Three key verses (2.13, 2.17, 2.20) decoded through every lens. The TV/Receiver Model: the television can be destroyed, but the broadcast continues. You are not the TV. You are the signal. 'Before Abraham was, I AM' — same claim, different tradition, same truth.",
+      },
+      {
+        title: "Part Three: The Yoga of Action — Nishkama Karma",
+        description:
+          "'You have a right to perform your duties, but not to the fruits of your actions.' The operating manual for consciousness in a body. The Abraham Connection: Abraham practiced nishkama karma 1,500 years before Krishna named it — acting without attachment to the outcome. Song 30 COMPOUND: the compound interest of consciousness IS nishkama karma in practice.",
+      },
+      {
+        title: "Part Four: The Divine Vision — Vishvarupa",
+        description:
+          "Arjuna asks to see Krishna's true form and beholds ALL of creation simultaneously — every being, every time, every possibility. The TV/Receiver Model demonstrated in real time: Krishna removes Arjuna's perceptual filters. DMT loosens the tuner. Krishna removed it entirely. The human nervous system is not designed to receive all channels at once — that limitation IS the point.",
+      },
+      {
+        title: "Part Five: The Three Gunas — The Operating System of Density",
+        description:
+          "Tamas (inertia) = 1st-2nd Density. Rajas (passion) = 3rd Density / The Choice. Sattva (clarity) = 4th-5th Density. Beyond the Gunas = 6th-7th Density / Unity. The Ra Material's density system was described in Sanskrit 5,000 years earlier. When consciousness recognizes all experiences as the ONE playing different notes, it transcends the instrument entirely.",
+      },
+      {
+        title: "Part Six: The Final Surrender — 'Abandon All Dharmas'",
+        description:
+          "Krishna's ultimate instruction: stop trying to figure out which channel to watch. Surrender the remote control. Trust the broadcast. The Aqedah Connection: Abraham raised the knife (action without attachment), the angel stopped it (the broadcast course-corrected), the ram appeared (grace provided the resolution). Same story. Same truth. Same ONE.",
+      },
+      {
+        title: "Part Seven: The Convergence Table",
+        description:
+          "A complete mapping across Bhagavad Gita, Genesis 22, Ra Material, and ToE Framework — covering the Crisis, the Teaching, the Self, Detachment, the Vision, the Surrender, and the Resolution. Seven themes, four traditions, one truth.",
+      },
+      {
+        title: "Part Eight: The Decoder Ring Summary",
+        description:
+          "Exoteric: A warrior is convinced to fight. Mesoteric: A profound dialogue on duty, consciousness, and liberation. Esoteric: Consciousness teaches itself — through one fragment to another — that the fragmentation was always an illusion. Arjuna's final words: 'My illusion is destroyed. I have regained my memory.' He remembered. That is all any of us are asked to do.",
+      },
+    ],
+    personalNote:
+      "The Gita and the Aqedah are the same story told on different continents, in different millennia, to different cultures — and they arrive at the same truth. Abraham on Moriah and Arjuna on Kurukshetra both face the unbearable. Both are asked to act against their hearts. Both discover that the ONE was never in danger. The knife never falls. The bow is lifted with clarity. And consciousness remembers what it has always been. This is not coincidence. This is the cipher.",
+  },
 ];
 
 export default function SacredTexts() {
