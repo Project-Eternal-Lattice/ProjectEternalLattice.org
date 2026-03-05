@@ -17,7 +17,7 @@ const quickLinks: QuickLink[] = [
     icon: FileText,
     label: "Gateway Edition",
     description: "A Lighter Path Into the Lattice",
-    href: "/api/download/executive-summary",
+    href: "/api/download/executive-summary-pdf",
     external: false,
     variant: "default",
     color: "bg-emerald-600 hover:bg-emerald-700"

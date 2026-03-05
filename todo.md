@@ -2581,3 +2581,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Version-lock Gateway Edition to always match full ToE version (now v16.4)
 - [x] Update all v16.3 references to v16.4 across website (Theory, Home, Read, WhatsNew, SynchronicityEngine, server endpoints)
 - [x] Update all tests to v16.4 (520/520 passing)
+
+## Gateway Edition PDF Generation (Mar 2026)
+- [x] Generate PDF from Gateway Edition v16.4 HTML (40 pages, 133KB)
+- [x] Upload Gateway Edition PDF to S3 CDN (verified accessible, 200 OK)
+- [x] Update server download endpoint to serve new Gateway Edition PDF
+- [x] Update Read page and QuickAccessFooter download links to PDF endpoint
+- [x] Test PDF download works correctly (520 tests passing, CDN verified)
+- [x] Save checkpoint
