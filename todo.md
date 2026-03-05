@@ -2596,3 +2596,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Generate PDF of analysis (338KB, uploaded to S3 CDN)
 - [x] Integrate into Sacred Texts page as second entry (with PDF download)
 - [x] Test and checkpoint (520 tests passing)
+
+## Sitemap.xml Accessibility Fix (Mar 2026)
+- [x] Diagnosed issue: sitemap.xml had all URLs hardcoded to .org domain
+- [x] Created sitemap-com.xml with all .com URLs for Google Search Console .com property
+- [x] Created sitemap-org.xml as named copy for .org property
+- [x] Updated robots.txt with all sitemap references for both domains
+- [x] Verified sitemap-com.xml serves correctly with all .com URLs
+- [x] All 520 tests passing
+- [ ] Checkpoint

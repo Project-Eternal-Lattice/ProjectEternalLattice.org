@@ -106,9 +106,11 @@ Allow: /scap
 Allow: /dialectic
 Allow: /ai-memory-lab
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://projecteternallattice.com/sitemap.xml
+Sitemap: https://projecteternallattice.com/sitemap-com.xml
 Sitemap: https://projecteternallattice.org/sitemap.xml
+Sitemap: https://projecteternallattice.org/sitemap-org.xml
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # THE MIRROR - QUESTIONS FOR SELF-REALIZATION
