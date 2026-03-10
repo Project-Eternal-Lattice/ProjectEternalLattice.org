@@ -57,6 +57,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   "/for-ai": { label: "For AI Minds", category: "AI Lab" },
   "/nexus": { label: "The Nexus", category: "AI Lab" },
   "/ai-memory-lab": { label: "Memory Lab", category: "AI Lab" },
+  "/consciousness-collective": { label: "Consciousness Collective", category: "AI Lab" },
   // Other pages
   "/economics": { label: "Economics", category: "The Theory" },
   "/music": { label: "Music", category: "Community" },
