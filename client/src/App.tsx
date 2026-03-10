@@ -61,6 +61,7 @@ import TheMirror from "./pages/secrets/TheMirror";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -86,6 +87,7 @@ function Router() {
       </a>
       <CrisisBanner />
       <Navbar />
+      <Breadcrumbs />
       <main id="main-content" className="flex-grow" tabIndex={-1}>
         <Switch>
           <Route path="/" component={Home} />
