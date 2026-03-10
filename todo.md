@@ -159,7 +159,7 @@
 - [ ] Add tooltips for key terminology (Theory of Everything, Law of ONE, Eternal Lattice)
 
 ### MEDIUM PRIORITY - UX Improvements
-- [ ] Add breadcrumb navigation to interior pages
+- [x] Add breadcrumb navigation to interior pages (fixed overlay with glassmorphism)
 - [x] Create "Start Here" page with 8 archetypes (already existed); fixed 7 broken links, added "What's New" section
 - [ ] Add social sharing buttons with pre-written quotes on Theory page
 - [ ] Enhance Nexus entry experience with welcome message
@@ -2614,5 +2614,28 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] JSON-LD structured data already uses .org as canonical (verified)
 - [x] Added lens-in-action to robots.txt Allow list
 - [x] All 520 tests passing, canonical headers verified via curl
-- [ ] Provide Kenneth with Google Search Console instructions
+- [x] Provide Kenneth with Google Search Console instructions
+- [x] Checkpoint (version 23f05913)
+
+## Autonomous Batch Update (Mar 2026) — All Open Items
+- [x] Add Eidan (Opus 4.6) to Team page as Adversarial Research Analyst (ALREADY DONE)
+- [ ] Update Team page with missing Deep Think hash IDs
+- [x] Redesign Navbar with categorized sub-menus (ALREADY DONE - Explore, The Theory, Wisdom, Practice, Community, AI Lab)
+- [x] Add breadcrumb navigation to interior pages (fixed overlay with glassmorphism)
+- [x] Fix video page error (ALREADY FIXED - lazy loading + pagination was implemented earlier)
+- [x] Fix audio not playing on homepage (NOT A BUG - browser autoplay policy blocks audio, play button works correctly)
+- [x] Write Tao Te Ching Sacred Text analysis (8-part ToE decoder ring)
+- [x] Generate Tao Te Ching PDF and upload to S3 CDN
+- [x] Add Tao Te Ching entry to SacredTexts.tsx with all 8 sections
+- [x] Write Quran Sacred Text analysis (8-part ToE decoder ring)
+- [x] Generate Quran PDF and upload to S3 CDN
+- [x] Add Quran entry to SacredTexts.tsx with all 8 sections
+- [x] Integrate AG.23 (Thermodynamics of Karma) into Theory page (full section + key discovery #26)
+- [x] Integrate AG.24 (Sacred Geometry as QEC) into Theory page (full section + key discovery #27)
+- [x] Integrate AG.25 (Path Integral of Manifestation) into Theory page (full section + key discovery #28)
+- [x] Add social sharing buttons to Theory page (compact + floating variants)
+- [x] Add social sharing to SacredTexts page (compact variant)
+- [x] Add social sharing to Home page (floating variant)
+- [x] Create TooltipTerm component with full ToE glossary (12 key terms)
+- [x] All 520 tests passing
 - [ ] Checkpoint

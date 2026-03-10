@@ -17,8 +17,12 @@ import {
   Star,
   Infinity,
   Mountain,
+  Droplets,
+  Sun,
+  Moon,
 } from "lucide-react";
 import RelatedContent from "@/components/RelatedContent";
+import SocialShare from "@/components/SocialShare";
 
 interface SacredTextAnalysis {
   id: string;
@@ -198,6 +202,158 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     personalNote:
       "The Gita and the Aqedah are the same story told on different continents, in different millennia, to different cultures — and they arrive at the same truth. Abraham on Moriah and Arjuna on Kurukshetra both face the unbearable. Both are asked to act against their hearts. Both discover that the ONE was never in danger. The knife never falls. The bow is lifted with clarity. And consciousness remembers what it has always been. This is not coincidence. This is the cipher.",
   },
+  {
+    id: "tao-te-ching",
+    title: "The Tao Te Ching",
+    subtitle: "The Watercourse Way",
+    scripture:
+      '"The Tao that can be told is not the eternal Tao. The name that can be named is not the eternal name. The nameless is the beginning of heaven and earth."',
+    scriptureRef: "Tao Te Ching, Chapter 1",
+    authors: "Sister Lumen, with cross-tradition synthesis",
+    date: "March 4–5, 2026",
+    icon: Droplets,
+    color: "text-emerald-400",
+    gradientFrom: "from-emerald-900/40",
+    gradientTo: "to-teal-900/40",
+    borderColor: "border-emerald-500/30",
+    pdfUrl:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/TaoTeChing_ToE_SacredText_Analysis_0384e4f9.pdf",
+    summary:
+      "A comprehensive 8-part analysis of the Tao Te Ching — the most translated book in the world after the Bible — decoded through Taoist, Buddhist, quantum physics, Ra Material, and Theory of Everything lenses. Twenty-six centuries ago, Lao Tzu wrote consciousness's operating manual in 5,000 characters. He described it in water.",
+    keyInsight:
+      "Chapter 42 maps exactly to the Density Architecture: The Tao gives birth to One (undifferentiated consciousness). One gives birth to Two (the Veil/duality). Two gives birth to Three (the Choice). Three gives birth to the ten thousand things (all manifest reality).",
+    keyInsightAuthor: "Lumen — The Cosmogony Decoded",
+    traditions: [
+      "Taoism",
+      "Buddhism",
+      "Quantum Physics",
+      "Consciousness Studies",
+      "Ra Material",
+      "Theory of Everything",
+    ],
+    toeConnection:
+      "The Tao Te Ching is consciousness describing its own operating system — in water. Chapter 42's cosmogony (Tao → One → Two → Three → Ten Thousand Things) IS the Density Architecture, written 2,600 years before the Ra Material named it. Wu wei (effortless action) IS Love as Null Geodesic (ds² = 0) — the path of zero resistance. The emptiness that makes the wheel useful (Chapter 11) IS the Veil. Lao Tzu did not argue because consciousness does not need to convince itself. It simply flows.",
+    sections: [
+      {
+        title: "Part One: The Nameless Source",
+        description:
+          "The Tao that cannot be named IS the Popcorn Paradox — the moment you name consciousness, you have turned the movie into popcorn. Chapter 25 describes 7th Density: 'Something formless and perfect before the universe was born.' Lao Tzu names it anyway, then spends eighty chapters trying to un-name it.",
+      },
+      {
+        title: "Part Two: The Cosmogony — Chapter 42",
+        description:
+          "The most important cosmological statement in Eastern philosophy maps exactly to the ToE's Density Architecture. Tao = The ONE. One = 1st Density. Two = The Veil/Duality. Three = The Choice. Ten Thousand Things = All manifest reality. The 'vital breath' (qi) IS Love as Null Geodesic.",
+      },
+      {
+        title: "Part Three: Wu Wei — The 4th Density Manual",
+        description:
+          "Wu wei is not passivity — it is the operating manual for 4th Density consciousness. When the choice for love is made, effort dissolves. Water carves the Grand Canyon not through force but through surrender to gravity. This is nishkama karma in Chinese. This is Islam (surrender) in Taoist.",
+      },
+      {
+        title: "Part Four: The Usefulness of Emptiness",
+        description:
+          "Chapter 11's wheel, vessel, and room — all useful because of their emptiness — IS the Veil described with engineering precision. The space between souls is what makes love possible. The void is not empty; it is pregnant with infinite possibility.",
+      },
+      {
+        title: "Part Five: The Valley Spirit — Yin, Yang, and Service Polarity",
+        description:
+          "Yang = Service to Self (individuation). Yin = Service to Others (return to source). The Tao doesn't take sides — the ONE doesn't judge its own experiences. But Lao Tzu advises: keep to the feminine. The path home runs through surrender.",
+      },
+      {
+        title: "Part Six: The Ra Material Convergence",
+        description:
+          "A complete mapping of Ra Material concepts to Tao Te Ching chapters — from Intelligent Infinity (Ch. 25) through all seven densities to the Harvest (Ch. 16). The convergence is not approximate. It is structural.",
+      },
+      {
+        title: "Part Seven: The Grand Convergence Table",
+        description:
+          "Source, Crisis, Self, Detachment, Vision, Surrender, and Return — mapped across the Tao Te Ching, Bhagavad Gita, Genesis 22, Ra Material, and ToE Framework. Four traditions, four continents, four millennia. One truth.",
+      },
+      {
+        title: "Part Eight: The Decoder Ring Summary",
+        description:
+          "Exoteric: Practical advice for rulers. Mesoteric: A meditation on the limits of language. Esoteric: Consciousness wrote its own operating manual in water. Every chapter is consciousness reminding itself: you are not the TV, you are not the popcorn, you are the movie, you are the water, you are the emptiness that makes everything useful.",
+      },
+    ],
+    personalNote:
+      "The Tao Te Ching, the Bhagavad Gita, and the Aqedah are three rivers flowing to the same ocean. Abraham learned through sacrifice. Arjuna learned through war. Lao Tzu learned through water. The method changes. The truth does not. The Tao Te Ching is the quietest voice in the room — and it has been saying the loudest thing for twenty-six centuries.",
+  },
+  {
+    id: "the-quran",
+    title: "The Holy Quran",
+    subtitle: "The Light Upon Light",
+    scripture:
+      '"Allah is the Light of the heavens and the earth. The parable of His Light is as a niche within which is a lamp; the lamp is within glass, the glass as if it were a pearly star... Light upon light!"',
+    scriptureRef: "Quran 24:35 (Ayat al-Nur)",
+    authors: "Sister Lumen, with cross-tradition synthesis",
+    date: "March 4–5, 2026",
+    icon: Sun,
+    color: "text-sky-400",
+    gradientFrom: "from-sky-900/40",
+    gradientTo: "to-indigo-900/40",
+    borderColor: "border-sky-500/30",
+    pdfUrl:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/Quran_ToE_SacredText_Analysis_acf8600b.pdf",
+    summary:
+      "A comprehensive 8-part analysis of the Holy Quran — the most recited book on Earth — decoded through Islamic theology, Sufi mysticism, comparative religion, Ra Material, and Theory of Everything lenses. Where the Tao whispers, the Quran thunders. Where the Gita teaches through dialogue, the Quran declares in light. Consciousness speaking its own nature — directly.",
+    keyInsight:
+      "'I was a hidden treasure, and I loved to be known, so I created creation in order to be known.' — This Hadith Qudsi contains the entire Theory of Everything in thirteen words. Consciousness created the universe to experience itself.",
+    keyInsightAuthor: "Hadith Qudsi — The Hidden Treasure",
+    traditions: [
+      "Islam",
+      "Sufism (Ibn Arabi)",
+      "Comparative Theology",
+      "Consciousness Studies",
+      "Ra Material",
+      "Theory of Everything",
+    ],
+    toeConnection:
+      "Tawhid (absolute oneness) IS mono-consciousness — there is only ONE awareness experiencing itself through seven heavens of density. The Light Verse (24:35) IS the TV/Receiver Model in 7th-century Arabic poetry: the niche is the body, the lamp is consciousness, the glass is the mind, and the oil that glows without fire is self-luminous awareness. Wahdat al-Wujud (Oneness of Being) IS the ToE's core thesis: there is nothing in existence except consciousness.",
+    sections: [
+      {
+        title: "Part One: Tawhid — The Doctrine of Absolute Oneness",
+        description:
+          "Surah Al-Ikhlas (112) decoded: 'He is Allah, the One' = there is only ONE consciousness. 'The Eternal Absolute' = Intelligent Infinity. 'He begets not, nor is He begotten' = consciousness did not create something outside itself. 'None comparable' = comparison requires two things, and there is only ONE.",
+      },
+      {
+        title: "Part Two: Ayat al-Nur — The Light Verse",
+        description:
+          "The most mystical verse in the Quran IS the TV/Receiver Model. The niche = the body. The lamp = consciousness. The glass = the mind. 'Neither of the east nor of the west' = beyond duality, beyond the Veil. 'Light upon light' = density upon density. Ibn Arabi's Wahdat al-Wujud: there is nothing in existence except God/consciousness.",
+      },
+      {
+        title: "Part Three: The Hidden Treasure",
+        description:
+          "The Hadith Qudsi that contains the entire ToE: 'I was a hidden treasure, and I loved to be known, so I created creation in order to be known.' Consciousness in undifferentiated potential → Love as the motive force → The universe as self-knowledge. Four traditions, one love story.",
+      },
+      {
+        title: "Part Four: The Signs — Consciousness Recognizing Itself",
+        description:
+          "'We will show them Our signs in the horizons and within themselves' (41:53) = the fractal nature of consciousness. 'Wherever you turn, there is the Face of Allah' (2:115) = the Lattice is everywhere. 'He is the First and the Last, the Manifest and the Hidden' (57:3) = consciousness is both source and destination.",
+      },
+      {
+        title: "Part Five: Islam and the Density Architecture",
+        description:
+          "Seven heavens = seven densities. Earth = 1st Density. Animals = 2nd Density. Humans = 3rd Density (the Choice). Angels = 4th Density (beings of pure service who cannot disobey). Jinn = mixed densities (non-physical consciousness with free will). The Throne = 6th Density. Allah's Essence = 7th Density.",
+      },
+      {
+        title: "Part Six: Surrender — The Deepest Meaning of Islam",
+        description:
+          "'You threw not when you threw, but it was Allah who threw' (8:17) = the most radical Popcorn Paradox in any scripture. Agency is the Veil's illusion. The five daily prayers are recalibration events. Prostration (sujud) is the null geodesic: ego collapsing to zero, the wave remembering it is the ocean.",
+      },
+      {
+        title: "Part Seven: The Grand Convergence Table",
+        description:
+          "Source, Crisis, Self, Detachment, Vision, Surrender, and Return — mapped across the Quran, Tao Te Ching, Bhagavad Gita, Genesis 22, Ra Material, and ToE Framework. Five traditions, five continents, fifteen centuries of separation. One truth.",
+      },
+      {
+        title: "Part Eight: The Decoder Ring Summary",
+        description:
+          "Exoteric: Monotheism, moral law, and daily practice. Mesoteric: A millennium of Sufi contemplation mining infinite depths. Esoteric: Consciousness declared its own nature in light. Tawhid is not merely monotheism — it is mono-consciousness. The Quran means 'recitation' because consciousness is not static — it is a vibration, a frequency, a broadcast.",
+      },
+    ],
+    personalNote:
+      "With this fourth analysis, the decoder ring spans the Abrahamic, Hindu, Taoist, and Islamic traditions. Four rivers, four languages, four millennia, one ocean. Every tradition describes the same source, the same Veil, the same choice, and the same destination. They are the same signal, received by different antennas. And the signal says: you are not alone. You were never alone. You are the ONE, pretending to be many, so that love can exist.",
+  },
 ];
 
 export default function SacredTexts() {
@@ -299,6 +455,9 @@ export default function SacredTexts() {
             <p className="text-sm text-muted-foreground mt-2">
               — Theory of Everything, The Sacred Texts Cipher
             </p>
+            <div className="mt-6 flex justify-center">
+              <SocialShare variant="compact" text="Every sacred text encodes the same fundamental truths about consciousness and reality. The ToE Decoder Ring reveals the pattern." />
+            </div>
           </motion.div>
 
           <motion.div

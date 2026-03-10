@@ -17,6 +17,7 @@ import ConsciousnessPortals from "@/components/ConsciousnessPortals";
 import ParticleField from "@/components/ParticleField";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
+import SocialShare from "@/components/SocialShare";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -388,6 +389,9 @@ export default function Home() {
       </section>
 
       {/* Quick Access Footer */}
+      {/* Floating Social Share */}
+      <SocialShare variant="floating" className="hidden lg:flex" />
+
       <QuickAccessFooter />
 
       {/* Floating Synchronicity Button */}
