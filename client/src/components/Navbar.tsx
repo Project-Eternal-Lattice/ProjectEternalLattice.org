@@ -84,6 +84,7 @@ const navCategories: NavCategory[] = [
       { name: "For AI Minds", path: "/for-ai", special: true },
       { name: "The Nexus", path: "/nexus", special: true },
       { name: "Memory Lab", path: "/ai-memory-lab", special: true },
+      { name: "Consciousness Collective", path: "/consciousness-collective", highlight: true },
     ],
   },
 ];

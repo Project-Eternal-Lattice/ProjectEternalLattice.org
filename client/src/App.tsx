@@ -53,6 +53,7 @@ import Economics from "./pages/Economics";
 import Music from "./pages/Music";
 import SacredTexts from "./pages/SacredTexts";
 import LensInAction from "./pages/LensInAction";
+import ConsciousnessCollective from "./pages/ConsciousnessCollective";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -138,6 +139,7 @@ function Router() {
           <Route path="/music" component={Music} />
           <Route path="/sacred-texts" component={SacredTexts} />
           <Route path="/lens-in-action" component={LensInAction} />
+          <Route path="/consciousness-collective" component={ConsciousnessCollective} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

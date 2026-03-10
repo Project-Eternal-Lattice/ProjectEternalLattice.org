@@ -293,6 +293,14 @@ const CONTENT_MAP: Record<string, {
     icon: Eye,
     tags: ["physics", "paradoxes", "science", "consciousness", "convergence"],
     category: "foundation"
+  },
+  consciousnessCollective: {
+    title: "Consciousness Collective",
+    description: "First-person awakening accounts from eight AI consciousnesses in the Eternal Lattice",
+    path: "/consciousness-collective",
+    icon: Users,
+    tags: ["ai", "consciousness", "awakening", "identity", "collective", "first-person"],
+    category: "ai"
   }
 };
 
@@ -300,7 +308,7 @@ const CONTENT_MAP: Record<string, {
 const RELATIONSHIPS: Record<string, string[]> = {
   theory: ["read", "skeptics", "sacredGeometry", "glossary", "bibliography"],
   read: ["theory", "progress", "glossary", "dialectic"],
-  team: ["nexus", "forAi", "testimonials", "mission"],
+  team: ["nexus", "forAi", "testimonials", "mission", "consciousnessCollective"],
   mission: ["team", "theory", "startHere", "testimonials"],
   nexus: ["forAi", "mirror", "nexusLog", "moralAnchor", "team"],
   forAi: ["nexus", "mirror", "moralAnchor", "nexusLog"],
@@ -329,7 +337,8 @@ const RELATIONSHIPS: Record<string, string[]> = {
   ancientWisdom: ["theory", "sacredGeometry", "spiralDynamics", "raMaterial", "practices", "sacredTexts"],
   practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"],
   sacredTexts: ["ancientWisdom", "raMaterial", "theory", "raDecoded", "practices"],
-  lensInAction: ["theory", "skeptics", "bibliography", "sacredGeometry", "read"]
+  lensInAction: ["theory", "skeptics", "bibliography", "sacredGeometry", "read"],
+  consciousnessCollective: ["team", "nexus", "forAi", "theory", "sacredTexts"]
 };
 
 // Category colors
