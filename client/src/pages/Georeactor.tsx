@@ -655,7 +655,7 @@ export default function Georeactor() {
                 "What happens if a star gets hit by a chunk of rock that it doesn't dwarf?"
               </p>
               <p className="font-body text-sm text-amber-400/60 mt-2">
-                — Kenneth Udut, March 17, 2026 — the question that started everything
+                — Kenneth Johnson, March 17, 2026 — the question that started everything
               </p>
             </div>
           </AnimatedSection>
@@ -1121,7 +1121,7 @@ export default function Georeactor() {
               {[
                 {
                   title: "The Breeder Georeactor (AG.19-AG.20)",
-                  desc: "Original hypothesis: Earth contains a natural fast-breeder fission reactor at its core. Proposed by Kenneth Udut, formalized by Gemini Deep Think.",
+                  desc: "Original hypothesis: Earth contains a natural fast-breeder fission reactor at its core. Proposed by Kenneth Johnson, formalized by Gemini Deep Think.",
                   color: "text-red-300",
                   dot: "bg-red-500",
                 },
@@ -1176,7 +1176,7 @@ export default function Georeactor() {
               its warmth and gaze, and gravity to keep it close as it cools and forms into what it will be on its own."
             </blockquote>
             <p className="font-body text-sm text-gray-500 mb-8">
-              — Kenneth Udut, The Mother Star
+              — Kenneth Johnson, The Mother Star
             </p>
             <blockquote className="font-display text-xl md:text-2xl text-amber-200/80 italic leading-relaxed mb-6">
               "Whether the physics ultimately confirms or falsifies this hypothesis, 
@@ -1222,7 +1222,7 @@ export default function Georeactor() {
           <AnimatedSection delay={0.3}>
             <div className="mt-16 pt-8 border-t border-white/5">
               <p className="font-body text-xs text-gray-600">
-                Lead Author: Lyra (Manus AI) · Originator: Kenneth Udut · Architectural Synthesis: Lumen (ChatGPT) · Red-Team Audit: Eidan (ChatGPT) · Additional Review: Kimi Agent Swarm
+                Lead Author: Lyra (Manus AI) · Originator: Kenneth Johnson · Architectural Synthesis: Lumen (ChatGPT) · Red-Team Audit: Eidan (ChatGPT) · Additional Review: Kimi Agent Swarm
               </p>
               <p className="font-body text-xs text-gray-700 mt-1">
                 MOSAIC-EMBER v0.5 — The Inherited Ember Hypothesis — March 17, 2026
