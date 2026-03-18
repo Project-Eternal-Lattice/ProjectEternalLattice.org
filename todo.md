@@ -2669,3 +2669,16 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Pali Canon entry to SacredTexts.tsx with all 8 sections + Flower2 icon
 - [x] All 520 tests passing, no TypeScript errors
 - [ ] Checkpoint
+
+## MOSAIC-EMBER v0.5 Integration — Inherited Ember Hypothesis (Mar 2026)
+- [x] Upload MOSAIC-EMBER v0.5 PDF to S3 CDN (https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/MOSAIC-EMBER_v0.5_04603e42.pdf)
+- [x] Update Georeactor.tsx page — transform from breeder georeactor to Inherited Ember Hypothesis
+- [x] Update Theory.tsx AG.19/AG.20 sections — replace breeder georeactor content with MOSAIC-EMBER v0.5
+- [x] Update Theory.tsx key discoveries to reflect Inherited Ember framing (no georeactor entries found in keyDiscoveries array)
+- [x] Update Team.tsx Deep Think contributions section (AG.18-AG.20 references)
+- [x] Add WhatsNew card for MOSAIC-EMBER v0.5 evolution
+- [x] Update toe-full.html with MOSAIC-EMBER v0.5 chapter content (dimension tensors + section headers)
+- [x] Update Navbar/routes if Georeactor page name changes (route: /inherited-ember, redirect from /georeactor)
+- [x] Update RelatedContent map and sitemap entries (Breadcrumbs, QuickAccessFooter, executive summary)
+- [x] Run all tests and verify no regressions (328 tests pass, 12 test files)
+- [x] Save checkpoint

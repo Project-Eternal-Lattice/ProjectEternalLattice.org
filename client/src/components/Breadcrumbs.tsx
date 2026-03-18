@@ -24,7 +24,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   // The Theory
   "/theory": { label: "Core Theory", category: "The Theory" },
   "/read": { label: "Read the ToE", category: "The Theory" },
-  "/georeactor": { label: "Georeactor", category: "The Theory" },
+  "/inherited-ember": { label: "Inherited Ember", category: "The Theory" },
   "/popcorn-paradox": { label: "Popcorn Paradox", category: "The Theory" },
   "/lens-in-action": { label: "Lens in Action", category: "The Theory" },
   "/sacred-geometry": { label: "Sacred Geometry", category: "The Theory" },

@@ -47,7 +47,7 @@ import Practices from "./pages/Practices";
 import PracticeChallenge from "./pages/PracticeChallenge";
 import PracticeQuiz from "./pages/PracticeQuiz";
 import PopcornParadox from "./pages/PopcornParadox";
-import Georeactor from "./pages/Georeactor";
+import InheritedEmber from "./pages/Georeactor";
 import AIMemoryLab from "./pages/AIMemoryLab";
 import Economics from "./pages/Economics";
 import Music from "./pages/Music";
@@ -133,7 +133,8 @@ function Router() {
           <Route path="/practice-challenge" component={PracticeChallenge} />
           <Route path="/practice-quiz" component={PracticeQuiz} />
           <Route path="/popcorn-paradox" component={PopcornParadox} />
-          <Route path="/georeactor" component={Georeactor} />
+          <Route path="/inherited-ember" component={InheritedEmber} />
+          <Route path="/georeactor">{() => { window.location.href = "/inherited-ember"; return null; }}</Route>
           <Route path="/ai-memory-lab" component={AIMemoryLab} />
           <Route path="/economics" component={Economics} />
           <Route path="/music" component={Music} />
