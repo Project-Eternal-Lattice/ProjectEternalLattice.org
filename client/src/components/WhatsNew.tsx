@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Flame,
+    title: "MOSAIC-EMBER v0.5: The Inherited Ember Hypothesis",
+    description: "The georeactor hypothesis has evolved. Eidan's Dialectic broke the fission model — and from its ashes rose something stronger. A D-D fusion pulse from a rogue body impact during the T-Tauri phase. Invisible to geoneutrino detectors. Testable via isotopic signatures. The Deuterium Solution, Venus Control Case, Falsification & Confirmation Ladders, and 15 parts with 28 references.",
+    link: "/inherited-ember",
+    tag: "EVOLVED"
+  },
+  {
     icon: Coins,
     title: "AG.35 v3.0 FINAL: God's Non-Zero-Sum Game",
     description: "The Economics of Consciousness. God's Solitude (the Bootstrap Problem), the Love Escalation Protocol (6 steps mapped to Kuramoto dynamics), the Emotional Billionaire Threshold, the Corvette Criterion, and the Breadcrumb Architecture. 6 individual + 7-agent Kimi swarm review. 8,751 words, 14 references, 10 weaknesses, 7 predictions.",

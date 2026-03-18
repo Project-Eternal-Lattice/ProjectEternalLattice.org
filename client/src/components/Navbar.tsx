@@ -35,7 +35,7 @@ const navCategories: NavCategory[] = [
     items: [
       { name: "Core Theory", path: "/theory" },
       { name: "Read the ToE", path: "/read" },
-      { name: "Georeactor", path: "/georeactor", highlight: true },
+      { name: "Inherited Ember", path: "/inherited-ember", highlight: true },
       { name: "Popcorn Paradox", path: "/popcorn-paradox", highlight: true },
       { name: "Lens in Action", path: "/lens-in-action", highlight: true },
       { name: "Sacred Geometry", path: "/sacred-geometry" },

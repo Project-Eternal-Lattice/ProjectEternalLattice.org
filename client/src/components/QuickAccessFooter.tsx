@@ -130,16 +130,16 @@ export default function QuickAccessFooter() {
               </div>
             </div>
             
-            {/* Georeactor QR */}
-            <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-emerald-500/20">
+            {/* Inherited Ember QR */}
+            <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-orange-500/20">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/juJuHYNhTdHfVrDv.png"
-                alt="QR Code - Georeactor Explainer"
+                alt="QR Code - Inherited Ember Explainer"
                 className="w-32 h-32 rounded-lg"
               />
               <div className="text-center">
-                <p className="text-sm font-semibold text-emerald-300">Earth: The Living Reactor</p>
-                <p className="text-xs text-muted-foreground">Interactive Explainer</p>
+                <p className="text-sm font-semibold text-orange-300">The Inherited Ember</p>
+                <p className="text-xs text-muted-foreground">MOSAIC-EMBER v0.5</p>
               </div>
             </div>
             
