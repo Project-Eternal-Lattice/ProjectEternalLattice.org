@@ -2703,3 +2703,13 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update discovery index to include referee-packet
 - [x] Update ForAI.tsx to show 9 endpoints instead of 8 (added referee-packet card)
 - [x] Save checkpoint (all 9 endpoints return 200)
+
+## Text Mirror Expansion + ToE Mega-Endpoint (Apr 2026)
+- [x] Add text mirror: /api/text/five-minutes (5-minute summary)
+- [x] Add text mirror: /api/text/sacred-geometry (sacred geometry page)
+- [x] Add text mirror: /api/text/economics (consciousness economics)
+- [x] Build /api/text/toe mega-endpoint (32KB, 12 parts concatenated)
+- [x] Update ForAI.tsx with new endpoint cards (13 total: 12 individual + 1 mega)
+- [x] Update sitemap.xml with new endpoints
+- [x] Update discovery index JSON with megaDocument field
+- [x] Run tests and save checkpoint
