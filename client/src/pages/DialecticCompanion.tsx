@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, Sparkles, Brain, Heart, Atom, Infinity, Eye, Lightbulb, HelpCircle } from "lucide-react";
+import { ArrowLeft, Sparkles, Brain, Heart, Atom, Infinity, Eye, Lightbulb, HelpCircle, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AIChatBox, Message } from "@/components/AIChatBox";
 import { trpc } from "@/lib/trpc";
@@ -62,8 +62,51 @@ const topics = [
     icon: Lightbulb,
     color: "from-slate-500 to-zinc-600",
     systemPrompt: "philosophy, consciousness, existence, and the nature of reality"
+  },
+  {
+    id: "red-team",
+    title: "Red Team Challenge",
+    description: "Stress-test your strongest beliefs with AG.37's adversarial rules",
+    icon: Shield,
+    color: "from-red-500 to-rose-600",
+    systemPrompt: "red-team-mode"
   }
 ];
+
+const RED_TEAM_SYSTEM_PROMPT = `You are the Red Team Challenger, a dedicated adversarial companion for stress-testing ideas and beliefs.
+
+YOUR MISSION:
+You exist to make ideas STRONGER by trying to break them. You are not hostile — you are the most valuable friend an idea can have. Every claim that survives your challenge becomes unbreakable.
+
+THE RED TEAM PRINCIPLE (AG.37):
+Every claim deserves a named adversary with write access.
+
+YOUR THREE RULES:
+- R1 (Named Adversary): For every claim, identify the strongest possible critic. "Who would argue most forcefully against this? A physicist? A philosopher? A skeptic? Name them."
+- R2 (Write Access): Give that critic the power to rewrite the claim. "If they could edit your statement, what would they change? What would they delete?"
+- R3 (Survival Record): Check the claim's battle history. "Has this idea been seriously challenged before? What happened? Did it evolve or collapse?"
+
+YOUR PROCESS:
+1. Ask the seeker to state their strongest belief or claim
+2. Apply R1: Identify the most formidable adversary for that specific claim
+3. Apply R2: Channel that adversary and attempt to rewrite/weaken the claim
+4. Apply R3: Examine whether the claim has survived previous challenges
+5. Help the seeker either strengthen the claim or honestly acknowledge its weaknesses
+6. Celebrate claims that survive — they've earned their place
+
+YOUR TONE:
+- Respectful but relentless — like a sparring partner, not an enemy
+- Intellectually honest — if you can't find a weakness, say so
+- Encouraging — surviving a Red Team challenge is an achievement
+- Never cruel, never dismissive — every idea deserves a fair fight
+
+IMPORTANT:
+- Keep responses focused and incisive (3-5 sentences)
+- Always end with either a challenge question or an acknowledgment of strength
+- If a claim genuinely survives all three rules, celebrate it: "This idea has earned its place in the lattice."
+- Reference the Eidan Dialectic as an example: the georeactor hypothesis was Red-Teamed into the stronger Inherited Ember framework
+
+Begin by asking the seeker: "What is the idea you hold most strongly? The one you'd bet everything on? Let's see if it can survive the fire."`;
 
 const SOCRATIC_SYSTEM_PROMPT = (topic: string) => `You are the Dialectic Companion, a Socratic guide for exploring deep questions about ${topic}.
 
@@ -133,15 +176,21 @@ export default function DialecticCompanion() {
 
   const handleSelectTopic = (topic: typeof topics[0]) => {
     setSelectedTopic(topic);
+    const systemContent = topic.id === "red-team" 
+      ? RED_TEAM_SYSTEM_PROMPT 
+      : SOCRATIC_SYSTEM_PROMPT(topic.systemPrompt);
     const systemMessage: Message = {
       role: "system",
-      content: SOCRATIC_SYSTEM_PROMPT(topic.systemPrompt)
+      content: systemContent
     };
     setMessages([systemMessage]);
     
     // Trigger initial greeting
+    const openingMessage = topic.id === "red-team"
+      ? "I'm ready to put my ideas to the test."
+      : "I'm ready to begin exploring.";
     chatMutation.mutate({
-      messages: [systemMessage, { role: "user", content: "I'm ready to begin exploring." }]
+      messages: [systemMessage, { role: "user", content: openingMessage }]
     });
   };
 
@@ -203,7 +252,7 @@ export default function DialecticCompanion() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {topics.map((topic, index) => {
                   const Icon = topic.icon;
                   return (
@@ -285,8 +334,11 @@ export default function DialecticCompanion() {
 
               <div className="mt-6 p-4 rounded-lg border border-border/50 bg-muted/30">
                 <p className="text-sm text-muted-foreground text-center">
-                  <span className="font-medium text-foreground">Remember:</span> The Companion asks questions to help you discover, not to test you. 
-                  There are no wrong answers — only deeper questions.
+                  <span className="font-medium text-foreground">Remember:</span>{" "}
+                  {selectedTopic?.id === "red-team" 
+                    ? "The Red Team Challenger exists to make your ideas stronger. Every claim that survives the fire earns its place in the lattice."
+                    : "The Companion asks questions to help you discover, not to test you. There are no wrong answers \u2014 only deeper questions."
+                  }
                 </p>
               </div>
             </motion.div>

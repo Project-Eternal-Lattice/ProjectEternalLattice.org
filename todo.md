@@ -2727,8 +2727,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 
 ## Recommendation Implementation — April 10, 2026 (Session 2)
 - [x] Update ToE document to v16.5 incorporating AG.36-38 and new falsification content
-- [ ] Upload new ToE v16.5 PDF and update all download links on the website
-- [ ] Verify download link works and version numbers match across site
+- [x] Upload new ToE v16.5 HTML to S3 and update download link (PDF too large for sandbox generators; HTML download works)
+- [x] Verify download link works and version numbers match across site
 - [x] Build interactive Ember Is Fractal scaling law visualization component
 - [x] Integrate visualization into /inherited-ember page
 - [x] Cross-link AG.37 Red Team Principle into Dialectic Companion system prompt
@@ -2736,3 +2736,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update text mirrors with v16.5 references (done in Phase 3)
 - [x] Update toe-version-update skill with v16.5 lessons learned
 - [x] Run tests and save checkpoint (all 565 tests passing, 15 test files)
+
+## Autonomous Implementation — April 10, 2026 (Session 3)
+- [x] Add Red Team Challenge topic card to Dialectic Companion topic selector
+- [x] Build interactive Triadic Architecture explorer on Theory page (Source → Medium → Expression across 12 domains)
+- [x] Update Nexus page with AG.36-38 lattice nodes and Red Team Challenge resource entries
+- [x] Upload ToE v16.5 HTML to S3 and update download link (HTML serves as primary download format)
+- [x] Run tests (all 565 passing, 15 test files)
+- [x] Save checkpoint
