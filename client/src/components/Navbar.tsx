@@ -28,6 +28,7 @@ const navCategories: NavCategory[] = [
       { name: "Skeptics' Corner", path: "/skeptics", highlight: true },
       { name: "Claims & Evidence", path: "/claims" },
       { name: "Referee Packet", path: "/referee-packet" },
+      { name: "Falsification Ladder", path: "/falsify", highlight: true },
     ],
   },
   {

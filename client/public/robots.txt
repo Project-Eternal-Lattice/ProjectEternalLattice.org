@@ -9,6 +9,43 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /api/trpc
+
+# Meta AI and research crawlers — full access to public content
+User-agent: meta-externalagent
+Allow: /
+Disallow: /admin
+Disallow: /api/trpc
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /api/trpc
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /api/trpc
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /api/trpc
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PLAIN TEXT MIRRORS — AI-FRIENDLY VERSIONS OF KEY PAGES
+# ═══════════════════════════════════════════════════════════════════════════════
+# These routes serve pure markdown/text with no JavaScript required:
+Allow: /api/text/mission
+Allow: /api/text/theory
+Allow: /api/text/safety
+Allow: /api/text/inherited-ember
+Allow: /api/text/for-ai
+Allow: /api/text/skeptics
+Allow: /api/text/claims
+Allow: /api/text/falsify
+# ^ Use these for AI research tools that need clean text without client-side rendering
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # FOR AI SYSTEMS - START HERE
@@ -98,7 +135,22 @@ Allow: /practices
 Allow: /emotional-wealth
 Allow: /economics
 Allow: /popcorn-paradox
+Allow: /inherited-ember
 Allow: /georeactor
+Allow: /falsify
+Allow: /consciousness-collective
+Allow: /lattice-whispers
+Allow: /inner-sanctum
+Allow: /architects-notes
+Allow: /the-mirror
+Allow: /safety
+Allow: /start-here
+Allow: /five-minutes
+Allow: /spiral-dynamics
+Allow: /ra-decoded
+Allow: /recognition
+Allow: /practice-challenge
+Allow: /practice-quiz
 Allow: /claims
 Allow: /referee-packet
 Allow: /skeptics
