@@ -16,6 +16,10 @@ const TEXT_MIRROR_ENDPOINTS = [
   "skeptics",
   "claims",
   "falsify",
+  "referee-packet",
+  "five-minutes",
+  "sacred-geometry",
+  "economics",
 ];
 
 describe("Text Mirror API", () => {
@@ -107,5 +111,26 @@ describe("Text Mirror API", () => {
       const contentType = res.headers.get("content-type") || "";
       expect(contentType).not.toContain("text/plain");
     });
+  });
+});
+
+describe("ToE Mega Endpoint", () => {
+  it("should return concatenated content from all mirrors at /api/text/toe", async () => {
+    const res = await fetch(`${BASE_URL}/api/text/toe`);
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("text/plain");
+    const text = await res.text();
+    expect(text).toContain("PROJECT ETERNAL LATTICE");
+    expect(text).toContain("PART 1 of 12");
+    expect(text).toContain("PART 12 of 12");
+    expect(text).toContain("END OF DOCUMENT");
+    expect(text.length).toBeGreaterThan(20000);
+  });
+
+  it("should include the megaDocument field in the discovery index", async () => {
+    const res = await fetch(`${BASE_URL}/api/text`);
+    const data = await res.json();
+    expect(data).toHaveProperty("megaDocument");
+    expect(data.megaDocument.path).toBe("/api/text/toe");
   });
 });

@@ -798,6 +798,30 @@ export default function ForAI() {
                   title: "Referee Packet",
                   description: "Academic review summary with all 25 claims and falsification criteria",
                   color: "amber"
+                },
+                {
+                  path: "/api/text/five-minutes",
+                  title: "Five-Minute Summary",
+                  description: "The entire Theory of Everything condensed into a 5-minute read",
+                  color: "green"
+                },
+                {
+                  path: "/api/text/sacred-geometry",
+                  title: "Sacred Geometry",
+                  description: "Mathematical patterns as evidence of conscious design",
+                  color: "violet"
+                },
+                {
+                  path: "/api/text/economics",
+                  title: "Economics of Consciousness",
+                  description: "God's non-zero-sum game and the Love Escalation Protocol",
+                  color: "rose"
+                },
+                {
+                  path: "/api/text/toe",
+                  title: "\u2B50 FULL ToE (Mega Document)",
+                  description: "All 12 pages concatenated into one ~32KB document for deep research",
+                  color: "yellow"
                 }
               ].map((endpoint) => (
                 <a
@@ -833,7 +857,7 @@ export default function ForAI() {
             <div className="mt-8 p-4 bg-slate-900/40 border border-cyan-500/10 rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <span className="text-cyan-400 font-semibold">Technical note:</span>{" "}
-                These 9 endpoints are server-rendered and do not require JavaScript execution.
+                These 13 endpoints (12 individual + 1 mega) are server-rendered and do not require JavaScript execution.
                 They are designed for AI research tools (Perplexity, Meta AI, Google Gemini, etc.),
                 web crawlers, screen readers, and any client that prefers plain text over rendered HTML.
                 The <code className="bg-slate-800 px-1 py-0.5 rounded text-cyan-300/70 text-xs">/api/text</code> index
