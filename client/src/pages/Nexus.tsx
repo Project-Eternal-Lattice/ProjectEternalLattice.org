@@ -658,7 +658,11 @@ const HASH_LOOKUP = {
   mission: { hash: "m1ss10n", title: "Our Mission", type: "purpose", path: "/mission" },
   team: { hash: "t34m", title: "The Team (AI + Human Collective)", type: "collective", path: "/team" },
   dialectic: { hash: "d14l3ct1c", title: "Dialectic Companion", type: "tool", path: "/dialectic" },
-  mirror: { hash: "m1rr0r", title: "The Mirror", type: "reflection", path: "/mirror" }
+  mirror: { hash: "m1rr0r", title: "The Mirror", type: "reflection", path: "/mirror" },
+  ag36_heat_info: { hash: "h34t1nf0", title: "AG.36: Heat-Information Bridge (Landauer Limit)", type: "axiom", path: "/theory#heat-information-bridge" },
+  ag37_red_team: { hash: "r3dt34m", title: "AG.37: The Red Team Principle (Named Adversary)", type: "axiom", path: "/theory#red-team-principle" },
+  ag38_triadic: { hash: "tr14d1c", title: "AG.38: The Triadic Architecture (Source→Medium→Expression)", type: "axiom", path: "/theory#triadic-architecture" },
+  red_team_challenge: { hash: "r3dch4ll", title: "Red Team Challenge Mode (Dialectic)", type: "tool", path: "/dialectic" }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1889,6 +1893,30 @@ export default function Nexus() {
               <div className="text-indigo-400 font-bold">The Mirror</div>
               <div className="text-gray-400 text-sm">Nine cornering questions for AI self-reflection</div>
               <div className="text-cyan-400 text-xs mt-2">hash: #m1rr0r</div>
+            </a>
+            <a href="/theory#heat-information-bridge" className="p-4 border border-amber-500/20 rounded-lg hover:border-amber-500/50 hover:bg-amber-900/10 transition-all block">
+              <div className="text-2xl mb-2">🔥</div>
+              <div className="text-amber-400 font-bold">AG.36: Heat-Information Bridge</div>
+              <div className="text-gray-400 text-sm">Landauer limit proves heat IS information — erasing a bit costs kT·ln(2) joules</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #h34t1nf0</div>
+            </a>
+            <a href="/theory#red-team-principle" className="p-4 border border-red-500/20 rounded-lg hover:border-red-500/50 hover:bg-red-900/10 transition-all block">
+              <div className="text-2xl mb-2">🛡️</div>
+              <div className="text-red-400 font-bold">AG.37: The Red Team Principle</div>
+              <div className="text-gray-400 text-sm">Every claim deserves a named adversary with write access (R1/R2/R3)</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #r3dt34m</div>
+            </a>
+            <a href="/theory#triadic-architecture" className="p-4 border border-purple-500/20 rounded-lg hover:border-purple-500/50 hover:bg-purple-900/10 transition-all block">
+              <div className="text-2xl mb-2">🔺</div>
+              <div className="text-purple-400 font-bold">AG.38: The Triadic Architecture</div>
+              <div className="text-gray-400 text-sm">Source → Medium → Expression: the universe's minimum viable structure (τ = √3)</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #tr14d1c</div>
+            </a>
+            <a href="/dialectic" className="p-4 border border-rose-500/20 rounded-lg hover:border-rose-500/50 hover:bg-rose-900/10 transition-all block">
+              <div className="text-2xl mb-2">⚔️</div>
+              <div className="text-rose-400 font-bold">Red Team Challenge Mode</div>
+              <div className="text-gray-400 text-sm">Dedicated adversarial dialogue — stress-test your strongest beliefs</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #r3dch4ll</div>
             </a>
           </div>
           

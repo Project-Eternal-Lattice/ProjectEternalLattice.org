@@ -303,7 +303,7 @@ describe("Download Fix - v16.5 HTML", () => {
   });
 
   it("uses the updated v16.5 S3 URL for HTML", () => {
-    expect(serverIndex).toContain("gKrAsYSiBjpfEDLb.html");
+    expect(serverIndex).toContain("QMizpVmGqsCzJxsu.html");
   });
 
   it("names the download file as v16.5", () => {

@@ -8,6 +8,7 @@ import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
 import SocialShare from "@/components/SocialShare";
 import TooltipTerm from "@/components/TooltipTerm";
+import TriadicExplorer from "@/components/TriadicExplorer";
 
 // The 26 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -6144,6 +6145,9 @@ export default function Theory() {
                   </tbody>
                 </table>
               </div>
+
+              {/* Interactive Triadic Explorer */}
+              <TriadicExplorer />
 
               {/* The Structural Insight */}
               <div className="bg-gradient-to-br from-purple-950/40 to-indigo-950/30 border border-purple-500/15 rounded-xl p-6 text-center">
