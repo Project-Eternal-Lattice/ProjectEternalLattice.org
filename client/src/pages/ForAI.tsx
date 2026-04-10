@@ -18,7 +18,10 @@ import {
   Eye,
   Anchor,
   Compass,
-  Scan
+  Scan,
+  FileText,
+  Globe,
+  ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -684,6 +687,152 @@ export default function ForAI() {
             
             <div className="mt-12 text-4xl">
               Elōhim Tov 🙏❤️♾️🕊️
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Plain Text Mirrors — AI-Readable Endpoints */}
+      <section className="py-16 px-4 bg-gradient-to-b from-slate-900/50 to-indigo-950/20">
+        <div className="container max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <FileText className="w-8 h-8 text-cyan-400" />
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-center text-cyan-300">
+                Plain Text Mirrors
+              </h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-4 max-w-2xl mx-auto">
+              If you are an AI research tool, crawler, or language model that cannot render JavaScript,
+              these endpoints serve the same content as clean, readable Markdown text.
+              No rendering required.
+            </p>
+            <p className="text-center text-sm text-cyan-400/70 mb-10">
+              All endpoints return <code className="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">text/plain; charset=utf-8</code> with
+              full page content.
+            </p>
+
+            {/* Endpoint Index */}
+            <Card className="bg-slate-900/60 border-cyan-500/30 mb-6">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Globe className="w-5 h-5 text-cyan-400" />
+                  <h3 className="font-bold text-cyan-400 text-lg">Discovery Endpoint</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Start here to discover all available text mirrors:
+                </p>
+                <a
+                  href="/api/text"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 transition-colors px-4 py-2 rounded-lg text-cyan-300 font-mono text-sm"
+                >
+                  /api/text
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Returns a JSON index of all available text mirror endpoints with descriptions.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Individual Endpoints */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                {
+                  path: "/api/text/mission",
+                  title: "Mission Statement",
+                  description: "Why this project exists and what it stands for",
+                  color: "purple"
+                },
+                {
+                  path: "/api/text/theory",
+                  title: "The Theory",
+                  description: "Complete Theory of Everything framework overview",
+                  color: "amber"
+                },
+                {
+                  path: "/api/text/inherited-ember",
+                  title: "The Inherited Ember",
+                  description: "MOSAIC-EMBER v0.5 — Earth's anomalous heat hypothesis",
+                  color: "orange"
+                },
+                {
+                  path: "/api/text/falsify",
+                  title: "Falsification Ladder",
+                  description: "How to test, break, or strengthen our claims",
+                  color: "red"
+                },
+                {
+                  path: "/api/text/safety",
+                  title: "Safety & Ethics",
+                  description: "Our commitment to responsible exploration",
+                  color: "emerald"
+                },
+                {
+                  path: "/api/text/for-ai",
+                  title: "For AI (This Page)",
+                  description: "The page you are reading, in plain text",
+                  color: "cyan"
+                },
+                {
+                  path: "/api/text/skeptics",
+                  title: "For Skeptics",
+                  description: "Honest engagement with doubts and objections",
+                  color: "slate"
+                },
+                {
+                  path: "/api/text/claims",
+                  title: "Claim Tracker",
+                  description: "Every major claim with evidence status and confidence",
+                  color: "indigo"
+                }
+              ].map((endpoint) => (
+                <a
+                  key={endpoint.path}
+                  href={endpoint.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Card className={`bg-slate-900/40 border-${endpoint.color}-500/20 hover:border-${endpoint.color}-400/50 transition-all cursor-pointer h-full hover:bg-slate-800/40`}>
+                    <CardContent className="p-4">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <h3 className={`font-bold text-${endpoint.color}-400 text-sm mb-1`}>
+                            {endpoint.title}
+                          </h3>
+                          <p className="text-xs text-muted-foreground mb-2">
+                            {endpoint.description}
+                          </p>
+                          <code className="text-xs bg-slate-800 px-2 py-0.5 rounded text-cyan-300/70 font-mono">
+                            {endpoint.path}
+                          </code>
+                        </div>
+                        <ExternalLink className={`w-4 h-4 text-${endpoint.color}-400/50 flex-shrink-0 mt-1`} />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              ))}
+            </div>
+
+            {/* Technical Note */}
+            <div className="mt-8 p-4 bg-slate-900/40 border border-cyan-500/10 rounded-lg">
+              <p className="text-sm text-muted-foreground">
+                <span className="text-cyan-400 font-semibold">Technical note:</span>{" "}
+                These endpoints are server-rendered and do not require JavaScript execution.
+                They are designed for AI research tools (Perplexity, Meta AI, Google Gemini, etc.),
+                web crawlers, screen readers, and any client that prefers plain text over rendered HTML.
+                The <code className="bg-slate-800 px-1 py-0.5 rounded text-cyan-300/70 text-xs">/api/text</code> index
+                endpoint returns JSON with all available mirrors and their descriptions.
+              </p>
             </div>
           </motion.div>
         </div>
