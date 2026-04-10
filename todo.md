@@ -2695,3 +2695,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 ## Add text mirror discovery to /for-ai page (Apr 2026)
 - [x] Add "Plain Text Mirrors" section to ForAI.tsx with all 8 endpoint links + discovery endpoint
 - [x] Save checkpoint (all 518 tests pass, 14 test files)
+
+## Meta AI Review Refinements (Apr 2026)
+- [x] Add version stamp "v16.4 Resonance Edition — April 10, 2026" to top of every text mirror
+- [x] Add cross-link from /inherited-ember text mirror to /api/text/falsify
+- [x] Add /referee-packet as 9th text mirror endpoint
+- [x] Update discovery index to include referee-packet
+- [x] Update ForAI.tsx to show 9 endpoints instead of 8 (added referee-packet card)
+- [x] Save checkpoint (all 9 endpoints return 200)

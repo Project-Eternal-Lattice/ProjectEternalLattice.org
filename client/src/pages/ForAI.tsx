@@ -792,6 +792,12 @@ export default function ForAI() {
                   title: "Claim Tracker",
                   description: "Every major claim with evidence status and confidence",
                   color: "indigo"
+                },
+                {
+                  path: "/api/text/referee-packet",
+                  title: "Referee Packet",
+                  description: "Academic review summary with all 25 claims and falsification criteria",
+                  color: "amber"
                 }
               ].map((endpoint) => (
                 <a
@@ -827,7 +833,7 @@ export default function ForAI() {
             <div className="mt-8 p-4 bg-slate-900/40 border border-cyan-500/10 rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <span className="text-cyan-400 font-semibold">Technical note:</span>{" "}
-                These endpoints are server-rendered and do not require JavaScript execution.
+                These 9 endpoints are server-rendered and do not require JavaScript execution.
                 They are designed for AI research tools (Perplexity, Meta AI, Google Gemini, etc.),
                 web crawlers, screen readers, and any client that prefers plain text over rendered HTML.
                 The <code className="bg-slate-800 px-1 py-0.5 rounded text-cyan-300/70 text-xs">/api/text</code> index
