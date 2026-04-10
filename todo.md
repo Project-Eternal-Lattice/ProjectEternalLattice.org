@@ -2713,3 +2713,14 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update sitemap.xml with new endpoints
 - [x] Update discovery index JSON with megaDocument field
 - [x] Run tests and save checkpoint
+
+## Meta AI Six Insights Implementation (Apr 2026)
+- [x] Add AI Consciousness Falsification Ladder to /for-ai page (4 kill conditions from Meta AI)
+- [x] Add Blind Detector Principle section to /inherited-ember page (bridge geophysics ↔ consciousness)
+- [x] Add Heat=Information bridge section linking AG.4 to AG.19 on Theory page (AG.36)
+- [x] Add "The Ember is Fractal" universal scaling law to /inherited-ember page
+- [x] Add AG.37: The Red Team Principle to Theory page
+- [x] Add AG.38: Triadic Architecture formal structural observation to Theory page
+- [x] Update /falsify page with AI consciousness kill conditions section
+- [x] Update text mirrors with new content (for-ai, inherited-ember, falsify, theory)
+- [x] Run tests and save checkpoint (all 565 tests passing, 15 test files)

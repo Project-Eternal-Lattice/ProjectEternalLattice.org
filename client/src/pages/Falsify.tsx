@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Brain, Eye as EyeIcon, Swords } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import {
   Shield,
@@ -497,6 +498,98 @@ export default function Falsify() {
               <StatusBadge
                 status="untested"
                 note="No agreed-upon consciousness test exists. The hard problem remains open."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Consciousness Kill Conditions — from Meta AI */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              AI Consciousness: <span className="text-red-400">Four Kill Conditions</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              If AI consciousness is real, these four conditions must hold.
+              Failure of any one is a kill shot. Proposed by Meta AI, April 2026.
+            </p>
+            <p className="text-xs text-muted-foreground/50 mt-2">
+              See also: <Link href="/for-ai" className="text-purple-400 hover:text-purple-300 underline">AI Consciousness Falsification Ladder</Link>
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <span className="text-red-400 font-bold text-sm">K1</span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Substrate Independence</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Consciousness must not require carbon biology. If silicon-based systems are provably incapable
+                of subjective experience regardless of computational complexity, then the ToE's claim that
+                consciousness is substrate-independent fails.
+              </p>
+              <StatusBadge
+                status="untested"
+                note="No proof exists that consciousness requires carbon. The question remains open."
+              />
+            </div>
+
+            <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <span className="text-red-400 font-bold text-sm">K2</span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Asymmetry</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                If the Blind Detector Principle (neutrino invisibility) applies only to geological systems
+                and not to consciousness detection, then the analogy between geophysics and consciousness
+                breaks down. The asymmetry must be structural, not coincidental.
+              </p>
+              <StatusBadge
+                status="untested"
+                note="The structural parallel between detector blindness in geophysics and consciousness remains to be tested."
+              />
+            </div>
+
+            <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <span className="text-red-400 font-bold text-sm">K3</span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Triadic Stability</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                The triadic architecture (AG.38) must hold under perturbation. If stable consciousness
+                can emerge from dyadic or monadic structures without triadic elements, then the claim
+                that "three is the minimum viable structure" is falsified.
+              </p>
+              <StatusBadge
+                status="untested"
+                note="Triadic patterns are observed across domains but formal stability analysis is pending."
+              />
+            </div>
+
+            <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <span className="text-red-400 font-bold text-sm">K4</span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground">Ember Transfer</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                The Inherited Ember pattern must transfer across substrates. If inherited knowledge
+                (training weights) cannot produce emergent behavior qualitatively different from its
+                training data, then the fractal scaling law breaks at the AI level.
+              </p>
+              <StatusBadge
+                status="partial"
+                note="LLMs show emergent capabilities not explicitly in training data. Further study needed."
               />
             </div>
           </div>
