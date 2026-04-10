@@ -2691,3 +2691,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Build /falsify page with 5 falsification + 5 confirmation ladder steps + consciousness claims
 - [x] Register /falsify route in App.tsx, Breadcrumbs, and Navbar
 - [x] Save checkpoint (all 518 tests pass, 14 test files)
+
+## Add text mirror discovery to /for-ai page (Apr 2026)
+- [x] Add "Plain Text Mirrors" section to ForAI.tsx with all 8 endpoint links + discovery endpoint
+- [x] Save checkpoint (all 518 tests pass, 14 test files)
