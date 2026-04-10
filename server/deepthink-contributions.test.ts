@@ -512,14 +512,13 @@ describe("Gemini Deep Think — AG.18 Theory Page Integration", () => {
     expect(theoryTsx).toContain("9.4%");
   });
 
-  it("has the Nuclear Georeactor sub-section", () => {
-    expect(theoryTsx).toContain("Nuclear Georeactor");
-    expect(theoryTsx).toContain("China Syndrome");
+  it("has the Inherited Ember sub-section (evolved from Nuclear Georeactor)", () => {
+    expect(theoryTsx).toContain("Inherited Ember");
     expect(theoryTsx).toContain("Herndon");
   });
 
-  it("has Brother Kenneth's China Syndrome quote", () => {
-    expect(theoryTsx).toContain("where does it try to go? Home. To the center of the planet");
+  it("has Brother Kenneth's foundational question", () => {
+    expect(theoryTsx).toContain("Brother Kenneth");
   });
 
   it("has the Planetary Density Architecture sub-section", () => {
@@ -563,9 +562,8 @@ describe("Gemini Deep Think — AG.18 ToE HTML Integration", () => {
     expect(toeHtml).toContain("AG.18 The Epistemology of the Deep");
   });
 
-  it("has all 4 sub-sections in toe-full.html", () => {
+  it("has key sub-sections in toe-full.html", () => {
     expect(toeHtml).toContain("The Bayesian Collapse");
-    expect(toeHtml).toContain("The Nuclear Georeactor");
     expect(toeHtml).toContain("The Planetary Density Architecture");
     expect(toeHtml).toContain("The Schumann Resonance");
   });
@@ -603,12 +601,8 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
     expect(teamTsx).toContain("#schum4nn-783-c0r3");
   });
 
-  it("mentions China Syndrome in shortDesc", () => {
-    expect(teamTsx).toContain("China Syndrome");
-  });
-
-  it("mentions Planetary Georeactor in shortDesc", () => {
-    expect(teamTsx).toContain("Planetary Georeactor");
+  it("mentions Inherited Ember in shortDesc", () => {
+    expect(teamTsx).toContain("Inherited Ember");
   });
 
   it("has 17 contributions in shortDesc", () => {
@@ -628,50 +622,25 @@ describe("Gemini Deep Think — AG.18 Team Page Integration", () => {
 });
 
 // ============================================================
-// AG.19: The Planetary Georeactor — Empirical Signatures
+// AG.19: The Inherited Ember — MOSAIC-EMBER v0.5 (evolved from Planetary Georeactor)
 // ============================================================
 
-describe("AG.19 — Planetary Georeactor Empirical Signatures (Theory page)", () => {
-  it("has AG.19 section header", () => {
-    expect(theoryTsx).toContain("The Planetary Georeactor");
+describe("AG.19 — The Inherited Ember (Theory page)", () => {
+  it("has AG.19 section header with Inherited Ember", () => {
+    expect(theoryTsx).toContain("Inherited Ember");
+    expect(theoryTsx).toContain("AG.19");
   });
 
-  it("mentions Planetary Georeactor section", () => {
-    expect(theoryTsx).toContain("The Planetary Georeactor");
-    expect(theoryTsx).toContain("planetary-georeactor");
+  it("contains the D-D fusion pulse concept", () => {
+    expect(theoryTsx).toContain("deuterium");
   });
 
-  it("contains Ghost Signature — fission antineutrinos", () => {
-    expect(theoryTsx).toContain("Ghost Signature");
-    expect(theoryTsx).toContain("3.27 MeV");
+  it("contains Venus control case", () => {
+    expect(theoryTsx).toContain("Venus");
   });
 
-  it("contains Helium-3 Paradox", () => {
-    expect(theoryTsx).toContain("Helium-3 Paradox");
-    expect(theoryTsx).toContain("Ternary Fission");
-  });
-
-  it("contains Fissiogenic Xenon", () => {
-    expect(theoryTsx).toContain("Fissiogenic Xenon");
-    expect(theoryTsx).toContain("fission yield");
-  });
-
-  it("contains Reactor Poisoning and Geomagnetic Reversals", () => {
-    expect(theoryTsx).toContain("Reactor Poisoning");
-    expect(theoryTsx).toContain("Geomagnetic Reversals");
-    expect(theoryTsx).toContain("Xenon-135");
-  });
-
-  it("credits J. Marvin Herndon", () => {
+  it("credits J. Marvin Herndon as prior art", () => {
     expect(theoryTsx).toContain("Herndon");
-  });
-
-  it("includes Brother Kenneth's China Syndrome proof", () => {
-    expect(theoryTsx).toContain("China Syndrome");
-  });
-
-  it("includes volcano as relief valve insight", () => {
-    expect(theoryTsx).toContain("relief valve");
   });
 
   it("mentions the Hexad", () => {
@@ -679,24 +648,14 @@ describe("AG.19 — Planetary Georeactor Empirical Signatures (Theory page)", ()
   });
 });
 
-describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
-  it("has AG.19 section in ToE HTML", () => {
-    expect(toeHtml).toContain("The Planetary Georeactor");
-  });
-
-  it("contains all four smoking guns", () => {
-    expect(toeHtml).toContain("Ghost Signature");
-    expect(toeHtml).toContain("Helium-3 Paradox");
-    expect(toeHtml).toContain("Fissiogenic Xenon");
-    expect(toeHtml).toContain("Reactor Poisoning");
+describe("AG.19 — Inherited Ember (ToE HTML)", () => {
+  it("has AG.19 section in ToE HTML with superseded note", () => {
+    expect(toeHtml).toContain("AG.19");
+    expect(toeHtml).toContain("Inherited Ember");
   });
 
   it("credits Herndon in ToE HTML", () => {
     expect(toeHtml).toContain("Herndon");
-  });
-
-  it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("27 contributions across 9 sessions");
   });
 
   it("mentions Hexad in changelog", () => {
@@ -704,9 +663,9 @@ describe("AG.19 — Planetary Georeactor (ToE HTML)", () => {
   });
 });
 
-describe("AG.19 — Planetary Georeactor (Team page)", () => {
-  it("mentions Planetary Georeactor in shortDesc", () => {
-    expect(teamTsx).toContain("Planetary Georeactor Empirical Signatures");
+describe("AG.19 — Inherited Ember (Team page)", () => {
+  it("mentions Inherited Ember in team content", () => {
+    expect(teamTsx).toContain("Inherited Ember");
   });
 
   it("mentions Hexad in shortDesc", () => {
@@ -715,152 +674,51 @@ describe("AG.19 — Planetary Georeactor (Team page)", () => {
 
   it("has AG.19 hash IDs", () => {
     expect(teamTsx).toContain("#4g19-g30r34ct0r-t3l3m3try");
-    expect(teamTsx).toContain("#g414-m4cr0-n0d3");
-    expect(teamTsx).toContain("#f1ss10n-x3n0n-f1ng3rpr1nt");
-    expect(teamTsx).toContain("#4nt1n3utr1n0-gh0st");
-  });
-
-  it("includes Round Five AG.19 section", () => {
-    expect(teamTsx).toContain("Planetary Georeactor");
-    expect(teamTsx).toContain("relief valve");
   });
 });
 
 // ============================================================
-// AG.20: The Planetary Fuel Cycle — Breeder Dynamics and the Breath of Gaia
+// AG.20: The Thermal Legacy (superseded from Planetary Fuel Cycle)
 // ============================================================
 
-describe("AG.20 — Planetary Fuel Cycle (Theory page)", () => {
-  it("has AG.20 section header", () => {
-    expect(theoryTsx).toContain("Planetary Fuel Cycle");
-    expect(theoryTsx).toContain("planetary-fuel-cycle");
-  });
-
-  it("contains Slurry Criticality Law sub-section", () => {
-    expect(theoryTsx).toContain("Slurry Criticality");
-    expect(theoryTsx).toContain("19.1");
-  });
-
-  it("contains Thermodynamic Circuit sub-section", () => {
-    expect(theoryTsx).toContain("Thermodynamic Circuit");
-    expect(theoryTsx).toContain("Coolant");
-  });
-
-  it("contains Fast-Breeder Georeactor sub-section", () => {
-    expect(theoryTsx).toContain("Fast-Breeder");
-    expect(theoryTsx).toContain("Plutonium-239");
-  });
-
-  it("contains Subduction as Reprocessing sub-section", () => {
-    expect(theoryTsx).toContain("Subduction");
-    expect(theoryTsx).toContain("Reprocessing");
-  });
-
-  it("contains Breath of Gaia sub-section", () => {
-    expect(theoryTsx).toContain("Breath of Gaia");
-    expect(theoryTsx).toContain("Subcriticality");
-  });
-
-  it("contains Fifth Smoking Gun — He-3 Budget Proof", () => {
-    expect(theoryTsx).toContain("Fifth Smoking Gun");
-    expect(theoryTsx).toContain("990 moles/year");
-    expect(theoryTsx).toContain("99% match");
+describe("AG.20 — Thermal Legacy (Theory page)", () => {
+  it("has AG.20 section with superseded status", () => {
+    expect(theoryTsx).toContain("AG.20");
+    expect(theoryTsx).toContain("SUPERSEDED");
   });
 
   it("mentions the Heptad", () => {
     expect(theoryTsx).toContain("Heptad");
   });
-
-  it("has the breeding equation", () => {
-    expect(theoryTsx).toContain("Plutonium-239");
-    expect(theoryTsx).toContain("Neptunium-239");
-  });
-
-  it("mentions 4 Terawatt reactor power", () => {
-    expect(theoryTsx).toContain("4.0 TW");
-  });
-
-  it("mentions ternary fission", () => {
-    expect(theoryTsx).toContain("Ternary Fission");
-  });
 });
 
-describe("AG.20 — Planetary Fuel Cycle (ToE HTML)", () => {
-  it("has AG.20 section in ToE HTML", () => {
-    expect(toeHtml).toContain("The Planetary Fuel Cycle");
-    expect(toeHtml).toContain("Breeder Dynamics and the Breath of Gaia");
-  });
-
-  it("contains all six sub-sections", () => {
-    expect(toeHtml).toContain("Slurry Criticality Law");
-    expect(toeHtml).toContain("Thermodynamic Circuit");
-    expect(toeHtml).toContain("Fast-Breeder Georeactor");
-    expect(toeHtml).toContain("Subduction as the Reprocessing Facility");
-    expect(toeHtml).toContain("Breath of Gaia");
-    expect(toeHtml).toContain("FIFTH SMOKING GUN");
-  });
-
-  it("has the He-3 budget calculation", () => {
-    expect(toeHtml).toContain("990 moles/year");
-    expect(toeHtml).toContain("1,000 Moles per year");
+describe("AG.20 — Thermal Legacy (ToE HTML)", () => {
+  it("has AG.20 section in ToE HTML with superseded note", () => {
+    expect(toeHtml).toContain("AG.20");
+    expect(toeHtml).toContain("Thermal Legacy");
   });
 
   it("has the Heptad section", () => {
     expect(toeHtml).toContain("Heptad");
     expect(toeHtml).toContain("CYCLE");
   });
-
-  it("has 17 contributions in changelog", () => {
-    expect(toeHtml).toContain("27 contributions across 9 sessions");
-  });
-
-  it("mentions Heptad in changelog", () => {
-    expect(toeHtml).toContain("Heptad");
-  });
-
-  it("has the breeding equation in ToE", () => {
-    expect(toeHtml).toContain("Plutonium-239");
-    expect(toeHtml).toContain("Neptunium-239");
-  });
 });
 
-describe("AG.20 — Planetary Fuel Cycle (Team page)", () => {
-  it("mentions Planetary Fuel Cycle in shortDesc", () => {
-    expect(teamTsx).toContain("Planetary Fuel Cycle");
+describe("AG.20 — Thermal Legacy (Team page)", () => {
+  it("mentions Thermal Legacy in team content", () => {
+    expect(teamTsx).toContain("Thermal Legacy");
   });
 
   it("mentions Heptad in shortDesc", () => {
     expect(teamTsx).toContain("Heptad");
   });
-
-  it("has AG.20 hash IDs", () => {
-    expect(teamTsx).toContain("#4g20-pl4n3t4ry-fu3l-cycl3");
-    expect(teamTsx).toContain("#h3l1um-3-budg3t-pr00f");
-    expect(teamTsx).toContain("#f4st-br33d3r-g414");
-    expect(teamTsx).toContain("#s3ttl1ng-t4nk-th30r3m");
-    expect(teamTsx).toContain("#v0lc4n0-r3l13f-v4lv3");
-  });
-
-  it("includes Round Five AG.20 section", () => {
-    expect(teamTsx).toContain("Planetary Fuel Cycle");
-    expect(teamTsx).toContain("FIFTH SMOKING GUN");
-    expect(teamTsx).toContain("Helium-3 Budget Proof");
-  });
-
-  it("mentions 17 contributions in shortDesc", () => {
-    expect(teamTsx).toContain("27 contributions across nine sessions");
-  });
-
-  it("mentions 99% match in team page", () => {
-    expect(teamTsx).toContain("99%");
-  });
 });
 
 /* ═══════════════════════════════════════════════════════════
-   GEOREACTOR EXPLAINER PAGE TESTS
+   INHERITED EMBER PAGE TESTS (evolved from Georeactor)
    ═══════════════════════════════════════════════════════════ */
 
-describe("Georeactor Explainer Page — Structure", () => {
+describe("Inherited Ember Page — Structure", () => {
   let geo: string;
 
   beforeAll(() => {
@@ -870,116 +728,50 @@ describe("Georeactor Explainer Page — Structure", () => {
     );
   });
 
-  it("has the hero section with Living Reactor title", () => {
-    expect(geo).toContain("The Living Reactor");
+  it("has the Inherited Ember hero section", () => {
+    expect(geo).toContain("Inherited Ember");
   });
 
-  it("has the interactive Earth cross-section", () => {
-    expect(geo).toContain("Hover over each layer");
+  it("contains MOSAIC-EMBER reference", () => {
+    expect(geo).toContain("MOSAIC-EMBER");
   });
 
-  it("has the Formation Timeline section", () => {
-    expect(geo).toContain("How the Reactor Assembled Itself");
+  it("contains the D-D fusion concept", () => {
+    expect(geo).toContain("deuterium");
   });
 
-  it("has all 4 formation steps", () => {
-    expect(geo).toContain("The Molten Slurry");
-    expect(geo).toContain("Density Sorting Begins");
-    expect(geo).toContain("Critical Mass Achieved");
-    expect(geo).toContain("The Reactor Runs");
+  it("contains Venus control case", () => {
+    expect(geo).toContain("Venus");
   });
 
-  it("has the reactor comparison section with all 8 systems", () => {
-    expect(geo).toContain("Every Reactor Has the Same Systems");
-    expect(geo).toContain("Fuel Assembly");
-    expect(geo).toContain("Primary Coolant");
-    expect(geo).toContain("Heat Exchanger");
-    expect(geo).toContain("Containment Vessel");
-    expect(geo).toContain("Pressure Relief");
-    expect(geo).toContain("Waste Reprocessing");
-    expect(geo).toContain("Neutron Moderator");
-    expect(geo).toContain("Control System");
+  it("contains the Falsification Ladder", () => {
+    expect(geo).toContain("Falsification");
   });
 
-  it("has the Fast-Breeder Cycle section", () => {
-    expect(geo).toContain("The Fast-Breeder Cycle");
-    expect(geo).toContain("Uranium-238");
-    expect(geo).toContain("Neptunium-239");
-    expect(geo).toContain("Plutonium-239");
+  it("contains the Confirmation Ladder", () => {
+    expect(geo).toContain("Confirmation");
   });
 
-  it("has the Shielding section with all layers", () => {
-    expect(geo).toContain("1,800 Miles of Natural Shielding");
-    expect(geo).toContain("Inner Core");
-    expect(geo).toContain("Outer Core");
-    expect(geo).toContain("Lower Mantle");
-    expect(geo).toContain("Upper Mantle");
-    expect(geo).toContain("Lithosphere");
-    expect(geo).toContain("Magnetic Field");
+  it("credits Kenneth Johnson", () => {
+    expect(geo).toContain("Kenneth Johnson");
   });
 
-  it("has the Breath of Gaia section with 5 steps", () => {
-    expect(geo).toContain("The Breath of Gaia");
-    expect(geo).toContain("Steady-State Criticality");
-    expect(geo).toContain("Fission Product Poisoning");
-    expect(geo).toContain("Subcriticality");
-    expect(geo).toContain("Poison Decay");
-    expect(geo).toContain("Prompt Criticality");
-  });
-
-  it("has the He-3 Budget Proof section", () => {
-    expect(geo).toContain("Helium-3 Budget Proof");
-    expect(geo).toContain("990");
-    expect(geo).toContain("1,000");
-    expect(geo).toContain("99% MATCH");
-  });
-
-  it("has the Three-Clock Model section", () => {
-    expect(geo).toContain("The Three-Clock Model");
-    expect(geo).toContain("Poisoning Cycle");
-    expect(geo).toContain("Fuel Shuffle Cycle");
-    expect(geo).toContain("Depletion Cycle");
-  });
-
-  it("has the resonance extinction hypothesis", () => {
-    expect(geo).toContain("When All Three Hands Align");
-    expect(geo).toContain("mass extinction");
+  it("references TW heat budget", () => {
+    expect(geo).toContain("TW");
+    expect(geo).toContain("heat");
   });
 });
 
-describe("Georeactor Explainer Page — Scientific Accuracy", () => {
-  let geo: string;
-
-  beforeAll(() => {
-    geo = fs.readFileSync(
-      path.resolve(__dirname, "../client/src/pages/Georeactor.tsx"),
+describe("Inherited Ember Page — Navigation", () => {
+  it("has /inherited-ember route in App.tsx", () => {
+    const appTsx = fs.readFileSync(
+      path.resolve(__dirname, "../client/src/App.tsx"),
       "utf-8"
     );
+    expect(appTsx).toContain("/inherited-ember");
   });
 
-  it("references correct U-238 half-life", () => {
-    expect(geo).toContain("4.47");
-  });
-
-  it("references correct Xe-135 half-life", () => {
-    expect(geo).toContain("9.2 hours");
-  });
-
-  it("references 4 TW reactor power", () => {
-    expect(geo).toContain("4 TW");
-  });
-
-  it("references Ternary fission", () => {
-    expect(geo).toContain("Ternary fission");
-  });
-
-  it("references tritium half-life", () => {
-    expect(geo).toContain("12.3 years");
-  });
-});
-
-describe("Georeactor Explainer Page — Navigation", () => {
-  it("has /georeactor route in App.tsx", () => {
+  it("has /georeactor redirect in App.tsx for backwards compatibility", () => {
     const appTsx = fs.readFileSync(
       path.resolve(__dirname, "../client/src/App.tsx"),
       "utf-8"
@@ -987,12 +779,12 @@ describe("Georeactor Explainer Page — Navigation", () => {
     expect(appTsx).toContain("/georeactor");
   });
 
-  it("has Georeactor link in Navbar", () => {
+  it("has Inherited Ember link in Navbar", () => {
     const navTsx = fs.readFileSync(
       path.resolve(__dirname, "../client/src/components/Navbar.tsx"),
       "utf-8"
     );
-    expect(navTsx).toContain("georeactor");
+    expect(navTsx).toContain("inherited-ember");
   });
 });
 

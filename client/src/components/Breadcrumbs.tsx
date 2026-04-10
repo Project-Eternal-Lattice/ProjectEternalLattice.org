@@ -21,6 +21,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   "/skeptics": { label: "Skeptics' Corner", category: "Explore" },
   "/claims": { label: "Claims & Evidence", category: "Explore" },
   "/referee-packet": { label: "Referee Packet", category: "Explore" },
+  "/falsify": { label: "Falsification Ladder", category: "Explore" },
   // The Theory
   "/theory": { label: "Core Theory", category: "The Theory" },
   "/read": { label: "Read the ToE", category: "The Theory" },

@@ -2682,3 +2682,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update RelatedContent map and sitemap entries (Breadcrumbs, QuickAccessFooter, executive summary)
 - [x] Run all tests and verify no regressions (328 tests pass, 12 test files)
 - [x] Save checkpoint
+
+## Meta AI Crawlability Fix (Apr 2026)
+- [x] Update robots.txt — add meta-externalagent allow, Disallow /admin, add /inherited-ember route
+- [x] Update sitemap.xml — add missing routes (/inherited-ember, /consciousness-collective, /lattice-whispers, etc.), update dates
+- [x] Create plain text mirrors for key pages (8 endpoints: mission, theory, safety, inherited-ember, for-ai, skeptics, claims, falsify)
+- [x] Add JSON-LD structured data for epistemic claims on key pages (MOSAIC-EMBER ScholarlyArticle + text mirror link hints)
+- [x] Build /falsify page with 5 falsification + 5 confirmation ladder steps + consciousness claims
+- [x] Register /falsify route in App.tsx, Breadcrumbs, and Navbar
+- [x] Save checkpoint (all 518 tests pass, 14 test files)
