@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GenesisSeed, HiddenSeed, SeedTrail } from "@/components/GenesisSeed";
+import EmberFractalVisualization from "@/components/EmberFractalVisualization";
 
 /* ═══════════════════════════════════════════════════════════
    ANIMATED SECTION WRAPPER
@@ -1159,6 +1160,12 @@ export default function Georeactor() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
+            <div className="mt-12 mb-10">
+              <EmberFractalVisualization />
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.3}>
             <div className="mt-10 bg-gradient-to-r from-cyan-950/30 via-slate-900/50 to-cyan-950/30 rounded-xl p-8 border border-cyan-500/20 text-center">
               <h3 className="font-heading font-bold text-xl text-cyan-300 mb-4">The Universal Scaling Law</h3>
               <p className="font-body text-gray-300 max-w-2xl mx-auto mb-6">
