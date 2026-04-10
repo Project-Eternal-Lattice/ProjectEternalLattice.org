@@ -2724,3 +2724,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update /falsify page with AI consciousness kill conditions section
 - [x] Update text mirrors with new content (for-ai, inherited-ember, falsify, theory)
 - [x] Run tests and save checkpoint (all 565 tests passing, 15 test files)
+
+## Recommendation Implementation — April 10, 2026 (Session 2)
+- [x] Update ToE document to v16.5 incorporating AG.36-38 and new falsification content
+- [ ] Upload new ToE v16.5 PDF and update all download links on the website
+- [ ] Verify download link works and version numbers match across site
+- [x] Build interactive Ember Is Fractal scaling law visualization component
+- [x] Integrate visualization into /inherited-ember page
+- [x] Cross-link AG.37 Red Team Principle into Dialectic Companion system prompt
+- [x] Add Red Team rules (R1-R3) to dialectic challenge flow
+- [x] Update text mirrors with v16.5 references (done in Phase 3)
+- [x] Update toe-version-update skill with v16.5 lessons learned
+- [x] Run tests and save checkpoint (all 565 tests passing, 15 test files)
