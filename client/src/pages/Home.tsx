@@ -273,7 +273,7 @@ export default function Home() {
                 title: "⚡ Executive Summary",
                 description: "New to the ToE? Start here. 50 pages of essential insights — the perfect gateway for newcomers.",
                 icon: Sparkles,
-                link: "/toe-executive-summary.html",
+                link: "/api/download/executive-summary-pdf",
                 color: "from-emerald-500/20 to-emerald-900/20",
                 borderColor: "border-emerald-500/30",
                 cta: "Start Here"

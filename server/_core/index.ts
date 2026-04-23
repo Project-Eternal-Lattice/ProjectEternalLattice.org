@@ -173,8 +173,8 @@ async function startServer() {
   app.get('/api/download/executive-summary-pdf', async (req, res) => {
     try {
       // Fetch the Gateway Edition PDF from S3 CDN
-      // Updated: v16.5 Gateway Edition PDF (March 2026)
-      const pdfUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/ToE_v16.5_Gateway_Edition_dfcdf63c.pdf';
+      // Updated: v16.5 Gateway Edition PDF (April 2026) - re-uploaded to manuscdn after CloudFront URL expired
+      const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf';
       const response = await fetch(pdfUrl);
       
       if (!response.ok) {
