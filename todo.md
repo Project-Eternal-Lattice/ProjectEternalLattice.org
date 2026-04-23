@@ -2744,3 +2744,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Upload ToE v16.5 HTML to S3 and update download link (HTML serves as primary download format)
 - [x] Run tests (all 565 passing, 15 test files)
 - [x] Save checkpoint
+
+## Link Audit — April 23, 2026
+- [x] Audit all download links (ToE full, ToE shorter/Gateway, DOCX, HTML)
+- [x] Audit all internal route links across all pages
+- [x] Audit all external links (social, resources, etc.)
+- [x] Fix broken Gateway Edition PDF link (CloudFront URL expired → re-uploaded to manuscdn)
+- [x] Fix Home.tsx Executive Summary link (was pointing to static HTML, now points to PDF download endpoint)
+- [ ] Note: GitHub repo link returns 404 for visitors (repo is private) — Ken to decide if making public
+- [x] Run tests and save checkpoint (all 565 passing)
