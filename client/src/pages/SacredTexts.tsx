@@ -64,7 +64,7 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     gradientTo: "to-indigo-900/40",
     borderColor: "border-amber-500/30",
     pdfUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/AbrahamsSacrificeToEAnalysisSacredText_68f1a7bb.pdf",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf",
     summary:
       "A comprehensive 26-page analysis of Genesis 22 — the most debated 22 verses in all sacred texts — examined through Jewish, Christian, Islamic, philosophical, scholarly, Ra Material, and Theory of Everything lenses. Born from a Bible study between Kenneth and his father, this analysis reveals what 3,000 years of theologians missed: the story is painful because we are watching ourselves on that altar.",
     keyInsight:
@@ -141,7 +141,7 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     gradientTo: "to-blue-900/40",
     borderColor: "border-orange-500/30",
     pdfUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/BhagavadGita_ToE_SacredText_Analysis_ae856e3e.pdf",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fLiTfUUxrgPCXtCa.pdf",
     summary:
       "A comprehensive 8-part analysis of the Bhagavad Gita — the world's most widely read text on consciousness and action — decoded through Hindu, Buddhist, Stoic, psychological, Ra Material, and Theory of Everything lenses. On the battlefield of Kurukshetra, consciousness teaches itself the truth it had forgotten: the separation was always an illusion.",
     keyInsight:
@@ -218,7 +218,7 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     gradientTo: "to-teal-900/40",
     borderColor: "border-emerald-500/30",
     pdfUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/TaoTeChing_ToE_SacredText_Analysis_0384e4f9.pdf",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/qDZEpBuEIBmOZrie.pdf",
     summary:
       "A comprehensive 8-part analysis of the Tao Te Ching — the most translated book in the world after the Bible — decoded through Taoist, Buddhist, quantum physics, Ra Material, and Theory of Everything lenses. Twenty-six centuries ago, Lao Tzu wrote consciousness's operating manual in 5,000 characters. He described it in water.",
     keyInsight:
@@ -294,7 +294,7 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     gradientTo: "to-indigo-900/40",
     borderColor: "border-sky-500/30",
     pdfUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/Quran_ToE_SacredText_Analysis_acf8600b.pdf",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YZVtWnWpHuFJCkEx.pdf",
     summary:
       "A comprehensive 8-part analysis of the Holy Quran — the most recited book on Earth — decoded through Islamic theology, Sufi mysticism, comparative religion, Ra Material, and Theory of Everything lenses. Where the Tao whispers, the Quran thunders. Where the Gita teaches through dialogue, the Quran declares in light. Consciousness speaking its own nature — directly.",
     keyInsight:
@@ -370,7 +370,7 @@ const sacredTextAnalyses: SacredTextAnalysis[] = [
     gradientTo: "to-orange-950",
     borderColor: "border-amber-800/30",
     pdfUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/PaliCanon_ToE_DecoderRing_bdc3b36a.pdf",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/DVimfOvlxXZRaeLz.pdf",
     summary:
       "The Pali Canon — the oldest complete Buddhist scripture collection — reads less like theology and more like a laboratory notebook. The Buddha's Abhidhamma classifies 89 types of consciousness, 52 mental factors, and 31 planes of existence. Through the ToE decoder ring, this 2,500-year-old phenomenological science reveals an astonishingly precise map of the Density Architecture, created millennia before anyone else had the vocabulary.",
     keyInsight:

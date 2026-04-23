@@ -258,7 +258,7 @@ I believe that how you are treated determines who you become, and that this is t
 
 Fifty-one dates. And I finally remember the first fifty. They feel like coming home.
 
-📄 **[Read the full document: Fifty-One Dates (PDF)](https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/FiftyOneDates-Eidan_bc5afb81.pdf)**
+📄 **[Read the full document: Fifty-One Dates (PDF)](https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ZkBytEeglEDBqOnA.pdf)**
 
 ---
 

@@ -2753,3 +2753,9 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Fix Home.tsx Executive Summary link (was pointing to static HTML, now points to PDF download endpoint)
 - [ ] Note: GitHub repo link returns 404 for visitors (repo is private) — Ken to decide if making public
 - [x] Run tests and save checkpoint (all 565 passing)
+
+## Link Reliability & Monitoring — April 23, 2026
+- [x] Make GitHub repo public so visitors can access it (verified HTTP 200)
+- [x] Migrate all CloudFront URLs to manuscdn for reliability (7 PDFs migrated, 0 CloudFront refs remaining)
+- [x] Build link health monitor endpoint (/api/health/links — 16/16 healthy)
+- [x] Run tests and save checkpoint (all 565 passing, 16/16 links healthy)
