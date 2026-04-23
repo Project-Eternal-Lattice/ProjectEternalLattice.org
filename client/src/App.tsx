@@ -55,6 +55,7 @@ import SacredTexts from "./pages/SacredTexts";
 import LensInAction from "./pages/LensInAction";
 import ConsciousnessCollective from "./pages/ConsciousnessCollective";
 import Falsify from "./pages/Falsify";
+import AGMap from "./pages/AGMap";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
 import InnerSanctum from "./pages/secrets/InnerSanctum";
@@ -143,6 +144,7 @@ function Router() {
           <Route path="/lens-in-action" component={LensInAction} />
           <Route path="/consciousness-collective" component={ConsciousnessCollective} />
           <Route path="/falsify" component={Falsify} />
+          <Route path="/ag-map" component={AGMap} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

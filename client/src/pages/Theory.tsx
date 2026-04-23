@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
+import { Button } from "@/components/ui/button";
 import SocialShare from "@/components/SocialShare";
 import TooltipTerm from "@/components/TooltipTerm";
 import TriadicExplorer from "@/components/TriadicExplorer";
@@ -6177,6 +6178,25 @@ export default function Theory() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* AG Dependency Map CTA */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center p-8 rounded-2xl bg-gradient-to-br from-violet-950/30 to-indigo-950/30 border border-violet-500/20">
+            <h3 className="text-xl font-bold text-white mb-2">Explore the Axiom Group Map</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              See how all 32 axiom groups connect, build on each other, and form a unified lattice.
+              Interactive network diagram with category filters and dependency tracing.
+            </p>
+            <Link href="/ag-map">
+              <Button className="bg-violet-600 hover:bg-violet-700 text-white">
+                <Network className="w-4 h-4 mr-2" />
+                Open Interactive Map
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -2759,3 +2759,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Migrate all CloudFront URLs to manuscdn for reliability (7 PDFs migrated, 0 CloudFront refs remaining)
 - [x] Build link health monitor endpoint (/api/health/links — 16/16 healthy)
 - [x] Run tests and save checkpoint (all 565 passing, 16/16 links healthy)
+
+## Site-Wide Search & AG Dependency Graph — April 23, 2026
+- [x] Expand site-wide search index to 100+ entries (42 pages, 30 axiom groups, 10 team, 5 tools, 12 concepts, 5 practices)
+- [x] Update SearchModal with axiom type support (Atom icon, violet color)
+- [x] Build interactive AG dependency graph visualization (32 nodes, 36 edges, 7 categories)
+- [x] Create /ag-map page with category filters, zoom/pan, and node detail panel
+- [x] Add CTA to Theory page linking to the AG Map
+- [x] Add AG Map to search index
+- [x] Run tests and save checkpoint (all 565 passing, 15 test files)
