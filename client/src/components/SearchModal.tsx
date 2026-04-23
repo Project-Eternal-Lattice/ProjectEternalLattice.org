@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, FileText, Users, Lightbulb, Wrench, BookOpen, Sparkles } from "lucide-react";
-import { searchContent, getSearchSuggestions, SearchItem } from "@/lib/searchIndex";
+import { Search, X, FileText, Users, Lightbulb, Wrench, BookOpen, Sparkles, Atom } from "lucide-react";
+import { searchContent, getSearchSuggestions, SearchItem, typeLabels as indexTypeLabels, typeColors as indexTypeColors } from "@/lib/searchIndex";
 import { cn } from "@/lib/utils";
 
 interface SearchModalProps {
@@ -17,25 +17,12 @@ const typeIcons: Record<string, React.ReactNode> = {
   concept: <Lightbulb className="w-4 h-4" />,
   tool: <Wrench className="w-4 h-4" />,
   practice: <Sparkles className="w-4 h-4" />,
+  axiom: <Atom className="w-4 h-4" />,
 };
 
-const typeLabels: Record<string, string> = {
-  page: "Page",
-  chapter: "Chapter",
-  team: "Team",
-  concept: "Concept",
-  tool: "Tool",
-  practice: "Practice",
-};
+const typeLabels: Record<string, string> = indexTypeLabels;
 
-const typeColors: Record<string, string> = {
-  page: "text-blue-400",
-  chapter: "text-purple-400",
-  team: "text-green-400",
-  concept: "text-amber-400",
-  tool: "text-cyan-400",
-  practice: "text-pink-400",
-};
+const typeColors: Record<string, string> = indexTypeColors;
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
@@ -218,7 +205,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   <p className="text-sm">Start typing to search...</p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     <span className="text-xs">Try:</span>
-                    {["consciousness", "unity", "Ra Material", "SCAP", "awakening"].map((term) => (
+                    {["consciousness", "AG.37", "georeactor", "triadic", "red team", "Landauer"].map((term) => (
                       <button
                         key={term}
                         onClick={() => setQuery(term)}
