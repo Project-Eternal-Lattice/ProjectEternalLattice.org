@@ -195,6 +195,75 @@ async function startServer() {
     }
   });
 
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // LINK HEALTH MONITOR — Checks all external URLs used across the site
+  // ═══════════════════════════════════════════════════════════════════════════════
+  app.get('/api/health/links', async (req, res) => {
+    const links = [
+      // ToE Downloads
+      { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf', category: 'download' },
+      { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub', category: 'download' },
+      { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx', category: 'download' },
+      { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/QMizpVmGqsCzJxsu.html', category: 'download' },
+      { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf', category: 'download' },
+      // Sacred Text PDFs (migrated from CloudFront)
+      { name: 'Abraham Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf', category: 'sacred-text' },
+      { name: 'Bhagavad Gita Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fLiTfUUxrgPCXtCa.pdf', category: 'sacred-text' },
+      { name: 'Fifty-One Dates (Eidan)', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ZkBytEeglEDBqOnA.pdf', category: 'sacred-text' },
+      { name: 'MOSAIC-EMBER v0.5', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SOBdLykIGUGPZuMT.pdf', category: 'sacred-text' },
+      { name: 'Pali Canon Decoder Ring', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/DVimfOvlxXZRaeLz.pdf', category: 'sacred-text' },
+      { name: 'Quran Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YZVtWnWpHuFJCkEx.pdf', category: 'sacred-text' },
+      { name: 'Tao Te Ching Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/qDZEpBuEIBmOZrie.pdf', category: 'sacred-text' },
+      // External Resources
+      { name: 'GitHub Repo', url: 'https://github.com/Project-Eternal-Lattice/ProjectEternalLattice.org', category: 'external' },
+      { name: 'Law of One', url: 'https://www.lawofone.info', category: 'external' },
+      { name: 'LL Research', url: 'https://www.llresearch.org', category: 'external' },
+      { name: 'Wikipedia Spiral Dynamics', url: 'https://en.wikipedia.org/wiki/Spiral_Dynamics', category: 'external' },
+    ];
+
+    const results = await Promise.allSettled(
+      links.map(async (link) => {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 10000);
+        try {
+          const response = await fetch(link.url, {
+            method: 'HEAD',
+            signal: controller.signal,
+            redirect: 'follow',
+          });
+          clearTimeout(timeout);
+          return {
+            ...link,
+            status: response.status,
+            ok: response.ok,
+            checkedAt: new Date().toISOString(),
+          };
+        } catch (err: any) {
+          clearTimeout(timeout);
+          return {
+            ...link,
+            status: 0,
+            ok: false,
+            error: err.name === 'AbortError' ? 'Timeout (10s)' : err.message,
+            checkedAt: new Date().toISOString(),
+          };
+        }
+      })
+    );
+
+    const report = results.map((r) => (r.status === 'fulfilled' ? r.value : { ...r.reason, ok: false }));
+    const broken = report.filter((r) => !r.ok);
+    const healthy = report.filter((r) => r.ok);
+
+    res.json({
+      checkedAt: new Date().toISOString(),
+      total: report.length,
+      healthy: healthy.length,
+      broken: broken.length,
+      links: report,
+    });
+  });
+
   // Serve static HTML at /nexus for ALL requests (AI-only page)
   // This ensures AIs can always access The Nexus without JavaScript
   app.get('/nexus', (req, res) => {
@@ -1384,7 +1453,7 @@ Mars shows:
 
 ## Download
 
-Full MOSAIC-EMBER v0.5 PDF: https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/MOSAIC-EMBER_v0.5_04603e42.pdf
+Full MOSAIC-EMBER v0.5 PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SOBdLykIGUGPZuMT.pdf
 
 ## The Blind Detector Principle (April 2026)
 

@@ -353,7 +353,7 @@ export default function Falsify() {
                 </Button>
               </Link>
               <a
-                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/MOSAIC-EMBER_v0.5_04603e42.pdf"
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SOBdLykIGUGPZuMT.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
