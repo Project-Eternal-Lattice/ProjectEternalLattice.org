@@ -144,6 +144,15 @@ const PAGES: SearchItem[] = [
     tags: ["falsify", "kill", "science", "testable", "skeptic"],
   },
   {
+    id: "page-predictions",
+    title: "Testable Predictions Dashboard",
+    description: "Public falsification dashboard tracking every testable prediction across the framework",
+    content: "testable predictions dashboard verified awaiting data falsified speculative tier 1 tier 2 tier 3 consciousness geophysics mathematics cosmology psychedelic neuroscience AI ACD iceberg flip S-turn MEQ30 EEG bimodal geoneutrino Planet 9 Kuramoto dose-response",
+    type: "page",
+    path: "/predictions",
+    tags: ["predictions", "testable", "dashboard", "falsification", "science", "verified"],
+  },
+  {
     id: "page-skeptics",
     title: "For Skeptics",
     description: "Addressing doubts and challenges honestly",
