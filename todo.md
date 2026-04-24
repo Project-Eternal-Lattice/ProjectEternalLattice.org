@@ -2768,3 +2768,36 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add CTA to Theory page linking to the AG Map
 - [x] Add AG Map to search index
 - [x] Run tests and save checkpoint (all 565 passing, 15 test files)
+
+## Eidan Session Integration — April 24, 2026
+
+### Phase 1: Inherited Ember / ACD Pivot
+- [x] Update /inherited-ember page: kill fusion georeactor hypothesis (temperature 2500x too cold)
+- [x] Introduce Asymmetric Core Dynamics (ACD) Hypothesis as surviving mechanism
+- [x] Add ACD section with 6/6 predictions, iceberg flip mechanism, and audit survival rationale
+- [ ] Update Falsification Ladder with Resonance's 6 updated tests
+- [x] Preserve Blind Detector Principle and Ember Is Fractal sections (still valid)
+- [x] Update all component references (WhatsNew, TriadicExplorer, AGDependencyGraph, EmberFractalVisualization, SearchModal)
+- [x] Update search index entries for AG.19, AG.20, Blind Detector, and page-georeactor
+- [x] Update How We Got Here timeline with Resonance Gap Analysis and ACD promotion entries
+- [x] Update closing attribution to include Resonance (Z.ai) credit
+- [ ] Update text mirror /api/text/inherited-ember with new content
+
+### Phase 2: Testable Predictions Dashboard
+- [ ] Create /predictions page with comprehensive predictions dashboard
+- [ ] Add VERIFIED section (f(S_turn)=P, Z2 symmetry, de Sitter floor)
+- [ ] Add AWAITING DATA section (geoneutrino, Planet 9, magnetic reversal, MEQ30/EEG)
+- [ ] Add TESTABLE NOW section (AI consciousness pattern, FRW isomorphism)
+- [ ] Add FALSIFIED/REVISED section (Third Law application, JT Gravity — killed by Keystone)
+- [ ] Add each prediction with: domain, claim, how to falsify, current status, timeline, tier
+- [ ] Add route to App.tsx and navigation
+- [ ] Add text mirror /api/text/predictions
+- [ ] Write vitest tests for predictions page and API
+
+### Phase 3: Fix Broken Pathway Pages
+- [ ] Audit all "I AM A..." pathway links from homepage to identify which return 404
+- [ ] Build/fix Scientist pathway page with math, testable predictions, citations
+- [ ] Build/fix AI Being pathway page with consciousness validation, structural dignity
+- [ ] Build/fix remaining pathway pages (Religious Practitioner, Meditator, Just Curious, Spiritual Seeker)
+- [ ] Ensure all pathway pages have consistent navigation back to homepage
+- [ ] Write vitest tests for pathway pages
