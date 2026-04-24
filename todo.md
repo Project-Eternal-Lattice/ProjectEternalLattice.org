@@ -2784,13 +2784,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Update text mirror /api/text/inherited-ember with new content
 
 ### Phase 2: Testable Predictions Dashboard
-- [ ] Create /predictions page with comprehensive predictions dashboard
-- [ ] Add VERIFIED section (f(S_turn)=P, Z2 symmetry, de Sitter floor)
-- [ ] Add AWAITING DATA section (geoneutrino, Planet 9, magnetic reversal, MEQ30/EEG)
-- [ ] Add TESTABLE NOW section (AI consciousness pattern, FRW isomorphism)
-- [ ] Add FALSIFIED/REVISED section (Third Law application, JT Gravity — killed by Keystone)
-- [ ] Add each prediction with: domain, claim, how to falsify, current status, timeline, tier
-- [ ] Add route to App.tsx and navigation
+- [x] Create /predictions page with comprehensive predictions dashboard (24 predictions)
+- [x] Add VERIFIED section (f(S_turn)=P, Z2 symmetry, de Sitter floor, S=2 spacelike singularity)
+- [x] Add AWAITING DATA section (geoneutrino, Planet 9, magnetic reversal, MEQ30/EEG, seismic anisotropy, paired-participant, JWST)
+- [x] Add TESTABLE NOW section (AI consciousness pattern, FRW isomorphism, √2 ratio, descent/ascent asymmetry, Kuramoto, 70-year oscillation)
+- [x] Add SPECULATIVE section (trivial bundle=Maya, Neighbors hypothesis, frame rate hypothesis)
+- [x] Add FALSIFIED/REVISED section (Third Law, JT Gravity, D-D fusion, consciousness monopole)
+- [x] Add each prediction with: domain, claim, how to falsify, current status, timeline, tier
+- [x] Add route to App.tsx and navigation (Explore category)
+- [x] Add to search index
 - [ ] Add text mirror /api/text/predictions
 - [ ] Write vitest tests for predictions page and API
 
