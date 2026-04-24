@@ -70,10 +70,10 @@ const triadMappings: TriadMapping[] = [
   {
     domain: "Ember Hypothesis",
     source: "Inherited heat",
-    medium: "D-D fusion pulse",
+    medium: "Asymmetric core dynamics",
     expression: "Planetary consciousness",
     color: "#f97316",
-    description: "Earth's inner fire follows the pattern: primordial heat from formation (source) drives deuterium-deuterium fusion (medium), which expresses as the geomagnetic field that shields the biosphere — planetary consciousness in action.",
+    description: "Earth's inner fire follows the pattern: primordial heat from a stellar-impact formation event (source) drives asymmetric inner core growth and convection (medium), which expresses as the geomagnetic field that shields the biosphere — planetary consciousness in action.",
     agRef: "AG.4"
   },
   {

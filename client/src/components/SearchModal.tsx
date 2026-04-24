@@ -205,7 +205,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   <p className="text-sm">Start typing to search...</p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     <span className="text-xs">Try:</span>
-                    {["consciousness", "AG.37", "georeactor", "triadic", "red team", "Landauer"].map((term) => (
+                    {["consciousness", "AG.37", "inherited ember", "ACD", "red team", "Landauer"].map((term) => (
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

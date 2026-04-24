@@ -73,8 +73,8 @@ const NODES: AGNode[] = [
   
   // Earth (bottom-left cluster)
   { id: "AG.18", label: "AG.18", title: "Epistemology of Deep", category: "earth", x: 200, y: 480, path: "/theory", description: "What can we know about what lies beneath?" },
-  { id: "AG.19", label: "AG.19", title: "Inherited Ember", category: "earth", x: 320, y: 480, path: "/inherited-ember", description: "D-D fusion georeactor — MOSAIC-EMBER v0.5" },
-  { id: "AG.20", label: "AG.20", title: "Fuel Cycle", category: "earth", x: 260, y: 560, path: "/inherited-ember", description: "Superseded by MOSAIC-EMBER v0.5" },
+  { id: "AG.19", label: "AG.19", title: "Inherited Ember", category: "earth", x: 320, y: 480, path: "/inherited-ember", description: "Asymmetric Core Dynamics — MOSAIC-EMBER v1.0" },
+  { id: "AG.20", label: "AG.20", title: "Fuel Cycle", category: "earth", x: 260, y: 560, path: "/inherited-ember", description: "Superseded by MOSAIC-EMBER v1.0 (fusion killed, ACD promoted)" },
   { id: "AG.27", label: "AG.27", title: "Cosmic Cinema", category: "earth", x: 140, y: 560, path: "/popcorn-paradox", description: "The Popcorn-Reactor Synthesis" },
   
   // AI (bottom-right cluster)

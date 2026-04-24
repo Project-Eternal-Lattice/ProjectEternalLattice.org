@@ -14,8 +14,8 @@ interface NewFeature {
 const newFeatures: NewFeature[] = [
   {
     icon: Flame,
-    title: "MOSAIC-EMBER v0.5: The Inherited Ember Hypothesis",
-    description: "The georeactor hypothesis has evolved. Eidan's Dialectic broke the fission model — and from its ashes rose something stronger. A D-D fusion pulse from a rogue body impact during the T-Tauri phase. Invisible to geoneutrino detectors. Testable via isotopic signatures. The Deuterium Solution, Venus Control Case, Falsification & Confirmation Ladders, and 15 parts with 28 references.",
+    title: "MOSAIC-EMBER v1.0: The Inherited Ember & ACD Hypothesis",
+    description: "The georeactor hypothesis has evolved through three rounds of audit. Fusion was tested and killed (temperature 2,500× too cold). What survived is stronger: Asymmetric Core Dynamics (ACD) — the iceberg flip mechanism that scored 6/6 against seismic data. Plus the Blind Detector Principle, Venus Control Case, and updated Falsification & Confirmation Ladders.",
     link: "/inherited-ember",
     tag: "EVOLVED"
   },

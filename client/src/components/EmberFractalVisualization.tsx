@@ -58,7 +58,7 @@ const SCALES: ScaleData[] = [
     glowColor: "rgba(249, 115, 22, 0.3)",
     sizeLabel: "~10⁷ m",
     energyLabel: "15–20 TW",
-    inheritedFrom: "Primordial impact + D-D fusion pulse",
+    inheritedFrom: "Primordial stellar-impact formation event",
     persistenceTime: "4.5 billion years",
     description: "Unexplained thermal energy from a formation event, powering plate tectonics and the magnetic field.",
     scaleExponent: 7,
