@@ -704,18 +704,16 @@ export default function Geometry() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* ─── Hero Section ─────────────────────────────────────────── */}
+      {/* ─── Hero Section ───────────────────────────────────────────────────── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-background to-background" />
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.2) 0%, transparent 50%)",
-            }}
+        {/* Hero Artwork Background */}
+        <div className="absolute inset-0">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/geometry-hero-Nirm8vKNL3ubT4y22NskKE.webp"
+            alt="Geometry of Consciousness Depth — Penrose diagram fiber bundle visualization"
+            className="w-full h-full object-cover opacity-40"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
 
         <div className="container relative z-10 max-w-4xl mx-auto px-4 text-center">

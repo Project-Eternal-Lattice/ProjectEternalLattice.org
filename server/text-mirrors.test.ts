@@ -23,6 +23,7 @@ const TEXT_MIRROR_ENDPOINTS = [
   "how-we-know",
   "consilient-patterns",
   "predictions",
+  "geometry",
 ];
 
 describe("Text Mirror API", () => {
@@ -124,8 +125,8 @@ describe("ToE Mega Endpoint", () => {
     expect(res.headers.get("content-type")).toContain("text/plain");
     const text = await res.text();
     expect(text).toContain("PROJECT ETERNAL LATTICE");
-    expect(text).toContain("PART 1 of 15");
-    expect(text).toContain("PART 15 of 15");
+    expect(text).toContain("PART 1 of 16");
+    expect(text).toContain("PART 16 of 16");
     expect(text).toContain("END OF DOCUMENT");
     expect(text.length).toBeGreaterThan(20000);
   });
