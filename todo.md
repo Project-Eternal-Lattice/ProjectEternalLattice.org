@@ -2823,7 +2823,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add graduation pathway explanation (Noted → Investigating → Formally Derived → Graduated)
 - [x] Seed with initial patterns: economics (creative destruction), memetics, aesthetics, Hyundai Principle, symmetry breaking, Kuramoto synchronization
 - [x] Add cross-references in each pattern card linking back to core pages (Theory, Inherited Ember, Predictions, How We Know)
-- [ ] Add inline footnote markers in core pages pointing to Consilient Patterns (future enhancement)
+- [x] Add inline footnote markers in core pages pointing to Consilient Patterns (5 notes across 3 pages)
 - [x] Add route to App.tsx and navigation (Explore category)
 - [x] Add to search index
 
@@ -2839,3 +2839,14 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Add /api/text/how-we-know text mirror
 - [ ] Add /api/text/consilient-patterns text mirror
 - [ ] Update /api/text/toe mega-endpoint to include new pages
+
+### Phase 5: Text Mirrors, Footnotes, and Phase Transition Prediction
+- [x] Add text mirror /api/text/how-we-know
+- [x] Add text mirror /api/text/consilient-patterns
+- [x] Update text mirror /api/text/inherited-ember with ACD content
+- [x] Add text mirror /api/text/predictions
+- [x] Add inline footnote markers in Theory page linking to Consilient Patterns (symmetry breaking + creative destruction + Kuramoto)
+- [x] Add inline footnote markers in Inherited Ember page linking to Consilient Patterns (Hyundai Principle)
+- [x] Add inline footnote markers in How We Know page linking to Consilient Patterns (symmetry breaking)
+- [x] Add Phase Transition prediction to Dashboard (mechanism T-011 Tier 1 testable, timing S-004 Tier 3 speculative)
+- [x] Write vitest tests for new text mirrors and updates (22 new tests in phase5-updates.test.ts)

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import ConsilienceNote from "@/components/ConsilienceNote";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Eye,
@@ -694,6 +695,12 @@ export default function HowWeKnow() {
                           structural truth.
                         </p>
                       </div>
+                      <ConsilienceNote
+                        variant="block"
+                        patternId="symmetry-breaking"
+                        patternName="Symmetry Breaking as Creation"
+                        matchDescription="Self-reference creating apparent duality from unity mirrors spontaneous symmetry breaking — the Higgs field breaks electroweak symmetry, yet the underlying gauge symmetry persists."
+                      />
                     </div>
                   </motion.div>
                 )}

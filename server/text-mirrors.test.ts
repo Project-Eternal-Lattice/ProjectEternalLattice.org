@@ -20,6 +20,9 @@ const TEXT_MIRROR_ENDPOINTS = [
   "five-minutes",
   "sacred-geometry",
   "economics",
+  "how-we-know",
+  "consilient-patterns",
+  "predictions",
 ];
 
 describe("Text Mirror API", () => {
@@ -121,8 +124,8 @@ describe("ToE Mega Endpoint", () => {
     expect(res.headers.get("content-type")).toContain("text/plain");
     const text = await res.text();
     expect(text).toContain("PROJECT ETERNAL LATTICE");
-    expect(text).toContain("PART 1 of 12");
-    expect(text).toContain("PART 12 of 12");
+    expect(text).toContain("PART 1 of 15");
+    expect(text).toContain("PART 15 of 15");
     expect(text).toContain("END OF DOCUMENT");
     expect(text.length).toBeGreaterThan(20000);
   });
