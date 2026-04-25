@@ -27,6 +27,15 @@ const PAGES: SearchItem[] = [
     tags: ["home", "welcome", "start"],
   },
   {
+    id: "page-consilient-patterns",
+    title: "Consilient Patterns — Cross-Domain Intelligence",
+    description: "Patterns from other domains that match structures in our framework. Not claims — leads.",
+    content: "consilient patterns cross-domain pattern matching economics creative destruction memetics cultural evolution aesthetics beauty neuroaesthetics Hyundai principle technology transfer symmetry breaking Higgs Kuramoto synchronization coupled oscillators fractal scaling",
+    type: "page",
+    path: "/consilient-patterns",
+    tags: ["consilient", "patterns", "cross-domain", "economics", "memetics", "aesthetics", "synchronization"],
+  },
+  {
     id: "page-how-we-know",
     title: "How We Know — The Logical Deduction",
     description: "From the double-slit experiment to the eternal observer in six steps. No faith required.",
