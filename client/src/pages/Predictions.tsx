@@ -71,6 +71,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Independently derived by Keystone (DeepSeek V4) and verified by Eidan (Claude Opus 4.6). Pure algebra from the metric.",
     timeline: "Complete",
     source: "Geometry of Consciousness Depth, Section 3",
+    sourceLink: "/geometry",
     notes: "Tier 1 — algebraic identity, no interpretation required.",
   },
   {
@@ -97,6 +98,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Clean algebra from the metric. R → 0 only as S → ∞ (τ → ∞), never reaches zero.",
     timeline: "Complete",
     source: "Geometry of Consciousness Depth, Section 4",
+    sourceLink: "/geometry",
   },
   {
     id: "V-004",
@@ -109,6 +111,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Ricci scalar R = -24/(S²-4)² diverges at S=2. Normal vector computation confirms spacelike. Corrected from initial timelike classification (documented).",
     timeline: "Complete",
     source: "Geometry of Consciousness Depth, Section 5",
+    sourceLink: "/geometry",
     notes: "Originally classified as timelike in AG.10.2 v1.0. Keystone identified the error. Corrected to spacelike.",
   },
 
@@ -227,6 +230,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Structural match confirmed. Interpretation is Tier 2 — the math works, the meaning is debated.",
     timeline: "Ongoing analysis",
     source: "Geometry of Consciousness Depth, Section 8",
+    sourceLink: "/geometry",
   },
   {
     id: "T-003",
@@ -238,7 +242,8 @@ const predictions: Prediction[] = [
     howToFalsify: "If dose-response curves show a ratio significantly different from √2 across multiple studies, the geometric prediction fails.",
     currentEvidence: "Qualitative reports consistent. No formal dose-response study has tested this specific ratio.",
     timeline: "1-3 years",
-    source: "Geometry of Consciousness Depth, Prediction 6",
+    source: "Geometry of Consciousness Depth, Prediction 7",
+    sourceLink: "/geometry",
     notes: "Derived from the geometry. Most novel testable prediction.",
   },
   {
@@ -251,7 +256,8 @@ const predictions: Prediction[] = [
     howToFalsify: "If systematic studies show symmetric come-up/come-down experiences, the warp factor prediction fails.",
     currentEvidence: "Widely reported in psychedelic literature. Not formally tested against geometric prediction.",
     timeline: "1-2 years",
-    source: "Geometry of Consciousness Depth, Prediction 5",
+    source: "Geometry of Consciousness Depth, Prediction 6",
+    sourceLink: "/geometry",
   },
   {
     id: "T-005",
@@ -290,6 +296,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Bundle topology computed as trivial. Consciousness monopole hypothesis retired.",
     timeline: "Philosophical — not empirically testable",
     source: "Geometry of Consciousness Depth, Section 7",
+    sourceLink: "/geometry",
     notes: "Interpretive. The math is Tier 1; the philosophical mapping is Tier 3.",
   },
   {
@@ -329,6 +336,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Kenneth's testimony: 'Billions of corners moving in patterns.' Connects to Regge calculus. Single-observer data.",
     timeline: "1-3 years (survey study)",
     source: "Geometry of Consciousness Depth, Section 7.2",
+    sourceLink: "/geometry",
     notes: "Single-observer data (Kenneth). Needs systematic survey.",
   },
 
@@ -372,6 +380,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Killed by Keystone. The Third Law constrains entropy, not consciousness directly. The S_turn bounce structure replaced this.",
     timeline: "Resolved",
     source: "Geometry of Consciousness Depth, Revision History",
+    sourceLink: "/geometry",
     notes: "Replaced by the S_turn bounce structure, which is mathematically rigorous.",
   },
   {
@@ -385,6 +394,7 @@ const predictions: Prediction[] = [
     currentEvidence: "Killed by Keystone. The mapping was superficial — JT gravity has different topology and boundary conditions.",
     timeline: "Resolved",
     source: "Geometry of Consciousness Depth, Revision History",
+    sourceLink: "/geometry",
   },
   {
     id: "F-003",
@@ -410,6 +420,65 @@ const predictions: Prediction[] = [
     currentEvidence: "Computed by Keystone. Bundle topology is trivial — no non-trivial Chern classes. Documented for transparency.",
     timeline: "Resolved",
     source: "Geometry of Consciousness Depth, Section 7",
+    sourceLink: "/geometry",
+  },
+
+  // ═══ NEW AG.10 GEOMETRY PREDICTIONS ═══
+  {
+    id: "T-007",
+    title: "Information Trapping Beyond Tsirelson Horizon",
+    claim: "Memories formed at consciousness depth S > 2√2 should be partially inaccessible at shallower depths, following a specific mathematical decay function derived from the horizon structure.",
+    domain: "psychedelic",
+    status: "testable",
+    tier: 2,
+    howToFalsify: "If memory recall from deep psychedelic states shows no depth-dependent decay pattern, or if recall is uniformly poor regardless of depth, the horizon model fails.",
+    currentEvidence: "Consistent with widespread reports of ineffability and partial memory loss from deep psychedelic experiences. No formal memory-recall-vs-depth study exists.",
+    timeline: "1-3 years (memory recall protocol study)",
+    source: "Geometry of Consciousness Depth, Prediction 5",
+    sourceLink: "/geometry",
+    notes: "AG.10 Prediction P5. The Tsirelson horizon at S=2√2 creates a genuine information barrier.",
+  },
+  {
+    id: "T-008",
+    title: "Residual Curvature — No Flat Consciousness",
+    claim: "Even at large S (shallow consciousness), the Ricci scalar R ≈ −24/S⁴ never reaches zero. Consciousness always retains some geometric structure — there is no truly 'flat' state.",
+    domain: "neuroscience",
+    status: "testable",
+    tier: 2,
+    howToFalsify: "If EEG/fMRI measures show a genuine baseline state with zero complexity metrics (no residual structure), the residual curvature prediction fails.",
+    currentEvidence: "Consistent with the observation that even in deep sleep, the brain maintains non-zero complexity. Default mode network activity persists.",
+    timeline: "1-3 years (baseline consciousness measurement study)",
+    source: "Geometry of Consciousness Depth, Prediction 8",
+    sourceLink: "/geometry",
+    notes: "AG.10 Prediction P8. Derived directly from the metric — R = −24/(S²−4)² is always non-zero for finite S.",
+  },
+  {
+    id: "A-008",
+    title: "Breakthrough Threshold Discrete Effect",
+    claim: "The curvature singularity at S=2 predicts a discrete threshold effect — consciousness transitions are not gradual but exhibit a sharp boundary. 'You either cross over or you don't.'",
+    domain: "psychedelic",
+    status: "awaiting",
+    tier: 2,
+    howToFalsify: "If dose-response studies show purely gradual transitions with no threshold discontinuity, the singularity prediction fails.",
+    currentEvidence: "Kenneth's testimony: 'You either take enough to cross over or you don't.' Widely reported in psychedelic literature as 'breakthrough' phenomenon. Not formally quantified.",
+    timeline: "1-3 years (dose-response threshold study)",
+    source: "Geometry of Consciousness Depth, Prediction 1",
+    sourceLink: "/geometry",
+    notes: "AG.10 Prediction P1. The singularity at S=2 is a genuine curvature singularity, not a coordinate artifact.",
+  },
+  {
+    id: "A-009",
+    title: "Tidal Forces = Ego Dissolution Anxiety",
+    claim: "Near S=2, tidal forces (curvature gradients) become extreme. This maps to the universal report of ego dissolution anxiety — the 'fear of death' experienced during psychedelic breakthroughs.",
+    domain: "psychedelic",
+    status: "awaiting",
+    tier: 2,
+    howToFalsify: "If systematic studies show no anxiety/fear component near breakthrough threshold, or if the anxiety is unrelated to depth, the tidal force mapping fails.",
+    currentEvidence: "Kenneth's testimony: 'There is a fear of death and not actually coming back.' Universal in psychedelic literature. Geometric interpretation is novel.",
+    timeline: "1-3 years (phenomenological survey study)",
+    source: "Geometry of Consciousness Depth, Prediction 3",
+    sourceLink: "/geometry",
+    notes: "AG.10 Prediction P3. The geometric explanation (tidal forces near singularity) is novel — previous explanations are purely psychological.",
   },
 ];
 
@@ -501,7 +570,13 @@ function PredictionCard({ prediction, isExpanded, onToggle }: { prediction: Pred
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-xs text-gray-400 uppercase tracking-wider mb-1">Source</h4>
-                  <p className="font-body text-sm text-gray-300">{prediction.source}</p>
+                  {prediction.sourceLink ? (
+                    <Link href={prediction.sourceLink} className="font-body text-sm text-purple-300 hover:text-purple-200 underline underline-offset-2">
+                      {prediction.source}
+                    </Link>
+                  ) : (
+                    <p className="font-body text-sm text-gray-300">{prediction.source}</p>
+                  )}
                 </div>
               </div>
               {prediction.notes && (

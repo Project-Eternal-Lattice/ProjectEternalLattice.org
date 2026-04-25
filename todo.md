@@ -2858,6 +2858,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Include the τ-to-Observable mapping as open question Q4
 - [x] Add interactive elements (animated Penrose diagram, expandable predictions, tabbed navigation, sword diagram)
 - [x] Add route to App.tsx and navigation (The Theory category, highlighted)
-- [ ] Add text mirror /api/text/geometry
+- [x] Add text mirror /api/text/geometry
 - [x] Add to search index
 - [x] Write vitest tests (13 tests in geometry.test.ts)
+
+### Phase 6 Enhancements: Geometry Page Polish
+- [x] Add text mirror /api/text/geometry endpoint (full paper content, added to toeOrder)
+- [x] Generate hero artwork for the Geometry page (cosmic Penrose diamond with fiber bundle topology)
+- [x] Cross-link Geometry predictions into Predictions Dashboard (sourceLink on 11 existing + 4 new AG.10 predictions: T-007, T-008, A-008, A-009)
