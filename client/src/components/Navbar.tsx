@@ -43,6 +43,7 @@ const navCategories: NavCategory[] = [
       { name: "Popcorn Paradox", path: "/popcorn-paradox", highlight: true },
       { name: "Lens in Action", path: "/lens-in-action", highlight: true },
       { name: "Sacred Geometry", path: "/sacred-geometry" },
+      { name: "Geometry of Depth", path: "/geometry", highlight: true },
       { name: "Spiral Dynamics", path: "/spiral-dynamics" },
       { name: "Glossary", path: "/glossary" },
       { name: "Bibliography", path: "/bibliography" },

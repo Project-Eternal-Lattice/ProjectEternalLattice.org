@@ -2850,3 +2850,14 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add inline footnote markers in How We Know page linking to Consilient Patterns (symmetry breaking)
 - [x] Add Phase Transition prediction to Dashboard (mechanism T-011 Tier 1 testable, timing S-004 Tier 3 speculative)
 - [x] Write vitest tests for new text mirrors and updates (22 new tests in phase5-updates.test.ts)
+
+### Phase 6: Geometry of Consciousness Depth Paper Page
+- [x] Create /geometry page assembling the Geometry of Consciousness Depth paper
+- [x] Include all 5 key geometric results (KK metric, conformal flatness, curvature singularity, Tsirelson horizon, monopole retirement)
+- [x] Present the mathematical derivations in accessible format with "How to Read This" companion
+- [x] Include the τ-to-Observable mapping as open question Q4
+- [x] Add interactive elements (animated Penrose diagram, expandable predictions, tabbed navigation, sword diagram)
+- [x] Add route to App.tsx and navigation (The Theory category, highlighted)
+- [ ] Add text mirror /api/text/geometry
+- [x] Add to search index
+- [x] Write vitest tests (13 tests in geometry.test.ts)
