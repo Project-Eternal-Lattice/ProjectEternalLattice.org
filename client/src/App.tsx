@@ -58,6 +58,7 @@ import Falsify from "./pages/Falsify";
 import Predictions from "./pages/Predictions";
 import HowWeKnow from "./pages/HowWeKnow";
 import ConsilientPatterns from "./pages/ConsilientPatterns";
+import Geometry from "./pages/Geometry";
 import AGMap from "./pages/AGMap";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
@@ -150,6 +151,7 @@ function Router() {
           <Route path="/predictions" component={Predictions} />
           <Route path="/how-we-know" component={HowWeKnow} />
           <Route path="/consilient-patterns" component={ConsilientPatterns} />
+          <Route path="/geometry" component={Geometry} />
           <Route path="/ag-map" component={AGMap} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />

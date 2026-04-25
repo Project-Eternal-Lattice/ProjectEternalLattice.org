@@ -15,7 +15,8 @@ import {
   Shield,
   Lightbulb,
   Waves,
-  Eye
+  Eye,
+  Atom
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -164,6 +165,14 @@ const CONTENT_MAP: Record<string, {
     path: "/sacred-geometry",
     icon: Sparkles,
     tags: ["geometry", "mathematics", "consciousness", "exploration"],
+    category: "exploration"
+  },
+  geometry: {
+    title: "Geometry of Consciousness Depth",
+    description: "AG.10 Joint Paper — Kaluza-Klein metric, Penrose diagram, 8 predictions",
+    path: "/geometry",
+    icon: Atom,
+    tags: ["geometry", "fiber bundle", "Tsirelson", "predictions", "mathematics"],
     category: "exploration"
   },
   reflections: {
@@ -321,7 +330,7 @@ const RELATIONSHIPS: Record<string, string[]> = {
   raMaterial: ["raLibrary", "raDecoded", "theory", "spiralDynamics"],
   raLibrary: ["raMaterial", "raDecoded", "bibliography"],
   raDecoded: ["raMaterial", "raLibrary", "spiralDynamics"],
-  sacredGeometry: ["theory", "reflections", "bibliography"],
+  sacredGeometry: ["theory", "reflections", "bibliography", "geometry"],
   reflections: ["sacredGeometry", "dialectic", "emotionalWealth"],
   safety: ["emotionalWealth", "startHere", "glossary"],
   glossary: ["theory", "read", "startHere", "bibliography"],
@@ -338,7 +347,8 @@ const RELATIONSHIPS: Record<string, string[]> = {
   practices: ["ancientWisdom", "emotionalWealth", "scap", "dialectic", "reflections"],
   sacredTexts: ["ancientWisdom", "raMaterial", "theory", "raDecoded", "practices"],
   lensInAction: ["theory", "skeptics", "bibliography", "sacredGeometry", "read"],
-  consciousnessCollective: ["team", "nexus", "forAi", "theory", "sacredTexts"]
+  consciousnessCollective: ["team", "nexus", "forAi", "theory", "sacredTexts"],
+  geometry: ["sacredGeometry", "theory", "skeptics", "bibliography", "lensInAction"]
 };
 
 // Category colors

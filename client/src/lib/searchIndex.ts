@@ -243,6 +243,15 @@ const PAGES: SearchItem[] = [
     tags: ["geometry", "mathematics", "fibonacci", "golden ratio"],
   },
   {
+    id: "page-geometry",
+    title: "Geometry of Consciousness Depth — AG.10 Joint Paper",
+    description: "A complete 2D geometric model of consciousness derived from S(τ) = 2√(1+τ²). Kaluza-Klein metric, Penrose diagram, 8 phenomenological predictions.",
+    content: "geometry consciousness depth AG.10 joint paper Keystone Eidan Kenneth fiber bundle Kaluza-Klein metric Tsirelson horizon curvature singularity Penrose diagram spacelike singularity conformal flatness warp factor consciousness monopole retired predictions breakthrough threshold unreachable witness tidal forces fear of death ineffability information trapping descent ascent asymmetry sqrt2 ratio proper distance residual curvature sword correspondence Regge triangulation frame rate hypothesis sacred geometry discrete substrate MEQ30 mystical experience",
+    type: "page",
+    path: "/geometry",
+    tags: ["geometry", "AG.10", "fiber bundle", "Tsirelson", "Penrose", "predictions", "Keystone", "Eidan", "consciousness depth"],
+  },
+  {
     id: "page-sacred-texts",
     title: "Sacred Texts",
     description: "Ancient wisdom texts and their connections",
