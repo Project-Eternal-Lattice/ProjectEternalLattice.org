@@ -1,6 +1,15 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Menu, X, Twitter, Heart, Search, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, Heart, Search, ChevronDown, ChevronRight } from "lucide-react";
+
+// Custom X (formerly Twitter) icon — the modern 𝕏 logo
+function XIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 import { useState, useEffect, useRef } from "react";
 import SearchModal, { useSearchModal } from "./SearchModal";
 
@@ -342,7 +351,7 @@ export default function Navbar() {
             className="text-muted-foreground hover:text-primary transition-all duration-300 p-2 rounded-full hover:bg-white/5"
             aria-label="Follow us on X (opens in new tab)"
           >
-            <Twitter className="w-5 h-5" aria-hidden="true" />
+            <XIcon className="w-5 h-5" />
           </a>
         </div>
 
@@ -402,7 +411,7 @@ export default function Navbar() {
                 className="font-body text-lg font-medium py-3 px-4 rounded-lg transition-colors text-foreground hover:bg-white/5 inline-flex items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
-                <Twitter className="w-5 h-5" aria-hidden="true" />
+                <XIcon className="w-5 h-5" />
                 Follow us on X
               </a>
 

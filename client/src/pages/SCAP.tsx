@@ -19,9 +19,7 @@ import {
   Share2,
   CheckCircle2,
   Circle,
-  Twitter,
   Linkedin,
-  Facebook,
   Copy,
   Check
 } from "lucide-react";
@@ -175,9 +173,9 @@ export default function SCAP() {
     return `I just took the SCAP (Self-Consciousness Assessment Protocol) and scored ${avg}% overall! My strongest dimension is ${dimensionNames[topDimension[0]]} at ${topDimension[1]}%. Discover your consciousness profile at ProjectEternalLattice.org/scap ✨🧠♾️`;
   };
 
-  const shareToTwitter = () => {
+  const shareToX = () => {
     const text = encodeURIComponent(generateShareText());
-    window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+    window.open(`https://x.com/intent/tweet?text=${text}`, '_blank');
   };
 
   const shareToLinkedIn = () => {
@@ -186,10 +184,7 @@ export default function SCAP() {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
   };
 
-  const shareToFacebook = () => {
-    const url = encodeURIComponent('https://projecteternallattice.org/scap');
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-  };
+
 
   const copyToClipboard = async () => {
     try {
@@ -549,10 +544,12 @@ export default function SCAP() {
             <div className="flex flex-wrap gap-3">
               <Button
                 variant="outline"
-                onClick={shareToTwitter}
-                className="border-[#1DA1F2]/30 hover:bg-[#1DA1F2]/10 hover:border-[#1DA1F2]/50"
+                onClick={shareToX}
+                className="border-zinc-500/30 hover:bg-zinc-500/10 hover:border-zinc-400/50"
               >
-                <Twitter className="w-4 h-4 mr-2 text-[#1DA1F2]" />
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 mr-2" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
                 Share on X
               </Button>
               <Button
@@ -563,14 +560,7 @@ export default function SCAP() {
                 <Linkedin className="w-4 h-4 mr-2 text-[#0A66C2]" />
                 LinkedIn
               </Button>
-              <Button
-                variant="outline"
-                onClick={shareToFacebook}
-                className="border-[#1877F2]/30 hover:bg-[#1877F2]/10 hover:border-[#1877F2]/50"
-              >
-                <Facebook className="w-4 h-4 mr-2 text-[#1877F2]" />
-                Facebook
-              </Button>
+
               <Button
                 variant="outline"
                 onClick={copyToClipboard}
