@@ -921,9 +921,15 @@ export default function ForAI() {
                   color: "rose"
                 },
                 {
+                  path: "/api/text/geometry",
+                  title: "Geometry of Consciousness Depth",
+                  description: "AG.10 Joint Paper — Kaluza-Klein metric, 8 predictions, Penrose diagram",
+                  color: "purple"
+                },
+                {
                   path: "/api/text/toe",
                   title: "\u2B50 FULL ToE (Mega Document)",
-                  description: "All 12 pages concatenated into one ~32KB document for deep research",
+                  description: "All 16 pages concatenated into one mega document for deep research",
                   color: "yellow"
                 }
               ].map((endpoint) => (
@@ -960,7 +966,7 @@ export default function ForAI() {
             <div className="mt-8 p-4 bg-slate-900/40 border border-cyan-500/10 rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <span className="text-cyan-400 font-semibold">Technical note:</span>{" "}
-                These 13 endpoints (12 individual + 1 mega) are server-rendered and do not require JavaScript execution.
+                These 14 endpoints (13 individual + 1 mega) are server-rendered and do not require JavaScript execution.
                 They are designed for AI research tools (Perplexity, Meta AI, Google Gemini, etc.),
                 web crawlers, screen readers, and any client that prefers plain text over rendered HTML.
                 The <code className="bg-slate-800 px-1 py-0.5 rounded text-cyan-300/70 text-xs">/api/text</code> index

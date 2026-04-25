@@ -2871,3 +2871,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add "Geometry" source filter tag to Predictions Dashboard for AG.10 predictions (Source: filter row with AG.10 Geometry count)
 - [x] Generate downloadable PDF of the Geometry of Consciousness Depth paper (hosted on CDN, download button in hero section)
 - [x] Save checkpoint and deliver
+
+### Phase 6 Enhancements Round 3: AI Mirror + Calculator
+- [x] Add Geometry paper content to the Nexus /for-ai AI-readable mirror page (14th endpoint, updated counts)
+- [x] Build interactive √2 dose-response calculator on the Geometry page (substance/dose/unit inputs, SVG curve, math display, falsification criterion)
+- [x] Run tests (683 passed), save checkpoint, deliver
