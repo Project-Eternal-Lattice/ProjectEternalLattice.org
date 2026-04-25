@@ -2866,3 +2866,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add text mirror /api/text/geometry endpoint (full paper content, added to toeOrder)
 - [x] Generate hero artwork for the Geometry page (cosmic Penrose diamond with fiber bundle topology)
 - [x] Cross-link Geometry predictions into Predictions Dashboard (sourceLink on 11 existing + 4 new AG.10 predictions: T-007, T-008, A-008, A-009)
+
+### Phase 6 Enhancements Round 2: Predictions Filter + PDF
+- [x] Add "Geometry" source filter tag to Predictions Dashboard for AG.10 predictions (Source: filter row with AG.10 Geometry count)
+- [x] Generate downloadable PDF of the Geometry of Consciousness Depth paper (hosted on CDN, download button in hero section)
+- [x] Save checkpoint and deliver

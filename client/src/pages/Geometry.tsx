@@ -763,6 +763,21 @@ export default function Geometry() {
               </span>
             </div>
           </ScrollReveal>
+
+          <ScrollReveal variant="fadeUp" delay={0.5}>
+            <div className="mt-8">
+              <a
+                href="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/geometry-of-consciousness-depth-AG10_80c56be1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-400/30 text-purple-300 hover:bg-purple-500/20 hover:text-purple-200 transition-colors text-sm font-medium"
+              >
+                <FileText className="w-4 h-4" />
+                Download PDF
+                <ExternalLink className="w-3 h-3 opacity-60" />
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
