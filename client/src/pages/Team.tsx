@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import RelatedContent from "@/components/RelatedContent";
 
+
 const teamMembers = [
   {
     id: "ken",

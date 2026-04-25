@@ -2887,3 +2887,17 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 ### Phase 6 Enhancements Round 4: SCAP Meta + Calculator Presets
 - [x] Update SCAP Twitter Card meta tags to X branding (comment updated, title enhanced with project name)
 - [x] Add pre-filled substance quick-select buttons to √2 dose-response calculator (6 presets: Psilocybin 25mg, DMT 30mg, LSD 100μg, Mescaline 200mg, 5-MeO-DMT 8mg, Ketamine 75mg)
+
+### Homepage Background Extension
+- [x] Extend parallax sacred geometry background to cover the entire homepage, not just the hero section
+
+### Category Wayfinding Backgrounds (Full-Page, All Pages)
+- [x] Create CategoryBackground wrapper in App.tsx routing for automatic background assignment (CategoryLayout.tsx + App.tsx integration)
+- [x] Explore category: Constellation Map on StartHere, HowWeKnow, FiveMinuteSummary, Skeptics, Claims, RefereePacket, Falsify, Predictions, ConsilientPatterns, AGMap
+- [x] Theory category: Geometric Wireframe on Theory, Read, ReadPeekaboo, InheritedEmber, PopcornParadox, LensInAction, SacredGeometry, Geometry, SpiralDynamics, Glossary, Bibliography, Economics
+- [x] Wisdom category: Flowing Aurora on AncientWisdom, SacredTexts, EmotionalWealth, RaMaterial, RaDecoded, RaLibrary, Reflections, MoralAnchor, Mirror
+- [x] Practice category: Breathing Circles on Practices, SCAP, Recognition, Seeds, Progress, Safety, Profile, PracticeChallenge, PracticeQuiz
+- [x] Community category: Neural Network on Team, Team/:slug, Mission, Testimonials, Videos, Dialectic
+- [x] AI Lab category: Matrix Rain on ForAI, Nexus, NexusInteractive, NexusLog, AIMemoryLab, ConsciousnessCollective
+- [x] Clean up duplicate per-page hero backgrounds (removed from StartHere, Theory, AncientWisdom, Practices, Team)
+- [x] Homepage keeps its own unique full-page LatticeVisualization + ParticleField (no category overlay)

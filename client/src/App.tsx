@@ -69,6 +69,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
 import Breadcrumbs from "./components/Breadcrumbs";
+import CategoryLayout from "./components/CategoryLayout";
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -96,6 +97,7 @@ function Router() {
       <Navbar />
       <Breadcrumbs />
       <main id="main-content" className="flex-grow" tabIndex={-1}>
+        <CategoryLayout>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />
@@ -160,6 +162,7 @@ function Router() {
           <Route path="/the-mirror" component={TheMirror} />
           <Route component={NotFound} />
         </Switch>
+        </CategoryLayout>
       </main>
       <Footer />
     </div>

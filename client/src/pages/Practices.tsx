@@ -20,6 +20,7 @@ import {
 import { Link } from "wouter";
 import RelatedContent from "@/components/RelatedContent";
 
+
 interface Practice {
   id: string;
   name: string;
