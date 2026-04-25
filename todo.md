@@ -2818,18 +2818,19 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add to search index
 
 #### Consilient Patterns Page
-- [ ] Create /consilient-patterns page cataloging cross-domain pattern matches
-- [ ] Include: pattern in our framework, matching pattern in other domain, why interesting, current status
-- [ ] Add graduation pathway explanation (how patterns earn promotion to core framework)
-- [ ] Seed with initial patterns from Resonance: economics, memetics, beauty/aesthetics
-- [ ] Add bidirectional cross-reference footnotes in core pages (Theory, Inherited Ember, etc.)
-- [ ] Add route to App.tsx and navigation
-- [ ] Add to search index
+- [x] Create /consilient-patterns page cataloging cross-domain pattern matches (6 initial patterns)
+- [x] Include: pattern in our framework, matching pattern in other domain, why interesting, current status
+- [x] Add graduation pathway explanation (Noted → Investigating → Formally Derived → Graduated)
+- [x] Seed with initial patterns: economics (creative destruction), memetics, aesthetics, Hyundai Principle, symmetry breaking, Kuramoto synchronization
+- [x] Add cross-references in each pattern card linking back to core pages (Theory, Inherited Ember, Predictions, How We Know)
+- [ ] Add inline footnote markers in core pages pointing to Consilient Patterns (future enhancement)
+- [x] Add route to App.tsx and navigation (Explore category)
+- [x] Add to search index
 
 #### Predictions Dashboard Updates
-- [ ] Split Neighbors Hypothesis into component claims with individual tier labels
-- [ ] Update Phase Transition prediction: mechanism=Tier 1, timing claim=Tier 3
-- [ ] Update PLCR references to WCS (Watts Connectedness Scale) with exploratory PLCR note
+- [x] Split Neighbors Hypothesis into component claims: Detection Problem (Tier 2) + Nuclear Timeline (Tier 3)
+- [ ] Update Phase Transition prediction: mechanism=Tier 1, timing claim=Tier 3 (no Phase Transition entry exists yet — add in future)
+- [x] Update PLCR reference: noted WCS replacement per Muse Spark resolution
 - [ ] Acknowledge consciousness definition self-reference as feature in methodology section
 
 #### Text Mirrors
