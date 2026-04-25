@@ -23,6 +23,7 @@ import { Link } from "wouter";
 // Genesis seeds are placed elsewhere in the site
 import RelatedContent from "@/components/RelatedContent";
 
+
 interface Tradition {
   id: string;
   name: string;

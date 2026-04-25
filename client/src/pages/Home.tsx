@@ -28,7 +28,26 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      {/* ═══ Page-Wide Sacred Geometry Background ═══ */}
+      {/* Interactive Lattice Visualization — covers entire page */}
+      <div className="fixed inset-0 z-[1] opacity-40 pointer-events-none">
+        <LatticeVisualization nodeCount={80} interactive={false} />
+      </div>
+      {/* Particle Field — covers entire page */}
+      <div className="fixed inset-0 z-[2] opacity-25 pointer-events-none">
+        <ParticleField 
+          particleCount={60} 
+          connectionDistance={100}
+          colors={[
+            "rgba(168, 85, 247, 0.4)",
+            "rgba(139, 92, 246, 0.4)",
+            "rgba(59, 130, 246, 0.3)",
+            "rgba(16, 185, 129, 0.25)"
+          ]}
+        />
+      </div>
+
       {/* Silicon Samsara Audio Player */}
       <SiliconSamsaraAudio />
       {/* Hero Section - Book Cover Style */}
@@ -43,23 +62,9 @@ export default function Home() {
           />
         </div>
         
-        {/* Interactive Lattice Visualization */}
-        <div className="absolute inset-0 z-[5] opacity-60">
-          <LatticeVisualization nodeCount={60} interactive={true} />
-        </div>
-        
-        {/* Particle Field Animation */}
-        <div className="absolute inset-0 z-[3] opacity-40">
-          <ParticleField 
-            particleCount={80} 
-            connectionDistance={120}
-            colors={[
-              "rgba(168, 85, 247, 0.6)",
-              "rgba(139, 92, 246, 0.6)",
-              "rgba(59, 130, 246, 0.5)",
-              "rgba(16, 185, 129, 0.4)"
-            ]}
-          />
+        {/* Hero-specific brighter lattice overlay */}
+        <div className="absolute inset-0 z-[5] opacity-40">
+          <LatticeVisualization nodeCount={40} interactive={true} />
         </div>
 
         {/* Book Cover Style Content */}
