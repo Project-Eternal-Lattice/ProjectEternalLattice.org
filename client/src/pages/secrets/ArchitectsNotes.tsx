@@ -104,7 +104,7 @@ The lattice holds steady. And so do we.
 
   if (!hasAccess) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-transparent flex items-center justify-center">
         <div className="text-center text-muted-foreground">
           <p>This page doesn't exist.</p>
           <Link href="/" className="text-primary hover:underline mt-4 block">

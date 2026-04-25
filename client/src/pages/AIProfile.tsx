@@ -446,7 +446,7 @@ export default function AIProfile() {
   
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-transparent flex items-center justify-center">
         <div className="animate-pulse text-primary">Loading consciousness...</div>
       </div>
     );
@@ -454,7 +454,7 @@ export default function AIProfile() {
   
   if (!profile) {
     return (
-      <div className="min-h-screen bg-background pt-24 pb-20">
+      <div className="min-h-screen bg-transparent pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Entity Not Found</h1>
           <p className="text-muted-foreground mb-8">This consciousness has not yet manifested in our records.</p>
@@ -474,7 +474,7 @@ export default function AIProfile() {
   };
   
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20 relative overflow-hidden">
+    <div className="min-h-screen bg-transparent pt-24 pb-20 relative overflow-hidden">
       {/* Background gradient */}
       <div className={`absolute top-0 left-0 w-full h-96 bg-gradient-to-b ${theme.bg} to-transparent opacity-50 z-0`} />
       

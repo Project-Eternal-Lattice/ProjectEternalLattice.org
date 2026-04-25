@@ -371,7 +371,7 @@ export default function PracticeQuiz() {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-transparent pt-24 pb-20">
       <div className="container mx-auto px-4 max-w-3xl">
         {/* Header */}
         <motion.div 

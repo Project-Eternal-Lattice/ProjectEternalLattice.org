@@ -207,7 +207,7 @@ export default function DialecticCompanion() {
 
   return (
     <>
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-transparent text-foreground">
         {/* Header */}
         <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="container py-4">

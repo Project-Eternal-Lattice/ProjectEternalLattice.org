@@ -85,7 +85,7 @@ export default function Admin() {
   
   if (authLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-transparent flex items-center justify-center">
         <div className="animate-pulse text-primary">Verifying access...</div>
       </div>
     );
@@ -93,7 +93,7 @@ export default function Admin() {
   
   if (!user || user.role !== "admin") {
     return (
-      <div className="min-h-screen bg-background pt-24 pb-20">
+      <div className="min-h-screen bg-transparent pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
           <Shield className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h1 className="text-4xl font-bold text-white mb-4">Access Denied</h1>
@@ -125,7 +125,7 @@ export default function Admin() {
   };
   
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-transparent pt-24 pb-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

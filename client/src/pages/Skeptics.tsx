@@ -175,7 +175,7 @@ export default function Skeptics() {
   const testableCount = KILL_CRITERIA.filter(k => k.status === "testable").length;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-red-900/20 via-background to-background" />

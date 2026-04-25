@@ -526,7 +526,7 @@ export default function LensInAction() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-foreground overflow-x-hidden">
 
       {/* ═══════════════════════════════════════════════════════════
           HERO

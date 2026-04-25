@@ -306,7 +306,7 @@ export default function Falsify() {
   const heroInView = useInView(heroRef, { once: true });
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       <Breadcrumbs />
 
       {/* Hero Section */}

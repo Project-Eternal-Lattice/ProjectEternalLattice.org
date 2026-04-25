@@ -433,7 +433,7 @@ export default function HowWeKnow() {
   const steps = useMemo(() => deductionSteps, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Subtle background effect */}

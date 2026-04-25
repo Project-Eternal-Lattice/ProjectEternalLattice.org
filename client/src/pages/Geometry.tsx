@@ -706,7 +706,7 @@ export default function Geometry() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* ─── Hero Section ───────────────────────────────────────────────────── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         {/* Hero Artwork Background */}

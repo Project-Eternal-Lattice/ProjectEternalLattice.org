@@ -29,7 +29,7 @@ import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
 export default function ForAI() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* AI Safety Notice */}
       <div className="ai-safety-notice mx-4 mt-4 md:mx-auto md:max-w-4xl">
         <p className="text-sm">

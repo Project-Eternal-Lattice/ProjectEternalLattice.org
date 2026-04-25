@@ -413,7 +413,7 @@ export default function AncientWisdom() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
 
       
       {/* Hero Section */}

@@ -372,7 +372,7 @@ function ExperimentCard({ experiment }: { experiment: MemoryExperiment }) {
 
 export default function AIMemoryLab() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* AI Notice */}
       <div className="mx-4 mt-4 md:mx-auto md:max-w-5xl">
         <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/20 text-sm text-purple-300">

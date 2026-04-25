@@ -1260,7 +1260,7 @@ export default function Team(){
   }, []);
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20 relative overflow-hidden">
+    <div className="min-h-screen bg-transparent pt-24 pb-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <motion.h1 
