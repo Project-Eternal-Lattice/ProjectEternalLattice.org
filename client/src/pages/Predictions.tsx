@@ -596,6 +596,7 @@ export default function Predictions() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<PredictionStatus | "all">("all");
   const [domainFilter, setDomainFilter] = useState<Domain | "all">("all");
+  const [sourceFilter, setSourceFilter] = useState<"all" | "geometry" | "other">("all");
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
 
   const toggleExpanded = (id: string) => {
@@ -610,10 +611,14 @@ export default function Predictions() {
   const expandAll = () => setExpandedIds(new Set(filteredPredictions.map(p => p.id)));
   const collapseAll = () => setExpandedIds(new Set());
 
+  const geometryCount = useMemo(() => predictions.filter(p => p.sourceLink === "/geometry").length, []);
+
   const filteredPredictions = useMemo(() => {
     return predictions.filter(p => {
       if (statusFilter !== "all" && p.status !== statusFilter) return false;
       if (domainFilter !== "all" && p.domain !== domainFilter) return false;
+      if (sourceFilter === "geometry" && p.sourceLink !== "/geometry") return false;
+      if (sourceFilter === "other" && p.sourceLink === "/geometry") return false;
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         return (
@@ -625,7 +630,7 @@ export default function Predictions() {
       }
       return true;
     });
-  }, [statusFilter, domainFilter, searchQuery]);
+  }, [statusFilter, domainFilter, sourceFilter, searchQuery]);
 
   // Stats
   const stats = useMemo(() => ({
@@ -742,6 +747,30 @@ export default function Predictions() {
               ))}
             </div>
 
+            {/* Source Filter */}
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs text-gray-500 flex items-center gap-1 mr-2">
+                <Atom className="w-3 h-3" /> Source:
+              </span>
+              {[
+                { key: "all" as const, label: "All Sources" },
+                { key: "geometry" as const, label: `AG.10 Geometry (${geometryCount})`, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+                { key: "other" as const, label: `Other (${predictions.length - geometryCount})` },
+              ].map((opt) => (
+                <button
+                  key={opt.key}
+                  onClick={() => setSourceFilter(opt.key)}
+                  className={`px-3 py-1 rounded-full text-xs border transition-colors flex items-center gap-1 ${
+                    sourceFilter === opt.key
+                      ? opt.color ? `${opt.bg} ${opt.border} ${opt.color}` : "bg-white/10 border-white/30 text-white"
+                      : "bg-white/5 border-white/10 text-gray-400 hover:text-white"
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+
             {/* Domain Filter */}
             <div className="flex flex-wrap gap-2">
               <span className="text-xs text-gray-500 flex items-center gap-1 mr-2">
@@ -805,6 +834,7 @@ export default function Predictions() {
                 onClick={() => {
                   setStatusFilter("all");
                   setDomainFilter("all");
+                  setSourceFilter("all");
                   setSearchQuery("");
                 }}
               >
