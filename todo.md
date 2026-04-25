@@ -2876,3 +2876,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Geometry paper content to the Nexus /for-ai AI-readable mirror page (14th endpoint, updated counts)
 - [x] Build interactive √2 dose-response calculator on the Geometry page (substance/dose/unit inputs, SVG curve, math display, falsification criterion)
 - [x] Run tests (683 passed), save checkpoint, deliver
+
+### Social Links Fix
+- [x] Remove Facebook social link (removed from SocialShare, SCAP, floating sidebar)
+- [x] Update Twitter bird icon to X logo across the site (Navbar, Footer, SocialShare, SCAP — all using custom SVG 𝕏 path)
+
+### Homepage Tagline Fix
+- [x] Update "Not physics — consciousness" tagline to reflect consciousness-first theory grounded in physics, math, science, philosophy, and religion

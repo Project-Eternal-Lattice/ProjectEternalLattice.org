@@ -105,7 +105,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Not physics — consciousness. The unified field from which all reality emerges.
+              A consciousness-first theory grounded in physics, mathematics, science, philosophy, and religion.
             </motion.p>
 
             {/* Second Infinity Symbol */}

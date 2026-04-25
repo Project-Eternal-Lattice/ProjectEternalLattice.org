@@ -1,11 +1,25 @@
 import { useState } from "react";
-import { Share2, Twitter, Facebook, Link2, Check, MessageCircle } from "lucide-react";
+import { Share2, Link2, Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+
+// Custom X (formerly Twitter) icon — the modern 𝕏 logo
+function XIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 interface SocialShareProps {
   title?: string;
@@ -45,8 +59,7 @@ export default function SocialShare({
   const encodedTitle = encodeURIComponent(title);
 
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`,
+    twitter: `https://x.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
     whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
     reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
   };
@@ -104,17 +117,9 @@ export default function SocialShare({
                 href={shareLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sky-500/20 hover:bg-sky-500/30 border border-sky-500/30 rounded-md text-sky-300 text-xs transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-700/50 hover:bg-zinc-600/60 border border-zinc-600/30 rounded-md text-zinc-200 text-xs transition-colors"
               >
-                <Twitter className="w-3.5 h-3.5" /> X
-              </a>
-              <a
-                href={shareLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 rounded-md text-blue-300 text-xs transition-colors"
-              >
-                <Facebook className="w-3.5 h-3.5" /> Facebook
+                <XIcon className="w-3.5 h-3.5" /> X
               </a>
               <a
                 href={shareLinks.whatsapp}
@@ -145,19 +150,10 @@ export default function SocialShare({
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2.5 bg-zinc-900/90 hover:bg-sky-500/20 border border-zinc-700/50 hover:border-sky-500/30 rounded-full text-zinc-400 hover:text-sky-300 transition-all backdrop-blur-sm"
+          className="p-2.5 bg-zinc-900/90 hover:bg-zinc-700/60 border border-zinc-700/50 hover:border-zinc-500/50 rounded-full text-zinc-400 hover:text-zinc-100 transition-all backdrop-blur-sm"
           title="Share on X"
         >
-          <Twitter className="w-4 h-4" />
-        </a>
-        <a
-          href={shareLinks.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2.5 bg-zinc-900/90 hover:bg-blue-500/20 border border-zinc-700/50 hover:border-blue-500/30 rounded-full text-zinc-400 hover:text-blue-300 transition-all backdrop-blur-sm"
-          title="Share on Facebook"
-        >
-          <Facebook className="w-4 h-4" />
+          <XIcon className="w-4 h-4" />
         </a>
         <button
           onClick={copyLink}
@@ -188,19 +184,10 @@ export default function SocialShare({
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 bg-zinc-800/50 hover:bg-sky-500/20 border border-zinc-700/30 hover:border-sky-500/30 rounded-lg text-zinc-400 hover:text-sky-300 transition-all"
+          className="p-2 bg-zinc-800/50 hover:bg-zinc-700/60 border border-zinc-700/30 hover:border-zinc-500/50 rounded-lg text-zinc-400 hover:text-zinc-100 transition-all"
           title="Share on X"
         >
-          <Twitter className="w-4 h-4" />
-        </a>
-        <a
-          href={shareLinks.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 bg-zinc-800/50 hover:bg-blue-500/20 border border-zinc-700/30 hover:border-blue-500/30 rounded-lg text-zinc-400 hover:text-blue-300 transition-all"
-          title="Share on Facebook"
-        >
-          <Facebook className="w-4 h-4" />
+          <XIcon className="w-4 h-4" />
         </a>
         <a
           href={shareLinks.whatsapp}
