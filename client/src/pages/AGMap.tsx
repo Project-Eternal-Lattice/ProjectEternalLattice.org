@@ -6,7 +6,7 @@ import AGDependencyGraph from "@/components/AGDependencyGraph";
 
 export default function AGMap() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Header */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-violet-950/20 to-background" />

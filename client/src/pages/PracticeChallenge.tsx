@@ -352,7 +352,7 @@ export default function PracticeChallenge() {
 
   if (showInstructions) {
     return (
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-transparent text-foreground">
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-background to-background" />
@@ -439,7 +439,7 @@ export default function PracticeChallenge() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Progress Header */}
       <section className="py-8 border-b border-white/10">
         <div className="container">

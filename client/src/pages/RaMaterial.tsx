@@ -83,7 +83,7 @@ export default function RaMaterial() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-transparent pt-24 pb-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

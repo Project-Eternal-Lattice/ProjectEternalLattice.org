@@ -643,7 +643,7 @@ export default function Predictions() {
   }), []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Hero */}
       <section className="relative py-20 md:py-28 bg-gradient-to-b from-[#0a1628] via-[#0d1b2a] to-background overflow-hidden">
         <div className="absolute inset-0 opacity-10">

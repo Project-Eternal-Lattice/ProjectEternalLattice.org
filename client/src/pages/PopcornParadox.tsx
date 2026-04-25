@@ -45,7 +45,7 @@ export default function PopcornParadox() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-foreground overflow-x-hidden">
 
       {/* ═══════════════════════════════════════════════════════════════
           HERO — The Shepherd's Moment

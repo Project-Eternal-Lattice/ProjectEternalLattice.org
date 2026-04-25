@@ -126,7 +126,7 @@ export default function ProgressPage() {
   // Not logged in state
   if (!authLoading && !isAuthenticated) {
     return (
-      <div className="min-h-screen bg-background pt-24 pb-20">
+      <div className="min-h-screen bg-transparent pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -152,7 +152,7 @@ export default function ProgressPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-transparent pt-24 pb-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

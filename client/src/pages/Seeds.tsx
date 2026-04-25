@@ -214,7 +214,7 @@ export default function Seeds() {
   const progress = (discoveredSeeds.length / totalSeeds) * 100;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-transparent text-foreground">
       {/* Header */}
       <header className="border-b border-white/10 bg-background/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

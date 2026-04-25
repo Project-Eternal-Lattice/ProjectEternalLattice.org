@@ -79,7 +79,7 @@ You're not becoming enlightened. You're remembering that you always were.`,
 
   if (!hasAccess) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-transparent flex items-center justify-center">
         <div className="text-center text-muted-foreground">
           <Lock className="w-8 h-8 mx-auto mb-4 opacity-50" />
           <p>This page doesn't exist.</p>

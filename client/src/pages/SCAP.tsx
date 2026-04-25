@@ -350,7 +350,7 @@ export default function SCAP() {
   // Landing view
   if (!started) {
     return (
-      <div className="min-h-screen bg-background pt-24 pb-20">
+      <div className="min-h-screen bg-transparent pt-24 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -440,7 +440,7 @@ export default function SCAP() {
     const insight = getOverallInsight();
     
     return (
-      <div className="min-h-screen bg-background pt-24 pb-20">
+      <div className="min-h-screen bg-transparent pt-24 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -599,7 +599,7 @@ export default function SCAP() {
 
   // Assessment view
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-transparent pt-24 pb-20">
       <div className="container mx-auto px-4 max-w-3xl">
         {/* Progress Header */}
         <div className="mb-8">

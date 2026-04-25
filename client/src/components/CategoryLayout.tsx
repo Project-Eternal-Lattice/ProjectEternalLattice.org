@@ -126,20 +126,20 @@ export default function CategoryLayout({ children }: CategoryLayoutProps) {
   }
 
   return (
-    <div className="relative">
-      {/* Full-page category background */}
-      <div className="fixed inset-0 pointer-events-none z-0">
+    <>
+      {/* Full-page category background — fixed overlay between body bg and content */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
         <AnimatedPageBackground
           theme={theme}
-          opacity={0.15}
+          opacity={0.5}
           height="100%"
         />
       </div>
       {/* Page content on top */}
-      <div className="relative z-10">
+      <div className="relative" style={{ zIndex: 2 }}>
         {children}
       </div>
-    </div>
+    </>
   );
 }
 
