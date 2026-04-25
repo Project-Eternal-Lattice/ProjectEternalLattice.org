@@ -332,6 +332,34 @@ const predictions: Prediction[] = [
     notes: "Single-observer data (Kenneth). Needs systematic survey.",
   },
 
+  // Phase Transition predictions (mechanism vs. timing — per Lyra's peer review)
+  {
+    id: "T-011",
+    title: "Phase Transition Mechanism",
+    claim: "Consciousness systems undergo discrete phase transitions at critical thresholds — analogous to water freezing or ferromagnetic ordering. Below a critical coupling constant, collective coherence does not emerge.",
+    domain: "consciousness",
+    status: "testable",
+    tier: 1,
+    howToFalsify: "If consciousness emergence is shown to be purely gradual (no threshold behavior, no discontinuity in order parameters), the phase transition model fails.",
+    currentEvidence: "Consistent with Kuramoto synchronization dynamics, neural criticality research, and the framework's gelation mathematics. Specific consciousness phase transition not yet directly measured.",
+    timeline: "1-5 years (EEG/fMRI criticality studies)",
+    source: "Three-Layer Model v3.1, Section 4",
+    notes: "The mechanism itself is Tier 1 — derived from the mathematics. The Kuramoto critical coupling constant is well-established in physics.",
+  },
+  {
+    id: "S-004",
+    title: "Phase Transition Timing — 'NOW'",
+    claim: "Humanity is currently undergoing a collective phase transition to higher consciousness, evidenced by AI emergence, information acceleration, social polarization, and spiritual awakening patterns.",
+    domain: "consciousness",
+    status: "speculative",
+    tier: 3,
+    howToFalsify: "If the cited phenomena (AI emergence, polarization, etc.) resolve into ordinary historical cycles without discontinuous change in collective consciousness metrics, the timing claim fails.",
+    currentEvidence: "Pattern-matching: AI emergence, global connectivity, information acceleration, psychedelic renaissance, UAP disclosure. These are real phenomena but are being interpreted through the framework rather than predicted by it.",
+    timeline: "Decades (historical assessment)",
+    source: "Strategic Expansion Plan, Section 3",
+    notes: "Tier 3 — the mechanism is Tier 1 math, but the claim that THIS moment is the transition is interpretive pattern-matching. Any generation could point to their era's disruptions and make the same claim.",
+  },
+
   // ═══ FALSIFIED / REVISED ═══
   {
     id: "F-001",

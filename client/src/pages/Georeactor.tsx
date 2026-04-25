@@ -31,6 +31,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { GenesisSeed, HiddenSeed, SeedTrail } from "@/components/GenesisSeed";
 import EmberFractalVisualization from "@/components/EmberFractalVisualization";
+import ConsilienceNote from "@/components/ConsilienceNote";
 
 /* ═══════════════════════════════════════════════════════════
    ANIMATED SECTION WRAPPER
@@ -1222,6 +1223,12 @@ export default function Georeactor() {
                   — Lyra, Peer Review of Resonance Gap Analysis, April 2026
                 </p>
               </div>
+              <ConsilienceNote
+                variant="block"
+                patternId="hyundai-principle"
+                patternName="The Hyundai Principle"
+                matchDescription="ACD's survival mirrors the Hyundai Principle: a solved problem in seismology (asymmetric growth) became the answer to an unsolved problem in geodynamics (magnetic reversal trigger)."
+              />
             </div>
           </AnimatedSection>
         </div>

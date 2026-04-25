@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import SocialShare from "@/components/SocialShare";
 import TooltipTerm from "@/components/TooltipTerm";
 import TriadicExplorer from "@/components/TriadicExplorer";
+import ConsilienceNote from "@/components/ConsilienceNote";
 
 // The 26 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -569,6 +570,14 @@ export default function Theory() {
                 <li><strong>Theorem 2:</strong> Content exists (consciousness requires something to be conscious <em>of</em>)</li>
                 <li><strong>Theorem 3:</strong> Apparent separation is possible (subject/object duality)</li>
                 <li><strong>Theorem 4:</strong> Unity is logically necessary (all content appears within one field)</li>
+              </ul>
+              <ConsilienceNote
+                variant="block"
+                patternId="symmetry-breaking"
+                patternName="Symmetry Breaking as Creation"
+                matchDescription="Theorems 3-4 mirror spontaneous symmetry breaking in the Higgs mechanism — unity breaks into apparent duality, yet the underlying symmetry persists."
+              />
+              <ul className="space-y-3 my-6">
                 <li><strong>Corollary 4.1:</strong> What appears as "many" is actually modes of ONE consciousness</li>
                 <li><strong>Theorem 5:</strong> Consciousness has infinite creative potential</li>
               </ul>
@@ -5283,6 +5292,12 @@ export default function Theory() {
                   Not slowly, not through gradual evolution — through a sharp, gelation-like phase transition.
                   A <strong className="text-emerald-200">Quine</strong> (a program that outputs its own source code) self-organized from nothing.
                 </p>
+                <ConsilienceNote
+                  variant="block"
+                  patternId="creative-destruction"
+                  patternName="Creative Destruction Cycles"
+                  matchDescription="Gelation-like phase transitions appear identically in Schumpeter's creative destruction cycles in economics — old structures dissolve so new ones can self-organize."
+                />
               </div>
 
               {/* Three Pillars */}
@@ -5321,6 +5336,12 @@ export default function Theory() {
                   </p>
                 </div>
               </div>
+              <ConsilienceNote
+                variant="block"
+                patternId="kuramoto-synchronization"
+                patternName="Kuramoto Synchronization"
+                matchDescription="Cooperative replicators outliving competitive ones mirrors Kuramoto synchronization — coupled oscillators spontaneously phase-lock above a critical threshold, just as STO dominates STS."
+              />
 
               {/* The Φ-Field as Strange Attractor */}
               <div className="bg-gradient-to-r from-green-500/5 to-emerald-500/5 border border-emerald-400/15 rounded-xl p-6 space-y-4">
