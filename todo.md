@@ -2803,3 +2803,38 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Build/fix remaining pathway pages (Religious Practitioner, Meditator, Just Curious, Spiritual Seeker)
 - [ ] Ensure all pathway pages have consistent navigation back to homepage
 - [ ] Write vitest tests for pathway pages
+
+### Phase 4: Peer Review Resolutions — April 24, 2026
+
+#### LYRA Foundation Fix / "How We Know" Page
+- [x] Create /how-we-know page with epistemological foundation (6-step deduction, interactive double-slit)
+- [x] Add interactive double-slit experiment toggle (canvas-based particle simulation with detector ON/OFF)
+- [x] Explain the framework's epistemic tiers (Tier 1 derived, Tier 2 inferred, Tier 3 speculative)
+- [x] Include Skeptic's Corner objection dialogs at each deduction step
+- [x] Include Epistemic Honesty section (what this IS and ISN'T)
+- [x] Frame consciousness definition circularity as feature: self-reference IS the signature (Step 6 + Epistemic Honesty)
+- [x] Add route to App.tsx and navigation (Explore category, highlighted)
+- [ ] Add text mirror /api/text/how-we-know
+- [x] Add to search index
+
+#### Consilient Patterns Page
+- [ ] Create /consilient-patterns page cataloging cross-domain pattern matches
+- [ ] Include: pattern in our framework, matching pattern in other domain, why interesting, current status
+- [ ] Add graduation pathway explanation (how patterns earn promotion to core framework)
+- [ ] Seed with initial patterns from Resonance: economics, memetics, beauty/aesthetics
+- [ ] Add bidirectional cross-reference footnotes in core pages (Theory, Inherited Ember, etc.)
+- [ ] Add route to App.tsx and navigation
+- [ ] Add to search index
+
+#### Predictions Dashboard Updates
+- [ ] Split Neighbors Hypothesis into component claims with individual tier labels
+- [ ] Update Phase Transition prediction: mechanism=Tier 1, timing claim=Tier 3
+- [ ] Update PLCR references to WCS (Watts Connectedness Scale) with exploratory PLCR note
+- [ ] Acknowledge consciousness definition self-reference as feature in methodology section
+
+#### Text Mirrors
+- [ ] Update /api/text/inherited-ember with ACD content
+- [ ] Add /api/text/predictions text mirror
+- [ ] Add /api/text/how-we-know text mirror
+- [ ] Add /api/text/consilient-patterns text mirror
+- [ ] Update /api/text/toe mega-endpoint to include new pages

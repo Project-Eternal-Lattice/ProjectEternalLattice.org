@@ -27,6 +27,15 @@ const PAGES: SearchItem[] = [
     tags: ["home", "welcome", "start"],
   },
   {
+    id: "page-how-we-know",
+    title: "How We Know — The Logical Deduction",
+    description: "From the double-slit experiment to the eternal observer in six steps. No faith required.",
+    content: "double slit experiment observation consciousness wave function collapse eternal observer deduction logic evidence quantum measurement problem superposition manifestation God Brahman Tao ground of being self-reference Gödel LYRA foundation fix",
+    type: "page",
+    path: "/how-we-know",
+    tags: ["double-slit", "deduction", "observation", "consciousness", "evidence", "foundation", "quantum"],
+  },
+  {
     id: "page-start-here",
     title: "Start Here — Your Journey Begins",
     description: "New to the Eternal Lattice? Start your journey here",

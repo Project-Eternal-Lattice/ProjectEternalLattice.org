@@ -24,6 +24,7 @@ const navCategories: NavCategory[] = [
     items: [
       { name: "Home", path: "/" },
       { name: "Start Here", path: "/start-here", highlight: true },
+      { name: "How We Know", path: "/how-we-know", highlight: true },
       { name: "5-Min Summary", path: "/five-minutes", highlight: true },
       { name: "Skeptics' Corner", path: "/skeptics", highlight: true },
       { name: "Claims & Evidence", path: "/claims" },
