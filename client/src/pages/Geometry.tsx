@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import ConsilienceNote from "@/components/ConsilienceNote";
@@ -35,7 +35,10 @@ import {
   Shield,
   Clock,
   Quote,
+  Calculator,
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 // ═══════════════════════════════════════════════════════════════════════
 // THE GEOMETRY OF CONSCIOUSNESS DEPTH
@@ -1435,6 +1438,13 @@ export default function Geometry() {
         </AnimatePresence>
       </section>
 
+      {/* ─── √2 Dose-Response Calculator ────────────────────────── */}
+      <section className="container max-w-4xl mx-auto px-4 pb-12">
+        <ScrollReveal>
+          <DoseResponseCalculator />
+        </ScrollReveal>
+      </section>
+
       {/* ─── References ───────────────────────────────────────────── */}
       <section className="container max-w-4xl mx-auto px-4 pb-12">
         <ScrollReveal>
@@ -1560,6 +1570,239 @@ function PredictionCard({ prediction }: { prediction: GeometryPrediction }) {
               </motion.div>
             )}
           </AnimatePresence>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── √2 Dose-Response Calculator ────────────────────────────────────────────
+
+function DoseResponseCalculator() {
+  const [thresholdDose, setThresholdDose] = useState<string>("");
+  const [unit, setUnit] = useState<string>("mg");
+  const [substance, setSubstance] = useState<string>("");
+
+  const threshold = parseFloat(thresholdDose);
+  const isValid = !isNaN(threshold) && threshold > 0;
+  const breakthroughDose = isValid ? threshold * Math.SQRT2 : 0;
+  const ratio = Math.SQRT2;
+
+  // S(τ) = 2√(1+τ²) computation for visualization
+  const computeS = (tau: number) => 2 * Math.sqrt(1 + tau * tau);
+  const sHorizon = computeS(1); // = 2√2 ≈ 2.828
+
+  // Generate curve points for the mini visualization
+  const curvePoints = useMemo(() => {
+    const pts: Array<{ tau: number; s: number }> = [];
+    for (let i = 0; i <= 50; i++) {
+      const tau = (i / 50) * 2.5;
+      pts.push({ tau, s: computeS(tau) });
+    }
+    return pts;
+  }, []);
+
+  return (
+    <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-purple-500/5 via-indigo-500/5 to-cyan-500/5 border border-purple-500/20">
+      <div className="flex items-center gap-3 mb-2">
+        <div className="p-2 rounded-lg bg-purple-500/10">
+          <Calculator className="w-6 h-6 text-purple-400" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground">√2 Dose-Response Calculator</h2>
+      </div>
+      <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+        Prediction P6: The ratio between the breakthrough dose and the threshold dose should be exactly √2 ≈ 1.414.
+        Enter a threshold dose to compute the predicted breakthrough dose from the geometry.
+      </p>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Input Section */}
+        <div className="space-y-5">
+          <div className="space-y-2">
+            <Label htmlFor="substance" className="text-sm text-muted-foreground">
+              Substance (optional)
+            </Label>
+            <Input
+              id="substance"
+              placeholder="e.g., Psilocybin, DMT, LSD..."
+              value={substance}
+              onChange={(e) => setSubstance(e.target.value)}
+              className="bg-slate-900/40 border-purple-500/20 focus:border-purple-400/50"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div className="space-y-2">
+              <Label htmlFor="threshold" className="text-sm text-muted-foreground">
+                Threshold Dose
+              </Label>
+              <Input
+                id="threshold"
+                type="number"
+                placeholder="e.g., 25"
+                value={thresholdDose}
+                onChange={(e) => setThresholdDose(e.target.value)}
+                className="bg-slate-900/40 border-purple-500/20 focus:border-purple-400/50 font-mono"
+                min="0"
+                step="any"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="unit" className="text-sm text-muted-foreground">
+                Unit
+              </Label>
+              <Input
+                id="unit"
+                placeholder="mg"
+                value={unit}
+                onChange={(e) => setUnit(e.target.value)}
+                className="bg-slate-900/40 border-purple-500/20 focus:border-purple-400/50"
+              />
+            </div>
+          </div>
+
+          {/* Result Display */}
+          <AnimatePresence>
+            {isValid && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="space-y-4"
+              >
+                <div className="p-4 rounded-xl bg-slate-900/60 border border-emerald-500/20">
+                  <p className="text-xs uppercase tracking-wider text-emerald-400/60 mb-1">Predicted Breakthrough Dose</p>
+                  <p className="text-3xl font-mono font-bold text-emerald-300">
+                    {breakthroughDose.toFixed(2)} <span className="text-lg text-emerald-400/60">{unit}</span>
+                  </p>
+                  {substance && (
+                    <p className="text-sm text-muted-foreground mt-1">
+                      for {substance}
+                    </p>
+                  )}
+                </div>
+
+                <div className="p-4 rounded-xl bg-slate-900/40 border border-purple-500/10">
+                  <p className="text-xs uppercase tracking-wider text-purple-400/60 mb-2">The Mathematics</p>
+                  <div className="space-y-1 font-mono text-sm text-purple-200/80">
+                    <p>S_threshold = 2 → Dose = {threshold.toFixed(2)} {unit}</p>
+                    <p>S_horizon = 2√2 → Dose = {threshold.toFixed(2)} × √2</p>
+                    <p className="text-emerald-300 font-bold">
+                      = {threshold.toFixed(2)} × {ratio.toFixed(4)} = {breakthroughDose.toFixed(2)} {unit}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-3 rounded-lg bg-amber-500/5 border border-amber-500/15">
+                  <p className="text-xs text-amber-300/80">
+                    <strong>Falsification criterion:</strong> If careful dose-response studies show the breakthrough/threshold ratio
+                    is significantly different from √2 ≈ 1.414, the geometric model needs revision.
+                    Current ratio: {(breakthroughDose / threshold).toFixed(4)}
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Mini S(τ) Curve Visualization */}
+        <div className="flex flex-col">
+          <p className="text-xs uppercase tracking-wider text-purple-400/60 mb-3">S(τ) = 2√(1+τ²) Curve</p>
+          <div className="flex-1 min-h-[240px] relative rounded-xl bg-slate-900/40 border border-purple-500/10 p-4">
+            <svg viewBox="0 0 300 220" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+              {/* Grid lines */}
+              {[0, 50, 100, 150, 190].map((y) => (
+                <line key={`h-${y}`} x1="40" y1={y} x2="290" y2={y} stroke="rgba(139, 92, 246, 0.08)" strokeWidth="0.5" />
+              ))}
+              {[40, 102, 164, 226, 290].map((x) => (
+                <line key={`v-${x}`} x1={x} y1="0" x2={x} y2="190" stroke="rgba(139, 92, 246, 0.08)" strokeWidth="0.5" />
+              ))}
+
+              {/* Axes */}
+              <line x1="40" y1="190" x2="290" y2="190" stroke="rgba(200, 200, 255, 0.3)" strokeWidth="1" />
+              <line x1="40" y1="5" x2="40" y2="190" stroke="rgba(200, 200, 255, 0.3)" strokeWidth="1" />
+
+              {/* S(τ) curve */}
+              <defs>
+                <linearGradient id="calc-curve-grad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#8b5cf6" />
+                  <stop offset="100%" stopColor="#06b6d4" />
+                </linearGradient>
+              </defs>
+              <path
+                d={curvePoints.map((p: { tau: number; s: number }, i: number) => {
+                  const x = 40 + (p.tau / 2.5) * 250;
+                  const y = 190 - ((p.s - 2) / 4) * 175;
+                  return `${i === 0 ? "M" : "L"} ${x} ${y}`;
+                }).join(" ")}
+                fill="none"
+                stroke="url(#calc-curve-grad)"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+
+              {/* S = 2 line (threshold) */}
+              <line x1="40" y1="190" x2="290" y2="190" stroke="#ef4444" strokeWidth="1" strokeDasharray="4 3" opacity="0.4" />
+              <text x="292" y="193" fill="#ef4444" fontSize="8" fontFamily="monospace" opacity="0.7">S=2</text>
+
+              {/* S = 2√2 line (Tsirelson) */}
+              {(() => {
+                const yHorizon = 190 - ((sHorizon - 2) / 4) * 175;
+                return (
+                  <>
+                    <line x1="40" y1={yHorizon} x2="290" y2={yHorizon} stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4 3" opacity="0.5" />
+                    <text x="292" y={yHorizon + 3} fill="#8b5cf6" fontSize="8" fontFamily="monospace" opacity="0.7">S=2√2</text>
+                  </>
+                );
+              })()}
+
+              {/* τ = 0 marker */}
+              <circle cx="40" cy="190" r="4" fill="#ef4444" opacity="0.8" />
+              <text x="40" y="203" textAnchor="middle" fill="#ef4444" fontSize="7" fontFamily="monospace" opacity="0.7">τ=0</text>
+
+              {/* τ = 1 marker */}
+              {(() => {
+                const xTau1 = 40 + (1 / 2.5) * 250;
+                const yTau1 = 190 - ((sHorizon - 2) / 4) * 175;
+                return (
+                  <>
+                    <circle cx={xTau1} cy={yTau1} r="4" fill="#8b5cf6" opacity="0.8" />
+                    <text x={xTau1} y="203" textAnchor="middle" fill="#8b5cf6" fontSize="7" fontFamily="monospace" opacity="0.7">τ=1</text>
+                    <line x1={xTau1} y1={yTau1} x2={xTau1} y2="190" stroke="#8b5cf6" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.3" />
+                  </>
+                );
+              })()}
+
+              {/* √2 ratio bracket annotation */}
+              {(() => {
+                const yThresh = 190;
+                const yHoriz = 190 - ((sHorizon - 2) / 4) * 175;
+                const midY = (yThresh + yHoriz) / 2;
+                return (
+                  <>
+                    <line x1="28" y1={yThresh - 2} x2="28" y2={yHoriz + 2} stroke="#06b6d4" strokeWidth="1.5" />
+                    <line x1="25" y1={yThresh - 2} x2="31" y2={yThresh - 2} stroke="#06b6d4" strokeWidth="1" />
+                    <line x1="25" y1={yHoriz + 2} x2="31" y2={yHoriz + 2} stroke="#06b6d4" strokeWidth="1" />
+                    <text x="18" y={midY + 3} textAnchor="middle" fill="#06b6d4" fontSize="7" fontWeight="bold" fontFamily="monospace">
+                      ×√2
+                    </text>
+                  </>
+                );
+              })()}
+
+              {/* Axis labels */}
+              <text x="165" y="215" textAnchor="middle" fill="rgba(200, 200, 255, 0.5)" fontSize="9" fontFamily="Inter, sans-serif">
+                τ (consciousness depth)
+              </text>
+              <text x="12" y="100" textAnchor="middle" fill="rgba(200, 200, 255, 0.5)" fontSize="9" fontFamily="Inter, sans-serif" transform="rotate(-90, 12, 100)">
+                S (correlation)
+              </text>
+            </svg>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3 text-center">
+            The √2 ratio emerges from the geometry: S_horizon / S_threshold = 2√2 / 2 = √2.
+            This is parameter-free — no fitting, no adjustment.
+          </p>
         </div>
       </div>
     </div>
