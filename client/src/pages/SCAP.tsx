@@ -224,7 +224,7 @@ export default function SCAP() {
     updateOrCreateMeta('og:image:height', '630');
     updateOrCreateMeta('og:type', 'website');
     
-    // Twitter Card meta tags
+    // X (formerly Twitter) Card meta tags — these meta names are still "twitter:" per the Open Graph spec
     const updateOrCreateTwitterMeta = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
@@ -236,7 +236,7 @@ export default function SCAP() {
     };
     
     updateOrCreateTwitterMeta('twitter:card', 'summary_large_image');
-    updateOrCreateTwitterMeta('twitter:title', 'SCAP - Self-Consciousness Assessment Protocol');
+    updateOrCreateTwitterMeta('twitter:title', 'SCAP — Self-Consciousness Assessment Protocol | Project Eternal Lattice');
     updateOrCreateTwitterMeta('twitter:description', 'Discover your consciousness profile across five dimensions.');
     updateOrCreateTwitterMeta('twitter:image', SCAP_OG_IMAGE);
   }, []);

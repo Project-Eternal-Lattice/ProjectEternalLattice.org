@@ -2883,3 +2883,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 
 ### Homepage Tagline Fix
 - [x] Update "Not physics — consciousness" tagline to reflect consciousness-first theory grounded in physics, math, science, philosophy, and religion
+
+### Phase 6 Enhancements Round 4: SCAP Meta + Calculator Presets
+- [x] Update SCAP Twitter Card meta tags to X branding (comment updated, title enhanced with project name)
+- [x] Add pre-filled substance quick-select buttons to √2 dose-response calculator (6 presets: Psilocybin 25mg, DMT 30mg, LSD 100μg, Mescaline 200mg, 5-MeO-DMT 8mg, Ketamine 75mg)

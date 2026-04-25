@@ -1610,10 +1610,35 @@ function DoseResponseCalculator() {
         </div>
         <h2 className="text-2xl font-bold text-foreground">√2 Dose-Response Calculator</h2>
       </div>
-      <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+      <p className="text-sm text-muted-foreground mb-4 max-w-2xl">
         Prediction P6: The ratio between the breakthrough dose and the threshold dose should be exactly √2 ≈ 1.414.
         Enter a threshold dose to compute the predicted breakthrough dose from the geometry.
       </p>
+
+      {/* Quick-select substance presets */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        <span className="text-xs text-muted-foreground/60 self-center mr-1">Quick select:</span>
+        {[
+          { name: "Psilocybin", dose: "25", unit: "mg" },
+          { name: "DMT (smoked)", dose: "30", unit: "mg" },
+          { name: "LSD", dose: "100", unit: "μg" },
+          { name: "Mescaline", dose: "200", unit: "mg" },
+          { name: "5-MeO-DMT", dose: "8", unit: "mg" },
+          { name: "Ketamine (IM)", dose: "75", unit: "mg" },
+        ].map((preset) => (
+          <button
+            key={preset.name}
+            onClick={() => {
+              setSubstance(preset.name);
+              setThresholdDose(preset.dose);
+              setUnit(preset.unit);
+            }}
+            className="px-3 py-1.5 text-xs rounded-full border border-purple-500/20 bg-purple-500/5 hover:bg-purple-500/15 hover:border-purple-400/40 text-purple-300 transition-all duration-200"
+          >
+            {preset.name} ({preset.dose} {preset.unit})
+          </button>
+        ))}
+      </div>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Input Section */}
