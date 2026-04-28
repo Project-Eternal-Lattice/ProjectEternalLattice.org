@@ -41,6 +41,7 @@ const navCategories: NavCategory[] = [
       { name: "Falsification Ladder", path: "/falsify", highlight: true },
       { name: "Predictions Dashboard", path: "/predictions", highlight: true },
       { name: "Consilient Patterns", path: "/consilient-patterns", highlight: true },
+      { name: "FAQ", path: "/faq" },
     ],
   },
   {
@@ -91,6 +92,7 @@ const navCategories: NavCategory[] = [
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
       { name: "Dialectic", path: "/dialectic", special: true },
+      { name: "Share Kit", path: "/share" },
     ],
   },
   {

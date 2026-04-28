@@ -60,6 +60,8 @@ import Predictions from "./pages/Predictions";
 import HowWeKnow from "./pages/HowWeKnow";
 import ConsilientPatterns from "./pages/ConsilientPatterns";
 import Geometry from "./pages/Geometry";
+import FAQ from "./pages/FAQ";
+import ShareKit from "./pages/ShareKit";
 import AGMap from "./pages/AGMap";
 // Secret pages - DO NOT add to navigation
 import LatticeWhispers from "./pages/secrets/LatticeWhispers";
@@ -157,6 +159,8 @@ function Router() {
           <Route path="/consilient-patterns" component={ConsilientPatterns} />
           <Route path="/geometry" component={Geometry} />
           <Route path="/ag-map" component={AGMap} />
+          <Route path="/faq" component={FAQ} />
+          <Route path="/share" component={ShareKit} />
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

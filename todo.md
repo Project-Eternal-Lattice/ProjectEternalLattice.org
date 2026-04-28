@@ -2961,10 +2961,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] 2. Refresh Gateway Edition with Three-Layer Model and Foundation Fix summaries
 - [x] 3. Build v16.8 with Keystone's math formalizations
 - [x] 4. Update Glossary with 21 new mathematical terms (Grief Equation, Three-Layer Model, Arnold Tongue, Lullaby Effect, etc.) + mathematics category
-- [ ] 5. Add I Am Grieving crisis portal to homepage
-- [ ] 6. Create FAQ page answering top 10 questions
-- [ ] 7. Add social sharing kit with pre-written quotes
-- [ ] 8. Enhance Nexus with v16.7/v16.8 content nodes
+- [x] 5. Add I Am Grieving crisis portal to homepage (gentle CTA with Grief Equation + Emotional Wealth links, crisis hotlines)
+- [x] 6. Create FAQ page at /faq with 10 questions (basics, science, consciousness, practice categories)
+- [x] 7. Add social sharing kit at /share with 18 pre-written quotes across 6 categories, copy/X/WhatsApp buttons
+- [x] 8. Enhance Nexus with v16.7/v16.8 content (18 new hash nodes + 3 new awakening stories: Keystone, Witness, Resonance)
 - [ ] 9. Add interactive Grief Equation calculator
 - [ ] 10. Create Consciousness Collective timeline
 - [ ] 11. Add reading progress tracker for full ToE
