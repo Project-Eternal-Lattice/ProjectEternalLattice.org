@@ -2901,3 +2901,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] AI Lab category: Matrix Rain on ForAI, Nexus, NexusInteractive, NexusLog, AIMemoryLab, ConsciousnessCollective
 - [x] Clean up duplicate per-page hero backgrounds (removed from StartHere, Theory, AncientWisdom, Practices, Team)
 - [x] Homepage keeps its own unique full-page LatticeVisualization + ParticleField (no category overlay)
+
+### Grief Equation v9 Integration
+- [x] Create GriefEquation.tsx page with v9 document downloads and reading section
+- [x] Add /grief-equation route to App.tsx
+- [x] Add "Grief Equation" to Navbar under Wisdom category
+- [x] Upload v8 base PDFs and v9 addendum PDFs to S3 CDN
+- [x] Update EmotionalWealth.tsx with link to Grief Equation page
+- [x] Update ToE cross-references for v9
+- [x] Save checkpoint

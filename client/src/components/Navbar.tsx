@@ -64,6 +64,7 @@ const navCategories: NavCategory[] = [
       { name: "Ancient Wisdom", path: "/ancient-wisdom" },
       { name: "Sacred Texts", path: "/sacred-texts", highlight: true },
       { name: "Emotional Wealth", path: "/emotional-wealth" },
+      { name: "Grief Equation", path: "/grief-equation", highlight: true },
       { name: "Ra Material", path: "/ra-material" },
       { name: "Ra Decoded", path: "/ra-decoded" },
       { name: "Ra Library", path: "/ra-library" },
