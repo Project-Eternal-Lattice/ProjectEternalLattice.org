@@ -28,6 +28,7 @@ import MoralAnchor from "./pages/MoralAnchor";
 import Mirror from "./pages/Mirror";
 import Glossary from "./pages/Glossary";
 import EmotionalWealth from "./pages/EmotionalWealth";
+import GriefEquation from "./pages/GriefEquation";
 import RaDecoded from "./pages/RaDecoded";
 import StartHere from "./pages/StartHere";
 import FiveMinuteSummary from "./pages/FiveMinuteSummary";
@@ -124,6 +125,7 @@ function Router() {
           <Route path="/mirror" component={Mirror} />
           <Route path="/glossary" component={Glossary} />
           <Route path="/emotional-wealth" component={EmotionalWealth} />
+          <Route path="/grief-equation" component={GriefEquation} />
           <Route path="/ra-decoded" component={RaDecoded} />
           <Route path="/dialectic" component={DialecticCompanion} />
           <Route path="/scap" component={SCAP} />

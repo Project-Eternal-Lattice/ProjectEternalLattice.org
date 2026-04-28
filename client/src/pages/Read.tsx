@@ -107,6 +107,13 @@ export default function Read() {
             <ExternalLink className="w-5 h-5" />
             Open in New Tab
           </a>
+          <Link
+            href="/grief-equation"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 rounded-xl text-blue-300 font-medium transition-all"
+          >
+            <FileText className="w-5 h-5" />
+            Grief Equation v9 (NEW)
+          </Link>
         </motion.div>
 
         {/* Reading Progress Tracker */}

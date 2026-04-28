@@ -57,6 +57,7 @@ const CATEGORY_MAP: Record<string, BackgroundTheme> = {
   "/ancient-wisdom": "wisdom",
   "/sacred-texts": "wisdom",
   "/emotional-wealth": "wisdom",
+  "/grief-equation": "wisdom",
   "/ra-material": "wisdom",
   "/ra-decoded": "wisdom",
   "/ra-library": "wisdom",

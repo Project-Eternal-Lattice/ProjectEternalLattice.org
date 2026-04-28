@@ -288,6 +288,15 @@ const PAGES: SearchItem[] = [
     tags: ["emotions", "wealth", "healing", "love"],
   },
   {
+    id: "page-grief-equation",
+    title: "The Grief Equation",
+    description: "Why losing someone hurts — and why that pain is the price of love",
+    content: "grief equation loss death bereavement mourning pain love attachment bond prediction error damped oscillator lullaby effect betrayal child loss pet loss digital grief emotional bank account v9",
+    type: "page",
+    path: "/grief-equation",
+    tags: ["grief", "loss", "healing", "love", "equations"],
+  },
+  {
     id: "page-moral-anchor",
     title: "The Moral Anchor",
     description: "Ethics grounded in consciousness",
