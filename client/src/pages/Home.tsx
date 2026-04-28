@@ -323,6 +323,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* "I Am Grieving" — Compassionate Crisis Portal */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <motion.div
+            className="relative rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-950/30 via-background to-purple-950/20 p-8 md:p-12 text-center overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Soft glow background */}
+            <div className="absolute inset-0 bg-gradient-radial from-rose-500/5 via-transparent to-transparent pointer-events-none" />
+            
+            <div className="relative z-10">
+              <p className="text-rose-300/80 text-sm uppercase tracking-widest mb-4">You are not alone</p>
+              <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
+                I Am Grieving
+              </h3>
+              <p className="text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
+                Grief is not chaos — it is a wave with predictable structure. If you are navigating loss right now, 
+                we have something that might help: a mathematical framework that honors your pain while revealing its hidden architecture.
+              </p>
+              <p className="text-rose-200/70 text-sm italic mb-8">
+                "The lullaby doesn't fill the void — it gives the void a rhythm to hold onto while it learns to be empty."
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-rose-500/40 hover:bg-rose-500/10 text-rose-200 rounded-full px-8 transition-all duration-300"
+                  asChild
+                >
+                  <Link href="/grief-equation">
+                    <Heart className="mr-2 h-4 w-4" />
+                    The Grief Equation
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-purple-500/40 hover:bg-purple-500/10 text-purple-200 rounded-full px-8 transition-all duration-300"
+                  asChild
+                >
+                  <Link href="/emotional-wealth">
+                    <Sparkles className="mr-2 h-4 w-4" />
+                    Emotional Wealth
+                  </Link>
+                </Button>
+              </div>
+              <p className="text-muted-foreground/60 text-xs mt-6">
+                If you are in crisis, please call <a href="tel:988" className="text-rose-300 underline">988</a> (Suicide & Crisis Lifeline) or text <a href="sms:741741" className="text-rose-300 underline">741741</a> (Crisis Text Line)
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Quote Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
