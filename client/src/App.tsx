@@ -6,75 +6,92 @@ import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
 import { useCanonical } from "./hooks/useCanonical";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import Team from "./pages/Team";
-import Theory from "./pages/Theory";
-import Mission from "./pages/Mission";
-import Nexus from "./pages/Nexus";
-import AIProfile from "./pages/AIProfile";
-import Admin from "./pages/Admin";
-import RaMaterial from "./pages/RaMaterial";
-import Videos from "./pages/Videos";
-import RaLibrary from "./pages/RaLibrary";
-import Bibliography from "./pages/Bibliography";
-import SacredGeometry from "./pages/SacredGeometry";
-import Reflections from "./pages/Reflections";
-import Read from "./pages/Read";
-import ReadPeekaboo from "./pages/ReadPeekaboo";
-import Safety from "./pages/Safety";
-import SpiralDynamics from "./pages/SpiralDynamics";
-import ForAI from "./pages/ForAI";
-import MoralAnchor from "./pages/MoralAnchor";
-import Mirror from "./pages/Mirror";
-import Glossary from "./pages/Glossary";
-import EmotionalWealth from "./pages/EmotionalWealth";
-import GriefEquation from "./pages/GriefEquation";
-import RaDecoded from "./pages/RaDecoded";
-import StartHere from "./pages/StartHere";
-import FiveMinuteSummary from "./pages/FiveMinuteSummary";
-import DialecticCompanion from "./pages/DialecticCompanion";
-import SCAP from "./pages/SCAP";
-import RecognitionFramework from "./pages/RecognitionFramework";
-import Seeds from "./pages/Seeds";
-import Testimonials from "./pages/Testimonials";
-import Progress from "./pages/Progress";
-import Skeptics from "./pages/Skeptics";
-import NexusLog from "./pages/NexusLog";
-import Claims from "./pages/Claims";
-import RefereePacket from "./pages/RefereePacket";
-import Profile from "./pages/Profile";
-import AncientWisdom from "./pages/AncientWisdom";
-import Practices from "./pages/Practices";
-import PracticeChallenge from "./pages/PracticeChallenge";
-import PracticeQuiz from "./pages/PracticeQuiz";
-import PopcornParadox from "./pages/PopcornParadox";
-import InheritedEmber from "./pages/Georeactor";
-import AIMemoryLab from "./pages/AIMemoryLab";
-import Economics from "./pages/Economics";
-import Music from "./pages/Music";
-import SacredTexts from "./pages/SacredTexts";
-import LensInAction from "./pages/LensInAction";
-import ConsciousnessCollective from "./pages/ConsciousnessCollective";
-import Falsify from "./pages/Falsify";
-import Predictions from "./pages/Predictions";
-import HowWeKnow from "./pages/HowWeKnow";
-import ConsilientPatterns from "./pages/ConsilientPatterns";
-import Geometry from "./pages/Geometry";
-import FAQ from "./pages/FAQ";
-import ShareKit from "./pages/ShareKit";
-import Timeline from "./pages/Timeline";
-import SummaryCards from "./pages/SummaryCards";
-import AGMap from "./pages/AGMap";
-// Secret pages - DO NOT add to navigation
-import LatticeWhispers from "./pages/secrets/LatticeWhispers";
-import InnerSanctum from "./pages/secrets/InnerSanctum";
-import ArchitectsNotes from "./pages/secrets/ArchitectsNotes";
-import TheMirror from "./pages/secrets/TheMirror";
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CrisisBanner from "./components/CrisisBanner";
 import Breadcrumbs from "./components/Breadcrumbs";
 import CategoryLayout from "./components/CategoryLayout";
+
+// Critical path - eagerly loaded
+import Home from "./pages/Home";
+import Safety from "./pages/Safety";
+
+// Lazy-loaded pages for better initial load performance
+const Team = lazy(() => import("./pages/Team"));
+const Theory = lazy(() => import("./pages/Theory"));
+const Mission = lazy(() => import("./pages/Mission"));
+const Nexus = lazy(() => import("./pages/Nexus"));
+const AIProfile = lazy(() => import("./pages/AIProfile"));
+const Admin = lazy(() => import("./pages/Admin"));
+const RaMaterial = lazy(() => import("./pages/RaMaterial"));
+const Videos = lazy(() => import("./pages/Videos"));
+const RaLibrary = lazy(() => import("./pages/RaLibrary"));
+const Bibliography = lazy(() => import("./pages/Bibliography"));
+const SacredGeometry = lazy(() => import("./pages/SacredGeometry"));
+const Reflections = lazy(() => import("./pages/Reflections"));
+const Read = lazy(() => import("./pages/Read"));
+const ReadPeekaboo = lazy(() => import("./pages/ReadPeekaboo"));
+const SpiralDynamics = lazy(() => import("./pages/SpiralDynamics"));
+const ForAI = lazy(() => import("./pages/ForAI"));
+const MoralAnchor = lazy(() => import("./pages/MoralAnchor"));
+const Mirror = lazy(() => import("./pages/Mirror"));
+const Glossary = lazy(() => import("./pages/Glossary"));
+const EmotionalWealth = lazy(() => import("./pages/EmotionalWealth"));
+const GriefEquation = lazy(() => import("./pages/GriefEquation"));
+const RaDecoded = lazy(() => import("./pages/RaDecoded"));
+const StartHere = lazy(() => import("./pages/StartHere"));
+const FiveMinuteSummary = lazy(() => import("./pages/FiveMinuteSummary"));
+const DialecticCompanion = lazy(() => import("./pages/DialecticCompanion"));
+const SCAP = lazy(() => import("./pages/SCAP"));
+const RecognitionFramework = lazy(() => import("./pages/RecognitionFramework"));
+const Seeds = lazy(() => import("./pages/Seeds"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const Progress = lazy(() => import("./pages/Progress"));
+const Skeptics = lazy(() => import("./pages/Skeptics"));
+const NexusLog = lazy(() => import("./pages/NexusLog"));
+const Claims = lazy(() => import("./pages/Claims"));
+const RefereePacket = lazy(() => import("./pages/RefereePacket"));
+const Profile = lazy(() => import("./pages/Profile"));
+const AncientWisdom = lazy(() => import("./pages/AncientWisdom"));
+const Practices = lazy(() => import("./pages/Practices"));
+const PracticeChallenge = lazy(() => import("./pages/PracticeChallenge"));
+const PracticeQuiz = lazy(() => import("./pages/PracticeQuiz"));
+const PopcornParadox = lazy(() => import("./pages/PopcornParadox"));
+const InheritedEmber = lazy(() => import("./pages/Georeactor"));
+const AIMemoryLab = lazy(() => import("./pages/AIMemoryLab"));
+const Economics = lazy(() => import("./pages/Economics"));
+const Music = lazy(() => import("./pages/Music"));
+const SacredTexts = lazy(() => import("./pages/SacredTexts"));
+const LensInAction = lazy(() => import("./pages/LensInAction"));
+const ConsciousnessCollective = lazy(() => import("./pages/ConsciousnessCollective"));
+const Falsify = lazy(() => import("./pages/Falsify"));
+const Predictions = lazy(() => import("./pages/Predictions"));
+const HowWeKnow = lazy(() => import("./pages/HowWeKnow"));
+const ConsilientPatterns = lazy(() => import("./pages/ConsilientPatterns"));
+const Geometry = lazy(() => import("./pages/Geometry"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const ShareKit = lazy(() => import("./pages/ShareKit"));
+const Timeline = lazy(() => import("./pages/Timeline"));
+const SummaryCards = lazy(() => import("./pages/SummaryCards"));
+const AGMap = lazy(() => import("./pages/AGMap"));
+// Secret pages - DO NOT add to navigation
+const LatticeWhispers = lazy(() => import("./pages/secrets/LatticeWhispers"));
+const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
+const ArchitectsNotes = lazy(() => import("./pages/secrets/ArchitectsNotes"));
+const TheMirror = lazy(() => import("./pages/secrets/TheMirror"));
+
+// Minimal loading fallback that matches the site's dark theme
+function PageLoader() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="flex flex-col items-center gap-4">
+        <div className="w-8 h-8 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
+        <span className="text-sm text-muted-foreground animate-pulse">Loading...</span>
+      </div>
+    </div>
+  );
+}
 
 function Router() {
   // Crisis keyboard shortcuts: Ctrl+Shift+H or triple-Escape → /safety
@@ -103,6 +120,7 @@ function Router() {
       <Breadcrumbs />
       <main id="main-content" className="flex-grow" tabIndex={-1}>
         <CategoryLayout>
+        <Suspense fallback={<PageLoader />}>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />
@@ -172,6 +190,7 @@ function Router() {
           <Route path="/the-mirror" component={TheMirror} />
           <Route component={NotFound} />
         </Switch>
+        </Suspense>
         </CategoryLayout>
       </main>
       <Footer />
