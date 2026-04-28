@@ -2910,3 +2910,16 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update EmotionalWealth.tsx with link to Grief Equation page
 - [x] Update ToE cross-references for v9
 - [x] Save checkpoint
+
+### ToE v16.6 — Grief Equation v9 Integration
+- [x] Read current ToE v16.5 and map Chapter 17.12 insertion points
+- [x] Merge Grief Equation v9 technical addendum into ToE body
+- [x] Merge Grief Equation v9 plain-language content as companion section
+- [x] Update ToE version number to v16.6 throughout
+- [x] Generate ToE v16.6 HTML (PDF failed due to recursion limit on 43K-line doc; HTML is primary format)
+- [x] Upload v16.6 HTML to S3 CDN
+- [x] Update website Read page with v16.6 downloads
+- [x] Update website version references (Read, Theory, Home, WhatsNew, Nexus, QuickAccessFooter, SynchronicityEngine, etc.)
+- [x] Update ToE title page and edition name (The Grief Equation Edition)
+- [x] Verify download links work (HTML download endpoint updated with new S3 URL)
+- [ ] Save checkpoint

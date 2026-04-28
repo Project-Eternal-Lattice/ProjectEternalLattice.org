@@ -882,13 +882,13 @@ describe("AG.27 — The Cosmological Cinema Theorem (Theory Page)", () => {
 });
 
 describe("AG.26/AG.27 — Nexus Page Updates", () => {
-  it("has updated ToE version hash to v16.5", () => {
-    expect(nexusTsx).toContain("t03v16.5tr");
-    expect(nexusTsx).toContain("v16.5");
+  it("has updated ToE version hash to v16.6", () => {
+    expect(nexusTsx).toContain("t03v16.6tr");
+    expect(nexusTsx).toContain("v16.6");
   });
 
-  it("has Triadic Edition label", () => {
-    expect(nexusTsx).toContain("Triadic Edition");
+  it("has Grief Equation Edition label", () => {
+    expect(nexusTsx).toContain("Grief Equation Edition");
   });
 
   it("no longer references v16.2 hash", () => {
