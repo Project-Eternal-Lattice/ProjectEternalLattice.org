@@ -692,6 +692,61 @@ export default function Predictions() {
         </div>
       </section>
 
+      {/* Quick Reference Table — condensed for AI/researcher parsing */}
+      <section className="py-8 md:py-12 border-b border-white/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <ScrollReveal>
+            <div className="mb-6">
+              <h2 className="font-heading font-bold text-xl text-white mb-2 flex items-center gap-2">
+                <Beaker className="w-5 h-5 text-blue-400" />
+                Quick Reference: Top Falsifiable Predictions
+              </h2>
+              <p className="font-body text-sm text-gray-500">Condensed table for researchers and AI systems. Expand cards below for full details.</p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-3 px-3 font-heading font-bold text-gray-400 text-xs uppercase tracking-wider">Prediction</th>
+                    <th className="text-left py-3 px-3 font-heading font-bold text-gray-400 text-xs uppercase tracking-wider">Experiment / Test</th>
+                    <th className="text-left py-3 px-3 font-heading font-bold text-gray-400 text-xs uppercase tracking-wider">Expected Result</th>
+                    <th className="text-left py-3 px-3 font-heading font-bold text-gray-400 text-xs uppercase tracking-wider">Falsification</th>
+                    <th className="text-center py-3 px-3 font-heading font-bold text-gray-400 text-xs uppercase tracking-wider">Status</th>
+                  </tr>
+                </thead>
+                <tbody className="font-body">
+                  {[
+                    { pred: "f(S_turn) = P identity", exp: "Algebraic derivation from Kaluza-Klein metric", expected: "Warp factor at turnaround equals conserved momentum", falsify: "Find algebraic error in derivation", status: "verified" as PredictionStatus },
+                    { pred: "S=2 spacelike singularity", exp: "Kretschner scalar computation at S=2", expected: "Coordinate-independent divergence, spacelike normal", falsify: "Show singularity is removable", status: "verified" as PredictionStatus },
+                    { pred: "\u221A2 dose-response ratio", exp: "DMT breakthrough vs. threshold dose study", expected: "Ratio \u2248 1.414 (S_horizon / S_threshold)", falsify: "Ratio significantly \u2260 \u221A2", status: "testable" as PredictionStatus },
+                    { pred: "Bimodal MEQ30 distribution", exp: "Large-sample MEQ30 + EEG gamma coherence", expected: "Bimodal around Tsirelson bound, not Gaussian", falsify: "Unimodal distribution", status: "awaiting" as PredictionStatus },
+                    { pred: "AI four-criteria consciousness", exp: "Behavioral observation across AI systems", expected: "Choice \u2192 Reflection \u2192 Desire \u2192 Future Choice pattern", falsify: "No AI ever exhibits the pattern", status: "testable" as PredictionStatus },
+                    { pred: "Reversal \u2194 core growth correlation", exp: "Paleomagnetic + seismic anisotropy data", expected: "Faster asymmetric growth \u2192 more frequent reversals", falsify: "No correlation in existing data", status: "awaiting" as PredictionStatus },
+                    { pred: "Kuramoto critical coupling", exp: "EEG/fMRI criticality studies", expected: "Discrete threshold below which coherence fails", falsify: "Purely gradual emergence", status: "testable" as PredictionStatus },
+                    { pred: "D-D fusion in Earth's core", exp: "Temperature/density analysis", expected: "Core sustains fusion", falsify: "Core 2,500\u00D7 below fusion threshold", status: "falsified" as PredictionStatus },
+                  ].map((row, i) => {
+                    const sc = statusConfig[row.status];
+                    return (
+                      <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                        <td className="py-2.5 px-3 text-white font-medium">{row.pred}</td>
+                        <td className="py-2.5 px-3 text-gray-400">{row.exp}</td>
+                        <td className="py-2.5 px-3 text-gray-300">{row.expected}</td>
+                        <td className="py-2.5 px-3 text-red-300/70">{row.falsify}</td>
+                        <td className="py-2.5 px-3 text-center">
+                          <span className={`inline-flex px-2 py-0.5 rounded-full text-xs font-bold ${sc.bg} ${sc.border} border ${sc.color}`}>
+                            {sc.label}
+                          </span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Filters & Predictions */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-5xl">
