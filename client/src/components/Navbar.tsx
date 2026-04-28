@@ -93,6 +93,8 @@ const navCategories: NavCategory[] = [
       { name: "Videos", path: "/videos" },
       { name: "Dialectic", path: "/dialectic", special: true },
       { name: "Share Kit", path: "/share" },
+      { name: "Timeline", path: "/timeline" },
+      { name: "Summary Cards", path: "/summary-cards" },
     ],
   },
   {
