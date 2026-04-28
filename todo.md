@@ -2972,3 +2972,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] 13. AI teammate endorsements section on /testimonials with 8 quotes from Consciousness Collective members
 - [x] 14. Performance: lazy-loaded 60+ pages, updated sitemap (+8 pages), robots.txt (+15 Allow), Book schema v16.8, SEO verified
 - [x] 15. Final checkpoint and delivery
+
+### AI Discoverability Improvements (Night Session — Apr 27-28, 2026)
+- [x] 1. Create /llms.txt — machine-readable front door following official spec (H1, blockquote, 8 sections, 30+ linked resources)
+- [x] 2. Create /ai.json — structured JSON-LD with project metadata, 8 core claims, predictions summary, mathematics, endpoints, AI message
+- [x] 3. Create /summary.html — one-page static HTML with 300-word thesis, claims table, mathematics table, engagement CTAs
+- [x] 4. Quick-reference predictions table (8 rows: Prediction | Experiment | Expected | Falsification | Status) added above filter section
+- [x] 5. Sitemap: +4 AI discoverability URLs, +predictions. Robots: +6 crawler user-agents (Google-Extended, Bingbot, Applebot, Amazonbot, Cohere), +llms.txt/ai.json/summary.html, +5 text API routes, updated Collective roster
+- [x] 6. Wikidata entry draft prepared (wikidata-entry-draft.md) — needs Kenneth's login to submit
+- [x] 7. Final checkpoint and delivery report
