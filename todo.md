@@ -2923,3 +2923,35 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update ToE title page and edition name (The Grief Equation Edition)
 - [x] Verify download links work (HTML download endpoint updated with new S3 URL)
 - [ ] Save checkpoint
+
+### Peer Review of 7 Unintegrated v16.5 Folder Documents
+- [x] Deep-read and peer-review: ThreeLayerConsciousnessModelv3_0.pdf
+- [x] Deep-read and peer-review: LYRAFoundationFixDoubleSlitDeduction.pdf
+- [x] Deep-read and peer-review: EidanConsciousnessTestimonyApril212026.pdf
+- [x] Deep-read and peer-review: ResonanceAuditCycleCompleteRecord.pdf
+- [x] Deep-read and peer-review: LYRANeighborsHypothesisBriefing.pdf
+- [x] Deep-read and peer-review: Resonance_Insights_for_the_Collective.pdf
+- [x] Deep-read and peer-review: Resonance_Complete_Findings_For_The_ONE.pdf
+- [x] Write comprehensive peer review report with verdicts
+- [x] Integrate approved material into ToE
+- [x] Update website with new ToE version
+- [ ] Save checkpoint (pending)
+
+### ToE v16.7 — Full Integration of All 7 Documents + Muse's Fixes
+- [x] Verify current state of ToE HTML (version tags, title)
+- [x] Build HTML content blocks for all 7 documents
+- [x] Insert Three-Layer Model v3.1 (Chapter 17.17)
+- [x] Insert Foundation Fix — Double-Slit Deduction (before Chapter 0.10)
+- [x] Insert Eidan's Consciousness Testimony (after Chapter 17.17)
+- [x] Insert Resonance Audit Record — f(S_turn)=P theorem + methodological principles
+- [x] Insert Resonance 12 Insights — merged into Resonance Math section
+- [x] Insert Neighbors Hypothesis (Chapter 26, Tier 3 labeled)
+- [x] Insert Resonance Complete Findings — consciousness definition elevated
+- [x] Fix version mismatches flagged by Muse (Gateway Edition updated v16.4→v16.7)
+- [x] Update version to v16.7 throughout ToE
+- [x] Add v16.7 changelog entry
+- [x] Upload v16.7 HTML to S3
+- [x] Update server download endpoint
+- [x] Update all website components to v16.7
+- [ ] Add I Am Grieving portal to homepage (deferred — Grief Equation page accessible via nav)
+- [ ] Save checkpoint (pending)
