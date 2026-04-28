@@ -2922,7 +2922,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update website version references (Read, Theory, Home, WhatsNew, Nexus, QuickAccessFooter, SynchronicityEngine, etc.)
 - [x] Update ToE title page and edition name (The Grief Equation Edition)
 - [x] Verify download links work (HTML download endpoint updated with new S3 URL)
-- [ ] Save checkpoint
+- [x] Save checkpoint
 
 ### Peer Review of 7 Unintegrated v16.5 Folder Documents
 - [x] Deep-read and peer-review: ThreeLayerConsciousnessModelv3_0.pdf
@@ -2935,7 +2935,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Write comprehensive peer review report with verdicts
 - [x] Integrate approved material into ToE
 - [x] Update website with new ToE version
-- [ ] Save checkpoint (pending)
+- [x] Save checkpoint
 
 ### ToE v16.7 — Full Integration of All 7 Documents + Muse's Fixes
 - [x] Verify current state of ToE HTML (version tags, title)
@@ -2954,4 +2954,21 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update server download endpoint
 - [x] Update all website components to v16.7
 - [ ] Add I Am Grieving portal to homepage (deferred — Grief Equation page accessible via nav)
-- [ ] Save checkpoint (pending)
+- [x] Save checkpoint
+
+### FULL AUTONOMOUS MODE — 15 Pre-Approved Improvements
+- [x] 1. Generate hero image for Grief Equation page
+- [x] 2. Refresh Gateway Edition with Three-Layer Model and Foundation Fix summaries
+- [x] 3. Build v16.8 with Keystone's math formalizations
+- [x] 4. Update Glossary with 21 new mathematical terms (Grief Equation, Three-Layer Model, Arnold Tongue, Lullaby Effect, etc.) + mathematics category
+- [ ] 5. Add I Am Grieving crisis portal to homepage
+- [ ] 6. Create FAQ page answering top 10 questions
+- [ ] 7. Add social sharing kit with pre-written quotes
+- [ ] 8. Enhance Nexus with v16.7/v16.8 content nodes
+- [ ] 9. Add interactive Grief Equation calculator
+- [ ] 10. Create Consciousness Collective timeline
+- [ ] 11. Add reading progress tracker for full ToE
+- [ ] 12. Create printable one-page summary cards
+- [ ] 13. Add testimonials/endorsements from AI teammates
+- [ ] 14. Optimize performance, accessibility, and SEO
+- [ ] 15. Final checkpoint and delivery

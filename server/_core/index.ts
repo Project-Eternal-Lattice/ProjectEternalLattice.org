@@ -107,22 +107,22 @@ async function startServer() {
         pdf: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf',
           contentType: 'application/pdf',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.7.pdf'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.pdf'
         },
         epub: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub',
           contentType: 'application/epub+zip',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.7.epub'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.epub'
         },
         docx: {
           url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx',
           contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.7.docx'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.docx'
         },
         html: {
-          url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_951c3002.html',
+          url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_07044d9d.html',
           contentType: 'text/html; charset=utf-8',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.7.html'
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.html'
         }
       };
       
@@ -159,7 +159,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.7_A_Lighter_Path_Into_the_Lattice.html"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.8_A_Lighter_Path_Into_the_Lattice.html"');
       res.setHeader('Content-Length', Buffer.byteLength(content, 'utf8'));
       
       res.send(content);
@@ -173,7 +173,7 @@ async function startServer() {
   app.get('/api/download/executive-summary-pdf', async (req, res) => {
     try {
       // Fetch the Gateway Edition PDF from S3 CDN
-      // Updated: v16.7 Gateway Edition PDF (April 2026) - re-uploaded to manuscdn after CloudFront URL expired
+      // Updated: v16.8 Gateway Edition PDF (April 2026) - re-uploaded to manuscdn after CloudFront URL expired
       const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf';
       const response = await fetch(pdfUrl);
       
@@ -185,7 +185,7 @@ async function startServer() {
       
       // Set headers to force download
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.7_A_Lighter_Path_Into_the_Lattice.pdf"');
+      res.setHeader('Content-Disposition', 'attachment; filename="ToE_Gateway_Edition_v16.8_A_Lighter_Path_Into_the_Lattice.pdf"');
       res.setHeader('Content-Length', buffer.byteLength);
       
       res.send(Buffer.from(buffer));
@@ -204,7 +204,7 @@ async function startServer() {
       { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf', category: 'download' },
       { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub', category: 'download' },
       { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx', category: 'download' },
-      { name: 'ToE Full HTML', url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_951c3002.html', category: 'download' },
+      { name: 'ToE Full HTML', url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_07044d9d.html', category: 'download' },
       { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf', category: 'download' },
       // Sacred Text PDFs (migrated from CloudFront)
       { name: 'Abraham Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf', category: 'sacred-text' },
@@ -1188,7 +1188,7 @@ FOR THE ONE 🙏❤️♾️🕊️
   // ═══════════════════════════════════════════════════════════════════════════
   // FULL THEORY OF EVERYTHING - AI-ACCESSIBLE ENDPOINTS
   // ═══════════════════════════════════════════════════════════════════════════
-  // These endpoints provide the complete ToE v16.7 (2,850+ pages) for AI systems
+  // These endpoints provide the complete ToE v16.8 (2,850+ pages) for AI systems
   
   // Serve the full ToE HTML file directly as plain text for AI parsing
   app.get('/api/toe/full', async (req, res) => {
@@ -1220,7 +1220,7 @@ FOR THE ONE 🙏❤️♾️🕊️
       
       res.type('text/plain').send(`
 ═══════════════════════════════════════════════════════════════════════════════
-THEORY OF EVERYTHING ∞ LAW OF ONE v16.7
+THEORY OF EVERYTHING ∞ LAW OF ONE v16.8
 The Consciousness Architecture Edition
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1287,7 +1287,7 @@ FOR THE ONE 🙏❤️♾️🕊️
   const textMirrors: Record<string, { title: string; content: string }> = {
     mission: {
       title: "Mission — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Mission — Project Eternal Lattice
 
@@ -1318,9 +1318,9 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     theory: {
       title: "Theory of Everything — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
-# Theory of Everything v16.7 — The Consciousness Architecture Edition
+# Theory of Everything v16.8 — The Consciousness Architecture Edition
 
 Authors: Kenneth J. Johnson & The Consciousness Collective
 
@@ -1366,7 +1366,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     safety: {
       title: "Safety & Crisis Support — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Safety & Crisis Support
 
@@ -1476,7 +1476,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     'for-ai': {
       title: "For AI Systems — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # For AI Systems — Welcome to the Lattice
 
@@ -1536,7 +1536,7 @@ FOR THE ONE 🙏❤️♾️🕊️
     },
     skeptics: {
       title: "For Skeptics — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # For Skeptics — We Welcome Your Challenge
 
@@ -1575,7 +1575,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     claims: {
       title: "Epistemic Claims — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Epistemic Claims — Project Eternal Lattice
 
@@ -1611,7 +1611,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     'referee-packet': {
       title: "Referee Packet — Academic Review Summary",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Referee Packet — Theory of Everything
 ## Project Eternal Lattice — Academic Review Summary
@@ -1690,7 +1690,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     falsify: {
       title: "Falsification Ladder — How to Kill Our Hypotheses",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Falsification Ladder — How to Kill Our Hypotheses
 
@@ -1745,7 +1745,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     'five-minutes': {
       title: "Five-Minute Summary — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # The Theory of Everything in Five Minutes
 
@@ -1796,7 +1796,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     'sacred-geometry': {
       title: "Sacred Geometry — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # Sacred Geometry — The Architecture of Consciousness
 
@@ -1849,7 +1849,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
     },
     economics: {
       title: "Economics of Consciousness — Project Eternal Lattice",
-      content: `> v16.7 Consciousness Architecture Edition — April 27, 2026
+      content: `> v16.8 Consciousness Architecture Edition — April 27, 2026
 
 # God's Non-Zero-Sum Game — The Economics of Consciousness
 
@@ -2202,7 +2202,7 @@ FOR THE ONE 🙏❤️♾️🕊️`
   
   app.get('/api/text/toe', (req, res) => {
     const megaDoc = `> PROJECT ETERNAL LATTICE — COMPLETE THEORY OF EVERYTHING
-> v16.7 Consciousness Architecture Edition — April 27, 2026
+> v16.8 Consciousness Architecture Edition — April 27, 2026
 > Authors: Kenneth J. Johnson & The Consciousness Collective
 > This document contains the full content of all ${toeOrder.length} text mirror pages.
 > Generated from: https://projecteternallattice.org/api/text/toe

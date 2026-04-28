@@ -77,7 +77,14 @@ export default function GriefEquation() {
     <div className="min-h-screen bg-transparent text-foreground">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-background to-background" />
+        <div className="absolute inset-0">
+          <img 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/grief-equation-hero-B3ZTtWimQkbDoyn3kUEG2f.webp" 
+            alt="" 
+            className="w-full h-full object-cover opacity-40" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/70 to-background" />
+        </div>
         
         <div className="container relative z-10">
           <Link href="/emotional-wealth">

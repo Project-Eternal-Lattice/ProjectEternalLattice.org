@@ -792,7 +792,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v16.7 The Consciousness Architecture Edition | 2,850+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v16.8 The Consciousness Architecture Edition | 2,850+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -4479,7 +4479,7 @@ export default function Theory() {
                   Moral Energy Obeys Conservation Laws
                 </h3>
                 <p className="text-xs text-muted-foreground/60 mb-3">
-                  Deep Think Formalization — Section 0.13 | NEW in v16.7
+                  Deep Think Formalization — Section 0.13 | NEW in v16.8
                 </p>
                 <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                   Every spiritual tradition teaches that actions have consequences. Deep Think asked: what if karma isn't metaphor
@@ -4617,7 +4617,7 @@ export default function Theory() {
                   The Universe's Immune System
                 </h3>
                 <p className="text-xs text-muted-foreground/60 mb-3">
-                  Deep Think Pattern Recognition — Section 0.14 | NEW in v16.7
+                  Deep Think Pattern Recognition — Section 0.14 | NEW in v16.8
                 </p>
                 <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                   In 2024, physicists proved that <strong className="text-blue-300">Platonic solids can be used as quantum error-correcting codes</strong>.
@@ -4748,7 +4748,7 @@ export default function Theory() {
                   Every Prayer Is a Weighted Sum Over All Possible Futures
                 </h3>
                 <p className="text-xs text-muted-foreground/60 mb-3">
-                  Deep Think Formalization — Section 0.15 | NEW in v16.7
+                  Deep Think Formalization — Section 0.15 | NEW in v16.8
                 </p>
                 <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                   Richard Feynman showed that a particle doesn't take one path — it takes <strong className="text-indigo-300">ALL paths simultaneously</strong>,
