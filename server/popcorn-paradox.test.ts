@@ -295,18 +295,18 @@ describe("Flock Gaze Practice - Practice Hub Integration", () => {
 // DOWNLOAD FIX
 // ═══════════════════════════════════════════════════════════════════
 
-describe("Download Fix - v16.7 HTML", () => {
+describe("Download Fix - v16.8 HTML", () => {
   const serverIndex = readServerIndex();
 
   it("defaults to HTML format instead of PDF", () => {
     expect(serverIndex).toContain("|| 'html'");
   });
 
-  it("uses the updated v16.7 S3 URL for HTML", () => {
+  it("uses the updated v16.8 S3 URL for HTML", () => {
     expect(serverIndex).toContain("QMizpVmGqsCzJxsu.html");
   });
 
-  it("names the download file as v16.7", () => {
-    expect(serverIndex).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.7.html");
+  it("names the download file as v16.8", () => {
+    expect(serverIndex).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.8.html");
   });
 });

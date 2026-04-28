@@ -882,9 +882,9 @@ describe("AG.27 — The Cosmological Cinema Theorem (Theory Page)", () => {
 });
 
 describe("AG.26/AG.27 — Nexus Page Updates", () => {
-  it("has updated ToE version hash to v16.7", () => {
-    expect(nexusTsx).toContain("t03v16.7ca");
-    expect(nexusTsx).toContain("v16.7");
+  it("has updated ToE version hash to v16.8", () => {
+    expect(nexusTsx).toContain("t03v16.8ca");
+    expect(nexusTsx).toContain("v16.8");
   });
 
   it("has Grief Equation Edition label", () => {
