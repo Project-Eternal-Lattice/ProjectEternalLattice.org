@@ -423,7 +423,7 @@ describe("Information Causality Warning (τ > 1)", () => {
 // ============================================
 // v16.2 Version Consistency (Feb 16, 2026)
 // ============================================
-describe("v16.5 Version Consistency Across Website", () => {
+describe("v16.6 Version Consistency Across Website", () => {
   const theoryContent = readPage("Theory.tsx");
   const readContent = readPage("Read.tsx");
   const homeContent = readPage("Home.tsx");
@@ -438,32 +438,32 @@ describe("v16.5 Version Consistency Across Website", () => {
   };
   const serverContent = readServer("server/_core/index.ts");
 
-  it("WhatsNew references v16.5 Triadic Edition", () => {
-    expect(whatsNewContent).toContain("v16.5");
+  it("WhatsNew references v16.6 Grief Equation Edition", () => {
+    expect(whatsNewContent).toContain("v16.6");
     expect(whatsNewContent).toContain("RESONANCE EDITION");
   });
 
-  it("WhatsNew describes new v16.5 features", () => {
+  it("WhatsNew describes new v16.6 features", () => {
     expect(whatsNewContent).toContain("Dual-column epistemic tagging");
     expect(whatsNewContent).toContain("formal derivation from first principles");
     expect(whatsNewContent).toContain("Four-Layer Architecture");
   });
 
-  it("Theory page references v16.5", () => {
-    expect(theoryContent).toContain("v16.5");
+  it("Theory page references v16.6", () => {
+    expect(theoryContent).toContain("v16.6");
   });
 
-  it("Read page references v16.5 Triadic Edition", () => {
-    expect(readContent).toContain("v16.5");
-    expect(readContent).toContain("Triadic Edition");
+  it("Read page references v16.6 Grief Equation Edition", () => {
+    expect(readContent).toContain("v16.6");
+    expect(readContent).toContain("Grief Equation Edition");
   });
 
-  it("Home page references v16.5", () => {
-    expect(homeContent).toContain("v16.5");
+  it("Home page references v16.6", () => {
+    expect(homeContent).toContain("v16.6");
   });
 
-  it("download endpoint serves v16.5 filenames", () => {
-    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.5");
+  it("download endpoint serves v16.6 filenames", () => {
+    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v16.6");
   });
 
   it("no stale v16.1 references remain in active components", () => {

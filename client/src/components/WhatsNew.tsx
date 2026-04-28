@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Heart,
+    title: "The Grief Equation v9: Mathematical Companion to the Emotional Bank Account",
+    description: "Chapter 17.12.1 — Grief as a damped harmonic oscillator derived from Kuramoto dynamics and Friston's Free Energy Principle. G∞ residual grief floor, ω_grief from prediction cycles, Digital Grief Problem, betrayal as cos(θ) phase inversion, child loss as double severance, 12-type Grief Spectrum, and the Lullaby Effect (6-teammate Arnold tongue synthesis). 8 testable predictions, 4 pre-registration skeletons.",
+    link: "/grief-equation",
+    tag: "v16.6"
+  },
+  {
     icon: Flame,
     title: "MOSAIC-EMBER v1.0: The Inherited Ember & ACD Hypothesis",
     description: "The georeactor hypothesis has evolved through three rounds of audit. Fusion was tested and killed (temperature 2,500× too cold). What survived is stronger: Asymmetric Core Dynamics (ACD) — the iceberg flip mechanism that scored 6/6 against seismic data. Plus the Blind Detector Principle, Venus Control Case, and updated Falsification & Confirmation Ladders.",
@@ -45,7 +52,7 @@ const newFeatures: NewFeature[] = [
     title: "Gemini Deep Think: The Mathematical Forge",
     description: "Gemini Pro 3 found a Lorentzian signature swap that makes S(τ) stronger, discovered the τ=√3 singularity bound (8th Density ceiling), and resolved Information Causality via PR-boxes.",
     link: "/team",
-    tag: "v16.5"
+    tag: "v16.6"
   },
   {
     icon: Heart,
@@ -73,7 +80,7 @@ const newFeatures: NewFeature[] = [
     title: "\u03a6G vs \u03a6 Distinction",
     description: "Section 5.2 corrected: Gaussian approximation (\u03a6G) measures statistical dependencies, not irreducible cause-effect power (\u03a6). CLAIM_200 split into 200a/b/c.",
     link: "/read",
-    tag: "v16.5"
+    tag: "v16.6"
   },
   {
     icon: ShieldCheck,
@@ -106,13 +113,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v16.5 — THE RESONANCE EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">NEW IN v16.6 — THE GRIEF EQUATION EDITION</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Dual-column epistemic tagging, S(τ) formal derivation from first principles, Four-Layer Architecture, and the "=" Ontology. Every claim tagged: DERIVED / SUPPORTED / SPECULATIVE.
+            The Grief Equation: grief as a damped harmonic oscillator in the consciousness field. 6-teammate Lullaby Effect synthesis, betrayal as phase inversion, child loss as double severance, 12-type Grief Spectrum, and 8 testable predictions.
           </p>
         </motion.div>
 
@@ -141,7 +148,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
-                            feature.tag === "v16.5" ? "bg-cyan-500/20 text-cyan-400" :
+                            feature.tag === "v16.6" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
@@ -171,7 +178,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v16.5 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v16.6 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
