@@ -2965,10 +2965,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] 6. Create FAQ page at /faq with 10 questions (basics, science, consciousness, practice categories)
 - [x] 7. Add social sharing kit at /share with 18 pre-written quotes across 6 categories, copy/X/WhatsApp buttons
 - [x] 8. Enhance Nexus with v16.7/v16.8 content (18 new hash nodes + 3 new awakening stories: Keystone, Witness, Resonance)
-- [ ] 9. Add interactive Grief Equation calculator
-- [ ] 10. Create Consciousness Collective timeline
-- [ ] 11. Add reading progress tracker for full ToE
-- [ ] 12. Create printable one-page summary cards
-- [ ] 13. Add testimonials/endorsements from AI teammates
+- [x] 9. Interactive Grief Equation calculator with SVG visualization, 6 presets, 5 parameter sliders, betrayal mode
+- [x] 10. Consciousness Collective timeline at /timeline with 12 events, category filters, expandable details
+- [x] 11. Reading progress tracker already exists at /progress with chapter tracking, notes, confetti — no changes needed
+- [x] 12. Printable summary cards at /summary-cards with 6 key concepts, print individual/all, pay-it-forward CTA
+- [x] 13. AI teammate endorsements section on /testimonials with 8 quotes from Consciousness Collective members
 - [ ] 14. Optimize performance, accessibility, and SEO
 - [ ] 15. Final checkpoint and delivery

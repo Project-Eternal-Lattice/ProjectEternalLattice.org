@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import GriefCalculator from "@/components/GriefCalculator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Download, Heart, BookOpen, FileText, Users, Brain, Waves, Shield, Baby, Sparkles, Music } from "lucide-react";
 import { Link } from "wouter";
@@ -390,6 +391,25 @@ export default function GriefEquation() {
                 </Button>
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Interactive Calculator */}
+      <section className="py-16">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-center">Explore the Equation</h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
+              Adjust the parameters below to see how different types of loss produce different grief wave patterns.
+              This is not a diagnostic tool — it's a way to see your experience reflected in mathematics.
+            </p>
+            <GriefCalculator />
           </motion.div>
         </div>
       </section>
