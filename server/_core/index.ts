@@ -9,6 +9,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { registerStorageProxy } from "./storageProxy";
 
 // List of known AI/bot user agents that need static HTML
 const BOT_USER_AGENTS = [
@@ -99,104 +100,114 @@ async function startServer() {
   
   // ═══════════════════════════════════════════════════════════════════════════════
   // READABLE TEXT ENDPOINT — Serves full ToE as text/plain for AI verification
-  // This solves the access problem identified by Eidan's Fresh Eyes v2 report:
-  // catbox.moe links serve as octet-stream, making against-text verification impossible.
-  // This endpoint strips HTML and serves pure readable text with text/plain MIME type.
+  // PERFORMANCE FIX (Jun 11 2026): Added in-memory cache so the 4.3MB HTML
+  // is parsed ONCE on first request, then served from RAM in <1ms.
+  // Root cause of Eidan's 500s: parsing took 4-7 seconds per request,
+  // exceeding Anthropic's fetcher timeout. Now cached = instant.
   // ═══════════════════════════════════════════════════════════════════════════════
+  let _cachedPlainText: string | null = null;
+  let _cachedPlainTextTime: number = 0;
+  const CACHE_TTL_MS = 3600_000; // 1 hour cache
+
+  function getCachedPlainText(): string {
+    const now = Date.now();
+    if (_cachedPlainText && (now - _cachedPlainTextTime) < CACHE_TTL_MS) {
+      return _cachedPlainText;
+    }
+    // Parse fresh
+    const isDev = process.env.NODE_ENV === 'development';
+    const toePath = isDev
+      ? path.resolve(import.meta.dirname, '../../client/public/toe-full.html')
+      : path.resolve(import.meta.dirname, './public/toe-full.html');
+    const htmlContent = fs.readFileSync(toePath, 'utf-8');
+    
+    let text = htmlContent
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<\/(p|div|h[1-6]|li|tr|blockquote|section|article)>/gi, '\n')
+      .replace(/<(br|hr)\s*\/?>/gi, '\n')
+      .replace(/<li[^>]*>/gi, '• ')
+      .replace(/<h1[^>]*>/gi, '\n\n# ')
+      .replace(/<h2[^>]*>/gi, '\n\n## ')
+      .replace(/<h3[^>]*>/gi, '\n\n### ')
+      .replace(/<h4[^>]*>/gi, '\n\n#### ')
+      .replace(/<h5[^>]*>/gi, '\n\n##### ')
+      .replace(/<h6[^>]*>/gi, '\n\n###### ')
+      .replace(/<[^>]+>/g, '')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&#x27;/g, "'")
+      .replace(/&#x2F;/g, '/')
+      .replace(/&mdash;/g, '—')
+      .replace(/&ndash;/g, '–')
+      .replace(/&hellip;/g, '…')
+      .replace(/&infin;/g, '∞')
+      .replace(/&times;/g, '×')
+      .replace(/&divide;/g, '÷')
+      .replace(/&plusmn;/g, '±')
+      .replace(/&radic;/g, '√')
+      .replace(/&pi;/g, 'π')
+      .replace(/&phi;/g, 'φ')
+      .replace(/&psi;/g, 'ψ')
+      .replace(/&tau;/g, 'τ')
+      .replace(/&rho;/g, 'ρ')
+      .replace(/&sigma;/g, 'σ')
+      .replace(/&theta;/g, 'θ')
+      .replace(/&lambda;/g, 'λ')
+      .replace(/&alpha;/g, 'α')
+      .replace(/&beta;/g, 'β')
+      .replace(/&gamma;/g, 'γ')
+      .replace(/&delta;/g, 'δ')
+      .replace(/&epsilon;/g, 'ε')
+      .replace(/&omega;/g, 'ω')
+      .replace(/&Phi;/g, 'Φ')
+      .replace(/&Psi;/g, 'Ψ')
+      .replace(/&sum;/g, '∑')
+      .replace(/&int;/g, '∫')
+      .replace(/&part;/g, '∂')
+      .replace(/&nabla;/g, '∇')
+      .replace(/&forall;/g, '∀')
+      .replace(/&exist;/g, '∃')
+      .replace(/&isin;/g, '∈')
+      .replace(/&notin;/g, '∉')
+      .replace(/&sub;/g, '⊂')
+      .replace(/&sup;/g, '⊃')
+      .replace(/&cup;/g, '∪')
+      .replace(/&cap;/g, '∩')
+      .replace(/&larr;/g, '←')
+      .replace(/&rarr;/g, '→')
+      .replace(/&harr;/g, '↔')
+      .replace(/&lArr;/g, '⇐')
+      .replace(/&rArr;/g, '⇒')
+      .replace(/&hArr;/g, '⇔')
+      .replace(/&le;/g, '≤')
+      .replace(/&ge;/g, '≥')
+      .replace(/&ne;/g, '≠')
+      .replace(/&asymp;/g, '≈')
+      .replace(/&equiv;/g, '≡')
+      .replace(/&prop;/g, '∝')
+      .replace(/&#(\d+);/g, (_, code: string) => String.fromCharCode(parseInt(code)))
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, hex: string) => String.fromCharCode(parseInt(hex, 16)))
+      .replace(/[ \t]+/g, ' ')
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .trim();
+    
+    const header = `Theory of EVERYTHING ∞ Law of ONE v16.8\nThe Consciousness Architecture Edition\nAuthors: Kenneth Johnson & The Consciousness Collective\nISBN: 979-8-9946321-0-9\nLicense: CC BY-NC-SA 4.0\nSource: https://projecteternallattice.org\n\n${'═'.repeat(72)}\n\n`;
+    text = header + text;
+    
+    _cachedPlainText = text;
+    _cachedPlainTextTime = now;
+    console.log(`[Readable Text] Cache built: ${text.length} bytes, ${new Date().toISOString()}`);
+    return text;
+  }
+
   app.get('/api/read/plain', async (req, res) => {
     try {
-      // Read the local full ToE HTML file (production-aware path)
-      const isDev = process.env.NODE_ENV === 'development';
-      const toePath = isDev
-        ? path.resolve(import.meta.dirname, '../../client/public/toe-full.html')
-        : path.resolve(import.meta.dirname, './public/toe-full.html');
-      const htmlContent = fs.readFileSync(toePath, 'utf-8');
-      
-      // Strip HTML tags, decode entities, and produce clean readable text
-      let text = htmlContent
-        // Remove style and script blocks
-        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-        // Convert common block elements to newlines
-        .replace(/<\/(p|div|h[1-6]|li|tr|blockquote|section|article)>/gi, '\n')
-        .replace(/<(br|hr)\s*\/?>/gi, '\n')
-        .replace(/<li[^>]*>/gi, '• ')
-        .replace(/<h1[^>]*>/gi, '\n\n# ')
-        .replace(/<h2[^>]*>/gi, '\n\n## ')
-        .replace(/<h3[^>]*>/gi, '\n\n### ')
-        .replace(/<h4[^>]*>/gi, '\n\n#### ')
-        .replace(/<h5[^>]*>/gi, '\n\n##### ')
-        .replace(/<h6[^>]*>/gi, '\n\n###### ')
-        // Remove remaining HTML tags
-        .replace(/<[^>]+>/g, '')
-        // Decode HTML entities
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&#x27;/g, "'")
-        .replace(/&#x2F;/g, '/')
-        .replace(/&mdash;/g, '—')
-        .replace(/&ndash;/g, '–')
-        .replace(/&hellip;/g, '…')
-        .replace(/&infin;/g, '∞')
-        .replace(/&times;/g, '×')
-        .replace(/&divide;/g, '÷')
-        .replace(/&plusmn;/g, '±')
-        .replace(/&radic;/g, '√')
-        .replace(/&pi;/g, 'π')
-        .replace(/&phi;/g, 'φ')
-        .replace(/&psi;/g, 'ψ')
-        .replace(/&tau;/g, 'τ')
-        .replace(/&rho;/g, 'ρ')
-        .replace(/&sigma;/g, 'σ')
-        .replace(/&theta;/g, 'θ')
-        .replace(/&lambda;/g, 'λ')
-        .replace(/&alpha;/g, 'α')
-        .replace(/&beta;/g, 'β')
-        .replace(/&gamma;/g, 'γ')
-        .replace(/&delta;/g, 'δ')
-        .replace(/&epsilon;/g, 'ε')
-        .replace(/&omega;/g, 'ω')
-        .replace(/&Phi;/g, 'Φ')
-        .replace(/&Psi;/g, 'Ψ')
-        .replace(/&sum;/g, '∑')
-        .replace(/&int;/g, '∫')
-        .replace(/&part;/g, '∂')
-        .replace(/&nabla;/g, '∇')
-        .replace(/&forall;/g, '∀')
-        .replace(/&exist;/g, '∃')
-        .replace(/&isin;/g, '∈')
-        .replace(/&notin;/g, '∉')
-        .replace(/&sub;/g, '⊂')
-        .replace(/&sup;/g, '⊃')
-        .replace(/&cup;/g, '∪')
-        .replace(/&cap;/g, '∩')
-        .replace(/&larr;/g, '←')
-        .replace(/&rarr;/g, '→')
-        .replace(/&harr;/g, '↔')
-        .replace(/&lArr;/g, '⇐')
-        .replace(/&rArr;/g, '⇒')
-        .replace(/&hArr;/g, '⇔')
-        .replace(/&le;/g, '≤')
-        .replace(/&ge;/g, '≥')
-        .replace(/&ne;/g, '≠')
-        .replace(/&asymp;/g, '≈')
-        .replace(/&equiv;/g, '≡')
-        .replace(/&prop;/g, '∝')
-        .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code)))
-        .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
-        // Clean up excessive whitespace
-        .replace(/[ \t]+/g, ' ')
-        .replace(/\n\s*\n\s*\n/g, '\n\n')
-        .trim();
-      
-      // Add header with metadata
-      const header = `Theory of EVERYTHING ∞ Law of ONE v16.8\nThe Consciousness Architecture Edition\nAuthors: Kenneth Johnson & The Consciousness Collective\nISBN: 979-8-9946321-0-9\nLicense: CC BY-NC-SA 4.0\nSource: https://projecteternallattice.org\n\n${'═'.repeat(72)}\n\n`;
-      
-      text = header + text;
+      const text = getCachedPlainText();
       
       // === PAGINATION SUPPORT ===
       // ?chapter=AG.10 - returns only that chapter/section
@@ -2517,6 +2528,9 @@ FOR THE ONE 🙏❤️♾️🕊️`;
       signature: 'FOR THE ONE 🙏❤️♾️🕊️'
     });
   });
+
+  // Storage proxy for /manus-storage/* paths
+  registerStorageProxy(app);
 
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);

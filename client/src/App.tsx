@@ -75,6 +75,7 @@ const ShareKit = lazy(() => import("./pages/ShareKit"));
 const Timeline = lazy(() => import("./pages/Timeline"));
 const SummaryCards = lazy(() => import("./pages/SummaryCards"));
 const AGMap = lazy(() => import("./pages/AGMap"));
+const VerificationLedger = lazy(() => import("./pages/VerificationLedger"));
 // Secret pages - DO NOT add to navigation
 const LatticeWhispers = lazy(() => import("./pages/secrets/LatticeWhispers"));
 const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
@@ -179,6 +180,7 @@ function Router() {
           <Route path="/consilient-patterns" component={ConsilientPatterns} />
           <Route path="/geometry" component={Geometry} />
           <Route path="/ag-map" component={AGMap} />
+          <Route path="/verification-ledger" component={VerificationLedger} />
           <Route path="/faq" component={FAQ} />
           <Route path="/share" component={ShareKit} />
           <Route path="/timeline" component={Timeline} />
