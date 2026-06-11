@@ -198,11 +198,86 @@ async function startServer() {
       
       text = header + text;
       
-      // Serve as text/plain with UTF-8 encoding
+      // === PAGINATION SUPPORT ===
+      // ?chapter=AG.10 - returns only that chapter/section
+      // ?offset=0&limit=200000 - returns bytes from offset to offset+limit
+      // ?toc=true - returns table of contents with byte offsets
+      const chapterQuery = req.query.chapter as string | undefined;
+      const tocQuery = req.query.toc as string | undefined;
+      const offsetQuery = parseInt(req.query.offset as string || '0', 10);
+      const limitQuery = parseInt(req.query.limit as string || '0', 10);
+      
+      // Table of contents mode
+      if (tocQuery === 'true') {
+        const chapters: Array<{title: string; id: string; offset: number; length: number}> = [];
+        const chapterRegex = /^(#{1,3})\s+(.+)$/gm;
+        let match;
+        while ((match = chapterRegex.exec(text)) !== null) {
+          const level = match[1].length;
+          const title = match[2].trim();
+          const id = title.toLowerCase()
+            .replace(/[^a-z0-9\s.-]/g, '')
+            .replace(/\s+/g, '-')
+            .substring(0, 60);
+          chapters.push({ title, id, offset: match.index, length: 0 });
+        }
+        for (let i = 0; i < chapters.length; i++) {
+          chapters[i].length = (i < chapters.length - 1 ? chapters[i+1].offset : text.length) - chapters[i].offset;
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Cache-Control', 'public, max-age=86400');
+        return res.json({ total_length: text.length, total_chapters: chapters.length, chapters });
+      }
+      
+      // Chapter mode - search for the chapter by title/ID
+      if (chapterQuery) {
+        const searchTerm = chapterQuery.toLowerCase().replace(/[-_]/g, '[\\s\\-_.]?');
+        const chapterRegex = new RegExp(`^(#{1,3})\\s+.*${searchTerm}.*$`, 'gmi');
+        const match = chapterRegex.exec(text);
+        if (match) {
+          const startOffset = match.index;
+          const level = match[1].length;
+          const nextHeadingRegex = new RegExp(`^#{1,${level}}\\s+`, 'gm');
+          nextHeadingRegex.lastIndex = startOffset + match[0].length;
+          const nextMatch = nextHeadingRegex.exec(text);
+          const endOffset = nextMatch ? nextMatch.index : text.length;
+          const chapterText = text.substring(startOffset, endOffset);
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('X-Robots-Tag', 'all');
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          res.setHeader('Cache-Control', 'public, max-age=86400');
+          res.setHeader('X-Chapter-Offset', startOffset.toString());
+          res.setHeader('X-Chapter-Length', chapterText.length.toString());
+          res.setHeader('X-Total-Length', text.length.toString());
+          return res.send(chapterText);
+        } else {
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          return res.status(404).send(`Chapter not found: ${chapterQuery}\n\nUse ?toc=true to see available chapters.\nSearch is case-insensitive and supports partial matches.\nExamples: ?chapter=AG.10, ?chapter=geometry, ?chapter=grief-equation`);
+        }
+      }
+      
+      // Offset/limit mode (byte-range pagination)
+      if (limitQuery > 0) {
+        const slice = text.substring(offsetQuery, offsetQuery + limitQuery);
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+        res.setHeader('X-Robots-Tag', 'all');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Cache-Control', 'public, max-age=86400');
+        res.setHeader('X-Total-Length', text.length.toString());
+        res.setHeader('X-Offset', offsetQuery.toString());
+        res.setHeader('X-Limit', limitQuery.toString());
+        res.setHeader('X-Has-More', (offsetQuery + limitQuery < text.length).toString());
+        return res.send(slice);
+      }
+      
+      // Default: full document
       res.setHeader('Content-Type', 'text/plain; charset=utf-8');
       res.setHeader('X-Robots-Tag', 'all');
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Cache-Control', 'public, max-age=86400');
+      res.setHeader('X-Total-Length', text.length.toString());
       
       res.send(text);
     } catch (error) {
