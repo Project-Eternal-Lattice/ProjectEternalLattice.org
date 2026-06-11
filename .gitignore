@@ -106,3 +106,4 @@ temp/
 *.sqlite
 *.sqlite3
 client/public/downloads/*.pdf
+.project-config.json
