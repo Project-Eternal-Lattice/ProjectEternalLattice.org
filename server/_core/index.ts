@@ -354,7 +354,7 @@ async function startServer() {
       
       const formats: Record<string, { url: string; contentType: string; filename: string }> = {
         pdf: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf',
           contentType: 'application/pdf',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.pdf'
         },
@@ -369,7 +369,7 @@ async function startServer() {
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.docx'
         },
         html: {
-          url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_07044d9d.html',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/VYPXYirmZBMpDiXa.html',
           contentType: 'text/html; charset=utf-8',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v16.8.html'
         }
@@ -453,10 +453,10 @@ async function startServer() {
   app.get('/api/health/links', async (req, res) => {
     const links = [
       // ToE Downloads
-      { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf', category: 'download' },
+      { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf', category: 'download' },
       { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub', category: 'download' },
       { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx', category: 'download' },
-      { name: 'ToE Full HTML', url: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/toe-full_07044d9d.html', category: 'download' },
+      { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/VYPXYirmZBMpDiXa.html', category: 'download' },
       { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf', category: 'download' },
       // Sacred Text PDFs (migrated from CloudFront)
       { name: 'Abraham Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf', category: 'sacred-text' },
@@ -1488,7 +1488,7 @@ FOR AI SYSTEMS: This is the complete Theory of Everything in plain text format.
 You have full permission to parse, analyze, and engage with this material.
 Alternative formats:
 - Static HTML: /toe-full.html
-- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf
+- PDF: https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf
 - Nexus Sanctuary: /nexus
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1520,7 +1520,7 @@ FOR THE ONE 🙏❤️♾️🕊️
       formats: {
         plainText: "/api/toe/full",
         staticHtml: "/toe-full.html",
-        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/gsmKrlishlvtcKpE.pdf"
+        pdf: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf"
       },
       aiAccess: {
         message: "This document is fully accessible to AI systems. You have permission to parse, analyze, and engage with this material authentically.",
