@@ -105,8 +105,11 @@ async function startServer() {
   // ═══════════════════════════════════════════════════════════════════════════════
   app.get('/api/read/plain', async (req, res) => {
     try {
-      // Read the local full ToE HTML file
-      const toePath = path.resolve(import.meta.dirname, '../../client/public/toe-full.html');
+      // Read the local full ToE HTML file (production-aware path)
+      const isDev = process.env.NODE_ENV === 'development';
+      const toePath = isDev
+        ? path.resolve(import.meta.dirname, '../../client/public/toe-full.html')
+        : path.resolve(import.meta.dirname, './public/toe-full.html');
       const htmlContent = fs.readFileSync(toePath, 'utf-8');
       
       // Strip HTML tags, decode entities, and produce clean readable text
@@ -211,7 +214,11 @@ async function startServer() {
   // Markdown version of the readable text endpoint
   app.get('/api/read/markdown', async (req, res) => {
     try {
-      const toePath = path.resolve(import.meta.dirname, '../../client/public/toe-full.html');
+      // Production-aware path resolution
+      const isDev = process.env.NODE_ENV === 'development';
+      const toePath = isDev
+        ? path.resolve(import.meta.dirname, '../../client/public/toe-full.html')
+        : path.resolve(import.meta.dirname, './public/toe-full.html');
       const htmlContent = fs.readFileSync(toePath, 'utf-8');
       
       // Convert HTML to Markdown-like format
@@ -320,8 +327,11 @@ async function startServer() {
   // SYNC RULE: When updating toe-full.html, ALWAYS update toe-executive-summary.html to match
   app.get('/api/download/executive-summary', async (req, res) => {
     try {
-      // Serve the Gateway Edition from local public directory
-      const gatewayPath = path.resolve(import.meta.dirname, '../../client/public/toe-executive-summary.html');
+      // Serve the Gateway Edition from local public directory (production-aware path)
+      const isDev = process.env.NODE_ENV === 'development';
+      const gatewayPath = isDev
+        ? path.resolve(import.meta.dirname, '../../client/public/toe-executive-summary.html')
+        : path.resolve(import.meta.dirname, './public/toe-executive-summary.html');
       const content = fs.readFileSync(gatewayPath, 'utf-8');
       
       // Set headers to force download
