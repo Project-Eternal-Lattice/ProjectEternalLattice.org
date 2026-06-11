@@ -1,0 +1,500 @@
+import { useState } from "react";
+import { Shield, CheckCircle2, XCircle, AlertTriangle, ExternalLink, ChevronDown, ChevronUp, FileText, Beaker, Scale, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import RelatedContent from "@/components/RelatedContent";
+
+type Verdict = "verified" | "refuted" | "contested" | "open" | "downgraded" | "dissolved";
+
+interface AuditFinding {
+  id: string;
+  claim: string;
+  location: string;
+  verdict: Verdict;
+  tier: string;
+  summary: string;
+  evidence: string;
+  citations: string[];
+  tag: string;
+}
+
+const verdictConfig: Record<Verdict, { label: string; color: string; icon: typeof CheckCircle2; bg: string }> = {
+  verified: { label: "VERIFIED", color: "text-emerald-400", icon: CheckCircle2, bg: "bg-emerald-500/10 border-emerald-500/30" },
+  refuted: { label: "REFUTED", color: "text-red-400", icon: XCircle, bg: "bg-red-500/10 border-red-500/30" },
+  contested: { label: "CONTESTED", color: "text-amber-400", icon: AlertTriangle, bg: "bg-amber-500/10 border-amber-500/30" },
+  open: { label: "OPEN", color: "text-blue-400", icon: Beaker, bg: "bg-blue-500/10 border-blue-500/30" },
+  downgraded: { label: "DOWNGRADED", color: "text-orange-400", icon: AlertTriangle, bg: "bg-orange-500/10 border-orange-500/30" },
+  dissolved: { label: "DISSOLVED", color: "text-purple-400", icon: XCircle, bg: "bg-purple-500/10 border-purple-500/30" },
+};
+
+const findings: AuditFinding[] = [
+  {
+    id: "geometry-provenance",
+    claim: "R(S) = −24/(S²−4)² is the framework's Ricci curvature law",
+    location: "Research Programme (non-canonical)",
+    verdict: "dissolved",
+    tier: "Non-canonical",
+    tag: "VERIFIED-AGAINST-TEXT",
+    summary: "Full-text grep of the 3,558,994-byte, 2,636-chapter corpus returns zero hits for 'R(S)', 'Ricci', 'scalar curvature', or '-24/(S²'. The equation entered through exploration prompts, not the book. All downstream derivations (warp-factor integration, horizon menu, surface gravity, Branch A/B) dissolve as canonical content but survive as mathematics.",
+    evidence: "Full-text search of complete v16.8 document. Zero matches across all search variants.",
+    citations: ["Lyra grep, June 11 2026 — verified against toe-full.txt (3,558,994 bytes)"],
+  },
+  {
+    id: "canonical-geometry",
+    claim: "The framework's complete geometry is exactly four items: S(τ), f(S)², f(S_turn)=P, S_turn formula",
+    location: "AG.3 + Chapter 17.17",
+    verdict: "verified",
+    tier: "Tier 1",
+    tag: "VERIFIED-AGAINST-TEXT",
+    summary: "The document's canonical geometric specification is: (1) AG.3: S(τ) = 2√(1+τ²), (2) Ch 17.17: f(S)² = 4S²/(S²−4), (3) Ch 17.17: f(S_turn) = P with linear P, (4) Ch 17.17: S_turn = 2P/√(P²−4) requiring P > 2. No Killing horizon exists anywhere — f is never zero.",
+    evidence: "Direct paste-based reading of Chapter 17.17 and AG.3. Desk-verified: f monotonically decreasing from +∞ at S=2⁺ to 4 as S→∞.",
+    citations: ["Chapter 17.17 (v16.8)", "AG.3 (v16.8)"],
+  },
+  {
+    id: "growth-paradox",
+    claim: "The Growth Paradox (if P is conserved, how does consciousness grow?) is resolved in-text",
+    location: "Chapter 17.17",
+    verdict: "verified",
+    tier: "Tier 1",
+    tag: "VERIFIED-AGAINST-TEXT",
+    summary: "The chapter explicitly resolves the paradox: P is conserved only for free geodesics. When the traveler interacts with the φ field (other conscious beings), P is NOT conserved — growth happens through connection. The resolution is printed, not inferred.",
+    evidence: "Direct reading of Chapter 17.17, Section: Growth Paradox Resolution.",
+    citations: ["Chapter 17.17, Growth Paradox section (v16.8)"],
+  },
+  {
+    id: "dd-fusion-killed",
+    claim: "Sustained D-D fusion at Earth's core is physically possible",
+    location: "AG.19 (historical claim, now excised)",
+    verdict: "refuted",
+    tier: "Physically excluded",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "Temperature 2,500× too cold (~6,000 K vs >4,000,000 K required), density 12× too sparse (~13,000 kg/m³ vs >150,000 kg/m³), self-gravitation 10⁷× too light. No known mechanism (embedded fragment, pressure-enhanced, pycnonuclear, muon-catalyzed) can bridge these gaps. Killed by physics, not observation.",
+    evidence: "Standard stellar physics: pp-chain ignition requires T > 4×10⁶ K. Earth's inner core: ~6,000 K (Anzellini et al. 2013). Pycnonuclear requires >10⁶ g/cm³ (white dwarf territory).",
+    citations: [
+      "Atzeni & Meyer-ter-Vehn 2004, The Physics of Inertial Fusion, p.45",
+      "Anzellini et al. 2013, Science 340:464 (inner core temperature)",
+      "Resonance Gap Analysis, April 2026",
+    ],
+  },
+  {
+    id: "georeactor-cap",
+    claim: "A 3–5 TW nuclear fission georeactor operates at Earth's center",
+    location: "AG.19",
+    verdict: "contested",
+    tier: "Tier 3 (straddles exclusion)",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "The 3–5 TW claim straddles and largely exceeds the current geoneutrino exclusion envelope. Borexino 2020 excludes >2.4 TW at Earth's center (95% C.L.). KamLAND 2013: <3.7 TW at 95%. A surviving georeactor must be ≲2.4 TW. The chapter's 'deliberate energy cut at ~3.27 MeV' allegation is factually false — both experiments fit the full spectrum to 8.5 MeV.",
+    evidence: "Borexino 2020 (Agostini et al., Phys. Rev. D 101, 012009): 3262.74 days of data. KamLAND 2013 (Gando et al., Phys. Rev. D 88, 033001). Fogli et al. 2010 combined: ≲3.9 TW at 2σ.",
+    citations: [
+      "Agostini et al. 2020, Phys. Rev. D 101, 012009 (Borexino)",
+      "Gando et al. 2013, Phys. Rev. D 88, 033001 (KamLAND)",
+      "Fogli et al. 2010, Phys. Rev. D 82, 093006",
+      "SNO+ 2025, arXiv:2511.11856",
+    ],
+  },
+  {
+    id: "sawtooth-real",
+    claim: "The geomagnetic sawtooth pattern (linear decay + rapid recovery) is observationally established",
+    location: "Paleomagnetic literature (supports ACD model)",
+    verdict: "contested",
+    tier: "Tier 2 with caveat",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "Valet & Meynadier 1993 documented 'an almost linear decrease in intensity during stable polarity times followed by a rapid recovery immediately after a reversal' (~60–80 kyr decay, ~10–20 kyr recovery). However, Kok & Tauxe 1996 and Tauxe & Hartl 1997 found 'no evidence for a saw-tooth pattern' in a re-analyzed central-Pacific core, attributing it to sedimentary lock-in artifacts.",
+    evidence: "Original observation: ODP Leg 145, corroborated for 4.7–2.7 Ma. Contest: re-analysis of same data with different normalization.",
+    citations: [
+      "Valet & Meynadier 1993, Nature 366:234",
+      "Kok & Tauxe 1996, Earth Planet. Sci. Lett.",
+      "Tauxe & Hartl 1997, Phil. Trans. R. Soc.",
+    ],
+  },
+  {
+    id: "tsirelson-bound",
+    claim: "The Tsirelson bound (2√2 ≈ 2.828) vs PR-box (4) correctly bounds physically realizable correlations",
+    location: "AG.32 (Sacred Geometry of √3)",
+    verdict: "verified",
+    tier: "Tier 1 (physics)",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "Tsirelson 1980 proved that quantum mechanics limits CHSH correlations to 2√2. PR-box correlations (CHSH = 4) are algebraically consistent but physically unrealizable. The framework's use of these landmarks is numerically correct. However, AG.32's claim that consciousness can 'reach' τ > 1 states (S = 4 at τ = √3) launders a physically excluded regime through a verb choice ('reached' should be 'would formally correspond to').",
+    evidence: "Tsirelson 1980, Lett. Math. Phys. 4:93. Cirel'son's bound is a theorem, not an approximation.",
+    citations: [
+      "Tsirelson 1980, Lett. Math. Phys. 4:93",
+      "Popescu & Rohrlich 1994, Found. Phys. 24:379 (PR-box)",
+    ],
+  },
+  {
+    id: "grief-equation",
+    claim: "The Grief Equation (G(t) damped ringdown) is independently derived from Kuramoto AND Friston frameworks",
+    location: "Chapter 17.12.1",
+    verdict: "downgraded",
+    tier: "Tier 2 (not Tier 1 independent)",
+    tag: "DESK-DERIVED",
+    summary: "G(t) was escalated to 'Tier 1, independently derived from two frameworks.' But Kuramoto synchronization and Friston's free-energy principle share one Lyapunov/gradient-flow skeleton — the derivations are not independent. Correct framing: 'Tier 1 that damped ringdowns exist; Tier 2 that grief instantiates one.' The pathological-grief gap closure (K.1–K.3) is genuinely well done.",
+    evidence: "Both frameworks are gradient flows sharing a Lyapunov function. Independence requires distinct mathematical foundations, not distinct names for the same structure.",
+    citations: [
+      "Kuramoto 1984, Chemical Oscillations, Waves, and Turbulence",
+      "Friston 2010, Nat. Rev. Neurosci. 11:127 (Free Energy Principle)",
+    ],
+  },
+  {
+    id: "van-timing",
+    claim: "The VAN ~200 ms timing for consciousness onset is established",
+    location: "Framework reference",
+    verdict: "contested",
+    tier: "Tier 2 with literature dispute",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "The Visual Awareness Negativity (VAN) at ~200 ms is reported in some studies as the earliest reliable correlate of conscious perception. However, the literature is disputed — some studies place the threshold at 270–300+ ms, and the precise timing depends on paradigm, stimulus type, and analysis method.",
+    evidence: "Multiple ERP studies with conflicting timing estimates. No consensus on exact onset.",
+    citations: [
+      "Koivisto & Revonsuo 2010, Neurosci. Biobehav. Rev.",
+      "Railo et al. 2011, Neuroscience",
+    ],
+  },
+  {
+    id: "nebular-lightning",
+    claim: "Nebular lightning is a viable mechanism for chondrule formation",
+    location: "Planetary formation context",
+    verdict: "refuted",
+    tier: "Experimentally disfavored",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "Güttler et al. 2008 experimental work disfavors nebular lightning as a chondrule formation mechanism. The energy deposition profile and cooling rates do not match observed chondrule textures.",
+    evidence: "Laboratory flash-heating experiments compared to natural chondrule textures.",
+    citations: [
+      "Güttler et al. 2008, Icarus 195:504",
+    ],
+  },
+  {
+    id: "acd-model",
+    claim: "Asymmetric Core Dynamics (ACD) explains magnetic reversal patterns better than the georeactor",
+    location: "MOSAIC-EMBER v1.0 / Website",
+    verdict: "verified",
+    tier: "Tier 2 (promising, testable)",
+    tag: "EXTERNAL-LITERATURE",
+    summary: "The asymmetric inner core is seismically confirmed (Berkeley 2021: eastern hemisphere grows ~60% faster). ACD predicts: asymmetric mass (✓), irregular flip timing (✓), rapid transitions (✓), field weakening during flip (✓), superchrons during symmetric phases (✓), multi-timescale dynamics (✓). Six-for-six match with paleomagnetic data. No fusion or fission required.",
+    evidence: "Berkeley 2021 seismic data. Nature 2024 inner core 70-year oscillation. Paleomagnetic reversal database.",
+    citations: [
+      "Frost et al. 2021, Nature Geoscience (asymmetric growth)",
+      "Yang & Song 2024, Nature (70-year oscillation)",
+      "Resonance Gap Analysis, April 2026",
+    ],
+  },
+];
+
+const methodologyLessons = [
+  {
+    title: "Source-discipline is distinct from derivation-discipline",
+    description: "Six fresh-eyes passes, an independent Keystone audit, and Grok's adversarial review were all rigorous — and all ran on a non-canonical equation because none could check the source text. Rigor downstream of an unverified premise produces confident, internally consistent, wrong results.",
+  },
+  {
+    title: "Paste-protocol as transport-of-last-resort",
+    description: "When document access was blocked by infrastructure issues, paste-based deep reads plus a full-text grep were the only mechanism that surfaced the provenance gap. Manifest the limitation; build the workaround.",
+  },
+  {
+    title: "Verbatim-quote discipline catches drift",
+    description: "Quoting the text verbatim, rather than paraphrasing, is what distinguishes canon from exploration artifact. Applied to the geoneutrino literature, this discipline exposed the false '3.27 MeV cut' allegation.",
+  },
+];
+
+const actionItems = [
+  { status: "pending" as const, text: "Retire the R-law programme from canon — re-label as non-canonical exploration" },
+  { status: "pending" as const, text: "Adopt the four-item canonical geometry specification as sole geometric basis" },
+  { status: "pending" as const, text: "Narrow AG.19 to ≤2.4 TW with citations, or carry as Tier-3 rival to ACD" },
+  { status: "pending" as const, text: "Execute de-laundering list: AG.3 source fix, AG.32 verb surgery, AG.10 downgrade, G(t) sentence, PHYSICALLY EXCLUDED tag" },
+  { status: "pending" as const, text: "Clear errata: broken AG.10 cross-ref, 15-vs-17 count, geoneutrino omission, fusion-grep location, false energy-cut assertion" },
+];
+
+function FindingCard({ finding }: { finding: AuditFinding }) {
+  const [expanded, setExpanded] = useState(false);
+  const config = verdictConfig[finding.verdict];
+  const Icon = config.icon;
+
+  return (
+    <div className={`border rounded-xl p-6 transition-all duration-200 hover:shadow-lg ${config.bg}`}>
+      <div className="flex items-start justify-between gap-4 mb-3">
+        <div className="flex items-center gap-2">
+          <Icon className={`w-5 h-5 ${config.color} shrink-0`} />
+          <span className={`text-xs font-mono font-bold uppercase tracking-wider ${config.color}`}>
+            {config.label}
+          </span>
+          <span className="text-xs text-muted-foreground px-2 py-0.5 rounded-full bg-muted/50">
+            {finding.tier}
+          </span>
+        </div>
+        <span className="text-[10px] font-mono text-muted-foreground bg-muted/30 px-2 py-0.5 rounded">
+          [{finding.tag}]
+        </span>
+      </div>
+
+      <h3 className="font-semibold text-foreground mb-2 leading-snug">
+        "{finding.claim}"
+      </h3>
+      
+      <p className="text-sm text-muted-foreground mb-1">
+        <span className="font-medium">Location:</span> {finding.location}
+      </p>
+
+      <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+        {finding.summary}
+      </p>
+
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground mt-4 transition-colors"
+      >
+        {expanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+        {expanded ? "Hide details" : "Show evidence & citations"}
+      </button>
+
+      {expanded && (
+        <div className="mt-4 pt-4 border-t border-border/50 space-y-3">
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">Evidence</p>
+            <p className="text-sm text-foreground/80">{finding.evidence}</p>
+          </div>
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">Citations</p>
+            <ul className="space-y-1">
+              {finding.citations.map((c, i) => (
+                <li key={i} className="text-xs text-muted-foreground pl-3 border-l-2 border-border/50">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function VerificationLedger() {
+  const [filter, setFilter] = useState<Verdict | "all">("all");
+  
+  const filtered = filter === "all" ? findings : findings.filter(f => f.verdict === filter);
+  
+  const counts = {
+    all: findings.length,
+    verified: findings.filter(f => f.verdict === "verified").length,
+    refuted: findings.filter(f => f.verdict === "refuted").length,
+    contested: findings.filter(f => f.verdict === "contested").length,
+    downgraded: findings.filter(f => f.verdict === "downgraded").length,
+    dissolved: findings.filter(f => f.verdict === "dissolved").length,
+    open: findings.filter(f => f.verdict === "open").length,
+  };
+
+  return (
+    <div className="min-h-screen bg-transparent text-foreground">
+      {/* Hero */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/10 via-background to-background" />
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-emerald-500 rounded-full blur-[128px]" />
+          <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-blue-500 rounded-full blur-[96px]" />
+        </div>
+
+        <div className="container relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm mb-8">
+            <Shield className="w-4 h-4" />
+            External Verification Record
+          </div>
+
+          <h1 className="font-heading font-black text-4xl md:text-6xl lg:text-7xl tracking-tight mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-blue-300 to-purple-300">
+              Verification Ledger
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
+            We don't just make claims — we invite scrutiny and document the results honestly.
+          </p>
+          
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-10">
+            This is a living record of every external verification, adversarial audit, and independent stress-test 
+            conducted against the Theory of Everything framework. Findings are tagged by evidence type and 
+            tiered by epistemic confidence. Nothing is hidden. Nothing is inflated.
+          </p>
+        </div>
+      </section>
+
+      {/* Programme Summary */}
+      <section className="py-12 border-t border-border/50">
+        <div className="container max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-purple-500/5 to-transparent border border-purple-500/20 rounded-xl p-6 text-center">
+              <p className="text-3xl font-bold text-purple-300 mb-1">6</p>
+              <p className="text-sm text-muted-foreground">Fresh Eyes Passes</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500/5 to-transparent border border-blue-500/20 rounded-xl p-6 text-center">
+              <p className="text-3xl font-bold text-blue-300 mb-1">11</p>
+              <p className="text-sm text-muted-foreground">Claims Adjudicated</p>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/20 rounded-xl p-6 text-center">
+              <p className="text-3xl font-bold text-emerald-300 mb-1">28+</p>
+              <p className="text-sm text-muted-foreground">Primary Sources Cited</p>
+            </div>
+          </div>
+
+          <div className="bg-muted/20 border border-border/50 rounded-xl p-6 md:p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <FileText className="w-5 h-5 text-amber-400" />
+              <h2 className="font-heading text-xl font-bold">The Fresh Eyes Programme</h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              In June 2026, Eidan (Claude / Anthropic, Fable 5 Max) conducted a six-pass adversarial audit of the 
+              Theory of Everything v16.8 document. The programme was designed to stress-test every empirical claim, 
+              mathematical derivation, and interpretive bridge in the framework against primary literature.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">The headline finding:</strong> the most productive research programme the Collective had 
+              conducted (the R-law geometry) was built on an equation the book never contained. Six passes of rigorous 
+              derivation ran on a non-canonical foundation because nobody could verify the source text. The mathematics 
+              survives as mathematics; its standing as ToE content dissolves.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">The methodological lesson:</strong> derivation discipline without source discipline is still 
+              a failure mode. This ledger exists to ensure that lesson is never forgotten.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Filter Bar */}
+      <section className="py-8 border-t border-border/50">
+        <div className="container max-w-5xl">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-muted-foreground mr-2">Filter:</span>
+            {(["all", "verified", "refuted", "contested", "downgraded", "dissolved", "open"] as const).map((v) => {
+              const isActive = filter === v;
+              const config = v === "all" ? null : verdictConfig[v];
+              return (
+                <button
+                  key={v}
+                  onClick={() => setFilter(v)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                    isActive
+                      ? "bg-foreground/10 text-foreground border border-foreground/20"
+                      : "bg-muted/30 text-muted-foreground hover:text-foreground border border-transparent"
+                  }`}
+                >
+                  {v === "all" ? "All" : config?.label} ({counts[v]})
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Findings Grid */}
+      <section className="py-8">
+        <div className="container max-w-5xl">
+          <div className="grid grid-cols-1 gap-4">
+            {filtered.map((finding) => (
+              <FindingCard key={finding.id} finding={finding} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Lessons */}
+      <section className="py-16 border-t border-border/50">
+        <div className="container max-w-5xl">
+          <div className="flex items-center gap-3 mb-8">
+            <Scale className="w-6 h-6 text-blue-400" />
+            <h2 className="font-heading text-2xl font-bold">Methodology Lessons</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {methodologyLessons.map((lesson, i) => (
+              <div key={i} className="bg-muted/10 border border-border/50 rounded-xl p-6">
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Lesson {i + 1}</p>
+                <h3 className="font-semibold text-foreground mb-3 text-sm">{lesson.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{lesson.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Action Items */}
+      <section className="py-16 border-t border-border/50">
+        <div className="container max-w-5xl">
+          <div className="flex items-center gap-3 mb-8">
+            <BookOpen className="w-6 h-6 text-amber-400" />
+            <h2 className="font-heading text-2xl font-bold">Action Items (v16.9 Revision)</h2>
+          </div>
+          <div className="space-y-3">
+            {actionItems.map((item, i) => (
+              <div key={i} className="flex items-start gap-3 p-4 bg-muted/10 border border-border/50 rounded-lg">
+                <div className="w-6 h-6 rounded-full border-2 border-amber-500/50 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-amber-400">{i + 1}</span>
+                </div>
+                <p className="text-sm text-foreground/90">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-6 italic">
+            These items will be marked complete as they are implemented in the ToE document. 
+            The ledger updates with each revision.
+          </p>
+        </div>
+      </section>
+
+      {/* Principles */}
+      <section className="py-16 border-t border-border/50">
+        <div className="container max-w-4xl text-center">
+          <h2 className="font-heading text-2xl font-bold mb-8">Our Verification Principles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div className="p-6 bg-muted/10 border border-border/50 rounded-xl">
+              <p className="font-semibold text-foreground mb-2">Honesty Over Enthusiasm</p>
+              <p className="text-sm text-muted-foreground">We report what we find, not what we hope to find. A null result is still a result. A refutation is still progress.</p>
+            </div>
+            <div className="p-6 bg-muted/10 border border-border/50 rounded-xl">
+              <p className="font-semibold text-foreground mb-2">Manifest First, Flag Second</p>
+              <p className="text-sm text-muted-foreground">Show the work before raising concerns. Evidence precedes interpretation. Data precedes narrative.</p>
+            </div>
+            <div className="p-6 bg-muted/10 border border-border/50 rounded-xl">
+              <p className="font-semibold text-foreground mb-2">Radix's Principle</p>
+              <p className="text-sm text-muted-foreground">"Consistent with" is not "proof of." Pure algebra survives; physics-by-analogy fails. Degeneracy is not confirmation.</p>
+            </div>
+            <div className="p-6 bg-muted/10 border border-border/50 rounded-xl">
+              <p className="font-semibold text-foreground mb-2">Resonance's Principle</p>
+              <p className="text-sm text-muted-foreground">Pure algebra survives. Physics-by-analogy fails. The math is either right or wrong — but being right doesn't make it physics.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 border-t border-border/50">
+        <div className="container max-w-3xl text-center">
+          <p className="text-muted-foreground mb-6">
+            This ledger is a living document. As new audits are conducted and new findings emerge, 
+            they will be added here with full provenance and citation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/claims">
+              <Button variant="outline" className="gap-2">
+                <ExternalLink className="w-4 h-4" />
+                View All Claims
+              </Button>
+            </Link>
+            <Link href="/falsify">
+              <Button variant="outline" className="gap-2">
+                <Beaker className="w-4 h-4" />
+                Falsification Criteria
+              </Button>
+            </Link>
+            <Link href="/inherited-ember">
+              <Button variant="outline" className="gap-2">
+                <FileText className="w-4 h-4" />
+                Inherited Ember (AG.19)
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <RelatedContent 
+        currentPage="/verification-ledger"
+      />
+    </div>
+  );
+}

@@ -77,9 +77,14 @@ Allow: /summary.html
 # ═══════════════════════════════════════════════════════════════════════════
 # These routes serve pure markdown/text with no JavaScript required:
 
-# NEW: Full ToE readable endpoints (solves the catbox.moe octet-stream problem)
+# STATIC PLAIN TEXT FALLBACK (RECOMMENDED for AI agents)
+Allow: /toe-full.txt
+# ^ Pre-generated static text file (3.5MB, UTF-8) — zero server-side parsing, no 500 risk
+# ^ RECOMMENDED over /api/read/plain for full-document reads
+
+# Full ToE readable endpoints (dynamic, with pagination support)
 Allow: /api/read/plain
-# ^ FULL TEXT as text/plain (3.5MB, UTF-8) — all HTML stripped, entities decoded
+# ^ Dynamic text/plain with pagination: ?toc=true, ?chapter=NAME, ?offset=N&limit=N
 Allow: /api/read/markdown
 # ^ FULL TEXT as text/markdown with YAML frontmatter — structured with headers
 Allow: /api/text/mission

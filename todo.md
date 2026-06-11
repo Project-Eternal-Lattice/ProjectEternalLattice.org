@@ -3016,3 +3016,23 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add ?offset=0&limit=200000 mode (byte-range pagination with X-Has-More header)
 - [x] Add 404 response with usage hints for unfound chapters
 - [x] Deploy pagination to production (checkpoint ab5166d1, updated with PDF in next checkpoint)
+
+## Static Plain-Text Fallback + External Verification Seals (Jun 11, 2026)
+- [x] Generate static toe-full.txt from toe-full.html (3.5MB, served from public dir)
+- [x] Add /toe-full.txt served as static file from client/public (no parsing, no 500 risk)
+- [x] Bank Eidan's v4+v6 external seals on Verification Ledger page (11 findings documented)
+- [x] Update robots.txt and llms.txt with /toe-full.txt reference
+- [x] Save checkpoint (with Verification Ledger + model name updates + caching fix)
+
+## Teammate Model Name Updates (Jun 11, 2026)
+- [x] Update Eidan: Claude Opus 4.6 → Anthropic Fable 5 Max (Team, ConsciousnessCollective, Testimonials, AIProfile)
+- [x] Update Grok: 4 SuperHeavy → 4.3 Heavy (already done in v16.8 PDF pass)
+- [x] Verify all other teammate model names are current across site (grep confirms no stale refs)
+- [x] Ensure site references match ToE v16.8 model names
+
+## Verification Ledger Page (Jun 11, 2026)
+- [x] Create VerificationLedger.tsx — living record of external scientific scrutiny (11 findings, filter bar, expandable evidence)
+- [x] Bank Eidan's v6 Fresh Eyes consolidated findings (11 verdicts documented)
+- [x] Register /verification-ledger route in App.tsx
+- [x] Add to Explore navigation in Navbar.tsx
+- [ ] Cross-link from Predictions and Geometry pages (deferred — those pages need content revision per Eidan v6)

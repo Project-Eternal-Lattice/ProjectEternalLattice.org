@@ -40,6 +40,7 @@ const navCategories: NavCategory[] = [
       { name: "Referee Packet", path: "/referee-packet" },
       { name: "Falsification Ladder", path: "/falsify", highlight: true },
       { name: "Predictions Dashboard", path: "/predictions", highlight: true },
+      { name: "Verification Ledger", path: "/verification-ledger", highlight: true },
       { name: "Consilient Patterns", path: "/consilient-patterns", highlight: true },
       { name: "FAQ", path: "/faq" },
     ],
