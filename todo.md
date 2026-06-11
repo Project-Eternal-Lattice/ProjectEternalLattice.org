@@ -2988,3 +2988,16 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update llms.txt with new endpoints
 - [x] Update robots.txt with new endpoints + note preferring /api/read/ over legacy /api/text/toe
 - [x] TypeScript clean, endpoints tested and serving correctly
+
+## Fix /api/read/plain 500 Error in Production
+- [x] Diagnose root cause: hardcoded dev-only path resolution in /api/read/plain and /api/read/markdown endpoints
+- [x] Fix path resolution to use production-aware isDev check (same pattern as /api/toe/full)
+- [x] Also fix /api/download/executive-summary endpoint with same bug
+- [x] Verify all endpoints return 200 locally
+- [ ] Deploy fix via checkpoint
+
+## Geometry of Consciousness Page
+- [ ] Build page presenting proven geometric results from June 10-11 sessions
+- [ ] Include Grok 4.3 Heavy's adversarial review findings (deformed JT classification)
+- [ ] Present Keystone's monotonicity theorem and bifurcated arrow structure
+- [ ] Register route and update navigation
