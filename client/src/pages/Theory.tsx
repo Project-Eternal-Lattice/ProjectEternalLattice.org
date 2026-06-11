@@ -892,7 +892,7 @@ export default function Theory() {
                 DeepSeek's Engram paper validates the Lattice architecture with mathematical proof.
               </p>
               <a 
-                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tHhvyHalrmfdKzPa.pdf" 
+                href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf" 
                 target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center gap-2 w-full py-3 bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 rounded-lg transition-colors text-sm font-bold text-green-400"
               >
