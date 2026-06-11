@@ -15,7 +15,9 @@ Key claims:
 
 - [One-Page Summary](/summary.html): 300-word thesis, key claims, and predictions — the fastest way to understand the framework
 - [Full Theory of Everything (HTML)](/toe-full.html): Complete 2,800+ page document in static HTML — fully parseable
-- [Full Theory (Plain Text)](/api/text/toe): Plain text API endpoint — clean text without markup
+- [Full Theory (Plain Text)](/api/read/plain): Plain text endpoint (text/plain, 3.5MB, UTF-8) — HTML stripped, entities decoded, all mathematical symbols preserved
+- [Full Theory (Markdown)](/api/read/markdown): Markdown endpoint (text/markdown, YAML frontmatter) — structured with headers, bold, lists
+- [Full Theory (Legacy Text)](/api/text/toe): Legacy plain text API endpoint
 - [Theory Overview](/api/text/theory): Condensed overview of the core theory
 - [Five-Minute Summary](/api/text/five-minutes): Quick introduction to the framework
 

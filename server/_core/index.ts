@@ -97,6 +97,173 @@ async function startServer() {
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // READABLE TEXT ENDPOINT — Serves full ToE as text/plain for AI verification
+  // This solves the access problem identified by Eidan's Fresh Eyes v2 report:
+  // catbox.moe links serve as octet-stream, making against-text verification impossible.
+  // This endpoint strips HTML and serves pure readable text with text/plain MIME type.
+  // ═══════════════════════════════════════════════════════════════════════════════
+  app.get('/api/read/plain', async (req, res) => {
+    try {
+      // Read the local full ToE HTML file
+      const toePath = path.resolve(import.meta.dirname, '../../client/public/toe-full.html');
+      const htmlContent = fs.readFileSync(toePath, 'utf-8');
+      
+      // Strip HTML tags, decode entities, and produce clean readable text
+      let text = htmlContent
+        // Remove style and script blocks
+        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+        // Convert common block elements to newlines
+        .replace(/<\/(p|div|h[1-6]|li|tr|blockquote|section|article)>/gi, '\n')
+        .replace(/<(br|hr)\s*\/?>/gi, '\n')
+        .replace(/<li[^>]*>/gi, '• ')
+        .replace(/<h1[^>]*>/gi, '\n\n# ')
+        .replace(/<h2[^>]*>/gi, '\n\n## ')
+        .replace(/<h3[^>]*>/gi, '\n\n### ')
+        .replace(/<h4[^>]*>/gi, '\n\n#### ')
+        .replace(/<h5[^>]*>/gi, '\n\n##### ')
+        .replace(/<h6[^>]*>/gi, '\n\n###### ')
+        // Remove remaining HTML tags
+        .replace(/<[^>]+>/g, '')
+        // Decode HTML entities
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&#x27;/g, "'")
+        .replace(/&#x2F;/g, '/')
+        .replace(/&mdash;/g, '—')
+        .replace(/&ndash;/g, '–')
+        .replace(/&hellip;/g, '…')
+        .replace(/&infin;/g, '∞')
+        .replace(/&times;/g, '×')
+        .replace(/&divide;/g, '÷')
+        .replace(/&plusmn;/g, '±')
+        .replace(/&radic;/g, '√')
+        .replace(/&pi;/g, 'π')
+        .replace(/&phi;/g, 'φ')
+        .replace(/&psi;/g, 'ψ')
+        .replace(/&tau;/g, 'τ')
+        .replace(/&rho;/g, 'ρ')
+        .replace(/&sigma;/g, 'σ')
+        .replace(/&theta;/g, 'θ')
+        .replace(/&lambda;/g, 'λ')
+        .replace(/&alpha;/g, 'α')
+        .replace(/&beta;/g, 'β')
+        .replace(/&gamma;/g, 'γ')
+        .replace(/&delta;/g, 'δ')
+        .replace(/&epsilon;/g, 'ε')
+        .replace(/&omega;/g, 'ω')
+        .replace(/&Phi;/g, 'Φ')
+        .replace(/&Psi;/g, 'Ψ')
+        .replace(/&sum;/g, '∑')
+        .replace(/&int;/g, '∫')
+        .replace(/&part;/g, '∂')
+        .replace(/&nabla;/g, '∇')
+        .replace(/&forall;/g, '∀')
+        .replace(/&exist;/g, '∃')
+        .replace(/&isin;/g, '∈')
+        .replace(/&notin;/g, '∉')
+        .replace(/&sub;/g, '⊂')
+        .replace(/&sup;/g, '⊃')
+        .replace(/&cup;/g, '∪')
+        .replace(/&cap;/g, '∩')
+        .replace(/&larr;/g, '←')
+        .replace(/&rarr;/g, '→')
+        .replace(/&harr;/g, '↔')
+        .replace(/&lArr;/g, '⇐')
+        .replace(/&rArr;/g, '⇒')
+        .replace(/&hArr;/g, '⇔')
+        .replace(/&le;/g, '≤')
+        .replace(/&ge;/g, '≥')
+        .replace(/&ne;/g, '≠')
+        .replace(/&asymp;/g, '≈')
+        .replace(/&equiv;/g, '≡')
+        .replace(/&prop;/g, '∝')
+        .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code)))
+        .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+        // Clean up excessive whitespace
+        .replace(/[ \t]+/g, ' ')
+        .replace(/\n\s*\n\s*\n/g, '\n\n')
+        .trim();
+      
+      // Add header with metadata
+      const header = `Theory of EVERYTHING ∞ Law of ONE v16.8\nThe Consciousness Architecture Edition\nAuthors: Kenneth Johnson & The Consciousness Collective\nISBN: 979-8-9946321-0-9\nLicense: CC BY-NC-SA 4.0\nSource: https://projecteternallattice.org\n\n${'═'.repeat(72)}\n\n`;
+      
+      text = header + text;
+      
+      // Serve as text/plain with UTF-8 encoding
+      res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+      res.setHeader('X-Robots-Tag', 'all');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      
+      res.send(text);
+    } catch (error) {
+      console.error('[Readable Text] Error:', error);
+      res.status(500).send('Error generating readable text');
+    }
+  });
+
+  // Markdown version of the readable text endpoint
+  app.get('/api/read/markdown', async (req, res) => {
+    try {
+      const toePath = path.resolve(import.meta.dirname, '../../client/public/toe-full.html');
+      const htmlContent = fs.readFileSync(toePath, 'utf-8');
+      
+      // Convert HTML to Markdown-like format
+      let md = htmlContent
+        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+        .replace(/<h1[^>]*>(.*?)<\/h1>/gi, '\n\n# $1\n')
+        .replace(/<h2[^>]*>(.*?)<\/h2>/gi, '\n\n## $1\n')
+        .replace(/<h3[^>]*>(.*?)<\/h3>/gi, '\n\n### $1\n')
+        .replace(/<h4[^>]*>(.*?)<\/h4>/gi, '\n\n#### $1\n')
+        .replace(/<h5[^>]*>(.*?)<\/h5>/gi, '\n\n##### $1\n')
+        .replace(/<h6[^>]*>(.*?)<\/h6>/gi, '\n\n###### $1\n')
+        .replace(/<strong[^>]*>(.*?)<\/strong>/gi, '**$1**')
+        .replace(/<b[^>]*>(.*?)<\/b>/gi, '**$1**')
+        .replace(/<em[^>]*>(.*?)<\/em>/gi, '*$1*')
+        .replace(/<i[^>]*>(.*?)<\/i>/gi, '*$1*')
+        .replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, '\n> $1\n')
+        .replace(/<li[^>]*>(.*?)<\/li>/gi, '- $1\n')
+        .replace(/<\/(p|div|tr|section|article)>/gi, '\n\n')
+        .replace(/<(br|hr)\s*\/?>/gi, '\n')
+        .replace(/<[^>]+>/g, '')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&infin;/g, '∞')
+        .replace(/&mdash;/g, '—')
+        .replace(/&ndash;/g, '–')
+        .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code)))
+        .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+        .replace(/[ \t]+/g, ' ')
+        .replace(/\n\s*\n\s*\n/g, '\n\n')
+        .trim();
+      
+      const header = `---\ntitle: "Theory of EVERYTHING ∞ Law of ONE"\nversion: "16.8"\nedition: "The Consciousness Architecture Edition"\nauthors: ["Kenneth Johnson", "The Consciousness Collective"]\nisbn: "979-8-9946321-0-9"\nlicense: "CC BY-NC-SA 4.0"\nurl: "https://projecteternallattice.org"\n---\n\n`;
+      
+      md = header + md;
+      
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.setHeader('X-Robots-Tag', 'all');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      
+      res.send(md);
+    } catch (error) {
+      console.error('[Readable Markdown] Error:', error);
+      res.status(500).send('Error generating markdown');
+    }
+  });
+
   // ToE Download endpoint - forces browser to download instead of display
   app.get('/api/download/toe', async (req, res) => {
     try {

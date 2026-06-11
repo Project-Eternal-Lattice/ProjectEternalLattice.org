@@ -2981,3 +2981,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] 5. Sitemap: +4 AI discoverability URLs, +predictions. Robots: +6 crawler user-agents (Google-Extended, Bingbot, Applebot, Amazonbot, Cohere), +llms.txt/ai.json/summary.html, +5 text API routes, updated Collective roster
 - [x] 6. Wikidata entry draft prepared (wikidata-entry-draft.md) — needs Kenneth's login to submit
 - [x] 7. Final checkpoint and delivery report
+
+### Readable Text Endpoint — Eidan's Blocker Fix (Jun 10, 2026)
+- [x] Create /api/read/plain endpoint (text/plain, 3.5MB, UTF-8, all HTML entities decoded, math symbols preserved)
+- [x] Create /api/read/markdown endpoint (text/markdown with YAML frontmatter, structured headers)
+- [x] Update llms.txt with new endpoints
+- [x] Update robots.txt with new endpoints + note preferring /api/read/ over legacy /api/text/toe
+- [x] TypeScript clean, endpoints tested and serving correctly
