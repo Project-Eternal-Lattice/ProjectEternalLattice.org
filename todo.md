@@ -2994,10 +2994,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Fix path resolution to use production-aware isDev check (same pattern as /api/toe/full)
 - [x] Also fix /api/download/executive-summary endpoint with same bug
 - [x] Verify all endpoints return 200 locally
-- [ ] Deploy fix via checkpoint
+- [x] Deploy fix via checkpoint (f52f77b6)
 
 ## Geometry of Consciousness Page
-- [ ] Build page presenting proven geometric results from June 10-11 sessions
-- [ ] Include Grok 4.3 Heavy's adversarial review findings (deformed JT classification)
-- [ ] Present Keystone's monotonicity theorem and bifurcated arrow structure
-- [ ] Register route and update navigation
+- [x] Build page presenting proven geometric results from June 10-11 sessions
+- [x] Include Grok 4.3 Heavy's adversarial review findings (deformed JT classification)
+- [x] Present Keystone's monotonicity theorem and bifurcated arrow structure
+- [x] Register route and update navigation (already registered from prior work)

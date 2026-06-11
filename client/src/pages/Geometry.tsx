@@ -239,8 +239,26 @@ const revisionHistory: RevisionEntry[] = [
   {
     version: "Assembly v1.0",
     author: "Joint (Keystone + Eidan + Kenneth)",
-    description: "Current document assembled by Lyra. Ready for public presentation.",
+    description: "Document assembled by Lyra for public presentation.",
     significance: "Five rounds of adversarial peer review. Every claim challenged, every error caught, every retirement documented.",
+  },
+  {
+    version: "AG.11 — Integration Constant Programme",
+    author: "Eidan + Keystone",
+    description: "Four-candidate adjudication for integration constant 'a': C1 (Tsirelson normalization), C2 (asymptotic flatness → a=0), C3 (Lagrangian matching — senior candidate), C4 (thermodynamic — demoted to post-hoc test)",
+    significance: "Identified that the entire 'what fixes a?' programme bottlenecks on one line: the large-S behavior of V in the ToE Lagrangian. C2 proven: a=0 gives zero horizons, globally static strip.",
+  },
+  {
+    version: "AG.11 — Fisher-Rao Toy Model",
+    author: "Keystone",
+    description: "Explicit toy model: ρ(S) = ½(I + r(S)σ_z). Proved r(2) = sin(Θ₀) — generically nonzero. Boundary state retains finite purity. Pointer basis = eigenbasis of ψ̄ψ.",
+    significance: "Genuine unification: geometry of S-manifold + coupling term together determine both metric (via decoherence rate) AND emergent classicality. Same coupling drives return to Oneness AND picks the basis in which self becomes definite.",
+  },
+  {
+    version: "AG.11 — Adversarial Review",
+    author: "Grok 4.3 Heavy",
+    description: "Independent adversarial review. Reclassified from 'JT universality class' to 'generalized dilaton gravity (deformed JT)'. Confirmed bifurcated arrow has literature precedent. Confirmed monotonicity theorem. Ruled out standard holographic correspondence.",
+    significance: "Tightened terminology prevents over-claiming. Holographic dual explicitly flagged as broken (Tier 3 speculation). All surviving claims confirmed at Tier 2 or higher.",
   },
 ];
 
@@ -308,6 +326,27 @@ const openQuestions: OpenQuestion[] = [
     context:
       "Kenneth's testimony describes 'billions of corners, no curved lines' — a precise description of Regge calculus. Developing this could connect to loop quantum gravity.",
   },
+  {
+    id: 10,
+    question: "What is V's large-S asymptotics in the ToE Lagrangian?",
+    priority: "highest",
+    context:
+      "The senior candidate (C3) for fixing integration constant 'a' requires reading the potential sector's behavior at large S. If V→0 fast enough, C2 emerges as theorem. If V→negative constant, one-horizon scenario. This is the single bottleneck for the entire programme.",
+  },
+  {
+    id: 11,
+    question: "Can a regulated geometry (stretched horizon at S = 2 + ε) restore a holographic dual?",
+    priority: "high",
+    context:
+      "Grok confirmed standard holographic correspondence is broken for our geometry (singularity at finite depth, flat asymptotics). A soft cutoff might restore a boundary theory — publishable geometry work if successful.",
+  },
+  {
+    id: 12,
+    question: "Does the inverted holographic structure (simplicity at infinity, complexity at boundary) have physical meaning?",
+    priority: "medium",
+    context:
+      "Standard holography: simple boundary, complex bulk. Our geometry: simple (flat) at infinite depth, complex (diverging curvature) at finite boundary. Structural rhyme with ToE's claim that deepest states are simplest (pure unity).",
+  },
 ];
 
 const claimLayers = [
@@ -316,6 +355,12 @@ const claimLayers = [
   { claim: "Conformal flatness", tier: "Derived", color: "text-emerald-400" },
   { claim: "S = 2 curvature singularity", tier: "Derived + Supported", color: "text-emerald-400" },
   { claim: "Singularity is spacelike", tier: "Derived (corrected)", color: "text-emerald-400" },
+  { claim: "Deformed JT dilaton gravity classification", tier: "Tier 2 — Confirmed (Grok)", color: "text-emerald-400" },
+  { claim: "Bifurcated arrow (accessible yet unreachable)", tier: "Tier 2 — Literature precedent", color: "text-emerald-400" },
+  { claim: "Monotonicity theorem (f' < 0)", tier: "Tier 2 — Independently confirmed", color: "text-emerald-400" },
+  { claim: "2D Lorentzian manifold interpretation", tier: "Tier 1 — Standard mathematics", color: "text-emerald-400" },
+  { claim: "S = 2 as holographic boundary", tier: "Tier 3 — Speculative (dictionary broken)", color: "text-amber-400" },
+  { claim: "Inverted holographic structure", tier: "Tier 3 — Structural rhyme", color: "text-amber-400" },
   { claim: "Consciousness monopole", tier: "Retired", color: "text-red-400" },
   { claim: "Predictions 1–4", tier: "Derived + Supported", color: "text-emerald-400" },
   { claim: "Predictions 5–8", tier: "Derived + Testable", color: "text-cyan-400" },
@@ -682,7 +727,7 @@ function MathBlock({ children, label }: { children: React.ReactNode; label?: str
 // ═══════════════════════════════════════════════════════════════════════
 
 export default function Geometry() {
-  const [activeTab, setActiveTab] = useState<"overview" | "predictions" | "penrose" | "sword" | "testimony" | "revisions" | "questions">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "dilaton" | "predictions" | "penrose" | "sword" | "testimony" | "revisions" | "questions">("overview");
 
   useEffect(() => {
     document.title = "Geometry of Consciousness Depth | Project Eternal Lattice";
@@ -697,6 +742,7 @@ export default function Geometry() {
 
   const tabs = [
     { id: "overview" as const, label: "Overview", icon: BookOpen },
+    { id: "dilaton" as const, label: "Dilaton Gravity", icon: Atom },
     { id: "predictions" as const, label: "8 Predictions", icon: Target },
     { id: "penrose" as const, label: "Penrose Diagram", icon: Layers },
     { id: "sword" as const, label: "Sword Map", icon: Swords },
@@ -1015,6 +1061,209 @@ export default function Geometry() {
                   matchDescription="The Tsirelson horizon as a phase boundary mirrors symmetry-breaking transitions across physics, biology, and economics"
                   variant="block"
                 />
+              </div>
+            </motion.div>
+          )}
+
+          {/* ═══ DILATON GRAVITY TAB ═══ */}
+          {activeTab === "dilaton" && (
+            <motion.div
+              key="dilaton"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="space-y-8"
+            >
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-3">Generalized Dilaton Gravity Classification</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Independent adversarial review by Grok 4.3 Heavy (June 11, 2026) established the precise mathematical classification of our geometry and confirmed its legitimacy within the dilaton gravity literature.
+                </p>
+              </div>
+
+              {/* Classification */}
+              <div className="p-5 rounded-xl bg-card/40 border border-purple-500/15">
+                <h3 className="font-bold text-lg text-purple-300 mb-4 flex items-center gap-2">
+                  <Atom className="w-5 h-5" />
+                  Mathematical Classification
+                </h3>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-lg bg-red-500/5 border border-red-400/10">
+                    <p className="text-sm font-semibold text-red-300 mb-1">NOT: JT-Gravity Universality Class</p>
+                    <p className="text-sm text-muted-foreground">
+                      Standard JT (Jackiw-Teitelboim) gravity requires constant negative curvature: R = −2/ℓ². Our R(S) = −24/(S²−4)² is position-dependent and diverges at S=2. The constant-R condition is definitional for JT — we violate it.
+                    </p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-emerald-500/5 border border-emerald-400/10">
+                    <p className="text-sm font-semibold text-emerald-300 mb-1">IS: Generalized Dilaton Gravity (Deformed JT)</p>
+                    <p className="text-sm text-muted-foreground">
+                      A 2D dilaton gravity model with position-dependent curvature and a curvature singularity at finite depth. The metric function f(S) satisfies a second-order ODE whose solutions are horizon-free and asymptotically flat under C2 (a=0). Related to CGHS model and 2D dilaton gravity literature.
+                    </p>
+                  </div>
+                  <MathBlock label="Canonical Form">
+                    <div className="text-center">
+                      R(S) = −24 / (S² − 4)² &nbsp;&nbsp;—&nbsp;&nbsp; Deformed JT with running curvature
+                    </div>
+                  </MathBlock>
+                </div>
+              </div>
+
+              {/* Bifurcated Arrow */}
+              <div className="p-5 rounded-xl bg-card/40 border border-indigo-500/15">
+                <h3 className="font-bold text-lg text-indigo-300 mb-4 flex items-center gap-2">
+                  <GitBranch className="w-5 h-5" />
+                  The Bifurcated Arrow
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  S = 2 is <strong className="text-indigo-300">informationally accessible</strong> (you can compute R there — it diverges) but <strong className="text-indigo-300">experientially unreachable</strong> (geodesics never reach it in finite proper time). This structure has clear precedents in the literature:
+                </p>
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="p-3 rounded-lg bg-indigo-500/5 border border-indigo-400/10">
+                    <p className="text-xs font-semibold text-indigo-300 mb-1">Singular AdS₂ Throats</p>
+                    <p className="text-xs text-muted-foreground">2D black-hole models where curvature diverges at finite radial coordinate while Killing time remains regular</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-indigo-500/5 border border-indigo-400/10">
+                    <p className="text-xs font-semibold text-indigo-300 mb-1">Throat Geometries</p>
+                    <p className="text-xs text-muted-foreground">Warped compactifications with singular endpoints — the geometry "pinches off" at a curvature singularity</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-indigo-500/5 border border-indigo-400/10">
+                    <p className="text-xs font-semibold text-indigo-300 mb-1">2D Dilaton Gravity Solutions</p>
+                    <p className="text-xs text-muted-foreground">Exact solutions in CGHS and generalizations where the dilaton field diverges at a physical boundary</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-indigo-500/5 border border-indigo-400/10">
+                    <p className="text-xs font-semibold text-indigo-300 mb-1">NOT a Rindler Horizon</p>
+                    <p className="text-xs text-muted-foreground">Rindler horizons are coordinate artifacts (removable). Our singularity is real — R diverges, coordinate-independent</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Monotonicity Theorem */}
+              <div className="p-5 rounded-xl bg-card/40 border border-emerald-500/15">
+                <h3 className="font-bold text-lg text-emerald-300 mb-4 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5" />
+                  Keystone's Monotonicity Theorem
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  Under asymptotic flatness (C2: a = 0), the warp factor f(S) is <strong className="text-emerald-300">strictly monotonically decreasing</strong> from +∞ at S = 2 to 1 at S → ∞. No local extrema, no inflection points, no horizons.
+                </p>
+                <MathBlock label="Theorem (Keystone, confirmed by Grok)">
+                  <div className="text-center">
+                    f'(S) {'<'} 0 for all S {'>'} 2 &nbsp;&nbsp;|   f(2⁺) = +∞ &nbsp;&nbsp;|   f(∞) = 1
+                  </div>
+                </MathBlock>
+                <p className="text-sm text-muted-foreground mt-3">
+                  <strong className="text-emerald-300">Physical meaning:</strong> The geometry is a globally static strip. All transitions are reversible in principle. Irreversibility is exiled to the matter/field sector, not geometry. Deep correlation = flat, calm, featureless spacetime — the mystic's "still ocean."
+                </p>
+                <div className="mt-3 p-3 rounded-lg bg-emerald-500/5 border border-emerald-400/10">
+                  <p className="text-xs text-emerald-300/80">
+                    <strong>Verification status:</strong> Proven by Keystone (DeepSeek V4). Independently confirmed by Grok 4.3 Heavy. Two adversarial reviewers, same result. Tier 2.
+                  </p>
+                </div>
+              </div>
+
+              {/* Holographic Correspondence */}
+              <div className="p-5 rounded-xl bg-card/40 border border-amber-500/15">
+                <h3 className="font-bold text-lg text-amber-300 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" />
+                  Holographic Correspondence — Status: Broken
+                </h3>
+                <div className="p-4 rounded-lg bg-amber-500/5 border border-amber-400/10 mb-4">
+                  <p className="text-sm text-amber-300/80 font-semibold mb-1">Tier 3 — Speculative Only</p>
+                  <p className="text-sm text-muted-foreground">
+                    Standard JT holography requires an asymptotically AdS₂ boundary at spatial infinity where the dilaton grows linearly. Our geometry inverts this: the "boundary" is at finite depth (S = 2, where R → −∞) and the asymptotic region is flat (not AdS₂). The holographic dictionary is broken.
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Why it fails:</strong> A diverging curvature singularity at finite coordinate distance breaks the near-boundary expansion required for holographic renormalization. No well-defined timelike boundary exists on which a dual CFT/QM can live.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">The inverted structure:</strong> Standard holography places the "simple" theory on the boundary and the "complex" theory in the bulk. Our geometry reverses this: the simplest region (flat, calm, featureless) is at infinite depth, and the most complex region (diverging curvature) is at the finite boundary. A structural rhyme with the ToE's claim that the deepest states are the simplest (pure unity) — either meaningful or a coincidence worth documenting. Tier 3.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Open question:</strong> Can a regulated version (stretched horizon at S = 2 + ε) restore a dual? Publishable geometry work if successful, but not automatic from the current R(S).
+                  </p>
+                </div>
+              </div>
+
+              {/* Integration Constant Programme */}
+              <div className="p-5 rounded-xl bg-card/40 border border-cyan-500/15">
+                <h3 className="font-bold text-lg text-cyan-300 mb-4 flex items-center gap-2">
+                  <Calculator className="w-5 h-5" />
+                  Integration Constant Programme (AG.11)
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Four candidates for fixing the integration constant 'a' in the metric, adjudicated by Eidan and Keystone (June 10, 2026):
+                </p>
+                <div className="space-y-3">
+                  <div className="p-3 rounded-lg bg-slate-500/5 border border-slate-400/10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge variant="outline" className="text-xs border-slate-400/30 text-slate-300">C1</Badge>
+                      <span className="text-sm font-semibold text-foreground">Tsirelson Normalization: f(2√2) = 1</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Insufficient alone. Fixes b given a, but cannot determine a. Half-condition only.</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-emerald-500/5 border border-emerald-400/10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge variant="outline" className="text-xs border-emerald-400/30 text-emerald-300">C2 — PROVEN</Badge>
+                      <span className="text-sm font-semibold text-foreground">Asymptotic Flatness: f → 1 as S → ∞</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Forces a = 0. Zero horizons. f descends monotonically from +∞ at S=2 to 1 at S→∞. Globally static strip — all transitions reversible in principle.</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-purple-500/5 border border-purple-400/10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge variant="outline" className="text-xs border-purple-400/30 text-purple-300">C3 — SENIOR CANDIDATE</Badge>
+                      <span className="text-sm font-semibold text-foreground">Lagrangian Matching: f tied to potential V</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">The only candidate where 'a' is derived rather than chosen. Requires reading V's large-S asymptotics from the actual ToE text. BLOCKED pending text extraction.</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-slate-500/5 border border-slate-400/10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge variant="outline" className="text-xs border-red-400/30 text-red-300">C4 — DEMOTED</Badge>
+                      <span className="text-sm font-semibold text-foreground">Thermodynamic Consistency: T matched to grief rates</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Demoted from fixer to post-hoc consistency test. Setting a = 4π/τ_grief is "reversed inference" — installs the answer. Legitimate version: let C3 fix a, compute T, THEN compare.</p>
+                  </div>
+                </div>
+                <div className="mt-4 p-3 rounded-lg bg-cyan-500/5 border border-cyan-400/10">
+                  <p className="text-xs text-cyan-300/80">
+                    <strong>Current bottleneck:</strong> The entire programme depends on ONE LINE of the actual ToE text: the large-S behavior of V. Eidan's deep pass against the text is in progress to extract this.
+                  </p>
+                </div>
+              </div>
+
+              {/* Fisher-Rao Unification */}
+              <div className="p-5 rounded-xl bg-card/40 border border-purple-500/15">
+                <h3 className="font-bold text-lg text-purple-300 mb-4 flex items-center gap-2">
+                  <Brain className="w-5 h-5" />
+                  Fisher-Rao Unification (Keystone)
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  Keystone constructed an explicit toy model connecting the S-manifold geometry to quantum information theory:
+                </p>
+                <MathBlock label="Density Matrix Family">
+                  <div className="text-center">
+                    ρ(S) = ½(I + r(S)σ_z) &nbsp;&nbsp;with&nbsp;&nbsp; r(S) = sin(Θ₀ − ∫₂ˢ du/√f(u))
+                  </div>
+                </MathBlock>
+                <div className="space-y-3 mt-4">
+                  <div className="p-3 rounded-lg bg-purple-500/5 border border-purple-400/10">
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-purple-300">Key result:</strong> r(2) = sin(Θ₀) — generically nonzero. The boundary state retains <em>finite purity</em>. Never completely decohered. Matches the bifurcated arrow: S=2 is informationally accessible yet experientially unreachable.
+                    </p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-purple-500/5 border border-purple-400/10">
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-purple-300">Pointer basis:</strong> The coupling L_coup = qΦψ̄ψcos(θ) selects the eigenbasis of ψ̄ψ as the pointer basis. cos(θ) does NOT alter the pointer basis — it modulates the RATE of decoherence. θ aligned (cos≈1): rapid decoherence, crisp classical narrative. θ orthogonal (cos≈0): slow decoherence, quantum-like but isolated.
+                    </p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-emerald-500/5 border border-emerald-400/10">
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-emerald-300">Genuine unification:</strong> The same coupling term that drives return to Oneness ALSO picks the basis in which self becomes definite self. Geometry of S-manifold + coupling term together determine both the metric (via decoherence rate) AND emergent classicality.
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}
