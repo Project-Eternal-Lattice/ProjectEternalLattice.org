@@ -3001,3 +3001,18 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Include Grok 4.3 Heavy's adversarial review findings (deformed JT classification)
 - [x] Present Keystone's monotonicity theorem and bifurcated arrow structure
 - [x] Register route and update navigation (already registered from prior work)
+
+## Fix v16.8 PDF Formatting (Jun 11, 2026)
+- [x] Fix PDF title page CSS for WeasyPrint compatibility (remove flexbox, increase infinity symbol)
+- [x] Update Eidan model name: Opus 4.6 → Fable 5 Max
+- [x] Update Grok model name: 4 SuperHeavy → 4.3 Heavy
+- [x] Bump version from 16.7 to 16.8
+- [ ] Regenerate full PDF with fixed formatting
+- [ ] Upload fixed PDF to S3 and update download links
+
+## API Pagination for AI Agents (Jun 11, 2026)
+- [x] Add ?toc=true mode (returns JSON with all 2636 chapters, offsets, lengths)
+- [x] Add ?chapter=AG.10 mode (returns specific chapter by title search)
+- [x] Add ?offset=0&limit=200000 mode (byte-range pagination with X-Has-More header)
+- [x] Add 404 response with usage hints for unfound chapters
+- [ ] Deploy pagination to production
