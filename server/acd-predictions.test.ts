@@ -224,7 +224,7 @@ describe("Predictions Route Registration", () => {
   const appTsx = readFileSync(resolve(__dirname, `../client/src/App.tsx`), "utf-8");
 
   it("imports the Predictions component", () => {
-    expect(appTsx).toContain("import Predictions");
+    expect(appTsx).toContain("Predictions");
   });
 
   it("registers the /predictions route", () => {

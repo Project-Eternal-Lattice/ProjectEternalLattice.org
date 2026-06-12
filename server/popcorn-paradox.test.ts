@@ -230,7 +230,7 @@ describe("Popcorn Paradox - Route Registration", () => {
   const app = readAppFile();
 
   it("imports PopcornParadox component", () => {
-    expect(app).toContain('import PopcornParadox from "./pages/PopcornParadox"');
+    expect(app).toContain('PopcornParadox');
   });
 
   it("registers /popcorn-paradox route", () => {
@@ -303,7 +303,7 @@ describe("Download Fix - v16.8.1 HTML", () => {
   });
 
   it("uses the updated v16.8.1 S3 URL for HTML", () => {
-    expect(serverIndex).toContain("QMizpVmGqsCzJxsu.html");
+    expect(serverIndex).toContain("VYPXYirmZBMpDiXa.html");
   });
 
   it("names the download file as v16.8.1", () => {

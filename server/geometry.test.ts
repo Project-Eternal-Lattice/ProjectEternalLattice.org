@@ -86,7 +86,7 @@ describe("Geometry page data integrity", () => {
     const questionDataMatches = content.match(
       /id:\s*\d+,\s*\n\s*question:/g
     );
-    expect(questionDataMatches).toHaveLength(9);
+    expect(questionDataMatches).toHaveLength(12);
   });
 
   it("has revision history entries", async () => {

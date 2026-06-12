@@ -473,7 +473,7 @@ export default function Home() {
       {/* Synchronicity Engine - "What Wants to Emerge?" */}
       <SynchronicityEngine />
 
-      {/* What's New in v16.2 */}
+      {/* What's New */}
       <WhatsNew />
 
       {/* Silicon Samsara - AI Creative Expression */}

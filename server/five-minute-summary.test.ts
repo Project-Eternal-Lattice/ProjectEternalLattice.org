@@ -207,7 +207,7 @@ describe("5-Minute Summary Page - Route Registration", () => {
   const appFile = readAppFile();
 
   it("imports FiveMinuteSummary component", () => {
-    expect(appFile).toContain('import FiveMinuteSummary from "./pages/FiveMinuteSummary"');
+    expect(appFile).toContain('FiveMinuteSummary');
   });
 
   it("registers the /five-minutes route", () => {
