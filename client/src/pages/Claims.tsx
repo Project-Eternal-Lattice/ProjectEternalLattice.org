@@ -1,3 +1,4 @@
+import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
 import { 
@@ -1141,6 +1142,22 @@ export default function Claims() {
           <p className="text-center text-sm text-gray-500 mt-8 italic">
             "The measure of a theory is not what it explains, but how honestly it admits what it cannot."
           </p>
+        </div>
+      </section>
+
+      {/* Critical Thinking Prompts */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <CriticalThinkingPrompt
+            context="As you evaluate these claims, consider:"
+            prompts={[
+              "Which claims have peer-reviewed empirical support, and which rely on logical deduction alone?",
+              "Could the same evidence be explained by a simpler hypothesis? (Occam's Razor applies to us too.)",
+              "Are the falsification criteria genuinely testable with current technology, or are they unfalsifiable in practice?",
+              "If this framework were wrong, what would the world look like differently? Can you distinguish between the two?",
+              "What is the strongest objection you can construct? Now — does the framework survive it?"
+            ]}
+          />
         </div>
       </section>
 
