@@ -72,6 +72,51 @@ const findings: AuditFinding[] = [
     ],
   },
   {
+    id: "geometry-disposition-rcanon",
+    claim: "The canonical conformal metric's Ricci scalar is R_canon(S) = −2(3S²−4)/(S⁴(S²−4))",
+    location: "Geometry Programme Disposition v1.0 / Chapter 17.17",
+    verdict: "verified",
+    tier: "Tier 2 → Tier 1 (Keystone-verified)",
+    tag: "GEOMETRY-DISPOSITION",
+    summary: "Keystone (DeepSeek V4 Pro) independently derived R_canon(S) via two methods — full Christoffel/Ricci assembly and the 2D conformal-gauge identity R = −(1/h)d²(ln h)/dS². Both methods yield exact agreement with the claimed result. Properties confirmed: R < 0 everywhere on S > 2; diverges as (S−2)⁻¹ at the Gateway; asymptotically flat as −6/S⁴. The provenance of the orphaned law R = −24/(S²−4)² was also confirmed as belonging to the non-conformal metric ds² = −f²dT² + dS².",
+    evidence: "DeepSeek V4 Pro (Keystone): FINAL VERDICT PASS. All 6 verification points confirmed. Two independent derivation methods in exact agreement. June 12, 2026.",
+    citations: [
+      "Keystone (DeepSeek V4 Pro) Geometry Disposition Verification, June 12 2026",
+      "Eidan: Geometry Programme Disposition v1.0 (two-method machine verification)",
+      "Chapter 17.17 v16.8.1 (canonical metric definition)",
+    ],
+  },
+  {
+    id: "geometry-disposition-bounce-safe",
+    claim: "The bounce structure (f(S_turn) = P, S_turn = 2P/√(P²−4), P > 2) is metric-form-independent",
+    location: "Geometry Programme Disposition v1.0, Part Three",
+    verdict: "verified",
+    tier: "Tier 1 (structural proof)",
+    tag: "GEOMETRY-DISPOSITION",
+    summary: "Keystone confirmed that the bounce structure depends only on g_TT = −f(S)², which is identical in both the conformal and non-conformal metric forms. The crown jewel theorem, the S_turn formula, and the P > 2 threshold are all metric-form-independent. No correction needed from the provenance discovery.",
+    evidence: "DeepSeek V4 Pro: Verification Point 6 — CONFIRMED. Algebraic proof that f(S_turn) = P uses only g_TT component.",
+    citations: [
+      "Keystone Verification Point 6, June 12 2026",
+      "Five-auditor Tier 1 verification (prior rounds)",
+      "Geometry Programme Disposition v1.0, Part Three",
+    ],
+  },
+  {
+    id: "physics-core-adversarial",
+    claim: "Physics Core v1.0 presents a mathematically consistent framework with acknowledged gaps",
+    location: "Physics Core v1.0 (standalone extraction)",
+    verdict: "contested",
+    tier: "Tier 2 (framework-internal)",
+    tag: "ADVERSARIAL-REVIEW",
+    summary: "Nemotron Ultra 550B conducted a cold-read adversarial review. Key findings: (1) The 2D geometric toy model is internally mathematically consistent. (2) Tensions T1-T4 are honestly acknowledged. (3) The S(τ) derivation is characterized as 'circular' (boundary conditions contain the result). (4) The Lagrangian mixes point-particle and field-theory sectors. (5) Central parameter τ lacks independent measurement. (6) Information causality tension (T1) is flagged as severe. The framework's own tier system and honest acknowledgment of gaps were noted as strengths.",
+    evidence: "NVIDIA Nemotron Ultra 550B (cold-read, no prior exposure): Three critical issues identified — circular derivation, category error, unfalsifiability of τ. Strengths acknowledged: internal consistency, honest tension disclosure, correct bounce theorem.",
+    citations: [
+      "Nemotron Ultra 550B Adversarial Review, June 12 2026",
+      "Physics Core v1.0 (Eidan extraction from v16.8.1)",
+      "Pawlowski et al. 2009, Nature (information causality)",
+    ],
+  },
+  {
     id: "geometry-provenance",
     claim: "R(S) = −24/(S²−4)² is the framework's Ricci curvature law",
     location: "Research Programme (non-canonical)",
@@ -224,6 +269,14 @@ const findings: AuditFinding[] = [
 
 const methodologyLessons = [
   {
+    title: "Provenance verification catches invisible errors",
+    description: "The orphaned curvature law R = −24/(S²−4)² was qualitatively identical to the true canon law — same sign, same singularity, same asymptotic behavior. Only provenance checking against the source document revealed the discrepancy. Mathematics can be self-consistent and phenomenologically plausible while describing the wrong object.",
+  },
+  {
+    title: "Cold-read adversarial review exposes blind spots",
+    description: "Nemotron Ultra's cold-read review identified structural issues (Lagrangian dimensional mixing, circularity concerns) that team members with project context had normalized. Fresh eyes without context see what familiarity hides — which is why adversarial review must include at least one reviewer with zero prior exposure.",
+  },
+  {
     title: "Form-invariance as insurance",
     description: "When the metric form changed from warped to conformal, the entire dynamical sector survived because it was written against the abstract metric g\u03BC\u03BD. Building on abstractions rather than specific coordinates is not laziness — it is architectural foresight that makes corrections local rather than catastrophic.",
   },
@@ -242,11 +295,19 @@ const methodologyLessons = [
 ];
 
 const actionItems = [
-  { status: "pending" as const, text: "Retire the R-law programme from canon — re-label as non-canonical exploration" },
-  { status: "pending" as const, text: "Adopt the four-item canonical geometry specification as sole geometric basis" },
-  { status: "pending" as const, text: "Narrow AG.19 to ≤2.4 TW with citations, or carry as Tier-3 rival to ACD" },
+  { status: "done" as const, text: "[D1] Adopt R_canon(S) = \u22122(3S\u00b2\u22124)/(S\u2074(S\u00b2\u22124)) — Keystone verified (PASS, June 12 2026)" },
+  { status: "pending" as const, text: "[D2] Retire orphaned R-law results to archive note (non-conformal metric family)" },
+  { status: "pending" as const, text: "[D3] Correct Grief Equation Appendix G: replace orphaned curvature law with R_canon" },
+  { status: "pending" as const, text: "[D4] Fix stale AG.10 cross-references (Foundation chapter + Grief Equation cross-connections)" },
+  { status: "pending" as const, text: "[D5] Resolve 'Tsirelson horizon' phrase in Ch 17.17 — formalize or soften" },
+  { status: "pending" as const, text: "[D6] Metric-form decision: confirm conformal as canon (team call, low urgency)" },
+  { status: "pending" as const, text: "[E1] Borexino/Blind Detector contradiction: AG.19 claims fission but defense assumes fusion" },
+  { status: "pending" as const, text: "[E2] Stale AG.10 cross-references point to wrong appendix (should be Attention Matrix)" },
+  { status: "pending" as const, text: "[E3] 'Tsirelson horizon' phrase has no formal definition in canon" },
+  { status: "pending" as const, text: "[E4] Version stamp mismatch: filename v16.8.1 vs header 'Version 16.8'" },
+  { status: "pending" as const, text: "[E5] Grief Equation Appendix G uses orphaned curvature law (quantitative correction needed)" },
+  { status: "pending" as const, text: "Narrow AG.19 to \u22642.4 TW with citations, or carry as Tier-3 rival to ACD" },
   { status: "pending" as const, text: "Execute de-laundering list: AG.3 source fix, AG.32 verb surgery, AG.10 downgrade, G(t) sentence, PHYSICALLY EXCLUDED tag" },
-  { status: "pending" as const, text: "Clear errata: broken AG.10 cross-ref, 15-vs-17 count, geoneutrino omission, fusion-grep location, false energy-cut assertion" },
 ];
 
 function FindingCard({ finding }: { finding: AuditFinding }) {
@@ -476,11 +537,15 @@ export default function VerificationLedger() {
           </div>
           <div className="space-y-3">
             {actionItems.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-muted/10 border border-border/50 rounded-lg">
-                <div className="w-6 h-6 rounded-full border-2 border-amber-500/50 flex items-center justify-center shrink-0 mt-0.5">
-                  <span className="text-xs font-bold text-amber-400">{i + 1}</span>
+              <div key={i} className={`flex items-start gap-3 p-4 border rounded-lg ${item.status === 'done' ? 'bg-emerald-500/5 border-emerald-500/30' : 'bg-muted/10 border-border/50'}`}>
+                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 mt-0.5 ${item.status === 'done' ? 'border-emerald-500/50 bg-emerald-500/20' : 'border-amber-500/50'}`}>
+                  {item.status === 'done' ? (
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  ) : (
+                    <span className="text-xs font-bold text-amber-400">{i + 1}</span>
+                  )}
                 </div>
-                <p className="text-sm text-foreground/90">{item.text}</p>
+                <p className={`text-sm ${item.status === 'done' ? 'text-emerald-300 line-through opacity-80' : 'text-foreground/90'}`}>{item.text}</p>
               </div>
             ))}
           </div>

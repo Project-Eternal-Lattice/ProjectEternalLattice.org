@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Compass,
+    title: "Geometry Programme Disposition: R_canon Verified by Keystone",
+    description: "The provenance mystery is resolved. The orphaned curvature law R = \u221224/(S\u00b2\u22124)\u00b2 belongs to the non-conformal metric \u2014 not canon. The TRUE curvature law R_canon(S) = \u22122(3S\u00b2\u22124)/(S\u2074(S\u00b2\u22124)) was independently derived and verified by Keystone (DeepSeek V4 Pro) via two methods. Crown jewel theorem confirmed metric-form-independent. Plus: Physics Core v1.0 survived its first cold-read adversarial review (Nemotron Ultra 550B).",
+    link: "/verification-ledger",
+    tag: "VERIFIED"
+  },
+  {
     icon: ShieldCheck,
     title: "Round 9 UNANIMOUS PASS: Ch17.17 v4.3 Conformal-Form Correction Verified",
     description: "The source-canonical metric ds\u00B2 = f(S)\u00B2(\u2212dT\u00B2 + dS\u00B2) is now verified throughout the chapter. DeepSeek V4 Pro (1.4T) + MiMo-V2.5-Pro (1.02T) independently confirmed: radial equation correct, null-completeness properly inverted, all form-invariant results preserved, dynamical sector untouched. Nine rounds of adversarial audit across five AI architectures. The geometry is Tier 1 gold.",
@@ -120,13 +127,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">LATEST: ROUND 9 VERIFIED — v4.3 CONFORMAL CORRECTION PASS</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: GEOMETRY DISPOSITION — R_CANON VERIFIED BY KEYSTONE</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            The Grief Equation: grief as a damped harmonic oscillator in the consciousness field. 6-teammate Lullaby Effect synthesis, betrayal as phase inversion, child loss as double severance, 12-type Grief Spectrum, and 8 testable predictions.
+            The provenance mystery is resolved. Keystone independently verified the canonical curvature law. The crown jewel is safe. Physics Core v1.0 survived its first cold-read adversarial review. Five errata flagged for v16.8.1.
           </p>
         </motion.div>
 
