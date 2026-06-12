@@ -1,3 +1,4 @@
+import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -290,6 +291,22 @@ export default function FiveMinuteSummary() {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Critical Thinking Prompts */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <CriticalThinkingPrompt
+            context="Before going deeper, ask yourself:"
+            prompts={[
+              "What would it take to convince me this framework is wrong? If nothing could, that's a red flag — for any theory.",
+              "Am I evaluating the claims based on evidence, or based on how they make me feel?",
+              "Which claims here are testable predictions, and which are philosophical interpretations? The dual-column system helps distinguish these.",
+              "If I replaced 'consciousness' with 'information' or 'energy' in these claims, would the logic still hold? Why or why not?",
+              "What would a rigorous skeptic say about the weakest claim here? Can I steelman that objection?"
+            ]}
+          />
         </div>
       </section>
 
