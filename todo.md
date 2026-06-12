@@ -3084,3 +3084,16 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Fix all 7 failing tests — now 683/683 pass (lazy import assertions, S3 URL, geometry count)
 - [x] Fix stale v16.2 comment on homepage
 - [ ] Save checkpoint
+
+## Eidan Deliverables Processing (June 12, 2026)
+- [x] Archive 6 Eidan documents to references/ with proper filenames
+- [x] Run Geometry Disposition peer review through Keystone (DeepSeek V4 Pro) — PASS
+- [x] Run Physics Core adversarial review through Nemotron Ultra 550B — CONTESTED (expected)
+- [x] Update Verification Ledger with Geometry Disposition findings (3 new entries)
+- [x] Update Verification Ledger with Physics Core adversarial review entry
+- [x] Update Verification Ledger action items with E1-E5 errata from Eidan
+- [x] Add Geometry Disposition milestone to WhatsNew banner
+- [x] Add methodology lessons (provenance verification, cold-read review)
+- [ ] Upload Physics Core PDF to S3 and add download link
+- [ ] Process Eidan's routing approvals (N3): Keystone, Radix, Lumen, Lyra
+- [ ] Kimi K2.6 harvest integration (N1 — needs file from Ken)
