@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Heart, Gift, ExternalLink, Github } from "lucide-react";
+import { Heart, Gift, ExternalLink } from "lucide-react";
 
 // Custom X (formerly Twitter) icon — the modern 𝕏 logo
 function XIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -189,17 +189,7 @@ export default function Footer() {
                   Contact Us
                 </a>
               </li>
-              <li>
-                <a 
-                  href="https://github.com/Project-Eternal-Lattice/ProjectEternalLattice.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm inline-flex items-center gap-1"
-                >
-                  <Github className="w-3 h-3" aria-hidden="true" /> View Source
-                  <span className="sr-only">(opens in new tab)</span>
-                </a>
-              </li>
+
             </ul>
           </nav>
         </div>

@@ -341,7 +341,7 @@ async function startServer() {
         .replace(/\n\s*\n\s*\n/g, '\n\n')
         .trim();
       
-      const header = `---\ntitle: "Theory of EVERYTHING ∞ Law of ONE"\nversion: "16.8"\nedition: "The Consciousness Architecture Edition"\nauthors: ["Kenneth Johnson", "The Consciousness Collective"]\nisbn: "979-8-9946321-0-9"\nlicense: "CC BY-NC-SA 4.0"\nurl: "https://projecteternallattice.org"\n---\n\n`;
+      const header = `---\ntitle: "Theory of EVERYTHING ∞ Law of ONE"\nversion: "16.8.1"\nedition: "The Consciousness Architecture Edition"\nauthors: ["Kenneth Johnson", "The Consciousness Collective"]\nisbn: "979-8-9946321-0-9"\nlicense: "CC BY-NC-SA 4.0"\nurl: "https://projecteternallattice.org"\n---\n\n`;
       
       md = header + md;
       
