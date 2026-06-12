@@ -81,6 +81,7 @@ const LatticeWhispers = lazy(() => import("./pages/secrets/LatticeWhispers"));
 const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
 const ArchitectsNotes = lazy(() => import("./pages/secrets/ArchitectsNotes"));
 const TheMirror = lazy(() => import("./pages/secrets/TheMirror"));
+const QRHandout = lazy(() => import("./pages/QRHandout"));
 
 // Minimal loading fallback that matches the site's dark theme
 function PageLoader() {
@@ -190,6 +191,7 @@ function Router() {
           <Route path="/inner-sanctum" component={InnerSanctum} />
           <Route path="/architects-notes" component={ArchitectsNotes} />
           <Route path="/the-mirror" component={TheMirror} />
+          <Route path="/qr-handout" component={QRHandout} />
           <Route component={NotFound} />
         </Switch>
         </Suspense>
