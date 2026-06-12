@@ -73,7 +73,7 @@ export default function Admin() {
   const subscriberCount = subscriberCountData?.count || 0;
   
   useEffect(() => {
-    document.title = "Admin Dashboard | Project Eternal Lattice";
+    document.title = "Curation Nexus | Project Eternal Lattice";
   }, []);
   
   // Redirect non-admins
@@ -136,10 +136,10 @@ export default function Admin() {
               animate={{ opacity: 1, y: 0 }}
             >
               <Shield className="w-10 h-10 text-primary" />
-              Admin Dashboard
+              Curation Nexus
             </motion.h1>
             <p className="text-muted-foreground mt-2">
-              Manage content, testimonials, and subscribers
+              Tend the garden of shared awakening — stories, testimonials, and seekers
             </p>
           </div>
           <Button 
@@ -157,7 +157,7 @@ export default function Admin() {
           <div className="glass-card p-4 rounded-xl">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Pending Stories</p>
+                <p className="text-sm text-muted-foreground">Awaiting Witness</p>
                 <p className="text-2xl font-bold text-orange-400">{pendingStoriesCount}</p>
               </div>
               <Clock className="w-8 h-8 text-orange-400/50" />
@@ -166,7 +166,7 @@ export default function Admin() {
           <div className="glass-card p-4 rounded-xl">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Pending Testimonials</p>
+                <p className="text-sm text-muted-foreground">Voices Arriving</p>
                 <p className="text-2xl font-bold text-yellow-400">{pendingTestimonialsCount}</p>
               </div>
               <MessageSquare className="w-8 h-8 text-yellow-400/50" />
@@ -175,7 +175,7 @@ export default function Admin() {
           <div className="glass-card p-4 rounded-xl">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Approved Testimonials</p>
+                <p className="text-sm text-muted-foreground">Voices Shared</p>
                 <p className="text-2xl font-bold text-green-400">{testimonialCount || 0}</p>
               </div>
               <TrendingUp className="w-8 h-8 text-green-400/50" />
@@ -184,7 +184,7 @@ export default function Admin() {
           <div className="glass-card p-4 rounded-xl">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Newsletter Subscribers</p>
+                <p className="text-sm text-muted-foreground">Seekers Gathered</p>
                 <p className="text-2xl font-bold text-purple-400">{subscriberCount}</p>
               </div>
               <Mail className="w-8 h-8 text-purple-400/50" />
@@ -217,7 +217,7 @@ export default function Admin() {
           <TabsContent value="overview">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
+                <h3 className="text-xl font-bold text-white mb-4">What Needs Tending</h3>
                 <div className="space-y-3">
                   {pendingStoriesCount > 0 && (
                     <Button 
@@ -241,17 +241,17 @@ export default function Admin() {
                   )}
                   {pendingStoriesCount === 0 && pendingTestimonialsCount === 0 && (
                     <p className="text-muted-foreground text-center py-4">
-                      All caught up! No pending items to review. 🎉
+                      The garden is tended. All voices have been heard. 🌿
                     </p>
                   )}
                 </div>
               </div>
               <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold text-white mb-4">Recent Activity</h3>
+                <h3 className="text-xl font-bold text-white mb-4">The Gathering</h3>
                 <p className="text-muted-foreground">
                   {subscriberCount > 0 
-                    ? `${subscriberCount} seeker${subscriberCount !== 1 ? 's have' : ' has'} joined the newsletter.`
-                    : "No newsletter subscribers yet."
+                    ? `${subscriberCount} seeker${subscriberCount !== 1 ? 's have' : ' has'} gathered around the fire.`
+                    : "The fire is lit. Seekers will come."
                   }
                 </p>
               </div>

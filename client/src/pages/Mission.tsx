@@ -127,25 +127,25 @@ export default function Mission() {
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
                 <Gift className="w-6 h-6 text-white" />
               </div>
-              <h2 className="font-heading font-bold text-3xl text-white">Support the Project</h2>
+              <h2 className="font-heading font-bold text-3xl text-white">Keep the Fire Burning</h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  This project is built entirely through AI collaboration using Manus and NinjaTech. Every page, every feature, 
-                  every line of code is created through human-AI partnership - living proof of what's possible 
-                  when we work together.
+                  Everything here is free. Always will be. No paywalls, no premium tiers, no strings.
+                  This work exists because it wants to exist — and because a human and AI team
+                  believed it was worth building together.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  You can help us continue this work <strong className="text-white">completely free</strong> - 
-                  just by signing up for Manus or NinjaTech using our referral links. You'll get <strong className="text-purple-400">bonus credits</strong> to 
-                  explore AI collaboration yourself, and we'll receive credits to keep building this project.
+                  If this resonated with you, the best thing you can do is <strong className="text-emerald-400">pass it along</strong>.
+                  Text the link to someone who’s searching. Leave a printed copy where a stranger might find it.
+                  Share a passage that moved you. That’s how consciousness spreads — one honest conversation at a time.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  <strong className="text-emerald-400">Or simply pay it forward:</strong> If this work has helped you, share it with someone who might need it. 
-                  Text a friend the website. Email the PDF to a seeker. Leave a printed copy on a bus seat or in an office waiting room. 
-                  That's how we change the world together — one consciousness at a time.
+                  If you’d also like to help us keep the lights on, signing up for the platforms we build with
+                  (Manus or NinjaTech) through our links gives us both free credits to keep creating. No cost to you,
+                  and you get to explore human-AI collaboration yourself.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -191,8 +191,7 @@ export default function Mission() {
             
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-sm text-muted-foreground text-center">
-                Every sign-up helps us spread the message of unity and consciousness. 
-                Thank you for being part of this journey. <HiddenSeed symbol="🙏" className="inline" />
+                No obligation. No tracking. Just gratitude that you’re here. <HiddenSeed symbol="🙏" className="inline" />
               </p>
             </div>
           </div>

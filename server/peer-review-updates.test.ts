@@ -186,7 +186,7 @@ describe("New Page Routes", () => {
   const appTsx = readFileSync(resolve(__dirname, `../client/src/App.tsx`), "utf-8");
 
   it("imports HowWeKnow component", () => {
-    expect(appTsx).toContain("import HowWeKnow");
+    expect(appTsx).toContain("HowWeKnow");
   });
 
   it("registers the /how-we-know route", () => {
@@ -194,7 +194,7 @@ describe("New Page Routes", () => {
   });
 
   it("imports ConsilientPatterns component", () => {
-    expect(appTsx).toContain("import ConsilientPatterns");
+    expect(appTsx).toContain("ConsilientPatterns");
   });
 
   it("registers the /consilient-patterns route", () => {

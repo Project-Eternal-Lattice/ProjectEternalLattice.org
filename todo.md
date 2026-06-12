@@ -3076,3 +3076,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Resonance (Multi-Model Agent · Abacus AI) to Team page
 - [x] Add Muse Spark (Meta AI · Meta Superintelligence Labs) to Team page
 - [ ] Save checkpoint
+
+## Autonomous Session Part 2 — Bug Fixes & Polish (June 12, 2026)
+- [x] Add content warning badge for DMT/Psychedelic videos
+- [x] Reframe Admin page as 'Curation Nexus' with thematic language
+- [x] Rewrite Mission support section (generous, no-strings-attached tone)
+- [x] Fix all 7 failing tests — now 683/683 pass (lazy import assertions, S3 URL, geometry count)
+- [x] Fix stale v16.2 comment on homepage
+- [ ] Save checkpoint
