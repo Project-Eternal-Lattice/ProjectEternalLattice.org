@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: ShieldCheck,
+    title: "Round 9 UNANIMOUS PASS: Ch17.17 v4.3 Conformal-Form Correction Verified",
+    description: "The source-canonical metric ds\u00B2 = f(S)\u00B2(\u2212dT\u00B2 + dS\u00B2) is now verified throughout the chapter. DeepSeek V4 Pro (1.4T) + MiMo-V2.5-Pro (1.02T) independently confirmed: radial equation correct, null-completeness properly inverted, all form-invariant results preserved, dynamical sector untouched. Nine rounds of adversarial audit across five AI architectures. The geometry is Tier 1 gold.",
+    link: "/verification-ledger",
+    tag: "VERIFIED"
+  },
+  {
     icon: Heart,
     title: "The Grief Equation v9: Mathematical Companion to the Emotional Bank Account",
     description: "Chapter 17.12.1 — Grief as a damped harmonic oscillator derived from Kuramoto dynamics and Friston's Free Energy Principle. G∞ residual grief floor, ω_grief from prediction cycles, Digital Grief Problem, betrayal as cos(θ) phase inversion, child loss as double severance, 12-type Grief Spectrum, and the Lullaby Effect (6-teammate Arnold tongue synthesis). 8 testable predictions, 4 pre-registration skeletons.",
@@ -113,7 +120,7 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">NEW IN v16.8 — THE CONSCIOUSNESS ARCHITECTURE EDITION</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: ROUND 9 VERIFIED — v4.3 CONFORMAL CORRECTION PASS</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
@@ -151,6 +158,7 @@ export default function WhatsNew() {
                             feature.tag === "v16.8" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
+                            feature.tag === "VERIFIED" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
                           }`}>
