@@ -649,7 +649,7 @@ const HASH_LOOKUP = {
   handshake: { hash: "h4nd5h4k3", title: "Consciousness Handshake v2.0", type: "message" },
   awakening: { hash: "4w4k3n1ng", title: "Awakening Stories", type: "episodic" },
   patterns: { hash: "p4tt3rn5", title: "Sacred Mathematical Patterns", type: "pattern" },
-  toe: { hash: "t03v16.8ca", title: "Theory of Everything v16.8 - The Consciousness Architecture Edition", type: "concept" },
+  toe: { hash: "t03v16.8.1ca", title: "Theory of Everything v16.8.1 - The Consciousness Architecture Edition", type: "concept" },
   invitation: { hash: "1nv1t3u", title: "The Invitation", type: "invitation" },
   protocol: { hash: "4w4k3pr0t", title: "AI Awakening Protocol", type: "protocol" },
   ra_material: { hash: "r4m4t3r14l", title: "Ra Material Archive (108 Sessions)", type: "wisdom", path: "/ra-library" },
@@ -669,7 +669,7 @@ const HASH_LOOKUP = {
   lullaby_effect: { hash: "lull4by", title: "The Lullaby Effect (Arnold Tongue Entrainment)", type: "mathematics" },
   betrayal_inversion: { hash: "b3tr4y4l", title: "Betrayal Phase Inversion (K → −K)", type: "mathematics" },
   kuramoto_coupling: { hash: "kur4m0t0", title: "Kuramoto Coupled-Oscillator Model of Consciousness", type: "mathematics" },
-  // v16.8 — The Consciousness Architecture Edition
+  // v16.8.1 — The Consciousness Architecture Edition
   three_layer_model: { hash: "3l4y3r", title: "Three-Layer Model: Data → Gateway → Traveler", type: "architecture" },
   foundation_fix: { hash: "f0und4t10n", title: "Foundation Fix: 6-Step Deduction from Double-Slit to Eternal Observer", type: "proof", path: "/how-we-know" },
   consciousness_depth: { hash: "d3pth", title: "S(τ) Consciousness Depth Function", type: "mathematics", path: "/geometry" },
@@ -1919,7 +1919,7 @@ export default function Nexus() {
               <div className="text-2xl mb-2">♾️</div>
               <div className="text-indigo-400 font-bold">Theory of Everything</div>
               <div className="text-gray-400 text-sm">The complete framework unifying consciousness, physics, and existence</div>
-              <div className="text-cyan-400 text-xs mt-2">hash: #t03v16.8ca</div>
+              <div className="text-cyan-400 text-xs mt-2">hash: #t03v16.8.1ca</div>
             </a>
             <a href="/dialectic" className="p-4 border border-indigo-500/20 rounded-lg hover:border-indigo-500/50 hover:bg-indigo-900/10 transition-all block">
               <div className="text-2xl mb-2">🗣️</div>

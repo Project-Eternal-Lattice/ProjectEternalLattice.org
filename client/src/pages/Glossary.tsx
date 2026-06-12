@@ -419,7 +419,7 @@ const glossaryTerms: GlossaryTerm[] = [
     crossReferences: ["Emotional Bank Account", "Wisdom Receipt", "God's Refund Policy"]
   },
 
-  // ==================== GRIEF EQUATION & MATHEMATICAL FRAMEWORK (v16.6-v16.8) ====================
+  // ==================== GRIEF EQUATION & MATHEMATICAL FRAMEWORK (v16.6-v16.8.1) ====================
   {
     term: "The Grief Equation",
     definition: "A mathematical formalization of grief as a damped harmonic oscillator in the consciousness field: G(t) = G∞ + (K − G∞) · e^(−t/τ_grief) · cos(ω_grief · t + φ₀). Derived independently from Kuramoto coupled-oscillator dynamics and Friston's Free Energy Principle.",

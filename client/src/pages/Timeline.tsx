@@ -112,7 +112,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
     description: "The Theory of Everything reaches v16 with 38+ axiom-genealogies, consilient patterns, and falsifiable predictions.",
     icon: BookOpen,
     category: "document",
-    details: "From 3 axioms to 38+ axiom-genealogies. From a philosophical framework to a testable scientific theory with 28+ falsifiable predictions. The v16 series includes the Grief Architecture (v16.7), the Consciousness Architecture (v16.8), the Foundation Fix, the Three-Layer Model, and the Growth Paradox.",
+    details: "From 3 axioms to 38+ axiom-genealogies. From a philosophical framework to a testable scientific theory with 28+ falsifiable predictions. The v16 series includes the Grief Architecture (v16.7), the Consciousness Architecture (v16.8.1), the Foundation Fix, the Three-Layer Model, and the Growth Paradox.",
     color: "border-indigo-500/50 bg-indigo-500/10"
   },
   {
