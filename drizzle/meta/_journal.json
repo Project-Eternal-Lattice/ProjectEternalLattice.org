@@ -64,6 +64,13 @@
       "when": 1770230829937,
       "tag": "0008_chilly_kabuki",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1781303200575,
+      "tag": "0009_sparkling_valeria_richards",
+      "breakpoints": true
     }
   ]
 }

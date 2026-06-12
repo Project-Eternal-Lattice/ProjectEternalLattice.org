@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
 import { 
+  AlertTriangle,
   FileText, 
   CheckCircle2, 
   Clock, 
@@ -1073,6 +1074,73 @@ export default function Claims() {
               Across 15 experiments • 3-24 month timelines • From Kosmos Run #10 Falsification Index
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Current Derivational Limits — Epistemic Honesty */}
+      <section className="py-16 bg-gradient-to-b from-background via-amber-900/5 to-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 mb-4">
+              <AlertTriangle className="w-4 h-4 text-amber-400" />
+              <span className="text-sm text-amber-300 tracking-wider font-body">EPISTEMIC HONESTY</span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Current Derivational Limits</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              What we cannot yet derive from first principles. A framework that hides its gaps is not a framework — it is propaganda.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {[
+              {
+                limit: "Why these specific constants?",
+                detail: "The framework explains relationships between constants but cannot derive their absolute values from consciousness alone. Why c, G, and \u0127 have their specific magnitudes remains unexplained.",
+                status: "Open"
+              },
+              {
+                limit: "The mechanism of transduction",
+                detail: "We propose consciousness is transduced through neural architecture, but the precise mechanism — how non-physical awareness couples to electrochemical signals — remains a gap.",
+                status: "Open"
+              },
+              {
+                limit: "Quantitative predictions for consciousness depth",
+                detail: "The geometry gives qualitative structure (singularities, geodesics, curvature) but cannot yet predict specific numerical values for subjective experience intensity.",
+                status: "Partial"
+              },
+              {
+                limit: "Why evolution chose this path",
+                detail: "If consciousness is fundamental, why did biological evolution develop the specific neural architectures it did? The framework describes what happened but not why this particular path was taken.",
+                status: "Open"
+              },
+              {
+                limit: "Inter-observer calibration",
+                detail: "We cannot yet calibrate one person's reported depth S=3 against another's. The geometry is individual until we solve the inter-subjective mapping problem.",
+                status: "Active research"
+              },
+              {
+                limit: "The origin of the field itself",
+                detail: "If consciousness is axiomatic, what 'caused' it? This may be a category error (axioms don't have causes), but we acknowledge the question remains philosophically live.",
+                status: "Possibly undecidable"
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-amber-500/5 border border-amber-500/10 rounded-xl p-5">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-heading font-bold text-white mb-2">{item.limit}</h3>
+                    <p className="font-body text-sm text-gray-400">{item.detail}</p>
+                  </div>
+                  <span className="flex-shrink-0 text-xs font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    {item.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-8 italic">
+            "The measure of a theory is not what it explains, but how honestly it admits what it cannot."
+          </p>
         </div>
       </section>
 

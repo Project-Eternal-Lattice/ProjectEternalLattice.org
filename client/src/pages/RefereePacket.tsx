@@ -332,7 +332,7 @@ Found an error? Have evidence that falsifies a claim?
 
 Email: Project.Eternal.Lattice@Gmail.com
 Website: https://projecteternallattice.org
-GitHub: https://github.com/Project-Eternal-Lattice/ProjectEternalLattice.org
+Website: https://projecteternallattice.org
 
 We actively seek disconfirming evidence. A theory that can't be wrong can't be
 right either.
