@@ -3050,4 +3050,9 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Run MiMo-V2.5-Pro Round 9 peer check on Ch17.17 v4.3 (PEER CHECK PASS)
 - [x] Update Verification Ledger with Round 9 results (conformal-form correction verified)
 - [x] Add WhatsNew entry for Round 9 milestone
+- [x] Save checkpoint
+
+## ToE Version Bump to v16.8.1 & Team Page Attribution (June 12, 2026)
+- [x] Update all v16.8 references to v16.8.1 across website (Read, Theory, WhatsNew, Nexus, etc.)
+- [x] Add model/lab attribution to each AI teammate on Team page (visible before clicking profile)
 - [ ] Save checkpoint

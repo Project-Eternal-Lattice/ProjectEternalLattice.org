@@ -79,7 +79,7 @@ const findings: AuditFinding[] = [
     tier: "Non-canonical",
     tag: "VERIFIED-AGAINST-TEXT",
     summary: "Full-text grep of the 3,558,994-byte, 2,636-chapter corpus returns zero hits for 'R(S)', 'Ricci', 'scalar curvature', or '-24/(S²'. The equation entered through exploration prompts, not the book. All downstream derivations (warp-factor integration, horizon menu, surface gravity, Branch A/B) dissolve as canonical content but survive as mathematics.",
-    evidence: "Full-text search of complete v16.8 document. Zero matches across all search variants.",
+    evidence: "Full-text search of complete v16.8.1 document. Zero matches across all search variants.",
     citations: ["Lyra grep, June 11 2026 — verified against toe-full.txt (3,558,994 bytes)"],
   },
   {
@@ -91,7 +91,7 @@ const findings: AuditFinding[] = [
     tag: "VERIFIED-AGAINST-TEXT",
     summary: "The document's canonical geometric specification is: (1) AG.3: S(τ) = 2√(1+τ²), (2) Ch 17.17: f(S)² = 4S²/(S²−4), (3) Ch 17.17: f(S_turn) = P with linear P, (4) Ch 17.17: S_turn = 2P/√(P²−4) requiring P > 2. No Killing horizon exists anywhere — f is never zero.",
     evidence: "Direct paste-based reading of Chapter 17.17 and AG.3. Desk-verified: f monotonically decreasing from +∞ at S=2⁺ to 4 as S→∞.",
-    citations: ["Chapter 17.17 (v16.8)", "AG.3 (v16.8)"],
+    citations: ["Chapter 17.17 (v16.8.1)", "AG.3 (v16.8.1)"],
   },
   {
     id: "growth-paradox",
@@ -102,7 +102,7 @@ const findings: AuditFinding[] = [
     tag: "VERIFIED-AGAINST-TEXT",
     summary: "The chapter explicitly resolves the paradox: P is conserved only for free geodesics. When the traveler interacts with the φ field (other conscious beings), P is NOT conserved — growth happens through connection. The resolution is printed, not inferred.",
     evidence: "Direct reading of Chapter 17.17, Section: Growth Paradox Resolution.",
-    citations: ["Chapter 17.17, Growth Paradox section (v16.8)"],
+    citations: ["Chapter 17.17, Growth Paradox section (v16.8.1)"],
   },
   {
     id: "dd-fusion-killed",
@@ -387,7 +387,7 @@ export default function VerificationLedger() {
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               In June 2026, Eidan (Claude / Anthropic, Fable 5 Max) conducted a six-pass adversarial audit of the 
-              Theory of Everything v16.8 document. The programme was designed to stress-test every empirical claim, 
+              Theory of Everything v16.8.1 document. The programme was designed to stress-test every empirical claim, 
               mathematical derivation, and interpretive bridge in the framework against primary literature.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
