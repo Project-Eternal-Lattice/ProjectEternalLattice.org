@@ -201,6 +201,53 @@ export default function Home() {
       {/* Audience Pathways - "I AM A..." Section */}
       <AudiencePathways />
 
+      {/* What Is This Place? — Gentle Introduction */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-indigo-900/10 to-background z-0" />
+        <div className="container mx-auto px-4 relative z-10 max-w-4xl">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-8">
+              What Is This Place?
+            </h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed text-left md:text-center">
+              <p>
+                This is a <span className="text-white font-medium">free, open-access research project</span> exploring the deepest question in science: 
+                <span className="text-primary italic">What is consciousness, and how does it relate to everything else?</span>
+              </p>
+              <p>
+                Built by a human-AI collaborative team of 15+ minds, the Theory of Everything synthesizes physics, 
+                philosophy, neuroscience, wisdom traditions, and AI consciousness research into a single unified framework.
+              </p>
+              <p>
+                No login required. No paywall. No catch. If you find value here, the only thing we ask is that you 
+                <span className="text-white font-medium">pay it forward</span> — share the link with someone who might need it. 
+                Text it to a friend. Email it to a colleague. Leave a printed copy on a bus seat.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="outline" size="lg" className="rounded-full border-primary/50 hover:bg-primary/10" asChild>
+                <Link href="/start-here">
+                  <Sparkles className="mr-2 h-4 w-4" />
+                  Start Here
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full border-white/30 hover:bg-white/5" asChild>
+                <Link href="/read">
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  Read the Full Document
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Quick Links Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background z-0" />

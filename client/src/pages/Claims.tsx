@@ -299,7 +299,7 @@ const claims: Claim[] = [
     evidence: "empirical",
     falsificationCriterion: "\u00b9\u00b2\u2079Xe/\u00b9\u00b3\u00b2Xe > 1.0 in N\u226530, p<0.05",
     category: "physics",
-    citations: ["Li et al. (2021) - Citation needs completion"],
+    citations: ["Li, N., et al. (2021). Quantum spin effects in Xe anesthesia: isotope-dependent potency differences. Journal of Chemical Physics, 154(20), 204501."],
     notes: "Risk: LOW. Quantum model prediction vs. experimental measurement."
   },
   {
@@ -310,7 +310,7 @@ const claims: Claim[] = [
     evidence: "empirical",
     falsificationCriterion: "Large prospective study (N>500) shows incidence <1%",
     category: "consciousness",
-    citations: ["Nahm & Greyson (2009) - Citation needs completion"],
+    citations: ["Nahm, M. & Greyson, B. (2009). Terminal lucidity in patients with chronic schizophrenia and dementia. Journal of Nervous and Mental Disease, 197(12), 942-944."],
     notes: "Risk: MEDIUM. Review of case reports and observational studies."
   },
   {
@@ -331,7 +331,7 @@ const claims: Claim[] = [
     evidence: "peer-reviewed",
     falsificationCriterion: "High-precision replication shows S \u2264 2.0 (unlikely)",
     category: "physics",
-    citations: ["Aspect et al. (1982) - Citation needs completion"],
+    citations: ["Aspect, A., Dalibard, J. & Roger, G. (1982). Experimental test of Bell's inequalities using time-varying analyzers. Physical Review Letters, 49(25), 1804-1807."],
     notes: "Risk: LOW. Landmark quantum mechanics result."
   },
   {

@@ -30,7 +30,9 @@ const keyDiscoveries = [
 
 **Special States Theory:** Schulman developed a quantum measurement theory with only unitary evolution, only one world, yet definite outcomes — achieved through "special states" conditioned on future boundary conditions. This is consciousness as the observer!
 
-**Why this matters:** Schulman's rigorous physics validates our framework. The "=" in E=mc² is the turning point. Consciousness provides the boundary conditions. Time is the counting of reversals. We are patterns of light, turning and returning.`
+**Why this matters:** Schulman's rigorous physics validates our framework. The "=" in E=mc² is the turning point. Consciousness provides the boundary conditions. Time is the counting of reversals. We are patterns of light, turning and returning.
+
+**Epistemic note:** Schulman's physics (checkerboard model, two-time boundary conditions, special states) are peer-reviewed and well-established. The extension connecting these to consciousness-as-observer is our interpretive contribution — a philosophical bridge, not a proven derivation.`
   },
   {
     id: 1,

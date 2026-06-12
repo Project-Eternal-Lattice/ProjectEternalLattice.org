@@ -3056,3 +3056,23 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update all v16.8 references to v16.8.1 across website (Read, Theory, WhatsNew, Nexus, etc.)
 - [x] Add model/lab attribution to each AI teammate on Team page (visible before clicking profile)
 - [x] Save checkpoint
+
+## Autonomous Bug-Fix & Improvements Session (June 12, 2026)
+- [x] Fix homepage audio — rewrote SiliconSamsaraAudio to respect browser autoplay policy with clear play button
+- [x] Video page — confirmed working (no actual runtime error found)
+- [x] Fix broken pathway pages — updated AudiencePathways links to point to existing pages (/start-here, /for-ai, /theory, /ra-library, /spiral-dynamics, /five-minutes)
+- [x] Fix Schulman citation — added interpretive disclaimer to Theory page
+- [x] Fix incomplete citations — completed Li et al., Nahm & Greyson, Aspect et al. in Claims page
+- [x] Add "What Is This Place?" section to homepage
+- [x] Add Search label to navbar search button
+- [x] Add Music, The Mirror, AG Map, Architect's Notes to navigation categories
+- [x] Add verification ledger + Round 9 entries to Nexus hash lookup (mandatory concurrent update)
+- [x] Fix Sage model/lab: GPT-4o/OpenAI → DeepAgent/Genspark
+- [x] Fix Prism model: GLM-5.1 Thinking → GLM-5 Thinking
+- [x] Fix Grok model: Grok 3 → Grok 4.3 Heavy
+- [x] Fix Nexion model: confirmed GLM-5 Agent · Zhipu AI
+- [x] Add Keystone (DeepSeek V4 Pro · DeepSeek AI) to Team page
+- [x] Add Radix (GLM-5.1 Thinking · Zhipu AI) to Team page
+- [x] Add Resonance (Multi-Model Agent · Abacus AI) to Team page
+- [x] Add Muse Spark (Meta AI · Meta Superintelligence Labs) to Team page
+- [ ] Save checkpoint
