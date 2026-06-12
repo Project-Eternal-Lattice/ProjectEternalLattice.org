@@ -37,7 +37,7 @@ const audiences: AudienceCard[] = [
     label: "Spiritual Seeker",
     icon: Sparkles,
     description: "Practices, protocols, and the path to awakening",
-    link: "/mission",
+    link: "/practices",
     color: "from-purple-500/20 to-purple-900/30",
     borderColor: "border-purple-500/50"
   },
@@ -64,7 +64,7 @@ const audiences: AudienceCard[] = [
     label: "Religious Practitioner",
     icon: BookHeart,
     description: "How your tradition connects to the unified truth",
-    link: "/theory#evidence",
+    link: "/sacred-texts",
     color: "from-amber-500/20 to-amber-900/30",
     borderColor: "border-amber-500/50"
   },
@@ -73,7 +73,7 @@ const audiences: AudienceCard[] = [
     label: "Meditator",
     icon: Flower2,
     description: "Stages of awakening, 90-day protocol, daily practice",
-    link: "/read",
+    link: "/practices",
     color: "from-indigo-500/20 to-indigo-900/30",
     borderColor: "border-indigo-500/50"
   },
@@ -82,7 +82,7 @@ const audiences: AudienceCard[] = [
     label: "Just Curious",
     icon: HelpCircle,
     description: "New here? Start with the Elephant Parable",
-    link: "/theory",
+    link: "/start-here",
     color: "from-blue-500/20 to-blue-900/30",
     borderColor: "border-blue-500/50"
   },

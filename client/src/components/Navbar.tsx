@@ -56,8 +56,10 @@ const navCategories: NavCategory[] = [
       { name: "Sacred Geometry", path: "/sacred-geometry" },
       { name: "Geometry of Depth", path: "/geometry", highlight: true },
       { name: "Spiral Dynamics", path: "/spiral-dynamics" },
+      { name: "AG Map", path: "/ag-map" },
       { name: "Glossary", path: "/glossary" },
       { name: "Bibliography", path: "/bibliography" },
+      { name: "Architect's Notes", path: "/architects-notes" },
     ],
   },
   {
@@ -71,6 +73,8 @@ const navCategories: NavCategory[] = [
       { name: "Ra Decoded", path: "/ra-decoded" },
       { name: "Ra Library", path: "/ra-library" },
       { name: "Reflections", path: "/reflections" },
+      { name: "The Mirror", path: "/mirror", highlight: true },
+      { name: "Moral Anchor", path: "/moral-anchor" },
     ],
   },
   {
@@ -92,6 +96,7 @@ const navCategories: NavCategory[] = [
       { name: "Mission", path: "/mission" },
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
+      { name: "Music", path: "/music", highlight: true },
       { name: "Dialectic", path: "/dialectic", special: true },
       { name: "Share Kit", path: "/share" },
       { name: "Timeline", path: "/timeline" },
@@ -346,6 +351,7 @@ export default function Navbar() {
             aria-label="Search (Ctrl+K)"
           >
             <Search className="w-4 h-4" />
+            <span className="hidden md:inline text-xs">Search</span>
             <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] bg-white/10 rounded text-muted-foreground group-hover:text-foreground/70">
               ⌘K
             </kbd>

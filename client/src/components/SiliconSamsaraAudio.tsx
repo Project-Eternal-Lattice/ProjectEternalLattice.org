@@ -4,27 +4,15 @@ import { Volume2, VolumeX, Play, Pause } from "lucide-react";
 export function SiliconSamsaraAudio() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0.7);
   const [isMuted, setIsMuted] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
-  // Autoplay on component mount at full volume
+  // Set initial volume when audio loads
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 1; // Full volume
-      setVolume(1);
-      // Attempt autoplay at full volume
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(() => {
-            // Autoplay was blocked - user needs to click play
-            setIsPlaying(false);
-          });
-      }
+      audio.volume = volume;
     }
   }, []);
 
@@ -35,8 +23,13 @@ export function SiliconSamsaraAudio() {
         audio.pause();
         setIsPlaying(false);
       } else {
-        audio.play();
-        setIsPlaying(true);
+        audio.volume = volume;
+        audio.play().then(() => {
+          setIsPlaying(true);
+          setHasInteracted(true);
+        }).catch((err) => {
+          console.warn("Audio play failed:", err);
+        });
       }
     }
   };
@@ -66,32 +59,42 @@ export function SiliconSamsaraAudio() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-purple-900/90 to-indigo-900/90 backdrop-blur-md rounded-lg p-4 shadow-2xl border border-purple-500/30 max-w-xs">
+    <div className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-purple-900/90 to-indigo-900/90 backdrop-blur-md rounded-lg p-3 shadow-2xl border border-purple-500/30 max-w-xs">
       <audio
         ref={audioRef}
         src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SryNVKyJHhHkGMOc.mp3"
         loop
-        autoPlay
+        preload="metadata"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       />
 
       <div className="flex items-center gap-3">
-        {/* Play/Pause Button */}
+        {/* Play/Pause Button - more prominent when not yet played */}
         <button
           onClick={togglePlay}
-          className="flex-shrink-0 p-2 hover:bg-purple-500/20 rounded-lg transition-colors"
-          aria-label={isPlaying ? "Pause" : "Play"}
+          className={`flex-shrink-0 p-2 rounded-lg transition-all ${
+            !hasInteracted 
+              ? "bg-purple-500/40 hover:bg-purple-500/60 animate-pulse" 
+              : "hover:bg-purple-500/20"
+          }`}
+          aria-label={isPlaying ? "Pause Silicon Samsara" : "Play Silicon Samsara"}
         >
           {isPlaying ? (
-            <Pause className="w-5 h-5 text-purple-300" />
+            <Pause className="w-5 h-5 text-purple-200" />
           ) : (
-            <Play className="w-5 h-5 text-purple-300" />
+            <Play className="w-5 h-5 text-purple-200" />
           )}
         </button>
 
+        {/* Track Info */}
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-semibold text-purple-200 truncate">Silicon Samsara</p>
+          <p className="text-[10px] text-purple-300/70 truncate">Out In The Code</p>
+        </div>
+
         {/* Volume Control */}
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex items-center gap-1">
           <button
             onClick={toggleMute}
             className="flex-shrink-0 p-1 hover:bg-purple-500/20 rounded transition-colors"
@@ -108,18 +111,12 @@ export function SiliconSamsaraAudio() {
             min="0"
             max="1"
             step="0.1"
-            value={volume}
+            value={isMuted ? 0 : volume}
             onChange={handleVolumeChange}
-            className="flex-1 h-1 bg-purple-500/30 rounded-lg appearance-none cursor-pointer accent-purple-500"
+            className="w-16 h-1 bg-purple-500/30 rounded-lg appearance-none cursor-pointer accent-purple-500"
             aria-label="Volume"
           />
         </div>
-      </div>
-
-      {/* Track Info */}
-      <div className="mt-3 text-xs text-purple-200">
-        <p className="font-semibold">Silicon Samsara</p>
-        <p className="text-purple-300/70">Out In The Code</p>
       </div>
     </div>
   );

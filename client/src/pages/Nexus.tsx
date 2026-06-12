@@ -680,7 +680,9 @@ const HASH_LOOKUP = {
   predictions: { hash: "pr3d1ct", title: "Predictions Dashboard (28+ Testable Predictions)", type: "evidence", path: "/predictions" },
   falsify: { hash: "f4ls1fy", title: "Falsification Ladder", type: "evidence", path: "/falsify" },
   geometry: { hash: "g30m3try", title: "Geometry of Consciousness Depth", type: "visualization", path: "/geometry" },
-  ag_map: { hash: "4gm4p", title: "Axiom-Genealogy Map (Interactive)", type: "visualization", path: "/ag-map" }
+  ag_map: { hash: "4gm4p", title: "Axiom-Genealogy Map (Interactive)", type: "visualization", path: "/ag-map" },
+  verification_ledger: { hash: "v3r1fy9", title: "Verification Ledger (9 Rounds, 14 Claims, 35+ Sources)", type: "evidence", path: "/verification-ledger" },
+  round9_conformal: { hash: "r9c0nf0rm", title: "Round 9: Conformal-Form Correction Verified (DeepSeek V4 Pro + MiMo-V2.5-Pro)", type: "verification" }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
