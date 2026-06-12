@@ -29,6 +29,49 @@ const verdictConfig: Record<Verdict, { label: string; color: string; icon: typeo
 
 const findings: AuditFinding[] = [
   {
+    id: "round9-conformal-correction",
+    claim: "The conformal-form correction (v4.3) is correctly propagated: ds\u00B2 = f(S)\u00B2(\u2212dT\u00B2 + dS\u00B2) throughout, with null-completeness inverted and all form-invariant results preserved",
+    location: "Chapter 17.17 v4.3 (entire document)",
+    verdict: "verified",
+    tier: "Tier 1 (geometry)",
+    tag: "ROUND-9-AUDIT",
+    summary: "Round 9 verified the conformal-form correction unanimously. The metric block is consistent throughout. The radial equation (dS/d\u03C4)\u00B2 = (P\u00B2 \u2212 f\u00B2)/f\u2074 is algebraically correct. Null geodesics are now correctly identified as complete toward the boundary (logarithmic divergence of affine parameter). Spacelike geodesics reach S=2 at finite proper length. All form-invariant results (P>2, S_turn, bounce, duality, involution) are correctly preserved. The dynamical sector is genuinely form-independent.",
+    evidence: "DeepSeek V4 Pro (1.4T, Thinking Mode): PASS on all 10 verification points. MiMo-V2.5-Pro (1.02T): independent PEER CHECK PASS on all 7 mathematical claims with explicit computation.",
+    citations: [
+      "DeepSeek V4 Pro Round 9 Verification, June 12, 2026",
+      "MiMo-V2.5-Pro Round 9 Peer Check, June 12, 2026",
+      "Paper I v1.3 Round 2-C (prior unanimous pass on same conformal geometry)",
+    ],
+  },
+  {
+    id: "round9-null-completeness",
+    claim: "Under the conformal form, null geodesics approach S=2 at infinite affine parameter (null-complete toward boundary)",
+    location: "Chapter 17.17 v4.3, S_turn section & Bedrock Claims",
+    verdict: "verified",
+    tier: "Tier 1",
+    tag: "ROUND-9-AUDIT",
+    summary: "The old claim (from the warped form) that null geodesics reach S=2 at finite affine parameter is correctly RETIRED. Under the canonical conformal form, the affine parameter integral \u222Bf\u00B2dS diverges logarithmically as S\u21922\u207A (since f\u00B2 ~ 4/(S-2) near the boundary). This produces the trichotomy: timelike bounces (experientially forbidden), null approaches forever (luminously unreachable), spacelike reaches at finite length (measurably near).",
+    evidence: "Both auditors independently verified: \u222B f\u00B2 dS = 4[S + ln((S-2)/(S+2))] diverges at S=2. Spacelike proper length \u222Bf dS = 2\u221A(S\u2080\u00B2-4) is finite.",
+    citations: [
+      "DeepSeek V4 Pro Round 9, Verification Point 4",
+      "MiMo-V2.5-Pro Round 9, Claims 3 & 4",
+    ],
+  },
+  {
+    id: "round9-dynamical-independence",
+    claim: "The entire dynamical sector (einbein action, constraint, m_eff\u00B2, P-evolution, two-clock relation) is metric-form-independent",
+    location: "Chapter 17.17 v4.3, Section 7",
+    verdict: "verified",
+    tier: "Tier 2 (unconditional)",
+    tag: "ROUND-9-AUDIT",
+    summary: "Both auditors confirmed that every equation in Section 7 uses g_\u03BC\u03BD abstractly without expanding the metric into a specific line element. The einbein action, constraint, effective mass-shell, P-evolution law, and two-clock relation are all genuinely form-independent. The Tier 2 status awarded in Round 8 is untouched by the v4.3 form correction.",
+    evidence: "MiMo-V2.5-Pro systematically inspected every equation in Section 7: none expand g_\u03BC\u03BD into components. DeepSeek V4 Pro confirmed form-independence in Verification Point 6.",
+    citations: [
+      "Round 8 (DeepSeek V4 Pro + Nemotron Ultra): Unconditional Tier 2 awarded",
+      "Round 9: Form-independence confirmed by both auditors",
+    ],
+  },
+  {
     id: "geometry-provenance",
     claim: "R(S) = −24/(S²−4)² is the framework's Ricci curvature law",
     location: "Research Programme (non-canonical)",
@@ -181,6 +224,10 @@ const findings: AuditFinding[] = [
 
 const methodologyLessons = [
   {
+    title: "Form-invariance as insurance",
+    description: "When the metric form changed from warped to conformal, the entire dynamical sector survived because it was written against the abstract metric g\u03BC\u03BD. Building on abstractions rather than specific coordinates is not laziness — it is architectural foresight that makes corrections local rather than catastrophic.",
+  },
+  {
     title: "Source-discipline is distinct from derivation-discipline",
     description: "Six fresh-eyes passes, an independent Keystone audit, and Grok's adversarial review were all rigorous — and all ran on a non-canonical equation because none could check the source text. Rigor downstream of an unverified premise produces confident, internally consistent, wrong results.",
   },
@@ -320,15 +367,15 @@ export default function VerificationLedger() {
         <div className="container max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gradient-to-br from-purple-500/5 to-transparent border border-purple-500/20 rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-purple-300 mb-1">6</p>
-              <p className="text-sm text-muted-foreground">Fresh Eyes Passes</p>
+              <p className="text-3xl font-bold text-purple-300 mb-1">9</p>
+              <p className="text-sm text-muted-foreground">Audit Rounds (Ch17.17)</p>
             </div>
             <div className="bg-gradient-to-br from-blue-500/5 to-transparent border border-blue-500/20 rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-blue-300 mb-1">11</p>
+              <p className="text-3xl font-bold text-blue-300 mb-1">14</p>
               <p className="text-sm text-muted-foreground">Claims Adjudicated</p>
             </div>
             <div className="bg-gradient-to-br from-emerald-500/5 to-transparent border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-emerald-300 mb-1">28+</p>
+              <p className="text-3xl font-bold text-emerald-300 mb-1">35+</p>
               <p className="text-sm text-muted-foreground">Primary Sources Cited</p>
             </div>
           </div>
@@ -349,9 +396,16 @@ export default function VerificationLedger() {
               derivation ran on a non-canonical foundation because nobody could verify the source text. The mathematics 
               survives as mathematics; its standing as ToE content dissolves.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The methodological lesson:</strong> derivation discipline without source discipline is still 
               a failure mode. This ledger exists to ensure that lesson is never forgotten.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">Round 9 (June 12, 2026):</strong> The conformal-form correction (v4.3) was verified unanimously 
+              by DeepSeek V4 Pro (1.4T, Thinking Mode) and MiMo-V2.5-Pro (1.02T). The source-canonical metric 
+              ds² = f(S)²(−dT² + dS²) is now confirmed throughout the chapter. Null-completeness correctly inverted. 
+              All form-invariant results preserved. Dynamical sector (Tier 2) untouched. Nine rounds of adversarial audit 
+              across five distinct AI architectures.
             </p>
           </div>
         </div>

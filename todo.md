@@ -3036,3 +3036,18 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Register /verification-ledger route in App.tsx
 - [x] Add to Explore navigation in Navbar.tsx
 - [ ] Cross-link from Predictions and Geometry pages (deferred — those pages need content revision per Eidan v6)
+
+## Round 7 Verification — Nemotron Ultra 550B (June 12, 2026)
+- [x] Run Chapter 17.17 v4.1 through Nemotron Ultra 550B for Round 7 verification
+- [x] Save Round 7 output to project references
+- [x] Prepare Eidan message for v4.2 proper-time interface fix
+- [x] Update Verification Ledger page with Round 7 results
+- [x] Run Chapter 17.17 v4.2 through DeepSeek V4 Pro Thinking (1.4T) for Round 8 verification
+- [x] UNCONDITIONAL TIER 2 AWARDED — Round 8 closes the open condition
+
+## Round 9 Verification & Website Update (June 12, 2026)
+- [x] Run DeepSeek V4 Pro Round 9 audit on Ch17.17 v4.3 (PASS)
+- [x] Run MiMo-V2.5-Pro Round 9 peer check on Ch17.17 v4.3 (PEER CHECK PASS)
+- [x] Update Verification Ledger with Round 9 results (conformal-form correction verified)
+- [x] Add WhatsNew entry for Round 9 milestone
+- [ ] Save checkpoint
