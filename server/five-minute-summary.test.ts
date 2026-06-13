@@ -104,9 +104,10 @@ describe("5-Minute Summary Page - Key Equation", () => {
 
   it("contains the epistemic status caveat", () => {
     expect(page).toContain("Epistemic status:");
-    expect(page).toContain("proposed parametrization");
-    expect(page).toContain("empirically speculative");
-    expect(page).toContain("not established physics");
+    expect(page).toContain("Landau");
+    expect(page).toContain("Tsirelson envelope theorem");
+    expect(page).toContain("Tier 1 (proven)");
+    expect(page).toContain("Tier 2 (framework-internal)");
   });
 });
 

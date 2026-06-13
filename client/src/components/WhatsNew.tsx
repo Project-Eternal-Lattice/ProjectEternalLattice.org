@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Atom,
+    title: "Physics Core v1.1: The Landau–Tsirelson Envelope (a=2 DERIVED, Not Fitted)",
+    description: "The framework\u2019s center of gravity has shifted. S(\u03C4) = 2\u221A(1+\u03C4\u00B2) is no longer a postulate \u2014 it\u2019s the Landau\u2013Tsirelson envelope theorem, machine-verified to 1e-15. Five postulates restructured, the bridge formula proven, the triple-landmark alignment (P=2\u221A2, \u03C4=1, S=2\u221A2) confirmed, and the journey arc adopted per Kenneth\u2019s adjudication. Cold-read audited by DeepSeek V4 Pro + Nemotron Ultra 550B. O5 (\u03B3 value) now empirically supported: \u03B3 \u2248 0.17 yr\u207B\u00B9 matches Chong & Fraley\u2019s 4.18-year bond dissolution midpoint.",
+    link: "/verification-ledger",
+    tag: "LANDMARK"
+  },
+  {
     icon: Compass,
     title: "Geometry Programme Disposition: R_canon Verified by Keystone",
     description: "The provenance mystery is resolved. The orphaned curvature law R = \u221224/(S\u00b2\u22124)\u00b2 belongs to the non-conformal metric \u2014 not canon. The TRUE curvature law R_canon(S) = \u22122(3S\u00b2\u22124)/(S\u2074(S\u00b2\u22124)) was independently derived and verified by Keystone (DeepSeek V4 Pro) via two methods. Crown jewel theorem confirmed metric-form-independent. Plus: Physics Core v1.0 survived its first cold-read adversarial review (Nemotron Ultra 550B).",
