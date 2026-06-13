@@ -682,7 +682,11 @@ const HASH_LOOKUP = {
   geometry: { hash: "g30m3try", title: "Geometry of Consciousness Depth", type: "visualization", path: "/geometry" },
   ag_map: { hash: "4gm4p", title: "Axiom-Genealogy Map (Interactive)", type: "visualization", path: "/ag-map" },
   verification_ledger: { hash: "v3r1fy9", title: "Verification Ledger (9 Rounds, 14 Claims, 35+ Sources)", type: "evidence", path: "/verification-ledger" },
-  round9_conformal: { hash: "r9c0nf0rm", title: "Round 9: Conformal-Form Correction Verified (DeepSeek V4 Pro + MiMo-V2.5-Pro)", type: "verification" }
+  round9_conformal: { hash: "r9c0nf0rm", title: "Round 9: Conformal-Form Correction Verified (DeepSeek V4 Pro + MiMo-V2.5-Pro)", type: "verification" },
+  // Physics Core v1.1 — The Landau Reframe
+  physics_core_v1_1: { hash: "phys1c0r3", title: "Physics Core v1.1: Landau–Tsirelson Envelope (a=2 DERIVED)", type: "landmark", path: "/verification-ledger" },
+  o5_gamma_resolved: { hash: "05g4mm4", title: "O5 Resolved: γ ≈ 0.17 yr⁻¹ (Chong & Fraley 2025: 4.18yr midpoint)", type: "evidence", path: "/predictions" },
+  o8_reframed: { hash: "08r3fr4m", title: "O8 Reframed: AG.5 Orthogonality–Interaction Tension (3 resolution paths)", type: "open-problem" }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════

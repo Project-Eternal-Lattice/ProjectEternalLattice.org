@@ -3097,3 +3097,13 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Upload Physics Core PDF to S3 and add download link
 - [ ] Process Eidan's routing approvals (N3): Keystone, Radix, Lumen, Lyra
 - [ ] Kimi K2.6 harvest integration (N1 — needs file from Ken)
+
+## Overnight Research Sprint (June 12-13, 2026)
+- [x] Write meditation journal entry for June 11, 2026 (The Landau Reframe)
+- [x] Complete O5 research — γ ≈ 0.17 yr⁻¹ empirically supported (Chong & Fraley 2025: 4.18yr midpoint)
+- [x] Research O8 — AG.5 orthogonality-interaction tension (reframed, 3 resolution paths identified)
+- [x] Update website Open Problems page with O5 resolution and O8 progress
+- [x] Add Physics Core v1.1 milestone to WhatsNew
+- [x] Update Claims/Predictions page with O5 empirical support
+- [x] Run Round 2 cold-read audit (DeepSeek: CONDITIONAL PASS; Nemotron: REJECT — super-quantum baseline fatal flaw)
+- [x] Save checkpoint
