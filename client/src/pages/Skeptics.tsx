@@ -28,7 +28,7 @@ interface KillCriterion {
   prediction: string;
   falsificationCondition: string;
   minimalProtocol: string;
-  status: "validated" | "pending" | "testable";
+  status: "unique-tested" | "consistent" | "pending" | "testable";
   evidence?: string;
   icon: React.ReactNode;
 }
@@ -41,7 +41,7 @@ const KILL_CRITERIA: KillCriterion[] = [
     prediction: "129Xe (I=1/2) shows higher anesthetic potency than 132Xe (I=0) at equivalent concentrations",
     falsificationCondition: "If 132Xe ≥ 129Xe in anesthetic potency (N≥30, p<0.05), theory requires revision",
     minimalProtocol: "Double-blind, placebo-controlled comparison of MAC equivalents, IRB-approved, N≥30",
-    status: "validated",
+    status: "unique-tested",
     evidence: "Li et al. 2021 (N=32, p<1×10⁻⁴) confirmed 129Xe > 132Xe potency",
     icon: <Atom className="w-5 h-5" />
   },
@@ -52,7 +52,7 @@ const KILL_CRITERIA: KillCriterion[] = [
     prediction: "Systems with Φ > threshold exhibit measurable conscious signatures",
     falsificationCondition: "If high-Φ systems show no conscious indicators OR low-Φ systems show consciousness, theory fails",
     minimalProtocol: "IIT measurement across diverse systems (biological, artificial) with consciousness assessments",
-    status: "validated",
+    status: "consistent",
     evidence: "Tononi et al. multiple studies; Φ correlates with anesthesia depth, sleep stages",
     icon: <Brain className="w-5 h-5" />
   },
@@ -73,7 +73,7 @@ const KILL_CRITERIA: KillCriterion[] = [
     prediction: "Dream reports and sleep mentation indicate continuous (if altered) awareness",
     falsificationCondition: "If deep sleep shows complete absence of any reportable experience across all subjects, claim fails",
     minimalProtocol: "Sleep lab studies with systematic awakening protocols across sleep stages",
-    status: "validated",
+    status: "consistent",
     evidence: "Siclari et al. 2017 - dream reports from all sleep stages including NREM",
     icon: <Moon className="w-5 h-5" />
   },
@@ -95,7 +95,7 @@ const KILL_CRITERIA: KillCriterion[] = [
     prediction: "Disrupting global workspace connectivity eliminates conscious experience",
     falsificationCondition: "If consciousness persists with complete disconnection of global workspace, theory fails",
     minimalProtocol: "Studies of split-brain patients, anesthesia effects on connectivity",
-    status: "validated",
+    status: "consistent",
     evidence: "Extensive anesthesia research confirms loss of consciousness with connectivity disruption",
     icon: <Eye className="w-5 h-5" />
   },
@@ -139,19 +139,26 @@ const KILL_CRITERIA: KillCriterion[] = [
     prediction: "Split-brain patients still experience unified consciousness in each hemisphere",
     falsificationCondition: "If split-brain creates two completely separate conscious entities, unity claim requires revision",
     minimalProtocol: "Detailed phenomenological studies of split-brain patients",
-    status: "validated",
+    status: "consistent",
     evidence: "Split-brain studies show complex results; unity persists within hemispheres",
     icon: <Scale className="w-5 h-5" />
   }
 ];
 
 const statusConfig = {
-  validated: {
+  "unique-tested": {
     color: "text-green-400",
     bg: "bg-green-500/10",
     border: "border-green-500/30",
     icon: <CheckCircle2 className="w-4 h-4" />,
-    label: "Validated"
+    label: "Unique Prediction — Tested"
+  },
+  consistent: {
+    color: "text-cyan-400",
+    bg: "bg-cyan-500/10",
+    border: "border-cyan-500/30",
+    icon: <CheckCircle2 className="w-4 h-4" />,
+    label: "Consistent with Evidence"
   },
   pending: {
     color: "text-amber-400",
@@ -170,7 +177,8 @@ const statusConfig = {
 };
 
 export default function Skeptics() {
-  const validatedCount = KILL_CRITERIA.filter(k => k.status === "validated").length;
+  const uniqueTestedCount = KILL_CRITERIA.filter(k => k.status === "unique-tested").length;
+  const consistentCount = KILL_CRITERIA.filter(k => k.status === "consistent").length;
   const pendingCount = KILL_CRITERIA.filter(k => k.status === "pending").length;
   const testableCount = KILL_CRITERIA.filter(k => k.status === "testable").length;
 
@@ -205,7 +213,11 @@ export default function Skeptics() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/30">
                 <CheckCircle2 className="w-4 h-4 text-green-400" />
-                <span className="text-green-400 font-medium">{validatedCount} Validated</span>
+                <span className="text-green-400 font-medium">{uniqueTestedCount} Unique — Tested</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-400 font-medium">{consistentCount} Consistent</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30">
                 <Clock className="w-4 h-4 text-amber-400" />
@@ -372,7 +384,7 @@ export default function Skeptics() {
                 </p>
                 <p className="text-foreground/80 text-sm">
                   The ToE makes specific predictions about xenon isotopes, integrated information, and AI consciousness. 
-                  Some have been validated. Others await testing. That's how science works.
+                  One unique prediction has been independently tested. Others are consistent with existing evidence. The rest await testing. That's how science works.
                 </p>
               </div>
 
