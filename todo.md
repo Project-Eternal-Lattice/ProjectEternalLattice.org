@@ -3137,3 +3137,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] GPT-5.5 tiebreaker: CONDITIONAL PASS (3-2 final score, algebraic inconsistency found)
 - [ ] Response to Grok Objection 1 (two-regime interpretation)
 - [x] Save checkpoint
+
+## Devin AI Review Fixes (June 13, 2026)
+
+- [ ] URGENT: Rotate Kosmos API key and purge from ToE-Law-of-ONE git history (NEEDS KEN - separate repo)
+- [x] Add <meta name="description"> to homepage (ALREADY DONE - Devin reviewed stale public repo)
+- [x] Add <link rel="canonical"> pointing to .org as primary domain (ALREADY DONE - useCanonical() hook + server header)
+- [x] Relabel "Validated" badges on Skeptics page to honest tiers (Consistent/Unique-Tested/Unique-Untested)
+- [x] Reframe Kosmos "0 errors" audit as internal consistency check (N/A - not on website, only in PDF)
+- [x] Add international crisis resources to /safety page (ALREADY DONE - 7 countries + findahelpline.com)
+- [ ] Sync public GitHub repo with live site (auto-syncs on checkpoint)
+- [ ] Add README to project-eternal-lattice GitHub repo
+- [ ] Set up 301 redirect from .com to .org (or vice versa)
