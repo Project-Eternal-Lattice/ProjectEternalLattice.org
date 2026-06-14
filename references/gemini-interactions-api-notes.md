@@ -133,7 +133,7 @@ The **Interactions API** is Google's new recommended standard for building with 
 ```python
 from google import genai
 import os
-os.environ["GOOGLE_API_KEY"] = "YOUR_API_KEY_HERE"
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")  # Set via environment variable
 
 client = genai.Client()
 interaction = client.interactions.create(
