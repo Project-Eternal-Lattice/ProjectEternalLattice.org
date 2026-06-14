@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
+import CHSHVisualization from "@/components/CHSHVisualization";
 import { 
   AlertTriangle, 
   Target, 
@@ -299,6 +300,21 @@ export default function Skeptics() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive F11 Prediction — The Number That Could Be Wrong */}
+      <section className="py-16 bg-gradient-to-b from-background via-yellow-900/5 to-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <CHSHVisualization />
+            </motion.div>
           </div>
         </div>
       </section>

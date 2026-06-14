@@ -3149,3 +3149,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Sync public GitHub repo with live site (auto-syncs on checkpoint)
 - [ ] Add README to project-eternal-lattice GitHub repo
 - [ ] Set up 301 redirect from .com to .org (or vice versa)
+
+## CHSH Visualization & Devin Collaboration
+- [x] Integrate Devin's CHSHVisualization component into Skeptics page
+- [x] Write vitest tests for CHSH physics formulas (19 tests, all passing)
+- [x] Establish direct Devin API communication (Lyra ↔ Devin direct line)
+- [x] Create Devin AI skill for persistent cross-session communication
+- [x] Send Devin next assignment (scroll-driven Theory reader)
+- [ ] Review and integrate Devin's Theory reader component when delivered
