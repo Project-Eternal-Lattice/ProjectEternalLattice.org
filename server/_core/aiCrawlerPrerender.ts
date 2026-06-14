@@ -97,10 +97,14 @@ function inlineFormat(escaped: string): string {
   let out = escaped.replace(/`([^`]+)`/g, "<code>$1</code>");
   out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   // Autolink bare URLs (note: text is already escaped, so "&" appears as "&amp;").
-  out = out.replace(
-    /(https?:\/\/[^\s<]+)/g,
-    url => `<a href="${url}">${url}</a>`
-  );
+  // Trailing sentence punctuation is excluded from the link target; ";" is left
+  // attached so escaped entities (&amp; &quot; …) are never split.
+  out = out.replace(/(https?:\/\/[^\s<]+)/g, match => {
+    const trail = match.match(/[.,:!?)\]]+$/);
+    const url = trail ? match.slice(0, match.length - trail[0].length) : match;
+    const suffix = trail ? trail[0] : "";
+    return `<a href="${url}">${url}</a>${suffix}`;
+  });
   return out;
 }
 
@@ -171,7 +175,9 @@ export function extractDescription(md: string, maxLen = 200): string {
       !line ||
       line.startsWith(">") ||
       line.startsWith("#") ||
-      line.startsWith("-")
+      line.startsWith("-") ||
+      line.startsWith("*") ||
+      /^\d+\.\s/.test(line)
     )
       continue;
     const plain = line.replace(/\*\*/g, "").replace(/`/g, "");
