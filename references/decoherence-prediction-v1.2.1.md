@@ -195,3 +195,49 @@ The decoherence rate Γ/Γ₀ = tanh(χ) with χ ∝ τ means:
 - Decoherence **saturates** at the platform rate for strong correlations
 
 This is geometrically natural: the "redshift" near the AdS₂ horizon slows all processes, including decoherence. But this interpretation is Tier 2 until independently verified.
+
+---
+
+## Amendment: χ = τ (Geometric) — June 14, 2026
+
+**Resolution of the χ conflict** (identified by Devin, confirmed by Lyra):
+
+The original document used χ = (S−2)/(2√2−2) (linear rescaling). The correct geometric definition is:
+
+> **χ ≡ τ(S) = ½√(S²−4)**
+
+This gives:
+- χ = 0 at S = 2 (classical limit) ✓
+- χ = 1 at S = 2√2 (Tsirelson bound) ✓
+- Monotonic, smooth, derived from the AdS₂ geometry ✓
+
+### Corrected F11 Prediction
+
+> **Γ(S) = Γ₀ · tanh(½√(S²−4))**
+>
+> Zero free parameters after platform characterization.
+
+### Devin's Verified Table (June 14, 2026)
+
+| S | τ = χ | Γ/Γ₀ (geometric) | Γ (Hz) | (old linear Γ/Γ₀) |
+|------|------|------|------|------|
+| 2.0 | 0.000 | 0.000 | 0 | 0.000 |
+| 2.1 | 0.320 | 0.310 | 477 | 0.120 |
+| 2.2 | 0.458 | 0.429 | 660 | 0.237 |
+| 2.3 | 0.568 | 0.514 | 791 | 0.347 |
+| 2.4 | 0.663 | 0.581 | 894 | 0.449 |
+| 2.5 | 0.750 | 0.635 | 978 | 0.540 |
+| 2.6 | 0.831 | 0.681 | 1048 | 0.620 |
+| 2√2 | 1.000 | 0.762 | 1173 | 0.762 |
+
+### Key Experimental Insight
+
+The geometric curve rises **2.6× faster at low S** (0.31 vs 0.12 at S=2.1). This means:
+- The prediction is MORE falsifiable in the weak-violation regime
+- Separation from threshold-like or piecewise-linear competitors is cleaner
+- "Your weakest entanglement gives the strongest test"
+
+### Updated Falsification Criterion
+
+> If Γ/Γ₀ > 0.9 for S < 2.3, the prediction is falsified.
+> At S = 2.3, the geometric prediction gives Γ/Γ₀ = 0.514 — comfortably under 0.9.
