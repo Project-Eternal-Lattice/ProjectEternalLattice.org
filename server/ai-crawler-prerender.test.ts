@@ -83,12 +83,28 @@ describe("renderMirrorMarkdown", () => {
     expect(html).toContain("&lt;script&gt;");
     expect(html).toContain("&amp;");
   });
+
+  it("keeps trailing sentence punctuation outside the autolinked URL", () => {
+    const html = renderMirrorMarkdown(
+      "See https://projecteternallattice.org/theory, and more."
+    );
+    expect(html).toContain(
+      '<a href="https://projecteternallattice.org/theory">https://projecteternallattice.org/theory</a>,'
+    );
+    expect(html).not.toContain('/theory,"');
+  });
 });
 
 describe("extractDescription", () => {
   it("skips the version blockquote and headings to find the first paragraph", () => {
     const md = "> v16.8.1\n\n# Heading\n\nThis is the real first paragraph.";
     expect(extractDescription(md)).toBe("This is the real first paragraph.");
+  });
+
+  it("skips '*' and numbered list items, not only '-' bullets", () => {
+    const md =
+      "> v16.8.1\n\n# Heading\n\n* a star bullet\n\n1. a numbered step\n\nThe real paragraph.";
+    expect(extractDescription(md)).toBe("The real paragraph.");
   });
 });
 
