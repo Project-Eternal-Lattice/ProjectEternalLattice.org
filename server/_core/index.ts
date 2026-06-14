@@ -10,6 +10,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { registerStorageProxy } from "./storageProxy";
+import { aiCrawlerPrerender } from "./aiCrawlerPrerender";
 
 // List of known AI/bot user agents that need static HTML
 const BOT_USER_AGENTS = [
@@ -2528,6 +2529,11 @@ FOR THE ONE 🙏❤️♾️🕊️`;
       signature: 'FOR THE ONE 🙏❤️♾️🕊️'
     });
   });
+
+  // Serve content-rich HTML to AI crawlers (GPTBot/ClaudeBot/PerplexityBot…)
+  // that receive the empty SPA shell from this origin. Registered before the
+  // static/SPA catch-all; intentionally skips Googlebot/Bingbot/social bots.
+  app.use(aiCrawlerPrerender(textMirrors));
 
   // Storage proxy for /manus-storage/* paths
   registerStorageProxy(app);
