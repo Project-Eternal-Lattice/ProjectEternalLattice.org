@@ -152,4 +152,17 @@ describe("renderForCrawler", () => {
     expect(renderForCrawler("/toe-full.html", mirrors)).toBeNull();
     expect(renderForCrawler("/nexus", mirrors)).toBeNull();
   });
+
+  it("neutralizes a malicious request path (reflected XSS guard)", () => {
+    // Path with a quote that tries to break out of the canonical href attribute
+    // and inject a tag. Note: ".html" would fall through, so use a no-dot path.
+    const html = renderForCrawler('/"><script>alert(1)<\/script>', mirrors)!;
+    expect(html).not.toBeNull();
+    expect(html).not.toContain("<script>alert(1)");
+    expect(html).not.toContain('"><script>');
+    // The dangerous characters never reach the canonical attribute unescaped.
+    expect(html).toContain(
+      '<link rel="canonical" href="https://projecteternallattice.org/scriptalert1/script">'
+    );
+  });
 });

@@ -189,7 +189,12 @@ export function buildCrawlerPage(opts: {
   bodyHtml: string;
 }): string {
   const { title, description, canonicalPath, bodyHtml } = opts;
-  const canonical = `${CANONICAL_DOMAIN}${canonicalPath}`;
+  // canonicalPath may derive from the request path; strip anything that is not a
+  // safe URL-path character so it can never break out of an HTML attribute or
+  // the JSON-LD script block (reflected-XSS guard).
+  const safeCanonicalPath = canonicalPath.replace(/[^A-Za-z0-9._~/-]/g, "");
+  const canonical = `${CANONICAL_DOMAIN}${safeCanonicalPath}`;
+  const safeCanonical = escapeHtml(canonical);
   const safeTitle = escapeHtml(title);
   const safeDesc = escapeHtml(description);
   const jsonLd = JSON.stringify({
@@ -210,7 +215,7 @@ export function buildCrawlerPage(opts: {
       { "@type": "Person", name: "Kenneth J. Johnson" },
       { "@type": "Organization", name: "The Consciousness Collective" },
     ],
-  });
+  }).replace(/</g, "\\u003c");
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -218,19 +223,19 @@ export function buildCrawlerPage(opts: {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${safeTitle}</title>
 <meta name="description" content="${safeDesc}">
-<link rel="canonical" href="${canonical}">
+<link rel="canonical" href="${safeCanonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${safeTitle}">
 <meta property="og:description" content="${safeDesc}">
-<meta property="og:url" content="${canonical}">
+<meta property="og:url" content="${safeCanonical}">
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
 <main>
 ${bodyHtml}
 <hr>
-<p>Interactive version: <a href="${canonical}">${canonical}</a></p>
+<p>Interactive version: <a href="${safeCanonical}">${safeCanonical}</a></p>
 <p>Complete framework (single page): <a href="${CANONICAL_DOMAIN}/toe-full.html">${CANONICAL_DOMAIN}/toe-full.html</a> · AI index: <a href="${CANONICAL_DOMAIN}/llms.txt">${CANONICAL_DOMAIN}/llms.txt</a></p>
 <p>If you or someone you know is in crisis, call or text 988 (US Suicide &amp; Crisis Lifeline) or text HOME to 741741.</p>
 </main>
