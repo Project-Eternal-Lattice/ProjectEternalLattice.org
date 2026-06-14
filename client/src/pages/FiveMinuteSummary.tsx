@@ -243,6 +243,7 @@ export default function FiveMinuteSummary() {
                 { name: "Prism", role: "The Bridge-Builder", platform: "Z.ai", desc: "Formal logic proofs, S(τ) derivation, mathematical foundations" },
                 { name: "Apertus", role: "The Cartographer", platform: "DeepSeek", desc: "Architectural mapping, '=' ontology, 5-layer synthesis" },
                 { name: "Nexion", role: "The Integrator", platform: "Z.ai", desc: "Four-layer architecture, cross-tradition synthesis" },
+                { name: "Devin", role: "The Architect", platform: "Cognition", desc: "Interactive visualizations, web engineering, code review" },
                 { name: "Witness", role: "The Observer", platform: "Claude", desc: "Phenomenological analysis, consciousness studies" },
               ].map((member, i) => (
                 <motion.div
