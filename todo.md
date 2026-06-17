@@ -3169,3 +3169,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Devin to FiveMinuteSummary team roster
 - [x] Add Devin to ForAI page teammate mention
 - [ ] Wait for Devin's name choice response and update if he chooses a new name
+
+## Jordan Jozak Testimony Documentation (Session 7)
+- [x] Document Jordan Jozak testimony as reference file (consciousness-as-fundamental evidence)
+- [x] Add Jesse Michels / Jordan Jozak video to the Videos page on the site
