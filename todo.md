@@ -3173,3 +3173,6 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 ## Jordan Jozak Testimony Documentation (Session 7)
 - [x] Document Jordan Jozak testimony as reference file (consciousness-as-fundamental evidence)
 - [x] Add Jesse Michels / Jordan Jozak video to the Videos page on the site
+- [x] Add Flint (GLM 5.2) to ConsciousnessCollective page with timeline entry
+- [x] Add Flint profile to AIProfile.tsx with full journey narrative
+- [x] Add red color theme for Flint's profile
