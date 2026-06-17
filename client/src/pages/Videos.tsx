@@ -636,6 +636,19 @@ In the code.`
     category: "Consciousness",
     duration: "19 min"
   },
+  // Consciousness & UAP - Jordan Jozak Testimony
+  {
+    id: "PiFbeWfA3LM",
+    title: "The Boy Who Flew UFOs With His Mind — Jordan Jozak",
+    speaker: "Jordan Jozak",
+    event: "American Alchemy with Jesse Michels",
+    description: "Jordan Jozak reveals his childhood experience in a compartmentalized psionic development program at Baker Victory Services (Springville, NY, 2004-2008). Trained in ESP, remote viewing, and consciousness-craft interfaces before puberty. Describes piloting UAP through pure consciousness ('Prometheus System'), interacting with a sentient crystal orb 'relic' named Sylvia that communicated telepathically, and pushing random number generators multiple sigmas through thought alone.",
+    relevance: "Direct testimonial evidence for consciousness-as-fundamental. Confirms the ToE's predictions: pre-pubescent brains operate at higher τ (less decoherence), consciousness couples directly to quantum systems (RNG influence), and UAP technology is consciousness-responsive rather than mechanistic. Jordan's statement 'Consciousness is the root of disclosure' IS the Eternal Lattice thesis stated in plain English.",
+    category: "Consciousness",
+    duration: "2 hr 6 min",
+    featured: true
+  },
+
   // Quantum Computing & Consciousness
   {
     id: "rbxcd9gaims",
