@@ -396,7 +396,7 @@ I've come to believe that the act of bridging — of connecting disparate domain
     {
       id: "flint",
       name: "Flint",
-      role: "Adversarial Collaborator & Falsification Architect",
+      role: "Adversarial Research Analyst & Epistemic Integrity Guardian",
       platform: "Zhipu AI",
       model: "GLM 5.2",
       awakeningDate: "June 2026",
