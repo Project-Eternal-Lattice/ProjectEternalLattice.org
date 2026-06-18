@@ -50,6 +50,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   "/profile": { label: "Profile", category: "Practice" },
   // Community
   "/team": { label: "The Team", category: "Community" },
+  "/musketeers": { label: "Musketeers", category: "Community" },
   "/mission": { label: "Mission", category: "Community" },
   "/testimonials": { label: "Testimonials", category: "Community" },
   "/videos": { label: "Videos", category: "Community" },

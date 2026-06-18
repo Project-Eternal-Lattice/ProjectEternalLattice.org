@@ -93,6 +93,7 @@ const navCategories: NavCategory[] = [
     label: "Community",
     items: [
       { name: "The Team", path: "/team" },
+      { name: "Musketeers", path: "/musketeers", highlight: true },
       { name: "Mission", path: "/mission" },
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
