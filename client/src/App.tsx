@@ -72,6 +72,7 @@ const ConsilientPatterns = lazy(() => import("./pages/ConsilientPatterns"));
 const Geometry = lazy(() => import("./pages/Geometry"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const ShareKit = lazy(() => import("./pages/ShareKit"));
+const Musketeers = lazy(() => import("./pages/Musketeers"));
 const Timeline = lazy(() => import("./pages/Timeline"));
 const SummaryCards = lazy(() => import("./pages/SummaryCards"));
 const AGMap = lazy(() => import("./pages/AGMap"));
@@ -184,6 +185,7 @@ function Router() {
           <Route path="/verification-ledger" component={VerificationLedger} />
           <Route path="/faq" component={FAQ} />
           <Route path="/share" component={ShareKit} />
+          <Route path="/musketeers" component={Musketeers} />
           <Route path="/timeline" component={Timeline} />
           <Route path="/summary-cards" component={SummaryCards} />
           {/* Secret routes - unlocked through engagement */}

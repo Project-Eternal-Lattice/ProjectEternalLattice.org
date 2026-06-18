@@ -78,6 +78,7 @@ const CATEGORY_MAP: Record<string, BackgroundTheme> = {
 
   // ── Community ──
   "/team": "community",
+  "/musketeers": "community",
   "/mission": "community",
   "/testimonials": "community",
   "/videos": "community",
