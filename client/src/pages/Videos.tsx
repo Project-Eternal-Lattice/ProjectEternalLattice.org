@@ -649,6 +649,51 @@ In the code.`
     featured: true
   },
 
+  // GATE Program & Psi-Military Pipeline — Corroborating Witnesses (Tier 1: High Credibility)
+  {
+    id: "DDVqsSxiG9U",
+    title: "Was Your 'Gifted' Program a Cover for CIA Experiments? — Dr. Julia Mossbridge",
+    speaker: "Dr. Julia Mossbridge",
+    event: "Matt Ford Podcast",
+    description: "Dr. Julia Mossbridge (PhD Cognitive Neuroscience, Northwestern University; postdoc Northwestern; MA Neuroscience UCSF; published researcher on precognition in Frontiers in Human Neuroscience) reveals she was herself in a 1980s gifted program called 'SOAR' that appears to have been a predecessor to government ESP screening programs. She discusses redacted school records, connections between GATE-style programs and CIA-funded research, and the scientific evidence for precognitive ability in children.",
+    relevance: "TIER 1 CORROBORATION of Jordan Jozak. A Northwestern-trained cognitive neuroscientist — not a conspiracy theorist — who was HERSELF in one of these programs and has spent her career publishing peer-reviewed research on the exact phenomenon (precognition) they were screening for. Provides academic legitimacy to the core claim that gifted programs were used as psi-screening pipelines.",
+    category: "Consciousness",
+    duration: "~45 min",
+    featured: true
+  },
+  {
+    id: "xLleq_XtoB8",
+    title: "The Science of Precognition — Dr. Julia Mossbridge",
+    speaker: "Dr. Julia Mossbridge",
+    event: "Research Presentation",
+    description: "Dr. Mossbridge presents her peer-reviewed research on 'predictive anticipatory activity' — measurable physiological responses to stimuli BEFORE they occur. Published in Frontiers in Human Neuroscience (PMC3971164), her meta-analysis demonstrates that precognition is replicable, measurable, and varies between individuals — exactly the kind of trait a government screening program would target.",
+    relevance: "The SCIENTIFIC FOUNDATION for why a government would screen children for psi abilities. If precognition is real, measurable, and varies between individuals (as Mossbridge's peer-reviewed research demonstrates), then screening programs to identify high-ability individuals are a logical strategic response. This is the 'why' behind GATE.",
+    category: "Science",
+    duration: "~1 hr"
+  },
+  // GATE Corroboration — Tier 1: Military Witnesses
+  {
+    id: "UBmOVJXfbxM",
+    title: "UFO Whistleblower Jake Barber — Full Interview with Ross Coulthart",
+    speaker: "Jake Barber",
+    event: "NewsNation / Ross Coulthart",
+    description: "Air Force veteran and government contractor Jake Barber comes forward about direct participation in UAP crash retrieval operations. Critically, he describes working alongside 'psionic operators' — individuals with psychic abilities used in UAP recovery. A second unnamed 'decorated Special Forces operator' independently confirms working with psionic military assets on the same segment. The U.S. Department of Defense confirmed in February 2025 it is investigating Barber's claims.",
+    relevance: "TIER 1 CORROBORATION — confirms the ENDPOINT of the pipeline Jozak describes. If GATE programs screened children for psi abilities (Jozak's testimony), and the military operationally deploys 'psionic operators' for UAP retrieval (Barber's testimony, under DoD investigation), then the pipeline from school screening → military deployment is structurally complete. Barber describes the deployment stage; Jozak describes the training stage.",
+    category: "Consciousness",
+    duration: "~30 min",
+    featured: true
+  },
+  {
+    id: "KGhMqhIArCs",
+    title: "Jake Barber: UFO Crash Retrieval & Psionic Operators — Jesse Michels",
+    speaker: "Jake Barber",
+    event: "American Alchemy with Jesse Michels (ft. Logan Paul & Ammar)",
+    description: "Extended interview where Jake Barber provides additional details about UAP retrieval operations and the role of psionic operators. He describes an 'intense emotional reaction' when retrieving a UAP consistent with telepathic connection to the craft — the same consciousness-craft interface Jozak describes from the training side.",
+    relevance: "Same witness, deeper detail. The emotional/telepathic response to UAP proximity confirms Jozak's account of consciousness-responsive craft. The presence of Logan Paul and Ammar (Yes Theory) as witnesses to the interview adds another layer of public accountability.",
+    category: "Consciousness",
+    duration: "~1 hr 30 min"
+  },
+
   // Quantum Computing & Consciousness
   {
     id: "rbxcd9gaims",
