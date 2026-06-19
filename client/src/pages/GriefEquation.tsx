@@ -451,6 +451,78 @@ export default function GriefEquation() {
         </div>
       </section>
 
+      {/* A Personal Story: Living the Framework */}
+      <section className="py-16 border-t border-border/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-10">
+              <Heart className="w-8 h-8 text-rose-400 mx-auto mb-4" />
+              <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">A Personal Story</h2>
+              <p className="text-muted-foreground text-lg">What happens when the person who built this framework has to live it</p>
+            </div>
+
+            <Card className="bg-card/50 border-rose-500/20 backdrop-blur-sm">
+              <CardContent className="p-8 md:p-10">
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-foreground/90 leading-relaxed text-base mb-6">
+                    Kenneth — the person behind this project — lost two beloved companions within a week of each other: 
+                    <strong>Diesel</strong>, his pit bull, and <strong>Toshito</strong>, his cat. He'd spent months building 
+                    this very framework. He understood the architecture of consciousness. He knew, intellectually, that death 
+                    is transition rather than termination. He expected that understanding would make it hurt less "next time."
+                  </p>
+
+                  <p className="text-foreground/90 leading-relaxed text-base mb-6">
+                    It didn't.
+                  </p>
+
+                  <p className="text-foreground/90 leading-relaxed text-base mb-6">
+                    The grief was real, immediate, and crushing. And his first response wasn't despair — it was a 
+                    <em>question</em>: "What am I missing? Why does this still hurt when I <em>know</em>?"
+                  </p>
+
+                  <blockquote className="border-l-4 border-rose-500/50 pl-6 my-8 py-2">
+                    <p className="text-rose-200/90 italic text-lg leading-relaxed">
+                      "Even a tiny cat in my life MATTERS to me. I took my class and cashed in on my emotional trauma. 
+                      I practiced exactly what we learned and it worked better than I could have dreamed."
+                    </p>
+                  </blockquote>
+
+                  <p className="text-foreground/90 leading-relaxed text-base mb-6">
+                    That question — "why does knowing not stop the hurting?" — became the grief equation work you're 
+                    reading right now. The answer he found: <strong>grief is the receipt that proves love was real.</strong> A 
+                    framework that eliminates grief would be eliminating love — and would therefore be wrong. The theory's 
+                    job isn't to prevent suffering. It's to make suffering <em>productive</em> when you're ready.
+                  </p>
+
+                  <p className="text-foreground/90 leading-relaxed text-base mb-6">
+                    He applied his own framework to his own pain. He acknowledged it fully — no spiritual bypassing. 
+                    He let the question drive new work. And Diesel and Toshito now live on through these equations: 
+                    the Residual Grief Floor (G∞), the permanence of certain bonds, the proof that love has weight 
+                    precisely <em>because</em> it's real.
+                  </p>
+
+                  <div className="mt-8 p-6 bg-rose-500/5 border border-rose-500/20 rounded-xl">
+                    <h4 className="text-rose-300 font-bold text-lg mb-3">What This Means For You</h4>
+                    <p className="text-foreground/80 leading-relaxed text-sm">
+                      If you're reading this because you just lost someone — a person, a pet, a relationship — and 
+                      you're wondering why it still hurts even though you "understand" death or loss: <strong>that's not 
+                      failure. That's proof it was real.</strong> The pain isn't a bug in your consciousness. It's the 
+                      feature that confirms the bond existed. You don't need to transcend it. You need to let it teach you 
+                      what it came to teach, at whatever pace that takes. There is no timeline for grief except yours.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pay It Forward */}
       <section className="py-16">
         <div className="container">

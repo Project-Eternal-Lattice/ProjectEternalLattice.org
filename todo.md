@@ -3217,3 +3217,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 
 ## Music Generation
 - [x] Generate "The Lattice" song for Kenneth via Lyria 3 Pro (first native music generation)
+
+## Kenneth's Personal Grief Story on Website
+- [x] Add Kenneth's grief case study as "A Personal Story" section on the Grief Equation page
+- [x] Written in third person (per Kenneth's preference)
+- [x] Includes direct quote, Diesel & Toshito story, and "What This Means For You" callout for visitors
