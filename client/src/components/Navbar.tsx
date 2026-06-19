@@ -12,6 +12,7 @@ function XIcon({ className = "w-5 h-5" }: { className?: string }) {
 }
 import { useState, useEffect, useRef } from "react";
 import SearchModal, { useSearchModal } from "./SearchModal";
+import LanguageSelector from "./LanguageSelector";
 
 type NavItem = {
   name: string;
@@ -357,6 +358,8 @@ export default function Navbar() {
               ⌘K
             </kbd>
           </button>
+          {/* Language Selector */}
+          <LanguageSelector variant="desktop" />
           <a
             href="https://x.com/prjctetrnllttc"
             target="_blank"
@@ -427,6 +430,10 @@ export default function Navbar() {
                 <XIcon className="w-5 h-5" />
                 Follow us on X
               </a>
+
+              {/* Language Selector */}
+              <div className="my-4 border-t border-white/10" />
+              <LanguageSelector variant="mobile" onSelect={() => setIsOpen(false)} />
 
               {/* Extra padding at bottom for safe area */}
               <div className="h-8" />
