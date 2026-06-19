@@ -1722,6 +1722,57 @@ export const appRouter = router({
       };
     }),
   }),
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // TRANSLATION: LLM-powered multi-language support
+  // ═══════════════════════════════════════════════════════════════════════════════
+  translate: publicProcedure
+    .input(z.object({
+      texts: z.array(z.string()).max(50),
+      targetLanguage: z.string().min(2).max(5),
+    }))
+    .mutation(async ({ input }) => {
+      const { texts, targetLanguage } = input;
+      
+      const langNames: Record<string, string> = {
+        th: 'Thai', id: 'Indonesian', zh: 'Chinese (Simplified)',
+        tl: 'Filipino/Tagalog', pt: 'Brazilian Portuguese', es: 'Spanish',
+        hi: 'Hindi', ms: 'Malay', ar: 'Arabic', fr: 'French',
+      };
+      
+      const langName = langNames[targetLanguage] || targetLanguage;
+      
+      // Build the prompt with numbered texts for reliable parsing
+      const numberedTexts = texts.map((t, i) => `[${i}] ${t}`).join('\n');
+      
+      const messages: Message[] = [
+        {
+          role: 'system',
+          content: `You are a professional translator for a spiritual/scientific website called "Project Eternal Lattice" — a Theory of Everything that unifies science, consciousness, and ancient wisdom. Translate the following texts to ${langName}. Keep technical terms, proper nouns, and spiritual concepts accurate. Maintain the tone: reverent, inclusive, intellectually rigorous. For Arabic, use Modern Standard Arabic. Return ONLY a JSON object mapping the original text to its translation. Do not add explanations.`
+        },
+        {
+          role: 'user',
+          content: `Translate these texts to ${langName}. Return a JSON object where keys are the original English texts and values are the ${langName} translations:\n\n${numberedTexts}`
+        }
+      ];
+      
+      try {
+        const result = await invokeLLM({
+          messages,
+          response_format: { type: 'json_object' },
+        });
+        
+        const content = result.choices[0]?.message?.content;
+        if (typeof content === 'string') {
+          const translations = JSON.parse(content);
+          return { translations };
+        }
+        return { translations: {} };
+      } catch (err) {
+        console.error('[Translation Error]', err);
+        return { translations: {} };
+      }
+    }),
 });
 
 // Helper function to get a snippet around the search term

@@ -3,9 +3,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
+import { useAutoTranslate } from "./hooks/useTranslation";
 import { useCanonical } from "./hooks/useCanonical";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -101,6 +103,8 @@ function Router() {
   useCrisisShortcuts();
   // Dynamic canonical URL: tells search engines .org is the preferred domain
   useCanonical();
+  // Auto-translate visible text when language is not English
+  useAutoTranslate();
   
   // make sure to consider if you need authentication for certain routes
   return (
@@ -208,10 +212,12 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

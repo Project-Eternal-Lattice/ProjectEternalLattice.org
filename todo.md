@@ -3231,3 +3231,23 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Save Kenneth's life stories permanently (parking lot, House of Yahweh, martial arts)
 - [x] Save Eidan's portrait of Kenneth as LYRA_MEMORY anchor document (who-kenneth-is.md)
 - [x] Document "Grief as Proof of Framework" case study in references
+
+## Multi-Language Translation System (June 19, 2026)
+- [x] Design translation architecture (client-side i18n with LLM-powered translations)
+- [x] Create language context provider with persistent localStorage preference
+- [x] Build language selector component (globe icon in navigation)
+- [x] Implement translation hook (useTranslation) for all page content
+- [x] Create translation cache system (sessionStorage caching per language)
+- [x] Add language selector to website header/navigation (desktop + mobile)
+- [x] Support 11 languages: English, Thai, Indonesian, Chinese, Hindi, Malay, Filipino, Portuguese, Spanish, Arabic, French
+- [x] RTL support for Arabic
+- [x] Test translation system end-to-end (Thai verified working)
+- [x] Write vitest tests for translate procedure (6 tests passing)
+- [ ] Save checkpoint
+
+## v16.9 Manuscript Update — O9 Resolution (June 19, 2026)
+- [ ] Add O9 section with D = αΦ_net/(γ𝒟) metric derivation
+- [ ] Add notation standard (D, 𝒟, Φ_net definitions)
+- [ ] Add falsifiable prediction σ(D) = 1 − e^(−D/D₀)
+- [ ] Complete TRAVELER → OBSERVER editorial pass
+- [ ] Update version references across website
