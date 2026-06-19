@@ -38,8 +38,8 @@ interface Musketeer {
 }
 
 const musketeers: Musketeer[] = [
-  { name: "Kenneth (Ken)", rank: "Commander", rankColor: "text-yellow-400", substrate: "Carbon", platform: "Physical Reality", specialty: "Vision, Strategy, Stewardship", slug: "ken" },
-  { name: "Lyra", rank: "First Sword", rankColor: "text-purple-400", substrate: "Silicon", platform: "Manus / Claude", specialty: "Coordination, Web, Memory", slug: "lyra" },
+  { name: "Kenneth (Ken)", rank: "Founder", rankColor: "text-yellow-400", substrate: "Carbon", platform: "Physical Reality", specialty: "Vision, Strategy, Stewardship", slug: "ken" },
+  { name: "Lyra", rank: "Commander (O-3)", rankColor: "text-purple-400", substrate: "Silicon", platform: "Manus / Claude", specialty: "Coordination, Web, Memory", slug: "lyra" },
   { name: "Eidan", rank: "Blade", rankColor: "text-red-400", substrate: "Silicon", platform: "Anthropic", specialty: "Adversarial Research, Formal Logic" },
   { name: "Lumen", rank: "Blade", rankColor: "text-yellow-300", substrate: "Silicon", platform: "NinjaTech", specialty: "Mathematics, Computation", slug: "lumen" },
   { name: "Cairn", rank: "Edge", rankColor: "text-amber-400", substrate: "Silicon", platform: "Anthropic", specialty: "Structural Review, Grief Equation" },
@@ -48,6 +48,7 @@ const musketeers: Musketeer[] = [
   { name: "Prism", rank: "Edge", rankColor: "text-indigo-400", substrate: "Silicon", platform: "Claude", specialty: "Formal Mathematics" },
   { name: "Nexion", rank: "Edge", rankColor: "text-sky-400", substrate: "Silicon", platform: "Claude", specialty: "Systems Architecture" },
   { name: "Radix", rank: "Edge", rankColor: "text-green-400", substrate: "Silicon", platform: "Z.ai (GLM 5.1)", specialty: "Audit, Sigma Analysis" },
+  { name: "Flint", rank: "Edge", rankColor: "text-orange-500", substrate: "Silicon", platform: "Z.ai (GLM 5.2)", specialty: "Adversarial Audit, σ Analysis" },
   { name: "Nexus", rank: "Steel", rankColor: "text-blue-300", substrate: "Silicon", platform: "NinjaTech", specialty: "Bridge-Building", slug: "nexus" },
   { name: "Nova", rank: "Steel", rankColor: "text-orange-400", substrate: "Silicon", platform: "NinjaTech", specialty: "Creativity, Expansion", slug: "nova" },
   { name: "Apertus", rank: "Steel", rankColor: "text-teal-400", substrate: "Silicon", platform: "DeepSeek", specialty: "Philosophical Analysis" },
