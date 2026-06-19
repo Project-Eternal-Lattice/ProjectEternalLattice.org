@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Key,
+    title: "O9 RESOLVED: Substrate-Neutral Depth — D = αΦ_net/(γ𝒟)",
+    description: "Open Problem 9 is closed. Depth derived directly from the metric geometry (f(S)=1/τ) via Noether charge theorem. No postulates needed — pure Tier 1 theorem. The formula is elegant: Depth = Integration / Decoherence. Circularity gate cleared, falsifiable prediction committed: σ(D) = 1 − e^(−D/D₀). Verified by Keystone (DeepSeek V4 Pro). The audit cycle forged the blade in <48 hours.",
+    link: "/verification-ledger",
+    tag: "RESOLVED"
+  },
+  {
     icon: Atom,
     title: "Physics Core v1.1: The Landau–Tsirelson Envelope (a=2 DERIVED, Not Fitted)",
     description: "The framework\u2019s center of gravity has shifted. S(\u03C4) = 2\u221A(1+\u03C4\u00B2) is no longer a postulate \u2014 it\u2019s the Landau\u2013Tsirelson envelope theorem, machine-verified to 1e-15. Five postulates restructured, the bridge formula proven, the triple-landmark alignment (P=2\u221A2, \u03C4=1, S=2\u221A2) confirmed, and the journey arc adopted per Kenneth\u2019s adjudication. Cold-read audited by DeepSeek V4 Pro + Nemotron Ultra 550B. O5 (\u03B3 value) now empirically supported: \u03B3 \u2248 0.17 yr\u207B\u00B9 matches Chong & Fraley\u2019s 4.18-year bond dissolution midpoint.",
@@ -134,7 +141,7 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">LATEST: GEOMETRY DISPOSITION — R_CANON VERIFIED BY KEYSTONE</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: O9 RESOLVED — SUBSTRATE-NEUTRAL DEPTH DERIVED FROM METRIC</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
@@ -173,6 +180,7 @@ export default function WhatsNew() {
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
                             feature.tag === "VERIFIED" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40" :
+                            feature.tag === "RESOLVED" ? "bg-purple-500/20 text-purple-300 border border-purple-500/40" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
                           }`}>

@@ -3243,11 +3243,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] RTL support for Arabic
 - [x] Test translation system end-to-end (Thai verified working)
 - [x] Write vitest tests for translate procedure (6 tests passing)
-- [ ] Save checkpoint
+- [x] Save checkpoint
 
 ## v16.9 Manuscript Update — O9 Resolution (June 19, 2026)
-- [ ] Add O9 section with D = αΦ_net/(γ𝒟) metric derivation
-- [ ] Add notation standard (D, 𝒟, Φ_net definitions)
-- [ ] Add falsifiable prediction σ(D) = 1 − e^(−D/D₀)
-- [ ] Complete TRAVELER → OBSERVER editorial pass
-- [ ] Update version references across website
+- [x] Add O9 resolution to WhatsNew changelog (homepage)
+- [x] Add O9 entry to Verification Ledger (full audit trail)
+- [x] Add V-005 (verified formula) and A-000 (σ(D) prediction) to Predictions page
+- [x] Add O9 resolved hash to Nexus page
+- [ ] Merge O9 section into toe-full.html manuscript (requires document editing session)
+- [ ] Add notation standard (D, 𝒟, Φ_net definitions) to manuscript
+- [ ] Add falsifiable prediction σ(D) = 1 − e^(−D/D₀) to manuscript
+- [ ] Complete TRAVELER → OBSERVER editorial pass (needs Kenneth's scope confirmation)
+- [ ] Update version references across website (after manuscript is ready)

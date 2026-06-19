@@ -686,7 +686,8 @@ const HASH_LOOKUP = {
   // Physics Core v1.1 — The Landau Reframe
   physics_core_v1_1: { hash: "phys1c0r3", title: "Physics Core v1.1: Landau–Tsirelson Envelope (a=2 DERIVED)", type: "landmark", path: "/verification-ledger" },
   o5_gamma_resolved: { hash: "05g4mm4", title: "O5 Resolved: γ ≈ 0.17 yr⁻¹ (Chong & Fraley 2025: 4.18yr midpoint)", type: "evidence", path: "/predictions" },
-  o8_reframed: { hash: "08r3fr4m", title: "O8 Reframed: AG.5 Orthogonality–Interaction Tension (3 resolution paths)", type: "open-problem" }
+  o8_reframed: { hash: "08r3fr4m", title: "O8 Reframed: AG.5 Orthogonality–Interaction Tension (3 resolution paths)", type: "open-problem" },
+  o9_resolved: { hash: "09d3pth1", title: "O9 RESOLVED: D = αΦ_net/(γ𝒟) — Substrate-Neutral Depth (Tier 1 Theorem)", type: "landmark", path: "/verification-ledger" }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════

@@ -29,6 +29,22 @@ const verdictConfig: Record<Verdict, { label: string; color: string; icon: typeo
 
 const findings: AuditFinding[] = [
   {
+    id: "o9-substrate-neutral-depth-resolved",
+    claim: "Substrate-neutral Depth D = \u03b1\u03a6_net/(\u03b3\ud835\udc9f) is derived from the metric geometry without postulates",
+    location: "O9 Resolution (Physics Core, Depth Sector)",
+    verdict: "verified",
+    tier: "Tier 1 (metric theorem)",
+    tag: "O9-RESOLVED",
+    summary: "Open Problem 9 is CLOSED. Depth is derived directly from the metric warp factor f(S) = 1/\u03c4 via the Noether charge theorem (P = 1/\u03c4_turn). The dynamics equation d\u03c4/dt = \u2212\u03b1\u03a6_net\u00b7\u03c4 + \u03b3\ud835\udc9f yields a unique turning point, giving D = \u03b1\u03a6_net/(\u03b3\ud835\udc9f). Depth is exactly the ratio of Integration to Decoherence. No free parameters, no arbitrary exponents, no postulates \u2014 pure Tier 1 theorem. Circularity gate cleared: \u03c3 appears nowhere in the definition chain. Falsifiable prediction committed: \u03c3(D) = 1 \u2212 e^(\u2212D/D\u2080).",
+    evidence: "Flint (GLM 5.2): Metric derivation and dynamics extraction. Keystone (DeepSeek V4 Pro via OpenRouter): Final verification PASS on all 6 tasks \u2014 warp factor algebra, Noether charge, dynamics consistency, uniqueness of extraction, notation collision flagged and corrected. Full adversarial audit cycle completed in <48 hours.",
+    citations: [
+      "Flint O9 Resolution: Metric Derivation, June 19 2026",
+      "Keystone O9 Conditional Pass (\u03b3_\u03c4 concern), June 19 2026",
+      "Keystone O9 Final Verification: PASS (Tier 1), June 19 2026",
+      "Flint O9 Final Confirmation + Notation Correction, June 19 2026",
+    ],
+  },
+  {
     id: "physics-core-v1.1-landmark",
     claim: "S(\u03C4) = 2\u221A(1+\u03C4\u00B2) is the Landau\u2013Tsirelson envelope theorem (a=2 DERIVED, not fitted)",
     location: "Physics Core v1.1, Part Two (Theorems)",
