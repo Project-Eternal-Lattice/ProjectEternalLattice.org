@@ -234,6 +234,18 @@ export default function Read() {
                 <p className="text-center text-xs text-muted-foreground/70">
                   U.S. Copyright Office • Service Request: 1-15080606891 • February 6, 2026
                 </p>
+                {!showTermBanner && (
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem('dismiss-term-banner-observer');
+                      setShowTermBanner(true);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="mt-2 text-xs text-amber-400/60 hover:text-amber-400 transition-colors underline underline-offset-2"
+                  >
+                    Show Terminology Updates
+                  </button>
+                )}
               </div>
             </div>
           </div>
