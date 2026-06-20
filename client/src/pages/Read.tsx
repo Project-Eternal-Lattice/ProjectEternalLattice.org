@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { BookOpen, Download, ExternalLink, ChevronUp, FileText } from "lucide-react";
+import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft } from "lucide-react";
 import { Link } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
 
@@ -124,6 +124,45 @@ export default function Read() {
           transition={{ delay: 0.45, duration: 0.6 }}
         >
           <ReadingProgress variant="compact" />
+        </motion.div>
+
+        {/* Terminology Update Highlight */}
+        <motion.div
+          className="max-w-3xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.47, duration: 0.6 }}
+        >
+          <div className="relative overflow-hidden rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-900/20 via-amber-800/10 to-purple-900/20 p-5">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+            <div className="flex items-start gap-4 relative z-10">
+              <div className="p-2.5 rounded-lg bg-amber-500/20 border border-amber-500/30 shrink-0">
+                <ArrowRightLeft className="w-5 h-5 text-amber-400" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-semibold text-amber-200 text-sm">Terminology Update</h3>
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-medium">EDITORIAL</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-red-500/15 border border-red-500/30 rounded-md text-red-300 text-xs font-mono line-through">
+                      Traveler
+                    </span>
+                    <ArrowRightLeft className="w-3.5 h-3.5 text-amber-400/60" />
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/15 border border-emerald-500/30 rounded-md text-emerald-300 text-xs font-mono font-semibold">
+                      Observer
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    <strong className="text-amber-300/90">Layer 3 of the Three-Layer Consciousness Model</strong> has been renamed from "The Traveler" to "The Observer" throughout Chapter 17.17 and all cross-references.
+                    This aligns the technical term with the Foundation Fix's Eternal Observer derivation and eliminates ambiguity with the generic English word.
+                    The mathematical content (P &gt; 2 threshold, S<sub>turn</sub> bounce, Lagrangian) is unchanged.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Embedded Document */}

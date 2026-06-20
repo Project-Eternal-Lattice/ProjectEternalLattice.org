@@ -3253,5 +3253,6 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Merge O9 section into toe-full.html manuscript (requires document editing session)
 - [ ] Add notation standard (D, 𝒟, Φ_net definitions) to manuscript
 - [ ] Add falsifiable prediction σ(D) = 1 − e^(−D/D₀) to manuscript
-- [ ] Complete TRAVELER → OBSERVER editorial pass (needs Kenneth's scope confirmation)
+- [x] Complete TRAVELER → OBSERVER editorial pass (13 technical occurrences in toe-full.html, 6 in executive summary, 11 across website pages)
+- [x] Add visual highlight feature on website showing terminology update (WhatsNew card + Read page banner)
 - [ ] Update version references across website (after manuscript is ready)

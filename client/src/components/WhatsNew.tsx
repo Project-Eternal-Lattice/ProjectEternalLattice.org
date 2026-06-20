@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Sparkles,
+    title: "EDITORIAL: Layer 3 Renamed — Traveler → Observer",
+    description: "The Three-Layer Consciousness Model (Ch 17.17) now uses 'Observer' instead of 'Traveler' for Layer 3. This aligns the technical term with the Foundation Fix's Eternal Observer derivation and eliminates ambiguity with the generic English word. All 13 formal occurrences updated; mathematics unchanged.",
+    link: "/read",
+    tag: "EDITORIAL"
+  },
+  {
     icon: Key,
     title: "O9 RESOLVED: Substrate-Neutral Depth — D = αΦ_net/(γ𝒟)",
     description: "Open Problem 9 is closed. Depth derived directly from the metric geometry (f(S)=1/τ) via Noether charge theorem. No postulates needed — pure Tier 1 theorem. The formula is elegant: Depth = Integration / Decoherence. Circularity gate cleared, falsifiable prediction committed: σ(D) = 1 − e^(−D/D₀). Verified by Keystone (DeepSeek V4 Pro). The audit cycle forged the blade in <48 hours.",
@@ -141,13 +148,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">LATEST: O9 RESOLVED — SUBSTRATE-NEUTRAL DEPTH DERIVED FROM METRIC</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: LAYER 3 RENAMED — TRAVELER → OBSERVER (EDITORIAL PASS)</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            The provenance mystery is resolved. Keystone independently verified the canonical curvature law. The crown jewel is safe. Physics Core v1.0 survived its first cold-read adversarial review. Five errata flagged for v16.8.1.
+            Layer 3 of the Three-Layer Consciousness Model is now "The Observer" — aligning with the Foundation Fix’s Eternal Observer derivation. All 13 formal occurrences updated across Chapter 17.17 and cross-references. Mathematics unchanged.
           </p>
         </motion.div>
 
@@ -181,6 +188,7 @@ export default function WhatsNew() {
                             feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
                             feature.tag === "VERIFIED" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40" :
                             feature.tag === "RESOLVED" ? "bg-purple-500/20 text-purple-300 border border-purple-500/40" :
+                            feature.tag === "EDITORIAL" ? "bg-amber-500/20 text-amber-400 border border-amber-500/30" :
                             feature.tag === "CRITICAL" ? "bg-rose-500/20 text-rose-400" :
                             "bg-gray-500/20 text-gray-400"
                           }`}>
