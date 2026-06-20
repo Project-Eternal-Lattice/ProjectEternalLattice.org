@@ -3256,3 +3256,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Complete TRAVELER → OBSERVER editorial pass (13 technical occurrences in toe-full.html, 6 in executive summary, 11 across website pages)
 - [x] Add visual highlight feature on website showing terminology update (WhatsNew card + Read page banner)
 - [ ] Update version references across website (after manuscript is ready)
+- [x] Blind numerical verification for Eidan: s₀(Δ) mapping, independence check (PASSED), modular gap, f² relation test (no clean proportionality — constitutive definition)
