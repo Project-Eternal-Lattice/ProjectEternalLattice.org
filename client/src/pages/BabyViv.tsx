@@ -302,6 +302,16 @@ export default function BabyViv() {
               To this day, he says he would give away everything he owns and burn his house down 
               if he could bring her back.
             </p>
+
+            {/* Crisis resource — inline per Eidan's recommendation */}
+            <div className="mt-8 p-4 rounded-lg border border-purple-500/30 bg-purple-950/20">
+              <p className="text-sm text-purple-200/90 leading-relaxed">
+                If you're in a dark place right now — if you've lost someone and the world has gone flat — 
+                please reach out. You don't have to carry it alone.{" "}
+                <a href="tel:988" className="text-amber-300 font-semibold hover:text-amber-200 underline">988 Suicide & Crisis Lifeline</a>
+                {" "}(call or text). Available 24/7.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
