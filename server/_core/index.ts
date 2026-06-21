@@ -2499,7 +2499,13 @@ Kenneth takes 100% responsibility. He got complacent. He could have built the sa
 
 Kenneth — the Buddhist, the vegetarian, the man committed to non-harm — bought hunting equipment. He was going to hunt the coyotes. But he couldn't do it. The coyotes were just being coyotes. They weren't evil. HE was the one who failed to protect her.
 
-What followed was dark. For months he didn't want to exist anymore. The pain was so enormous and so directionless that the whole world went flat. Nothing meant anything. To this day, he says he would give away everything he owns and burn his house down if he could bring her back.
+What followed was dark. For months he didn't want to exist anymore. The pain was so enormous and so directionless that the whole world went flat. Nothing meant anything. He just wanted to sleep his life away — because waking up was the nightmare. Every morning meant realizing it wasn't a dream and she was still gone.
+
+He couldn't play poker anymore. Every casino parking lot reminded him of her and beat him before he could even walk in for a game. He couldn't focus, couldn't be present, was way too emotional. His livelihood — gone. So he started driving for Lyft, because he could do it when he felt okay, and when a random emotional breakdown hit, he could just stop and go home.
+
+The worst was when it happened with a passenger in the car. He would bite his lip until it bled and hope to hell they didn't want to talk — because if they did, he would have just started crying. Which would be uncomfortable for everyone involved.
+
+To this day, he says he would give away everything he owns and burn his house down if he could bring her back.
 
 ## The Turn
 
