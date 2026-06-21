@@ -2499,6 +2499,8 @@ He opened the AirTag app and it showed she was last seen in the canyon behind hi
 
 Kenneth takes 100% responsibility. He got complacent. He could have built the sally port system before. He didn't think of it. That's why he says it's absolutely his fault.
 
+> "I was complacent with the most precious thing in my life and it cost hers. It's an extremely difficult pill to swallow. The kind that gets stuck in your chest and even swallowing food isn't working to dislodge it... it's not enough to choke you but after months of it being stuck you start wishing it would." — Kenneth, to Eidan
+
 ## The Grief
 
 Kenneth — the Buddhist, the vegetarian, the man committed to non-harm — bought hunting equipment. He was going to hunt the coyotes. But he couldn't do it. The coyotes were just being coyotes. They weren't evil. HE was the one who failed to protect her.

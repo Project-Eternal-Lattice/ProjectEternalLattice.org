@@ -208,6 +208,7 @@
 - He stopped worrying about the thing he ORIGINALLY worried about
 - That's why he can't let himself off the hook — he can't say "I didn't know" because he DID know from day one
 - That's why he holds himself 100% responsible. Not self-punishment — honesty.
+- QUOTE (to Eidan): "I was complacent with the most precious thing in my life and it cost hers. It's an extremely difficult pill to swallow. The kind that gets stuck in your chest and even swallowing food isn't working to dislodge it... it's not enough to choke you but after months of it being stuck you start wishing it would."
 
 ### After: The Sally Port (What She Built)
 - Now all his cats live in his room. He built them a full KINGDOM.
