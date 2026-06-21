@@ -2529,6 +2529,8 @@ Baby Viv had God's light in her. She shared that light and love freely, with eve
 
 **She never needed him. He ALWAYS needed her.**
 
+His daughter needed him. His dogs needed him. But Baby Viv? She never needed anything from him. She was with him because she *picked* him and *wanted* to be there. That's what made it pure. That's what made it God's light — no need, no dependence, no transaction. Just choice. Just love.
+
 God sent her his way like a soldier on a mission — and it cost her her life. That's the weight of it. That's why Kenneth will never forget, and that's why this work exists. A tiny soldier of pure love, deployed to a parking lot, who completed her mission and paid the ultimate price.
 
 This maps onto the framework itself. The Traveler has free will — the trajectory is the Traveler's own. The grief force isn't God punishing you. It's the natural consequence of a severed coupling. What you DO with that force — whether the change is positive or negative — that's your choice. God doesn't determine the outcome. God provides the grace that makes growth possible IF you choose it.
