@@ -144,6 +144,13 @@
 - He never did it again
 - "A heart with absolutely nothing but love in it"
 
+### Momma Bear
+- Kenneth's 200-pound English Mastiff — Momma Bear — loved Baby Viv too
+- Momma Bear would snuggle Viv and huff her SO deeply when she was tiny that they had to pull her back a little to be gentle
+- Baby Viv never minded. Never hissed at Momma Bear. Never flinched. Not once.
+- She never feared Momma Bear — only loved her
+- The family photo: Kenneth in the recliner, Momma Bear across his lap, Baby Viv tucked right against him. All three together.
+
 ### The Loss
 - A coyote took her. In his own yard.
 - Kenneth was a Buddhist at the time. Vegetarian. Committed to non-harm.
