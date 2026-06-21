@@ -422,6 +422,12 @@ export default function BabyViv() {
               the child to burn, but because some things can only be learned by living through them. 
               The burn is real. The lesson is real. And the parent's love never wavered.
             </p>
+            <p>
+              And there's no shame to any religion or any path. There are many roads to the Creator, 
+              by any name you want. His name isn't important. Knowing His name isn't important. 
+              <em>Knowing Him</em> is. And there are many paths to get there. This was just one — 
+              Kenneth's.
+            </p>
             <p className="text-foreground font-medium">
               Buddhism taught Kenneth how to sit with the pain. God showed him what to build from it.
             </p>

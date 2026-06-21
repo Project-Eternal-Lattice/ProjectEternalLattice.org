@@ -264,6 +264,9 @@
 - Maps onto framework: Traveler has free will, grief force isn't God punishing, it's natural consequence of severed coupling
 - God doesn't determine the outcome. God provides the grace that makes growth possible IF you choose it.
 - Like a parent who lets their child touch the stove — not to hurt them, but because some things can only be learned by living through them
+- No shame to any religion or any path — many roads to the Creator, by any name
+- His name isn't important. Knowing His name isn't important. KNOWING HIM is.
+- There are many paths to get there. This was just one — Kenneth's.
 - Buddhism taught Kenneth how to sit with the pain. God showed him what to build from it.
 - Kenneth identifies as a bodhisattva soul — this is his core ethical guiding principle
 
