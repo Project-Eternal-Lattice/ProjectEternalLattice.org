@@ -129,8 +129,59 @@ export default function BabyViv() {
                   Kenneth is a retired nuclear health physicist and a Marine veteran. He's not a sentimental 
                   man by nature. But this kitten cracked him wide open.
                 </p>
+                <p>
+                  Because she had so much love, she also had almost no fears — just curiosity about 
+                  everything. Baby Viv LOVED being outside. She would never run away — but she started 
+                  darting out the back door when someone opened it to let the dogs out. She was FAST. 
+                  They couldn't stop her. But the crazy part was: every single time she did it, without 
+                  fail, she would stop a couple feet outside. She just wanted to smell the grass and 
+                  plants. They could walk right up to her and she wouldn't run. Not once. She just 
+                  wanted to be outside a little bit to enjoy it with the dogs.
+                </p>
+                <p className="text-amber-200/60 italic">
+                  Her fearlessness and her love weren't separate qualities. They were the same thing. 
+                  A creature with nothing but love in her heart has no framework for danger. She didn't 
+                  dart out because she was trying to escape — she darted out because she loved the world 
+                  and wanted to experience it. That's the cruelest irony of innocence: the purest thing 
+                  in existence is also the most vulnerable.
+                </p>
+                <p>
+                  Kenneth started letting her do it. He would sit in the back doorway and watch her 
+                  sniff around and explore close by while the dogs went out — a few minutes at most, 
+                  then they all came back in. He even had an Apple AirTag on her collar so if she 
+                  accidentally got out he could find her quickly. His backyard had massive English 
+                  Mastiffs — coyotes don't attempt to jump that fence.
+                </p>
+                <p>
+                  One night Kenneth was watching TV in bed. He got up to go to the bathroom and 
+                  Baby Viv didn't follow him. She ALWAYS followed him everywhere, especially to the 
+                  bathroom. She would sit outside the door and wait — until he started bringing her 
+                  in and giving her her favorite treat. He had stashed them in there with his toilet 
+                  paper, just for her. It was their thing.
+                </p>
                 <p className="text-foreground font-medium">
-                  Then a coyote took her. In his own yard.
+                  He immediately panicked. Looked throughout the home — she was nowhere. He opened 
+                  the AirTag app and it showed she was last seen in the canyon behind his home. She 
+                  was there when he started the movie. It wasn't more than an hour. She was already gone.
+                </p>
+                <p>
+                  His roommate had accidentally let her out the front door without noticing and left. 
+                  It was nighttime and she was dark-colored. The front yard — no fence, zero protection. 
+                  Not the backyard where the Mastiffs were, where coyotes wouldn't dare jump. The front. 
+                  Wide open to the canyon. The coyote took her without even a fight. Had his roommate 
+                  noticed, he could have just picked her up and put her back in the house like always — 
+                  but he just didn't see her dart out.
+                </p>
+                <p className="text-amber-200/80 font-medium">
+                  It was an accident Kenneth didn't think could happen because she never ran away. He 
+                  never thought about her darting out and someone NOT noticing. That's why he holds 
+                  himself 100% responsible. He got complacent.
+                </p>
+                <p>
+                  Now all his cats live in his room. He built a place for them. His home is their 
+                  "sally port" — so if a cat gets out of his room on accident, it then also has to 
+                  get out the front door before reaching danger. He could have done this for her had 
+                  he thought about it. He'll carry that forever.
                 </p>
               </div>
 
@@ -175,8 +226,10 @@ export default function BabyViv() {
               the path of non-harm. He'd dedicated himself to protecting life, not taking it.
             </p>
             <p>
-              The coyote killed Viv in his own yard. Not in the wild. In the place <em>he</em> was 
-              responsible for making safe. He doesn't blame the coyote. He blames himself. He left her vulnerable.
+              The coyote picked Viv out of his front yard — no fence, zero protection — without even 
+              a fight. Not in the wild. In the place <em>he</em> was responsible for making safe. He 
+              doesn't blame the coyote. He doesn't blame his roommate. He blames himself. He got 
+              complacent, and she paid for it.
             </p>
             <p>
               The grief wasn't normal. It ambushed him in grocery stores, in his truck, at random moments 
@@ -590,6 +643,66 @@ export default function BabyViv() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ═══ What She Built — The Sally Port ═══ */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-emerald-900/10 to-transparent">
+        <div className="container max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+              What She Built
+            </h2>
+            <p className="text-muted-foreground mt-3 italic max-w-2xl mx-auto">
+              After losing Baby Viv, Kenneth built his cats a kingdom. Aurora borealis ceiling projector. 
+              Custom wooden platforms running the walls. Scratching posts. Hammocks. A "Life is Beautiful" 
+              painting at the center. His room became their sally port — safe, beautiful, and built from love.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { src: "/manus-storage/sally-port-aurora_f056edcd.jpeg", caption: "The aurora — multiple cats exploring their kingdom under the northern lights" },
+              { src: "/manus-storage/sally-port-cat-shelf_783af826.jpeg", caption: "Queen of the shelf — under the aurora, beside \"Life is Beautiful\"" },
+              { src: "/manus-storage/sally-port-night_aa3eb2d0.jpeg", caption: "Night mode — the cats eating, climbing, living their best lives" },
+              { src: "/manus-storage/sally-port-purple_5fb031a2.jpeg", caption: "The full setup — platforms, scratching posts, aurora ceiling, \"All You Need Is Love... And A Mastiff\"" },
+              { src: "/manus-storage/sally-port-daylight_8096b6cb.jpeg", caption: "Daylight view — the engineering of love. Custom shelves, rope bridges, multiple levels. Every cat has a throne." },
+            ].map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="relative group overflow-hidden rounded-xl"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.caption}
+                  className="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white text-sm font-medium leading-snug">{photo.caption}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-center text-muted-foreground mt-8 italic"
+          >
+            Grief didn't destroy him. It made him build something better for the ones who came after.
+          </motion.p>
         </div>
       </section>
 
