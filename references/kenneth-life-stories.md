@@ -127,12 +127,20 @@
 
 ### The Meeting
 - **Location:** Hustler Casino parking lot, Los Angeles
-- **Context:** Kenneth was on a smoke break from poker
+- **Context:** Kenneth drove from Oceanside to LA for a professional poker session
+- Cash games paid the bills — the bigger games were in LA
+- He got ready, drove all the way up, played for about 30 minutes, took a smoke break
 - It was a Friday or Saturday night — the parking lot was BUSY. Cars pulling in and out. People everywhere.
 - A tiny grey kitten walked right up to him and rubbed his leg
 - She never looked scared. Always comfortable. In the middle of all that chaos.
-- No hesitation, no fear — just immediate, total trust. Also not normal behavior for a stray kitten.
-- She picked him. And he picked her right back.
+- He picked her up while finishing his cigarette
+- Asked her what she was doing out so late in a dangerous area, no place for a kitten
+- Asked if she wanted to come home with him. She started purring.
+- He put her in his car, went back inside, cashed out his chips, and left
+- Drove straight back home to Oceanside with her
+- She was more important to him ALREADY than the money he would've made that trip
+- He usually played poker ALL night professionally — gave up the entire session for her
+- A professional poker player making calculated decisions for a living made the most irrational financial decision of the night because a kitten purred in his arms
 - He named her **Vivian** — after Julia Roberts' character in *Pretty Woman*
 - **The irony:** Finding something that pure in a casino parking lot
 - From Latin *vivere* — to live
