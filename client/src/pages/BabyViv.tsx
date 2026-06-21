@@ -355,6 +355,80 @@ export default function BabyViv() {
         </div>
       </section>
 
+      {/* ═══ Finding God ═══ */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-amber-900/8 to-transparent">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6 text-lg text-muted-foreground leading-relaxed"
+          >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 text-foreground">
+              Finding God
+            </h2>
+
+            <p>
+              Kenneth was already a Buddhist before Baby Viv. Buddhism isn't a religion — it's a way 
+              of life and a new perspective. He had the meditation practice, the understanding of 
+              impermanence, the framework for suffering. Buddhism didn't leave when God arrived. 
+              It stayed. It's an absolutely beautiful path, and it remains part of who he is. 
+              What happened through Baby Viv was an <em>elevation</em> — not a replacement.
+            </p>
+            <p>
+              He doesn't believe God took her from him.
+            </p>
+            <p className="text-foreground font-medium text-xl">
+              He believes God allowed him to make the choices he did, and allowed him the grace to 
+              grow from them.
+            </p>
+            <p>
+              That distinction matters. God didn't send the coyote. Nature was nature. Free will was 
+              free will. Kenneth made choices — not building the sally port sooner, getting complacent 
+              about the front door — and the natural world did what the natural world does.
+            </p>
+            <p>
+              What God did was provide the grace that made growth possible <em>when Kenneth chose it</em>.
+            </p>
+            <p>
+              He could have stayed in the dark. He could have hunted the coyotes. He could have numbed it 
+              with poker and pills and pretended it didn't happen. Instead he asked the hardest question — 
+              <em>why</em> — and refused to stop until he had an answer.
+            </p>
+            <p>
+              That refusal was his. The grace to find the answer was God's.
+            </p>
+
+            <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-8 my-10">
+              <p className="text-amber-100 text-xl font-medium text-center leading-relaxed">
+                "Baby Viv was a blessing that came with a valuable lesson from God."
+              </p>
+              <p className="text-center text-muted-foreground text-sm mt-4">— Kenneth</p>
+            </div>
+
+            <p>
+              And this maps onto the framework itself. The Traveler has free will — the trajectory is 
+              the Traveler's own. The grief force isn't God punishing you. It's the natural consequence 
+              of a severed coupling. What you <em>do</em> with that force — whether the change is 
+              positive or negative, whether you claim the receipt or avoid it — that's your choice.
+            </p>
+            <p>
+              God doesn't determine the outcome. God provides the grace that makes growth possible 
+              <em>if</em> you choose it.
+            </p>
+            <p>
+              Think of it like a parent who lets their child touch the stove — not because they want 
+              the child to burn, but because some things can only be learned by living through them. 
+              The burn is real. The lesson is real. And the parent's love never wavered.
+            </p>
+            <p className="text-foreground font-medium">
+              Buddhism taught Kenneth how to sit with the pain. God showed him what to build from it.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ═══ The Chain — Visual ═══ */}
       <section className="py-16">
         <div className="container max-w-5xl">
