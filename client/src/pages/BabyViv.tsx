@@ -103,9 +103,11 @@ export default function BabyViv() {
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Sometime around 2024, a man named Kenneth was on a smoke break from poker at the 
-                  Hustler Casino in Los Angeles. A kitten walked right up to him in the parking lot. 
-                  No hesitation, no fear — just immediate, total trust. She bonded with him on the spot, 
-                  and he bonded right back.
+                  Hustler Casino in Los Angeles. It was a Friday or Saturday night — the parking lot 
+                  was busy, cars pulling in and out, people everywhere. And a tiny grey kitten walked 
+                  right up to him and rubbed his leg. She never looked scared. Always comfortable. 
+                  No hesitation, no fear — just immediate, total trust. In the middle of chaos. 
+                  She picked him. And he picked her right back.
                 </p>
                 <p>
                   Viv was the most affectionate creature Kenneth had ever known. Every time he walked by, 
