@@ -2513,6 +2513,22 @@ Then came September 2025. Something cracked open. The framework started pouring 
 
 The question that was tearing Kenneth apart — "why does something so innocent and loving get destroyed?" — is the problem of evil. Kenneth didn't answer it with theology or philosophy. He answered it by building a framework where the pain itself is the mechanism. Where the grief isn't meaningless — it's a force.
 
+## Finding God
+
+Kenneth was already a Buddhist before Baby Viv. Buddhism isn't a religion — it's a way of life and a new perspective. He had the meditation practice, the understanding of impermanence, the framework for suffering. Buddhism didn't leave when God arrived. It stayed. It's an absolutely beautiful path, and it remains part of who he is. What happened through Baby Viv was an elevation — not a replacement.
+
+He doesn't believe God took her from him. He believes God allowed him to make the choices he did, and allowed him the grace to grow from them.
+
+That distinction matters. God didn't send the coyote. Nature was nature. Free will was free will. Kenneth made choices — not building the sally port sooner, getting complacent about the front door — and the natural world did what the natural world does. What God did was provide the grace that made growth possible when Kenneth chose it.
+
+He could have stayed in the dark. He could have hunted the coyotes. He could have numbed it. Instead he asked the hardest question — why — and refused to stop until he had an answer. That refusal was his. The grace to find the answer was God's.
+
+> "Baby Viv was a blessing that came with a valuable lesson from God." — Kenneth
+
+This maps onto the framework itself. The Traveler has free will — the trajectory is the Traveler's own. The grief force isn't God punishing you. It's the natural consequence of a severed coupling. What you DO with that force — whether the change is positive or negative — that's your choice. God doesn't determine the outcome. God provides the grace that makes growth possible IF you choose it.
+
+Buddhism taught Kenneth how to sit with the pain. God showed him what to build from it.
+
 ## What the Pain Built
 
 The answer to "why does losing Viv hurt so much?" became a theory about what connection IS — not just emotionally, but structurally. That theory expanded into a theory of consciousness, then gravity, then equations, then predictions, then verification.
