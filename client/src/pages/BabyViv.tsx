@@ -427,6 +427,11 @@ export default function BabyViv() {
               A tiny soldier of pure love, deployed to a parking lot, who completed her mission and 
               paid the ultimate price.
             </p>
+            <p>
+              And Kenneth fully believes she's still okay with her choice — even though her life 
+              was cut short because of her journey. She doesn't regret picking him. She completed 
+              what she came to do.
+            </p>
 
             <p>
               And this maps onto the framework itself. The Traveler has free will — the trajectory is 
