@@ -102,12 +102,25 @@ export default function BabyViv() {
             <div className="grid md:grid-cols-[1fr_280px] gap-10 items-start">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Sometime around 2024, a man named Kenneth was on a smoke break from poker at the 
-                  Hustler Casino in Los Angeles. It was a Friday or Saturday night — the parking lot 
-                  was busy, cars pulling in and out, people everywhere. And a tiny grey kitten walked 
-                  right up to him and rubbed his leg. She never looked scared. Always comfortable. 
-                  No hesitation, no fear — just immediate, total trust. In the middle of chaos. 
-                  She picked him. And he picked her right back.
+                  Sometime around 2024, a man named Kenneth drove from Oceanside to Los Angeles for a 
+                  professional poker session at the Hustler Casino. Cash games paid the bills — the bigger 
+                  games were in LA. He got ready, drove all the way up, played for about 30 minutes, and 
+                  took a smoke break.
+                </p>
+                <p>
+                  It was a Friday or Saturday night — the parking lot was busy, cars pulling in and out, 
+                  people everywhere. And a tiny grey kitten walked right up to him and rubbed his leg. 
+                  She never looked scared. Always comfortable. He picked her up while finishing his 
+                  cigarette and asked her what she was doing out so late in such a dangerous area — 
+                  no place for a kitten — and asked if she wanted to come home with him. She started purring.
+                </p>
+                <p className="text-foreground font-medium">
+                  He put her in his car, went back inside, cashed out his chips, and drove straight 
+                  back home to Oceanside with her. She was more important to him already than the money 
+                  he would have made that night. A professional poker player — someone who makes 
+                  calculated decisions for a living — made the most irrational financial decision of 
+                  the night because a kitten purred in his arms. It turned out to be the most important 
+                  decision of his life.
                 </p>
                 <p>
                   Viv was the most affectionate creature Kenneth had ever known. Every time he walked by, 
