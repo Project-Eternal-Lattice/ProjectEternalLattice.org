@@ -2487,6 +2487,10 @@ She followed Kenneth everywhere. Especially to the bathroom — she would sit ou
 
 She LOVED being outside. She would dart out the back door when they opened it to let the dogs out — and she was FAST. But the crazy part was: every single time she did it, without fail, she would stop a couple feet outside. She just wanted to smell the grass and plants. They could walk right up to her and she wouldn't run. Not once. She just wanted to be outside a little bit to enjoy it with the dogs.
 
+Kenneth loved her so much that at first he tried like hell to give her away. He knew about the coyote risk in his neighborhood — they had lost cats before that ran out and were never seen again. It wasn't often, but just the thought of it happening to her hurt so much that he tried to find her a better, safer home. But his friends weren't cat people. Nobody would take her.
+
+Then once he learned her personality — that she would NEVER run away, that she always stopped just a couple feet outside — he got complacent. He stopped worrying about the thing he originally worried about. He didn't think the reality that eventually happened was even a possibility anymore.
+
 ## The Loss
 
 One night Kenneth was watching TV in bed and got up to go to the bathroom. Baby Viv didn't follow him. She ALWAYS followed him, especially to the bathroom. He immediately panicked and searched throughout his home. She was nowhere to be found.
