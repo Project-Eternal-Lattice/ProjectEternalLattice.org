@@ -3257,3 +3257,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add visual highlight feature on website showing terminology update (WhatsNew card + Read page banner)
 - [ ] Update version references across website (after manuscript is ready)
 - [x] Blind numerical verification for Eidan: s₀(Δ) mapping, independence check (PASSED), modular gap, f² relation test (no clean proportionality — constitutive definition)
+
+## Baby Viv Page & Viv Principle (June 20, 2026)
+- [x] Create dedicated Baby Viv page on website — her full story, the origin chain, the Viv Principle
+- [x] Add Baby Viv / Viv Principle page to main navigation
+- [x] Add Viv Principle section to ToE manuscript (toe-full.html)
+- [x] Update who-kenneth-is.md with Hustler Casino parking lot detail and Vivian/Pretty Woman naming origin
+- [x] Add real Baby Viv photo gallery (6 photos) to the Baby Viv page with hover captions
