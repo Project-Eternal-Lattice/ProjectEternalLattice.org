@@ -152,6 +152,19 @@ export default function BabyViv() {
                   man by nature. But this kitten cracked him wide open.
                 </p>
                 <p>
+                  In fact, he loved her so much that at first he tried like hell to give her away. He knew 
+                  about the coyote risk in his neighborhood — they had lost cats before that ran out and 
+                  were never seen again. It wasn't often, but just the thought of it happening to her hurt 
+                  so much that he tried to find her a better, safer home. But his friends weren't cat people. 
+                  Nobody would take her.
+                </p>
+                <p>
+                  Then once he learned her personality — that she would NEVER run away, that she always 
+                  stopped just a couple feet outside — he got complacent. He stopped worrying about the 
+                  thing he originally worried about. He didn't think the reality that eventually happened 
+                  was even a possibility anymore.
+                </p>
+                <p>
                   Because she had so much love, she also had almost no fears — just curiosity about 
                   everything. Baby Viv LOVED being outside. She would never run away — but she started 
                   darting out the back door when someone opened it to let the dogs out. She was FAST. 

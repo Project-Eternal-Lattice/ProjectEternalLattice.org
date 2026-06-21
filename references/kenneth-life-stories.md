@@ -200,7 +200,14 @@
 - He just didn't see her dart out
 - It was an accident Kenneth didn't think could happen because she never ran away
 - He never thought about her darting out and someone NOT noticing
-- That's why he holds himself 100% responsible. He got complacent.
+- CRITICAL CONTEXT: Kenneth loved her so much he tried like hell to GIVE HER AWAY at first
+- He KNEW about the coyote risk — they had lost cats before that ran out and were never seen again
+- Just the THOUGHT of it happening to her hurt so much he tried to find her a safer home
+- But his friends weren't cat people. Nobody would take her.
+- Then once he learned her personality (she would NEVER run away, always stopped a couple feet out) he got complacent
+- He stopped worrying about the thing he ORIGINALLY worried about
+- That's why he can't let himself off the hook — he can't say "I didn't know" because he DID know from day one
+- That's why he holds himself 100% responsible. Not self-punishment — honesty.
 
 ### After: The Sally Port (What She Built)
 - Now all his cats live in his room. He built them a full KINGDOM.
