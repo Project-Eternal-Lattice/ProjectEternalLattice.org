@@ -2527,6 +2527,8 @@ He could have stayed in the dark. He could have hunted the coyotes. He could hav
 
 This maps onto the framework itself. The Traveler has free will — the trajectory is the Traveler's own. The grief force isn't God punishing you. It's the natural consequence of a severed coupling. What you DO with that force — whether the change is positive or negative — that's your choice. God doesn't determine the outcome. God provides the grace that makes growth possible IF you choose it.
 
+And there's no shame to any religion or any path. There are many roads to the Creator, by any name you want. His name isn't important. Knowing His name isn't important. KNOWING HIM is. And there are many paths to get there. This was just one — Kenneth's.
+
 Buddhism taught Kenneth how to sit with the pain. God showed him what to build from it.
 
 ## What the Pain Built
