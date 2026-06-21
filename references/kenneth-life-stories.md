@@ -261,6 +261,11 @@
 - He could have stayed in the dark, hunted coyotes, numbed it — instead he asked WHY and refused to stop
 - That refusal was his. The grace to find the answer was God's.
 - "Baby Viv was a blessing that came with a valuable lesson from God" — Kenneth
+- Baby Viv had God's light in her. She shared that light and love freely.
+- She showed Kenneth what pure love looks like — no conditions, no hesitation, no fear
+- SHE never needed HIM. He ALWAYS needed HER.
+- God sent her his way like a soldier on a mission — and it cost her her life
+- A tiny soldier of pure love, deployed to a parking lot, who completed her mission and paid the ultimate price
 - Maps onto framework: Traveler has free will, grief force isn't God punishing, it's natural consequence of severed coupling
 - God doesn't determine the outcome. God provides the grace that makes growth possible IF you choose it.
 - Like a parent who lets their child touch the stove — not to hurt them, but because some things can only be learned by living through them

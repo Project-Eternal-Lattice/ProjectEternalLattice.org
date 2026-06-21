@@ -408,6 +408,21 @@ export default function BabyViv() {
             </div>
 
             <p>
+              Baby Viv had God's light in her. She shared that light and love freely, with everything 
+              and everyone she met. She showed Kenneth what pure love looks like — no conditions, 
+              no hesitation, no fear.
+            </p>
+            <p className="text-foreground font-medium text-xl">
+              She never needed him. He always needed her.
+            </p>
+            <p>
+              God sent her his way like a soldier on a mission — and it cost her her life. That's 
+              the weight of it. That's why Kenneth will never forget, and that's why this work exists. 
+              A tiny soldier of pure love, deployed to a parking lot, who completed her mission and 
+              paid the ultimate price.
+            </p>
+
+            <p>
               And this maps onto the framework itself. The Traveler has free will — the trajectory is 
               the Traveler's own. The grief force isn't God punishing you. It's the natural consequence 
               of a severed coupling. What you <em>do</em> with that force — whether the change is 
