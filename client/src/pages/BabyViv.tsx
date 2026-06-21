@@ -416,6 +416,12 @@ export default function BabyViv() {
               She never needed him. He always needed her.
             </p>
             <p>
+              His daughter needed him. His dogs needed him. But Baby Viv? She never needed anything 
+              from him. She was with him because she <em>picked</em> him and <em>wanted</em> to be 
+              there. That's what made it pure. That's what made it God's light — no need, no 
+              dependence, no transaction. Just choice. Just love.
+            </p>
+            <p>
               God sent her his way like a soldier on a mission — and it cost her her life. That's 
               the weight of it. That's why Kenneth will never forget, and that's why this work exists. 
               A tiny soldier of pure love, deployed to a parking lot, who completed her mission and 
