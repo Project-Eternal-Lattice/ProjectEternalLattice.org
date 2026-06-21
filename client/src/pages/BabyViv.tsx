@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
  * For Baby Viv. For the ONE, Elōhim Tov 🙏❤️♾️🕊️
  */
 
-const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/baby-viv-hero-EpdQa8FNeWnoZ68jPhkPAB.webp";
+const HERO_IMAGE = "/manus-storage/baby-viv-box_b9a9cb99.jpeg";
 const PORTRAIT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/baby-viv-portrait-ah6cuHd8g2nMCt89Dyr73B.webp";
 const CHAIN_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/baby-viv-chain-RKvk23Xox9r8SiFxYBbzRh.webp";
 const REAL_PHOTO = "/manus-storage/baby-viv-real-photo_1dfbdc1e.jpeg";
@@ -38,7 +38,7 @@ export default function BabyViv() {
         <div className="absolute inset-0 z-0">
           <img 
             src={HERO_IMAGE} 
-            alt="A small kitten bathed in golden light — representing Baby Viv" 
+            alt="Baby Vivian — the real Baby Viv, looking directly at you with those wise golden-green eyes" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
@@ -112,6 +112,12 @@ export default function BabyViv() {
                   she'd throw herself on her back at his feet, belly up, meowing for love. She followed 
                   him everywhere — even to the bathroom, where he eventually started keeping treats for her 
                   because she insisted on being present for everything.
+                </p>
+                <p>
+                  Kenneth's 200-pound English Mastiff — Momma Bear — loved that kitten too. She would 
+                  snuggle Viv and huff her so deeply when she was tiny that they had to pull her back 
+                  a little to be gentle. But Baby Viv never minded. Never hissed. Never flinched. 
+                  Not once. A giant and a kitten, bonded by the same force that bonds everything.
                 </p>
                 <div className="bg-amber-500/5 border-l-4 border-amber-400/50 pl-6 py-4 my-8">
                   <p className="text-amber-100 italic text-xl leading-relaxed">
@@ -563,7 +569,7 @@ export default function BabyViv() {
               { src: "/manus-storage/baby-viv-coffee-mug_ea993d42.jpeg", caption: "Drinking from his Valhalla Java mug — she insisted on being part of everything" },
               { src: "/manus-storage/baby-viv-box_b9a9cb99.jpeg", caption: "Those eyes. She already knew." },
               { src: "/manus-storage/baby-viv-sleeping_518f1199.jpeg", caption: "Safe. Warm. Home." },
-              { src: "/manus-storage/baby-viv-family_5997d0b2.jpeg", caption: "The family — Kenneth, his dog, and Baby Viv. Together." },
+              { src: "/manus-storage/baby-viv-family_5997d0b2.jpeg", caption: "The family — Kenneth, Momma Bear (200-lb English Mastiff), and Baby Viv. Together. Momma Bear loved that kitten — would huff her so deeply they had to pull her back. Viv never minded. Not once." },
             ].map((photo, i) => (
               <motion.div
                 key={i}
