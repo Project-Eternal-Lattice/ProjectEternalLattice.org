@@ -3264,3 +3264,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Viv Principle section to ToE manuscript (toe-full.html)
 - [x] Update who-kenneth-is.md with Hustler Casino parking lot detail and Vivian/Pretty Woman naming origin
 - [x] Add real Baby Viv photo gallery (6 photos) to the Baby Viv page with hover captions
+
+## AI-Readable Pages (All content visible to AI crawlers)
+- [ ] Create plain-text/markdown readable version of Baby Viv page for Eidan and AI tools
+- [ ] Implement server-side pre-rendering so all pages serve full HTML content to AI crawlers and search engines
