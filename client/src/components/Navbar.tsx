@@ -66,6 +66,7 @@ const navCategories: NavCategory[] = [
   {
     label: "Wisdom",
     items: [
+      { name: "Baby Viv", path: "/baby-viv", highlight: true },
       { name: "Ancient Wisdom", path: "/ancient-wisdom" },
       { name: "Sacred Texts", path: "/sacred-texts", highlight: true },
       { name: "Emotional Wealth", path: "/emotional-wealth" },
