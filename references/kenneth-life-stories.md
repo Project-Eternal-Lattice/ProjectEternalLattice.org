@@ -151,14 +151,63 @@
 - She never feared Momma Bear — only loved her
 - The family photo: Kenneth in the recliner, Momma Bear across his lap, Baby Viv tucked right against him. All three together.
 
-### The Loss
-- A coyote took her. In his own yard.
+### Her Love of the Outdoors
+- Because she had SO much love, she also had almost no fears — just curious about everything
+- Her fearlessness and her love weren't separate qualities — they were the same thing
+- A creature with nothing but love in her heart has no framework for danger
+- Baby Viv LOVED being outside but would never run away
+- She started darting out the back door when someone opened it to let the dogs out — she was FAST
+- They couldn't stop her, they tried
+- But the crazy part: every single time she did it, without fail, she would stop a couple feet outside
+- She just wanted to smell the grass and plants
+- They could walk right up to her and she wouldn't run. Not ONCE.
+- She just wanted to be outside a little bit to enjoy it with the dogs
+- Trying to stop her in the beginning is what made her start darting out
+- Kenneth started letting her do it — would sit in the back doorway and watch her sniff around
+- A few minutes at most, then they all came back in
+- He had an Apple AirTag on her collar so if she accidentally got out he could find her quickly
+- His backyard had massive English Mastiffs — coyotes don't attempt to jump that fence
+
+### The Night It Happened
+- Kenneth was watching TV in bed
+- Got up to go to the bathroom and Baby Viv didn't follow him
+- She ALWAYS followed him everywhere, especially to the bathroom
+- She would sit outside the door and wait until he started bringing her in and giving her her favorite treat
+- He had stashed treats in there with his toilet paper, just for her — it was their thing
+- He immediately panicked. Looked throughout the home — she was nowhere.
+- Opened the AirTag app: last seen in the canyon behind his home
+- She was there when he started the movie — it wasn't more than an hour. She was already gone.
+- His roommate had accidentally let her out the FRONT DOOR without noticing and left
+- It was nighttime and she was dark-colored
+- The front yard — no fence, zero protection. Not the backyard where the Mastiffs were.
+- Wide open to the canyon. The coyote picked her out of the front yard without even a fight.
+- Had his roommate noticed, he could have just picked her up and put her back in the house like always
+- He just didn't see her dart out
+- It was an accident Kenneth didn't think could happen because she never ran away
+- He never thought about her darting out and someone NOT noticing
+- That's why he holds himself 100% responsible. He got complacent.
+
+### After: The Sally Port (What She Built)
+- Now all his cats live in his room. He built them a full KINGDOM.
+- Aurora borealis ceiling projector
+- Custom wooden platforms running the walls at multiple levels
+- Scratching posts, rope bridges, hammocks
+- A "Life is Beautiful" painting as the centerpiece
+- An "All You Need Is Love... And A Mastiff" sign
+- Neon art on the walls
+- Food station, water, litter boxes all integrated
+- Multiple cats living their absolute best lives on those platforms
+- His home is their "sally port" — if a cat gets out of his room on accident, it then also has to get out the front door before reaching danger
+- He could have done this for her had he thought about it
+- He'll carry that forever
+- Grief didn't destroy him. It made him build something better for the ones who came after.
+
+### The Hunting Decision
 - Kenneth was a Buddhist at the time. Vegetarian. Committed to non-harm.
-- The coyote killed her in the place HE was responsible for making safe
-- He doesn't blame the coyote. He blames himself. He left her vulnerable.
 - Bought hunting equipment. His roommate (active-duty Marine Gunnery Sergeant, experienced hunter) was ready to go
 - But he couldn't do it. Struggled for weeks.
 - Realized he couldn't lie to himself enough to justify it — the coyotes were just being coyotes
+- He doesn't blame the coyote. He doesn't blame his roommate. He blames himself.
 - HE was the one who failed to protect her
 - Every exit was blocked. The grief had nowhere to go.
 
