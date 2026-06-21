@@ -117,7 +117,14 @@ export default function BabyViv() {
                   Kenneth's 200-pound English Mastiff — Momma Bear — loved that kitten too. She would 
                   snuggle Viv and huff her so deeply when she was tiny that they had to pull her back 
                   a little to be gentle. But Baby Viv never minded. Never hissed. Never flinched. 
-                  Not once. A giant and a kitten, bonded by the same force that bonds everything.
+                  Not once. She trusted the Mastiffs from day one.
+                </p>
+                <p>
+                  That wasn't normal. Kenneth has had three litters of kittens and none of them warmed 
+                  up to the dogs as fast as she did — and they were born in the house with them. A 
+                  parking lot kitten who had never seen a dog before trusted them faster than kittens 
+                  raised alongside them from birth. Her nature wasn't learned. It was innate. She came 
+                  pre-loaded with nothing but love.
                 </p>
                 <div className="bg-amber-500/5 border-l-4 border-amber-400/50 pl-6 py-4 my-8">
                   <p className="text-amber-100 italic text-xl leading-relaxed">

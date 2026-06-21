@@ -149,6 +149,10 @@
 - Momma Bear would snuggle Viv and huff her SO deeply when she was tiny that they had to pull her back a little to be gentle
 - Baby Viv never minded. Never hissed at Momma Bear. Never flinched. Not once.
 - She never feared Momma Bear — only loved her
+- She trusted the Mastiffs from DAY ONE. It wasn't normal behavior.
+- Kenneth has had three litters of kittens and NONE of them warmed up to the dogs as fast as she did — and they were there from birth with them
+- A parking lot kitten who had never seen a dog before trusted them faster than kittens born in the house
+- This proves her nature wasn't a product of her environment. It was innate. She came pre-loaded with nothing but love.
 - The family photo: Kenneth in the recliner, Momma Bear across his lap, Baby Viv tucked right against him. All three together.
 
 ### Her Love of the Outdoors
