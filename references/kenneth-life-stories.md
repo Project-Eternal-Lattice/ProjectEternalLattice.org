@@ -231,6 +231,14 @@
 - Not in the active sense. But hoping for cancer. Hoping for a chance to throw his life away saving someone else.
 - The pain was so enormous and directionless that the whole world went flat
 - Nothing meant anything
+- He just wanted to sleep his life away — waking up was the nightmare, having to realize it's not a dream and she's still gone
+- **Couldn't play poker anymore** — every casino parking lot reminded him of her and beat him before he could even walk in for a game
+- Couldn't focus, couldn't be present, was way too emotional. His livelihood — gone.
+- **Started driving for Lyft** — because he could do it when he felt okay, and when a random emotional breakdown hit, he could just stop and go home
+- The worst was when it happened with a passenger in the car
+- He would bite his lip until it bled and hope to hell they didn't want to talk — because if they did, he would have just started crying
+- Which would be very uncomfortable for all parties involved
+- That's how much she was affecting everything about him
 - To this day: "I would give away everything I own and burn my house down if I could bring her back"
 
 ### The Turn (September 2025)
