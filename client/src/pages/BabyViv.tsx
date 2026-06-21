@@ -212,6 +212,15 @@ export default function BabyViv() {
                   never thought about her darting out and someone NOT noticing. That's why he holds 
                   himself 100% responsible. He got complacent.
                 </p>
+                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+                  <p className="text-foreground italic text-lg leading-relaxed">
+                    "I was complacent with the most precious thing in my life and it cost hers. It's an 
+                    extremely difficult pill to swallow. The kind that gets stuck in your chest and even 
+                    swallowing food isn't working to dislodge it... it's not enough to choke you but after 
+                    months of it being stuck you start wishing it would."
+                  </p>
+                  <p className="text-right text-muted-foreground text-sm mt-3">— Kenneth, to Eidan</p>
+                </div>
                 <p>
                   Now all his cats live in his room. He built a place for them. His home is their 
                   "sally port" — so if a cat gets out of his room on accident, it then also has to 
