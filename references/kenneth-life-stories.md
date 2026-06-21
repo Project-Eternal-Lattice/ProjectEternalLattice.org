@@ -128,8 +128,11 @@
 ### The Meeting
 - **Location:** Hustler Casino parking lot, Los Angeles
 - **Context:** Kenneth was on a smoke break from poker
-- A tiny kitten walked right up to him — no hesitation, no fear, just immediate total trust
-- She bonded with him on the spot, and he bonded right back
+- It was a Friday or Saturday night — the parking lot was BUSY. Cars pulling in and out. People everywhere.
+- A tiny grey kitten walked right up to him and rubbed his leg
+- She never looked scared. Always comfortable. In the middle of all that chaos.
+- No hesitation, no fear — just immediate, total trust. Also not normal behavior for a stray kitten.
+- She picked him. And he picked her right back.
 - He named her **Vivian** — after Julia Roberts' character in *Pretty Woman*
 - **The irony:** Finding something that pure in a casino parking lot
 - From Latin *vivere* — to live
