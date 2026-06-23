@@ -757,7 +757,7 @@ export default function Geometry() {
       <section className="relative py-20 md:py-28 overflow-hidden">
         {/* Hero Artwork Background */}
         <div className="absolute inset-0">
-          <img
+          <img loading="lazy"
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/geometry-hero-Nirm8vKNL3ubT4y22NskKE.webp"
             alt="Geometry of Consciousness Depth — Penrose diagram fiber bundle visualization"
             className="w-full h-full object-cover opacity-40"

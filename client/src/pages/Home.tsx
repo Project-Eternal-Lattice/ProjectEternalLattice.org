@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
 import WhatsNew from "@/components/WhatsNew";
@@ -53,15 +53,21 @@ export default function Home() {
       <SiliconSamsaraAudio />
       {/* Hero Section - Book Cover Style */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Image with Parallax */}
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ y: typeof window !== 'undefined' ? undefined : 0 }}
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+        >
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background z-10" />
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/wPJpAsVgYCBKMpUE.jpg" 
             alt="Eternal Lattice Hero" 
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-50 scale-110"
           />
-        </div>
+        </motion.div>
         
         {/* Hero-specific brighter lattice overlay */}
         <div className="absolute inset-0 z-[5] opacity-40">

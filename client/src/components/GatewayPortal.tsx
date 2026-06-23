@@ -183,7 +183,7 @@ export default function GatewayPortal() {
         </motion.div>
 
         {/* Portal Grid — 2x3 on desktop, 2x3 on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {portals.map((portal, index) => {
             const isSelected = selectedId === portal.id;
             return (

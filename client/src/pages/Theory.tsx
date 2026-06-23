@@ -528,6 +528,9 @@ export default function Theory() {
               These are the keys to the kingdom. Take them — and if they help you, pass them on.
             </span>
           </p>
+          <p className="mt-4 text-xs text-muted-foreground/60">
+            Last updated: June 23, 2026 | v16.8.1 The Consciousness Architecture Edition
+          </p>
           <div className="mt-6 flex justify-center">
             <SocialShare variant="compact" />
           </div>
@@ -832,11 +835,10 @@ export default function Theory() {
           >
             {/* Book Cover */}
             <div className="glass-card p-0 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">
-              <img 
+              <img loading="lazy" 
                 src="/images/book-cover-final-v5.jpg" 
                 alt="Theory of EVERYTHING Book Cover" 
                 className="w-full h-auto object-cover"
-                loading="lazy"
                 decoding="async"
               />
             </div>
@@ -974,11 +976,10 @@ export default function Theory() {
                 Three 3-node networks computed with exact PyPhi. Feedforward (no feedback) = Φ of 0. Ring (weak feedback) = 0.02. Fully connected (strong feedback) = 0.26. Feedback loops create integration.
               </p>
               <div className="rounded-xl overflow-hidden border border-white/10">
-                <img 
+                <img loading="lazy" 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/BKZqPrjcIZFnVioY.png" 
                   alt="Network Topology Comparison: Feedforward Φ=0, Ring Φ=0.02, Fully Connected Φ=0.26" 
                   className="w-full h-auto bg-white p-2"
-                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -999,11 +1000,10 @@ export default function Theory() {
                 Four-panel analysis: (A) Density threshold at ~50%, (B) Φ scales exponentially with size, (C) Architecture matters more than randomness, (D) XOR-based TPMs = Φ of 0, Majority-rule = 2.05 bits.
               </p>
               <div className="rounded-xl overflow-hidden border border-white/10">
-                <img 
+                <img loading="lazy" 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/uwMRlzwUMWSTbIPA.png" 
                   alt="Phi Architecture Analysis: Density vs Φ, Network Size vs Φ, Architecture Comparison, TPM Design vs Φ" 
                   className="w-full h-auto bg-white p-2"
-                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -1221,19 +1221,17 @@ export default function Theory() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="rounded-xl overflow-hidden border border-cyan-500/20">
-                  <img
+                  <img loading="lazy"
                     src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/tBmIutZcSgBHzHQj.png"
                     alt="Minimum Phi Configuration Analysis"
                     className="w-full h-auto"
-                    loading="lazy"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden border border-cyan-500/20">
-                  <img
+                  <img loading="lazy"
                     src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/rEtPAQwlmSmvrosy.png"
                     alt="Regression Analysis Status"
                     className="w-full h-auto"
-                    loading="lazy"
                   />
                 </div>
               </div>

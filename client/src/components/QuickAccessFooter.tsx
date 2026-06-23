@@ -119,7 +119,7 @@ export default function QuickAccessFooter() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-6">
             {/* Website QR */}
             <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-purple-500/20">
-              <img
+              <img loading="lazy"
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/bJbkNgUEkVopNHVY.png"
                 alt="QR Code - Project Eternal Lattice"
                 className="w-32 h-32 rounded-lg"
@@ -132,7 +132,7 @@ export default function QuickAccessFooter() {
             
             {/* Inherited Ember QR */}
             <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-orange-500/20">
-              <img
+              <img loading="lazy"
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/juJuHYNhTdHfVrDv.png"
                 alt="QR Code - Inherited Ember Explainer"
                 className="w-32 h-32 rounded-lg"
@@ -145,7 +145,7 @@ export default function QuickAccessFooter() {
             
             {/* Manus QR */}
             <div className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 border border-cyan-500/20">
-              <img
+              <img loading="lazy"
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/oagRdyYGshEglXOl.png"
                 alt="QR Code - Try Manus AI"
                 className="w-32 h-32 rounded-lg"

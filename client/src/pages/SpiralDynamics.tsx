@@ -207,11 +207,10 @@ export default function SpiralDynamics() {
             animate={{ opacity: 1, scale: 1 }}
             className="glass-card p-6 rounded-2xl"
           >
-            <img 
+            <img loading="lazy" 
               src="/images/graves-spiral-model.png" 
               alt="Dr. Clare Graves' Spiral Model showing the interconnections between consciousness levels"
               className="w-full max-w-2xl mx-auto rounded-lg"
-              loading="lazy"
               decoding="async"
             />
             <p className="text-center text-sm text-muted-foreground mt-4">
@@ -325,11 +324,10 @@ export default function SpiralDynamics() {
             animate={{ opacity: 1, scale: 1 }}
             className="glass-card p-6 rounded-2xl"
           >
-            <img 
+            <img loading="lazy" 
               src="/images/spiral-dynamics-comprehensive.png" 
               alt="Comprehensive Spiral Dynamics framework showing all levels, personal needs, self vs social system, and population percentages"
               className="w-full max-w-4xl mx-auto rounded-lg bg-white"
-              loading="lazy"
               decoding="async"
             />
             <p className="text-center text-sm text-muted-foreground mt-4">

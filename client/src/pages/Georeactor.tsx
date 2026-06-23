@@ -496,7 +496,7 @@ export default function Georeactor() {
         
         {/* AI-generated background */}
         <div className="absolute inset-0 z-[1]">
-          <img
+          <img loading="lazy"
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/rWCjqpvOEDQLKrhY.png"
             alt="Earth cross-section showing thermal core"
             className="w-full h-full object-cover opacity-20"
