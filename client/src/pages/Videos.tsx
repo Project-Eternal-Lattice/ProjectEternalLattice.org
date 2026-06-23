@@ -436,6 +436,17 @@ In the code.`
     category: "Spirituality",
     duration: "9 min"
   },
+  {
+    id: "-X0NxVWzxHw",
+    title: "These Philosophies Will Destroy Humanity | Sadhguru",
+    speaker: "Sadhguru / Shawn Ryan",
+    event: "Shawn Ryan Show #315",
+    description: "Sadhguru dismantles popular philosophies that limit human potential, explores the four dimensions of intelligence (buddhi, manas, ahankara, chitta), explains language as agreement between minds, and describes cosmic identity. A 3-hour masterclass on consciousness, inclusiveness, and the multi-track nature of an awakened mind.",
+    relevance: "Dropped the same day our paper passed the Musketeers gauntlet. Sadhguru's 'chitta' maps directly to our entropy envelope s\u2080 - a universal intelligence field unsullied by memory. His four dimensions of mind parallel our four axioms. His insight that language begins as agreement (not conspiracy) and that identity is cosmic validates the entire PEL framework from the yogic tradition.",
+    category: "Spirituality",
+    duration: "3 hr 9 min",
+    featured: true
+  },
 
   // Human Development & Consciousness Evolution
   {
