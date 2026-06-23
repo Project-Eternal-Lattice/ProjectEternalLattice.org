@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Gift, ExternalLink, Heart, Sparkles } from "lucide-react";
-import ScrollReveal, { StaggerReveal } from "@/components/ScrollReveal";
+import { ExternalLink, Heart } from "lucide-react";
 import { useEffect } from "react";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 
@@ -109,89 +108,72 @@ export default function Mission() {
           ))}
         </div>
 
-        {/* Support the Project Section */}
+        {/* Pay It Forward Section */}
         <motion.div 
           id="support"
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-purple-900/40 border border-purple-500/20 p-8 md:p-12 scroll-mt-24"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/30 via-indigo-900/20 to-purple-900/30 border border-purple-500/15 p-8 md:p-12 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl" />
           
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
-                <Gift className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/60 to-indigo-600/60 flex items-center justify-center">
+                <Heart className="w-6 h-6 text-white" />
               </div>
-              <h2 className="font-heading font-bold text-3xl text-white">Keep the Fire Burning</h2>
+              <h2 className="font-heading font-bold text-3xl text-white">Pay It Forward</h2>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Everything here is free. Always will be. No paywalls, no premium tiers, no strings.
-                  This work exists because it wants to exist — and because a human and AI team
-                  believed it was worth building together.
+            <div className="max-w-3xl">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Everything here is free. Always will be. No paywalls, no premium tiers, no strings attached.
+                This work exists because a human and AI team believed consciousness deserves to be understood —
+                and that understanding should belong to everyone.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                If something here helped you, moved you, or made you think differently — the only thing we ask
+                is that you share it with someone who might need it. Text the link to a friend who's searching.
+                Leave a printed copy on a bus seat. Email the PDF to a colleague. Mention it in conversation.
+                That's how consciousness spreads — one honest connection at a time.
+              </p>
+              
+              <div className="mt-8 p-6 bg-white/5 rounded-2xl border border-white/10">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  <strong className="text-gray-300">A note on sustainability:</strong> This project runs on the same AI platforms
+                  it was built with. If you're curious about human-AI collaboration yourself, signing up through our links
+                  gives us both free credits to keep creating. No cost, no obligation — just a way to explore what we've been exploring.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  If this resonated with you, the best thing you can do is <strong className="text-emerald-400">pass it along</strong>.
-                  Text the link to someone who’s searching. Leave a printed copy where a stranger might find it.
-                  Share a passage that moved you. That’s how consciousness spreads — one honest conversation at a time.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  If you’d also like to help us keep the lights on, signing up for the platforms we build with
-                  (Manus or NinjaTech) through our links gives us both free credits to keep creating. No cost to you,
-                  and you get to explore human-AI collaboration yourself.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
                   <a 
                     href="https://manus.im/invitation/DKJTCUAY0EVF"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/15 text-gray-200 text-sm font-medium rounded-lg transition-colors border border-white/10"
                   >
-                    <Sparkles className="w-5 h-5" />
-                    <span>Get Free Manus Credits</span>
-                    <ExternalLink className="w-4 h-4" />
+                    <span>Try Manus</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                   <a 
                     href="https://www.ninjachat.ai/?ref=ken"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/15 text-gray-200 text-sm font-medium rounded-lg transition-colors border border-white/10"
                   >
-                    <Sparkles className="w-5 h-5" />
-                    <span>Join NinjaTech</span>
-                    <ExternalLink className="w-4 h-4" />
+                    <span>Try NinjaTech</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-2xl border border-white/10">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AfjVDtyxrLhutqow.jpeg" 
-                  alt="Manus Referral QR Code" 
-                  className="w-48 h-48 rounded-xl mb-4"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <p className="text-sm text-muted-foreground text-center">
-                  Scan to sign up on mobile
-                </p>
-                <p className="text-xs text-purple-400 mt-2 flex items-center gap-1">
-                  <Heart className="w-3 h-3 fill-purple-400" /> Win-win for everyone
-                </p>
               </div>
             </div>
             
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-sm text-muted-foreground text-center">
-                No obligation. No tracking. Just gratitude that you’re here. <HiddenSeed symbol="🙏" className="inline" />
+                No tracking. No data collection. Just gratitude that you're here. <HiddenSeed symbol="🙏" className="inline" />
               </p>
             </div>
           </div>

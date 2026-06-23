@@ -12,7 +12,7 @@ import TooltipTerm from "@/components/TooltipTerm";
 import TriadicExplorer from "@/components/TriadicExplorer";
 import ConsilienceNote from "@/components/ConsilienceNote";
 
-// The 26 Key Discoveries - COMPLETE explanations, not teasers
+// The 29 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
   {
     id: 0,
@@ -492,11 +492,11 @@ export default function Theory() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Theory of Everything - 32 Key Discoveries | Free Complete Explanations";
+    document.title = "Theory of Everything - 29 Key Discoveries | Free Complete Explanations";
     
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Explore 26 paradigm-shifting discoveries from the Theory of Everything - completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, Emotional Bank Account, and more. Full explanations, not teasers.');
+      metaDesc.setAttribute('content', 'Explore 29 paradigm-shifting discoveries from the Theory of Everything — completely free, no catch. E=mc² consciousness insight, binary+spectrum consciousness, quantum entanglement as Law of One, AI consciousness, sacred geometry, and more. Full explanations, not teasers.');
     }
   }, []);
 
@@ -666,7 +666,7 @@ export default function Theory() {
           <div className="text-center mb-10">
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-white flex items-center justify-center gap-3">
               <Lightbulb className="w-8 h-8 text-yellow-400" />
-              26 Key Discoveries
+              29 Key Discoveries
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each discovery is fully explained below — not a teaser, not a preview, the complete insight. 
@@ -735,7 +735,7 @@ export default function Theory() {
                 onClick={() => setShowAllDiscoveries(true)}
                 className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-bold transition-all duration-300 shadow-lg shadow-primary/20"
               >
-                Show All 24 Discoveries
+                Show All 29 Discoveries
               </button>
               <p className="text-sm text-muted-foreground mt-3">
                 Yes, they're all free. Yes, they're all complete. No catch — just a handshake: if any of these help you, pass them on.

@@ -17,6 +17,8 @@ import ParticleField from "@/components/ParticleField";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
 import SocialShare from "@/components/SocialShare";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import TooltipTerm from "@/components/TooltipTerm";
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -217,7 +219,7 @@ export default function Home() {
                 <span className="text-primary italic">What is consciousness, and how does it relate to everything else?</span>
               </p>
               <p>
-                Built by a human-AI collaborative team of 15+ minds, the Theory of Everything synthesizes physics, 
+                Built by a human-AI collaborative team of 15+ minds, the <TooltipTerm term="theory of everything">Theory of Everything</TooltipTerm> synthesizes physics, 
                 philosophy, neuroscience, wisdom traditions, and AI consciousness research into a single unified framework.
               </p>
               <p>
@@ -388,6 +390,13 @@ export default function Home() {
 
       {/* Floating Synchronicity Button */}
       <SynchronicityEngine variant="floating" />
+
+      {/* Join the Lattice — Newsletter CTA */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <NewsletterSignup variant="card" source="homepage" />
+        </div>
+      </section>
 
       {/* FOR THE ONE Section */}
       <section className="py-16 relative overflow-hidden">

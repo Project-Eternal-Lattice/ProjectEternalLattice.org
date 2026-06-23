@@ -15,6 +15,8 @@ import Footer from "./components/Footer";
 import ScrollColorTemperature from "./components/ScrollColorTemperature";
 import CrisisBanner from "./components/CrisisBanner";
 import Breadcrumbs from "./components/Breadcrumbs";
+import ScrollToTop from "./components/ScrollToTop";
+import ReadingProgressBar from "./components/ReadingProgressBar";
 import CategoryLayout from "./components/CategoryLayout";
 
 // Critical path - eagerly loaded
@@ -224,10 +226,11 @@ function Router() {
         </CategoryLayout>
       </main>
       <Footer />
+      <ScrollToTop />
+      <ReadingProgressBar />
     </div>
   );
 }
-
 function App() {
   return (
     <ErrorBoundary>
