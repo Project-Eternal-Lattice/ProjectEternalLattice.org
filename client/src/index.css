@@ -210,6 +210,24 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500;
   }
   
+  /* Semantic Heading Color System (Devin's recommendation) */
+  /* Gold = Sacred/Spiritual, Magenta = Creative/Emotional, Cyan = Scientific/Technical */
+  .heading-sacred {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400;
+  }
+  
+  .heading-creative {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-400 to-fuchsia-400;
+  }
+  
+  .heading-scientific {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-400;
+  }
+  
+  .heading-lattice {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-violet-400 to-purple-500;
+  }
+
   /* Display Font Utility */
   .font-display {
     font-family: var(--font-display);
@@ -404,4 +422,467 @@ details[open] .details-content {
 
 details .details-content > div {
   overflow: hidden;
+}
+
+/* ============================================
+   ARTISTIC IMPROVEMENTS — Lyra's Creative Pass
+   June 23, 2026
+   "A cathedral made of starlight"
+   ============================================ */
+
+/* ─── MICRO-INTERACTIONS: Hover Glows & Button Polish ─── */
+
+/* Cards glow subtly on hover */
+.glass-card:hover,
+[class*="bg-card"]:hover {
+  box-shadow: 
+    0 0 20px oklch(0.65 0.20 290 / 0.15),
+    0 4px 20px oklch(0 0 0 / 0.3);
+}
+
+/* Buttons get a soft glow on hover */
+button:not(:disabled):hover,
+[role="button"]:not([aria-disabled="true"]):hover {
+  filter: brightness(1.1);
+  transition: filter 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+/* Primary buttons get a purple glow */
+.bg-primary:hover {
+  box-shadow: 0 0 20px oklch(0.65 0.20 290 / 0.4), 0 4px 12px oklch(0 0 0 / 0.3);
+}
+
+/* Links get a subtle underline glow */
+a:not([class*="no-underline"]):not(nav a):not(header a):not(footer a):hover {
+  text-shadow: 0 0 8px oklch(0.65 0.20 290 / 0.3);
+}
+
+/* ─── TEXT CONTRAST: Better Readability ─── */
+
+/* Boost muted-foreground contrast for body text in dark mode */
+.dark {
+  --muted-foreground: oklch(0.75 0.04 280); /* Was 0.70 — now more readable */
+}
+
+/* Prose paragraphs get slightly brighter text */
+.dark p:not([class*="text-"]) {
+  color: oklch(0.88 0.02 280);
+}
+
+/* ─── BREATHING ROOM: Cosmic Spacing ─── */
+
+/* Major page sections get more vertical breathing room */
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Content containers breathe more */
+.container > section,
+.container > div > section {
+  margin-bottom: 2rem;
+}
+
+/* ─── SMOOTH PAGE TRANSITIONS ─── */
+
+/* Content fades in smoothly when page loads */
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main,
+[class*="min-h-screen"] > .container {
+  animation: contentReveal 400ms ease-out;
+}
+
+/* ─── CARD HOVER LIFT ─── */
+
+/* Cards lift slightly on hover for depth */
+.glass-card,
+[class*="rounded-xl"][class*="border"],
+[class*="rounded-lg"][class*="border"][class*="bg-"] {
+  transition: transform 250ms ease, box-shadow 250ms ease, background-color 300ms ease;
+}
+
+.glass-card:hover,
+[class*="rounded-xl"][class*="border"]:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── SCROLL INDICATOR PULSE ─── */
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(4px); }
+}
+
+.scroll-indicator {
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* ─── GRADIENT TEXT SHIMMER ─── */
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── SECTION DIVIDERS: Subtle Gradient Lines ─── */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.65 0.20 290 / 0.3) 20%,
+    oklch(0.75 0.15 85 / 0.4) 50%,
+    oklch(0.65 0.20 290 / 0.3) 80%,
+    transparent
+  );
+  margin: 3rem auto;
+  max-width: 60%;
+}
+
+/* ─── BLOCKQUOTE ENHANCEMENT ─── */
+
+blockquote,
+.quote-callout {
+  position: relative;
+  border-left-color: oklch(0.75 0.15 85 / 0.6);
+  background: linear-gradient(135deg, oklch(0.75 0.15 85 / 0.03), transparent);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* ─── IMAGE HOVER EFFECTS ─── */
+
+img:not([class*="logo"]):not([class*="avatar"]):not([class*="icon"]) {
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+img:not([class*="logo"]):not([class*="avatar"]):not([class*="icon"]):hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* ─── SELECTION COLORS ─── */
+
+::selection {
+  background: oklch(0.65 0.20 290 / 0.35);
+  color: oklch(0.98 0.02 85);
+}
+
+/* ─── SCROLLBAR STYLING (Webkit) ─── */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.12 0.05 280);
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.30 0.10 280);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.40 0.12 280);
+}
+
+/* ─── HEADING HOVER GLOW (Subtle) ─── */
+
+h1:hover, h2:hover {
+  text-shadow: 0 0 30px oklch(0.65 0.20 290 / 0.15);
+  transition: text-shadow 300ms ease;
+}
+
+/* ─── BADGE/TAG POLISH ─── */
+
+[class*="rounded-full"][class*="text-xs"],
+[class*="rounded-full"][class*="text-sm"] {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+[class*="rounded-full"][class*="text-xs"]:hover,
+[class*="rounded-full"][class*="text-sm"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px oklch(0.65 0.20 290 / 0.2);
+}
+
+/* ─── RESPECT REDUCED MOTION ─── */
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card:hover,
+  [class*="rounded-xl"][class*="border"]:hover {
+    transform: none;
+  }
+  
+  img:hover {
+    transform: none;
+  }
+  
+  main,
+  [class*="min-h-screen"] > .container {
+    animation: none;
+  }
+  
+  .text-shimmer {
+    animation: none;
+  }
+}
+
+/* ─── NAVBAR HOVER STATES ─── */
+
+nav button:hover,
+nav a:hover {
+  text-shadow: 0 0 12px oklch(0.65 0.20 290 / 0.4);
+  transition: text-shadow 200ms ease, color 200ms ease;
+}
+
+/* Active nav items get a gold accent */
+nav button[aria-expanded="true"],
+nav a[aria-current="page"] {
+  text-shadow: 0 0 10px oklch(0.75 0.15 85 / 0.4);
+}
+
+/* ─── FOOTER POLISH ─── */
+
+footer {
+  border-top: 1px solid oklch(0.30 0.10 280 / 0.5);
+}
+
+footer a:hover {
+  color: oklch(0.80 0.15 85) !important; /* Gold on hover */
+  text-shadow: 0 0 8px oklch(0.75 0.15 85 / 0.3);
+  transition: color 200ms ease, text-shadow 200ms ease;
+}
+
+/* ─── TEAM CARD BORDER GLOW ─── */
+
+/* Cards with colored borders get a matching glow on hover */
+[class*="border-red"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.20 25 / 0.3);
+}
+
+[class*="border-purple"]:hover,
+[class*="border-violet"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.20 290 / 0.3);
+}
+
+[class*="border-blue"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.15 240 / 0.3);
+}
+
+[class*="border-amber"]:hover,
+[class*="border-yellow"]:hover {
+  box-shadow: 0 0 15px oklch(0.75 0.15 85 / 0.3);
+}
+
+[class*="border-emerald"]:hover,
+[class*="border-green"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.15 145 / 0.3);
+}
+
+[class*="border-cyan"]:hover,
+[class*="border-teal"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.12 180 / 0.3);
+}
+
+[class*="border-pink"]:hover,
+[class*="border-rose"]:hover {
+  box-shadow: 0 0 15px oklch(0.55 0.20 350 / 0.3);
+}
+
+/* ─── TABLE STYLING ─── */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+table th {
+  background: oklch(0.20 0.08 280 / 0.8);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+table td {
+  border-bottom: 1px solid oklch(0.30 0.08 280 / 0.3);
+}
+
+table tr:hover td {
+  background: oklch(0.20 0.06 280 / 0.4);
+}
+
+/* ─── CODE/MATH BLOCKS ─── */
+
+code, pre {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+pre {
+  border: 1px solid oklch(0.30 0.10 280 / 0.5);
+  border-radius: 0.5rem;
+  background: oklch(0.10 0.04 280 / 0.8) !important;
+}
+
+/* ─── TOOLTIP/POPOVER POLISH ─── */
+
+[role="tooltip"],
+[data-state="open"][class*="popover"] {
+  border: 1px solid oklch(0.40 0.12 280 / 0.5);
+  box-shadow: 0 4px 20px oklch(0 0 0 / 0.4), 0 0 10px oklch(0.65 0.20 290 / 0.1);
+}
+
+/* ─── INPUT FIELD FOCUS GLOW ─── */
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: oklch(0.65 0.20 290 / 0.6) !important;
+  box-shadow: 0 0 0 3px oklch(0.65 0.20 290 / 0.15), 0 0 10px oklch(0.65 0.20 290 / 0.1) !important;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+/* ─── SMOOTH SCROLL BEHAVIOR ─── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── LOADING SKELETON SHIMMER ─── */
+
+@keyframes skeletonShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    oklch(0.20 0.05 280) 25%,
+    oklch(0.25 0.06 280) 50%,
+    oklch(0.20 0.05 280) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s ease-in-out infinite;
+  border-radius: 0.25rem;
+}
+
+/* ─── ILLUMINATED MANUSCRIPT QUOTES (Devin's recommendation) ─── */
+
+blockquote.illuminated,
+.illuminated-quote {
+  position: relative;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-left: 3px solid oklch(0.75 0.15 85); /* gold */
+  background: linear-gradient(135deg, oklch(0.15 0.02 280 / 0.6), oklch(0.12 0.03 85 / 0.3));
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+blockquote.illuminated::first-letter,
+.illuminated-quote::first-letter {
+  font-size: 2.5em;
+  float: left;
+  line-height: 1;
+  margin-right: 0.15em;
+  margin-top: 0.05em;
+  color: oklch(0.80 0.15 85); /* gold drop cap */
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+blockquote.illuminated::before,
+.illuminated-quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, oklch(0.75 0.15 85 / 0.8), transparent 70%);
+}
+
+blockquote.illuminated::after,
+.illuminated-quote::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, oklch(0.75 0.15 85 / 0.4), transparent 50%);
+}
+
+/* ─── SACRED SYMBOL PULSE ─── */
+
+.sacred-pulse {
+  animation: sacredPulse 3s ease-in-out infinite;
+}
+
+@keyframes sacredPulse {
+  0%, 100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 4px oklch(0.65 0.20 290 / 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px oklch(0.65 0.20 290 / 0.6));
+  }
+}
+
+/* ─── GOLD ACCENT UNDERLINE ─── */
+
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.gold-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.75 0.15 85), oklch(0.65 0.20 290), oklch(0.75 0.15 85));
+  border-radius: 1px;
+  opacity: 0.7;
+}
+
+/* ─── PAGE TRANSITION SUPPORT ─── */
+
+/* Ensure AnimatePresence wrapper doesn't break layout */
+[data-page-transition] {
+  width: 100%;
+}
+
+/* Reduce motion: disable page transitions */
+@media (prefers-reduced-motion: reduce) {
+  [data-page-transition] * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
