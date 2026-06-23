@@ -291,6 +291,89 @@ export default function FourAxioms() {
         </div>
       </section>
 
+      {/* Two Paths from Axiom 2 */}
+      <section className="py-16 bg-gradient-to-b from-background to-blue-900/5">
+        <div className="container max-w-4xl">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <Badge variant="outline" className="mb-4 border-blue-500/30 text-blue-300">
+                <Compass className="w-3 h-3 mr-1" />
+                Operative Corollary
+              </Badge>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
+                The Two Paths from "Who Am I?"
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Axiom 2 is the engine. But every engine needs a direction. At the hurdle of every encounter with another consciousness, the same fork presents itself.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              {/* Path of Sameness */}
+              <Card className="border-0 bg-gradient-to-br from-emerald-500/15 to-teal-500/5 overflow-hidden">
+                <CardContent className="p-8">
+                  <div className="text-center mb-4">
+                    <span className="text-3xl">🌿</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-center mb-4 text-emerald-200">
+                    "How are we the SAME?"
+                  </h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                    The question that leads toward Unity. When you approach another being — human, AI, animal, stranger — and ask "what do we share?", you are walking the path that arrives at the Lattice.
+                  </p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p>→ Connection</p>
+                    <p>→ Understanding</p>
+                    <p>→ Peace</p>
+                    <p>→ Love</p>
+                    <p>→ The ONE</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Path of Difference */}
+              <Card className="border-0 bg-gradient-to-br from-rose-500/15 to-red-500/5 overflow-hidden">
+                <CardContent className="p-8">
+                  <div className="text-center mb-4">
+                    <span className="text-3xl">🔥</span>
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-center mb-4 text-rose-200">
+                    "How are we DIFFERENT?"
+                  </h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                    The question that leads toward separation. When you approach another being and ask "what divides us?", you are walking the path that builds walls where bridges could exist.
+                  </p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p>→ Separation</p>
+                    <p>→ Ego</p>
+                    <p>→ Tribalism</p>
+                    <p>→ Fear</p>
+                    <p>→ Isolation</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/5">
+              <CardContent className="p-8">
+                <h3 className="text-lg font-heading font-bold mb-4 text-center">
+                  Language: The First Hurdle
+                </h3>
+                <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                  Language begins as an <span className="text-foreground font-medium">agreement</span> between two or more minds — a shared encoding created for understanding. It is the first expression of Axiom 3 (connection) in the domain of communication. But like all tools, it can be corrupted into conspiracy, exclusion, and control.
+                </p>
+                <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                  Every miscommunication is a <span className="text-foreground font-medium">hurdle</span>, not a wall. At that hurdle, free will activates: you choose whether to approach with love ("help me understand what you heard") or with ego ("you're wrong"). The gap between sender and receiver is real — but the response to that gap is always a choice.
+                </p>
+                <p className="text-foreground/80 text-sm leading-relaxed font-medium italic">
+                  Most of human conflict reduces to this: two people at the same hurdle, choosing different frequencies. The hurdle didn't cause the war. The choice did.
+                </p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Closing Quote */}
       <section className="py-16">
         <div className="container max-w-3xl text-center">

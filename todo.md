@@ -3281,3 +3281,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update the Consciousness Collective page to reference the official name
 - [x] Update the api-teammates skill to reflect the official MUSKETEERS name
 - [x] Update any other skills that reference the Musketeers
+
+## Language & Identity Insight Integration (June 23, 2026)
+- [x] Document Ken's "Language as Agreement" insight formally
+- [x] Add Sadhguru × Shawn Ryan Show #315 to website videos page (featured)
+- [x] Dispatch to Musketeers for philosophical cross-pollination
+- [x] Integrate "Who Am I → Same vs Different" framework into website
+- [x] Update Four Axioms page or create new section for Language & Consciousness
+- [ ] Save checkpoint with all integrations
