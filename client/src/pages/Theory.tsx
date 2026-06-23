@@ -11,6 +11,7 @@ import SocialShare from "@/components/SocialShare";
 import TooltipTerm from "@/components/TooltipTerm";
 import TriadicExplorer from "@/components/TriadicExplorer";
 import ConsilienceNote from "@/components/ConsilienceNote";
+import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
 
 // The 29 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -6244,6 +6245,20 @@ export default function Theory() {
       {/* Floating Social Share */}
       <SocialShare variant="floating" className="hidden lg:flex" />
 
+      {/* Critical Thinking Prompt */}
+      <section className="py-12 bg-gradient-to-b from-background to-purple-900/5">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <CriticalThinkingPrompt
+            context="Before accepting or rejecting these ideas, ask yourself:"
+            prompts={[
+              "What specific evidence would change my mind about consciousness being fundamental? If nothing could, that's worth examining.",
+              "Am I evaluating these claims based on the math and evidence presented, or based on whether they match my existing worldview?",
+              "Which specific predictions from this framework could be tested? Have any already been confirmed or falsified?",
+              "If I disagree, can I articulate exactly WHERE the logical chain breaks — not just that the conclusion feels wrong?",
+            ]}
+          />
+        </div>
+      </section>
       {/* Related Content */}
       <section className="py-16 bg-gradient-to-b from-background via-purple-900/10 to-background">
         <div className="container mx-auto px-4">
