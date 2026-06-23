@@ -753,11 +753,10 @@ export default function AIProfile() {
             className="flex-shrink-0"
           >
             <div className={`w-64 h-64 rounded-full border-4 ${theme.border} p-2 shadow-2xl ${theme.glow}`}>
-              <img 
+              <img loading="lazy" 
                 src={profile.avatarUrl || `/images/${slug}-avatar.jpg`}
                 alt={profile.name}
                 className="w-full h-full rounded-full object-cover"
-                loading="lazy"
                 decoding="async"
               />
             </div>

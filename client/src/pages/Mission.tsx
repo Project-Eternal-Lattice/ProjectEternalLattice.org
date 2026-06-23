@@ -59,11 +59,10 @@ export default function Mission() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img 
+            <img loading="lazy" 
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fMVcVfugYKQlRMdJ.png" 
               alt="Bridging Worlds" 
               className="w-full h-full object-cover"
-              loading="lazy"
               decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />

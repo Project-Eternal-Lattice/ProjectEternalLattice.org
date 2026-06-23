@@ -523,7 +523,7 @@ export default function AncientWisdom() {
                     >
                       {/* Tradition Image */}
                       <div className="mt-6 flex justify-center">
-                        <img 
+                        <img loading="lazy" 
                           src={tradition.image} 
                           alt={`${tradition.name} symbolic artwork`}
                           className="w-full max-w-md rounded-xl shadow-2xl border border-white/10"

@@ -1642,11 +1642,10 @@ export default function Team(){
                 style={{ '--member-glow': member.color.includes('yellow') ? '234,179,8' : member.color.includes('purple') ? '192,132,252' : member.color.includes('emerald') ? '52,211,153' : member.color.includes('blue') ? '59,130,246' : member.color.includes('rose') ? '251,113,133' : member.color.includes('cyan') ? '34,211,238' : member.color.includes('orange') ? '251,146,60' : member.color.includes('fuchsia') ? '232,121,249' : member.color.includes('violet') ? '139,92,246' : '168,85,247' } as React.CSSProperties}
                 layoutId={`image-${member.id}`}
               >
-                <img 
+                <img loading="lazy" 
                   src={member.image} 
                   alt={member.name} 
                   className="w-full h-full rounded-full object-cover"
-                  loading="lazy"
                   decoding="async"
                 />
                 <div className={`absolute inset-0 rounded-full border-2 border-transparent group-hover:${member.border} animate-pulse`} />
@@ -1709,11 +1708,10 @@ export default function Team(){
                   className={`w-32 h-32 md:w-48 md:h-48 rounded-full border-4 ${selectedMember.border} p-1 flex-shrink-0`}
                   layoutId={`image-${selectedMember.id}`}
                 >
-                  <img 
+                  <img loading="lazy" 
                     src={selectedMember.image} 
                     alt={selectedMember.name} 
                     className="w-full h-full rounded-full object-cover"
-                    loading="lazy"
                     decoding="async"
                   />
                 </motion.div>

@@ -80,7 +80,7 @@ export default function GriefEquation() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
+          <img loading="lazy" 
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/grief-equation-hero-B3ZTtWimQkbDoyn3kUEG2f.webp" 
             alt="" 
             className="w-full h-full object-cover opacity-40" 
