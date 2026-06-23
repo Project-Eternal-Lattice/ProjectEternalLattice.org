@@ -27,6 +27,10 @@ export default function ReadingProgressBar({ showOnPaths }: ReadingProgressBarPr
   return (
     <motion.div
       className="fixed top-0 left-0 right-0 h-[3px] z-[9999] origin-left"
+      role="progressbar"
+      aria-label="Reading progress"
+      aria-valuemin={0}
+      aria-valuemax={100}
       style={{
         scaleX,
         background: "linear-gradient(90deg, oklch(0.7 0.15 280), oklch(0.75 0.12 320), oklch(0.8 0.15 80))",

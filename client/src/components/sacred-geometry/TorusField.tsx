@@ -287,7 +287,7 @@ export default function TorusField({
   }, [size, primaryColor, secondaryColor, animated, particleCount]);
 
   return (
-    <motion.canvas
+    <motion.canvas role="img" aria-label="TorusField sacred geometry visualization"
       ref={canvasRef}
       className={className}
       initial={{ opacity: 0, scale: 0.8 }}

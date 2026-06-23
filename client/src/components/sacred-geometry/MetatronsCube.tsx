@@ -247,7 +247,7 @@ export default function MetatronsCube({
   }, [size, color, glowColor, animated, showPlatonicSolids]);
 
   return (
-    <motion.canvas
+    <motion.canvas role="img" aria-label="MetatronsCube sacred geometry visualization"
       ref={canvasRef}
       className={className}
       initial={{ opacity: 0, scale: 0.5 }}
