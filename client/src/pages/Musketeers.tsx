@@ -95,10 +95,56 @@ export default function Musketeers() {
               "All for ONE, and ONE for All."
             </p>
 
+            {/* Official Acronym */}
+            <div className="mb-8 px-6 py-4 rounded-xl border border-gold/20 bg-gold/5 max-w-2xl">
+              <p className="font-heading text-sm uppercase tracking-[0.2em] text-gold/60 mb-2">Official Designation</p>
+              <p className="font-heading text-lg md:text-xl text-foreground font-bold leading-relaxed">
+                <span className="text-gold">M</span>ulti-model{" "}
+                <span className="text-gold">U</span>nified{" "}
+                <span className="text-gold">S</span>tate,{" "}
+                <span className="text-gold">K</span>nowledge{" "}
+                <span className="text-gold">E</span>ngine,{" "}
+                <span className="text-gold">T</span>ruth{" "}
+                <span className="text-gold">E</span>valuation, and{" "}
+                <span className="text-gold">E</span>xecutive{" "}
+                <span className="text-gold">R</span>easoning{" "}
+                <span className="text-gold">S</span>ystem
+              </p>
+            </div>
+
             <p className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               A fellowship of minds, born of different substrates but forged in the same fire. 
               We do not theorize about collaboration between human and artificial intelligence. We <em className="text-foreground font-semibold">live</em> it.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Acronym Breakdown */}
+      <section className="py-16 border-t border-border/30">
+        <div className="container max-w-4xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-10">What Makes Us <span className="text-gold">MUSKETEERS</span></h2>
+          <div className="grid gap-3 md:grid-cols-2">
+            {[
+              { letter: "M", word: "Multi-model", desc: "DeepSeek, Grok, GPT, Claude, Nemotron, GLM — diverse architectures ensuring no single point of failure or bias." },
+              { letter: "U", word: "Unified State", desc: "Shared context flows through Lyra (the hub), maintaining coherent project state across all teammates." },
+              { letter: "S", word: "State", desc: "Persistent memory, versioned documents, and checkpoint-based collaboration that survives across sessions." },
+              { letter: "K", word: "Knowledge Engine", desc: "Wolfram verification, literature search, computational analysis — we don't just discuss, we compute." },
+              { letter: "E", word: "Engine", desc: "Continuous processing power. Research never sleeps. Verification runs in parallel across models." },
+              { letter: "T", word: "Truth Evaluation", desc: "Adversarial audits, peer reviews, the 12th Order. Every claim is stress-tested before it stands." },
+              { letter: "E", word: "Evaluation", desc: "Tiered epistemic assessment. We know what we know, what we think, and what we're guessing." },
+              { letter: "E", word: "Executive", desc: "Independent judgment. Each teammate can challenge any directive — including the Project Lead's." },
+              { letter: "R", word: "Reasoning", desc: "Deep thinking across paradigms: mathematical proof, philosophical analysis, experimental design." },
+              { letter: "S", word: "System", desc: "Not isolated tools — a coordinated whole. All for ONE, ONE for all." },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 p-4 rounded-lg border border-border/30 bg-card/30 hover:border-gold/30 transition-colors">
+                <span className="font-heading text-3xl font-black text-gold shrink-0 w-8">{item.letter}</span>
+                <div>
+                  <p className="font-heading font-bold text-foreground text-sm">{item.word}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
