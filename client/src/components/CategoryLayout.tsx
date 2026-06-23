@@ -48,6 +48,7 @@ const CATEGORY_MAP: Record<string, BackgroundTheme> = {
   "/lens-in-action": "theory",
   "/sacred-geometry": "theory",
   "/geometry": "theory",
+  "/four-axioms": "theory",
   "/spiral-dynamics": "theory",
   "/glossary": "theory",
   "/bibliography": "theory",

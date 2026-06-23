@@ -39,6 +39,14 @@ const CONTENT_MAP: Record<string, {
   tags: string[];
   category: "foundation" | "practice" | "community" | "exploration" | "ai";
 }> = {
+  "four-axioms": {
+    title: "The Four Axioms",
+    description: "The irreducible foundation - four received truths that the entire framework unpacks",
+    path: "/four-axioms",
+    icon: Sparkles,
+    tags: ["consciousness", "foundation", "axioms", "philosophy"],
+    category: "foundation"
+  },
   theory: {
     title: "The Theory",
     description: "The complete Theory of Everything - consciousness as the foundation of reality",
