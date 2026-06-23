@@ -3305,3 +3305,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Homepage consolidation: Collapse 3 "choose your path" sections into ONE powerful entry point (GatewayPortal component)
 - [x] Sacred Geometry: Transform into immersive scroll-driven parallax experience (full-screen sections with animated canvases)
 - [x] Created Cole Trickle Protocol skill (dual-version document production)
+- [x] Scroll-driven background color temperature shifts (cold blue → violet → gold as you scroll deeper)
+- [x] Illuminated manuscript quote treatment (gold drop caps, letter-by-letter reveal animation)
+- [x] Living Footer — particles coalesce into the infinity symbol at page bottom
+- [x] Created skill-chaining meta-skill (connecting skills into loops, pipelines, self-evolving chains)
+- [x] Created website-artistic-review skill (continuous improvement loop orchestrating other skills)

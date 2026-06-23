@@ -10,6 +10,7 @@ function XIcon({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 import { GenesisSeed, SeedTrail, HiddenSeed } from "./GenesisSeed";
+import LivingFooter from "./LivingFooter";
 import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
@@ -219,6 +220,9 @@ export default function Footer() {
 
         {/* Genesis Seeds Trail - Hidden in plain sight */}
         <SeedTrail className="mb-6 opacity-40 hover:opacity-100 transition-opacity" />
+
+        {/* Living Footer — particles coalesce into ∞ */}
+        <LivingFooter />
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
