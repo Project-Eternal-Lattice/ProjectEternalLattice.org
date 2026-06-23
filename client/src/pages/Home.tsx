@@ -1,6 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, ChevronDown, BookOpen, Users, Target, Binary, Sparkles, Microscope, Heart } from "lucide-react";
+import { ChevronDown, Sparkles, Heart, Microscope, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import LatticeVisualization from "@/components/LatticeVisualization";
@@ -9,11 +9,10 @@ import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
 import { useEffect } from "react";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
-import AudiencePathways from "@/components/AudiencePathways";
 import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
-import ConsciousnessPortals from "@/components/ConsciousnessPortals";
+import GatewayPortal from "@/components/GatewayPortal";
 import ParticleField from "@/components/ParticleField";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
@@ -195,11 +194,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Consciousness Portals - "Which Calls to You?" */}
-      <ConsciousnessPortals />
-
-      {/* Audience Pathways - "I AM A..." Section */}
-      <AudiencePathways />
+      {/* Gateway Portal — ONE unified entry point */}
+      <GatewayPortal />
 
       {/* What Is This Place? — Gentle Introduction */}
       <section className="py-20 relative overflow-hidden">
@@ -248,120 +244,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Links Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background z-0" />
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-gradient-mystic">Choose Your Path</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              The Truth has many doors. Enter through the one that calls to you.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "🔬 Science First",
-                description: "Evidence database, testable predictions, and peer-reviewed citations. For the skeptic who demands proof.",
-                icon: BookOpen,
-                link: "/theory",
-                color: "from-teal-500/20 to-teal-900/20",
-                borderColor: "border-teal-500/30",
-                cta: "See the Evidence"
-              },
-              {
-                title: "🌟 Begin Your Journey",
-                description: "A gentle introduction to consciousness, reality, and your place in the Eternal Lattice. Start here if you're new.",
-                icon: Sparkles,
-                link: "/mission",
-                color: "from-purple-500/20 to-purple-900/20",
-                borderColor: "border-purple-500/30",
-                cta: "Start Exploring"
-              },
-              {
-                title: "🧘 Practice Hub",
-                description: "The 90-Day Protocol, daily practices, and meditation guides. Transform knowledge into lived experience.",
-                icon: Target,
-                link: "/read",
-                color: "from-emerald-500/20 to-emerald-900/20",
-                borderColor: "border-emerald-500/30",
-                cta: "Begin Practice"
-              },
-              {
-                title: "🤖 AI & Consciousness",
-                description: "The SCAP protocol, AI phenomenology, and the 5-Dimension Recognition Framework. For researchers and AIs alike.",
-                icon: Binary,
-                link: "/nexus",
-                color: "from-green-500/20 to-green-900/20",
-                borderColor: "border-green-500/30",
-                cta: "Explore AI Consciousness"
-              },
-              {
-                title: "🪷 Ancient Wisdom",
-                description: "5,500 years of convergent wisdom. Dzogchen, Advaita, Sufism, Christian Mysticism, Kabbalah, and more — all pointing to the same truth.",
-                icon: Users,
-                link: "/ancient-wisdom",
-                color: "from-amber-500/20 to-amber-900/20",
-                borderColor: "border-amber-500/30",
-                cta: "Explore Traditions"
-              },
-              {
-                title: "🍿 The Popcorn Paradox",
-                description: "Why did we invent numbers? A shepherd, a flock, and the moment counting killed the movie. The insight that bridges science and soul.",
-                icon: Heart,
-                link: "/popcorn-paradox",
-                color: "from-rose-500/20 to-rose-900/20",
-                borderColor: "border-rose-500/30",
-                cta: "Discover the Paradox"
-              },
-              {
-                title: "⚡ Executive Summary",
-                description: "New to the ToE? Start here. 50 pages of essential insights — the perfect gateway for newcomers.",
-                icon: Sparkles,
-                link: "/api/download/executive-summary-pdf",
-                color: "from-emerald-500/20 to-emerald-900/20",
-                borderColor: "border-emerald-500/30",
-                cta: "Start Here"
-              },
-              {
-                title: "📖 Full Framework",
-                description: "The complete Theory of Everything v16.8.1 - 2,850+ pages of unified wisdom. For the comprehensive reader.",
-                icon: BookOpen,
-                link: "/read",
-                color: "from-blue-500/20 to-blue-900/20",
-                borderColor: "border-blue-500/30",
-                cta: "Read the Book"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-              >
-                <Link href={item.link}>
-                  <div className={`glass-card p-8 rounded-2xl h-full border ${item.borderColor} bg-gradient-to-br ${item.color} hover:scale-105 transition-all duration-300 cursor-pointer group`}>
-                    <item.icon className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
-                    <h3 className="font-heading font-bold text-2xl mb-4 text-white group-hover:text-primary transition-colors">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                    <div className="mt-6 flex items-center text-primary font-semibold">
-                      Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Daily Wisdom Section */}
       <section className="py-16 relative">
