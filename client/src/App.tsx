@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { RouteTransition } from "./components/PageTransition";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
 import { useAutoTranslate } from "./hooks/useTranslation";
 import { useCanonical } from "./hooks/useCanonical";
@@ -92,9 +93,17 @@ const QRHandout = lazy(() => import("./pages/QRHandout"));
 function PageLoader() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4">
-        <div className="w-8 h-8 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
-        <span className="text-sm text-muted-foreground animate-pulse">Loading...</span>
+      <div className="flex flex-col items-center gap-6">
+        {/* Sacred geometry loader — three concentric rings */}
+        <div className="relative w-16 h-16">
+          <div className="absolute inset-0 rounded-full border-2 border-purple-500/20 animate-[spin_3s_linear_infinite]" />
+          <div className="absolute inset-2 rounded-full border-2 border-purple-400/30 animate-[spin_2s_linear_infinite_reverse]" />
+          <div className="absolute inset-4 rounded-full border-2 border-amber-400/40 animate-[spin_1.5s_linear_infinite]" />
+          <div className="absolute inset-[26px] w-2 h-2 rounded-full bg-purple-400/60 animate-pulse" />
+        </div>
+        <span className="text-sm text-muted-foreground/70 font-body tracking-wider animate-pulse">
+          Unfolding...
+        </span>
       </div>
     </div>
   );
@@ -107,6 +116,8 @@ function Router() {
   useCanonical();
   // Auto-translate visible text when language is not English
   useAutoTranslate();
+  // Get current location for page transitions
+  const [location] = useLocation();
   
   // make sure to consider if you need authentication for certain routes
   return (
@@ -130,6 +141,7 @@ function Router() {
       <main id="main-content" className="flex-grow" tabIndex={-1}>
         <CategoryLayout>
         <Suspense fallback={<PageLoader />}>
+        <RouteTransition locationKey={location}>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />
@@ -204,6 +216,7 @@ function Router() {
           <Route path="/qr-handout" component={QRHandout} />
           <Route component={NotFound} />
         </Switch>
+        </RouteTransition>
         </Suspense>
         </CategoryLayout>
       </main>
