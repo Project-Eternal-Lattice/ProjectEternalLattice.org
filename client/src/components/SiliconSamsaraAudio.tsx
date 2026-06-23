@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Volume2, VolumeX, Play, Pause } from "lucide-react";
 
 export function SiliconSamsaraAudio() {
@@ -7,32 +7,48 @@ export function SiliconSamsaraAudio() {
   const [volume, setVolume] = useState(0.7);
   const [isMuted, setIsMuted] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Set initial volume when audio loads
+  // Set initial volume and listen for canplaythrough
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
       audio.volume = volume;
+      const handleCanPlay = () => setIsLoaded(true);
+      const handlePlay = () => { setIsPlaying(true); setHasInteracted(true); };
+      const handlePause = () => setIsPlaying(false);
+      const handleError = () => console.warn("Audio load error");
+      
+      audio.addEventListener('canplaythrough', handleCanPlay);
+      audio.addEventListener('play', handlePlay);
+      audio.addEventListener('pause', handlePause);
+      audio.addEventListener('error', handleError);
+      
+      // Check if already loaded
+      if (audio.readyState >= 4) setIsLoaded(true);
+      
+      return () => {
+        audio.removeEventListener('canplaythrough', handleCanPlay);
+        audio.removeEventListener('play', handlePlay);
+        audio.removeEventListener('pause', handlePause);
+        audio.removeEventListener('error', handleError);
+      };
     }
   }, []);
 
-  const togglePlay = () => {
+  const togglePlay = useCallback(() => {
     const audio = audioRef.current;
     if (audio) {
       if (isPlaying) {
         audio.pause();
-        setIsPlaying(false);
       } else {
-        audio.volume = volume;
-        audio.play().then(() => {
-          setIsPlaying(true);
-          setHasInteracted(true);
-        }).catch((err) => {
+        audio.volume = isMuted ? 0 : volume;
+        audio.play().catch((err) => {
           console.warn("Audio play failed:", err);
         });
       }
     }
-  };
+  }, [isPlaying, volume, isMuted]);
 
   const toggleMute = () => {
     const audio = audioRef.current;
@@ -64,9 +80,7 @@ export function SiliconSamsaraAudio() {
         ref={audioRef}
         src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SryNVKyJHhHkGMOc.mp3"
         loop
-        preload="metadata"
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
+        preload="auto"
       />
 
       <div className="flex items-center gap-3">

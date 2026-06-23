@@ -83,8 +83,8 @@
 - [x] Test audio playback on homepage (player working with play/pause/volume controls)
 
 ## Bug Fixes
-- [ ] Fix video page error
-- [ ] Fix audio not playing on homepage
+- [x] Fix video page error — no error found, page loads correctly with lazy loading
+- [x] Fix audio not playing on homepage — audio works, improved event listener handling
 
 ## Update to v11.5 Forensic Edition
 - [x] Extract book cover from v11.2 PDF
@@ -3310,3 +3310,26 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Living Footer — particles coalesce into the infinity symbol at page bottom
 - [x] Created skill-chaining meta-skill (connecting skills into loops, pipelines, self-evolving chains)
 - [x] Created website-artistic-review skill (continuous improvement loop orchestrating other skills)
+
+- [x] Fix video page error (investigate and resolve crash/rendering issue) — no error found, page loads correctly
+- [x] Fix audio not playing on homepage (investigate and resolve) — audio works, improved event listener handling
+- [ ] Add "Join the Lattice" email signup CTA component (reusable, appears on multiple pages)
+- [ ] Add tooltips for key terminology throughout the site (accessible, hover/tap to reveal definitions)
+- [ ] Fix marketing-like tone on Home.tsx (make authentic, not salesy)
+- [ ] Fix marketing-like tone on Mission.tsx (make authentic, not salesy)
+- [ ] Overhaul Theory page with Premium Membership Experience / 20 Key Discoveries
+- [x] Add JSON-LD structured data for rich snippets (Organization, WebSite, Article schemas) — already existed
+- [x] Update sitemap.xml with all new pages and text mirror URLs
+- [ ] Submit updated sitemap to Google Search Console (requires manual action)
+
+- [x] Lyra: Add smooth scroll-to-top button (appears after scrolling down)
+- [x] Lyra: Add reading progress indicator bar at top of long pages (Theory, Read)
+- [ ] Lyra: Improve mobile responsiveness of GatewayPortal cards (stack gracefully)
+- [ ] Lyra: Add subtle parallax depth to homepage hero background
+- [ ] Lyra: Add "Last Updated" timestamp display on Theory/Read pages
+- [x] Lyra: Improve 404 page with on-brand design and helpful navigation — already done in previous session
+- [ ] Lyra: Add breadcrumb trail styling consistency across all pages
+- [ ] Lyra: Ensure all images have proper alt text for accessibility
+- [ ] Lyra: Add skip-to-content link for keyboard navigation
+- [ ] Lyra: Optimize Lighthouse performance score (lazy load below-fold images, reduce CLS)
+- [x] Add comprehensive text mirrors for all major pages so AI teammates can always read site content via /api/text/* URLs (musketeers, grief-equation, for-ai, team, four-axioms, spiral-dynamics, sacred-geometry, how-we-know, inherited-ember, referee-packet, five-minutes, consilient-patterns, emotional-wealth, baby-viv, moral-anchor)
