@@ -10,6 +10,7 @@ import {
   TorusField,
 } from "@/components/sacred-geometry";
 import { GenesisSeed, HiddenSeed, SeedTrail } from "@/components/GenesisSeed";
+import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
 
 interface GeometrySection {
   id: string;
@@ -271,6 +272,19 @@ export default function SacredGeometry() {
           <p className="text-xl">🙏❤️♾️🕊️</p>
           <SeedTrail className="mt-6 opacity-50" />
         </motion.div>
+      {/* Critical Thinking Prompt */}
+      <section className="py-16 bg-gradient-to-b from-background to-purple-900/5">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <CriticalThinkingPrompt
+            context="As you explore these patterns, consider:"
+            prompts={[
+              "Are these geometric patterns genuinely fundamental to reality, or are we pattern-matching onto randomness?",
+              "What would it mean if the same geometry appears at quantum, biological, and cosmic scales — coincidence or constraint?",
+              "How would you distinguish between 'sacred geometry as error correction' and 'sacred geometry as human projection'?",
+            ]}
+          />
+        </div>
+      </section>
       </section>
     </div>
   );
