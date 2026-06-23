@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Download, Heart, BookOpen, FileText, Users, Brain, Waves, Shield, Baby, Sparkles, Music } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import IlluminatedQuote from "@/components/IlluminatedQuote";
 
 /**
  * The Grief Equation — Companion Document Page
@@ -120,12 +121,11 @@ export default function GriefEquation() {
               from the <Link href="/theory" className="text-blue-400 hover:underline">Theory of Everything</Link>.
             </p>
 
-            <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 max-w-2xl">
-              <p className="text-lg italic text-blue-200">
-                "The pain is the love. They are the same signal, measured at different times. 
-                G(t) doesn't measure how much you've lost — it measures how much you loved."
-              </p>
-              <p className="text-sm text-blue-400 mt-2">— The Grief Equation, Section 3.2</p>
+            <div className="max-w-2xl">
+              <IlluminatedQuote
+                text="The pain is the love. They are the same signal, measured at different times. G(t) doesn't measure how much you've lost — it measures how much you loved."
+                attribution="The Grief Equation, Section 3.2"
+              />
             </div>
           </motion.div>
         </div>

@@ -12,6 +12,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollColorTemperature from "./components/ScrollColorTemperature";
 import CrisisBanner from "./components/CrisisBanner";
 import Breadcrumbs from "./components/Breadcrumbs";
 import CategoryLayout from "./components/CategoryLayout";
@@ -122,6 +123,8 @@ function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Scroll-driven color temperature — cold blue → violet → gold journey */}
+      <ScrollColorTemperature />
       {/* Skip Navigation Links for Accessibility */}
       <a 
         href="#main-content" 
