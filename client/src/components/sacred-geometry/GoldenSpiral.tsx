@@ -259,7 +259,7 @@ export default function GoldenSpiral({
   }, [size, color, glowColor, animated, showFibonacci, rotations]);
 
   return (
-    <motion.canvas
+    <motion.canvas role="img" aria-label="GoldenSpiral sacred geometry visualization"
       ref={canvasRef}
       className={className}
       initial={{ opacity: 0, rotate: -90 }}

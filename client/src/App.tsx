@@ -17,6 +17,7 @@ import CrisisBanner from "./components/CrisisBanner";
 import Breadcrumbs from "./components/Breadcrumbs";
 import ScrollToTop from "./components/ScrollToTop";
 import ReadingProgressBar from "./components/ReadingProgressBar";
+import KonamiEasterEgg from "./components/KonamiEasterEgg";
 import CategoryLayout from "./components/CategoryLayout";
 
 // Critical path - eagerly loaded
@@ -228,6 +229,7 @@ function Router() {
       <Footer />
       <ScrollToTop />
       <ReadingProgressBar />
+      <KonamiEasterEgg />
     </div>
   );
 }

@@ -1004,6 +1004,15 @@ export default function Videos() {
           </div>
         </motion.div>
 
+        {/* Content Warning for DMT category */}
+        {selectedCategory === "DMT & Psychedelics" && (
+          <div className="mb-6 p-4 rounded-xl border border-amber-500/30 bg-amber-950/20">
+            <p className="text-sm text-amber-200/80">
+              <strong>\u26A0\uFE0F Content Note:</strong> These videos discuss psychedelic substances and altered states of consciousness from a scientific research perspective. This content is educational, not advocacy. If you are in crisis, please visit our{" "}
+              <a href="/safety" className="text-amber-400 underline hover:text-amber-300">Safety & Support</a> page.
+            </p>
+          </div>
+        )}
         {/* Video Grid */}
         <div className="space-y-8">
           {filteredVideos.map((video, index) => (

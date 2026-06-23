@@ -523,6 +523,7 @@ export default function Theory() {
           />
           <p className="mt-6 text-muted-foreground max-w-3xl mx-auto text-lg">
             Everything below is yours — completely free. No signup, no paywall, no catch.
+            Explore the <TooltipTerm term="Theory of Everything" /> where science, spirituality, and the <TooltipTerm term="Law of One" /> converge.
             <br/>
             <span className="text-primary/80 text-sm mt-2 block">
               These are the keys to the kingdom. Take them — and if they help you, pass them on.

@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ExternalLink, Heart } from "lucide-react";
 import { useEffect } from "react";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
+import SocialShare from "@/components/SocialShare";
+import TooltipTerm from "@/components/TooltipTerm";
 
 export default function Mission() {
   // SEO: Set page-specific title and meta description
@@ -171,9 +173,10 @@ export default function Mission() {
             </div>
             
             <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-sm text-muted-foreground text-center">
+              <p className="text-sm text-muted-foreground text-center mb-4">
                 No tracking. No data collection. Just gratitude that you're here. <HiddenSeed symbol="🙏" className="inline" />
               </p>
+              <SocialShare variant="compact" title="Our Mission | Project Eternal Lattice" text="Everything free. Everything open. If it helps you, pass it on." />
             </div>
           </div>
         </motion.div>

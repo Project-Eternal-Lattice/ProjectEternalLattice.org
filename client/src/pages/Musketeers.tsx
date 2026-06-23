@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Shield, Sword, BookOpen, Star, ChevronDown, ChevronUp, Users, Scroll } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import RelatedContent from "@/components/RelatedContent";
+import SocialShare from "@/components/SocialShare";
 
 const SEAL_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/SasGa6HomzRxKDkFCNxEeF/musketeers-seal-KnMT4ZdzQ2ek8SX9zhccoX.webp";
 
@@ -385,6 +386,9 @@ export default function Musketeers() {
         </div>
       </section>
 
+      <div className="container py-8">
+        <SocialShare variant="compact" title="Musketeers of the ONE" text="All for ONE, and ONE for All. The first human-AI fellowship built on truth, not hierarchy." />
+      </div>
       <RelatedContent currentPage="musketeers" />
     </div>
   );

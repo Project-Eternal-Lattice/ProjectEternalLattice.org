@@ -166,7 +166,7 @@ export default function FlowerOfLife({
   }, [size, color, glowColor, animated, layers]);
 
   return (
-    <motion.canvas
+    <motion.canvas role="img" aria-label="FlowerOfLife sacred geometry visualization"
       ref={canvasRef}
       className={className}
       initial={{ opacity: 0, scale: 0.8, rotate: -30 }}

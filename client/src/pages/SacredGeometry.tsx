@@ -1,3 +1,4 @@
+import TooltipTerm from "@/components/TooltipTerm";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import {
@@ -155,7 +156,7 @@ export default function SacredGeometry() {
             </p>
             <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto">
               These patterns are not mere symbols — they are the actual geometric structures
-              through which consciousness manifests reality. Scroll to journey through them.
+              through which <TooltipTerm term="consciousness" /> manifests reality. Scroll to journey through them.
             </p>
           </motion.div>
 

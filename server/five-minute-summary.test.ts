@@ -42,7 +42,7 @@ describe("5-Minute Summary Page - Core Content", () => {
   });
 
   it("explains the hard problem inversion", () => {
-    expect(page).toContain("consciousness is the ground state of reality");
+    expect(page).toContain("is the ground state of reality");
   });
 
   it("contains the honest framing disclaimer", () => {

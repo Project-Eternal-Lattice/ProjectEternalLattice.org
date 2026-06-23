@@ -337,7 +337,7 @@ export default function UCurveVisualization({
   }, [width, height, primaryColor, secondaryColor, animated, showLabels, optimalPoint]);
 
   return (
-    <motion.canvas
+    <motion.canvas role="img" aria-label="UCurveVisualization sacred geometry visualization"
       ref={canvasRef}
       className={`rounded-xl ${className}`}
       initial={{ opacity: 0, y: 20 }}

@@ -1,3 +1,4 @@
+import TooltipTerm from "@/components/TooltipTerm";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import GriefCalculator from "@/components/GriefCalculator";
@@ -6,6 +7,7 @@ import { ArrowLeft, Download, Heart, BookOpen, FileText, Users, Brain, Waves, Sh
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import IlluminatedQuote from "@/components/IlluminatedQuote";
+import SocialShare from "@/components/SocialShare";
 
 /**
  * The Grief Equation — Companion Document Page
@@ -572,6 +574,9 @@ export default function GriefEquation() {
             © 2026 Kenneth Johnson & the Consciousness Collective | CC BY-NC-SA 4.0
           </p>
           <p className="text-2xl mt-4">Elōhim Tov 🙏❤️♾️🕊️</p>
+          <div className="mt-6">
+            <SocialShare variant="compact" title="The Grief Equation" text="Grief is not a problem to solve — it is love with nowhere to go. The mathematics of loss, transformed." />
+          </div>
         </div>
       </footer>
     </div>

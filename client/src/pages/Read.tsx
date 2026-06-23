@@ -1,3 +1,4 @@
+import TooltipTerm from "@/components/TooltipTerm";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, X } from "lucide-react";
@@ -65,10 +66,13 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete Theory of Everything ∞ Law of ONE v16.8.1 — The Consciousness Architecture Edition
+            The complete <TooltipTerm term="Theory of Everything" /> ∞ <TooltipTerm term="Law of ONE" /> v16.8.1 — The Consciousness Architecture Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
+          <p className="mt-4 text-xs text-muted-foreground/60">
+            Last updated: June 23, 2026 | v16.8.1 The Consciousness Architecture Edition
+          </p>
         </div>
 
         {/* Quick Actions */}
