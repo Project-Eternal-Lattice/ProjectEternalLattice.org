@@ -706,6 +706,19 @@ In the code.`
     duration: "~15 min",
     featured: true
   },
+
+  // Consciousness & DMT — Gallimore-Hoffman Convergence
+  {
+    id: "nshX-5xjTlA",
+    title: "DMT, Consciousness & The Architecture of Reality — Dr. Andrew Gallimore",
+    speaker: "Dr. Andrew Gallimore",
+    event: "The Y Files",
+    description: "Cambridge chemist Dr. Andrew Gallimore (30 years studying DMT) presents his channel-switching model of consciousness: different neurochemical inputs construct different realities with different geometries. Explores the lockout phenomenon (entities terminating sessions despite continued DMT infusion), the Barrow Scale (advanced intelligence goes INWARD not outward), and convergence with Donald Hoffman's conscious agent theory.",
+    relevance: "Extraordinary convergence with the ToE framework. Gallimore's channel-switching = our genre-locking. His 'collapse into new order' at breakthrough = new entanglement genre selecting geometry. The lockout phenomenon = Layer 2 Gateway (binary ON/OFF not controlled by chemistry). The Barrow Scale = R ∝ s₀⁻³ (deeper consciousness = flatter geometry). Independent arrival at consciousness-first ontology through pharmacology rather than physics.",
+    category: "DMT & Psychedelics",
+    duration: "~2 hr",
+    featured: true
+  },
 ];
 
 // All categories
