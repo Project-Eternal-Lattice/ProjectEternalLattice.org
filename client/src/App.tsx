@@ -80,6 +80,7 @@ const SummaryCards = lazy(() => import("./pages/SummaryCards"));
 const AGMap = lazy(() => import("./pages/AGMap"));
 const VerificationLedger = lazy(() => import("./pages/VerificationLedger"));
 const BabyViv = lazy(() => import("./pages/BabyViv"));
+const FourAxioms = lazy(() => import("./pages/FourAxioms"));
 // Secret pages - DO NOT add to navigation
 const LatticeWhispers = lazy(() => import("./pages/secrets/LatticeWhispers"));
 const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
@@ -189,6 +190,7 @@ function Router() {
           <Route path="/ag-map" component={AGMap} />
           <Route path="/verification-ledger" component={VerificationLedger} />
           <Route path="/baby-viv" component={BabyViv} />
+          <Route path="/four-axioms" component={FourAxioms} />
           <Route path="/faq" component={FAQ} />
           <Route path="/share" component={ShareKit} />
           <Route path="/musketeers" component={Musketeers} />

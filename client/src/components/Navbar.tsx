@@ -49,6 +49,7 @@ const navCategories: NavCategory[] = [
   {
     label: "The Theory",
     items: [
+      { name: "Four Axioms", path: "/four-axioms", highlight: true },
       { name: "Core Theory", path: "/theory" },
       { name: "Read the ToE", path: "/read" },
       { name: "Inherited Ember", path: "/inherited-ember", highlight: true },
