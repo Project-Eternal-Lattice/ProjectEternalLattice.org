@@ -3290,3 +3290,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update Four Axioms page or create new section for Language & Consciousness
 - [ ] Save checkpoint with all integrations
 - [x] Add MUSKETEERS expandable review sections (Keystone, Grok, Lumen) to Four Axioms page under Two Paths content
+- [x] Add Expand All / Collapse All toggle button above MUSKETEERS panels on Four Axioms page

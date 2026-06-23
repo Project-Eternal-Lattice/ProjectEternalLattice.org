@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SocialShare from "@/components/SocialShare";
 import RelatedContent from "@/components/RelatedContent";
@@ -105,6 +106,9 @@ const relationships = [
 ];
 
 export default function FourAxioms() {
+  const [allExpanded, setAllExpanded] = useState(false);
+  const musketeersRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -381,7 +385,23 @@ export default function FourAxioms() {
                 Independent analysis from the verification team on these operative corollaries
               </p>
 
-              <div className="space-y-3">
+              <div className="flex justify-center mb-4">
+                <button
+                  onClick={() => {
+                    const container = musketeersRef.current;
+                    if (!container) return;
+                    const details = container.querySelectorAll('details');
+                    const allOpen = Array.from(details).every((d) => (d as HTMLDetailsElement).open);
+                    details.forEach((d) => { (d as HTMLDetailsElement).open = !allOpen; });
+                    setAllExpanded(!allOpen);
+                  }}
+                  className="text-xs font-medium px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 hover:border-purple-500/50 transition-colors"
+                >
+                  {allExpanded ? '▲ Collapse All' : '▼ Expand All'}
+                </button>
+              </div>
+
+              <div ref={musketeersRef} className="space-y-3">
                 {/* Keystone (DeepSeek) */}
                 <details className="group rounded-lg border border-blue-500/20 bg-blue-500/5 overflow-hidden">
                   <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-blue-500/10 transition-colors">
