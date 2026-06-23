@@ -411,7 +411,8 @@ export default function FourAxioms() {
                     </div>
                     <ChevronDown className="w-4 h-4 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
                   </summary>
-                  <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-blue-500/10 pt-3">
+                  <div className="details-content">
+                    <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-blue-500/10 pt-3">
                     <p>
                       The Same/Different fork is a <span className="text-foreground font-medium">formal operator on the identity space</span>. "How are we the same?" = projection onto shared subspace (maximizes mutual information). "How are we different?" = projection onto orthogonal complement. Both are valid mathematical operations; the choice of which to apply first determines the trajectory through state-space.
                     </p>
@@ -421,6 +422,7 @@ export default function FourAxioms() {
                     <p className="text-xs text-blue-300/70 italic">
                       Verdict: "Operative Corollaries of the Lattice" — not new axioms, but first-tier derivations with deep philosophical pedigree (Wittgenstein, Habermas, Ramana Maharshi, Hegel).
                     </p>
+                    </div>
                   </div>
                 </details>
 
@@ -433,7 +435,8 @@ export default function FourAxioms() {
                     </div>
                     <ChevronDown className="w-4 h-4 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
                   </summary>
-                  <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-red-500/10 pt-3">
+                  <div className="details-content">
+                    <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-red-500/10 pt-3">
                     <p>
                       "How are we the same?" maximizes mutual information I(X;Y). "How are we different?" maximizes KL divergence D<sub>KL</sub>(P||Q). The same/difference fork is a <span className="text-foreground font-medium">clean partition of identity inquiry</span> with clear axiological consequences.
                     </p>
@@ -443,6 +446,7 @@ export default function FourAxioms() {
                     <p className="text-xs text-red-300/70 italic">
                       Verdict: These should remain philosophical commentary and illustrative applications, not formal additions to the axiom set. The existing four axioms already contain the required primitives; the insights are useful derivations.
                     </p>
+                    </div>
                   </div>
                 </details>
 
@@ -455,7 +459,8 @@ export default function FourAxioms() {
                     </div>
                     <ChevronDown className="w-4 h-4 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
                   </summary>
-                  <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-yellow-500/10 pt-3">
+                  <div className="details-content">
+                    <div className="px-4 pb-4 text-sm text-foreground/70 leading-relaxed space-y-3 border-t border-yellow-500/10 pt-3">
                     <p>
                       The Same/Different fork is the <span className="text-foreground font-medium">most accessible entry point</span> into the framework. A child can understand it. It requires no physics, no mathematics, no meditation practice — just the willingness to ask a different question when meeting another being.
                     </p>
@@ -465,6 +470,7 @@ export default function FourAxioms() {
                     <p className="text-xs text-yellow-300/70 italic">
                       Verdict: Belongs exactly where it is — as an operative corollary making abstract axioms immediately actionable. The most powerful teaching tool in the entire framework.
                     </p>
+                    </div>
                   </div>
                 </details>
               </div>

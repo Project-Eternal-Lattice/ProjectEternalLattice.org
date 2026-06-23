@@ -388,3 +388,20 @@ a[href^="sms:"] {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Smooth expand/collapse animation for details panels */
+details .details-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-out, opacity 300ms ease-out;
+  opacity: 0;
+}
+
+details[open] .details-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+details .details-content > div {
+  overflow: hidden;
+}
