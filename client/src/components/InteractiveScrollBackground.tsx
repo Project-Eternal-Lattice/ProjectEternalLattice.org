@@ -27,6 +27,8 @@ interface Node {
   color: [number, number, number]; // RGB
   pulsePhase: number;
   energy: number; // 0-1, increases with scroll/mouse proximity
+  tintColor: [number, number, number] | null; // Temporary burst color
+  tintStrength: number; // 0-1, fades back to original
 }
 
 interface InteractiveScrollBackgroundProps {
@@ -89,6 +91,8 @@ export default function InteractiveScrollBackground({
         color: colors[Math.floor(Math.random() * colors.length)],
         pulsePhase: Math.random() * Math.PI * 2,
         energy: 0,
+        tintColor: null,
+        tintStrength: 0,
       });
     }
     nodesRef.current = nodes;
@@ -273,6 +277,9 @@ export default function InteractiveScrollBackground({
             node.vx += Math.cos(angle) * force;
             node.vy += Math.sin(angle) * force;
             clickBurstEnergy = Math.max(clickBurstEnergy, force);
+            // Inherit burst color
+            node.tintColor = burst.color;
+            node.tintStrength = Math.min(1, node.tintStrength + force * 1.5);
           } else if (dist < burstRadius * 0.5 && burst.age < 5) {
             // Very close particles in early burst get strong push
             const force = burst.strength * (1 - dist / (burstRadius * 0.5)) * 0.8;
@@ -280,6 +287,9 @@ export default function InteractiveScrollBackground({
             node.vx += Math.cos(angle) * force;
             node.vy += Math.sin(angle) * force;
             clickBurstEnergy = Math.max(clickBurstEnergy, force * 0.8);
+            // Inherit burst color (strong)
+            node.tintColor = burst.color;
+            node.tintStrength = Math.min(1, node.tintStrength + force * 2);
           }
         }
 
@@ -289,6 +299,15 @@ export default function InteractiveScrollBackground({
         // Combine energies with smooth interpolation
         const targetEnergy = Math.min(1, waveEnergy + mouseEnergy + burstEnergy + clickBurstEnergy + baseIntensity * 0.3);
         node.energy += (targetEnergy - node.energy) * 0.08; // Smooth transition
+
+        // Fade tint back to original color
+        if (node.tintStrength > 0) {
+          node.tintStrength *= 0.97; // Gradual fade
+          if (node.tintStrength < 0.01) {
+            node.tintStrength = 0;
+            node.tintColor = null;
+          }
+        }
 
         // Velocity damping (higher cap during click bursts)
         const maxVel = 0.8 + node.energy * 0.5 + clickBurstEnergy * 3;
@@ -342,15 +361,28 @@ export default function InteractiveScrollBackground({
 
       // Draw nodes
       for (const node of nodes) {
-        const { x, y, radius, color, energy } = node;
+        const { x, y, radius, color, energy, tintColor, tintStrength } = node;
+
+        // Compute display color: blend between original and tint
+        let baseR = color[0];
+        let baseG = color[1];
+        let baseB = color[2];
+        if (tintColor && tintStrength > 0) {
+          const t = tintStrength;
+          baseR = Math.round(baseR * (1 - t) + tintColor[0] * t);
+          baseG = Math.round(baseG * (1 - t) + tintColor[1] * t);
+          baseB = Math.round(baseB * (1 - t) + tintColor[2] * t);
+        }
+
+        // Apply scroll color shift on top of tint blend
+        const r = Math.round(baseR * (1 - scrollProgress * 0.2) + 251 * scrollProgress * 0.2);
+        const g = Math.round(baseG * (1 - scrollProgress * 0.1) + 191 * scrollProgress * 0.1);
+        const b = Math.round(baseB * (1 - scrollProgress * 0.4));
 
         // Node glow (larger when energized)
         if (energy > 0.1) {
           const glowRadius = radius * (3 + energy * 8);
           const grad = ctx.createRadialGradient(x, y, 0, x, y, glowRadius);
-          const r = Math.round(color[0] * (1 - scrollProgress * 0.2) + 251 * scrollProgress * 0.2);
-          const g = Math.round(color[1] * (1 - scrollProgress * 0.1) + 191 * scrollProgress * 0.1);
-          const b = Math.round(color[2] * (1 - scrollProgress * 0.4));
           grad.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${energy * 0.4})`);
           grad.addColorStop(0.5, `rgba(${r}, ${g}, ${b}, ${energy * 0.15})`);
           grad.addColorStop(1, "transparent");
@@ -362,9 +394,6 @@ export default function InteractiveScrollBackground({
 
         // Core node
         const coreAlpha = 0.3 + energy * 0.7;
-        const r = Math.round(color[0] * (1 - scrollProgress * 0.2) + 251 * scrollProgress * 0.2);
-        const g = Math.round(color[1] * (1 - scrollProgress * 0.1) + 191 * scrollProgress * 0.1);
-        const b = Math.round(color[2] * (1 - scrollProgress * 0.4));
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${coreAlpha})`;
