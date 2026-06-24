@@ -39,6 +39,7 @@ const navCategories: NavCategory[] = [
       { name: "Skeptics' Corner", path: "/skeptics", highlight: true },
       { name: "Claims & Evidence", path: "/claims" },
       { name: "Referee Packet", path: "/referee-packet" },
+      { name: "arXiv Paper", path: "/arxiv-paper", highlight: true },
       { name: "Falsification Ladder", path: "/falsify", highlight: true },
       { name: "Predictions Dashboard", path: "/predictions", highlight: true },
       { name: "Verification Ledger", path: "/verification-ledger", highlight: true },

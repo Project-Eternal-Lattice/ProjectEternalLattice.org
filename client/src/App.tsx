@@ -86,6 +86,7 @@ const AGMap = lazy(() => import("./pages/AGMap"));
 const VerificationLedger = lazy(() => import("./pages/VerificationLedger"));
 const BabyViv = lazy(() => import("./pages/BabyViv"));
 const FourAxioms = lazy(() => import("./pages/FourAxioms"));
+const ArxivPaper = lazy(() => import("./pages/ArxivPaper"));
 // Secret pages - DO NOT add to navigation
 const LatticeWhispers = lazy(() => import("./pages/secrets/LatticeWhispers"));
 const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
@@ -150,6 +151,8 @@ function Router() {
         <RouteTransition locationKey={location}>
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/arxiv-paper" component={ArxivPaper} />
+          <Route path="/genre-locking" component={ArxivPaper} />
           <Route path="/start-here" component={StartHere} />
           <Route path="/five-minutes" component={FiveMinuteSummary} />
           <Route path="/team" component={Team} />

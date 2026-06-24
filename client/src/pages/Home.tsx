@@ -190,6 +190,32 @@ export default function Home() {
       {/* Gateway Portal — ONE unified entry point */}
       <GatewayPortal />
 
+      {/* arXiv Paper Announcement Banner */}
+      <section className="py-8 relative">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <Link href="/arxiv-paper">
+            <motion.div
+              className="bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 border border-purple-500/30 rounded-2xl p-6 text-center hover:border-purple-400/50 transition-all duration-300 cursor-pointer group"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <span className="px-2 py-0.5 bg-purple-500/20 text-purple-300 text-xs font-bold rounded-full uppercase tracking-wider">New</span>
+                <span className="text-sm text-purple-300/70">First Published Paper</span>
+              </div>
+              <h3 className="font-heading text-lg md:text-xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics
+              </h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Our first arXiv paper — proving gravity emerges from entanglement. Pending gr-qc endorsement.
+              </p>
+            </motion.div>
+          </Link>
+        </div>
+      </section>
+
       {/* What Is This Place? — Gentle Introduction */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-indigo-900/10 to-background z-0" />
@@ -340,7 +366,7 @@ export default function Home() {
               The universe IS perfect — c = 1 in natural units. The complexity we perceive is an artifact of our measurement systems, not reality itself.
             </p>
             <footer className="text-amber-400/80 text-sm">
-              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v16.8.1 The Consciousness Architecture Edition</Link>
+              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v17.0 The Genre-Locking Edition</Link>
             </footer>
           </motion.blockquote>
         </div>

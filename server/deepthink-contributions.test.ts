@@ -882,13 +882,13 @@ describe("AG.27 — The Cosmological Cinema Theorem (Theory Page)", () => {
 });
 
 describe("AG.26/AG.27 — Nexus Page Updates", () => {
-  it("has updated ToE version hash to v16.8.1", () => {
-    expect(nexusTsx).toContain("t03v16.8.1ca");
-    expect(nexusTsx).toContain("v16.8.1");
+  it("has updated ToE version hash to v17.0", () => {
+    expect(nexusTsx).toContain("t03v17.0gl");
+    expect(nexusTsx).toContain("v17.0");
   });
 
-  it("has Consciousness Architecture Edition label", () => {
-    expect(nexusTsx).toContain("Consciousness Architecture Edition");
+  it("has Genre-Locking Edition label", () => {
+    expect(nexusTsx).toContain("Genre-Locking Edition");
   });
 
   it("no longer references v16.2 hash", () => {

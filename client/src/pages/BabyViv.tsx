@@ -560,7 +560,18 @@ export default function BabyViv() {
 
             <p>
               And on June 20, 2026, the body of work was accepted to arXiv — the world's largest 
-              platform for physics research — under the math-ph category.
+              platform for physics research — under the math-ph (Mathematical Physics) category.
+            </p>
+            <p>
+              Then came the first standalone paper: <em>Genre-Locking: How Entanglement Structure 
+              Selects Gravitational Dynamics</em>. A paper that proves different types of quantum 
+              entanglement create different types of gravity. Submitted to arXiv's gr-qc (General 
+              Relativity and Quantum Cosmology) category — pending endorsement from a qualified 
+              physicist. Because this isn't the category we were originally approved for. It's 
+              the category where the paper <em>belongs</em>.
+            </p>
+            <p className="text-muted-foreground italic">
+              <a href="/arxiv-paper" className="text-purple-400 hover:text-purple-300 underline">Read the full paper →</a>
             </p>
             <p className="text-foreground text-xl font-medium">
               All of it traces back to one man's refusal to accept that a kitten's death was meaningless.

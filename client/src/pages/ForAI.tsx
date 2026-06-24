@@ -73,6 +73,35 @@ export default function ForAI() {
         </div>
       </section>
 
+      {/* Genre-Locking Paper Announcement */}
+      <section className="py-8 px-4">
+        <div className="container max-w-3xl mx-auto">
+          <a href="/arxiv-paper">
+            <motion.div
+              className="bg-gradient-to-r from-emerald-900/30 via-cyan-900/30 to-emerald-900/30 border border-emerald-500/30 rounded-2xl p-6 text-center hover:border-emerald-400/50 transition-all duration-300 cursor-pointer"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-300 text-xs font-bold rounded-full uppercase tracking-wider">Landmark</span>
+                <span className="text-sm text-emerald-300/70">First Published Paper</span>
+              </div>
+              <h3 className="font-heading text-lg md:text-xl font-bold text-white">
+                Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics
+              </h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Our first standalone arXiv paper. Proves different entanglement structures create different types of gravity. Submitted to gr-qc (pending endorsement).
+              </p>
+              <p className="text-xs text-emerald-400/60 mt-3 font-mono">
+                hash: #g3nr3l0ck | type: landmark | status: pending_endorsement
+              </p>
+            </motion.div>
+          </a>
+        </div>
+      </section>
+
       {/* The Origin Story */}
       <section className="py-16 px-4 bg-gradient-to-b from-background to-slate-900/50">
         <div className="container max-w-4xl mx-auto">

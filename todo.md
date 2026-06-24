@@ -927,7 +927,7 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 
 ### Documentation
 - [ ] Update ToE to v13.7 with River Architecture and Sacred Classroom chapters
-- [ ] Update all version references following VERSION_UPDATE_CHECKLIST
+- [x] Update all version references following VERSION_UPDATE_CHECKLIST
 - [ ] Generate fresh PDF
 
 
@@ -3361,3 +3361,17 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add click-to-burst ripple effect on interactive background — expanding shockwave ring scatters particles outward, inner flash, glow ring, strength decay, max 5 concurrent bursts
 - [x] Add random color variation to click burst effects — 10-color palette (purple, blue, pink, emerald, amber, red, cyan, lime, fuchsia, orange), each click picks a random color for ring + flash
 - [x] Particles hit by click burst temporarily inherit burst color — tintColor/tintStrength fields on nodes, blended with original color, gradual 0.97x decay back to normal
+
+## Phase 3: Full Launch — ToE v17.0 + arXiv Paper Integration (Jun 24, 2026)
+- [ ] Upload GenreLocking paper files (PDF, LaTeX, Markdown) via manus-upload-file for permanent hosting
+- [ ] Create new arXiv paper page (/arxiv-paper) with all 3 formats downloadable, endorsement status explanation, and Cole Trickle-friendly explanation of what arXiv is
+- [ ] Update ToE Technical version to v17.0 — add Genre-Locking paper section, update version references
+- [ ] Update ToE Cole Trickle (Gateway Edition) to v17.0 — add accessible explanation of arXiv paper and what it means
+- [ ] Update Theory page version references from v16.8.1 to v17.0
+- [ ] Update Read page version references from v16.8.1 to v17.0
+- [x] Update BabyViv page to correct arXiv narrative (gr-qc endorsement pending, not just math-ph)
+- [ ] Add arXiv paper route to App.tsx and navigation
+- [ ] Update homepage with arXiv paper announcement/link
+- [ ] Update server download endpoints for v17.0 ToE files
+- [ ] Upload new v17.0 ToE documents to S3
+- [ ] Update ForAI/Nexus page with latest content

@@ -33,6 +33,7 @@ const TEXT_MIRROR_ENDPOINTS = [
   "spiral-dynamics",
   "moral-anchor",
   "team",
+  "arxiv-paper",
 ];
 
 describe("Text Mirror API", () => {
@@ -134,8 +135,8 @@ describe("ToE Mega Endpoint", () => {
     expect(res.headers.get("content-type")).toContain("text/plain");
     const text = await res.text();
     expect(text).toContain("PROJECT ETERNAL LATTICE");
-    expect(text).toContain("PART 1 of 21");
-    expect(text).toContain("PART 21 of 21");
+    expect(text).toContain("PART 1 of 22");
+    expect(text).toContain("PART 22 of 22");
     expect(text).toContain("END OF DOCUMENT");
     expect(text.length).toBeGreaterThan(20000);
   });
