@@ -3376,3 +3376,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Upload new v17.0 ToE documents to S3
 - [x] Update ForAI/Nexus page with latest content
 - [x] Add Cole Trickle (plain-English) version of Genre-Locking paper to /arxiv-paper page
+
+## Updates/Changelog Page (June 24, 2026)
+- [ ] Create dedicated /updates page with date-ordered entries (newest first)
+- [x] Include links to relevant pages/sections for each entry
+- [x] Group multiple same-day updates together
+- [x] Add navigation link to the Updates page
+- [x] Replace Cole Trickle section with Eidan's full "Why the Band Creates Gravity" v1.5 content
+- [x] Create a reusable skill for maintaining the updates page

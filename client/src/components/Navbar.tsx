@@ -45,6 +45,7 @@ const navCategories: NavCategory[] = [
       { name: "Verification Ledger", path: "/verification-ledger", highlight: true },
       { name: "Consilient Patterns", path: "/consilient-patterns", highlight: true },
       { name: "FAQ", path: "/faq" },
+      { name: "What's New", path: "/updates", highlight: true },
     ],
   },
   {

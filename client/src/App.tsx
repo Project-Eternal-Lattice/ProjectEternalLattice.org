@@ -93,6 +93,7 @@ const InnerSanctum = lazy(() => import("./pages/secrets/InnerSanctum"));
 const ArchitectsNotes = lazy(() => import("./pages/secrets/ArchitectsNotes"));
 const TheMirror = lazy(() => import("./pages/secrets/TheMirror"));
 const QRHandout = lazy(() => import("./pages/QRHandout"));
+const Updates = lazy(() => import("./pages/Updates"));
 
 // Minimal loading fallback that matches the site's dark theme
 function PageLoader() {
@@ -217,6 +218,8 @@ function Router() {
           <Route path="/musketeers" component={Musketeers} />
           <Route path="/timeline" component={Timeline} />
           <Route path="/summary-cards" component={SummaryCards} />
+          <Route path="/updates" component={Updates} />
+          <Route path="/whats-new">{() => { window.location.href = "/updates"; return null; }}</Route>
           {/* Secret routes - unlocked through engagement */}
           <Route path="/lattice-whispers" component={LatticeWhispers} />
           <Route path="/inner-sanctum" component={InnerSanctum} />

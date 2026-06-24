@@ -37,6 +37,7 @@ const CATEGORY_MAP: Record<string, BackgroundTheme> = {
   "/predictions": "explore",
   "/consilient-patterns": "explore",
   "/ag-map": "explore",
+  "/updates": "explore",
 
   // ── The Theory ──
   "/theory": "theory",

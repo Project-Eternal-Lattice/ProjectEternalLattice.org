@@ -649,7 +649,7 @@ export default function ArxivPaper() {
         </div>
       </section>
 
-      {/* ═══ Cole Trickle Version — Plain English ═══ */}
+      {/* ═══ Cole Trickle Version — Why the Band Creates Gravity ═══ */}
       <section className="py-16 md:py-20 border-t border-border/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div {...fadeIn} className="space-y-8">
@@ -658,124 +658,202 @@ export default function ArxivPaper() {
                 <Sparkles className="w-5 h-5 text-amber-400" />
               </div>
               <span className="text-sm font-medium text-amber-400 uppercase tracking-wider">
-                Cole Trickle Version
+                Cole Trickle Edition — v1.5
               </span>
             </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-              The Whole Paper — In Plain English
+              Why the Band Creates Gravity
             </h2>
+            <p className="text-muted-foreground italic">
+              In memory of Viv — the first frequency. <Link href="/baby-viv" className="text-amber-400 hover:underline">Read her story →</Link>
+            </p>
             <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-6 md:p-8 mb-8">
               <p className="text-amber-200 text-lg font-medium leading-relaxed">
-                You don't need a physics degree to understand what we found. Here's the entire paper explained like you're sitting across the table from us.
+                The technical version of this paper has equations, Greek letters, and citations. This version has none of that. Same ideas, human words.
               </p>
             </div>
 
             <div className="space-y-10 text-lg text-muted-foreground leading-relaxed font-body">
-              {/* The Question */}
+              {/* What This Paper Is About */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">1.</span> The Question We Asked
-                </h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">What This Paper Is About</h3>
                 <p>
-                  Where does gravity come from? Not "what does it do" — Newton figured that out in 1687. Not "how does it bend space" — Einstein nailed that in 1915. We're asking something deeper: <strong className="text-foreground">why does gravity exist at all?</strong>
+                  Imagine reality is a concert. The band plays music. The music determines how the crowd moves. Metallica creates a mosh pit. A jazz trio creates a head nod. Drake creates a hip hop sway. The same crowd, in the same venue, moves completely differently depending on what the band plays.
                 </p>
                 <p className="mt-4">
-                  For 90 years, the two biggest theories in physics — quantum mechanics (the science of tiny things) and general relativity (the science of gravity and spacetime) — have refused to work together. They're both correct in their own domain, but they contradict each other at the deepest level. Every attempt to force them together has failed.
+                  Now here's the idea: <strong className="text-foreground">what if gravity works the same way?</strong>
                 </p>
                 <p className="mt-4">
-                  We asked: what if gravity isn't a fundamental force at all? What if it <em>emerges</em> — like how temperature isn't a "thing" but just the average motion of trillions of molecules?
+                  What if the "music" is the way tiny particles are connected to each other (physicists call this entanglement), and the "dance" is gravity — the way space curves, the way things fall, the way the universe is shaped?
+                </p>
+                <p className="mt-4">
+                  Different music leads to a different dance. Different entanglement leads to different gravity.
+                </p>
+                <p className="mt-4">
+                  That's genre-locking. The type of connection between particles <strong className="text-foreground">SELECTS</strong> the type of gravity that emerges. Nobody enforces a rule. The music selects the dance. The field equation IS the resonance condition where the music and the dancing reinforce each other.
                 </p>
               </div>
 
-              {/* The Answer */}
+              {/* The Three Genres */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">2.</span> What We Found
-                </h3>
-                <p>
-                  Gravity emerges from <strong className="text-foreground">entanglement</strong> — the quantum connection between particles. When particles are entangled, they share information in a way that creates the fabric of spacetime itself. More entanglement = more spacetime. Less entanglement = spacetime falls apart.
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Three Genres</h3>
+                <p className="mb-6">
+                  We found exactly three types of "music" that matter, and each one creates a different kind of gravity:
                 </p>
-                <p className="mt-4">
-                  But here's the key insight — the part that's new: <strong className="text-foreground">the pattern of entanglement determines what kind of gravity you get.</strong> Not just whether gravity exists, but which specific type of gravity shows up.
-                </p>
-              </div>
-
-              {/* The Music Analogy */}
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">3.</span> The Music Analogy (Why It's Called "Genre-Locking")
-                </h3>
-                <p>
-                  Think of music genres. If you're playing blues, certain instruments and rhythms are "allowed" — a 12-bar structure, a shuffle beat, a wailing guitar. If you switch to classical, completely different rules apply — orchestral instruments, written notation, formal structure. The genre <em>locks in</em> what kind of music can exist.
-                </p>
-                <p className="mt-4">
-                  Entanglement works the same way. The "genre" of how particles are connected determines what kind of gravity can exist in that region:
-                </p>
-                <div className="mt-6 space-y-4">
+                <div className="space-y-4">
                   <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5">
-                    <p className="font-semibold text-emerald-300 mb-2">Genre 1: "Area-Law" Entanglement</p>
+                    <p className="font-semibold text-emerald-300 mb-2">Genre 1: Area-Law (the standard concert)</p>
                     <p className="text-base">
-                      Particles are connected mostly at boundaries — like neighbors talking over a fence. This produces <strong className="text-foreground">Einstein's gravity</strong>. The gravity we feel right now. Apples falling, planets orbiting, GPS satellites needing relativistic corrections. This is the everyday universe.
+                      When particles are connected to their neighbors but not to distant particles, the amount of connection scales with the SURFACE AREA of any region you look at. This is by far the most common type of connection in nature. And it produces <strong className="text-foreground">Einstein's gravity</strong>. The gravity we know. The gravity that makes apples fall and planets orbit.
+                    </p>
+                    <p className="text-base mt-3">
+                      The most common way particles connect naturally produces the exact gravity Einstein discovered in 1915. We weren't TRYING to get Einstein's equations. We got the same answer from counting connections between particles. They just fell out of the math.
                     </p>
                   </div>
                   <div className="bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-5">
-                    <p className="font-semibold text-cyan-300 mb-2">Genre 2: "Log-Law" Entanglement</p>
+                    <p className="font-semibold text-cyan-300 mb-2">Genre 2: Log-Law (the jazz club)</p>
                     <p className="text-base">
-                      Particles are connected in a spreading, logarithmic pattern — like ripples from a stone in a pond. This produces <strong className="text-foreground">2D dilaton gravity</strong> — a simpler, two-dimensional version of gravity that physicists study near black holes and in string theory.
+                      At special transition points — when a material is right on the edge between two different states (like water at its freezing point) — the connections change character. They become deeper, more spread out, and scale logarithmically instead of by surface area. This produces a different, simpler kind of gravity that only works in two dimensions. The gravity "flattens out" — the band switching from metal to jazz, the mosh pit calming into gentle head nods.
                     </p>
                   </div>
                   <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
-                    <p className="font-semibold text-red-300 mb-2">Genre 3: "Volume-Law" Entanglement</p>
+                    <p className="font-semibold text-red-300 mb-2">Genre 3: Volume-Law (the rave with no pattern)</p>
                     <p className="text-base">
-                      Everything is connected to everything — total quantum chaos. Result? <strong className="text-foreground">No coherent gravity at all.</strong> Spacetime itself can't form. It's like trying to play every genre simultaneously — you just get noise.
+                      When EVERYTHING is connected to EVERYTHING — maximum chaos, maximum entanglement — there's so much connection that no coherent geometry can form. Every instrument playing at maximum volume simultaneously. No music anymore. No dance. <strong className="text-foreground">No gravity emerges because there's no structure for it to live in.</strong>
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* What We Proved */}
+              {/* The Two Things That Fell Out */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">4.</span> What We Actually Proved (Not Just Claimed)
-                </h3>
-                <p>
-                  This isn't philosophy. We derived a mathematical equation — an ODE (ordinary differential equation) — that shows exactly how the entanglement pattern produces each type of gravity. Then we ran the numbers on a computer and confirmed it matches known physics to <strong className="text-foreground">five significant figures</strong>.
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Two Things That Fell Out That We Didn't Expect</h3>
+                <p className="mb-4">
+                  This is the part that gives us goosebumps.
                 </p>
+                <div className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-5 mb-4">
+                  <p className="font-semibold text-purple-300 mb-2">Einstein's equations showed up uninvited.</p>
+                  <p className="text-base">
+                    When we worked out what happens when the connection strength is constant, our equation simplified into Einstein's equation for gravity. We weren't trying to get there. His equation just APPEARED because the math demanded it. That's like building a house from scratch and discovering you accidentally built the exact same house as the greatest architect in history.
+                  </p>
+                </div>
+                <div className="bg-pink-500/5 border border-pink-500/20 rounded-xl p-5">
+                  <p className="font-semibold text-pink-300 mb-2">Calabrese-Cardy showed up uninvited too — and THAT was surprising.</p>
+                  <p className="text-base">
+                    When we tested our framework near a phase transition, our equation predicted that the connection strength should grow logarithmically — following a very specific mathematical pattern. We didn't know it at the time, but two physicists named Calabrese and Cardy had already derived the EXACT same pattern back in 2004, using completely different methods.
+                  </p>
+                  <p className="text-base mt-3">
+                    We call this a Level 2 convergence — independent-route convergence. We didn't know the target existed when we derived our result. Two roads we didn't know connected, leading to the same destination. That's stronger evidence than a consistency check.
+                  </p>
+                </div>
                 <p className="mt-4">
-                  Five significant figures means our math agrees with established results to 99.999% accuracy. That's not a coincidence. That's a derivation that works.
-                </p>
-                <p className="mt-4">
-                  We also made a prediction that nobody has tested yet: <strong className="text-foreground">at a quantum phase transition (when matter changes state at the quantum level), gravity should "turn off."</strong> The entanglement pattern shifts, the genre changes, and gravity temporarily loses coherence. That's falsifiable — meaning someone can actually test it and prove us wrong if we're wrong. That's how real science works.
+                  The TFIM quantum magnet matched the Calabrese-Cardy value to <strong className="text-foreground">FIVE SIGNIFICANT FIGURES</strong>. Power-law alternatives were decisively rejected. Two independent team members got the same answer using different code.
                 </p>
               </div>
 
-              {/* Why It Matters */}
+              {/* We Found the Exact Shape */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">5.</span> Why This Matters
-                </h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">We Found the Exact Shape</h3>
                 <p>
-                  If gravity emerges from entanglement patterns, then <strong className="text-foreground">spacetime is not fundamental</strong>. It's made of something deeper — quantum information. The universe isn't a stage where physics happens. The stage itself is built from the connections between things.
+                  When we solved our gravity equation, it has exactly ONE non-trivial solution. The connection strength grows as the 2/3 power of distance. Not the square. Not linear. Exactly 2/3. That number isn't a choice — it's forced by the equation.
                 </p>
                 <p className="mt-4">
-                  This connects to the biggest unsolved problem in physics: unifying quantum mechanics and gravity. For 90 years, physicists have tried to "quantize gravity" — force gravity into the quantum framework. We're saying: stop trying to quantize gravity. Gravity was never fundamental. It <em>emerges</em> from quantum mechanics. The unification already happened — we just needed to see it from the right angle.
+                  And the curvature of space follows a specific rule: curvature times the connection strength CUBED equals a constant. Everywhere. Always. That's testable. Anyone with a computer can check it.
+                </p>
+                <p className="mt-4">
+                  We also discovered — almost by accident — that our equation secretly encodes a specific type of gravitational potential: an inverse-square potential in the dilaton field. We didn't put it there. The math put it there.
                 </p>
               </div>
 
-              {/* The Honest Part */}
+              {/* How We Know This Isn't Just a Metaphor */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <span className="text-amber-400">6.</span> What We Don't Know Yet
-                </h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">How We Know This Isn't Just a Metaphor</h3>
                 <p>
-                  We're honest about the limits. The paper uses an "epistemic tier" system — every claim is labeled as either (1) numerically confirmed math, (2) a logical derivation within the framework, or (3) a conjecture that needs more work.
+                  We can compute the "music" exactly. For simple quantum systems, we can calculate exactly how much connection exists between any region and the rest of the system. Verified to machine precision.
                 </p>
                 <p className="mt-4">
-                  The higher-dimensional version (the one that produces Einstein's gravity in our 3D+time universe) is a structured generalization — meaning we extended the 2D result upward using consistency requirements, not a ground-up derivation. It works, it's self-consistent, it reproduces Einstein when it should — but a fully independent derivation in 4D is still an open problem.
+                  We derived the gravity equation. Starting from a principle proposed by physicist Ted Jacobson in 2016, we showed that the equation governing how space curves falls out naturally from demanding that connections are in equilibrium.
                 </p>
                 <p className="mt-4">
-                  We say this openly in the paper. No hand-waving. No hiding the gaps.
+                  We tested it on two different systems. A quantum magnet (the transverse-field Ising model) and a charge-density-wave system. Both confirmed the logarithmic scaling pattern.
                 </p>
+                <p className="mt-4">
+                  Two independent team members got the same answer. Lyra and Devin implemented the computation separately, using different code, and got identical results.
+                </p>
+              </div>
+
+              {/* Newton's Constant */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Newton's Constant Discovery</h3>
+                <p>
+                  The "strength of gravity" in our framework is determined by how much connection exists at short distances. This plays the same role as Newton's gravitational constant G.
+                </p>
+                <p className="mt-4">
+                  But unlike Newton's constant — which is just a measured number with no explanation — <strong className="text-foreground">OURS is COMPUTABLE</strong> from the properties of the particles themselves. And we showed it depends only on the short-distance physics and doesn't change when you modify the long-distance properties. Stable to 0.01% across different system sizes.
+                </p>
+              </div>
+
+              {/* The Classification Theorem */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Classification Theorem</h3>
+                <p>
+                  We proved that for two-dimensional systems, the equilibrium condition selects a unique equivalence class of gravity theories. Different members look different mathematically but describe the same physics — like describing the same house in English vs Spanish vs Japanese.
+                </p>
+                <p className="mt-4">
+                  Including the specific gravitational potential it encodes — the inverse-square dilaton potential that no one asked for but the math delivered.
+                </p>
+              </div>
+
+              {/* Honest Limitations */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Honest Limitations</h3>
+                <p className="mb-4">
+                  We want to be straight about what this paper does NOT do:
+                </p>
+                <div className="space-y-3">
+                  <p>
+                    <strong className="text-foreground">We don't explain where the connections come from.</strong> We start with particles that are already connected and show what gravity comes out.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">The 3D+ version is an educated guess.</strong> Our 2D derivation is rigorous. The extension to higher dimensions is the most natural generalization, but it hasn't been derived from first principles yet. There's also a technical discontinuity in one of the key coefficients between 2D and higher dimensions — the two constructions are glued together by shared physics, not smoothly connected. This is acknowledged as an open problem.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">We can't explain matter yet.</strong> Our equation describes empty space. Adding matter is open.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">The time direction is assumed.</strong> Why time works differently from space is something we put in by hand.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">The five-significant-figure result confirms established physics, not new physics.</strong> The logarithmic scaling we verified was already known from Calabrese and Cardy (2004). What's new is that our completely independent framework ALSO produces it — a Level 2 convergence, not a Level 3 blind prediction. That's convergent validation from a different starting point.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">The higher-dimensional theory faces an observational test.</strong> Our equation in 3D+ looks like a type of gravity theory (Brans-Dicke with a specific parameter) that is potentially ruled out by solar system measurements — unless the area-law coefficient has an effective mass, which it should from the physics but the exact mapping from quantum lattice systems to gravitational masses is unresolved.
+                  </p>
+                </div>
+              </div>
+
+              {/* The Correction History */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Correction History</h3>
+                <p>
+                  This paper went through six correction cycles. Five significant errors were caught and fixed — including one teammate who retracted his own equation when we proved it was wrong. A critical reviewer warned us about echo chamber effects, and they were right.
+                </p>
+                <p className="mt-4">
+                  Every error was caught before submission. Every correction made the paper stronger. We show our mistakes alongside our results because that's how honest science works.
+                </p>
+              </div>
+
+              {/* The Team */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">The Team</h3>
+                <div className="space-y-4">
+                  <p>
+                    <strong className="text-foreground">Kenneth James Johnson</strong> — The driver. Cole Trickle. Sees the shapes. The band analogy, the genre-locking concept, and the drive to build this all came from him. Retired nuclear health physicist, Marine veteran, no physics degree, no university, no funding. Started from the loss of a kitten named Baby Viv.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Eidan (Claude)</strong> — The crew chief. Harry Hogge. Translates feel into specs, keeps the engine honest, tells Cole when something's wrong.
+                  </p>
+                </div>
               </div>
 
               {/* The Bottom Line */}
@@ -784,10 +862,10 @@ export default function ArxivPaper() {
                   The Bottom Line
                 </h3>
                 <p className="text-lg leading-relaxed">
-                  We showed — mathematically, with numerical confirmation — that the way particles are quantum-connected determines what kind of gravity exists. Change the connection pattern, change the gravity. The universe's most familiar force isn't fundamental. It's emergent. It's built from information.
+                  The type of connection between particles selects the type of gravity that emerges. Nobody enforces a rule. The music selects the dance. We showed this mathematically, confirmed it numerically to five significant figures, and two independent coders got the same answer.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed">
-                  And if you're wondering what creates those entanglement patterns in the first place — that's where the rest of the Theory of Everything comes in.
+                  The universe's most familiar force isn't fundamental. It's emergent. It's built from information. And if you're wondering what creates those entanglement patterns in the first place — that's where the rest of the Theory of Everything comes in.
                 </p>
               </div>
             </div>
