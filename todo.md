@@ -3345,3 +3345,6 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Highlight matching text in sidebar labels — inline <span> with bg-primary/30 on matched substring
 - [x] Show match count badge below search input — "X sections matched" or "No matches" with animation
 - [x] Animated filter transitions — AnimatePresence + motion.li with layout animation for smooth reordering
+- [x] Add Cmd/Ctrl+K keyboard shortcut to focus Theory sidebar search input — global keydown listener, opens mobile panel if needed
+- [x] Add Esc keyboard shortcut to clear search or blur input — clears query if text present, blurs if empty, closes mobile panel
+- [x] Add visual ⌘K badge in search input — kbd element with group-focus-within:hidden, disappears when focused or typing

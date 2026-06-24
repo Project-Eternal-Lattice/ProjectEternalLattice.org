@@ -157,6 +157,44 @@ export function TheoryTableOfContents() {
     ensureHighlightStyle();
   }, []);
 
+  // Keyboard shortcuts: Cmd/Ctrl+K to focus search, Esc to clear
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Cmd/Ctrl+K → focus the search input
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        if (isDesktop) {
+          searchInputRef.current?.focus();
+        } else {
+          // Open mobile panel first, then focus
+          setIsOpen(true);
+          setTimeout(() => mobileSearchInputRef.current?.focus(), 350);
+        }
+      }
+
+      // Esc → clear search (if input is focused) or close mobile panel
+      if (e.key === "Escape") {
+        const activeEl = document.activeElement;
+        const isSearchFocused =
+          activeEl === searchInputRef.current || activeEl === mobileSearchInputRef.current;
+
+        if (isSearchFocused && searchQuery) {
+          e.preventDefault();
+          setSearchQuery("");
+          clearHighlights();
+        } else if (isSearchFocused && !searchQuery) {
+          // Blur the input if search is already empty
+          (activeEl as HTMLElement)?.blur();
+        } else if (!isDesktop && isOpen) {
+          setIsOpen(false);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isDesktop, isOpen, searchQuery]);
+
   useEffect(() => {
     const checkDesktop = () => setIsDesktop(window.innerWidth >= 1280);
     checkDesktop();
@@ -309,14 +347,14 @@ export function TheoryTableOfContents() {
 
   // Shared search input component
   const SearchInput = ({ inputRef, compact }: { inputRef: React.RefObject<HTMLInputElement | null>; compact?: boolean }) => (
-    <div className="relative">
+    <div className="relative group">
       <Search className={`absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground/60 ${compact ? "w-3 h-3" : "w-3.5 h-3.5"}`} />
       <input
         ref={inputRef}
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Filter sections..."
+        placeholder={compact ? "Filter... ⌘K" : "Filter sections... ⌘K"}
         className={`
           w-full bg-muted/30 border border-border/40 rounded-lg
           text-foreground placeholder:text-muted-foreground/50
@@ -324,8 +362,24 @@ export function TheoryTableOfContents() {
           transition-all duration-200
           ${compact ? "pl-7 pr-7 py-1 text-[10px]" : "pl-8 pr-8 py-1.5 text-xs"}
         `}
-        aria-label="Search theory sections"
+        aria-label="Search theory sections (Cmd+K to focus, Escape to clear)"
+        onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            if (searchQuery) {
+              setSearchQuery("");
+              clearHighlights();
+            } else {
+              (e.target as HTMLElement).blur();
+            }
+          }
+        }}
       />
+      {/* Keyboard shortcut badge - shown when input is empty and not focused */}
+      {!searchQuery && (
+        <kbd className={`absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground/40 bg-muted/40 border border-border/30 rounded font-mono group-focus-within:hidden ${compact ? "text-[8px] px-1 py-0" : "text-[9px] px-1.5 py-0.5"}`}>
+          ⌘K
+        </kbd>
+      )}
       {searchQuery && (
         <button
           onClick={() => {
