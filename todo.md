@@ -3333,3 +3333,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Lyra: Add skip-to-content link for keyboard navigation — already existed in App.tsx
 - [x] Lyra: Optimize Lighthouse performance score (lazy load below-fold images, reduce CLS) — added loading="lazy" to all below-fold images
 - [x] Add comprehensive text mirrors for all major pages so AI teammates can always read site content via /api/text/* URLs (musketeers, grief-equation, for-ai, team, four-axioms, spiral-dynamics, sacred-geometry, how-we-know, inherited-ember, referee-packet, five-minutes, consilient-patterns, emotional-wealth, baby-viv, moral-anchor)
+
+## Theory Page Sidebar Enhancements (Jun 24, 2026)
+- [x] Add smooth scrolling behavior when clicking sidebar links — programmatic scroll with navbar offset (96px), 1s debounce for IntersectionObserver
+- [x] Highlight active section as user scrolls — animated layoutId indicator (spring animation), active dot for level-1 sections, aria-current="location"
+- [x] Add reading progress bar to sidebar — gradient progress bar in header + SVG progress ring on mobile FAB
+- [x] Auto-scroll sidebar to keep active item visible — scrollIntoView on activeItemRef when item exits container bounds
+- [x] Add section counter on mobile panel — "Section X of Y" footer

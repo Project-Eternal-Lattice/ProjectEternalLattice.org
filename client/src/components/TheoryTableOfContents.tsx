@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { List, ChevronRight, X } from "lucide-react";
+import { List, ChevronRight, X, BookOpen } from "lucide-react";
 
 interface TocItem {
   id: string;
@@ -42,6 +42,9 @@ export function TheoryTableOfContents() {
   const [activeSection, setActiveSection] = useState("top");
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const activeItemRef = useRef<HTMLButtonElement | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const checkDesktop = () => setIsDesktop(window.innerWidth >= 1280);
@@ -55,71 +58,164 @@ export function TheoryTableOfContents() {
     const observers: IntersectionObserver[] = [];
     const sectionIds = tocItems.map((item) => item.id).filter((id) => id !== "top");
 
+    // Track scroll position for "top" detection
+    const handleScroll = () => {
+      if (isScrolling) return;
+      if (window.scrollY < 200) {
+        setActiveSection("top");
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
 
       const observer = new IntersectionObserver(
         (entries) => {
+          if (isScrolling) return;
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(id);
             }
           });
         },
-        { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+        { rootMargin: "-15% 0px -65% 0px", threshold: 0 }
       );
 
       observer.observe(el);
       observers.push(observer);
     });
 
-    return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
+    return () => {
+      observers.forEach((obs) => obs.disconnect());
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolling]);
+
+  // Auto-scroll the sidebar to keep active item visible
+  useEffect(() => {
+    if (activeItemRef.current && scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const item = activeItemRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const itemRect = item.getBoundingClientRect();
+
+      // Check if item is outside visible area of the container
+      if (itemRect.top < containerRect.top || itemRect.bottom > containerRect.bottom) {
+        item.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }, [activeSection]);
 
   const scrollTo = useCallback((id: string) => {
+    // Temporarily disable IntersectionObserver updates during programmatic scroll
+    setIsScrolling(true);
+    setActiveSection(id);
+
     if (id === "top") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Calculate offset for fixed navbar (96px = 6rem)
+        const navbarOffset = 96;
+        const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navbarOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
     }
+
     if (!isDesktop) setIsOpen(false);
+
+    // Re-enable IntersectionObserver after scroll animation completes
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
   }, [isDesktop]);
+
+  // Progress indicator: what percentage through the page
+  const activeIndex = tocItems.findIndex((item) => item.id === activeSection);
+  const progress = tocItems.length > 1 ? (activeIndex / (tocItems.length - 1)) * 100 : 0;
 
   // Desktop: always-visible sticky sidebar
   if (isDesktop) {
     return (
       <nav
-        className="fixed left-4 top-1/2 -translate-y-1/2 z-40 w-56 max-h-[70vh] overflow-y-auto scrollbar-thin"
+        className="fixed left-4 top-1/2 -translate-y-1/2 z-40 w-56 max-h-[70vh] flex flex-col"
         aria-label="Theory page table of contents"
       >
-        <div className="bg-background/80 backdrop-blur-md border border-border/50 rounded-xl p-3 shadow-lg">
-          <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">
-            Contents
-          </h3>
-          <ul className="space-y-0.5">
-            {tocItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollTo(item.id)}
-                  className={`
-                    w-full text-left text-xs py-1 px-2 rounded-md transition-all duration-200
-                    ${item.level === 2 ? "pl-4" : "font-medium"}
-                    ${
-                      activeSection === item.id
-                        ? "bg-primary/20 text-primary border-l-2 border-primary"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                    }
-                  `}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
+        <div className="bg-background/85 backdrop-blur-lg border border-border/40 rounded-2xl shadow-xl shadow-black/20 overflow-hidden">
+          {/* Header with progress */}
+          <div className="px-4 pt-3 pb-2 border-b border-border/30">
+            <div className="flex items-center gap-2 mb-2">
+              <BookOpen className="w-3.5 h-3.5 text-primary/70" />
+              <h3 className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">
+                Contents
+              </h3>
+            </div>
+            {/* Progress bar */}
+            <div className="h-0.5 bg-muted/30 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-primary/80 to-purple-400/80 rounded-full"
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              />
+            </div>
+          </div>
+
+          {/* Scrollable list */}
+          <div
+            ref={scrollContainerRef}
+            className="overflow-y-auto max-h-[calc(70vh-4rem)] scrollbar-thin px-2 py-2"
+          >
+            <ul className="space-y-0.5 relative">
+              {tocItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <li key={item.id} className="relative">
+                    {/* Animated active indicator */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeIndicator"
+                        className="absolute inset-0 bg-primary/15 border-l-2 border-primary rounded-md"
+                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                      />
+                    )}
+                    <button
+                      ref={isActive ? activeItemRef : undefined}
+                      onClick={() => scrollTo(item.id)}
+                      className={`
+                        relative w-full text-left text-[11px] py-1.5 px-2 rounded-md transition-colors duration-200
+                        ${item.level === 2 ? "pl-5" : "font-semibold"}
+                        ${
+                          isActive
+                            ? "text-primary"
+                            : "text-muted-foreground/80 hover:text-foreground hover:bg-muted/40"
+                        }
+                      `}
+                      aria-current={isActive ? "location" : undefined}
+                    >
+                      <span className="relative z-10 flex items-center gap-1.5">
+                        {isActive && item.level === 1 && (
+                          <motion.span
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"
+                          />
+                        )}
+                        {item.label}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </nav>
     );
@@ -128,14 +224,42 @@ export function TheoryTableOfContents() {
   // Mobile/tablet: floating button + slide-out panel
   return (
     <>
-      {/* Toggle button */}
+      {/* Toggle button with progress ring */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 left-4 z-50 w-10 h-10 rounded-full bg-primary/90 text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary transition-colors"
+        className="fixed bottom-20 left-4 z-50 w-11 h-11 rounded-full bg-background/90 backdrop-blur-md border border-border/50 shadow-lg shadow-black/20 flex items-center justify-center hover:bg-background transition-all duration-200 group"
         aria-label="Toggle table of contents"
         aria-expanded={isOpen}
       >
-        {isOpen ? <X className="w-5 h-5" /> : <List className="w-5 h-5" />}
+        {/* Progress ring */}
+        <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 44 44">
+          <circle
+            cx="22"
+            cy="22"
+            r="19"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="text-muted/30"
+          />
+          <circle
+            cx="22"
+            cy="22"
+            r="19"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeDasharray={`${2 * Math.PI * 19}`}
+            strokeDashoffset={`${2 * Math.PI * 19 * (1 - progress / 100)}`}
+            className="text-primary transition-all duration-500"
+            strokeLinecap="round"
+          />
+        </svg>
+        {isOpen ? (
+          <X className="w-4 h-4 text-foreground relative z-10" />
+        ) : (
+          <List className="w-4 h-4 text-foreground relative z-10 group-hover:text-primary transition-colors" />
+        )}
       </button>
 
       {/* Slide-out panel */}
@@ -147,45 +271,79 @@ export function TheoryTableOfContents() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/40 z-40"
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
               onClick={() => setIsOpen(false)}
             />
             {/* Panel */}
             <motion.nav
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed left-0 top-0 bottom-0 z-50 w-72 bg-background/95 backdrop-blur-md border-r border-border/50 shadow-2xl overflow-y-auto"
+              initial={{ x: "-100%", opacity: 0.8 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "-100%", opacity: 0.8 }}
+              transition={{ type: "spring", damping: 28, stiffness: 320 }}
+              className="fixed left-0 top-0 bottom-0 z-50 w-72 bg-background/98 backdrop-blur-xl border-r border-border/30 shadow-2xl overflow-y-auto"
               aria-label="Theory page table of contents"
             >
-              <div className="p-4 pt-16">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                  Table of Contents
-                </h3>
-                <ul className="space-y-1">
-                  {tocItems.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => scrollTo(item.id)}
-                        className={`
-                          w-full text-left text-sm py-2 px-3 rounded-lg transition-all duration-200 flex items-center gap-2
-                          ${item.level === 2 ? "pl-6 text-xs" : "font-medium"}
-                          ${
-                            activeSection === item.id
-                              ? "bg-primary/20 text-primary"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                          }
-                        `}
-                      >
-                        {activeSection === item.id && (
-                          <ChevronRight className="w-3 h-3 flex-shrink-0" />
+              <div className="p-5 pt-14">
+                {/* Header */}
+                <div className="flex items-center gap-2 mb-1">
+                  <BookOpen className="w-4 h-4 text-primary/70" />
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
+                    Table of Contents
+                  </h3>
+                </div>
+                {/* Progress bar */}
+                <div className="h-1 bg-muted/30 rounded-full overflow-hidden mb-5">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-primary to-purple-400 rounded-full"
+                    animate={{ width: `${progress}%` }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  />
+                </div>
+
+                <ul className="space-y-0.5">
+                  {tocItems.map((item) => {
+                    const isActive = activeSection === item.id;
+                    return (
+                      <li key={item.id} className="relative">
+                        {isActive && (
+                          <motion.div
+                            layoutId="mobileActiveIndicator"
+                            className="absolute inset-0 bg-primary/10 border-l-2 border-primary rounded-lg"
+                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                          />
                         )}
-                        <span>{item.label}</span>
-                      </button>
-                    </li>
-                  ))}
+                        <button
+                          onClick={() => scrollTo(item.id)}
+                          className={`
+                            relative w-full text-left text-sm py-2.5 px-3 rounded-lg transition-colors duration-200 flex items-center gap-2
+                            ${item.level === 2 ? "pl-7 text-xs" : "font-semibold"}
+                            ${
+                              isActive
+                                ? "text-primary"
+                                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                            }
+                          `}
+                          aria-current={isActive ? "location" : undefined}
+                        >
+                          <span className="relative z-10 flex items-center gap-2">
+                            {isActive && (
+                              <ChevronRight className="w-3 h-3 flex-shrink-0 text-primary" />
+                            )}
+                            {item.label}
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ul>
+
+                {/* Section counter */}
+                <div className="mt-6 pt-4 border-t border-border/30 text-center">
+                  <p className="text-[10px] text-muted-foreground/60">
+                    Section {activeIndex + 1} of {tocItems.length}
+                  </p>
+                </div>
               </div>
             </motion.nav>
           </>
