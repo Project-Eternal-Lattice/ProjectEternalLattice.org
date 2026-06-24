@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { List, ChevronRight, X, BookOpen } from "lucide-react";
+import { List, ChevronRight, X, BookOpen, Search } from "lucide-react";
 
 interface TocItem {
   id: string;
@@ -38,13 +38,124 @@ const tocItems: TocItem[] = [
   { id: "triadic-architecture", label: "AG.38 Triadic Architecture", level: 2 },
 ];
 
+// CSS.highlights API for native text highlighting (with fallback)
+const HIGHLIGHT_STYLE_ID = "theory-search-highlight-style";
+
+function ensureHighlightStyle() {
+  if (document.getElementById(HIGHLIGHT_STYLE_ID)) return;
+  const style = document.createElement("style");
+  style.id = HIGHLIGHT_STYLE_ID;
+  style.textContent = `
+    ::highlight(theory-search) {
+      background-color: oklch(0.85 0.15 85);
+      color: oklch(0.25 0.05 85);
+      border-radius: 2px;
+    }
+    mark.theory-search-mark {
+      background-color: oklch(0.85 0.15 85);
+      color: oklch(0.25 0.05 85);
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function highlightTextInSection(sectionId: string, query: string): number {
+  const el = document.getElementById(sectionId);
+  if (!el || !query.trim()) return 0;
+
+  // Use CSS Custom Highlight API if available
+  if ("Highlight" in window && CSS.highlights) {
+    const ranges: Range[] = [];
+    const treeWalker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const lowerQuery = query.toLowerCase();
+
+    let node: Text | null;
+    while ((node = treeWalker.nextNode() as Text | null)) {
+      const text = node.textContent?.toLowerCase() || "";
+      let startIdx = 0;
+      while (startIdx < text.length) {
+        const idx = text.indexOf(lowerQuery, startIdx);
+        if (idx === -1) break;
+        const range = new Range();
+        range.setStart(node, idx);
+        range.setEnd(node, idx + query.length);
+        ranges.push(range);
+        startIdx = idx + query.length;
+      }
+    }
+
+    if (ranges.length > 0) {
+      const highlight = new (window as any).Highlight(...ranges);
+      CSS.highlights.set("theory-search", highlight);
+    }
+    return ranges.length;
+  }
+
+  return 0;
+}
+
+function clearHighlights() {
+  if ("Highlight" in window && CSS.highlights) {
+    CSS.highlights.delete("theory-search");
+  }
+  // Also remove any fallback marks
+  document.querySelectorAll("mark.theory-search-mark").forEach((mark) => {
+    const parent = mark.parentNode;
+    if (parent) {
+      parent.replaceChild(document.createTextNode(mark.textContent || ""), mark);
+      parent.normalize();
+    }
+  });
+}
+
+// Check if a section contains the search query in its text content
+function sectionContainsText(sectionId: string, query: string): boolean {
+  const el = document.getElementById(sectionId);
+  if (!el || !query.trim()) return false;
+  return el.textContent?.toLowerCase().includes(query.toLowerCase()) || false;
+}
+
+// Render label with highlighted matching text
+function HighlightedLabel({ label, query }: { label: string; query: string }) {
+  if (!query.trim()) return <>{label}</>;
+
+  const lowerLabel = label.toLowerCase();
+  const lowerQuery = query.toLowerCase();
+  const idx = lowerLabel.indexOf(lowerQuery);
+
+  if (idx === -1) return <>{label}</>;
+
+  const before = label.slice(0, idx);
+  const match = label.slice(idx, idx + query.length);
+  const after = label.slice(idx + query.length);
+
+  return (
+    <>
+      {before}
+      <span className="bg-primary/30 text-primary rounded-sm px-0.5">{match}</span>
+      {after}
+    </>
+  );
+}
+
 export function TheoryTableOfContents() {
   const [activeSection, setActiveSection] = useState("top");
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [contentMatches, setContentMatches] = useState<Record<string, boolean>>({});
   const activeItemRef = useRef<HTMLButtonElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
+  const mobileSearchInputRef = useRef<HTMLInputElement | null>(null);
+  const highlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    ensureHighlightStyle();
+  }, []);
 
   useEffect(() => {
     const checkDesktop = () => setIsDesktop(window.innerWidth >= 1280);
@@ -58,7 +169,6 @@ export function TheoryTableOfContents() {
     const observers: IntersectionObserver[] = [];
     const sectionIds = tocItems.map((item) => item.id).filter((id) => id !== "top");
 
-    // Track scroll position for "top" detection
     const handleScroll = () => {
       if (isScrolling) return;
       if (window.scrollY < 200) {
@@ -93,23 +203,70 @@ export function TheoryTableOfContents() {
     };
   }, [isScrolling]);
 
+  // Debounced search: highlight matching content and filter sections
+  useEffect(() => {
+    if (highlightTimeoutRef.current) {
+      clearTimeout(highlightTimeoutRef.current);
+    }
+
+    highlightTimeoutRef.current = setTimeout(() => {
+      clearHighlights();
+
+      if (!searchQuery.trim()) {
+        setContentMatches({});
+        return;
+      }
+
+      const matches: Record<string, boolean> = {};
+      let totalHighlights = 0;
+
+      tocItems.forEach((item) => {
+        // Check label match
+        const labelMatch = item.label.toLowerCase().includes(searchQuery.toLowerCase());
+        // Check content match
+        const contentMatch = sectionContainsText(item.id, searchQuery);
+        matches[item.id] = labelMatch || contentMatch;
+
+        if (contentMatch) {
+          totalHighlights += highlightTextInSection(item.id, searchQuery);
+        }
+      });
+
+      // If CSS Highlights API isn't available but we have matches, highlight all at once
+      if (!("Highlight" in window && CSS.highlights) && totalHighlights === 0) {
+        // Fallback: just show which sections match without in-page highlighting
+      }
+
+      setContentMatches(matches);
+    }, 250);
+
+    return () => {
+      if (highlightTimeoutRef.current) {
+        clearTimeout(highlightTimeoutRef.current);
+      }
+    };
+  }, [searchQuery]);
+
+  // Clean up highlights on unmount
+  useEffect(() => {
+    return () => clearHighlights();
+  }, []);
+
   // Auto-scroll the sidebar to keep active item visible
   useEffect(() => {
-    if (activeItemRef.current && scrollContainerRef.current) {
+    if (activeItemRef.current && scrollContainerRef.current && !searchQuery) {
       const container = scrollContainerRef.current;
       const item = activeItemRef.current;
       const containerRect = container.getBoundingClientRect();
       const itemRect = item.getBoundingClientRect();
 
-      // Check if item is outside visible area of the container
       if (itemRect.top < containerRect.top || itemRect.bottom > containerRect.bottom) {
         item.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
-  }, [activeSection]);
+  }, [activeSection, searchQuery]);
 
   const scrollTo = useCallback((id: string) => {
-    // Temporarily disable IntersectionObserver updates during programmatic scroll
     setIsScrolling(true);
     setActiveSection(id);
 
@@ -118,7 +275,6 @@ export function TheoryTableOfContents() {
     } else {
       const el = document.getElementById(id);
       if (el) {
-        // Calculate offset for fixed navbar (96px = 6rem)
         const navbarOffset = 96;
         const elementPosition = el.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - navbarOffset;
@@ -132,15 +288,76 @@ export function TheoryTableOfContents() {
 
     if (!isDesktop) setIsOpen(false);
 
-    // Re-enable IntersectionObserver after scroll animation completes
     setTimeout(() => {
       setIsScrolling(false);
     }, 1000);
   }, [isDesktop]);
 
-  // Progress indicator: what percentage through the page
+  // Filtered items based on search
+  const filteredItems = useMemo(() => {
+    if (!searchQuery.trim()) return tocItems;
+    return tocItems.filter((item) => contentMatches[item.id]);
+  }, [searchQuery, contentMatches]);
+
+  const matchCount = useMemo(() => {
+    return Object.values(contentMatches).filter(Boolean).length;
+  }, [contentMatches]);
+
+  // Progress indicator
   const activeIndex = tocItems.findIndex((item) => item.id === activeSection);
   const progress = tocItems.length > 1 ? (activeIndex / (tocItems.length - 1)) * 100 : 0;
+
+  // Shared search input component
+  const SearchInput = ({ inputRef, compact }: { inputRef: React.RefObject<HTMLInputElement | null>; compact?: boolean }) => (
+    <div className="relative">
+      <Search className={`absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground/60 ${compact ? "w-3 h-3" : "w-3.5 h-3.5"}`} />
+      <input
+        ref={inputRef}
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Filter sections..."
+        className={`
+          w-full bg-muted/30 border border-border/40 rounded-lg
+          text-foreground placeholder:text-muted-foreground/50
+          focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary/50
+          transition-all duration-200
+          ${compact ? "pl-7 pr-7 py-1 text-[10px]" : "pl-8 pr-8 py-1.5 text-xs"}
+        `}
+        aria-label="Search theory sections"
+      />
+      {searchQuery && (
+        <button
+          onClick={() => {
+            setSearchQuery("");
+            inputRef.current?.focus();
+          }}
+          className={`absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground/60 hover:text-foreground transition-colors ${compact ? "p-0" : "p-0.5"}`}
+          aria-label="Clear search"
+        >
+          <X className={compact ? "w-3 h-3" : "w-3.5 h-3.5"} />
+        </button>
+      )}
+    </div>
+  );
+
+  // Match count badge
+  const MatchBadge = () => {
+    if (!searchQuery.trim()) return null;
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-[9px] text-muted-foreground/70 mt-1 text-center"
+      >
+        {matchCount === 0 ? (
+          <span className="text-destructive/70">No matches</span>
+        ) : (
+          <span>{matchCount} section{matchCount !== 1 ? "s" : ""} matched</span>
+        )}
+      </motion.div>
+    );
+  };
 
   // Desktop: always-visible sticky sidebar
   if (isDesktop) {
@@ -150,71 +367,111 @@ export function TheoryTableOfContents() {
         aria-label="Theory page table of contents"
       >
         <div className="bg-background/85 backdrop-blur-lg border border-border/40 rounded-2xl shadow-xl shadow-black/20 overflow-hidden">
-          {/* Header with progress */}
-          <div className="px-4 pt-3 pb-2 border-b border-border/30">
+          {/* Header with progress and search */}
+          <div className="px-3 pt-3 pb-2 border-b border-border/30">
             <div className="flex items-center gap-2 mb-2">
               <BookOpen className="w-3.5 h-3.5 text-primary/70" />
               <h3 className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">
                 Contents
               </h3>
             </div>
-            {/* Progress bar */}
-            <div className="h-0.5 bg-muted/30 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-primary/80 to-purple-400/80 rounded-full"
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              />
-            </div>
+            {/* Search input */}
+            <SearchInput inputRef={searchInputRef} compact />
+            <MatchBadge />
+            {/* Progress bar (hidden during search) */}
+            {!searchQuery && (
+              <div className="h-0.5 bg-muted/30 rounded-full overflow-hidden mt-2">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-primary/80 to-purple-400/80 rounded-full"
+                  animate={{ width: `${progress}%` }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                />
+              </div>
+            )}
           </div>
 
           {/* Scrollable list */}
           <div
             ref={scrollContainerRef}
-            className="overflow-y-auto max-h-[calc(70vh-4rem)] scrollbar-thin px-2 py-2"
+            className="overflow-y-auto max-h-[calc(70vh-6rem)] scrollbar-thin px-2 py-2"
           >
-            <ul className="space-y-0.5 relative">
-              {tocItems.map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <li key={item.id} className="relative">
-                    {/* Animated active indicator */}
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeIndicator"
-                        className="absolute inset-0 bg-primary/15 border-l-2 border-primary rounded-md"
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                      />
-                    )}
-                    <button
-                      ref={isActive ? activeItemRef : undefined}
-                      onClick={() => scrollTo(item.id)}
-                      className={`
-                        relative w-full text-left text-[11px] py-1.5 px-2 rounded-md transition-colors duration-200
-                        ${item.level === 2 ? "pl-5" : "font-semibold"}
-                        ${
-                          isActive
-                            ? "text-primary"
-                            : "text-muted-foreground/80 hover:text-foreground hover:bg-muted/40"
-                        }
-                      `}
-                      aria-current={isActive ? "location" : undefined}
-                    >
-                      <span className="relative z-10 flex items-center gap-1.5">
-                        {isActive && item.level === 1 && (
-                          <motion.span
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"
+            <AnimatePresence mode="popLayout">
+              {filteredItems.length > 0 ? (
+                <ul className="space-y-0.5 relative">
+                  {filteredItems.map((item) => {
+                    const isActive = activeSection === item.id;
+                    return (
+                      <motion.li
+                        key={item.id}
+                        layout
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.15 }}
+                        className="relative"
+                      >
+                        {/* Animated active indicator */}
+                        {isActive && !searchQuery && (
+                          <motion.div
+                            layoutId="activeIndicator"
+                            className="absolute inset-0 bg-primary/15 border-l-2 border-primary rounded-md"
+                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
                           />
                         )}
-                        {item.label}
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+                        {/* Search match indicator */}
+                        {searchQuery && contentMatches[item.id] && (
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-3 bg-primary/60 rounded-full" />
+                        )}
+                        <button
+                          ref={isActive && !searchQuery ? activeItemRef : undefined}
+                          onClick={() => scrollTo(item.id)}
+                          className={`
+                            relative w-full text-left text-[11px] py-1.5 px-2 rounded-md transition-colors duration-200
+                            ${item.level === 2 ? "pl-5" : "font-semibold"}
+                            ${
+                              isActive && !searchQuery
+                                ? "text-primary"
+                                : searchQuery && contentMatches[item.id]
+                                ? "text-foreground"
+                                : "text-muted-foreground/80 hover:text-foreground hover:bg-muted/40"
+                            }
+                          `}
+                          aria-current={isActive ? "location" : undefined}
+                        >
+                          <span className="relative z-10 flex items-center gap-1.5">
+                            {isActive && item.level === 1 && !searchQuery && (
+                              <motion.span
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"
+                              />
+                            )}
+                            <HighlightedLabel label={item.label} query={searchQuery} />
+                          </span>
+                        </button>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="py-4 text-center"
+                >
+                  <p className="text-[10px] text-muted-foreground/60">No sections match</p>
+                  <button
+                    onClick={() => {
+                      setSearchQuery("");
+                      searchInputRef.current?.focus();
+                    }}
+                    className="text-[10px] text-primary/70 hover:text-primary mt-1 underline"
+                  >
+                    Clear search
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </nav>
@@ -292,58 +549,103 @@ export function TheoryTableOfContents() {
                     Table of Contents
                   </h3>
                 </div>
-                {/* Progress bar */}
-                <div className="h-1 bg-muted/30 rounded-full overflow-hidden mb-5">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-primary to-purple-400 rounded-full"
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                  />
+
+                {/* Search input */}
+                <div className="my-3">
+                  <SearchInput inputRef={mobileSearchInputRef} />
+                  <MatchBadge />
                 </div>
 
+                {/* Progress bar (hidden during search) */}
+                {!searchQuery && (
+                  <div className="h-1 bg-muted/30 rounded-full overflow-hidden mb-4">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-primary to-purple-400 rounded-full"
+                      animate={{ width: `${progress}%` }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    />
+                  </div>
+                )}
+
                 <ul className="space-y-0.5">
-                  {tocItems.map((item) => {
-                    const isActive = activeSection === item.id;
-                    return (
-                      <li key={item.id} className="relative">
-                        {isActive && (
-                          <motion.div
-                            layoutId="mobileActiveIndicator"
-                            className="absolute inset-0 bg-primary/10 border-l-2 border-primary rounded-lg"
-                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                          />
-                        )}
-                        <button
-                          onClick={() => scrollTo(item.id)}
-                          className={`
-                            relative w-full text-left text-sm py-2.5 px-3 rounded-lg transition-colors duration-200 flex items-center gap-2
-                            ${item.level === 2 ? "pl-7 text-xs" : "font-semibold"}
-                            ${
-                              isActive
-                                ? "text-primary"
-                                : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                            }
-                          `}
-                          aria-current={isActive ? "location" : undefined}
-                        >
-                          <span className="relative z-10 flex items-center gap-2">
-                            {isActive && (
-                              <ChevronRight className="w-3 h-3 flex-shrink-0 text-primary" />
+                  <AnimatePresence mode="popLayout">
+                    {filteredItems.length > 0 ? (
+                      filteredItems.map((item) => {
+                        const isActive = activeSection === item.id;
+                        return (
+                          <motion.li
+                            key={item.id}
+                            layout
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -10 }}
+                            transition={{ duration: 0.15 }}
+                            className="relative"
+                          >
+                            {isActive && !searchQuery && (
+                              <motion.div
+                                layoutId="mobileActiveIndicator"
+                                className="absolute inset-0 bg-primary/10 border-l-2 border-primary rounded-lg"
+                                transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                              />
                             )}
-                            {item.label}
-                          </span>
+                            {searchQuery && contentMatches[item.id] && (
+                              <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 bg-primary/60 rounded-full" />
+                            )}
+                            <button
+                              onClick={() => scrollTo(item.id)}
+                              className={`
+                                relative w-full text-left text-sm py-2.5 px-3 rounded-lg transition-colors duration-200 flex items-center gap-2
+                                ${item.level === 2 ? "pl-7 text-xs" : "font-semibold"}
+                                ${
+                                  isActive && !searchQuery
+                                    ? "text-primary"
+                                    : searchQuery && contentMatches[item.id]
+                                    ? "text-foreground"
+                                    : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                                }
+                              `}
+                              aria-current={isActive ? "location" : undefined}
+                            >
+                              <span className="relative z-10 flex items-center gap-2">
+                                {isActive && !searchQuery && (
+                                  <ChevronRight className="w-3 h-3 flex-shrink-0 text-primary" />
+                                )}
+                                <HighlightedLabel label={item.label} query={searchQuery} />
+                              </span>
+                            </button>
+                          </motion.li>
+                        );
+                      })
+                    ) : (
+                      <motion.li
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="py-4 text-center"
+                      >
+                        <p className="text-xs text-muted-foreground/60">No sections match</p>
+                        <button
+                          onClick={() => {
+                            setSearchQuery("");
+                            mobileSearchInputRef.current?.focus();
+                          }}
+                          className="text-xs text-primary/70 hover:text-primary mt-1 underline"
+                        >
+                          Clear search
                         </button>
-                      </li>
-                    );
-                  })}
+                      </motion.li>
+                    )}
+                  </AnimatePresence>
                 </ul>
 
                 {/* Section counter */}
-                <div className="mt-6 pt-4 border-t border-border/30 text-center">
-                  <p className="text-[10px] text-muted-foreground/60">
-                    Section {activeIndex + 1} of {tocItems.length}
-                  </p>
-                </div>
+                {!searchQuery && (
+                  <div className="mt-6 pt-4 border-t border-border/30 text-center">
+                    <p className="text-[10px] text-muted-foreground/60">
+                      Section {activeIndex + 1} of {tocItems.length}
+                    </p>
+                  </div>
+                )}
               </div>
             </motion.nav>
           </>

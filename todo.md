@@ -3340,3 +3340,8 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add reading progress bar to sidebar — gradient progress bar in header + SVG progress ring on mobile FAB
 - [x] Auto-scroll sidebar to keep active item visible — scrollIntoView on activeItemRef when item exits container bounds
 - [x] Add section counter on mobile panel — "Section X of Y" footer
+- [x] Add search input to Theory sidebar to filter sections by keyword — debounced 250ms, filters ToC items by label + section content match
+- [x] Highlight matching text in page content when searching — CSS Custom Highlight API (::highlight) with gold highlight, fallback for unsupported browsers
+- [x] Highlight matching text in sidebar labels — inline <span> with bg-primary/30 on matched substring
+- [x] Show match count badge below search input — "X sections matched" or "No matches" with animation
+- [x] Animated filter transitions — AnimatePresence + motion.li with layout animation for smooth reordering
