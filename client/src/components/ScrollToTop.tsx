@@ -112,6 +112,50 @@ export default function ScrollToTop() {
         ctx.fill();
       }
 
+      // Scroll progress ring
+      const ringRadius = 25;
+      const ringWidth = isHovered ? 2.5 : 2;
+      const startAngle = -Math.PI / 2; // Start from top
+      const endAngle = startAngle + scrollProgress * Math.PI * 2;
+
+      // Background track (dim)
+      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.1)`;
+      ctx.lineWidth = ringWidth;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.arc(cx, cy, ringRadius, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Progress arc (bright, glowing)
+      if (scrollProgress > 0.01) {
+        // Glow layer
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${isHovered ? 0.4 : 0.25})`;
+        ctx.lineWidth = ringWidth + 3;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(cx, cy, ringRadius, startAngle, endAngle);
+        ctx.stroke();
+
+        // Core progress line
+        ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${isHovered ? 0.9 : 0.7})`;
+        ctx.lineWidth = ringWidth;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(cx, cy, ringRadius, startAngle, endAngle);
+        ctx.stroke();
+
+        // Bright dot at the leading edge
+        const dotX = cx + Math.cos(endAngle) * ringRadius;
+        const dotY = cy + Math.sin(endAngle) * ringRadius;
+        const dotGrad = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 4);
+        dotGrad.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.9)`);
+        dotGrad.addColorStop(1, "transparent");
+        ctx.fillStyle = dotGrad;
+        ctx.beginPath();
+        ctx.arc(dotX, dotY, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
       // Center core glow
       const corePulse = Math.sin(time * 2.5) * 0.15 + 0.85;
       const coreGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 10 * corePulse);
