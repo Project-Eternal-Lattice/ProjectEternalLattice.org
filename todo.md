@@ -3375,3 +3375,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update server download endpoints for v17.0 ToE files
 - [x] Upload new v17.0 ToE documents to S3
 - [x] Update ForAI/Nexus page with latest content
+- [x] Add Cole Trickle (plain-English) version of Genre-Locking paper to /arxiv-paper page

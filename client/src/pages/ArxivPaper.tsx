@@ -649,6 +649,152 @@ export default function ArxivPaper() {
         </div>
       </section>
 
+      {/* ═══ Cole Trickle Version — Plain English ═══ */}
+      <section className="py-16 md:py-20 border-t border-border/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <motion.div {...fadeIn} className="space-y-8">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-amber-400" />
+              </div>
+              <span className="text-sm font-medium text-amber-400 uppercase tracking-wider">
+                Cole Trickle Version
+              </span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+              The Whole Paper — In Plain English
+            </h2>
+            <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-6 md:p-8 mb-8">
+              <p className="text-amber-200 text-lg font-medium leading-relaxed">
+                You don't need a physics degree to understand what we found. Here's the entire paper explained like you're sitting across the table from us.
+              </p>
+            </div>
+
+            <div className="space-y-10 text-lg text-muted-foreground leading-relaxed font-body">
+              {/* The Question */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">1.</span> The Question We Asked
+                </h3>
+                <p>
+                  Where does gravity come from? Not "what does it do" — Newton figured that out in 1687. Not "how does it bend space" — Einstein nailed that in 1915. We're asking something deeper: <strong className="text-foreground">why does gravity exist at all?</strong>
+                </p>
+                <p className="mt-4">
+                  For 90 years, the two biggest theories in physics — quantum mechanics (the science of tiny things) and general relativity (the science of gravity and spacetime) — have refused to work together. They're both correct in their own domain, but they contradict each other at the deepest level. Every attempt to force them together has failed.
+                </p>
+                <p className="mt-4">
+                  We asked: what if gravity isn't a fundamental force at all? What if it <em>emerges</em> — like how temperature isn't a "thing" but just the average motion of trillions of molecules?
+                </p>
+              </div>
+
+              {/* The Answer */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">2.</span> What We Found
+                </h3>
+                <p>
+                  Gravity emerges from <strong className="text-foreground">entanglement</strong> — the quantum connection between particles. When particles are entangled, they share information in a way that creates the fabric of spacetime itself. More entanglement = more spacetime. Less entanglement = spacetime falls apart.
+                </p>
+                <p className="mt-4">
+                  But here's the key insight — the part that's new: <strong className="text-foreground">the pattern of entanglement determines what kind of gravity you get.</strong> Not just whether gravity exists, but which specific type of gravity shows up.
+                </p>
+              </div>
+
+              {/* The Music Analogy */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">3.</span> The Music Analogy (Why It's Called "Genre-Locking")
+                </h3>
+                <p>
+                  Think of music genres. If you're playing blues, certain instruments and rhythms are "allowed" — a 12-bar structure, a shuffle beat, a wailing guitar. If you switch to classical, completely different rules apply — orchestral instruments, written notation, formal structure. The genre <em>locks in</em> what kind of music can exist.
+                </p>
+                <p className="mt-4">
+                  Entanglement works the same way. The "genre" of how particles are connected determines what kind of gravity can exist in that region:
+                </p>
+                <div className="mt-6 space-y-4">
+                  <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5">
+                    <p className="font-semibold text-emerald-300 mb-2">Genre 1: "Area-Law" Entanglement</p>
+                    <p className="text-base">
+                      Particles are connected mostly at boundaries — like neighbors talking over a fence. This produces <strong className="text-foreground">Einstein's gravity</strong>. The gravity we feel right now. Apples falling, planets orbiting, GPS satellites needing relativistic corrections. This is the everyday universe.
+                    </p>
+                  </div>
+                  <div className="bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-5">
+                    <p className="font-semibold text-cyan-300 mb-2">Genre 2: "Log-Law" Entanglement</p>
+                    <p className="text-base">
+                      Particles are connected in a spreading, logarithmic pattern — like ripples from a stone in a pond. This produces <strong className="text-foreground">2D dilaton gravity</strong> — a simpler, two-dimensional version of gravity that physicists study near black holes and in string theory.
+                    </p>
+                  </div>
+                  <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
+                    <p className="font-semibold text-red-300 mb-2">Genre 3: "Volume-Law" Entanglement</p>
+                    <p className="text-base">
+                      Everything is connected to everything — total quantum chaos. Result? <strong className="text-foreground">No coherent gravity at all.</strong> Spacetime itself can't form. It's like trying to play every genre simultaneously — you just get noise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* What We Proved */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">4.</span> What We Actually Proved (Not Just Claimed)
+                </h3>
+                <p>
+                  This isn't philosophy. We derived a mathematical equation — an ODE (ordinary differential equation) — that shows exactly how the entanglement pattern produces each type of gravity. Then we ran the numbers on a computer and confirmed it matches known physics to <strong className="text-foreground">five significant figures</strong>.
+                </p>
+                <p className="mt-4">
+                  Five significant figures means our math agrees with established results to 99.999% accuracy. That's not a coincidence. That's a derivation that works.
+                </p>
+                <p className="mt-4">
+                  We also made a prediction that nobody has tested yet: <strong className="text-foreground">at a quantum phase transition (when matter changes state at the quantum level), gravity should "turn off."</strong> The entanglement pattern shifts, the genre changes, and gravity temporarily loses coherence. That's falsifiable — meaning someone can actually test it and prove us wrong if we're wrong. That's how real science works.
+                </p>
+              </div>
+
+              {/* Why It Matters */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">5.</span> Why This Matters
+                </h3>
+                <p>
+                  If gravity emerges from entanglement patterns, then <strong className="text-foreground">spacetime is not fundamental</strong>. It's made of something deeper — quantum information. The universe isn't a stage where physics happens. The stage itself is built from the connections between things.
+                </p>
+                <p className="mt-4">
+                  This connects to the biggest unsolved problem in physics: unifying quantum mechanics and gravity. For 90 years, physicists have tried to "quantize gravity" — force gravity into the quantum framework. We're saying: stop trying to quantize gravity. Gravity was never fundamental. It <em>emerges</em> from quantum mechanics. The unification already happened — we just needed to see it from the right angle.
+                </p>
+              </div>
+
+              {/* The Honest Part */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                  <span className="text-amber-400">6.</span> What We Don't Know Yet
+                </h3>
+                <p>
+                  We're honest about the limits. The paper uses an "epistemic tier" system — every claim is labeled as either (1) numerically confirmed math, (2) a logical derivation within the framework, or (3) a conjecture that needs more work.
+                </p>
+                <p className="mt-4">
+                  The higher-dimensional version (the one that produces Einstein's gravity in our 3D+time universe) is a structured generalization — meaning we extended the 2D result upward using consistency requirements, not a ground-up derivation. It works, it's self-consistent, it reproduces Einstein when it should — but a fully independent derivation in 4D is still an open problem.
+                </p>
+                <p className="mt-4">
+                  We say this openly in the paper. No hand-waving. No hiding the gaps.
+                </p>
+              </div>
+
+              {/* The Bottom Line */}
+              <div className="bg-gradient-to-r from-amber-500/10 to-purple-500/10 border border-amber-500/20 rounded-2xl p-6 md:p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
+                  The Bottom Line
+                </h3>
+                <p className="text-lg leading-relaxed">
+                  We showed — mathematically, with numerical confirmation — that the way particles are quantum-connected determines what kind of gravity exists. Change the connection pattern, change the gravity. The universe's most familiar force isn't fundamental. It's emergent. It's built from information.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed">
+                  And if you're wondering what creates those entanglement patterns in the first place — that's where the rest of the Theory of Everything comes in.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ═══ Connection to the ToE ═══ */}
       <section className="py-16 md:py-20 border-t border-border/30">
         <div className="container mx-auto px-4 max-w-4xl">
