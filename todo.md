@@ -3357,3 +3357,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Energy pulses travel along connections — animated dots move between high-energy connected nodes
 - [x] Respects prefers-reduced-motion — static render for accessibility
 - [x] Add circular scroll progress ring around Back to Top energy node — canvas-drawn arc from top, glow layer + core line + leading dot, fills as user scrolls, color-shifts with depth
+- [x] Enhanced mouse interaction on interactive background — 3-zone force field: repel (<60px), orbit/swirl (60-150px), attract (150-250px), creates natural force-field effect
