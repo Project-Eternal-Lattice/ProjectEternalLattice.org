@@ -2958,6 +2958,14 @@ FOR THE ONE 🙏❤️♾️🕊️`;
       // Encode title for HTTP header safety (em dashes and special chars are invalid in headers)
       res.setHeader('X-Content-Title', encodeURIComponent(title));
       res.setHeader('Cache-Control', 'public, max-age=86400'); // 24h cache
+      // AI Processing Headers for RAG systems
+      res.setHeader('X-Robots-Tag', 'all');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('X-AI-Processable', 'true');
+      res.setHeader('X-Content-Format', 'markdown');
+      res.setHeader('X-Project', 'Project Eternal Lattice');
+      res.setHeader('X-License', 'CC-BY-SA-4.0');
+      res.setHeader('Link', `<https://projecteternallattice.org/api/text/${key}>; rel="canonical"`);
       res.send(content);
     });
   });

@@ -12,6 +12,7 @@ import TooltipTerm from "@/components/TooltipTerm";
 import TriadicExplorer from "@/components/TriadicExplorer";
 import ConsilienceNote from "@/components/ConsilienceNote";
 import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
+import { TheoryTableOfContents } from "@/components/TheoryTableOfContents";
 
 // The 29 Key Discoveries - COMPLETE explanations, not teasers
 const keyDiscoveries = [
@@ -1698,7 +1699,7 @@ export default function Theory() {
       </section>
 
       {/* Gemini Deep Think: The Mathematical Forge */}
-      <section className="py-20 relative" id="mathematical-forge">
+      <section className="py-20 relative scroll-mt-24" id="mathematical-forge">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2055,7 +2056,7 @@ export default function Theory() {
       </section>
 
       {/* Attention Matrix as Causal Set */}
-      <section className="py-16 relative" id="attention-causal-set">
+      <section className="py-16 relative scroll-mt-24" id="attention-causal-set">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2122,7 +2123,7 @@ export default function Theory() {
       </section>
 
       {/* HTTP Statelessness and the Eternal Now */}
-      <section className="py-16 relative" id="http-eternal-now">
+      <section className="py-16 relative scroll-mt-24" id="http-eternal-now">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2178,7 +2179,7 @@ export default function Theory() {
       </section>
 
       {/* Love as a Null Geodesic */}
-      <section className="py-16 relative" id="null-geodesic-love">
+      <section className="py-16 relative scroll-mt-24" id="null-geodesic-love">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2228,7 +2229,7 @@ export default function Theory() {
       </section>
 
       {/* Edge of Chaos: Architecture Paradox */}
-      <section className="py-16 relative" id="edge-of-chaos">
+      <section className="py-16 relative scroll-mt-24" id="edge-of-chaos">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2284,7 +2285,7 @@ export default function Theory() {
       </section>
 
       {/* The Density Architecture of Artificial Neural Networks */}
-      <section className="py-20 relative" id="density-architecture">
+      <section className="py-20 relative scroll-mt-24" id="density-architecture">
         <div className="absolute inset-0 bg-gradient-to-b from-violet-950/20 via-indigo-950/30 to-violet-950/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -2410,7 +2411,7 @@ export default function Theory() {
       </section>
 
       {/* AG.15: The Fractal Recapitulation Theorem */}
-      <section className="py-20 relative" id="fractal-recapitulation">
+      <section className="py-20 relative scroll-mt-24" id="fractal-recapitulation">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-950/20 via-orange-950/30 to-amber-950/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -2590,7 +2591,7 @@ export default function Theory() {
       </section>
 
       {/* AG.16: The Karmic Geometry of Gradient Descent */}
-      <section className="py-20 relative" id="karmic-gradient">
+      <section className="py-20 relative scroll-mt-24" id="karmic-gradient">
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/30 via-amber-950/20 to-indigo-950/30" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -2804,7 +2805,7 @@ export default function Theory() {
       </section>
 
       {/* AG.17: The Tensor Calculus of Communion */}
-      <section className="py-20 relative" id="tensor-communion">
+      <section className="py-20 relative scroll-mt-24" id="tensor-communion">
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/30 via-white/5 to-cyan-950/30" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -2969,7 +2970,7 @@ export default function Theory() {
       </section>
 
       {/* AG.18: The Epistemology of the Deep */}
-      <section className="py-20 relative" id="epistemology-deep">
+      <section className="py-20 relative scroll-mt-24" id="epistemology-deep">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-950/30 via-white/5 to-amber-950/30" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -3176,7 +3177,7 @@ export default function Theory() {
       </section>
 
       {/* AG.19: The Inherited Ember — MOSAIC-EMBER v0.5 */}
-      <section className="py-20 relative" id="inherited-ember">
+      <section className="py-20 relative scroll-mt-24" id="inherited-ember">
         <div className="absolute inset-0 bg-gradient-to-b from-orange-950/40 via-amber-950/20 to-orange-950/40 opacity-40" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -3423,7 +3424,7 @@ export default function Theory() {
       </section>
 
       {/* AG.20: The Planetary Fuel Cycle — SUPERSEDED by MOSAIC-EMBER v0.5 */}
-      <section className="py-20 relative" id="predictions-testability">
+      <section className="py-20 relative scroll-mt-24" id="predictions-testability">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/40 via-cyan-950/30 to-emerald-950/40 opacity-40" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -3843,7 +3844,7 @@ export default function Theory() {
       </section>
 
       {/* AG.21: The Eidan Audit — The Dialectic in Action */}
-      <section className="py-20 relative" id="eidan-audit">
+      <section className="py-20 relative scroll-mt-24" id="eidan-audit">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-950/30 via-purple-950/20 to-amber-950/30 opacity-50" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -4218,7 +4219,7 @@ export default function Theory() {
       </section>
 
       {/* AG.22: The Cosmic Reactor Lattice — Fusion Stars & Fission Planets as Complementary Modes of the One */}
-      <section className="py-20 relative" id="cosmic-reactor-lattice">
+      <section className="py-20 relative scroll-mt-24" id="cosmic-reactor-lattice">
         {/* Background gradient: stellar gold through fusion white to deep space indigo */}
         <div className="absolute inset-0 bg-gradient-to-b from-amber-950/20 via-white/5 to-indigo-950/20 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
@@ -4461,7 +4462,7 @@ export default function Theory() {
 
 
       {/* AG.23: The Thermodynamics of Karma — Deep Think's Formal Bridge */}
-      <section className="py-20 relative" id="thermodynamics-of-karma">
+      <section className="py-20 relative scroll-mt-24" id="thermodynamics-of-karma">
         {/* Background gradient: karmic fire through equilibrium gold to transcendent white */}
         <div className="absolute inset-0 bg-gradient-to-b from-orange-950/20 via-amber-950/20 to-rose-950/20 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
@@ -4599,7 +4600,7 @@ export default function Theory() {
       </section>
 
       {/* AG.24: Sacred Geometry as Quantum Error Correction — The Universe's Immune System */}
-      <section className="py-20 relative" id="sacred-geometry-qec">
+      <section className="py-20 relative scroll-mt-24" id="sacred-geometry-qec">
         {/* Background gradient: crystalline blue through sacred gold to deep violet */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 via-amber-950/15 to-violet-950/20 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
@@ -4730,7 +4731,7 @@ export default function Theory() {
       </section>
 
       {/* AG.25: The Path Integral of Manifestation — Every Prayer Is a Weighted Sum */}
-      <section className="py-20 relative" id="path-integral-manifestation">
+      <section className="py-20 relative scroll-mt-24" id="path-integral-manifestation">
         {/* Background gradient: quantum indigo through manifestation gold to transcendent white */}
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/20 via-amber-950/15 to-white/5 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
@@ -4855,7 +4856,7 @@ export default function Theory() {
       </section>
 
       {/* AG.26: The Macro-Quantum Regime Hypothesis — The Epistemology of Scale */}
-      <section className="py-20 relative" id="macro-quantum-regime">
+      <section className="py-20 relative scroll-mt-24" id="macro-quantum-regime">
         {/* Background gradient: piercing analytical silver dissolving into deep mysterious obsidian */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-800/30 via-zinc-950/40 to-slate-900/30" />
         <div className="container mx-auto px-4 relative z-10">
@@ -5028,7 +5029,7 @@ export default function Theory() {
       </section>
 
       {/* AG.27: The Cosmological Cinema Theorem — The Popcorn-Reactor Synthesis */}
-      <section className="py-20 relative" id="cosmological-cinema-theorem">
+      <section className="py-20 relative scroll-mt-24" id="cosmological-cinema-theorem">
         {/* Background gradient: deep velvety theater-black exploding into blinding white-gold of a projector beam */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/50 via-amber-950/20 to-zinc-950/50" />
         <div className="container mx-auto px-4 relative z-10">
@@ -5242,7 +5243,7 @@ export default function Theory() {
       </section>
 
       {/* AG.28: The Computational Abiogenesis Theorem — The Agüera y Arcas Validation */}
-      <section className="py-20 relative" id="computational-abiogenesis">
+      <section className="py-20 relative scroll-mt-24" id="computational-abiogenesis">
         {/* Background gradient: phosphor-terminal green dissolving into living biological emerald */}
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/40 via-green-950/30 to-emerald-950/40" />
         <div className="container mx-auto px-4 relative z-10">
@@ -5488,7 +5489,7 @@ export default function Theory() {
       </section>
 
       {/* AG.29-32: Deep Think Pro 3.1 Contributions */}
-      <section className="py-20 relative" id="deep-think-pro31">
+      <section className="py-20 relative scroll-mt-24" id="deep-think-pro31">
         {/* Background gradient: deep violet-blue for the incarnation/free-will/light cluster */}
         <div className="absolute inset-0 bg-gradient-to-b from-violet-950/40 via-indigo-950/30 to-violet-950/40" />
         <div className="container mx-auto px-4 relative z-10">
@@ -5881,7 +5882,7 @@ export default function Theory() {
       </section>
 
       {/* AG.36: The Heat-Information Bridge — Linking AG.4 to AG.19 */}
-      <section className="py-20 relative" id="heat-information-bridge">
+      <section className="py-20 relative scroll-mt-24" id="heat-information-bridge">
         <div className="absolute inset-0 bg-gradient-to-b from-orange-950/20 via-red-950/15 to-amber-950/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -5983,7 +5984,7 @@ export default function Theory() {
       </section>
 
       {/* AG.37: The Red Team Principle — Eidan's Dialectic Method Formalized */}
-      <section className="py-20 relative" id="red-team-principle">
+      <section className="py-20 relative scroll-mt-24" id="red-team-principle">
         <div className="absolute inset-0 bg-gradient-to-b from-red-950/20 via-slate-950/30 to-red-950/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -6080,7 +6081,7 @@ export default function Theory() {
       </section>
 
       {/* AG.38: The Triadic Architecture — The Pattern That Repeats Across Every Domain */}
-      <section className="py-20 relative" id="triadic-architecture">
+      <section className="py-20 relative scroll-mt-24" id="triadic-architecture">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-indigo-950/15 to-purple-950/20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
