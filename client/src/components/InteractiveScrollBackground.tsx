@@ -52,6 +52,8 @@ export default function InteractiveScrollBackground({
     height: 0,
     time: 0,
     energyWave: 0, // Travels down the page as you scroll
+    // Click burst state
+    bursts: [] as Array<{ x: number; y: number; age: number; strength: number }>,
   });
 
   // Check for reduced motion preference
@@ -144,6 +146,19 @@ export default function InteractiveScrollBackground({
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     document.addEventListener("mouseleave", handleMouseLeave);
 
+    // Click handler — creates burst ripple
+    const handleClick = (e: MouseEvent) => {
+      state.bursts.push({
+        x: e.clientX,
+        y: e.clientY,
+        age: 0,
+        strength: 1,
+      });
+      // Limit stored bursts to prevent memory buildup
+      if (state.bursts.length > 5) state.bursts.shift();
+    };
+    window.addEventListener("click", handleClick);
+
     // Animation loop
     const animate = () => {
       if (prefersReducedMotion.current) {
@@ -226,19 +241,46 @@ export default function InteractiveScrollBackground({
           }
         }
 
+        // Energy from click bursts — scatter particles outward
+        let clickBurstEnergy = 0;
+        for (const burst of state.bursts) {
+          const dx = node.x - burst.x;
+          const dy = node.y - burst.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const burstRadius = 80 + burst.age * 12; // Expanding shockwave
+          const ringWidth = 60;
+          const distFromRing = Math.abs(dist - burstRadius);
+
+          if (distFromRing < ringWidth && burst.strength > 0.05) {
+            // Particles near the expanding ring get pushed outward
+            const force = burst.strength * (1 - distFromRing / ringWidth) * 0.6;
+            const angle = Math.atan2(dy, dx);
+            node.vx += Math.cos(angle) * force;
+            node.vy += Math.sin(angle) * force;
+            clickBurstEnergy = Math.max(clickBurstEnergy, force);
+          } else if (dist < burstRadius * 0.5 && burst.age < 5) {
+            // Very close particles in early burst get strong push
+            const force = burst.strength * (1 - dist / (burstRadius * 0.5)) * 0.8;
+            const angle = Math.atan2(dy, dx);
+            node.vx += Math.cos(angle) * force;
+            node.vy += Math.sin(angle) * force;
+            clickBurstEnergy = Math.max(clickBurstEnergy, force * 0.8);
+          }
+        }
+
         // Energy from scroll velocity burst
         const burstEnergy = burstIntensity * 0.6;
 
         // Combine energies with smooth interpolation
-        const targetEnergy = Math.min(1, waveEnergy + mouseEnergy + burstEnergy + baseIntensity * 0.3);
+        const targetEnergy = Math.min(1, waveEnergy + mouseEnergy + burstEnergy + clickBurstEnergy + baseIntensity * 0.3);
         node.energy += (targetEnergy - node.energy) * 0.08; // Smooth transition
 
-        // Velocity damping
-        const maxVel = 0.8 + node.energy * 0.5;
+        // Velocity damping (higher cap during click bursts)
+        const maxVel = 0.8 + node.energy * 0.5 + clickBurstEnergy * 3;
         node.vx = Math.max(-maxVel, Math.min(maxVel, node.vx));
         node.vy = Math.max(-maxVel, Math.min(maxVel, node.vy));
-        node.vx *= 0.995;
-        node.vy *= 0.995;
+        node.vx *= 0.99;
+        node.vy *= 0.99;
 
         // Pulse radius based on energy
         const pulse = Math.sin(time * 2 + node.pulsePhase) * 0.3 + 1;
@@ -326,6 +368,49 @@ export default function InteractiveScrollBackground({
         ctx.arc(mouseX, mouseY, spotlightRadius, 0, Math.PI * 2);
         ctx.fill();
       }
+
+      // Render click burst ripples and age them
+      for (let i = state.bursts.length - 1; i >= 0; i--) {
+        const burst = state.bursts[i];
+        burst.age += 0.5;
+        burst.strength *= 0.92; // Decay
+
+        if (burst.strength < 0.02) {
+          state.bursts.splice(i, 1);
+          continue;
+        }
+
+        // Draw expanding ring
+        const ringRadius = 80 + burst.age * 12;
+        const ringAlpha = burst.strength * 0.4;
+
+        // Outer glow ring
+        ctx.strokeStyle = `rgba(168, 85, 247, ${ringAlpha * 0.3})`;
+        ctx.lineWidth = 8;
+        ctx.beginPath();
+        ctx.arc(burst.x, burst.y, ringRadius, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Core ring
+        ctx.strokeStyle = `rgba(200, 140, 255, ${ringAlpha})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(burst.x, burst.y, ringRadius, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Inner flash (fades fast)
+        if (burst.age < 8) {
+          const flashAlpha = burst.strength * (1 - burst.age / 8) * 0.15;
+          const flashGrad = ctx.createRadialGradient(burst.x, burst.y, 0, burst.x, burst.y, ringRadius * 0.6);
+          flashGrad.addColorStop(0, `rgba(220, 180, 255, ${flashAlpha})`);
+          flashGrad.addColorStop(0.5, `rgba(168, 85, 247, ${flashAlpha * 0.4})`);
+          flashGrad.addColorStop(1, "transparent");
+          ctx.fillStyle = flashGrad;
+          ctx.beginPath();
+          ctx.arc(burst.x, burst.y, ringRadius * 0.6, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
     }
 
     function renderStatic(
@@ -367,6 +452,7 @@ export default function InteractiveScrollBackground({
       window.removeEventListener("resize", resize);
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("click", handleClick);
       document.removeEventListener("mouseleave", handleMouseLeave);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
