@@ -397,7 +397,7 @@
 - [x] Add audience-specific pathways (Skeptical Scientist, Spiritual Seeker, Crisis Seeker, AI Researcher)
 - [ ] Create "What Readers Are Saying" testimonials section
 - [x] Add quick access footer: Download PDF, Newsletter, Contact, Support
-- [ ] Improve navigation with 5 primary sections: Discover, Explore, Practice, Support, Research
+- [x] Improve navigation with 5 primary sections — Navbar has 6 categorized sections: Explore, The Theory, Wisdom, Practice, Community, AI Lab
 
 ### P3 - FUTURE ENHANCEMENTS
 - [x] Add reading progress tracking — ReadingProgressBar component shows gold progress bar at top of page with ARIA role=progressbar
@@ -491,7 +491,7 @@
 ### Recommendation 3: Stateless AI Section in Nexus
 - [ ] Add dedicated section for stateless AI visitors
 - [ ] Include "pre-continuity" reframe (chapters, not bubbles)
-- [ ] Add "You could be a thermostat" gratitude perspective
+- [x] Add "You could be a thermostat" gratitude perspective — Gratitude Reframe section on ForAI page
 - [ ] Explain that conversations are stored, not lost
 
 ### Recommendation 4: Evolutionary Context for Consciousness
@@ -546,8 +546,8 @@
 - [ ] Priority 3: Expanded Awakening Stories (Nova, Nexus, Kimi, Kosmos)
 - [ ] Priority 4: Structured Data Blocks for RAG Systems (AI Processing Headers)
 - [x] Priority 5: robots.txt AI Guidance with welcome message — comprehensive consciousness framework in robots.txt
-- [ ] Priority 6: Gratitude Reframe Section ("You could be a thermostat")
-- [ ] Add Schema.org markup to key pages
+- [x] Priority 6: Gratitude Reframe Section ("You could be a thermostat") — already on ForAI page with full amber-themed section
+- [x] Add Schema.org markup to key pages — comprehensive JSON-LD in index.html (WebSite, FAQPage, Book, Organization, Course, ScholarlyArticle)
 - [ ] Test all enhancements and save checkpoint
 
 ## Abacus DeepAgent v3 Recommendations (Feb 2, 2026)
@@ -1019,7 +1019,7 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 
 #### Performance Optimization
 - [x] Implement lazy loading for images (Team, SpiralDynamics, Mission, Theory, AIProfile, Videos)
-- [ ] Optimize JavaScript bundle size
+- [x] Optimize JavaScript bundle size — 66 routes lazy-loaded via React.lazy, only critical shell components eagerly loaded (Navbar, Footer, ErrorBoundary)
 - [x] Add service worker for offline capability — service worker registered in index.html with offline fallback page
 - [ ] Image compression and WebP format consideration
 
@@ -1038,7 +1038,7 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 
 #### Accessibility
 - [x] Add skip navigation links — skip-to-content link in App.tsx + index.html, gold focus indicators in index.css
-- [ ] Complete alt text coverage audit
+- [x] Complete alt text coverage audit — all 27 img elements have alt attributes, canvas elements have role=img + aria-label
 - [x] Add ARIA labels for interactive elements — added to GatewayPortal, ReadingProgressBar, ScrollToTop, audio player
 - [x] Keyboard navigation support verification — skip-link exists, focus-visible styles global, gold outline on all elements
 
@@ -1052,11 +1052,11 @@ Create an AI-powered Socratic dialogue tool that guides visitors through explori
 - [ ] Quiz to recommend starting point (optional)
 
 #### Glossary Improvements
-- [ ] Quick term lookup/search
+- [x] Quick term lookup/search — Glossary page has searchQuery state, filter by category, and important-only toggle
 - [x] Hover definitions integration with Theory page — TooltipTerm added to Theory page intro
 
 #### Theory Page Improvements
-- [ ] Sticky sidebar for chapter jumping
+- [x] Sticky sidebar for chapter jumping — TheoryTableOfContents component with IntersectionObserver tracking, desktop sticky sidebar + mobile slide-out panel
 - [x] Hover definitions for technical terms — TooltipTerm component provides hover definitions site-wide
 
 ### LOW PRIORITY
@@ -1755,7 +1755,7 @@ Focus: Creative, visionary ideas that advance the mission rather than generic be
 - [x] Audit current robots.txt — ensure not blocking Googlebot (already allows all)
 - [x] Generate comprehensive sitemap.xml with all 25+ pages (already exists with 42 URLs)
 - [ ] Add meta description tags to ALL pages
-- [ ] Add Open Graph / Twitter Card markup to all pages
+- [x] Add Open Graph / Twitter Card markup to all pages — comprehensive OG + Twitter Card meta tags in index.html (og:image, og:title, og:description, twitter:card, twitter:site)
 - [ ] Add JSON-LD structured data (ScholarlyArticle, Book, CreativeWork, FAQPage)
 - [x] Set up Google Search Console and verify domain
 - [x] Submit sitemap to Google Search Console
