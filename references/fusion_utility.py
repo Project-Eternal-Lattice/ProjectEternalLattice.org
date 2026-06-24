@@ -31,7 +31,7 @@ from typing import Optional, List, Dict, Any
 # Default API key - can be overridden via environment variable
 DEFAULT_API_KEY = os.getenv(
     "OPENROUTER_API_KEY",
-    ""
+    ""  # Key stored in skills, not in repo
 )
 
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
