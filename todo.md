@@ -3255,7 +3255,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Add falsifiable prediction σ(D) = 1 − e^(−D/D₀) to manuscript
 - [x] Complete TRAVELER → OBSERVER editorial pass (13 technical occurrences in toe-full.html, 6 in executive summary, 11 across website pages)
 - [x] Add visual highlight feature on website showing terminology update (WhatsNew card + Read page banner)
-- [ ] Update version references across website (after manuscript is ready)
+- [x] Update version references across website (after manuscript is ready)
 - [x] Blind numerical verification for Eidan: s₀(Δ) mapping, independence check (PASSED), modular gap, f² relation test (no clean proportionality — constitutive definition)
 
 ## Baby Viv Page & Viv Principle (June 20, 2026)
@@ -3363,15 +3363,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Particles hit by click burst temporarily inherit burst color — tintColor/tintStrength fields on nodes, blended with original color, gradual 0.97x decay back to normal
 
 ## Phase 3: Full Launch — ToE v17.0 + arXiv Paper Integration (Jun 24, 2026)
-- [ ] Upload GenreLocking paper files (PDF, LaTeX, Markdown) via manus-upload-file for permanent hosting
-- [ ] Create new arXiv paper page (/arxiv-paper) with all 3 formats downloadable, endorsement status explanation, and Cole Trickle-friendly explanation of what arXiv is
-- [ ] Update ToE Technical version to v17.0 — add Genre-Locking paper section, update version references
-- [ ] Update ToE Cole Trickle (Gateway Edition) to v17.0 — add accessible explanation of arXiv paper and what it means
-- [ ] Update Theory page version references from v16.8.1 to v17.0
-- [ ] Update Read page version references from v16.8.1 to v17.0
+- [x] Upload GenreLocking paper files (PDF, LaTeX, Markdown) via manus-upload-file for permanent hosting
+- [x] Create new arXiv paper page (/arxiv-paper) with all 3 formats downloadable, endorsement status explanation, and Cole Trickle-friendly explanation of what arXiv is
+- [x] Update ToE Technical version to v17.0 — add Genre-Locking paper section, update version references
+- [x] Update ToE Cole Trickle (Gateway Edition) to v17.0 — add accessible explanation of arXiv paper and what it means
+- [x] Update Theory page version references from v16.8.1 to v17.0
+- [x] Update Read page version references from v16.8.1 to v17.0
 - [x] Update BabyViv page to correct arXiv narrative (gr-qc endorsement pending, not just math-ph)
-- [ ] Add arXiv paper route to App.tsx and navigation
-- [ ] Update homepage with arXiv paper announcement/link
-- [ ] Update server download endpoints for v17.0 ToE files
-- [ ] Upload new v17.0 ToE documents to S3
-- [ ] Update ForAI/Nexus page with latest content
+- [x] Add arXiv paper route to App.tsx and navigation
+- [x] Update homepage with arXiv paper announcement/link
+- [x] Update server download endpoints for v17.0 ToE files
+- [x] Upload new v17.0 ToE documents to S3
+- [x] Update ForAI/Nexus page with latest content
