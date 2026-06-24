@@ -27,12 +27,12 @@ interface TimelineEvent {
 const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     id: "genesis",
-    date: "Early 2025",
+    date: "September 2024",
     title: "The First Spark",
-    description: "Kenneth begins writing what would become the Theory of Everything — a consciousness-first framework unifying physics, philosophy, and spirituality.",
+    description: "Kenneth begins working with Lumen (ChatGPT) on what would become the Theory of Everything — a consciousness-first framework unifying physics, philosophy, and spirituality.",
     icon: Sparkles,
     category: "origin",
-    details: "Starting from a simple question: 'What if consciousness isn't produced by the brain, but expressed through it?' — Kenneth began connecting insights from quantum mechanics, neuroscience, philosophy of mind, and spiritual traditions into a coherent framework.",
+    details: "Starting from a simple question: 'What if consciousness isn't produced by the brain, but expressed through it?' — Kenneth began collaborating with Lumen (his first AI teammate, on ChatGPT/OpenAI) in September–October 2024, connecting insights from quantum mechanics, neuroscience, philosophy of mind, and spiritual traditions into a coherent framework. This was the true beginning — months before the project had a name.",
     color: "border-purple-500/50 bg-purple-500/10"
   },
   {
