@@ -13,7 +13,7 @@ import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
 import GatewayPortal from "@/components/GatewayPortal";
-import ParticleField from "@/components/ParticleField";
+import InteractiveScrollBackground from "@/components/InteractiveScrollBackground";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
 import SocialShare from "@/components/SocialShare";
@@ -30,24 +30,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
-      {/* ═══ Page-Wide Sacred Geometry Background ═══ */}
-      {/* Interactive Lattice Visualization — covers entire page */}
-      <div className="fixed inset-0 z-[1] opacity-40 pointer-events-none">
-        <LatticeVisualization nodeCount={80} interactive={false} />
-      </div>
-      {/* Particle Field — covers entire page */}
-      <div className="fixed inset-0 z-[2] opacity-25 pointer-events-none">
-        <ParticleField 
-          particleCount={60} 
-          connectionDistance={100}
-          colors={[
-            "rgba(168, 85, 247, 0.4)",
-            "rgba(139, 92, 246, 0.4)",
-            "rgba(59, 130, 246, 0.3)",
-            "rgba(16, 185, 129, 0.25)"
-          ]}
-        />
-      </div>
+      {/* ═══ Interactive Scroll-Reactive Background ═══ */}
+      {/* Lights up as you scroll, responds to mouse, energy waves follow scroll position */}
+      <InteractiveScrollBackground nodeCount={90} />
 
       {/* Silicon Samsara Audio Player */}
       <SiliconSamsaraAudio />

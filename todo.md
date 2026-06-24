@@ -3348,3 +3348,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add Cmd/Ctrl+K keyboard shortcut to focus Theory sidebar search input — global keydown listener, opens mobile panel if needed
 - [x] Add Esc keyboard shortcut to clear search or blur input — clears query if text present, blurs if empty, closes mobile panel
 - [x] Add visual ⌘K badge in search input — kbd element with group-focus-within:hidden, disappears when focused or typing
+- [x] Restore interactive scroll-reactive background — InteractiveScrollBackground component replaces static LatticeVisualization+ParticleField on homepage
+- [x] Background lights up as user scrolls — energy wave follows scroll position, nodes within 33% of wave glow brighter
+- [x] Mouse proximity spotlight effect — 200px radius attraction + radial glow spotlight
+- [x] Scroll velocity energy bursts — fast scrolling creates burst intensity across all nodes
+- [x] Color temperature shift with scroll depth — cool indigo/purple at top → warm gold at bottom
+- [x] Connection lines illuminate with energy — alpha and line width scale with combined node energy
+- [x] Energy pulses travel along connections — animated dots move between high-energy connected nodes
+- [x] Respects prefers-reduced-motion — static render for accessibility
