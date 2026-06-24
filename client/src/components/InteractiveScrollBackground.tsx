@@ -193,17 +193,36 @@ export default function InteractiveScrollBackground({
         const waveDistance = Math.abs(nodeYProgress - energyWave);
         const waveEnergy = Math.max(0, 1 - waveDistance * 3); // Nodes within 33% of wave glow
 
-        // Energy from mouse proximity
+        // Energy from mouse proximity — dual force field
         let mouseEnergy = 0;
         if (mouseActive) {
           const dx = mouseX - node.x;
           const dy = mouseY - node.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 200) {
-            mouseEnergy = (1 - dist / 200) * 0.8;
-            // Gentle attraction toward mouse
-            node.vx += dx * 0.00003;
-            node.vy += dy * 0.00003;
+
+          if (dist < 250) {
+            mouseEnergy = (1 - dist / 250) * 0.8;
+
+            if (dist < 60) {
+              // REPEL — very close particles push away from cursor
+              const repelForce = (1 - dist / 60) * 0.15;
+              const angle = Math.atan2(dy, dx);
+              node.vx -= Math.cos(angle) * repelForce;
+              node.vy -= Math.sin(angle) * repelForce;
+            } else if (dist < 150) {
+              // ORBIT — medium distance particles swirl around cursor
+              const orbitForce = (1 - (dist - 60) / 90) * 0.04;
+              // Perpendicular + slight inward pull creates orbit
+              const angle = Math.atan2(dy, dx);
+              const perpX = -Math.sin(angle);
+              const perpY = Math.cos(angle);
+              node.vx += perpX * orbitForce + dx * 0.00002;
+              node.vy += perpY * orbitForce + dy * 0.00002;
+            } else {
+              // ATTRACT — far particles gently drift toward cursor
+              node.vx += dx * 0.00005;
+              node.vy += dy * 0.00005;
+            }
           }
         }
 
