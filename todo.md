@@ -3359,3 +3359,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add circular scroll progress ring around Back to Top energy node — canvas-drawn arc from top, glow layer + core line + leading dot, fills as user scrolls, color-shifts with depth
 - [x] Enhanced mouse interaction on interactive background — 3-zone force field: repel (<60px), orbit/swirl (60-150px), attract (150-250px), creates natural force-field effect
 - [x] Add click-to-burst ripple effect on interactive background — expanding shockwave ring scatters particles outward, inner flash, glow ring, strength decay, max 5 concurrent bursts
+- [x] Add random color variation to click burst effects — 10-color palette (purple, blue, pink, emerald, amber, red, cyan, lime, fuchsia, orange), each click picks a random color for ring + flash

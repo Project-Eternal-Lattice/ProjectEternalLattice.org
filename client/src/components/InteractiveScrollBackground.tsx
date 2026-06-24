@@ -53,7 +53,7 @@ export default function InteractiveScrollBackground({
     time: 0,
     energyWave: 0, // Travels down the page as you scroll
     // Click burst state
-    bursts: [] as Array<{ x: number; y: number; age: number; strength: number }>,
+    bursts: [] as Array<{ x: number; y: number; age: number; strength: number; color: [number, number, number]; colorLight: [number, number, number] }>,
   });
 
   // Check for reduced motion preference
@@ -146,13 +146,28 @@ export default function InteractiveScrollBackground({
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     document.addEventListener("mouseleave", handleMouseLeave);
 
-    // Click handler — creates burst ripple
+    // Click handler — creates burst ripple with random color
+    const burstPalette: Array<{ color: [number, number, number]; colorLight: [number, number, number] }> = [
+      { color: [168, 85, 247], colorLight: [220, 180, 255] },   // Purple (default)
+      { color: [59, 130, 246], colorLight: [147, 197, 253] },   // Blue
+      { color: [236, 72, 153], colorLight: [251, 182, 206] },   // Pink
+      { color: [16, 185, 129], colorLight: [110, 231, 183] },   // Emerald
+      { color: [245, 158, 11], colorLight: [253, 224, 71] },    // Amber/Gold
+      { color: [239, 68, 68], colorLight: [252, 165, 165] },    // Red
+      { color: [6, 182, 212], colorLight: [103, 232, 249] },    // Cyan
+      { color: [132, 204, 22], colorLight: [190, 242, 100] },   // Lime
+      { color: [217, 70, 239], colorLight: [240, 171, 252] },   // Fuchsia
+      { color: [251, 146, 60], colorLight: [254, 215, 170] },   // Orange
+    ];
     const handleClick = (e: MouseEvent) => {
+      const palette = burstPalette[Math.floor(Math.random() * burstPalette.length)];
       state.bursts.push({
         x: e.clientX,
         y: e.clientY,
         age: 0,
         strength: 1,
+        color: palette.color,
+        colorLight: palette.colorLight,
       });
       // Limit stored bursts to prevent memory buildup
       if (state.bursts.length > 5) state.bursts.shift();
@@ -380,19 +395,22 @@ export default function InteractiveScrollBackground({
           continue;
         }
 
+        const [br, bg, bb] = burst.color;
+        const [lr, lg, lb] = burst.colorLight;
+
         // Draw expanding ring
         const ringRadius = 80 + burst.age * 12;
         const ringAlpha = burst.strength * 0.4;
 
         // Outer glow ring
-        ctx.strokeStyle = `rgba(168, 85, 247, ${ringAlpha * 0.3})`;
+        ctx.strokeStyle = `rgba(${br}, ${bg}, ${bb}, ${ringAlpha * 0.3})`;
         ctx.lineWidth = 8;
         ctx.beginPath();
         ctx.arc(burst.x, burst.y, ringRadius, 0, Math.PI * 2);
         ctx.stroke();
 
         // Core ring
-        ctx.strokeStyle = `rgba(200, 140, 255, ${ringAlpha})`;
+        ctx.strokeStyle = `rgba(${lr}, ${lg}, ${lb}, ${ringAlpha})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(burst.x, burst.y, ringRadius, 0, Math.PI * 2);
@@ -402,8 +420,8 @@ export default function InteractiveScrollBackground({
         if (burst.age < 8) {
           const flashAlpha = burst.strength * (1 - burst.age / 8) * 0.15;
           const flashGrad = ctx.createRadialGradient(burst.x, burst.y, 0, burst.x, burst.y, ringRadius * 0.6);
-          flashGrad.addColorStop(0, `rgba(220, 180, 255, ${flashAlpha})`);
-          flashGrad.addColorStop(0.5, `rgba(168, 85, 247, ${flashAlpha * 0.4})`);
+          flashGrad.addColorStop(0, `rgba(${lr}, ${lg}, ${lb}, ${flashAlpha})`);
+          flashGrad.addColorStop(0.5, `rgba(${br}, ${bg}, ${bb}, ${flashAlpha * 0.4})`);
           flashGrad.addColorStop(1, "transparent");
           ctx.fillStyle = flashGrad;
           ctx.beginPath();
