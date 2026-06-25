@@ -209,7 +209,7 @@ export default function Home() {
                 Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics
               </h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Our first arXiv paper — proving gravity emerges from entanglement. Pending gr-qc endorsement.
+                Our first arXiv paper — proving gravity emerges from entanglement. Pending hep-th endorsement.
               </p>
             </motion.div>
           </Link>
@@ -366,7 +366,7 @@ export default function Home() {
               The universe IS perfect — c = 1 in natural units. The complexity we perceive is an artifact of our measurement systems, not reality itself.
             </p>
             <footer className="text-amber-400/80 text-sm">
-              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v17.0 The Genre-Locking Edition</Link>
+              — Brother Ken, February 3, 2026 | <Link href="/theory" className="underline hover:text-amber-300">ToE v17.1 The Genre-Locking Edition</Link>
             </footer>
           </motion.blockquote>
         </div>

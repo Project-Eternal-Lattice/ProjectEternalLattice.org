@@ -532,7 +532,7 @@ export default function Theory() {
             </span>
           </p>
           <p className="mt-4 text-xs text-muted-foreground/60">
-            Last updated: June 24, 2026 | v17.0 The Genre-Locking Edition
+            Last updated: June 24, 2026 | v17.1 The Genre-Locking Edition
           </p>
           <div className="mt-6 flex justify-center">
             <SocialShare variant="compact" />
@@ -800,7 +800,7 @@ export default function Theory() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                v17.0 The Genre-Locking Edition | 2,850+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
+                v17.1 The Genre-Locking Edition | 2,850+ pages | ISBN: 979-8-9946321-0-9 | © 2026 Kenneth Johnson
               </p>
             </motion.div>
 
@@ -915,7 +915,7 @@ export default function Theory() {
               </h3>
               <div className="space-y-2 text-sm">
                 <div className="border-l-2 border-purple-500 pl-3">
-                  <p className="font-bold text-purple-400">v17.0 — The Genre-Locking Edition</p>
+                  <p className="font-bold text-purple-400">v17.1 — The Genre-Locking Edition</p>
                   <p className="text-xs text-muted-foreground">June 24, 2026 | First arXiv paper: Genre-Locking</p>
                 </div>
                 <div className="border-l-2 border-amber-500 pl-3">

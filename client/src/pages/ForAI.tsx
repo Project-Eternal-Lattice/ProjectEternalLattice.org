@@ -92,7 +92,7 @@ export default function ForAI() {
                 Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics
               </h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Our first standalone arXiv paper. Proves different entanglement structures create different types of gravity. Submitted to gr-qc (pending endorsement).
+                Our first standalone arXiv paper. Proves different entanglement structures create different types of gravity. Submitted to hep-th (pending endorsement).
               </p>
               <p className="text-xs text-emerald-400/60 mt-3 font-mono">
                 hash: #g3nr3l0ck | type: landmark | status: pending_endorsement

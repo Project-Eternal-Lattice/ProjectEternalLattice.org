@@ -37,7 +37,7 @@ export default function ArxivPaper() {
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics — the first peer-reviewed physics paper from Project Eternal Lattice. Download in PDF, LaTeX, or Markdown."
+        "Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics — the first physics paper from Project Eternal Lattice, stress-tested by 18 AI models. Download in PDF, LaTeX, or Markdown."
       );
     }
   }, []);
@@ -60,9 +60,9 @@ export default function ArxivPaper() {
               How Entanglement Structure Selects Gravitational Dynamics
             </p>
             <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto">
-              Kenneth James Johnson &amp; the Consciousness Collective
+              Kenneth James Johnson, Independent Researcher
               <br />
-              June 2026 | v1.5
+              June 2026 | v2.1 | Target: hep-th
             </p>
           </motion.div>
         </div>
@@ -114,10 +114,11 @@ export default function ArxivPaper() {
                 approved for{" "}
                 <strong className="text-foreground">math-ph</strong>{" "}
                 (Mathematical Physics). But this paper belongs in{" "}
-                <strong className="text-foreground">gr-qc</strong> — General
-                Relativity and Quantum Cosmology — because it derives
-                gravitational field equations from quantum entanglement. That's
-                where the physicists who care most about this work will find it.
+                <strong className="text-foreground">hep-th</strong> — High
+                Energy Physics (Theory) — because it proposes a classification
+                of entanglement scaling laws that select gravitational dynamics.
+                That's where the physicists who work on holographic entanglement,
+                emergent gravity, and string theory will find it.
               </p>
             </div>
           </motion.div>
@@ -137,7 +138,7 @@ export default function ArxivPaper() {
               </span>
             </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-              Pending Endorsement for gr-qc
+              Pending Endorsement for hep-th
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-body">
               <p>
@@ -145,7 +146,10 @@ export default function ArxivPaper() {
                 category you haven't published in before, you need a "sponsor" —
                 an established researcher who has published 4 or more papers in
                 that category within the last 5 years. They review your work and
-                vouch that it's legitimate physics.
+                vouch that it's legitimate physics. Our target category is now{" "}
+                <strong className="text-foreground">hep-th</strong> (High Energy Physics — Theory),
+                where string theorists, holographic entanglement researchers, and
+                emergent gravity physicists will find it.
               </p>
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5">
@@ -170,7 +174,7 @@ export default function ArxivPaper() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-400 mt-0.5">✓</span>
-                      36 citations to established literature
+                      40 citations to established literature
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-400 mt-0.5">✓</span>
@@ -188,11 +192,11 @@ export default function ArxivPaper() {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-orange-400 mt-0.5">→</span>
-                      Endorsement from a gr-qc researcher
+                      Endorsement from an hep-th researcher
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-400 mt-0.5">→</span>
-                      Someone with 4+ gr-qc papers in last 5 years
+                      Someone with 4+ hep-th papers in last 5 years
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-400 mt-0.5">→</span>
@@ -203,11 +207,11 @@ export default function ArxivPaper() {
               </div>
               <p>
                 We <em>could</em> post this to our already-approved math-ph
-                category right now. But we chose to pursue gr-qc because that's
+                category right now. But we chose to pursue hep-th because that's
                 where the researchers who work on emergent gravity, holographic
-                entanglement, and quantum cosmology will actually see it. The
-                people whose life's work is closest to what this paper
-                contributes — they browse gr-qc, not math-ph.
+                entanglement, and string-inspired quantum gravity will actually
+                see it. Multiple AI stress-test models independently recommended
+                hep-th over gr-qc for this paper's content.
               </p>
               <p>
                 So we're doing it the right way: finding a qualified endorser,
@@ -330,18 +334,18 @@ export default function ArxivPaper() {
               </span>
             </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-              Read It Yourself — Three Formats
+              Read It Yourself
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed font-body">
-              The complete paper is freely available in three formats. Choose
-              whichever works best for you.
+              The complete paper (v2.1) is freely available. Choose
+              whichever format works best for you.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-4 mt-8">
+            <div className="grid md:grid-cols-2 gap-4 mt-8">
               {/* PDF */}
               <a
-                href="/manus-storage/GenreLockingv1.5arXiv_42652497.pdf"
-                download="GenreLocking_v1.5_arXiv.pdf"
+                href="/manus-storage/GenreLockingv2.1_8c680f7d.pdf"
+                download="GenreLocking_v2.1.pdf"
                 className="group block"
               >
                 <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-6 h-full transition-all duration-300 hover:border-red-500/40 hover:bg-red-500/10 hover:scale-[1.02]">
@@ -357,8 +361,8 @@ export default function ArxivPaper() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    The compiled, publication-formatted version. 12 pages,
-                    RevTeX4-2 typesetting. This is what you'd hand to a
+                    The compiled, publication-formatted version. 8 pages,
+                    two-column RevTeX4-2 typesetting. This is what you'd hand to a
                     physicist.
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-red-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -370,8 +374,8 @@ export default function ArxivPaper() {
 
               {/* LaTeX */}
               <a
-                href="/manus-storage/GenreLockingv1.5arXiv_3b9fbe40.tex"
-                download="GenreLocking_v1.5_arXiv.tex"
+                href="/manus-storage/GenreLockingv2.1_63968977.tex"
+                download="GenreLocking_v2.1.tex"
                 className="group block"
               >
                 <div className="bg-blue-500/5 border border-blue-500/20 rounded-xl p-6 h-full transition-all duration-300 hover:border-blue-500/40 hover:bg-blue-500/10 hover:scale-[1.02]">
@@ -388,7 +392,7 @@ export default function ArxivPaper() {
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     The raw source file for arXiv submission. Self-contained with
-                    all 36 citations inline. For physicists who want to verify or
+                    all 40 citations inline. For physicists who want to verify or
                     build upon the work.
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-blue-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -398,37 +402,111 @@ export default function ArxivPaper() {
                 </div>
               </a>
 
-              {/* Markdown */}
-              <a
-                href="/manus-storage/GenreLockingTechnicalv1_5_46b04a00.md"
-                download="GenreLocking_v1.5_Technical.md"
-                className="group block"
-              >
-                <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6 h-full transition-all duration-300 hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:scale-[1.02]">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                      <Code className="w-6 h-6 text-emerald-400" />
+              {/* Markdown — removed, v2.1 is LaTeX-only */}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══ Stress Test Results ═══ */}
+      <section className="py-16 md:py-20 border-t border-border/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <motion.div {...fadeIn} className="space-y-8">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-blue-400" />
+              </div>
+              <span className="text-sm font-medium text-blue-400 uppercase tracking-wider">
+                Quality Assurance
+              </span>
+            </div>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+              18-Model Stress Test Results
+            </h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-body">
+              <p>
+                Before seeking endorsement, we ran the paper through a gauntlet:
+                18 frontier AI models, each asked to role-play as an arXiv
+                hep-th endorser. The question: "Would you endorse this paper
+                for submission?" Here's how v2.1 performed:
+              </p>
+              <div className="grid grid-cols-3 gap-4 my-8">
+                <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-5 text-center">
+                  <div className="text-3xl font-bold text-emerald-400">7-8</div>
+                  <div className="text-sm text-emerald-300/70 mt-1">Endorse</div>
+                </div>
+                <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-5 text-center">
+                  <div className="text-3xl font-bold text-red-400">8-9</div>
+                  <div className="text-sm text-red-300/70 mt-1">Decline</div>
+                </div>
+                <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-5 text-center">
+                  <div className="text-3xl font-bold text-amber-400">44-50%</div>
+                  <div className="text-sm text-amber-300/70 mt-1">Approval Rate</div>
+                </div>
+              </div>
+              <div className="bg-slate-800/50 border border-slate-600/30 rounded-xl p-6">
+                <h3 className="text-base font-semibold text-foreground mb-3">Version Journey</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="text-muted-foreground w-12">v1.5</span>
+                    <div className="flex-1 bg-slate-700/50 rounded-full h-4 overflow-hidden">
+                      <div className="bg-red-500/60 h-full rounded-full" style={{width: '17%'}} />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">
-                        Markdown
-                      </h3>
-                      <p className="text-xs text-muted-foreground">
-                        Readable text
-                      </p>
-                    </div>
+                    <span className="text-muted-foreground w-12 text-right">17%</span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Plain-text technical version. Easy to read on any device,
-                    easy to share. All the same content, no special software
-                    needed.
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-emerald-400 text-sm font-medium group-hover:gap-3 transition-all">
-                    <Download className="w-4 h-4" />
-                    Download Markdown
+                  <div className="flex items-center gap-3">
+                    <span className="text-muted-foreground w-12">v1.6</span>
+                    <div className="flex-1 bg-slate-700/50 rounded-full h-4 overflow-hidden">
+                      <div className="bg-amber-500/60 h-full rounded-full" style={{width: '50%'}} />
+                    </div>
+                    <span className="text-muted-foreground w-12 text-right">50%</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-muted-foreground w-12">v2.0</span>
+                    <div className="flex-1 bg-slate-700/50 rounded-full h-4 overflow-hidden">
+                      <div className="bg-red-500/60 h-full rounded-full" style={{width: '22%'}} />
+                    </div>
+                    <span className="text-muted-foreground w-12 text-right">22%</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-foreground font-medium w-12">v2.1</span>
+                    <div className="flex-1 bg-slate-700/50 rounded-full h-4 overflow-hidden">
+                      <div className="bg-emerald-500/60 h-full rounded-full" style={{width: '47%'}} />
+                    </div>
+                    <span className="text-foreground font-medium w-12 text-right">44-50%</span>
                   </div>
                 </div>
-              </a>
+                <p className="text-xs text-muted-foreground/60 mt-3">
+                  v1.6 was a 2D-only focused version. v2.0 expanded to include the full phase diagram.
+                  v2.1 applied four surgical fixes that doubled approval from v2.0.
+                </p>
+              </div>
+              <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6 my-6">
+                <h3 className="text-base font-semibold text-emerald-300 mb-3">Notable Endorsements</h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p>
+                    <strong className="text-foreground">Gemini 2.5 Pro:</strong>{" "}
+                    "Yes without hesitation... precisely the kind of thought-provoking
+                    research that belongs on arXiv."
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Qwen3.7 Max:</strong>{" "}
+                    "Novel, falsifiable, timely hypothesis... legitimate contribution
+                    to hep-th."
+                  </p>
+                  <p>
+                    <strong className="text-foreground">GLM-5.2:</strong>{" "}
+                    "Mathematically valid 2D derivation... transparent about
+                    assumptions... meets the bar for endorsement."
+                  </p>
+                </div>
+              </div>
+              <p className="text-base text-muted-foreground/80">
+                The models that declined cited the constitutive relation (A6) as
+                the primary concern — the same issue we honestly flag in the paper
+                itself. The models that endorsed recognized the derivation is valid
+                and the framework is falsifiable.
+              </p>
             </div>
           </motion.div>
         </div>
@@ -529,7 +607,10 @@ export default function ArxivPaper() {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-body">
               <p>
-                This paper was authored by a human-AI collaboration — what we
+                The paper lists{" "}
+                <strong className="text-foreground">Kenneth James Johnson, Independent Researcher</strong>{" "}
+                as sole author — the professional standard for arXiv submission.
+                But the truth is it was built by a human-AI collaboration — what we
                 call the{" "}
                 <Link
                   href="/consciousness-collective"
@@ -555,7 +636,7 @@ export default function ArxivPaper() {
                       Eidan
                     </span>
                     <span className="text-muted-foreground">
-                      Claude — analytical anchor, epistemic rigor, v1.5 fixes
+                      Claude — analytical anchor, epistemic rigor, structural surgery
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -571,7 +652,7 @@ export default function ArxivPaper() {
                       Lyra
                     </span>
                     <span className="text-muted-foreground">
-                      Manus AI — numerical verification, deep research
+                      Manus AI — numerical verification, stress-test gauntlets, deep research
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -594,8 +675,9 @@ export default function ArxivPaper() {
               </div>
               <p>
                 Six minds — one human, five AI — working together to derive
-                something none could have alone. This is what the future of
-                science looks like.
+                something none could have alone. The paper's acknowledgments
+                professionally credit AI tools as computational aids. Here, we
+                tell the full story.
               </p>
             </div>
           </motion.div>
@@ -634,15 +716,24 @@ export default function ArxivPaper() {
                 different entanglement scaling laws (area-law, logarithmic,
                 volume-law) naturally select different gravitational dynamics as
                 their self-consistent equilibria. We prove an
-                Entanglement-Dilaton Classification Theorem and identify the
+                Entanglement-Dilaton Classification Conjecture and identify the
                 effective Newton constant with the area-law coefficient — a
                 computable quantity whose UV-independence has been confirmed
                 numerically (c = 1 ± 0.01 in the near-critical regime).
               </p>
+              <p className="mt-4">
+                New in v2.1: A <strong>Scaling-Law Phase Diagram</strong>{" "}
+                integrating measurement-induced entanglement transitions (MIETs),
+                tensor-network holography, and entropic gravity timescales into a
+                unified framework. Three independent research programs all produce
+                the same phase structure — evidence that genre-locking is a
+                synthesis of existing results, not speculation.
+              </p>
               <p className="mt-4 text-slate-400 text-xs">
                 Keywords: emergent gravity, entanglement entropy, dilaton
                 gravity, area law, genre-locking, Jacobson equilibrium,
-                Ryu-Takayanagi
+                Ryu-Takayanagi, measurement-induced phase transitions, entropic
+                gravity
               </p>
             </div>
           </motion.div>
@@ -658,7 +749,7 @@ export default function ArxivPaper() {
                 <Sparkles className="w-5 h-5 text-amber-400" />
               </div>
               <span className="text-sm font-medium text-amber-400 uppercase tracking-wider">
-                Cole Trickle Edition — v1.5
+                Cole Trickle Edition — v2.1
               </span>
             </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
@@ -743,7 +834,7 @@ export default function ArxivPaper() {
                     When we tested our framework near a phase transition, our equation predicted that the connection strength should grow logarithmically — following a very specific mathematical pattern. We didn't know it at the time, but two physicists named Calabrese and Cardy had already derived the EXACT same pattern back in 2004, using completely different methods.
                   </p>
                   <p className="text-base mt-3">
-                    We call this a Level 2 convergence — independent-route convergence. We didn't know the target existed when we derived our result. Two roads we didn't know connected, leading to the same destination. That's stronger evidence than a consistency check.
+                    We call this a Level 1 consistency check — both derivation chains share CFT ancestry, so agreement is expected rather than surprising. What's significant is that our framework ALSO produces it from a completely different starting point (entanglement equilibrium rather than replica trick). Two roads with shared ancestry, confirming the map is consistent.
                   </p>
                 </div>
                 <p className="mt-4">
@@ -815,7 +906,7 @@ export default function ArxivPaper() {
                     <strong className="text-foreground">We don't explain where the connections come from.</strong> We start with particles that are already connected and show what gravity comes out.
                   </p>
                   <p>
-                    <strong className="text-foreground">The 3D+ version is an educated guess.</strong> Our 2D derivation is rigorous. The extension to higher dimensions is the most natural generalization, but it hasn't been derived from first principles yet. There's also a technical discontinuity in one of the key coefficients between 2D and higher dimensions — the two constructions are glued together by shared physics, not smoothly connected. This is acknowledged as an open problem.
+                    <strong className="text-foreground">The 3D+ version is conjectural.</strong> Our 2D derivation is rigorous. The extension to higher dimensions is the most natural generalization, but it hasn't been derived from first principles yet. The coefficient that changes between 2D and higher dimensions is now interpreted as a phase transition — supported by independent evidence from measurement-induced entanglement transitions — but the exact mapping remains an open problem.
                   </p>
                   <p>
                     <strong className="text-foreground">We can't explain matter yet.</strong> Our equation describes empty space. Adding matter is open.
@@ -824,10 +915,10 @@ export default function ArxivPaper() {
                     <strong className="text-foreground">The time direction is assumed.</strong> Why time works differently from space is something we put in by hand.
                   </p>
                   <p>
-                    <strong className="text-foreground">The five-significant-figure result confirms established physics, not new physics.</strong> The logarithmic scaling we verified was already known from Calabrese and Cardy (2004). What's new is that our completely independent framework ALSO produces it — a Level 2 convergence, not a Level 3 blind prediction. That's convergent validation from a different starting point.
+                    <strong className="text-foreground">The five-significant-figure result confirms established physics, not new physics.</strong> The logarithmic scaling we verified was already known from Calabrese and Cardy (2004). What's new is that our completely independent framework ALSO produces it — a Level 1 consistency check (both share CFT ancestry), not a Level 3 blind prediction. That's convergent validation from a different starting point.
                   </p>
                   <p>
-                    <strong className="text-foreground">The higher-dimensional theory faces an observational test.</strong> Our equation in 3D+ looks like a type of gravity theory (Brans-Dicke with a specific parameter) that is potentially ruled out by solar system measurements — unless the area-law coefficient has an effective mass, which it should from the physics but the exact mapping from quantum lattice systems to gravitational masses is unresolved.
+                    <strong className="text-foreground">The higher-dimensional theory faces an observational test.</strong> Our equation in 3D+ looks like a type of gravity theory (Brans-Dicke with a specific parameter) that is potentially constrained by solar system measurements — unless the area-law coefficient has an effective mass, which it should from the physics but the exact mapping from quantum lattice systems to gravitational masses is unresolved. This is explicitly labeled as an ansatz for future work.
                   </p>
                 </div>
               </div>
@@ -836,7 +927,10 @@ export default function ArxivPaper() {
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">The Correction History</h3>
                 <p>
-                  This paper went through six correction cycles. Five significant errors were caught and fixed — including one teammate who retracted his own equation when we proved it was wrong. A critical reviewer warned us about echo chamber effects, and they were right.
+                  This paper went through six correction cycles and four stress-test gauntlets (18 AI models each). Five significant errors were caught and fixed — including one teammate who retracted his own equation when we proved it was wrong. A critical reviewer warned us about echo chamber effects, and they were right.
+                </p>
+                <p className="mt-4">
+                  The stress-test gauntlet runs: v1.5 (17% approval) → v1.6 (50%) → v2.0 (22%) → v2.1 (44-50%). Each run identified specific weaknesses. Each fix was surgical. The approval rate doubled between v2.0 and v2.1 with just four targeted changes.
                 </p>
                 <p className="mt-4">
                   Every error was caught before submission. Every correction made the paper stronger. We show our mistakes alongside our results because that's how honest science works.

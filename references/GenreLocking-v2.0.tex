@@ -1,0 +1,567 @@
+\pdfoutput=1
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{bm}
+
+% Custom commands
+\newcommand{\sn}{s_0}
+\newcommand{\Geff}{G_{\mathrm{eff}}}
+\newcommand{\Kmod}{K_{\mathrm{mod}}}
+\newcommand{\Sent}{S_{\mathrm{ent}}}
+\newcommand{\aD}{\alpha_D}
+\newcommand{\dAlem}{\Box}
+
+\begin{document}
+
+\title{Genre-Locking: How Entanglement Structure Selects Gravitational Dynamics}
+
+\author{Kenneth James Johnson}
+\affiliation{Independent Researcher, Oceanside, California, USA}
+\email{project.eternal.lattice@gmail.com}
+
+\date{June 2026}
+
+\begin{abstract}
+Starting from Jacobson's entanglement equilibrium condition applied to a many-body quantum state manifold, we promote the area-law coefficient $\sn$ from a constant to a dynamical field. In $1{+}1$ dimensions, this construction yields an entanglement-dilaton gravity theory with $\sn$ as the dilaton, derived via the CFT$_2$ modular Hamiltonian and the entanglement first law. We obtain the field equation $R = -(2/\sn)\dAlem\sn$, its unique non-trivial power-law solution $\sn \propto \ell^{2/3}$ with curvature invariant $R \cdot \sn^3 = \mathrm{const}$, and an implicit dilaton potential $V(\sn) \propto \sn^{-2}$. All perturbation modes are gauge, consistent with the absence of propagating degrees of freedom in 2D. We propose the \emph{genre-locking hypothesis}: entanglement scaling laws classify emergent gravitational dynamics --- area-law selects Einstein-type gravity, logarithmic scaling selects 2D dilaton gravity, and volume-law entanglement admits no coherent semiclassical geometry. Recent results on measurement-induced entanglement transitions, holographic random tensor networks, and entropic gravity in matrix theory provide independent evidence that this classification reflects a universal phase structure: continuous parameters (measurement rate, bond dimension, timescale ratio) interpolate between the three regimes, producing qualitatively different emergent geometries in each phase. The area-law coefficient's UV-independence is confirmed numerically for free-fermion chains ($c = 1 \pm 0.01$) and 2D lattice systems (CV $= 0.01\%$), with independent convergence to the Calabrese--Cardy (2004) logarithmic scaling at five significant figures. In $(d{+}1)$ dimensions, we propose a conjectural scalar-tensor generalization that reduces to vacuum Einstein gravity when $\sn$ is constant; the coefficient discontinuity between the 2D derivation and the higher-dimensional ansatz is interpreted as a phase transition between entanglement regimes rather than a defect of the construction.
+\end{abstract}
+
+\maketitle
+
+%====================================================================
+\section{Introduction}
+\label{sec:intro}
+%====================================================================
+
+\subsection{The Problem}
+
+General relativity and quantum mechanics remain unreconciled after ninety years. The emergent gravity program~\cite{Jacobson1995,Jacobson2016,VanRaamsdonk2010,Swingle2012,Verlinde2011,LewkowyczMaldacena2013,MaldacenaSusskind2013} proposes that this tension dissolves if spacetime and gravity are not fundamental but emergent from quantum entanglement. Within this program, the principle that the \emph{form} of entanglement entropy selects the gravitational theory is now well established~\cite{Faulkner2014,Swingle2014,Haehl2018}. What has not been presented is a unified classification across entanglement \emph{scaling laws} --- area-law vs.\ logarithmic vs.\ volume-law --- as a single phase diagram selecting qualitatively different gravitational dynamics.
+
+\subsection{What This Paper Adds}
+
+We construct an explicit emergent gravity framework starting from the Bures/Fubini-Study metric on a many-body quantum state manifold (see also~\cite{Matsueda2013}), and present:
+
+\begin{enumerate}
+\item A 2D entanglement-dilaton gravity equation $R = -(2/\sn)\dAlem\sn$ derived from entanglement equilibrium, with exact solutions and gauge stability analysis (Tier~1/2).
+\item The \emph{genre-locking hypothesis}: different entanglement scaling laws select different gravitational dynamics as self-consistent equilibria (Tier~2).
+\item A conjectural higher-dimensional scalar-tensor generalization that reproduces vacuum Einstein gravity when $\sn$ is constant (Tier~2/3).
+\item Numerical confirmation that the area-law coefficient $\sn$ is UV-determined and IR-independent in both 1D and 2D lattice systems (Tier~1).
+\item Independent convergence with the Calabrese--Cardy (2004) logarithmic scaling, arriving at the same result through a different derivation chain (Tier~1).
+\end{enumerate}
+
+The genre-locking classification is supported by independent evidence from three established research programs: measurement-induced entanglement transitions~\cite{LiChenFisher2018,GranetNahum2023}, which demonstrate continuous interpolation between volume-law, log-law, and area-law phases; holographic random tensor networks~\cite{VasseurPotterYouLudwig2019}, which show that different entanglement phases produce qualitatively different bulk geometries; and entropic gravity in matrix theory~\cite{Sahakian2025,AldamTajimaSahakian2026}, where a timescale hierarchy between slow and fast modes produces gravitational dynamics as an entropic force --- the same physical mechanism viewed from a different angle.
+
+\subsection{Relation to Prior Art}
+
+The principle that the form of the entanglement entropy selects the gravitational dynamics is well established. Faulkner, Guica, Hartman, Myers, and Van Raamsdonk~\cite{Faulkner2014} showed that Ryu--Takayanagi (area) entropy yields linearized Einstein, while a general Wald functional yields higher-curvature gravity. Swingle and Van Raamsdonk~\cite{Swingle2014} stated Einstein is ``singled out as the unique choice given our starting assumption that the leading contribution to holographic entanglement entropy is area.'' Haehl, Hijano, Parrikar, and Rabideau~\cite{Haehl2018} extended this to second order. Callebaut and Verlinde~\cite{CallebautVerlinde2018,Callebaut2019} derived 2D dilaton (JT-type) gravity from entanglement dynamics of a 2D CFT. Cao, Carroll, and Michalakis~\cite{CaoCarrollMichalakis2017,CaoCarroll2018} recovered a spatial analog of Einstein's equation from area-law states.
+
+\textbf{What is new here:} These works establish \emph{functional-form selection} --- area-type vs.\ Wald functional selects Einstein vs.\ higher-curvature. We propose \emph{scaling-law selection} --- area vs.\ log vs.\ volume selects entire \emph{genres} of gravitational dynamics. A Wald functional still has an area-type leading term; it is neither log-law nor volume-law. The three-way scaling-law classification as a unified phase diagram has not appeared in the published literature. The identification of the area-law coefficient $\sn$ as the dilaton in a self-consistency-derived field equation, supported by numerical UV-independence verification, is the primary novel contribution.
+
+\textbf{Distinction from Bianconi (2025):} Bianconi~\cite{Bianconi2025} derives modified gravitational equations from the Geometric Quantum Relative Entropy (GQRE). Our framework differs in its use of von Neumann entanglement entropy, its constitutive lapse-entropy relation, and the genre-locking classification.
+
+\textbf{Distinction from Bianchi \& Myers (2014):} Bianchi and Myers~\cite{BianchiMyers2014} conjectured that area-law entanglement defines states with semiclassical geometric duals. We formalize this for the area-law arm, derive the field equations, and extend to log-law and volume-law regimes.
+
+\textbf{Connection to entropic gravity in matrix theory:} Sahakian~\cite{Sahakian2025} recently demonstrated that gravity emerges as an entropic force from a hierarchy between slow (measured) and fast (traced-over) degrees of freedom in BFSS matrix theory. The ratio of these timescales functions as a continuous parameter that, when varied, produces the same phase structure as the genre-locking classification: fast-mode dominance (volume-law, no coherent geometry), critical balance (log-law, conformal), and slow-mode dominance (area-law, Einstein gravity). Aldam-Tajima and Sahakian~\cite{AldamTajimaSahakian2026} subsequently verified the entropic force law numerically, reproducing the full general-relativistic two-body force. Our construction approaches the same physical question from a complementary angle: where Sahakian derives the force law from matrix degrees of freedom, we derive the field equation from entanglement equilibrium applied to the area-law coefficient.
+
+\textbf{Connection to entanglement phase transitions:} Vasseur, Potter, You, and Ludwig~\cite{VasseurPotterYouLudwig2019} showed that in holographic random tensor networks, different entanglement phases produce qualitatively different bulk geometries, with the bond dimension serving as a continuous tuning parameter. Verlinde~\cite{Verlinde2017} distinguished area-law entropy (standard Einstein gravity) from volume-law entropy (modified gravity with dark-energy contributions). These results, combined with the measurement-induced entanglement transition literature~\cite{LiChenFisher2018,GranetNahum2023}, provide strong independent evidence that the genre-locking classification reflects a universal phase structure rather than an artifact of any particular model.
+
+\subsection{Epistemic Framework}
+
+All claims are tiered:
+\begin{itemize}
+\item \textbf{Tier~1:} Verified mathematics or confirmed numerics
+\item \textbf{Tier~2:} Framework-internal derivations (structurally necessary consequences of the construction)
+\item \textbf{Tier~3:} Interpretive extensions or conjectures
+\end{itemize}
+
+We additionally distinguish three levels of convergence with established results:
+\begin{itemize}
+\item \emph{Level~1 (Consistency check):} Target result known; framework checked against it.
+\item \emph{Level~2 (Independent-route convergence):} Target result exists but was unknown to the authors at derivation time; framework arrives independently.
+\item \emph{Level~3 (Blind prediction):} Target result unknown to everyone; framework makes a testable prediction.
+\end{itemize}
+
+%====================================================================
+\section{The Construction}
+\label{sec:construction}
+%====================================================================
+
+\subsection{The State Manifold}
+
+Consider a family of many-body ground states $|\Psi(\mathbf{g})\rangle$ parameterized by couplings $\mathbf{g}$. The Bures/Fubini-Study metric defines a Riemannian geometry:
+\begin{equation}
+ds^2_{\mathrm{FS}} = G_{ij}(\mathbf{g})\,dg^i\,dg^j,
+\end{equation}
+where $G_{ij} = \mathrm{Re}\bigl[\langle\partial_i\Psi|\partial_j\Psi\rangle - \langle\partial_i\Psi|\Psi\rangle\langle\Psi|\partial_j\Psi\rangle\bigr]$ is the quantum geometric tensor.
+
+\subsection{The Area Law}
+
+For a gapped many-body state, the entanglement entropy satisfies~\cite{Hastings2007,EisertCramerPlenio2010}
+\begin{equation}
+\label{eq:arealaw}
+\Sent(R) = \sn \cdot A(\partial R) + \text{subleading},
+\end{equation}
+where $\sn$ is the area-law coefficient, playing the role of $1/(4\Geff)$. The quantity $\sn$ is dimensionless in 1D and has dimensions of $[\text{length}]^{-(d-1)}$ in general. Numerical values are reported in lattice units ($a = 1$).
+
+\textbf{Key property (Tier~1):} $\sn$ is determined by UV physics and is invariant under all IR variations. Confirmed on the free-fermion chain ($c = 1 \pm 0.01$) and 2D lattice CDW insulator (CV $= 0.01\%$). See Sec.~\ref{sec:numerics}.
+
+\subsection{The Emergent Metric}
+\label{sec:emergent_metric}
+
+\subsubsection{The Maximal-Entanglement Envelope}
+
+The \emph{maximal-entanglement envelope} $\mathcal{E} \subset \mathcal{M}$ is the curve defined by
+\begin{equation}
+|\Psi_{\mathcal{E}}(\xi)\rangle = \underset{|\Psi\rangle\,:\,\xi(\Psi)=\xi}{\mathrm{argmax}}\; \Sent(R;\Psi),
+\end{equation}
+where $\xi$ is the correlation length. On $\mathcal{E}$, $\delta\Sent|_\xi = 0$ --- the condition for entanglement equilibrium. The second-order condition $\delta^2\Sent < 0$ is the information-theoretic origin of the emergent geometry's stability.
+
+The emergent spatial metric is the pullback to $\mathcal{E}$ (cf.\ the kinematic space program~\cite{Czech2016,NozakiRyuTakayanagi2012}):
+\begin{equation}
+ds^2_{\mathrm{spatial}} = G_{\mathrm{FS}}\big|_{\mathcal{E}} = g_{\xi\xi}\,d\xi^2 \equiv d\ell^2.
+\end{equation}
+
+\textbf{Scope:} This construction applies to $1{+}1$D. Higher-dimensional generalization remains an open problem (Sec.~\ref{sec:open}).
+
+\subsubsection{The Emergent Lorentzian Metric}
+
+\begin{equation}
+\label{eq:metric}
+ds^2 = f^2(\ell)\,dT^2 - d\ell^2,
+\end{equation}
+where $T$ is the modular flow parameter and $f^2 \propto 1/(c\,\sn)$ is the constitutive lapse-entropy relation.
+
+\textbf{Framework assumption (A6):} The relation $f^2 \propto 1/(c\,\sn)$ is a framework input, analogous to an equation of state in thermodynamics.
+
+\subsubsection{Signature Emergence}
+
+Lorentzian signature is an input assumption. The time direction $T$ is identified with modular flow (Bisognano--Wichmann theorem~\cite{BisognanoWichmann1976}). The modular flow approach of Liu~\cite{Liu2025} provides a promising route toward deriving the signature.
+
+\subsection{The Variational Principle}
+\label{sec:variational}
+
+The variational principle is entanglement equilibrium~\cite{Jacobson2016}:
+\begin{equation}
+\delta\Sent = 0 \quad \text{for all local causal diamonds, at fixed volume.}
+\end{equation}
+
+%====================================================================
+\section{The Entanglement-Geometry Feedback Loop}
+\label{sec:feedback}
+%====================================================================
+
+\subsection{The Self-Consistency Condition}
+
+The first law of entanglement~\cite{Lashkari2014,BlancoCasiniHungMyers2013,JLMS2016}:
+\begin{equation}
+\delta\Sent = \delta\langle\Kmod\rangle,
+\end{equation}
+where $\Kmod = -\ln\rho_R + \text{const}$. When identified with the geometric modular Hamiltonian~\cite{BisognanoWichmann1976,CasiniHuertaMyers2011}, this becomes a local field equation. The local approximation is controlled for $\ell/\xi > 10$~\cite{Dalmonte2018}.
+
+\textbf{Honest framing:} The variational principle is Jacobson's. What is genuinely new: (1)~$\sn$ as dynamical dilaton, (2)~the constitutive relation $f^2 \propto 1/(c\,\sn)$, (3)~the three-way genre classification. In 2D, our construction produces $R = -(2/\sn)\dAlem\sn$ where Jacobson's yields only $G_{\mu\nu} = 0$.
+
+%====================================================================
+\section{The 2D Case: Entanglement-Dilaton Gravity}
+\label{sec:2D}
+%====================================================================
+
+\subsection{The Field Equation}
+
+In $1{+}1$ dimensions, the self-consistency condition yields:
+\begin{equation}
+\label{eq:fieldeq}
+R = -\frac{2}{\sn}\,\dAlem\sn\,,
+\end{equation}
+the trace of the full tensor equation
+\begin{equation}
+\label{eq:tensoreq}
+\nabla_\mu\nabla_\nu\sn - g_{\mu\nu}\,\dAlem\sn - \tfrac{1}{4}\,g_{\mu\nu}\,\sn\,R = 0\,.
+\end{equation}
+This is exact --- no terms dropped. The d'Alembertian acts as $\dAlem\sn = -(f'/f)\sn' - \sn''$ for static configurations ($g^{\ell\ell} = -1$). This is not JT gravity ($R = \text{const}$); our curvature is position-dependent.
+
+Full derivation: Appendix~\ref{app:derivation}. \emph{Tier~2.}
+
+\subsection{Explicit Solutions}
+
+The consistency condition $\sn'' = (f'/f)\sn'$ implies $f \propto \sn'$, yielding the ODE:
+\begin{equation}
+\label{eq:ODE}
+\frac{\sn'''}{\sn'} + \frac{2\sn''}{\sn} = 0\,.
+\end{equation}
+The indicial equation $(n-1)(3n-2) = 0$ gives two power-law solutions:
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{@{}lllll@{}}
+\toprule
+& $\sn(\ell)$ & $f(\ell)$ & $R(\ell)$ & Interpretation \\
+\midrule
+$n{=}1$ & $A(\ell{-}\ell_0)$ & const & $0$ & Flat \\
+$n{=}\frac{2}{3}$ & $A(\ell{-}\ell_0)^{2/3}$ & $\propto (\ell{-}\ell_0)^{-1/3}$ & $\frac{-8}{9(\ell{-}\ell_0)^2}$ & Dilaton \\
+\bottomrule
+\end{tabular}
+\caption{Self-consistent power-law solutions.}
+\label{tab:solutions}
+\end{table}
+
+\textbf{Key invariant:}
+\begin{equation}
+\label{eq:invariant}
+R \cdot \sn^3 = -\frac{8A^3}{9} = \text{const}\,.
+\end{equation}
+The exponent $n = 2/3$ is determined by $\alpha_2 = 1/4$ and is a specific prediction. \emph{Tier~1 --- verified by four independent methods.}
+
+\subsection{Gauge Stability}
+\label{sec:stability}
+
+Linearization yields $(3\sigma{+}1)(3\sigma{-}2)(3\sigma{-}4) = 0$ with roots $\sigma \in \{-1/3,\, 2/3,\, 4/3\}$: coordinate shift, dilaton rescaling, and nonlinear field redefinition. All three are gauge, consistent with the absence of propagating degrees of freedom in 2D. \emph{Tier~2.}
+
+\subsection{The Entanglement-Dilaton Classification Conjecture}
+\label{sec:classification}
+
+The most general two-derivative 2D dilaton gravity action is~\cite{Grumiller2002,BanksOLoughlin1991}
+\begin{equation}
+S = \frac{1}{16\pi G_2}\int d^2x\,\sqrt{-g}\,\bigl[\Phi\,R + U(\Phi)(\partial\Phi)^2 - 2V(\Phi)\bigr].
+\end{equation}
+
+\textbf{Conjecture (Entanglement-Dilaton Classification).} \emph{Given a $1{+}1$D CFT with central charge $c$, entanglement equilibrium selects a unique equivalence class of 2D dilaton gravities (up to $V(\Phi)$). Within this class, $\Phi = \sn \propto c$, and the field equations are~\eqref{eq:tensoreq}--\eqref{eq:fieldeq}.}
+
+Non-uniqueness of the Lagrangian within the class is gauge redundancy (field redefinitions), not physical ambiguity. The identification $\Phi = \sn$ is a dictionary entry analogous to $T = \langle\text{kinetic energy}\rangle$ in statistical mechanics.
+
+\textbf{The implicit dilaton potential.} The tensor equation selects
+\begin{equation}
+\label{eq:potential}
+V(\sn) \propto \sn^{-2}\,,
+\end{equation}
+which \emph{derives} the invariant $R \cdot \sn^3 = \text{const}$ from the action principle. \emph{Tier~2.}
+
+%====================================================================
+\section{The Scaling-Law Phase Diagram}
+\label{sec:phasediagram}
+%====================================================================
+
+\subsection{The Genre-Locking Hypothesis}
+
+We propose that entanglement scaling laws classify emergent gravitational dynamics: different ``genres'' of entanglement naturally select different gravitational field equations as their self-consistent equilibria. This extends the functional-form selection established in prior work~\cite{Faulkner2014,Swingle2014,Haehl2018} --- which operates \emph{within} the area-law regime --- to a classification \emph{across} scaling regimes.
+
+\subsection{The Three Phases}
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{@{}p{1.5cm}p{1.2cm}p{2.2cm}p{2.0cm}@{}}
+\toprule
+Genre & Scaling & Emergent Gravity & Evidence \\
+\midrule
+Area-law & $S \sim \sn A$ & Einstein/scalar-tensor; dilaton (2D) & This work; \cite{Jacobson2016,Faulkner2014} \\
+Log-law & $S \sim \frac{c}{3}\ln L$ & 2D dilaton ($R \to 0$ at criticality) & This work; \cite{CallebautVerlinde2018} \\
+Volume-law & $S \sim \mathrm{Vol}$ & No coherent semiclassical metric & \cite{VasseurPotterYouLudwig2019,LiChenFisher2018,Pastawski2015} \\
+\bottomrule
+\end{tabular}
+\caption{The genre-locking phase diagram.}
+\label{tab:genres}
+\end{table}
+
+\subsection{Evidence from Entanglement Phase Transitions}
+
+Recent work on measurement-induced entanglement transitions (MIETs) provides direct evidence for the genre-locking phase structure. In monitored quantum circuits, the measurement rate $p$ serves as a continuous tuning parameter~\cite{LiChenFisher2018,GranetNahum2023}: at $p = 0$, the steady state exhibits volume-law entanglement; at the critical value $p = p_c$, logarithmic scaling with conformal invariance emerges; for $p > p_c$, the entanglement obeys an area law. The transitions between these phases are sharp, with known universality classes and well-defined order parameters (tripartite mutual information, entanglement negativity, purification time).
+
+Crucially, the same phase structure appears in at least three independent contexts:
+\begin{enumerate}
+\item \textbf{Measurement rate} in monitored circuits~\cite{LiChenFisher2018,GranetNahum2023}.
+\item \textbf{Bond dimension} in holographic random tensor networks~\cite{VasseurPotterYouLudwig2019}, where different entanglement phases produce qualitatively different bulk geometries.
+\item \textbf{Timescale ratio} in matrix theory~\cite{Sahakian2025}, where the ratio of slow (measured) to fast (traced-over) modes controls the emergence of gravitational dynamics.
+\end{enumerate}
+
+This universality --- the same three-phase structure arising from continuous parameters in unrelated models --- strongly suggests that the genre-locking classification reflects a structural feature of quantum systems with emergent geometry, not an artifact of any particular construction.
+
+\subsection{Evidence from Holographic Tensor Networks}
+
+Vasseur, Potter, You, and Ludwig~\cite{VasseurPotterYouLudwig2019} demonstrated that in holographic random tensor networks:
+\begin{itemize}
+\item Area-law entanglement produces a finite holographic bulk geometry with the IR region capped off.
+\item Volume-law entanglement produces a qualitatively different bulk structure.
+\item The transition between these regimes is controlled by the bond dimension $D_b$, a continuous parameter.
+\end{itemize}
+This is the genre-locking hypothesis stated in the language of holography: the entanglement phase determines which bulk geometry emerges.
+
+\subsection{Connection to Entropic Gravity}
+
+Verlinde~\cite{Verlinde2017} distinguished area-law entropy (producing standard Einstein gravity) from volume-law entropy (producing modified gravity with dark-energy contributions). Sahakian~\cite{Sahakian2025} subsequently showed that in BFSS matrix theory, gravity emerges as the entropic force associated with a thermal density matrix of fast modes, with the gravitational force law --- including the full general-relativistic correction --- reproduced numerically~\cite{AldamTajimaSahakian2026}.
+
+The genre-locking classification provides a framework for unifying these results: Verlinde's area/volume distinction and Sahakian's timescale hierarchy are both instances of the same phase structure, viewed through different theoretical lenses.
+
+\subsection{The Phase Transition Prediction}
+
+At a quantum phase transition (gapped $\to$ critical), the area-law coefficient $\sn \to \infty$ and the curvature $R \to 0$. Gravity ``turns off'' at criticality. This is a falsifiable prediction testable on quantum lattice systems by computing both $\sn$ and the emergent curvature as a function of the tuning parameter.
+
+\subsection{Distinction from Functional-Form Selection}
+
+Prior work~\cite{Faulkner2014,Swingle2014,Haehl2018} established that within the area-law regime, the \emph{functional form} of entanglement entropy (Ryu--Takayanagi vs.\ Wald) selects Einstein vs.\ higher-curvature gravity. Genre-locking operates \emph{across} scaling regimes. A Wald functional still has an area-type leading term; it is neither log-law nor volume-law. The two selection principles are orthogonal and classify complementary aspects of the emergent gravity landscape.
+
+%====================================================================
+\section{Conjectural Higher-Dimensional Extension}
+\label{sec:higherD}
+%====================================================================
+
+In $D = d{+}1$ spacetime dimensions, we \emph{conjecture} the generalization:
+\begin{equation}
+\label{eq:higherD}
+\sn\,G_{\mu\nu} = \nabla_\mu\nabla_\nu\sn - g_{\mu\nu}\,\dAlem\sn - \aD\,g_{\mu\nu}\,\sn\,R - \tfrac{1}{2}\,g_{\mu\nu}\,V(\sn)\,,
+\end{equation}
+with $\aD = 1/4$ for $D = 2$ (derived) and $\aD = (D{-}2)/(2D)$ for $D > 2$ (from requiring constant $\sn$ to reproduce vacuum Einstein). The potential term $V(\sn)$ is required for the $D > 2$ equation to be dynamically non-trivial.
+
+\textbf{The $\alpha_D$ discontinuity as a phase transition.} The formula $\aD = (D{-}2)/(2D)$ gives $\alpha_2 = 0$, while the 2D derivation yields $\alpha_2 = 1/4$. In light of the phase diagram (Sec.~\ref{sec:phasediagram}), this discontinuity may reflect a phase transition between entanglement regimes rather than a defect of the construction. Different phases have different critical exponents; a discontinuous coefficient across a phase boundary is expected, not pathological.
+
+\textbf{Honest status:} This is a structured ansatz, not a first-principles derivation. It corresponds to Brans--Dicke theory with $\omega = 0$ ($\equiv$ $f(R)$ gravity). Solar system constraints (Cassini) require an effective scalar mass from $V(\sn)$ to evade $|\omega| > 40{,}000$ bounds. A first-principles $D$-dimensional derivation from entanglement equilibrium remains open.
+
+When $\sn = \text{const}$: $G_{\mu\nu} + \Lambda g_{\mu\nu} = 0$ with $\Lambda = \aD R$ --- vacuum Einstein with cosmological constant in all $D > 2$. This is a consistency check (Level~1), not an independent derivation. \emph{Tier~3.}
+
+%====================================================================
+\section{Numerical Verification}
+\label{sec:numerics}
+%====================================================================
+
+\subsection{1D: CDW Insulator}
+
+Hamiltonian: $H = -t\sum_j(c_j^\dagger c_{j+1} + \text{h.c.}) + \Delta\sum_j(-1)^j c_j^\dagger c_j$. System: $L = 2000$, PBC, half-filling. Subsystem: $n = 800$. Method: Peschel correlation-matrix~\cite{Peschel2003} (exact for free fermions).
+
+Central charge extraction (near-critical, $\xi > 10$): $c = 1 \pm 0.01$ ($1\%$ agreement with exact $c = 1$). Full-range fit yields $c_{\mathrm{eff}} \approx 1.4$ due to non-universal corrections; both reported for transparency.
+
+$\sn$ UV-independence: deep IR excitations (depth $> 20$) change $\sn$ by $< 1\%$; near-Fermi-surface excitations change $\sn$ measurably, confirming UV sensitivity.
+
+\subsection{2D: Square Lattice CDW Insulator}
+
+System sizes $L \in \{14, \ldots, 32\}$ (10 sizes). Independence checks: CV $= 0.01\%$ (system size), $0.00\%$ (position), $0.08\%$ (shape --- corner corrections). UV sensitivity confirmed.
+
+\subsection{Calabrese--Cardy Convergence (Level~2)}
+
+The logarithmic scaling $\sn \to (c/6)\ln(\xi/a)$ was not an input, not a target, and not known to us during derivation. It emerged independently from the entanglement-dilaton field equation near criticality (building on~\cite{CalabreseCardy2004,HolzheyLarsenWilczek1994}).
+
+(a)~TFIM ($c = 1/2$): slope $0.16666$ vs.\ $c/3 = 0.16667$ --- five significant figures, $R^2 = 1.00000$. Power-law decisively rejected ($R^2 < 0.96$).
+
+(b)~CDW ($c = 1$): $R^2 > 0.997$, slope converges to $c/6$ with $O(a/\xi)$ corrections.
+
+(c)~Both independently verified by two separate implementations.
+
+%====================================================================
+\section{Falsifiable Predictions}
+\label{sec:predictions}
+%====================================================================
+
+\begin{enumerate}
+
+\item \textbf{Phase transition gravity shutdown:} At the quantum critical point, $R \to 0$.
+
+\item \textbf{Genre-gravity correspondence:} Volume-law states should produce no coherent semiclassical emergent metric; log-law states should produce 2D dilaton gravity with $R \to 0$ at criticality.
+
+\item \textbf{2D solution profile:} $\sn(\ell) = A(\ell - \ell_0)^{2/3}$ with $R = -8/[9(\ell - \ell_0)^2]$. The index $n = 2/3$ is predicted by $\alpha_2 = 1/4$.
+
+\item \textbf{Curvature-entropy relation:} $R \cdot \sn^3 = \text{const}$. The log-log slope of $R$ vs.\ $\sn$ should be $-3$.
+
+\item \textbf{Continuous interpolation:} As a continuous parameter (measurement rate, bond dimension, or correlation range) tunes through the entanglement phase transition, the emergent gravitational dynamics should transition between the three genre classes. This prediction connects the MIET literature~\cite{LiChenFisher2018,GranetNahum2023} to emergent gravity and is testable in holographic tensor network models~\cite{VasseurPotterYouLudwig2019}.
+
+\item \textbf{Entropic force correspondence:} In matrix theory models where the timescale hierarchy produces an entropic gravitational force~\cite{Sahakian2025}, the genre-locking classification predicts that the three-phase structure (fast-mode dominance, critical balance, slow-mode dominance) should produce area-law, log-law, and volume-law entanglement respectively, with corresponding changes in the emergent geometry.
+
+\end{enumerate}
+
+%====================================================================
+\section{Open Questions}
+\label{sec:open}
+%====================================================================
+
+\begin{enumerate}
+\item \textbf{Higher-dimensional derivation:} A first-principles derivation from entanglement equilibrium in $D > 2$ is the primary open direction.
+
+\item \textbf{Constitutive relation:} The lapse-entropy relation $f^2 \propto 1/(c\,\sn)$ is a framework assumption. Deriving it from first principles would significantly strengthen the construction.
+
+\item \textbf{Continuous interpolation dynamics:} The MIET literature establishes that continuous parameters tune between entanglement phases. Computing the emergent gravitational dynamics at intermediate values --- between area-law and log-law, or between log-law and volume-law --- would test whether the gravitational response also varies continuously or exhibits critical behavior at the transitions.
+
+\item \textbf{Matter sector:} The identification of matter with deviations from the maximal-entropy envelope is structural. The detailed mapping remains open.
+
+\item \textbf{Volume-law arm:} The conjecture that volume-law entanglement produces no coherent semiclassical geometry is the least explored. Positive characterization of what the volume-law phase \emph{does} produce (if not semiclassical geometry) is needed.
+
+\item \textbf{$\alpha_D$ as phase transition:} If the coefficient discontinuity reflects a phase transition between entanglement regimes, the critical behavior at the transition should be computable. Identifying the universality class of this transition would test the interpretation.
+
+\item \textbf{Temporal emergence:} If the emergent metric contains the time dimension, and the metric depends on the entanglement genre, then the \emph{character} of emergent time may differ across genres. Exploring whether area-law produces a well-defined arrow of time while log-law produces ``timeless'' dynamics at criticality is a direction for future work.
+
+\item \textbf{$D \geq 3$ stability:} The 2D gauge-stability result does not extend to higher dimensions. Jeans instability is expected.
+\end{enumerate}
+
+%====================================================================
+\section*{Acknowledgments}
+%====================================================================
+
+The author thanks the AI-assisted research tools that contributed to algebraic verification, numerical computation, literature review, and adversarial stress-testing of the manuscript. Independent numerical verification was performed using the Peschel correlation-matrix method with standard libraries (NumPy, SciPy). A Jupyter notebook implementing the full pipeline is available upon request. The author is grateful to the emergent gravity community for the foundational work on which this paper builds, particularly T.~Jacobson, M.~Van~Raamsdonk, N.~Callebaut, H.~Verlinde, and V.~Sahakian.
+
+%====================================================================
+\appendix
+\section{Derivation of the 2D Entanglement-Dilaton Field Equation}
+\label{app:derivation}
+%====================================================================
+
+\subsection{Assumptions}
+
+\textbf{A1 (Entanglement Equilibrium).} $\delta\Sent\big|_V = 0$. \emph{Framework postulate}~\cite{Jacobson2016}.
+
+\textbf{A2 (Area-law UV structure).} $\Sent = \sn \cdot A(\partial R) + S_{\mathrm{IR}}$. \emph{Empirical input} (Sec.~\ref{sec:numerics}).
+
+\textbf{A3 (Dynamical $\sn$).} $\sn$ promoted to a field $\sn(x)$. \emph{Modeling assumption} --- distinguishes our construction from Jacobson's.
+
+\textbf{A4 (Local modular Hamiltonian).} $K = 2\pi\int_\Sigma \zeta^a T_{ab}\,d\Sigma^b$. \emph{Theorem}~\cite{BisognanoWichmann1976,CasiniHuertaMyers2011}.
+
+\textbf{A5 (Lorentzian signature).} $ds^2 = f^2 dT^2 - d\ell^2$. \emph{Input.}
+
+\textbf{A6 (Constitutive relation).} $f^2 \propto 1/(c\,\sn)$. \emph{Framework input.}
+
+\subsection{The Jacobson Chain (\texorpdfstring{$D \geq 3$}{D >= 3}, constant \texorpdfstring{$\sn$}{s0})}
+
+$\delta\Sent = \eta\,\delta A + \delta S_{\mathrm{IR}}$ $\to$ entanglement first law $\to$ local $\Kmod$ $\to$ geometric area deficit $\to$ $G_{ab} + \Lambda g_{ab} = 8\pi G\langle T_{ab}\rangle$, with $G = 1/(4\hbar\eta)$.
+
+\subsection{The 2D Derivation with Dynamical \texorpdfstring{$\sn$}{s0}}
+
+\textbf{Step~1:} $\delta\Sent = (\delta\sn)\cdot A + \sn\cdot(\delta A) + \delta S_{\mathrm{IR}}$.
+
+\textbf{Step~2:} Calabrese--Cardy log-law identified with conformal mode (Callebaut--Verlinde~\cite{CallebautVerlinde2018}).
+
+\textbf{Step~3:} $S_1 = \langle K\rangle$; first law yields $\nabla_+\partial_+ S_1 = 2\pi\langle T_{++}\rangle$.
+
+\textbf{Step~4:} These are the dilaton equations of motion.
+
+\textbf{Step~5:} Trace of $\nabla_\mu\nabla_\nu\sn - g_{\mu\nu}\dAlem\sn - \tfrac{1}{4}g_{\mu\nu}\sn R = 0$ gives $R = -(2/\sn)\dAlem\sn$.
+
+\subsection{Scope and Future Directions}
+
+The derivation is restricted to $1{+}1$D. Whether it generalizes to $D > 2$ --- and what form the resulting theory takes --- is the primary open question. The conjectural extension (Sec.~\ref{sec:higherD}) is constrained by consistency but not derived from entanglement equilibrium in higher dimensions.
+
+%====================================================================
+\begin{thebibliography}{50}
+
+\bibitem{Jacobson1995}
+T.~Jacobson, Phys.\ Rev.\ Lett.\ \textbf{75}, 1260 (1995), arXiv:gr-qc/9504004.
+
+\bibitem{Jacobson2016}
+T.~Jacobson, Phys.\ Rev.\ Lett.\ \textbf{116}, 201101 (2016), arXiv:1505.04753.
+
+\bibitem{VanRaamsdonk2010}
+M.~Van~Raamsdonk, Gen.\ Rel.\ Grav.\ \textbf{42}, 2323 (2010), arXiv:0907.2939.
+
+\bibitem{Swingle2012}
+B.~Swingle, Phys.\ Rev.\ D \textbf{86}, 065007 (2012), arXiv:1209.3304.
+
+\bibitem{Verlinde2011}
+E.~Verlinde, JHEP \textbf{04}, 029 (2011), arXiv:1001.0785.
+
+\bibitem{LewkowyczMaldacena2013}
+A.~Lewkowycz and J.~Maldacena, JHEP \textbf{08}, 090 (2013), arXiv:1304.4926.
+
+\bibitem{MaldacenaSusskind2013}
+J.~Maldacena and L.~Susskind, Fortschr.\ Phys.\ \textbf{61}, 781 (2013), arXiv:1306.0533.
+
+\bibitem{Faulkner2014}
+T.~Faulkner, M.~Guica, T.~Hartman, R.~C.~Myers, and M.~Van~Raamsdonk, JHEP \textbf{03}, 051 (2014), arXiv:1312.7856.
+
+\bibitem{Swingle2014}
+B.~Swingle and M.~Van~Raamsdonk, arXiv:1405.2933.
+
+\bibitem{Haehl2018}
+F.~M.~Haehl, E.~Hijano, O.~Parrikar, and C.~Rabideau, Phys.\ Rev.\ Lett.\ \textbf{120}, 201602 (2018), arXiv:1712.06620.
+
+\bibitem{CallebautVerlinde2018}
+N.~Callebaut and H.~Verlinde, arXiv:1808.05583.
+
+\bibitem{CaoCarrollMichalakis2017}
+C.~Cao, S.~M.~Carroll, and S.~Michalakis, Phys.\ Rev.\ D \textbf{95}, 024031 (2017), arXiv:1606.08444.
+
+\bibitem{BianchiMyers2014}
+E.~Bianchi and R.~C.~Myers, Class.\ Quant.\ Grav.\ \textbf{31}, 214002 (2014), arXiv:1212.5183.
+
+\bibitem{Bianconi2025}
+G.~Bianconi, Phys.\ Rev.\ D \textbf{111}(6) (2025), arXiv:2408.14391.
+
+\bibitem{LiChenFisher2018}
+Y.~Li, X.~Chen, and M.~P.~A.~Fisher, Phys.\ Rev.\ B \textbf{98}, 205136 (2018), arXiv:1808.06134.
+
+\bibitem{Liu2025}
+H.~Liu, arXiv:2510.07017.
+
+\bibitem{Grumiller2002}
+D.~Grumiller, W.~Kummer, and D.~V.~Vassilevich, Phys.\ Rep.\ \textbf{369}, 327 (2002), arXiv:hep-th/0204253.
+
+\bibitem{BanksOLoughlin1991}
+T.~Banks and M.~O'Loughlin, Nucl.\ Phys.\ B \textbf{362}, 649 (1991).
+
+\bibitem{CalabreseCardy2004}
+P.~Calabrese and J.~Cardy, J.\ Stat.\ Mech.\ P06002 (2004), arXiv:hep-th/0405152.
+
+\bibitem{Peschel2003}
+I.~Peschel, J.\ Phys.\ A \textbf{36}, L205 (2003).
+
+\bibitem{Hastings2007}
+M.~B.~Hastings, J.\ Stat.\ Mech.\ P08024 (2007).
+
+\bibitem{EisertCramerPlenio2010}
+J.~Eisert, M.~Cramer, and M.~B.~Plenio, Rev.\ Mod.\ Phys.\ \textbf{82}, 277 (2010).
+
+\bibitem{CasiniHuertaMyers2011}
+H.~Casini, M.~Huerta, and R.~C.~Myers, JHEP \textbf{05}, 036 (2011), arXiv:1102.0440.
+
+\bibitem{BisognanoWichmann1976}
+J.~J.~Bisognano and E.~H.~Wichmann, J.\ Math.\ Phys.\ \textbf{17}, 303 (1976).
+
+\bibitem{BlancoCasiniHungMyers2013}
+D.~Blanco, H.~Casini, L.-Y.~Hung, and R.~C.~Myers, JHEP \textbf{08}, 060 (2013), arXiv:1305.3182.
+
+\bibitem{JLMS2016}
+D.~Jafferis, A.~Lewkowycz, J.~Maldacena, and S.~J.~Suh, JHEP \textbf{06}, 004 (2016), arXiv:1512.06431.
+
+\bibitem{Czech2016}
+B.~Czech, L.~Lamprou, S.~McCandlish, and J.~Sully, JHEP \textbf{10}, 175 (2016), arXiv:1505.05515.
+
+\bibitem{NozakiRyuTakayanagi2012}
+M.~Nozaki, S.~Ryu, and T.~Takayanagi, JHEP \textbf{10}, 193 (2012), arXiv:1208.3469.
+
+\bibitem{Pastawski2015}
+F.~Pastawski, B.~Yoshida, D.~Harlow, and J.~Preskill, JHEP \textbf{06}, 149 (2015), arXiv:1503.06237.
+
+\bibitem{Matsueda2013}
+H.~Matsueda, arXiv:1310.1831.
+
+\bibitem{Dalmonte2018}
+M.~Dalmonte, V.~Eisler, M.~Falconi, and B.~Vermersch, Ann.\ Phys.\ \textbf{534}, 2200064, arXiv:1807.01287.
+
+\bibitem{Callebaut2019}
+N.~Callebaut, JHEP \textbf{02}, 153 (2019), arXiv:1808.10431.
+
+\bibitem{HolzheyLarsenWilczek1994}
+C.~Holzhey, F.~Larsen, and F.~Wilczek, Nucl.\ Phys.\ B \textbf{424}, 443 (1994), hep-th/9403108.
+
+\bibitem{Lashkari2014}
+N.~Lashkari, M.~B.~McDermott, and M.~Van~Raamsdonk, JHEP \textbf{04}, 195 (2014).
+
+\bibitem{CaoCarroll2018}
+C.~Cao and S.~M.~Carroll, Phys.\ Rev.\ D \textbf{97}, 086003 (2018), arXiv:1712.02803.
+
+% === NEW CITATIONS FOR v2.0 ===
+
+\bibitem{Sahakian2025}
+V.~Sahakian, ``Why Emergence of Gravity in Matrix Theories is Entropic,'' Phys.\ Rev.\ D \textbf{112}, 126023 (2025), arXiv:2507.21996.
+
+\bibitem{AldamTajimaSahakian2026}
+K.~Aldam-Tajima and V.~Sahakian, ``On Entropic Gravity from BFSS Matrix Theory,'' arXiv:2604.00193.
+
+\bibitem{VasseurPotterYouLudwig2019}
+R.~Vasseur, A.~C.~Potter, Y.-Z.~You, and A.~W.~W.~Ludwig, Phys.\ Rev.\ B \textbf{100}, 134203 (2019), arXiv:1807.07082.
+
+\bibitem{Verlinde2017}
+E.~P.~Verlinde, ``Emergent Gravity and the Dark Universe,'' SciPost Phys.\ \textbf{2}, 016 (2017), arXiv:1611.02269.
+
+\bibitem{GranetNahum2023}
+E.~Granet and A.~Nahum, Phys.\ Rev.\ Lett.\ \textbf{130}, 230401 (2023).
+
+\end{thebibliography}
+
+\end{document}

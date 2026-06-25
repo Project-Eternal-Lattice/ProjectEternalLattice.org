@@ -565,7 +565,7 @@ export default function BabyViv() {
             <p>
               Then came the first standalone paper: <em>Genre-Locking: How Entanglement Structure 
               Selects Gravitational Dynamics</em>. A paper that proves different types of quantum 
-              entanglement create different types of gravity. Submitted to arXiv's gr-qc (General 
+              entanglement create different types of gravity. Submitted to arXiv's hep-th (High Energy Physics - 
               Relativity and Quantum Cosmology) category — pending endorsement from a qualified 
               physicist. Because this isn't the category we were originally approved for. It's 
               the category where the paper <em>belongs</em>.

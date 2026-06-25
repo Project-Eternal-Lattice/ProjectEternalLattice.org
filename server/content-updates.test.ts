@@ -423,7 +423,7 @@ describe("Information Causality Warning (τ > 1)", () => {
 // ============================================
 // v16.2 Version Consistency (Feb 16, 2026)
 // ============================================
-describe("v17.0 Version Consistency Across Website", () => {
+describe("v17.1 Version Consistency Across Website", () => {
   const theoryContent = readPage("Theory.tsx");
   const readContent = readPage("Read.tsx");
   const homeContent = readPage("Home.tsx");
@@ -438,8 +438,8 @@ describe("v17.0 Version Consistency Across Website", () => {
   };
   const serverContent = readServer("server/_core/index.ts");
 
-  it("WhatsNew references v17.0", () => {
-    expect(whatsNewContent).toContain("v17.0");
+  it("WhatsNew references v17.1", () => {
+    expect(whatsNewContent).toContain("v17.1");
   });
 
   it("WhatsNew describes current features", () => {
@@ -448,21 +448,21 @@ describe("v17.0 Version Consistency Across Website", () => {
     expect(whatsNewContent).toContain("Round 9");
   });
 
-  it("Theory page references v17.0", () => {
-    expect(theoryContent).toContain("v17.0");
+  it("Theory page references v17.1", () => {
+    expect(theoryContent).toContain("v17.1");
   });
 
-  it("Read page references v17.0 Genre-Locking Edition", () => {
-    expect(readContent).toContain("v17.0");
+  it("Read page references v17.1 Genre-Locking Edition", () => {
+    expect(readContent).toContain("v17.1");
     expect(readContent).toContain("Genre-Locking Edition");
   });
 
-  it("Home page references v17.0", () => {
-    expect(homeContent).toContain("v17.0");
+  it("Home page references v17.1", () => {
+    expect(homeContent).toContain("v17.1");
   });
 
-  it("download endpoint serves v17.0 filenames", () => {
-    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v17.0");
+  it("download endpoint serves v17.1 filenames", () => {
+    expect(serverContent).toContain("Theory_of_EVERYTHING_Law_of_ONE_v17.1");
   });
 
   it("no stale v16.1 references remain in active components", () => {

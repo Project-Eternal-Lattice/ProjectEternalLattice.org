@@ -13,6 +13,13 @@ interface NewFeature {
 
 const newFeatures: NewFeature[] = [
   {
+    icon: Atom,
+    title: "v17.1: Genre-Locking Paper v2.1 — Full Phase Diagram + 44-50% Gauntlet Approval",
+    description: "The arXiv paper expanded to include the Scaling-Law Phase Diagram (Section 5), citing Sahakian's entropic gravity, Vasseur's tensor networks, and MIET literature. Four surgical fixes doubled approval from 22% to 44-50%. Category changed from gr-qc to hep-th. Appendix O.10 added to ToE with full derivation chain and emergent time connection. Ready for Claremont endorsement visit.",
+    link: "/arxiv-paper",
+    tag: "v17.1"
+  },
+  {
     icon: Sparkles,
     title: "EDITORIAL: Layer 3 Renamed — Traveler → Observer",
     description: "The Three-Layer Consciousness Model (Ch 17.17) now uses 'Observer' instead of 'Traveler' for Layer 3. This aligns the technical term with the Foundation Fix's Eternal Observer derivation and eliminates ambiguity with the generic English word. All 13 formal occurrences updated; mathematics unchanged.",
@@ -183,6 +190,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
+                            feature.tag === "v17.1" ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30" :
                             feature.tag === "v16.8" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
                             feature.tag === "FINAL" ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" :
@@ -216,7 +224,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v17.0 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v17.1 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>

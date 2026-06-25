@@ -3384,3 +3384,16 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add navigation link to the Updates page
 - [x] Replace Cole Trickle section with Eidan's full "Why the Band Creates Gravity" v1.5 content
 - [x] Create a reusable skill for maintaining the updates page
+
+## Phase 4: v17.1 — The Genre-Locking Edition (Jun 24, 2026)
+- [x] Compile v2.1 LaTeX to PDF
+- [x] Upload v2.1 PDF and LaTeX to S3 for website downloads
+- [x] Update ArxivPaper.tsx from v1.5 to v2.1 (title, author, abstract, category hep-th)
+- [x] Add Stress Test Results section to ArxivPaper page showing v1.5→v1.6→v2.0→v2.1 journey
+- [x] Update download links to v2.1 PDF and LaTeX
+- [x] Update all gr-qc references to hep-th across site (Home, ForAI, BabyViv, Nexus)
+- [x] Update all version references from v17.0 to v17.1 across site
+- [x] Add Appendix O.10 to ToE (Genre-Locking full derivation chain + emergent time)
+- [x] Add v17.1 changelog entry to ToE Version History
+- [x] Update WhatsNew component with v17.1 entry
+- [x] Update edition name to "The Genre-Locking Edition"
