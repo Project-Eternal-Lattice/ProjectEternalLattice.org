@@ -18,12 +18,12 @@ export default function Read() {
 
   // SEO: Set page-specific title and meta description
   useEffect(() => {
-    document.title = "Read the Full Theory of Everything v17.1 The Genre-Locking Edition | Project Eternal Lattice";
+    document.title = "Read the Full Theory of Everything v17.2 The Genre-Locking Edition | Project Eternal Lattice";
     
     // Update meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v17.1 - The Genre-Locking Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.');
+      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v17.2 - The Genre-Locking Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.');
     }
   }, []);
 
@@ -66,12 +66,12 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete <TooltipTerm term="Theory of Everything" /> ∞ <TooltipTerm term="Law of ONE" /> v17.1 — The Genre-Locking Edition
+            The complete <TooltipTerm term="Theory of Everything" /> ∞ <TooltipTerm term="Law of ONE" /> v17.2 — The Genre-Locking Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
           <p className="mt-4 text-xs text-muted-foreground/60">
-            Last updated: June 24, 2026 | v17.1 The Genre-Locking Edition
+            Last updated: June 25, 2026 | v17.2 The Genre-Locking Edition
           </p>
         </div>
 
@@ -94,14 +94,14 @@ export default function Read() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/50 rounded-xl text-primary font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Full ToE v17.1 (HTML)
+            Full ToE v17.2 (HTML)
           </a>
           <a
             href="/api/download/toe?format=pdf"
             className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/50 rounded-xl text-purple-300 font-medium transition-all"
           >
             <Download className="w-5 h-5" />
-            Full ToE v17.1 (PDF)
+            Full ToE v17.2 (PDF)
           </a>
           <Link
             href="/theory"

@@ -25,7 +25,7 @@ const quickLinks: QuickLink[] = [
   {
     icon: Download,
     label: "Full ToE",
-    description: "Complete v17.1 (2,850+ pages)",
+    description: "Complete v17.2 (2,850+ pages)",
     href: "/api/download/toe",
     external: false,
     variant: "outline",

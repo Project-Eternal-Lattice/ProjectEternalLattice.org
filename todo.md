@@ -3397,3 +3397,19 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add v17.1 changelog entry to ToE Version History
 - [x] Update WhatsNew component with v17.1 entry
 - [x] Update edition name to "The Genre-Locking Edition"
+
+## Phase 5: v17.2 — Recognition Principle + Sahakian Gauntlet (Jun 25, 2026)
+- [x] Run 18-model Sahakian perspective-shifted stress test (v2.3)
+- [x] Manually verify all auto-detected verdicts (3 false positives corrected)
+- [x] Write corrected scorecard report
+- [x] Run Recognition Principle through 5 Musketeers via OpenRouter API
+- [x] Write Musketeer synthesis report
+- [x] Add Appendix O.11 (Recognition Principle) to ToE document
+- [x] Add v17.2 changelog entry to ToE Version History
+- [x] Update ArxivPaper.tsx with v2.3 results (new scorecard, progress bars, quotes, methodology section)
+- [x] Update Updates.tsx with 3 new June 25 entries
+- [x] Update WhatsNew.tsx banner and feature grid with v17.2
+- [x] Update Read.tsx version references from v17.1 to v17.2
+- [x] Update QuickAccessFooter.tsx version string to v17.2
+- [x] Write Eidan relay message with full overnight work summary
+- [x] Update ToE version from 16.8 to 17.2 in document header

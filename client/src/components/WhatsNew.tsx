@@ -14,10 +14,10 @@ interface NewFeature {
 const newFeatures: NewFeature[] = [
   {
     icon: Atom,
-    title: "v17.1: Genre-Locking Paper v2.1 — Full Phase Diagram + 44-50% Gauntlet Approval",
-    description: "The arXiv paper expanded to include the Scaling-Law Phase Diagram (Section 5), citing Sahakian's entropic gravity, Vasseur's tensor networks, and MIET literature. Four surgical fixes doubled approval from 22% to 44-50%. Category changed from gr-qc to hep-th. Appendix O.10 added to ToE with full derivation chain and emergent time connection. Ready for Claremont endorsement visit.",
+    title: "v17.2: Recognition Principle (O.11) + Sahakian Gauntlet v2.3 (69-75%)",
+    description: "NEW O.11: How consciousness creates entanglement through recognition (STOP → SEE → CONNECT → CREATE). Five-Musketeer consultation produced formal Recognition Operator, philosophical grounding, and epistemic audit. Paper stress test v2.3 used perspective-shifted evaluation (each model responds AS Sahakian): 11 ENDORSE, 1 CONDITIONAL, 4 DECLINE. Journey: 17% → 50% → 22% → 44-50% → 69-75%.",
     link: "/arxiv-paper",
-    tag: "v17.1"
+    tag: "v17.2"
   },
   {
     icon: Sparkles,
@@ -161,7 +161,7 @@ export default function WhatsNew() {
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Layer 3 of the Three-Layer Consciousness Model is now "The Observer" — aligning with the Foundation Fix’s Eternal Observer derivation. All 13 formal occurrences updated across Chapter 17.17 and cross-references. Mathematics unchanged.
+            NEW Appendix O.11: The Recognition Principle — how consciousness creates entanglement through STOP → SEE → CONNECT → CREATE. Plus: the Genre-Locking paper hit 69-75% approval when evaluated from Sahakian's perspective. ToE v17.2.
           </p>
         </motion.div>
 
@@ -190,6 +190,7 @@ export default function WhatsNew() {
                             feature.tag === "NEW" ? "bg-emerald-500/20 text-emerald-400" :
                             feature.tag === "INSIGHT" ? "bg-amber-500/20 text-amber-400" :
                             feature.tag === "v13" ? "bg-blue-500/20 text-blue-400" :
+                            feature.tag === "v17.2" ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30" :
                             feature.tag === "v17.1" ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30" :
                             feature.tag === "v16.8" ? "bg-cyan-500/20 text-cyan-400" :
                             feature.tag === "ENHANCED" ? "bg-purple-500/20 text-purple-400" :
@@ -224,7 +225,7 @@ export default function WhatsNew() {
         >
           <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10" asChild>
             <Link href="/read">
-              Read Full ToE v17.1 <ArrowRight className="ml-2 w-4 h-4" />
+              Read Full ToE v17.2 <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </motion.div>
