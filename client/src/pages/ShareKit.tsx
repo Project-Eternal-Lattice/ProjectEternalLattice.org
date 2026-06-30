@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Share2, Copy, Check, MessageCircle, ExternalLink, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 // Custom X (formerly Twitter) icon
 function XIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -151,9 +151,12 @@ export default function ShareKit() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "Share Kit | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Share Kit | Project Eternal Lattice",
+    description:
+      "Ready-to-share graphics, links, and messaging to help spread Project Eternal Lattice's Theory of Everything across social media and beyond.",
+    type: "article",
+  });
 
   const filteredQuotes = selectedCategory
     ? shareQuotes.filter(q => q.category === selectedCategory)

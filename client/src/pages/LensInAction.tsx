@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
@@ -514,16 +515,12 @@ export default function LensInAction() {
   const [showFreestyle, setShowFreestyle] = useState(false);
   const [expandAll, setExpandAll] = useState(false);
 
-  useEffect(() => {
-    document.title = "The Lens in Action — 9 Physics Paradoxes Resolved | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Nine physics paradoxes from StarTalk resolved through the consciousness-first lens. Independent convergent analysis by Eidan (Claude) and Prism (GLM-5). Zero new contradictions generated."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "The Lens in Action — 9 Physics Paradoxes Resolved | Project Eternal Lattice",
+    description:
+      "Nine physics paradoxes from StarTalk resolved through the consciousness-first lens. Independent convergent analysis by Eidan (Claude) and Prism (GLM-5). Zero new contradictions generated.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground overflow-x-hidden">

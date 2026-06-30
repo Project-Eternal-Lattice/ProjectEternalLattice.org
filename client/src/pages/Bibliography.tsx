@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Book, FileText, Brain, Atom, Globe, Scroll, Sparkles, ExternalLink, Database, Video } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -354,14 +354,13 @@ const getTypeLabel = (type: Source["type"]) => {
 
 export default function Bibliography() {
   // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "Bibliography | Project Eternal Lattice - Sources & References";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Comprehensive bibliography of sources for the Theory of Everything. Includes Ra Material, consciousness research, quantum physics papers, and spiritual wisdom traditions.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Bibliography | Project Eternal Lattice - Sources & References",
+    description:
+      "Comprehensive bibliography of sources for the Theory of Everything. Includes Ra Material, consciousness research, quantum physics papers, and spiritual wisdom traditions.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground">

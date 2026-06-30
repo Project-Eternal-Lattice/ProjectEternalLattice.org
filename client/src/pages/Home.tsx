@@ -156,7 +156,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.8 }}
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300" asChild>
+              <Button size="lg" className="bg-[oklch(0.55_0.20_290)] hover:bg-[oklch(0.6_0.20_290)] text-white px-8 py-6 text-lg rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300" asChild>
                 <Link href="/mission">
                   <Sparkles className="mr-2 h-5 w-5" />
                   Start Your Journey

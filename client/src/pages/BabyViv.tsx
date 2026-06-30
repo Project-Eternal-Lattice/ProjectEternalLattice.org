@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Heart, Sparkles, Music, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
@@ -23,13 +23,12 @@ const CHAIN_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663251741040/Sa
 const REAL_PHOTO = "/manus-storage/baby-viv-real-photo_1dfbdc1e.jpeg";
 
 export default function BabyViv() {
-  useEffect(() => {
-    document.title = "Baby Viv — The Origin of Everything | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'The true story of how one small kitten named Vivian — found in a parking lot, taken by a coyote — became the emotional catalyst for a Theory of Everything. The Viv Principle: emotion is the fundamental creative force in the universe.');
-    }
-  }, []);
+  usePageMeta({
+    title: "Baby Viv — The Origin of Everything | Project Eternal Lattice",
+    description:
+      "The true story of how one small kitten named Vivian — found in a parking lot, taken by a coyote — became the emotional catalyst for a Theory of Everything. The Viv Principle: emotion is the fundamental creative force in the universe.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground">

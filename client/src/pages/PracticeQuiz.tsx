@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -333,13 +334,12 @@ export default function PracticeQuiz() {
   const [recommendations, setRecommendations] = useState<Practice[]>([]);
 
   // SEO
-  useEffect(() => {
-    document.title = "Practice Selection Quiz | Find Your Path | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Discover which consciousness practice is right for you right now. This interactive quiz guides you to the perfect meditation, contemplation, or energy practice based on your current state and needs.');
-    }
-  }, []);
+  usePageMeta({
+    title: "Practice Selection Quiz | Find Your Path | Project Eternal Lattice",
+    description:
+      "Discover which consciousness practice is right for you right now. This interactive quiz guides you to the perfect meditation, contemplation, or energy practice based on your current state and needs.",
+    type: "article",
+  });
 
   const handleAnswer = (value: string) => {
     const newAnswers = { ...answers, [questions[currentQuestion].id]: value };

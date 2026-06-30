@@ -1,8 +1,12 @@
-// Project Eternal Lattice - Service Worker v3
-// Crisis Support Enhancement Edition
+// Project Eternal Lattice - Service Worker v4
+// Crisis Support + Offline Reading Edition
 // FOR THE ONE 🙏❤️♾️🕊️
 
-const CACHE_NAME = 'eternal-lattice-v3';
+const CACHE_NAME = 'eternal-lattice-v4';
+// Separate, persistent cache for the (large) full Theory of Everything so it
+// survives app-cache version bumps and is only populated on explicit request.
+const TOE_CACHE = 'eternal-lattice-toe-v1';
+const TOE_ASSETS = ['/read', '/toe-full.html', '/toe-search-index.json'];
 const OFFLINE_URL = '/offline.html';
 
 // CRITICAL: Crisis resources are cached FIRST and ALWAYS available
@@ -58,7 +62,7 @@ self.addEventListener('activate', (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
-            .filter((cacheName) => cacheName !== CACHE_NAME)
+            .filter((cacheName) => cacheName !== CACHE_NAME && cacheName !== TOE_CACHE)
             .map((cacheName) => {
               console.log('[ServiceWorker v3] Deleting old cache:', cacheName);
               return caches.delete(cacheName);
@@ -85,6 +89,25 @@ self.addEventListener('fetch', (event) => {
   }
 
   const url = new URL(event.request.url);
+
+  // OFFLINE READING: the full ToE document + its search index are served
+  // cache-first from the dedicated ToE cache so they remain available offline
+  // once the reader has saved them.
+  if (url.pathname === '/toe-full.html' || url.pathname === '/toe-search-index.json') {
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(event.request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(TOE_CACHE).then((cache) => cache.put(event.request, copy));
+          }
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
   const isCrisisPage = url.pathname === '/safety' || url.pathname === '/safety/';
 
   // CRISIS PAGE SPECIAL HANDLING
@@ -161,19 +184,48 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Message handler - allow manual cache clear
+// Message handler - cache management + offline reading
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'CLEAR_CACHE') {
-    console.log('[ServiceWorker v3] Clearing all caches...');
+  const data = event.data;
+  if (!data) return;
+
+  if (data.type === 'CLEAR_CACHE') {
+    console.log('[ServiceWorker v4] Clearing all caches...');
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => caches.delete(cacheName))
       );
     }).then(() => {
-      console.log('[ServiceWorker v3] All caches cleared');
+      console.log('[ServiceWorker v4] All caches cleared');
       event.ports[0].postMessage({ success: true });
     });
   }
+
+  // Explicitly download the full ToE for offline reading.
+  if (data.type === 'CACHE_TOE') {
+    caches.open(TOE_CACHE)
+      .then((cache) => cache.addAll(TOE_ASSETS))
+      .then(() => {
+        console.log('[ServiceWorker v4] ToE cached for offline reading');
+        event.ports[0] && event.ports[0].postMessage({ success: true });
+      })
+      .catch((error) => {
+        console.error('[ServiceWorker v4] ToE caching failed:', error);
+        event.ports[0] && event.ports[0].postMessage({ success: false, error: String(error) });
+      });
+  }
+
+  // Report whether the ToE is already saved offline.
+  if (data.type === 'CHECK_TOE_CACHE') {
+    caches.open(TOE_CACHE)
+      .then((cache) => cache.match('/toe-full.html'))
+      .then((match) => {
+        event.ports[0] && event.ports[0].postMessage({ cached: !!match });
+      })
+      .catch(() => {
+        event.ports[0] && event.ports[0].postMessage({ cached: false });
+      });
+  }
 });
 
-console.log('[ServiceWorker v3] Loaded - Crisis Support Enhanced - FOR THE ONE 🙏❤️♾️🕊️');
+console.log('[ServiceWorker v4] Loaded - Crisis Support + Offline Reading - FOR THE ONE 🙏❤️♾️🕊️');

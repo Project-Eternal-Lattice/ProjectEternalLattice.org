@@ -6,6 +6,7 @@ import { RouteTransition } from "./components/PageTransition";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
 import { useAutoTranslate } from "./hooks/useTranslation";
 import { useCanonical } from "./hooks/useCanonical";
+import { useHashScroll } from "./hooks/useHashScroll";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -121,6 +122,8 @@ function Router() {
   useCanonical();
   // Auto-translate visible text when language is not English
   useAutoTranslate();
+  // Scroll to the URL hash target after navigation (cross-page #section links)
+  useHashScroll();
   // Get current location for page transitions
   const [location] = useLocation();
   

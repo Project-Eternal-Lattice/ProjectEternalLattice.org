@@ -3,6 +3,7 @@ import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, FileText, Users, Lightbulb, Wrench, BookOpen, Sparkles, Atom } from "lucide-react";
 import { searchContent, getSearchSuggestions, SearchItem, typeLabels as indexTypeLabels, typeColors as indexTypeColors } from "@/lib/searchIndex";
+import { loadToeIndex, searchToe, highlightSnippet, ToeSearchResult } from "@/lib/toeSearch";
 import { cn } from "@/lib/utils";
 
 interface SearchModalProps {
@@ -27,32 +28,45 @@ const typeColors: Record<string, string> = indexTypeColors;
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchItem[]>([]);
+  const [toeResults, setToeResults] = useState<ToeSearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const toeIndexRef = useRef<Awaited<ReturnType<typeof loadToeIndex>> | null>(null);
   const [, setLocation] = useLocation();
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Focus input when modal opens
+  // Focus input when modal opens; lazily load the ToE full-text index.
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 100);
       setQuery("");
       setResults([]);
+      setToeResults([]);
       setSuggestions([]);
       setSelectedIndex(0);
+      if (!toeIndexRef.current) {
+        loadToeIndex()
+          .then((idx) => {
+            toeIndexRef.current = idx;
+          })
+          .catch(() => {
+            // Full-text search is a progressive enhancement; curated search still works.
+          });
+      }
     }
   }, [isOpen]);
 
-  // Search as user types
+  // Search as user types (curated index + ToE full text)
   useEffect(() => {
     if (query.length >= 2) {
-      const searchResults = searchContent(query, 8);
-      setResults(searchResults);
+      setResults(searchContent(query, 6));
       setSuggestions(getSearchSuggestions(query, 3));
+      setToeResults(toeIndexRef.current ? searchToe(toeIndexRef.current, query, 6) : []);
       setSelectedIndex(0);
     } else {
       setResults([]);
+      setToeResults([]);
       setSuggestions([]);
     }
   }, [query]);
@@ -83,6 +97,11 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const navigateToResult = (item: SearchItem) => {
     setLocation(item.path);
+    onClose();
+  };
+
+  const navigateToToeResult = (section: ToeSearchResult) => {
+    setLocation(`/read?goto=${encodeURIComponent(section.title)}`);
     onClose();
   };
 
@@ -159,8 +178,13 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               ref={resultsRef}
               className="max-h-[50vh] overflow-y-auto"
             >
-              {results.length > 0 ? (
+              {results.length > 0 || toeResults.length > 0 ? (
                 <div className="py-2">
+                  {toeResults.length > 0 && (
+                    <div className="px-4 pt-1 pb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
+                      Site
+                    </div>
+                  )}
                   {results.map((item, index) => (
                     <button
                       key={item.id}
@@ -194,6 +218,34 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       </div>
                     </button>
                   ))}
+
+                  {toeResults.length > 0 && (
+                    <>
+                      <div className="px-4 pt-3 pb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60 flex items-center gap-1.5">
+                        <BookOpen className="w-3 h-3" />
+                        From the Theory of Everything
+                      </div>
+                      {toeResults.map((section) => (
+                        <button
+                          key={`toe-${section.title}`}
+                          onClick={() => navigateToToeResult(section)}
+                          className="w-full px-4 py-3 flex items-start gap-3 text-left transition-colors hover:bg-white/5"
+                        >
+                          <div className="mt-0.5 text-purple-400">
+                            <BookOpen className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <span className="font-medium text-foreground block truncate">
+                              {section.title}
+                            </span>
+                            <p className="text-sm text-muted-foreground line-clamp-2 mt-0.5">
+                              {highlightSnippet(section, query)}
+                            </p>
+                          </div>
+                        </button>
+                      ))}
+                    </>
+                  )}
                 </div>
               ) : query.length >= 2 ? (
                 <div className="px-4 py-8 text-center text-muted-foreground">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { 
   Eye, EyeOff, Calculator, Infinity, Heart, ArrowRight, 
@@ -13,16 +14,12 @@ export default function PopcornParadox() {
   const [lookUpTimer, setLookUpTimer] = useState(60);
   const [lookUpComplete, setLookUpComplete] = useState(false);
 
-  useEffect(() => {
-    document.title = "The Popcorn Paradox — Why We Invented Numbers | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "The Popcorn Paradox: Why counting collapses consciousness. A shepherd's epiphany meets IIT mathematics — the Architecture Paradox proves that measurement is the original popcorn."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "The Popcorn Paradox — Why We Invented Numbers | Project Eternal Lattice",
+    description:
+      "The Popcorn Paradox: Why counting collapses consciousness. A shepherd's epiphany meets IIT mathematics — the Architecture Paradox proves that measurement is the original popcorn.",
+    type: "article",
+  });
 
   // Look Up timer
   useEffect(() => {

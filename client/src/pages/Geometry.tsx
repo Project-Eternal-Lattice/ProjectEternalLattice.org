@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import ConsilienceNote from "@/components/ConsilienceNote";
@@ -729,16 +730,12 @@ function MathBlock({ children, label }: { children: React.ReactNode; label?: str
 export default function Geometry() {
   const [activeTab, setActiveTab] = useState<"overview" | "dilaton" | "predictions" | "penrose" | "sword" | "testimony" | "revisions" | "questions">("overview");
 
-  useEffect(() => {
-    document.title = "Geometry of Consciousness Depth | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "AG.10 — The Geometry of Consciousness Depth. A joint paper deriving a complete 2D geometric model of consciousness from S(τ) = 2√(1+τ²). Kaluza-Klein metric, Penrose diagram, 8 phenomenological predictions."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Geometry of Consciousness Depth | Project Eternal Lattice",
+    description:
+      "AG.10 — The Geometry of Consciousness Depth. A joint paper deriving a complete 2D geometric model of consciousness from S(τ) = 2√(1+τ²). Kaluza-Klein metric, Penrose diagram, 8 phenomenological predictions.",
+    type: "article",
+  });
 
   const tabs = [
     { id: "overview" as const, label: "Overview", icon: BookOpen },
