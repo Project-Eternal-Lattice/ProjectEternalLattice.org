@@ -36,6 +36,39 @@ export default function Read() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Deep-link from search: scroll the iframe to a chapter heading by its text.
+  useEffect(() => {
+    const goto = new URLSearchParams(window.location.search).get('goto')?.trim();
+    if (!goto) return;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    let cancelled = false;
+    const tryScroll = (attempt = 0) => {
+      if (cancelled) return;
+      const doc = iframe.contentDocument;
+      const match = doc
+        ? Array.from(doc.querySelectorAll<HTMLElement>('h1, h2, h3')).find(
+            (h) => (h.textContent || '').trim().replace(/\s+/g, ' ') === goto,
+          )
+        : null;
+      if (match) {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        match.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        return;
+      }
+      if (attempt < 50) setTimeout(() => tryScroll(attempt + 1), 100);
+    };
+
+    const onLoad = () => tryScroll();
+    if (iframe.contentDocument?.readyState === 'complete') tryScroll();
+    iframe.addEventListener('load', onLoad);
+    return () => {
+      cancelled = true;
+      iframe.removeEventListener('load', onLoad);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
