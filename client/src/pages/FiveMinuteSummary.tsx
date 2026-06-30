@@ -1,6 +1,6 @@
 import TooltipTerm from "@/components/TooltipTerm";
 import { CriticalThinkingPrompt } from "@/components/CriticalThinkingPrompt";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -14,9 +14,12 @@ const fadeIn = {
 };
 
 export default function FiveMinuteSummary() {
-  useEffect(() => {
-    document.title = "5-Minute Summary | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "5-Minute Summary | Project Eternal Lattice",
+    description:
+      "The Theory of Everything ∞ Law of ONE in five minutes — a plain-language overview of how consciousness, physics, and the Law of ONE fit together. Free, no catch.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground">

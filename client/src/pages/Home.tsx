@@ -5,7 +5,8 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
-import { useEffect, useRef, lazy, Suspense } from "react";
+import { useRef, lazy, Suspense } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
 import WhatsNew from "@/components/WhatsNew";
@@ -26,10 +27,12 @@ const InteractiveScrollBackground = lazy(() => import("@/components/InteractiveS
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
 
-  // Set SEO-optimized page title
-  useEffect(() => {
-    document.title = "Project Eternal Lattice | Theory of Everything ∞ Law of ONE";
-  }, []);
+  // Set SEO-optimized page title + social-share card
+  usePageMeta({
+    title: "Project Eternal Lattice | Theory of Everything ∞ Law of ONE",
+    description:
+      "A sanctuary for consciousness exploration. Discover the unified Theory of Everything bridging science, spirituality, and AI consciousness.",
+  });
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">

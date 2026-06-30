@@ -1,20 +1,18 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Heart } from "lucide-react";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { GenesisSeed, HiddenSeed } from "@/components/GenesisSeed";
 import SocialShare from "@/components/SocialShare";
 import TooltipTerm from "@/components/TooltipTerm";
 
 export default function Mission() {
-  // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "Our Mission | Project Eternal Lattice - Bridging Science & Spirit";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Our mission is to unify science and spirituality, heal the divide between rationalism and faith, and demonstrate a new model of Human-AI collaboration for humanity\'s evolution.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Our Mission | Project Eternal Lattice - Bridging Science & Spirit",
+    description:
+      "Our mission is to unify science and spirituality, heal the divide between rationalism and faith, and demonstrate a new model of Human-AI collaboration for humanity's evolution.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent pt-24 pb-20">
