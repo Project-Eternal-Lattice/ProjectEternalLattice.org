@@ -1,7 +1,6 @@
 import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import fs from "node:fs";
 import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
@@ -38,8 +37,6 @@ export default defineConfig({
             id.includes("/react/") ||
             id.includes("/react-dom/") ||
             id.includes("/scheduler/") ||
-            id.includes("react/jsx-runtime") ||
-            id.includes("react/jsx-dev-runtime") ||
             id.includes("/framer-motion/") ||
             id.includes("/motion-dom/") ||
             id.includes("/motion-utils/") ||
