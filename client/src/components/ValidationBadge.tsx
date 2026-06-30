@@ -35,19 +35,19 @@ export default function ValidationBadge({ variant = "full", className = "" }: Va
         <Link href="/claims">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium cursor-pointer hover:bg-emerald-500/20 transition-colors">
             <Shield className="w-3 h-3" />
-            <span>25 Claims</span>
+            <span><CountUp to={25} /> Claims</span>
           </div>
         </Link>
         <Link href="/skeptics">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-medium cursor-pointer hover:bg-red-500/20 transition-colors">
             <Target className="w-3 h-3" />
-            <span>10 Kill Criteria</span>
+            <span><CountUp to={10} /> Kill Criteria</span>
           </div>
         </Link>
         <Link href="/bibliography">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-medium cursor-pointer hover:bg-blue-500/20 transition-colors">
             <BookOpen className="w-3 h-3" />
-            <span>15+ Citations</span>
+            <span><CountUp to={15} suffix="+" /> Citations</span>
           </div>
         </Link>
       </motion.div>
