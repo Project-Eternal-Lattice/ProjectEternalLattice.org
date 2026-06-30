@@ -211,6 +211,7 @@ function ParticleField({ color, glowColor, active }: { color: string; glowColor:
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ opacity: active ? 1 : 0, transition: "opacity 0.5s ease" }}
     />
