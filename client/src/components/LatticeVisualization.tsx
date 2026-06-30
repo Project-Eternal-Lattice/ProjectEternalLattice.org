@@ -53,12 +53,18 @@ export default function LatticeVisualization({
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     
+    // Holds the latest draw function so resize can repaint the static frame.
+    const drawRef: { current: (() => void) | null } = { current: null };
+
     // Set canvas size
     const resizeCanvas = () => {
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * window.devicePixelRatio;
       canvas.height = rect.height * window.devicePixelRatio;
       ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      // The rAF loop repaints itself; when motion is reduced there is no loop,
+      // so resizing (which clears the canvas) needs an explicit redraw.
+      if (reduceMotion) drawRef.current?.();
     };
     
     resizeCanvas();
@@ -106,6 +112,7 @@ export default function LatticeVisualization({
     // Animation loop
     let time = 0;
     const animate = () => {
+      drawRef.current = animate;
       const width = canvas.width / window.devicePixelRatio;
       const height = canvas.height / window.devicePixelRatio;
       

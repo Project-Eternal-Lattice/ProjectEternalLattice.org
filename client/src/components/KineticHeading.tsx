@@ -39,8 +39,7 @@ export default function KineticHeading({
 }: KineticHeadingProps) {
   const prefersReducedMotion = useReducedMotion();
   const words = useMemo(() => text.split(" "), [text]);
-
-  const MotionTag = motion(as);
+  const MotionTag = useMemo(() => motion(as), [as]);
 
   // Reduced motion: render the plain heading with no per-word animation.
   if (prefersReducedMotion) {
