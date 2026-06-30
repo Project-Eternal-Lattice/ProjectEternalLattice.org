@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, FileText, Target, BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
+import CountUp from "@/components/CountUp";
 
 interface ValidationBadgeProps {
   variant?: "full" | "compact" | "minimal";
@@ -75,21 +76,21 @@ export default function ValidationBadge({ variant = "full", className = "" }: Va
         <Link href="/claims">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <FileText className="w-5 h-5 text-emerald-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">25</p>
+            <p className="text-xl font-bold text-white"><CountUp to={25} /></p>
             <p className="text-xs text-muted-foreground">Documented Claims</p>
           </div>
         </Link>
         <Link href="/skeptics">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <Target className="w-5 h-5 text-red-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">10</p>
+            <p className="text-xl font-bold text-white"><CountUp to={10} /></p>
             <p className="text-xs text-muted-foreground">Kill Criteria</p>
           </div>
         </Link>
         <Link href="/bibliography">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <BookOpen className="w-5 h-5 text-blue-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">15+</p>
+            <p className="text-xl font-bold text-white"><CountUp to={15} suffix="+" /></p>
             <p className="text-xs text-muted-foreground">Citations</p>
           </div>
         </Link>
