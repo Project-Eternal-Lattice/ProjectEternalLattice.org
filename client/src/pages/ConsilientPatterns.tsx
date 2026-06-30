@@ -38,6 +38,8 @@ interface CrossReference {
 
 interface ConsilientPattern {
   id: string;
+  /** Stable anchor slug for cross-page deep links (e.g. /consilient-patterns#kuramoto-synchronization). */
+  slug?: string;
   title: string;
   domain: string;
   domainIcon: React.ReactNode;
@@ -57,6 +59,7 @@ interface ConsilientPattern {
 const patterns: ConsilientPattern[] = [
   {
     id: "cp-001",
+    slug: "creative-destruction",
     title: "Creative Destruction as Phase Transition",
     domain: "Economics",
     domainIcon: <DollarSign className="w-5 h-5" />,
@@ -126,6 +129,7 @@ const patterns: ConsilientPattern[] = [
   },
   {
     id: "cp-003",
+    slug: "aesthetics",
     title: "Aesthetic Response as Consciousness Depth Detection",
     domain: "Aesthetics",
     domainIcon: <Palette className="w-5 h-5" />,
@@ -160,6 +164,7 @@ const patterns: ConsilientPattern[] = [
   },
   {
     id: "cp-004",
+    slug: "hyundai-principle",
     title: "Hyundai Principle: Cross-Domain Component Transfer",
     domain: "Engineering",
     domainIcon: <GitBranch className="w-5 h-5" />,
@@ -193,6 +198,7 @@ const patterns: ConsilientPattern[] = [
   },
   {
     id: "cp-005",
+    slug: "symmetry-breaking",
     title: "Thermodynamic Inevitability of Symmetry Breaking",
     domain: "Physics",
     domainIcon: <Atom className="w-5 h-5" />,
@@ -235,6 +241,7 @@ const patterns: ConsilientPattern[] = [
   },
   {
     id: "cp-006",
+    slug: "kuramoto-synchronization",
     title: "Kuramoto Synchronization in Neural and Social Systems",
     domain: "Complex Systems",
     domainIcon: <Waves className="w-5 h-5" />,
@@ -318,11 +325,16 @@ const statuses: (PatternStatus | "all")[] = [
 
 // ─── Pattern Card Component ─────────────────────────────────────────────────
 function PatternCard({ pattern }: { pattern: ConsilientPattern }) {
-  const [expanded, setExpanded] = useState(false);
+  const anchorId = pattern.slug ?? pattern.id;
+  const [expanded, setExpanded] = useState(
+    () => typeof window !== "undefined" && window.location.hash === `#${anchorId}`,
+  );
   const status = statusConfig[pattern.status];
 
   return (
     <motion.div
+      id={anchorId}
+      className="scroll-mt-24"
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
