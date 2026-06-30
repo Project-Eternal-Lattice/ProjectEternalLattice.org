@@ -131,9 +131,11 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // Network failed - return cached crisis page
+          // Network failed - return cached crisis page. Match ignoreSearch so a
+          // query-string variant (e.g. /safety?ref=...) still resolves to the
+          // cached life-critical page instead of the generic offline fallback.
           console.log('[ServiceWorker v3] Network failed, serving cached crisis page');
-          return caches.match(event.request)
+          return caches.match(event.request, { ignoreSearch: true })
             .then((cachedResponse) => {
               if (cachedResponse) {
                 return cachedResponse;
