@@ -256,6 +256,7 @@ export default function LatticeVisualization({
   return (
     <motion.canvas
       ref={canvasRef}
+      aria-hidden="true"
       className={`${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
