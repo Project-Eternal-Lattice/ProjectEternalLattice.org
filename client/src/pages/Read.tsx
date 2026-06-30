@@ -6,6 +6,7 @@ import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, 
 import { Link } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ReadTableOfContents } from "@/components/ReadTableOfContents";
+import { OfflineReadingButton } from "@/components/OfflineReadingButton";
 
 export default function Read() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -160,6 +161,7 @@ export default function Read() {
             <FileText className="w-5 h-5" />
             Grief Equation v9 (NEW)
           </Link>
+          <OfflineReadingButton />
         </motion.div>
 
         {/* Reading Progress Tracker */}
