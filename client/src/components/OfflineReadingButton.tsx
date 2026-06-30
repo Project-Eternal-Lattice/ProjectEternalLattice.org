@@ -64,8 +64,8 @@ export function OfflineReadingButton() {
 
   if (state === "saved") {
     return (
-      <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/15 border border-emerald-500/30 rounded-xl text-emerald-400 font-medium">
-        <Check className="w-5 h-5" />
+      <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/15 border border-emerald-500/30 rounded-xl text-emerald-300 font-medium">
+        <Check className="w-5 h-5" aria-hidden="true" />
         Available offline
       </span>
     );
@@ -75,22 +75,22 @@ export function OfflineReadingButton() {
     <button
       onClick={save}
       disabled={state === "saving"}
-      className="inline-flex items-center gap-2 px-6 py-3 bg-violet-500/15 hover:bg-violet-500/25 border border-violet-500/30 rounded-xl text-violet-300 font-medium transition-all disabled:opacity-70 disabled:cursor-wait"
-      aria-label="Save the Theory of Everything for offline reading"
+      className="inline-flex items-center gap-2 px-6 py-3 bg-violet-500/15 hover:bg-violet-500/25 border border-violet-500/30 rounded-xl text-violet-200 font-medium transition-all disabled:opacity-70 disabled:cursor-wait"
+      title="Save the full Theory of Everything for offline reading"
     >
       {state === "saving" ? (
         <>
-          <Loader2 className="w-5 h-5 animate-spin" />
+          <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
           Saving for offline…
         </>
       ) : state === "error" ? (
         <>
-          <WifiOff className="w-5 h-5" />
+          <WifiOff className="w-5 h-5" aria-hidden="true" />
           Retry offline save
         </>
       ) : (
         <>
-          <Download className="w-5 h-5" />
+          <Download className="w-5 h-5" aria-hidden="true" />
           Save for offline reading
         </>
       )}

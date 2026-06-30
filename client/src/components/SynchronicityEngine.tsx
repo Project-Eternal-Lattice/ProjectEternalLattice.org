@@ -263,6 +263,7 @@ export default function SynchronicityEngine({ variant = "full" }: SynchronicityE
         {/* Floating Button */}
         <motion.button
           onClick={handleOpen}
+          aria-label="Open the Synchronicity Engine"
           className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4 rounded-full shadow-lg hover:shadow-purple-500/30 transition-all duration-300"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
