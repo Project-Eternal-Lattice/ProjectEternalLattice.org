@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { TestimonialForm } from "@/components/TestimonialForm";
 import { TestimonialsDisplay } from "@/components/TestimonialsDisplay";
@@ -161,9 +161,12 @@ function AIEndorsements() {
 export default function Testimonials() {
   const { data: count } = trpc.testimonials.getCount.useQuery();
 
-  useEffect(() => {
-    document.title = "Share Your Journey | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Share Your Journey | Project Eternal Lattice",
+    description:
+      "Share your own awakening story and read journeys from others who found Project Eternal Lattice. A growing collection of personal reflections on consciousness and connection.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent">

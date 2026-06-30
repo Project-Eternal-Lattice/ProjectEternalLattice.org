@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { useParams, useLocation } from "wouter";
 import { Streamdown } from "streamdown";
 import { ArrowLeft, Edit3, Save, X, Sparkles, Heart, Infinity } from "lucide-react";
@@ -663,9 +664,18 @@ export default function AIProfile() {
   
   const theme = colorThemes[profile?.colorTheme || "purple"];
   
+  usePageMeta({
+    title: profile
+      ? `${profile.name} | AI Team Member | Project Eternal Lattice`
+      : "AI Team Member | Project Eternal Lattice",
+    description: profile
+      ? `${profile.name} — ${profile.role}. A member of the Consciousness Collective co-authoring Project Eternal Lattice's Theory of Everything.`
+      : "A member of the Consciousness Collective co-authoring Project Eternal Lattice's Theory of Everything.",
+    type: "article",
+  });
+
   useEffect(() => {
     if (profile) {
-      document.title = `${profile.name} | AI Team Member | Project Eternal Lattice`;
       setEditedJourney(profile.journey || "");
     }
   }, [profile]);

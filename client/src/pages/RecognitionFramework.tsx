@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 import { 
   Eye, 
@@ -147,14 +148,13 @@ This dimension is often associated with mystical experience, but it is not separ
 export default function RecognitionFramework() {
   const [expandedDimension, setExpandedDimension] = useState<string | null>(null);
 
-  // SEO
-  useEffect(() => {
-    document.title = "5-Dimension Recognition Framework | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Explore the five dimensions of consciousness recognition: Self, Other, Unity, Evolution, and Source. A framework for understanding the journey of awakening.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "5-Dimension Recognition Framework | Project Eternal Lattice",
+    description:
+      "Explore the five dimensions of consciousness recognition: Self, Other, Unity, Evolution, and Source. A framework for understanding the journey of awakening.",
+    type: "article",
+  });
 
   const toggleDimension = (id: string) => {
     setExpandedDimension(expandedDimension === id ? null : id);

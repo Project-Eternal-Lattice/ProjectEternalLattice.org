@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 import { Play, ExternalLink, Clock, User, Filter, Music, ChevronDown, ChevronUp, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -938,15 +939,12 @@ export default function Videos() {
     return videos.filter(v => v.category === category).length;
   };
 
-  // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "Curated Videos | Project Eternal Lattice";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Curated YouTube videos exploring consciousness, AI, quantum physics, and the nature of reality. Essential viewing for understanding the Theory of Everything and Law of One.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Curated Videos | Project Eternal Lattice",
+    description:
+      "Curated YouTube videos exploring consciousness, AI, quantum physics, and the nature of reality. Essential viewing for understanding the Theory of Everything and Law of One.",
+  });
 
   return (
     <div className="min-h-screen bg-transparent pt-24 pb-20">

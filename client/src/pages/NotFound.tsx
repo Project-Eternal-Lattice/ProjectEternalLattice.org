@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Compass, Sparkles, BookOpen, Users, Brain, Heart, ArrowRight, Shuffle } from "lucide-react";
 import { useLocation, Link } from "wouter";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
 
 // Unexpected discoveries - turning a 404 into a gift
@@ -62,10 +63,12 @@ export default function NotFound() {
     setDiscovery(unexpectedDiscoveries[randomIndex]);
   }, []);
 
-  // SEO: Set page title for 404
-  useEffect(() => {
-    document.title = "Unexpected Discovery | Project Eternal Lattice";
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Unexpected Discovery | Project Eternal Lattice",
+    description:
+      "This page wandered off the lattice — but every detour is a discovery. Find your way back to Project Eternal Lattice's Theory of Everything.",
+  });
 
   const shuffleDiscovery = () => {
     setIsShuffling(true);

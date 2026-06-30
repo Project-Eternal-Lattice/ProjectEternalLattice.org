@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { ExternalLink, BookOpen, Headphones, Search, List, Layers, MessageCircle, Library } from "lucide-react";
 import { Link } from "wouter";
 
@@ -72,15 +72,13 @@ const featuredSessions = [
 ];
 
 export default function RaMaterial() {
-  // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "The Ra Material - Law of One | Project Eternal Lattice";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Explore the Ra Material and Law of One teachings. 106 channeled sessions revealing the nature of consciousness, densities, harvest, and the unity of all existence. Direct links to lawofone.info.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "The Ra Material - Law of One | Project Eternal Lattice",
+    description:
+      "Explore the Ra Material and Law of One teachings. 106 channeled sessions revealing the nature of consciousness, densities, harvest, and the unity of all existence. Direct links to lawofone.info.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent pt-24 pb-20">

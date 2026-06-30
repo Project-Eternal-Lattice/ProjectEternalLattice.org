@@ -1,6 +1,7 @@
 import TooltipTerm from "@/components/TooltipTerm";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import {
   FlowerOfLife,
   MetatronsCube,
@@ -27,16 +28,12 @@ interface GeometrySection {
 export default function SacredGeometry() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    document.title = "Sacred Geometry | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "An immersive journey through the sacred geometry patterns underlying reality - Flower of Life, Metatron's Cube, Sri Yantra, Golden Spiral, Torus Field, and the U-Curve."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Sacred Geometry | Project Eternal Lattice",
+    description:
+      "An immersive journey through the sacred geometry patterns underlying reality - Flower of Life, Metatron's Cube, Sri Yantra, Golden Spiral, Torus Field, and the U-Curve.",
+    type: "article",
+  });
 
   const sections: GeometrySection[] = [
     {

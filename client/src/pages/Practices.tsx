@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { 
   Eye, 
   Heart, 
@@ -313,17 +314,12 @@ const practices: Practice[] = [
 export default function Practices() {
   const [expandedPractice, setExpandedPractice] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "Practices | Project Eternal Lattice";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Practical exercises from wisdom traditions worldwide. Self-inquiry, centering prayer, sky gazing, dhikr, zazen, and more — practices to recognize your true nature."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Practices | Project Eternal Lattice",
+    description:
+      "Practical exercises from wisdom traditions worldwide. Self-inquiry, centering prayer, sky gazing, dhikr, zazen, and more — practices to recognize your true nature.",
+    type: "article",
+  });
 
   const togglePractice = (id: string) => {
     setExpandedPractice(expandedPractice === id ? null : id);

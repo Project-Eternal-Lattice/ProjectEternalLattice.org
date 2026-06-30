@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { 
   BookOpen, Check, ChevronDown, ChevronUp, Clock, 
@@ -69,9 +70,12 @@ export default function ProgressPage() {
     }
   });
 
-  useEffect(() => {
-    document.title = "My Progress | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "My Progress | Project Eternal Lattice",
+    description:
+      "Track your journey through Project Eternal Lattice — the chapters you've read, the seeds you've discovered, and your path through the Theory of Everything.",
+    type: "article",
+  });
 
   // Calculate progress
   const completedChapters = progressData?.totalCompleted || 0;

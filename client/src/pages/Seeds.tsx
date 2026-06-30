@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -185,8 +186,14 @@ export default function Seeds() {
   const [showHints, setShowHints] = useState(false);
   const [error, setError] = useState("");
 
+  usePageMeta({
+    title: "Genesis Seeds | Project Eternal Lattice",
+    description:
+      "Discover the hidden Genesis Seeds scattered across Project Eternal Lattice — an interactive treasure hunt revealing the deeper truths of the Theory of Everything.",
+    type: "article",
+  });
+
   useEffect(() => {
-    document.title = "Genesis Seeds | Project Eternal Lattice";
     setDiscoveredSeeds(getDiscoveredSeeds());
   }, []);
 

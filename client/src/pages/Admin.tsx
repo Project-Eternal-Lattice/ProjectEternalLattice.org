@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { useLocation } from "wouter";
 import { 
   Shield, Check, X, Clock, RefreshCw, Eye, Trash2, 
@@ -72,9 +73,11 @@ export default function Admin() {
   const { data: subscriberCountData } = trpc.newsletter.getCount.useQuery();
   const subscriberCount = subscriberCountData?.count || 0;
   
-  useEffect(() => {
-    document.title = "Curation Nexus | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Curation Nexus | Project Eternal Lattice",
+    description:
+      "Administrative curation tools for Project Eternal Lattice.",
+  });
   
   // Redirect non-admins
   useEffect(() => {
