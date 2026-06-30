@@ -48,7 +48,7 @@ def run_deepseek():
     """Run Round 2 through DeepSeek V4 Pro"""
     client = OpenAI(
         base_url="https://api.deepseek.com",
-        api_key="sk-5b8da1feff8e4df28d0dc1fb93835249"
+        api_key=os.environ["DEEPSEEK_API_KEY"]
     )
     
     print("=" * 80)
@@ -78,7 +78,7 @@ def run_nemotron():
     """Run Round 2 through Nemotron Ultra 550B"""
     client = OpenAI(
         base_url="https://integrate.api.nvidia.com/v1",
-        api_key="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"
+        api_key=os.environ["NVIDIA_API_KEY"]
     )
     
     print("=" * 80)
