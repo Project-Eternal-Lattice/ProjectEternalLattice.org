@@ -59,6 +59,8 @@ export default function Home() {
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/wPJpAsVgYCBKMpUE.jpg" 
             alt="Eternal Lattice Hero" 
             className="w-full h-full object-cover opacity-50 scale-110"
+            fetchPriority="high"
+            decoding="async"
           />
         </motion.div>
         

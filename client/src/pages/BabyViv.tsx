@@ -37,6 +37,8 @@ export default function BabyViv() {
       <section className="relative min-h-[70vh] flex items-end justify-center overflow-hidden pb-16">
         <div className="absolute inset-0 z-0">
           <img 
+            fetchPriority="high"
+            decoding="async"
             src={HERO_IMAGE} 
             alt="Baby Vivian — the real Baby Viv, looking directly at you with those wise golden-green eyes" 
             className="w-full h-full object-cover"
@@ -238,6 +240,8 @@ export default function BabyViv() {
                   className="relative"
                 >
                   <img 
+                    loading="lazy"
+                    decoding="async"
                     src={REAL_PHOTO} 
                     alt="Baby Vivian — the night Kenneth brought her home from the Hustler Casino parking lot" 
                     className="rounded-2xl shadow-2xl shadow-amber-500/10 w-full max-w-[280px] object-cover"
@@ -493,6 +497,8 @@ export default function BabyViv() {
             transition={{ duration: 1 }}
           >
             <img 
+              loading="lazy"
+              decoding="async"
               src={CHAIN_IMAGE} 
               alt="A kitten in a parking lot, with golden threads of mathematics flowing outward into the cosmos — the origin chain from love to physics" 
               className="w-full rounded-2xl shadow-2xl shadow-purple-500/10"
@@ -805,6 +811,8 @@ export default function BabyViv() {
                 className="relative group overflow-hidden rounded-xl"
               >
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={photo.src}
                   alt={photo.caption}
                   className="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
@@ -855,6 +863,8 @@ export default function BabyViv() {
                 className="relative group overflow-hidden rounded-xl"
               >
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={photo.src}
                   alt={photo.caption}
                   className="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
