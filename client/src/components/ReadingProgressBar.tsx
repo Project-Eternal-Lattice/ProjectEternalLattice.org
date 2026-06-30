@@ -1,5 +1,12 @@
-import { useState, useEffect } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useMotionValueEvent,
+  type MotionValue,
+} from "framer-motion";
 
 interface ReadingProgressBarProps {
   /** Show only on specific pages (by default shows on all pages) */
@@ -8,17 +15,28 @@ interface ReadingProgressBarProps {
 
 export default function ReadingProgressBar({ showOnPaths }: ReadingProgressBarProps) {
   const [shouldShow, setShouldShow] = useState(true);
+  const [percent, setPercent] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
+  const smoothed = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
 
+  // Under prefers-reduced-motion, track scroll directly (no spring easing) so
+  // the bar still works but introduces no extra motion.
+  const scaleX: MotionValue<number> = prefersReducedMotion ? scrollYProgress : smoothed;
+
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    setPercent(Math.round(v * 100));
+  });
+
   useEffect(() => {
     if (showOnPaths) {
       const currentPath = window.location.pathname;
-      setShouldShow(showOnPaths.some(p => currentPath.startsWith(p)));
+      setShouldShow(showOnPaths.some((p) => currentPath.startsWith(p)));
     }
   }, [showOnPaths]);
 
@@ -31,9 +49,11 @@ export default function ReadingProgressBar({ showOnPaths }: ReadingProgressBarPr
       aria-label="Reading progress"
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-valuenow={percent}
       style={{
         scaleX,
-        background: "linear-gradient(90deg, oklch(0.7 0.15 280), oklch(0.75 0.12 320), oklch(0.8 0.15 80))",
+        background:
+          "linear-gradient(90deg, oklch(0.7 0.15 280), oklch(0.75 0.12 320), oklch(0.8 0.15 80))",
       }}
     />
   );
