@@ -26,15 +26,27 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
+        // Group the eagerly-shared React stack (React, radix, framer-motion)
+        // into ONE chunk. Keeping them together avoids cross-chunk module
+        // init-order bugs (e.g. radix reading React.forwardRef before React's
+        // chunk has evaluated). Other deps (three.js, etc.) are intentionally
+        // left to Rollup's default per-route splitting so they aren't pulled
+        // into the critical path.
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
-          if (id.includes("framer-motion") || id.includes("motion-dom") || id.includes("motion-utils")) {
-            return "vendor-motion";
-          }
-          if (id.includes("react-dom") || id.includes("/react/") || id.includes("/scheduler/")) {
+          if (
+            id.includes("/react/") ||
+            id.includes("/react-dom/") ||
+            id.includes("/scheduler/") ||
+            id.includes("react/jsx-runtime") ||
+            id.includes("react/jsx-dev-runtime") ||
+            id.includes("/framer-motion/") ||
+            id.includes("/motion-dom/") ||
+            id.includes("/motion-utils/") ||
+            id.includes("@radix-ui")
+          ) {
             return "vendor-react";
           }
-          if (id.includes("@radix-ui")) return "vendor-radix";
         },
       },
     },
