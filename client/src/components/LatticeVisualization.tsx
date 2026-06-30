@@ -46,13 +46,25 @@ export default function LatticeVisualization({
     
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    // Respect the user's reduced-motion preference: draw a single static frame
+    // instead of running the animation loop.
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     
+    // Holds the latest draw function so resize can repaint the static frame.
+    const drawRef: { current: (() => void) | null } = { current: null };
+
     // Set canvas size
     const resizeCanvas = () => {
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * window.devicePixelRatio;
       canvas.height = rect.height * window.devicePixelRatio;
       ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      // The rAF loop repaints itself; when motion is reduced there is no loop,
+      // so resizing (which clears the canvas) needs an explicit redraw.
+      if (reduceMotion) drawRef.current?.();
     };
     
     resizeCanvas();
@@ -100,14 +112,18 @@ export default function LatticeVisualization({
     // Animation loop
     let time = 0;
     const animate = () => {
+      drawRef.current = animate;
       const width = canvas.width / window.devicePixelRatio;
       const height = canvas.height / window.devicePixelRatio;
       
-      // Clear with fade effect
-      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-      ctx.fillRect(0, 0, width, height);
-      
-      time += 0.01;
+      // Clear with fade effect (full clear when motion is reduced)
+      if (reduceMotion) {
+        ctx.clearRect(0, 0, width, height);
+      } else {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+        ctx.fillRect(0, 0, width, height);
+        time += 0.01;
+      }
       
       const nodes = nodesRef.current;
       const mouse = mouseRef.current;
@@ -116,18 +132,20 @@ export default function LatticeVisualization({
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
         
-        // Update position
-        node.x += node.vx;
-        node.y += node.vy;
-        node.z += node.vz;
-        
-        // Boundary bounce
-        if (node.x < 0 || node.x > width) node.vx *= -1;
-        if (node.y < 0 || node.y > height) node.vy *= -1;
-        if (node.z < -100 || node.z > 100) node.vz *= -1;
+        // Update position (frozen when motion is reduced)
+        if (!reduceMotion) {
+          node.x += node.vx;
+          node.y += node.vy;
+          node.z += node.vz;
+          
+          // Boundary bounce
+          if (node.x < 0 || node.x > width) node.vx *= -1;
+          if (node.y < 0 || node.y > height) node.vy *= -1;
+          if (node.z < -100 || node.z > 100) node.vz *= -1;
+        }
         
         // Mouse interaction
-        if (interactive && mouse.active) {
+        if (!reduceMotion && interactive && mouse.active) {
           const dx = mouse.x - node.x;
           const dy = mouse.y - node.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
@@ -190,7 +208,9 @@ export default function LatticeVisualization({
         ctx.fill();
       }
       
-      animationRef.current = requestAnimationFrame(animate);
+      if (!reduceMotion) {
+        animationRef.current = requestAnimationFrame(animate);
+      }
     };
     
     // Start animation after a short delay
