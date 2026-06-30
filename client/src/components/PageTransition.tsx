@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ReactNode } from "react";
 
 /**
@@ -120,8 +120,16 @@ interface RouteTransitionProps {
 }
 
 export function RouteTransition({ children, locationKey }: RouteTransitionProps) {
+  const prefersReducedMotion = useReducedMotion();
+  // `MotionConfig reducedMotion="user"` only suppresses transform/layout
+  // animations, not `filter`/`opacity`, so the lattice blur+scale would still
+  // play. Fall back to a quick opacity-only cross-fade under reduced motion.
   return (
-    <PageTransition locationKey={locationKey} variant="lattice" duration={0.3}>
+    <PageTransition
+      locationKey={locationKey}
+      variant={prefersReducedMotion ? "fade" : "lattice"}
+      duration={prefersReducedMotion ? 0.15 : 0.3}
+    >
       {children}
     </PageTransition>
   );
