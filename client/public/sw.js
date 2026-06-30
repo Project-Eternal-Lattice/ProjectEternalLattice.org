@@ -161,7 +161,11 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // Network failed - serve the cached app shell for this route if we have
           // it (e.g. /read saved for offline reading), else the offline page.
+          // Fall back to an ignoreSearch match so deep-links like
+          // /read?goto=Chapter resolve to the cached bare-path shell (which is
+          // stored without a query string).
           return caches.match(event.request)
+            .then((cached) => cached || caches.match(event.request, { ignoreSearch: true }))
             .then((cached) => cached || caches.match(OFFLINE_URL));
         })
     );
