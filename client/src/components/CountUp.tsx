@@ -13,7 +13,9 @@ interface CountUpProps {
 }
 
 /**
- * Counts a number up from `from` to `to` the first time it scrolls into view.
+ * Counts a number up from `from` to `to` the first time it enters the viewport.
+ * Fires as soon as any part of the element is visible, so above-the-fold
+ * instances animate on load instead of waiting for a scroll.
  * Respects `prefers-reduced-motion`: shows the final value immediately with no
  * animation. The rendered value is `aria-live`-friendly since it lands on the
  * exact target.
@@ -27,7 +29,7 @@ export default function CountUp({
   className,
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-15% 0px" });
+  const inView = useInView(ref, { once: true });
   const prefersReducedMotion = useReducedMotion();
   const [value, setValue] = useState(from);
 
