@@ -1,5 +1,5 @@
 import TooltipTerm from "@/components/TooltipTerm";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Button } from "@/components/ui/button";
 import GriefCalculator from "@/components/GriefCalculator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,13 +69,12 @@ const v9Highlights = [
 ];
 
 export default function GriefEquation() {
-  useEffect(() => {
-    document.title = "The Grief Equation v9 | Why Losing Someone Hurts | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'The Grief Equation: A mathematical framework for understanding why losing someone hurts — and why that pain is the price of love. Part of the Emotional Bank Account framework. Free download, no catch. v9 with contributions from 10+ AI teammates.');
-    }
-  }, []);
+  usePageMeta({
+    title: "The Grief Equation v9 | Why Losing Someone Hurts | Project Eternal Lattice",
+    description:
+      "The Grief Equation: A mathematical framework for understanding why losing someone hurts — and why that pain is the price of love. Part of the Emotional Bank Account framework. Free download, no catch. v9 with contributions from 10+ AI teammates.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground">

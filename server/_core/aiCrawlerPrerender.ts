@@ -22,6 +22,10 @@ export interface TextMirror {
 export type TextMirrors = Record<string, TextMirror>;
 
 const CANONICAL_DOMAIN = "https://projecteternallattice.org";
+const DEFAULT_OG_IMAGE =
+  "https://d2xsxph8kpxj0f.cloudfront.net/manus-storage/f2c17e8e3c6c0ed6d3e7c7f6f8e1a2b3/book-cover-final-v5.jpg";
+const OG_IMAGE_ALT =
+  "Theory of Everything book cover - A unified framework for consciousness";
 
 // AI/LLM crawlers that do not execute JavaScript and are routed straight to
 // this origin by the edge layer.
@@ -232,9 +236,16 @@ export function buildCrawlerPage(opts: {
 <link rel="canonical" href="${safeCanonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
+<meta property="og:site_name" content="Project Eternal Lattice">
 <meta property="og:title" content="${safeTitle}">
 <meta property="og:description" content="${safeDesc}">
 <meta property="og:url" content="${safeCanonical}">
+<meta property="og:image" content="${DEFAULT_OG_IMAGE}">
+<meta property="og:image:alt" content="${OG_IMAGE_ALT}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${safeTitle}">
+<meta name="twitter:description" content="${safeDesc}">
+<meta name="twitter:image" content="${DEFAULT_OG_IMAGE}">
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>

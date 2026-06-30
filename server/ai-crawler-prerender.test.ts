@@ -126,6 +126,19 @@ describe("buildCrawlerPage", () => {
     expect(page).toContain('<script type="application/ld+json">');
     expect(page).toContain("988");
   });
+
+  it("includes an og:image and a Twitter summary_large_image card", () => {
+    const page = buildCrawlerPage({
+      title: "Test Title",
+      description: "Test description.",
+      canonicalPath: "/theory",
+      bodyHtml: "<p>body</p>",
+    });
+    expect(page).toContain('<meta property="og:image"');
+    expect(page).toContain('<meta name="twitter:card" content="summary_large_image">');
+    expect(page).toContain('<meta name="twitter:title" content="Test Title">');
+    expect(page).toContain('<meta name="twitter:image"');
+  });
 });
 
 describe("renderForCrawler", () => {

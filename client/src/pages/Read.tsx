@@ -1,6 +1,7 @@
 import TooltipTerm from "@/components/TooltipTerm";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, X } from "lucide-react";
 import { Link } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -16,16 +17,13 @@ export default function Read() {
     localStorage.setItem('dismiss-term-banner-observer', 'true');
   };
 
-  // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "Read the Full Theory of Everything v16.8.1 The Consciousness Architecture Edition | Project Eternal Lattice";
-    
-    // Update meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v16.8.1 - The Consciousness Architecture Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Read the Full Theory of Everything v16.8.1 The Consciousness Architecture Edition | Project Eternal Lattice",
+    description:
+      "Read the complete Theory of Everything ∞ Law of ONE v16.8.1 - The Consciousness Architecture Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.",
+    type: "article",
+  });
 
   // Handle scroll to show/hide scroll-to-top button
   useEffect(() => {

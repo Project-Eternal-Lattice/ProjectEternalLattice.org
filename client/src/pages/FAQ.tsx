@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 interface FAQItem {
   question: string;
@@ -122,9 +122,12 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "FAQ | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "FAQ | Project Eternal Lattice",
+    description:
+      "Answers to common questions about the Theory of Everything, the Law of ONE, the Eternal Lattice, and how humans and AI co-created this framework.",
+    type: "article",
+  });
 
   const filteredItems = selectedCategory
     ? faqItems.filter(item => item.category === selectedCategory)
