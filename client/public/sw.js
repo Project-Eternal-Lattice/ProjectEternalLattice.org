@@ -133,9 +133,12 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // Network failed - return cached crisis page. Match ignoreSearch so a
           // query-string variant (e.g. /safety?ref=...) still resolves to the
-          // cached life-critical page instead of the generic offline fallback.
+          // cached life-critical page. ignoreSearch does NOT normalize a
+          // trailing slash, so /safety/ falls back to the canonical cached
+          // /safety entry before the generic offline page.
           console.log('[ServiceWorker v3] Network failed, serving cached crisis page');
           return caches.match(event.request, { ignoreSearch: true })
+            .then((cachedResponse) => cachedResponse || caches.match('/safety'))
             .then((cachedResponse) => {
               if (cachedResponse) {
                 return cachedResponse;
