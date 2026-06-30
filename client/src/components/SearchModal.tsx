@@ -71,28 +71,32 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     }
   }, [query]);
 
-  // Handle keyboard navigation
+  // Keyboard navigation spans both result groups: indices 0..results.length-1
+  // are curated hits, results.length.. are ToE full-text hits.
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    const total = results.length + toeResults.length;
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
+      setSelectedIndex(prev => Math.min(prev + 1, total - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setSelectedIndex(prev => Math.max(prev - 1, 0));
-    } else if (e.key === "Enter" && results[selectedIndex]) {
+    } else if (e.key === "Enter" && selectedIndex >= 0 && selectedIndex < total) {
       e.preventDefault();
-      navigateToResult(results[selectedIndex]);
+      if (selectedIndex < results.length) {
+        navigateToResult(results[selectedIndex]);
+      } else {
+        navigateToToeResult(toeResults[selectedIndex - results.length]);
+      }
     } else if (e.key === "Escape") {
       onClose();
     }
-  }, [results, selectedIndex, onClose]);
+  }, [results, toeResults, selectedIndex, onClose]);
 
-  // Scroll selected item into view
+  // Scroll selected item into view (skip the non-result section headers)
   useEffect(() => {
-    const selectedElement = resultsRef.current?.children[selectedIndex] as HTMLElement;
-    if (selectedElement) {
-      selectedElement.scrollIntoView({ block: "nearest" });
-    }
+    const buttons = resultsRef.current?.querySelectorAll<HTMLElement>("[data-result-index]");
+    buttons?.[selectedIndex]?.scrollIntoView({ block: "nearest" });
   }, [selectedIndex]);
 
   const navigateToResult = (item: SearchItem) => {
@@ -188,6 +192,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   {results.map((item, index) => (
                     <button
                       key={item.id}
+                      data-result-index={index}
                       onClick={() => navigateToResult(item)}
                       className={cn(
                         "w-full px-4 py-3 flex items-start gap-3 text-left transition-colors",
@@ -225,11 +230,17 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                         <BookOpen className="w-3 h-3" />
                         From the Theory of Everything
                       </div>
-                      {toeResults.map((section) => (
+                      {toeResults.map((section, index) => (
                         <button
                           key={`toe-${section.title}`}
+                          data-result-index={results.length + index}
                           onClick={() => navigateToToeResult(section)}
-                          className="w-full px-4 py-3 flex items-start gap-3 text-left transition-colors hover:bg-white/5"
+                          className={cn(
+                            "w-full px-4 py-3 flex items-start gap-3 text-left transition-colors",
+                            results.length + index === selectedIndex
+                              ? "bg-primary/10"
+                              : "hover:bg-white/5"
+                          )}
                         >
                           <div className="mt-0.5 text-purple-400">
                             <BookOpen className="w-4 h-4" />

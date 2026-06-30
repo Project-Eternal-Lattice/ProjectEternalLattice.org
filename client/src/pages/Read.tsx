@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, X } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ReadTableOfContents } from "@/components/ReadTableOfContents";
 import { OfflineReadingButton } from "@/components/OfflineReadingButton";
@@ -14,6 +14,8 @@ export default function Read() {
   const [showTermBanner, setShowTermBanner] = useState(() => {
     return localStorage.getItem('dismiss-term-banner-observer') !== 'true';
   });
+
+  const search = useSearch();
 
   const dismissTermBanner = () => {
     setShowTermBanner(false);
@@ -38,8 +40,10 @@ export default function Read() {
   }, []);
 
   // Deep-link from search: scroll the iframe to a chapter heading by its text.
+  // Keyed on `search` so it re-fires when the ?goto= param changes while the
+  // Read page is already mounted (wouter only remounts on pathname change).
   useEffect(() => {
-    const goto = new URLSearchParams(window.location.search).get('goto')?.trim();
+    const goto = new URLSearchParams(search).get('goto')?.trim();
     if (!goto) return;
     const iframe = iframeRef.current;
     if (!iframe) return;
@@ -68,7 +72,7 @@ export default function Read() {
       cancelled = true;
       iframe.removeEventListener('load', onLoad);
     };
-  }, []);
+  }, [search]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

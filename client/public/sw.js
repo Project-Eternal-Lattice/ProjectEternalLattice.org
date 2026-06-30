@@ -6,7 +6,11 @@ const CACHE_NAME = 'eternal-lattice-v4';
 // Separate, persistent cache for the (large) full Theory of Everything so it
 // survives app-cache version bumps and is only populated on explicit request.
 const TOE_CACHE = 'eternal-lattice-toe-v1';
-const TOE_ASSETS = ['/read', '/toe-full.html', '/toe-search-index.json'];
+// Only static content lives in the persistent ToE cache. The /read app shell is
+// an SPA route that serves index.html, so it's cached in the versioned
+// CACHE_NAME (refreshed on each version bump) to avoid serving a stale shell.
+const TOE_ASSETS = ['/toe-full.html', '/toe-search-index.json'];
+const TOE_SHELL = '/read';
 const OFFLINE_URL = '/offline.html';
 
 // CRITICAL: Crisis resources are cached FIRST and ALWAYS available
@@ -97,13 +101,15 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches.match(event.request).then((cached) => {
         if (cached) return cached;
-        return fetch(event.request).then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const copy = networkResponse.clone();
-            caches.open(TOE_CACHE).then((cache) => cache.put(event.request, copy));
-          }
-          return networkResponse;
-        });
+        return fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const copy = networkResponse.clone();
+              caches.open(TOE_CACHE).then((cache) => cache.put(event.request, copy));
+            }
+            return networkResponse;
+          })
+          .catch(() => caches.match(event.request));
       })
     );
     return;
@@ -153,8 +159,10 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // Network failed - return offline page
-          return caches.match(OFFLINE_URL);
+          // Network failed - serve the cached app shell for this route if we have
+          // it (e.g. /read saved for offline reading), else the offline page.
+          return caches.match(event.request)
+            .then((cached) => cached || caches.match(OFFLINE_URL));
         })
     );
     return;
@@ -203,8 +211,12 @@ self.addEventListener('message', (event) => {
 
   // Explicitly download the full ToE for offline reading.
   if (data.type === 'CACHE_TOE') {
-    caches.open(TOE_CACHE)
-      .then((cache) => cache.addAll(TOE_ASSETS))
+    Promise.all([
+      caches.open(TOE_CACHE).then((cache) => cache.addAll(TOE_ASSETS)),
+      // Cache the /read app shell in the versioned cache so navigating to it
+      // offline boots the reader instead of the generic offline page.
+      caches.open(CACHE_NAME).then((cache) => cache.add(TOE_SHELL)),
+    ])
       .then(() => {
         console.log('[ServiceWorker v4] ToE cached for offline reading');
         event.ports[0] && event.ports[0].postMessage({ success: true });
