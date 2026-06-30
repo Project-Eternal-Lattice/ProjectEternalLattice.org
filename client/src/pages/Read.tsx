@@ -1,12 +1,14 @@
 import TooltipTerm from "@/components/TooltipTerm";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, X } from "lucide-react";
 import { Link } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { ReadTableOfContents } from "@/components/ReadTableOfContents";
 
 export default function Read() {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showTermBanner, setShowTermBanner] = useState(() => {
     return localStorage.getItem('dismiss-term-banner-observer') !== 'true';
@@ -40,6 +42,7 @@ export default function Read() {
 
   return (
     <div className="min-h-screen bg-transparent pt-24 pb-20">
+      <ReadTableOfContents iframeRef={iframeRef} />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -212,6 +215,7 @@ export default function Read() {
             {/* Iframe Container */}
             <div className="relative bg-white">
               <iframe
+                ref={iframeRef}
                 src="/toe-full.html"
                 title="Theory of Everything v16.8.1 The Consciousness Architecture Edition - Full Document"
                 className="w-full border-0"
