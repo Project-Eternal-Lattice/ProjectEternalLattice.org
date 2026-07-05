@@ -177,9 +177,12 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // For other requests (assets) - cache first, then network
+  // For other requests (assets) - cache first, then network.
+  // ignoreVary: the server sends `Vary: Origin` on /assets, and module-script
+  // requests carry an Origin header while the SW's cache.add stores the entry
+  // without one — a strict match would therefore always miss.
   event.respondWith(
-    caches.match(event.request)
+    caches.match(event.request, { ignoreVary: true })
       .then((cachedResponse) => {
         if (cachedResponse) {
           return cachedResponse;
