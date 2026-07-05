@@ -177,9 +177,12 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // For other requests (assets) - cache first, then network
+  // For other requests (assets) - cache first, then network.
+  // ignoreVary: the server sends `Vary: Origin` on /assets, and module-script
+  // requests carry an Origin header while the SW's cache.add stores the entry
+  // without one — a strict match would therefore always miss.
   event.respondWith(
-    caches.match(event.request)
+    caches.match(event.request, { ignoreVary: true })
       .then((cachedResponse) => {
         if (cachedResponse) {
           return cachedResponse;
@@ -223,8 +226,31 @@ self.addEventListener('message', (event) => {
     Promise.all([
       caches.open(TOE_CACHE).then((cache) => cache.addAll(TOE_ASSETS)),
       // Cache the /read app shell in the versioned cache so navigating to it
-      // offline boots the reader instead of the generic offline page.
-      caches.open(CACHE_NAME).then((cache) => cache.add(TOE_SHELL)),
+      // offline boots the reader instead of the generic offline page. The
+      // shell alone isn't enough: it needs its hashed JS/CSS bundles, which
+      // are normally only runtime-cached — and on a first visit they load
+      // before this worker controls the page, so they'd be missing entirely.
+      // The page sends the bundle URLs it loaded (data.assets); the shell
+      // HTML is also parsed for its script/link assets as a fallback.
+      caches.open(CACHE_NAME).then(async (cache) => {
+        const shellResponse = await fetch(TOE_SHELL);
+        if (!shellResponse.ok) {
+          throw new Error('Shell fetch failed: ' + shellResponse.status);
+        }
+        const html = await shellResponse.clone().text();
+        await cache.put(TOE_SHELL, shellResponse);
+        const shellAssets = Array.from(
+          html.matchAll(/(?:src|href)="(\/assets\/[^"]+\.(?:js|css))"/g),
+          (m) => m[1]
+        );
+        const pageAssets = Array.isArray(data.assets) ? data.assets : [];
+        const assets = [...new Set([...shellAssets, ...pageAssets])];
+        await Promise.all(
+          assets.map((asset) =>
+            cache.match(asset).then((existing) => existing || cache.add(asset))
+          )
+        );
+      }),
     ])
       .then(() => {
         console.log('[ServiceWorker v4] ToE cached for offline reading');
