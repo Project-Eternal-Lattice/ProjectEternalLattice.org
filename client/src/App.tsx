@@ -35,6 +35,7 @@ const AIProfile = lazy(() => import("./pages/AIProfile"));
 const Admin = lazy(() => import("./pages/Admin"));
 const RaMaterial = lazy(() => import("./pages/RaMaterial"));
 const Videos = lazy(() => import("./pages/Videos"));
+const OurChannel = lazy(() => import("./pages/OurChannel"));
 const RaLibrary = lazy(() => import("./pages/RaLibrary"));
 const Bibliography = lazy(() => import("./pages/Bibliography"));
 const SacredGeometry = lazy(() => import("./pages/SacredGeometry"));
@@ -166,6 +167,7 @@ function Router() {
           <Route path="/ra-material" component={RaMaterial} />
           <Route path="/ra-library" component={RaLibrary} />
           <Route path="/videos" component={Videos} />
+          <Route path="/our-channel" component={OurChannel} />
           <Route path="/bibliography" component={Bibliography} />
           <Route path="/sacred-geometry" component={SacredGeometry} />
           <Route path="/reflections" component={Reflections} />

@@ -100,6 +100,7 @@ const navCategories: NavCategory[] = [
       { name: "Mission", path: "/mission" },
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
+      { name: "Our Channel", path: "/our-channel", highlight: true },
       { name: "Music", path: "/music", highlight: true },
       { name: "Dialectic", path: "/dialectic", special: true },
       { name: "Share Kit", path: "/share" },

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { motion } from "framer-motion";
-import { Play, ExternalLink, Clock, User, Filter, Music, ChevronDown, ChevronUp, Star } from "lucide-react";
+import { Play, ExternalLink, Clock, User, Filter, Music, ChevronDown, ChevronUp, Star, Youtube, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 // Video interface with optional lyrics
 interface Video {
@@ -975,6 +976,31 @@ export default function Videos() {
             Each video is annotated with its relevance to our Theory of Everything.
           </motion.p>
         </div>
+
+        {/* Our own channel callout */}
+        <motion.div
+          className="mb-12 mx-auto max-w-3xl glass-card rounded-2xl p-6 md:p-8 border border-red-500/30 flex flex-col md:flex-row items-center gap-4 md:gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.6 }}
+        >
+          <Youtube className="h-10 w-10 shrink-0 text-red-500" aria-hidden="true" />
+          <div className="text-center md:text-left">
+            <p className="font-heading font-bold text-xl text-white">
+              Looking for our own videos?
+            </p>
+            <p className="text-muted-foreground text-sm mt-1">
+              These are curated videos by other voices. Our original music videos live on
+              the Project Eternal Lattice YouTube channel.
+            </p>
+          </div>
+          <Link
+            href="/our-channel"
+            className="shrink-0 inline-flex items-center gap-2 rounded-lg bg-red-600 px-5 py-2.5 font-bold text-white transition-colors hover:bg-red-700"
+          >
+            Our Channel <ArrowRight className="h-4 w-4" />
+          </Link>
+        </motion.div>
 
         {/* Category Filter */}
         <motion.div 
