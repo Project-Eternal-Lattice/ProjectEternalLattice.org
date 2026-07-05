@@ -33,6 +33,14 @@ description: Test ProjectEternalLattice.org motion/animation/SEO enhancements en
 - Use `annotate_recording` with `test_start` (Jest-style "It should…") then `assertion` (consolidated, <80 chars, with `test_result`).
 - Count-up and transitions are only provable on video, not single screenshots — always record these.
 
+## Offline / Service Worker (PWA) testing
+- Test against the **prod build**: `npm run build` then `npx vite preview --port 4173` (SW is not active in dev).
+- Simulate a true first visit: DevTools → Application → Storage → **Clear site data** (checks SW + caches). Otherwise runtime caches from previous loads mask first-visit bugs.
+- **`Vary: Origin` can silently defeat SW cache matches.** Servers (incl. `vite preview`) may send `Vary: Origin` on `/assets/*`; module-script requests carry an `Origin` header while `cache.add` stores entries without one → strict `caches.match` always misses even though DevTools shows the entry cached. Fix/workaround: `caches.match(req, { ignoreVary: true })`. Symptom: bundles 503 offline despite being visibly in Cache Storage.
+- Verify cache contents in DevTools Application → Cache Storage, and confirm offline requests show `(ServiceWorker)` in the Network Size column with status 200.
+- The 13M-px `toe-full.html` reflows for several seconds after load; deep-link heading position drifts ±300px before settling — verify with `getBoundingClientRect().top` in the console rather than eyeballing, and compare online vs offline on the same build before blaming a change.
+- Console one-liners typed via GUI can get mangled (autocomplete). Keep them short, use `var` + `function(){}` style, and re-run on syntax errors.
+
 ## Reporting
 - Post ONE comment on the PR with a pass/fail bullet list, `<details>` for nuance, and the Devin session link.
 - Write a `test-report.md` with inline before/after screenshots and attach the recording.
