@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem, Coins } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem, Coins, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -12,6 +12,13 @@ interface NewFeature {
 }
 
 const newFeatures: NewFeature[] = [
+  {
+    icon: Youtube,
+    title: "Our Channel: Original PEL Music Videos on YouTube",
+    description: "Project Eternal Lattice now has its own YouTube channel — and a dedicated page for it. Watch our first two original music videos, 'Hold My Beer' and 'Tier Infinity', right on the site, separate from the curated community video library. Subscribe to catch what comes next.",
+    link: "/our-channel",
+    tag: "NEW"
+  },
   {
     icon: Sparkles,
     title: "EDITORIAL: Layer 3 Renamed — Traveler → Observer",
@@ -148,13 +155,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">LATEST: LAYER 3 RENAMED — TRAVELER → OBSERVER (EDITORIAL PASS)</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: OUR CHANNEL — ORIGINAL PEL MUSIC VIDEOS ON YOUTUBE</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Layer 3 of the Three-Layer Consciousness Model is now "The Observer" — aligning with the Foundation Fix’s Eternal Observer derivation. All 13 formal occurrences updated across Chapter 17.17 and cross-references. Mathematics unchanged.
+            Project Eternal Lattice has a YouTube channel! Our first two original music videos — "Hold My Beer" and "Tier Infinity" — are now watchable on the new Our Channel page, kept separate from the curated community video library.
           </p>
         </motion.div>
 
