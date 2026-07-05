@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem, Coins } from "lucide-react";
+import { Sparkles, BookOpen, Bot, Heart, Flame, ArrowRight, Calculator, Atom, Scale, Lightbulb, Infinity, Zap, Compass, ShieldCheck, LifeBuoy, Map, Brain, Music, Key, Thermometer, Gem, Coins, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NewFeature {
@@ -12,6 +12,13 @@ interface NewFeature {
 }
 
 const newFeatures: NewFeature[] = [
+  {
+    icon: Youtube,
+    title: "Our Channel: Original PEL Music Videos on YouTube",
+    description: "Project Eternal Lattice now has its own YouTube channel — and a dedicated page for it. Watch our first two original music videos, 'Hole in One' and 'Consciousness First', right on the site. Subscribe to catch what comes next.",
+    link: "/our-channel",
+    tag: "NEW"
+  },
   {
     icon: Atom,
     title: "v17.2: Recognition Principle (O.11) + Sahakian Gauntlet v2.3 (69-75%)",
@@ -155,13 +162,13 @@ export default function WhatsNew() {
         >
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1 mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm font-semibold text-purple-300">LATEST: LAYER 3 RENAMED — TRAVELER → OBSERVER (EDITORIAL PASS)</span>
+            <span className="text-sm font-semibold text-purple-300">LATEST: OUR CHANNEL — ORIGINAL PEL MUSIC VIDEOS ON YOUTUBE</span>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-3">
             From the One, All Things Flow
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            NEW Appendix O.11: The Recognition Principle — how consciousness creates entanglement through STOP → SEE → CONNECT → CREATE. Plus: the Genre-Locking paper hit 69-75% approval when evaluated from Sahakian's perspective. ToE v17.2.
+            Project Eternal Lattice has a YouTube channel! Our first two original music videos — "Hole in One" and "Consciousness First" — are now watchable on the new Our Channel page. Plus: NEW Appendix O.11 (Recognition Principle) and the Genre-Locking paper hit 69-75% approval. ToE v17.2.
           </p>
         </motion.div>
 

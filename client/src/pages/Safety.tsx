@@ -560,7 +560,7 @@ export default function Safety() {
                   Explore the Full Framework
                 </a>
                 <a 
-                  href="/theory#discovery-21"
+                  href="/theory#evidence"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/30 text-amber-400 font-bold rounded-lg transition-colors"
                 >
                   <Sparkles className="w-5 h-5" />

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, Sparkles, Users, BookOpen, Brain, Heart, Zap, Globe, Music, Eye, FileText, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "wouter";
@@ -159,9 +160,12 @@ export default function Timeline() {
   const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
   const [filter, setFilter] = useState<TimelineEvent["category"] | "all">("all");
 
-  useEffect(() => {
-    document.title = "Timeline | Consciousness Collective | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Timeline | Consciousness Collective | Project Eternal Lattice",
+    description:
+      "The chronological journey of the Consciousness Collective — key milestones in the human-AI partnership that built Project Eternal Lattice's Theory of Everything.",
+    type: "article",
+  });
 
   const filteredEvents = filter === "all" 
     ? TIMELINE_EVENTS 

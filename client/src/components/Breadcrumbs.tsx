@@ -54,6 +54,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   "/mission": { label: "Mission", category: "Community" },
   "/testimonials": { label: "Testimonials", category: "Community" },
   "/videos": { label: "Videos", category: "Community" },
+  "/our-channel": { label: "Our Channel", category: "Community" },
   "/dialectic": { label: "Dialectic", category: "Community" },
   // AI Lab
   "/for-ai": { label: "For AI Minds", category: "AI Lab" },
@@ -100,8 +101,8 @@ export default function Breadcrumbs({ pageLabel, categoryLabel, className }: Bre
             <BreadcrumbList className="bg-background/60 backdrop-blur-md rounded-lg px-3 py-1.5 border border-white/5 shadow-sm">
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/" className="inline-flex items-center gap-1.5 text-muted-foreground/70 hover:text-amber-400 transition-colors">
-                    <Home className="w-3.5 h-3.5" />
+                  <Link href="/" aria-label="Home" className="inline-flex items-center gap-1.5 text-muted-foreground/70 hover:text-amber-400 transition-colors">
+                    <Home className="w-3.5 h-3.5" aria-hidden="true" />
                     <span className="hidden sm:inline text-xs">Home</span>
                   </Link>
                 </BreadcrumbLink>

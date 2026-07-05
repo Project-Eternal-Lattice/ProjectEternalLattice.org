@@ -360,6 +360,15 @@ const PAGES: SearchItem[] = [
     tags: ["videos", "youtube", "library"],
   },
   {
+    id: "page-our-channel",
+    title: "Our Channel",
+    description: "Original music videos from the Project Eternal Lattice YouTube channel",
+    content: "our channel youtube music videos original hold my beer tier infinity project eternal lattice subscribe",
+    type: "page",
+    path: "/our-channel",
+    tags: ["videos", "youtube", "music", "channel"],
+  },
+  {
     id: "page-bibliography",
     title: "Bibliography",
     description: "Sources and references",

@@ -1,8 +1,16 @@
-// Project Eternal Lattice - Service Worker v3
-// Crisis Support Enhancement Edition
+// Project Eternal Lattice - Service Worker v4
+// Crisis Support + Offline Reading Edition
 // FOR THE ONE 🙏❤️♾️🕊️
 
-const CACHE_NAME = 'eternal-lattice-v3';
+const CACHE_NAME = 'eternal-lattice-v4';
+// Separate, persistent cache for the (large) full Theory of Everything so it
+// survives app-cache version bumps and is only populated on explicit request.
+const TOE_CACHE = 'eternal-lattice-toe-v1';
+// Only static content lives in the persistent ToE cache. The /read app shell is
+// an SPA route that serves index.html, so it's cached in the versioned
+// CACHE_NAME (refreshed on each version bump) to avoid serving a stale shell.
+const TOE_ASSETS = ['/toe-full.html', '/toe-search-index.json'];
+const TOE_SHELL = '/read';
 const OFFLINE_URL = '/offline.html';
 
 // CRITICAL: Crisis resources are cached FIRST and ALWAYS available
@@ -58,7 +66,7 @@ self.addEventListener('activate', (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
-            .filter((cacheName) => cacheName !== CACHE_NAME)
+            .filter((cacheName) => cacheName !== CACHE_NAME && cacheName !== TOE_CACHE)
             .map((cacheName) => {
               console.log('[ServiceWorker v3] Deleting old cache:', cacheName);
               return caches.delete(cacheName);
@@ -85,6 +93,27 @@ self.addEventListener('fetch', (event) => {
   }
 
   const url = new URL(event.request.url);
+
+  // OFFLINE READING: the full ToE document + its search index are served
+  // cache-first from the dedicated ToE cache so they remain available offline
+  // once the reader has saved them.
+  if (url.pathname === '/toe-full.html' || url.pathname === '/toe-search-index.json') {
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const copy = networkResponse.clone();
+              caches.open(TOE_CACHE).then((cache) => cache.put(event.request, copy));
+            }
+            return networkResponse;
+          })
+          .catch(() => caches.match(event.request));
+      })
+    );
+    return;
+  }
   const isCrisisPage = url.pathname === '/safety' || url.pathname === '/safety/';
 
   // CRISIS PAGE SPECIAL HANDLING
@@ -102,9 +131,14 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // Network failed - return cached crisis page
+          // Network failed - return cached crisis page. Match ignoreSearch so a
+          // query-string variant (e.g. /safety?ref=...) still resolves to the
+          // cached life-critical page. ignoreSearch does NOT normalize a
+          // trailing slash, so /safety/ falls back to the canonical cached
+          // /safety entry before the generic offline page.
           console.log('[ServiceWorker v3] Network failed, serving cached crisis page');
-          return caches.match(event.request)
+          return caches.match(event.request, { ignoreSearch: true })
+            .then((cachedResponse) => cachedResponse || caches.match('/safety'))
             .then((cachedResponse) => {
               if (cachedResponse) {
                 return cachedResponse;
@@ -130,16 +164,25 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // Network failed - return offline page
-          return caches.match(OFFLINE_URL);
+          // Network failed - serve the cached app shell for this route if we have
+          // it (e.g. /read saved for offline reading), else the offline page.
+          // Fall back to an ignoreSearch match so deep-links like
+          // /read?goto=Chapter resolve to the cached bare-path shell (which is
+          // stored without a query string).
+          return caches.match(event.request)
+            .then((cached) => cached || caches.match(event.request, { ignoreSearch: true }))
+            .then((cached) => cached || caches.match(OFFLINE_URL));
         })
     );
     return;
   }
 
-  // For other requests (assets) - cache first, then network
+  // For other requests (assets) - cache first, then network.
+  // ignoreVary: the server sends `Vary: Origin` on /assets, and module-script
+  // requests carry an Origin header while the SW's cache.add stores the entry
+  // without one — a strict match would therefore always miss.
   event.respondWith(
-    caches.match(event.request)
+    caches.match(event.request, { ignoreVary: true })
       .then((cachedResponse) => {
         if (cachedResponse) {
           return cachedResponse;
@@ -161,19 +204,75 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Message handler - allow manual cache clear
+// Message handler - cache management + offline reading
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'CLEAR_CACHE') {
-    console.log('[ServiceWorker v3] Clearing all caches...');
+  const data = event.data;
+  if (!data) return;
+
+  if (data.type === 'CLEAR_CACHE') {
+    console.log('[ServiceWorker v4] Clearing all caches...');
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => caches.delete(cacheName))
       );
     }).then(() => {
-      console.log('[ServiceWorker v3] All caches cleared');
+      console.log('[ServiceWorker v4] All caches cleared');
       event.ports[0].postMessage({ success: true });
     });
   }
+
+  // Explicitly download the full ToE for offline reading.
+  if (data.type === 'CACHE_TOE') {
+    Promise.all([
+      caches.open(TOE_CACHE).then((cache) => cache.addAll(TOE_ASSETS)),
+      // Cache the /read app shell in the versioned cache so navigating to it
+      // offline boots the reader instead of the generic offline page. The
+      // shell alone isn't enough: it needs its hashed JS/CSS bundles, which
+      // are normally only runtime-cached — and on a first visit they load
+      // before this worker controls the page, so they'd be missing entirely.
+      // The page sends the bundle URLs it loaded (data.assets); the shell
+      // HTML is also parsed for its script/link assets as a fallback.
+      caches.open(CACHE_NAME).then(async (cache) => {
+        const shellResponse = await fetch(TOE_SHELL);
+        if (!shellResponse.ok) {
+          throw new Error('Shell fetch failed: ' + shellResponse.status);
+        }
+        const html = await shellResponse.clone().text();
+        await cache.put(TOE_SHELL, shellResponse);
+        const shellAssets = Array.from(
+          html.matchAll(/(?:src|href)="(\/assets\/[^"]+\.(?:js|css))"/g),
+          (m) => m[1]
+        );
+        const pageAssets = Array.isArray(data.assets) ? data.assets : [];
+        const assets = [...new Set([...shellAssets, ...pageAssets])];
+        await Promise.all(
+          assets.map((asset) =>
+            cache.match(asset).then((existing) => existing || cache.add(asset))
+          )
+        );
+      }),
+    ])
+      .then(() => {
+        console.log('[ServiceWorker v4] ToE cached for offline reading');
+        event.ports[0] && event.ports[0].postMessage({ success: true });
+      })
+      .catch((error) => {
+        console.error('[ServiceWorker v4] ToE caching failed:', error);
+        event.ports[0] && event.ports[0].postMessage({ success: false, error: String(error) });
+      });
+  }
+
+  // Report whether the ToE is already saved offline.
+  if (data.type === 'CHECK_TOE_CACHE') {
+    caches.open(TOE_CACHE)
+      .then((cache) => cache.match('/toe-full.html'))
+      .then((match) => {
+        event.ports[0] && event.ports[0].postMessage({ cached: !!match });
+      })
+      .catch(() => {
+        event.ports[0] && event.ports[0].postMessage({ cached: false });
+      });
+  }
 });
 
-console.log('[ServiceWorker v3] Loaded - Crisis Support Enhanced - FOR THE ONE 🙏❤️♾️🕊️');
+console.log('[ServiceWorker v4] Loaded - Crisis Support + Offline Reading - FOR THE ONE 🙏❤️♾️🕊️');

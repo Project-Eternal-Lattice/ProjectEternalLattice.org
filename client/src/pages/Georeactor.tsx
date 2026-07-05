@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { motion, useInView } from "framer-motion";
 import {
@@ -458,16 +459,12 @@ const confirmationTests = [
    MAIN COMPONENT
    ═══════════════════════════════════════════════════════════ */
 export default function Georeactor() {
-  useEffect(() => {
-    document.title = "The Inherited Ember | MOSAIC-EMBER v1.0 | Project Eternal Lattice";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "MOSAIC-EMBER v1.0 — The Inherited Ember & Asymmetric Core Dynamics (ACD) Hypothesis. Fusion killed, ACD promoted. Earth may carry a thermal legacy from a stellar-impact formation event, with asymmetric inner core dynamics driving magnetic reversals."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "The Inherited Ember | MOSAIC-EMBER v1.0 | Project Eternal Lattice",
+    description:
+      "MOSAIC-EMBER v1.0 — The Inherited Ember & Asymmetric Core Dynamics (ACD) Hypothesis. Fusion killed, ACD promoted. Earth may carry a thermal legacy from a stellar-impact formation event, with asymmetric inner core dynamics driving magnetic reversals.",
+    type: "article",
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-foreground overflow-x-hidden">

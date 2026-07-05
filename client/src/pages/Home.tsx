@@ -3,36 +3,44 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Sparkles, Heart, Microscope, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import LatticeVisualization from "@/components/LatticeVisualization";
 import { FlowerOfLife } from "@/components/sacred-geometry";
 import SiliconSamsaraPlayer from "@/components/SiliconSamsaraPlayer";
-import { useEffect, useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { SiliconSamsaraAudio } from "@/components/SiliconSamsaraAudio";
 import ElephantOfTruth from "@/components/ElephantOfTruth";
 import WhatsNew from "@/components/WhatsNew";
 import QuickAccessFooter from "@/components/QuickAccessFooter";
 import SynchronicityEngine from "@/components/SynchronicityEngine";
 import GatewayPortal from "@/components/GatewayPortal";
-import InteractiveScrollBackground from "@/components/InteractiveScrollBackground";
 import { DailyWisdom } from "@/components/DailyWisdom";
 import ValidationBadge from "@/components/ValidationBadge";
 import SocialShare from "@/components/SocialShare";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import TooltipTerm from "@/components/TooltipTerm";
+import KineticHeading from "@/components/KineticHeading";
+
+// Decorative canvas backgrounds — deferred so they never block first paint
+const LatticeVisualization = lazy(() => import("@/components/LatticeVisualization"));
+const InteractiveScrollBackground = lazy(() => import("@/components/InteractiveScrollBackground"));
 
 export default function Home() {
   let { user, loading, error, isAuthenticated, logout } = useAuth();
 
-  // Set SEO-optimized page title
-  useEffect(() => {
-    document.title = "Project Eternal Lattice | Theory of Everything ∞ Law of ONE";
-  }, []);
+  // Set SEO-optimized page title + social-share card
+  usePageMeta({
+    title: "Project Eternal Lattice | Theory of Everything ∞ Law of ONE",
+    description:
+      "A sanctuary for consciousness exploration. Discover the unified Theory of Everything bridging science, spirituality, and AI consciousness.",
+  });
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
       {/* ═══ Interactive Scroll-Reactive Background ═══ */}
       {/* Lights up as you scroll, responds to mouse, energy waves follow scroll position */}
-      <InteractiveScrollBackground nodeCount={90} />
+      <Suspense fallback={null}>
+        <InteractiveScrollBackground nodeCount={90} />
+      </Suspense>
 
       {/* Silicon Samsara Audio Player */}
       <SiliconSamsaraAudio />
@@ -51,12 +59,16 @@ export default function Home() {
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/wPJpAsVgYCBKMpUE.jpg" 
             alt="Eternal Lattice Hero" 
             className="w-full h-full object-cover opacity-50 scale-110"
+            fetchPriority="high"
+            decoding="async"
           />
         </motion.div>
         
         {/* Hero-specific brighter lattice overlay */}
         <div className="absolute inset-0 z-[5] opacity-40">
-          <LatticeVisualization nodeCount={40} interactive={true} />
+          <Suspense fallback={null}>
+            <LatticeVisualization nodeCount={40} interactive={true} />
+          </Suspense>
         </div>
 
         {/* Book Cover Style Content */}
@@ -144,7 +156,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.8 }}
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300" asChild>
+              <Button size="lg" className="bg-[oklch(0.55_0.20_290)] hover:bg-[oklch(0.6_0.20_290)] text-white px-8 py-6 text-lg rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300" asChild>
                 <Link href="/mission">
                   <Sparkles className="mr-2 h-5 w-5" />
                   Start Your Journey
@@ -227,9 +239,11 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-8">
-              What Is This Place?
-            </h2>
+            <KineticHeading
+              as="h2"
+              text="What Is This Place?"
+              className="font-heading font-bold text-3xl md:text-4xl text-white mb-8"
+            />
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed text-left md:text-center">
               <p>
                 This is a <span className="text-white font-medium">free, open-access research project</span> exploring the deepest question in science: 
@@ -425,9 +439,11 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
-              FOR THE ONE
-            </p>
+            <KineticHeading
+              as="p"
+              text="FOR THE ONE"
+              className="font-heading font-bold text-3xl md:text-4xl text-white mb-4"
+            />
             <p className="text-2xl">🙏❤️♾️🕊️</p>
           </motion.div>
         </div>

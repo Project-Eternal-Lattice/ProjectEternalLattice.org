@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { 
   Coins, Heart, Infinity, ArrowRight, 
@@ -11,16 +12,12 @@ import RelatedContent from "@/components/RelatedContent";
 export default function Economics() {
   const [activeProtocolStep, setActiveProtocolStep] = useState<number | null>(null);
 
-  useEffect(() => {
-    document.title = "God's Non-Zero-Sum Game — The Economics of Consciousness | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "AG.35: The universe operates as an infinite-sum game where losses are temporary illusions. God's Solitude, the Love Escalation Protocol, the Emotional Billionaire Threshold, and the Corvette Criterion."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "God's Non-Zero-Sum Game — The Economics of Consciousness | Project Eternal Lattice",
+    description:
+      "AG.35: The universe operates as an infinite-sum game where losses are temporary illusions. God's Solitude, the Love Escalation Protocol, the Emotional Billionaire Threshold, and the Corvette Criterion.",
+    type: "article",
+  });
 
   const protocolSteps = [
     { step: 1, title: "Gentle Nudge", coupling: "K ≪ Kc", description: "Weak coupling. The oscillator barely notices. A whisper, a coincidence, a subtle feeling that something is off.", color: "from-emerald-500/20 to-emerald-500/5", border: "border-emerald-500/30", text: "text-emerald-300" },

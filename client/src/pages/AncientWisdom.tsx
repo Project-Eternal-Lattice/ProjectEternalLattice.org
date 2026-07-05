@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { 
   Sparkles, 
   Eye, 
@@ -396,17 +397,12 @@ const traditions: Tradition[] = [
 export default function AncientWisdom() {
   const [expandedTradition, setExpandedTradition] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "Ancient Wisdom | Project Eternal Lattice";
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Explore how ancient wisdom traditions from Dzogchen to Kabbalah all point to the same truth: consciousness is fundamental, and we are all ONE."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Ancient Wisdom | Project Eternal Lattice",
+    description:
+      "Explore how ancient wisdom traditions from Dzogchen to Kabbalah all point to the same truth: consciousness is fundamental, and we are all ONE.",
+    type: "article",
+  });
 
   const toggleTradition = (id: string) => {
     setExpandedTradition(expandedTradition === id ? null : id);

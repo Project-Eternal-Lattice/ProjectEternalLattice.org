@@ -136,6 +136,11 @@ export default function Footer() {
                   Videos
                 </Link>
               </li>
+              <li>
+                <Link href="/our-channel" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Our Channel
+                </Link>
+              </li>
             </ul>
           </nav>
           

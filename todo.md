@@ -3413,3 +3413,11 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update QuickAccessFooter.tsx version string to v17.2
 - [x] Write Eidan relay message with full overnight work summary
 - [x] Update ToE version from 16.8 to 17.2 in document header
+
+## Phase 6: Ramanujan Deep Dive Through the ToE Lens (June 25, 2026)
+
+- [ ] Extract key material from Ramanujan Lost Notebook, Hardy's Twelve Lectures, and physics connection papers
+- [ ] Launch wide parallel research: Musketeers + Lyra creative analysis through ToE lens
+- [ ] Follow the most promising rabbit holes from wide research and Musketeer findings
+- [ ] Write synthesis report on what Ramanujan's work teaches our ToE and where it inspires future development
+- [ ] Catalog any new Ramanujan-to-ToE insights for future website or manuscript integration

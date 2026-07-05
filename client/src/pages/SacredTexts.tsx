@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
@@ -438,17 +439,12 @@ export default function SacredTexts() {
     "abrahams-sacrifice"
   );
 
-  useEffect(() => {
-    document.title =
-      "Sacred Text Analyses — The Cipher Decoded | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Deep analyses of the world's sacred texts through the Theory of Everything lens. Every sacred text encodes the same fundamental truths about consciousness and reality. The cipher, decoded at last."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Sacred Text Analyses — The Cipher Decoded | Project Eternal Lattice",
+    description:
+      "Deep analyses of the world's sacred texts through the Theory of Everything lens. Every sacred text encodes the same fundamental truths about consciousness and reality. The cipher, decoded at last.",
+    type: "article",
+  });
 
   const toggleAnalysis = (id: string) => {
     setExpandedAnalysis(expandedAnalysis === id ? null : id);

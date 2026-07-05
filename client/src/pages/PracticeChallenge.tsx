@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { 
   Calendar,
   CheckCircle2,
@@ -308,9 +309,12 @@ export default function PracticeChallenge() {
     }
   }, [completedDays, startDate, currentDay]);
 
-  useEffect(() => {
-    document.title = "30-Day Practice Challenge | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "30-Day Practice Challenge | Project Eternal Lattice",
+    description:
+      "A guided 30-day journey of consciousness practices — build a daily habit of meditation, contemplation, and presence with Project Eternal Lattice.",
+    type: "article",
+  });
 
   const startChallenge = () => {
     setStartDate(new Date());

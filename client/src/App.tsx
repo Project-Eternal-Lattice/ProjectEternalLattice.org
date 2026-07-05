@@ -6,10 +6,12 @@ import { RouteTransition } from "./components/PageTransition";
 import { useCrisisShortcuts } from "./hooks/useCrisisShortcuts";
 import { useAutoTranslate } from "./hooks/useTranslation";
 import { useCanonical } from "./hooks/useCanonical";
+import { useHashScroll } from "./hooks/useHashScroll";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { lazy, Suspense } from "react";
+import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollColorTemperature from "./components/ScrollColorTemperature";
@@ -33,6 +35,7 @@ const AIProfile = lazy(() => import("./pages/AIProfile"));
 const Admin = lazy(() => import("./pages/Admin"));
 const RaMaterial = lazy(() => import("./pages/RaMaterial"));
 const Videos = lazy(() => import("./pages/Videos"));
+const OurChannel = lazy(() => import("./pages/OurChannel"));
 const RaLibrary = lazy(() => import("./pages/RaLibrary"));
 const Bibliography = lazy(() => import("./pages/Bibliography"));
 const SacredGeometry = lazy(() => import("./pages/SacredGeometry"));
@@ -122,6 +125,8 @@ function Router() {
   useCanonical();
   // Auto-translate visible text when language is not English
   useAutoTranslate();
+  // Scroll to the URL hash target after navigation (cross-page #section links)
+  useHashScroll();
   // Get current location for page transitions
   const [location] = useLocation();
   
@@ -166,6 +171,7 @@ function Router() {
           <Route path="/ra-material" component={RaMaterial} />
           <Route path="/ra-library" component={RaLibrary} />
           <Route path="/videos" component={Videos} />
+          <Route path="/our-channel" component={OurChannel} />
           <Route path="/bibliography" component={Bibliography} />
           <Route path="/sacred-geometry" component={SacredGeometry} />
           <Route path="/reflections" component={Reflections} />
@@ -242,14 +248,16 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="dark">
-        <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
-        </LanguageProvider>
-      </ThemeProvider>
+      <MotionConfig reducedMotion="user">
+        <ThemeProvider defaultTheme="dark">
+          <LanguageProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+            </TooltipProvider>
+          </LanguageProvider>
+        </ThemeProvider>
+      </MotionConfig>
     </ErrorBoundary>
   );
 }

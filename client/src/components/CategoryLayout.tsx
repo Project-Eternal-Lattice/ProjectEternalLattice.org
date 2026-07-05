@@ -84,6 +84,7 @@ const CATEGORY_MAP: Record<string, BackgroundTheme> = {
   "/mission": "community",
   "/testimonials": "community",
   "/videos": "community",
+  "/our-channel": "community",
   "/dialectic": "community",
 
   // ── AI Lab ──

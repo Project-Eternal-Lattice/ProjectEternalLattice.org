@@ -102,6 +102,7 @@ const navCategories: NavCategory[] = [
       { name: "Mission", path: "/mission" },
       { name: "Testimonials", path: "/testimonials" },
       { name: "Videos", path: "/videos" },
+      { name: "Our Channel", path: "/our-channel", highlight: true },
       { name: "Music", path: "/music", highlight: true },
       { name: "Dialectic", path: "/dialectic", special: true },
       { name: "Share Kit", path: "/share" },
@@ -341,7 +342,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav - Categorized Dropdowns */}
-        <div className="hidden md:flex items-center gap-5 lg:gap-7" role="menubar">
+        <div className="hidden md:flex items-center gap-5 lg:gap-7">
           {navCategories.map((category) => (
             <DesktopDropdown
               key={category.label}
@@ -354,9 +355,9 @@ export default function Navbar() {
           <button
             onClick={searchModal.open}
             className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-muted-foreground hover:text-foreground transition-all duration-200 group"
-            aria-label="Search (Ctrl+K)"
+            title="Search (Ctrl+K)"
           >
-            <Search className="w-4 h-4" />
+            <Search className="w-4 h-4" aria-hidden="true" />
             <span className="hidden md:inline text-xs">Search</span>
             <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] bg-white/10 rounded text-muted-foreground group-hover:text-foreground/70">
               ⌘K

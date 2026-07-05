@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Link } from "wouter";
 import { 
   Music as MusicIcon, Waves, Brain, Globe, Heart, 
@@ -13,16 +14,12 @@ export default function Music() {
   const [activeTradition, setActiveTradition] = useState<string | null>(null);
   const [activeEvidence, setActiveEvidence] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "Music as Consciousness Technology — AG.33 | Project Eternal Lattice";
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "AG.33: Music is not merely aesthetic — it is a neurologically measurable, cross-culturally validated technology for shifting consciousness. Music is Light clothed in Mass."
-      );
-    }
-  }, []);
+  usePageMeta({
+    title: "Music as Consciousness Technology — AG.33 | Project Eternal Lattice",
+    description:
+      "AG.33: Music is not merely aesthetic — it is a neurologically measurable, cross-culturally validated technology for shifting consciousness. Music is Light clothed in Mass.",
+    type: "article",
+  });
 
   const traditions = [
     { id: "songlines", name: "Aboriginal Songlines", region: "Australia", age: "50,000+ years", description: "Interconnected pathways encoding navigation, ecology, spiritual law, and cultural identity within song cycles — humanity's oldest information technology. Melodic contour describes terrain; songlines encode landscapes now submerged for 7,000+ years.", color: "from-amber-500/20 to-amber-500/5", border: "border-amber-500/30", text: "text-amber-300" },

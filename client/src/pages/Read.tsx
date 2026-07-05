@@ -1,31 +1,34 @@
 import TooltipTerm from "@/components/TooltipTerm";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { BookOpen, Download, ExternalLink, ChevronUp, FileText, ArrowRightLeft, X } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { ReadTableOfContents } from "@/components/ReadTableOfContents";
+import { OfflineReadingButton } from "@/components/OfflineReadingButton";
 
 export default function Read() {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showTermBanner, setShowTermBanner] = useState(() => {
     return localStorage.getItem('dismiss-term-banner-observer') !== 'true';
   });
+
+  const search = useSearch();
 
   const dismissTermBanner = () => {
     setShowTermBanner(false);
     localStorage.setItem('dismiss-term-banner-observer', 'true');
   };
 
-  // SEO: Set page-specific title and meta description
-  useEffect(() => {
-    document.title = "Read the Full Theory of Everything v17.2 The Genre-Locking Edition | Project Eternal Lattice";
-    
-    // Update meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Read the complete Theory of Everything ∞ Law of ONE v17.2 - The Genre-Locking Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.');
-    }
-  }, []);
+  // SEO: page-specific title, meta description + social-share card
+  usePageMeta({
+    title: "Read the Full Theory of Everything v17.2 The Genre-Locking Edition | Project Eternal Lattice",
+    description:
+      "Read the complete Theory of Everything ∞ Law of ONE v17.2 - The Genre-Locking Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.",
+    type: "article",
+  });
 
   // Handle scroll to show/hide scroll-to-top button
   useEffect(() => {
@@ -36,12 +39,48 @@ export default function Read() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Deep-link from search: scroll the iframe to a chapter heading by its text.
+  // Keyed on `search` so it re-fires when the ?goto= param changes while the
+  // Read page is already mounted (wouter only remounts on pathname change).
+  useEffect(() => {
+    const goto = new URLSearchParams(search).get('goto')?.trim();
+    if (!goto) return;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    let cancelled = false;
+    const tryScroll = (attempt = 0) => {
+      if (cancelled) return;
+      const doc = iframe.contentDocument;
+      const match = doc
+        ? Array.from(doc.querySelectorAll<HTMLElement>('h1, h2, h3')).find(
+            (h) => (h.textContent || '').trim().replace(/\s+/g, ' ') === goto,
+          )
+        : null;
+      if (match) {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        match.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        return;
+      }
+      if (attempt < 50) setTimeout(() => tryScroll(attempt + 1), 100);
+    };
+
+    const onLoad = () => tryScroll();
+    if (iframe.contentDocument?.readyState === 'complete') tryScroll();
+    iframe.addEventListener('load', onLoad);
+    return () => {
+      cancelled = true;
+      iframe.removeEventListener('load', onLoad);
+    };
+  }, [search]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <div className="min-h-screen bg-transparent pt-24 pb-20">
+      <ReadTableOfContents iframeRef={iframeRef} />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -84,7 +123,7 @@ export default function Read() {
         >
           <a
             href="/api/download/executive-summary-pdf"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 border border-emerald-500/50 rounded-xl text-white font-medium transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 hover:bg-emerald-800 border border-emerald-500/50 rounded-xl text-white font-medium transition-all"
           >
             <FileText className="w-5 h-5" />
             Gateway Edition — A Lighter Path (PDF)
@@ -126,6 +165,7 @@ export default function Read() {
             <FileText className="w-5 h-5" />
             Grief Equation v9 (NEW)
           </Link>
+          <OfflineReadingButton />
         </motion.div>
 
         {/* Reading Progress Tracker */}
@@ -214,6 +254,7 @@ export default function Read() {
             {/* Iframe Container */}
             <div className="relative bg-white">
               <iframe
+                ref={iframeRef}
                 src="/toe-full.html"
                 title="Theory of Everything v17.1 The Genre-Locking Edition - Full Document"
                 className="w-full border-0"

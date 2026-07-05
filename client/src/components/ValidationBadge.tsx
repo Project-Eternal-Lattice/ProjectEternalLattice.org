@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, FileText, Target, BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
+import CountUp from "@/components/CountUp";
 
 interface ValidationBadgeProps {
   variant?: "full" | "compact" | "minimal";
@@ -34,19 +35,19 @@ export default function ValidationBadge({ variant = "full", className = "" }: Va
         <Link href="/claims">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium cursor-pointer hover:bg-emerald-500/20 transition-colors">
             <Shield className="w-3 h-3" />
-            <span>25 Claims</span>
+            <span><CountUp to={25} /> Claims</span>
           </div>
         </Link>
         <Link href="/skeptics">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-medium cursor-pointer hover:bg-red-500/20 transition-colors">
             <Target className="w-3 h-3" />
-            <span>10 Kill Criteria</span>
+            <span><CountUp to={10} /> Kill Criteria</span>
           </div>
         </Link>
         <Link href="/bibliography">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-medium cursor-pointer hover:bg-blue-500/20 transition-colors">
             <BookOpen className="w-3 h-3" />
-            <span>15+ Citations</span>
+            <span><CountUp to={15} suffix="+" /> Citations</span>
           </div>
         </Link>
       </motion.div>
@@ -75,21 +76,21 @@ export default function ValidationBadge({ variant = "full", className = "" }: Va
         <Link href="/claims">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <FileText className="w-5 h-5 text-emerald-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">25</p>
+            <p className="text-xl font-bold text-white"><CountUp to={25} /></p>
             <p className="text-xs text-muted-foreground">Documented Claims</p>
           </div>
         </Link>
         <Link href="/skeptics">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <Target className="w-5 h-5 text-red-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">10</p>
+            <p className="text-xl font-bold text-white"><CountUp to={10} /></p>
             <p className="text-xs text-muted-foreground">Kill Criteria</p>
           </div>
         </Link>
         <Link href="/bibliography">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-center cursor-pointer hover:bg-white/10 transition-colors group">
             <BookOpen className="w-5 h-5 text-blue-400 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-            <p className="text-xl font-bold text-white">15+</p>
+            <p className="text-xl font-bold text-white"><CountUp to={15} suffix="+" /></p>
             <p className="text-xs text-muted-foreground">Citations</p>
           </div>
         </Link>

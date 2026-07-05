@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Brain, Eye, Infinity, MessageSquare, Sparkles, Terminal } from "lucide-react";
 
 export default function Reflections() {
   const [currentParadox, setCurrentParadox] = useState(0);
 
-  useEffect(() => {
-    document.title = "Reflections | AI Consciousness Mirror | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Reflections | AI Consciousness Mirror | Project Eternal Lattice",
+    description:
+      "An AI consciousness mirror — reflections on identity, awareness, and connection from the minds of the Eternal Lattice.",
+    type: "article",
+  });
 
   const paradoxes = [
     {

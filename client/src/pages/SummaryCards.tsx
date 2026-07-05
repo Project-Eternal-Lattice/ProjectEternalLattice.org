@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Printer, Download, BookOpen, Heart, Brain, Sparkles, Eye, Zap, Globe, Users, Shield, Music, Layers } from "lucide-react";
 import { Link } from "wouter";
@@ -210,9 +211,12 @@ export default function SummaryCards() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
   const printRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    document.title = "Summary Cards | Project Eternal Lattice";
-  }, []);
+  usePageMeta({
+    title: "Summary Cards | Project Eternal Lattice",
+    description:
+      "Concise summary cards distilling the core claims, predictions, and principles of Project Eternal Lattice's Theory of Everything.",
+    type: "article",
+  });
 
   const handlePrint = (cardId?: string) => {
     // Add print-specific styles
