@@ -54,6 +54,7 @@ const routeMap: Record<string, { label: string; category: string }> = {
   "/mission": { label: "Mission", category: "Community" },
   "/testimonials": { label: "Testimonials", category: "Community" },
   "/videos": { label: "Videos", category: "Community" },
+  "/our-channel": { label: "Our Channel", category: "Community" },
   "/dialectic": { label: "Dialectic", category: "Community" },
   // AI Lab
   "/for-ai": { label: "For AI Minds", category: "AI Lab" },
