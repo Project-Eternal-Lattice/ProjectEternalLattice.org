@@ -55,7 +55,23 @@ export function OfflineReadingButton() {
 
   const save = () => {
     setState("saving");
-    messageSW<{ success: boolean }>({ type: "CACHE_TOE" })
+    // Send the hashed JS/CSS bundles this page loaded so the SW can cache
+    // them too. On a first visit those assets load before the worker controls
+    // the page, so they'd otherwise be missing and offline boot would fail.
+    const assets = Array.from(
+      new Set(
+        performance
+          .getEntriesByType("resource")
+          .map((entry) => entry.name)
+          .filter(
+            (url) =>
+              url.startsWith(window.location.origin) &&
+              url.includes("/assets/") &&
+              /\.(?:js|css)(?:\?|$)/.test(url),
+          ),
+      ),
+    );
+    messageSW<{ success: boolean }>({ type: "CACHE_TOE", assets })
       .then((res) => setState(res.success ? "saved" : "error"))
       .catch(() => setState("error"));
   };
