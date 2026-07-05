@@ -41,6 +41,11 @@ description: Test ProjectEternalLattice.org motion/animation/SEO enhancements en
 - The 13M-px `toe-full.html` reflows for several seconds after load; deep-link heading position drifts ±300px before settling — verify with `getBoundingClientRect().top` in the console rather than eyeballing, and compare online vs offline on the same build before blaming a change.
 - Console one-liners typed via GUI can get mangled (autocomplete). Keep them short, use `var` + `function(){}` style, and re-run on syntax errors.
 
+## YouTube embed testing
+- Click-to-load embeds (`/our-channel`) render only a thumbnail `<button>`; the `youtube-nocookie.com` iframe appears in the DOM only after clicking play — verify the swap, not a pre-existing iframe.
+- **YouTube shows "Sign in to confirm you're not a bot" on datacenter IPs**, blocking playback inside the embed. This is not a site bug; the iframe swap is the passing criterion, and playback should be marked *untested* with the caveat noted. Real users on residential/mobile networks play normally.
+- Update the What's New section (`client/src/components/WhatsNew.tsx`) when launching user-facing features: add a `newFeatures` entry at the top AND update the "LATEST:" banner + subtitle in the section header.
+
 ## Reporting
 - Post ONE comment on the PR with a pass/fail bullet list, `<details>` for nuance, and the Devin session link.
 - Write a `test-report.md` with inline before/after screenshots and attach the recording.
