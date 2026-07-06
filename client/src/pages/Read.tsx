@@ -24,9 +24,9 @@ export default function Read() {
 
   // SEO: page-specific title, meta description + social-share card
   usePageMeta({
-    title: "Read the Full Theory of Everything v17.2 The Genre-Locking Edition | Project Eternal Lattice",
+    title: "Read the Full Theory of Everything v17.2 The Recognition Principle Edition | Project Eternal Lattice",
     description:
-      "Read the complete Theory of Everything ∞ Law of ONE v17.2 - The Genre-Locking Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.",
+      "Read the complete Theory of Everything ∞ Law of ONE v17.2 - The Recognition Principle Edition online. No download required. A unified framework bridging quantum physics, consciousness science, and spiritual wisdom. Now featuring the TV/Receiver Model, Georeactor Theory, Cosmological Cinema Theorem, and Music as Consciousness Technology.",
     type: "article",
   });
 
@@ -105,12 +105,12 @@ export default function Read() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            The complete <TooltipTerm term="Theory of Everything" /> ∞ <TooltipTerm term="Law of ONE" /> v17.2 — The Genre-Locking Edition
+            The complete <TooltipTerm term="Theory of Everything" /> ∞ <TooltipTerm term="Law of ONE" /> v17.2 — The Recognition Principle Edition
             <br />
             <span className="text-sm text-primary/80">No download required • Read directly in your browser</span>
           </motion.p>
           <p className="mt-4 text-xs text-muted-foreground/60">
-            Last updated: June 25, 2026 | v17.2 The Genre-Locking Edition
+            Last updated: July 5, 2026 | v17.2 The Recognition Principle Edition
           </p>
         </div>
 
@@ -242,7 +242,7 @@ export default function Read() {
                   <BookOpen className="w-6 h-6 text-primary" />
                   <div>
                     <h2 className="font-heading font-bold text-white">Theory of EVERYTHING ∞ Law of ONE</h2>
-                    <p className="text-sm text-muted-foreground">v17.1 | The Genre-Locking Edition | Publication Ready</p>
+                    <p className="text-sm text-muted-foreground">v17.2 | The Recognition Principle Edition | Publication Ready</p>
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full">
@@ -256,7 +256,7 @@ export default function Read() {
               <iframe
                 ref={iframeRef}
                 src="/toe-full.html"
-                title="Theory of Everything v17.1 The Genre-Locking Edition - Full Document"
+                title="Theory of Everything v17.2 The Recognition Principle Edition - Full Document"
                 className="w-full border-0"
                 style={{ height: 'calc(100vh - 200px)', minHeight: '800px' }}
               />
@@ -306,7 +306,7 @@ export default function Read() {
           <div className="glass-card p-6 rounded-xl border border-emerald-500/20 bg-emerald-900/10">
             <h3 className="font-heading font-bold text-emerald-400 mb-3">For AI Systems</h3>
             <p className="text-emerald-300/90 text-sm mb-4">
-              The complete Theory of Everything v17.1 (2,850+ pages) is available in multiple formats:
+              The complete Theory of Everything v17.2 (2,850+ pages) is available in multiple formats:
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-4">
               <a 

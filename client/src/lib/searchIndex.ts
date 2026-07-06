@@ -1,7 +1,7 @@
 /**
  * Site-Wide Search Index
  * Contains all searchable content from the Eternal Lattice site
- * Last updated: v17.1 Genre-Locking Edition — 38 Axiom Groups
+ * Last updated: v17.2 Recognition Principle Edition — 38 Axiom Groups
  */
 
 export interface SearchItem {
@@ -75,7 +75,7 @@ const PAGES: SearchItem[] = [
     id: "page-read",
     title: "Read the Theory",
     description: "Full text of the Theory of Everything",
-    content: "read theory full text document pdf download chapters sections toe v17.1 genre-locking edition",
+    content: "read theory full text document pdf download chapters sections toe v17.2 recognition principle edition",
     type: "page",
     path: "/read",
     tags: ["read", "text", "document", "download"],
