@@ -265,17 +265,17 @@ async function startServer() {
       
       const formats: Record<string, { url: string; contentType: string; filename: string }> = {
         pdf: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/MjAfEwkOyPdaMlaa.pdf',
           contentType: 'application/pdf',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.pdf'
         },
         epub: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ftFnaHQHPWgCjBAQ.epub',
           contentType: 'application/epub+zip',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.epub'
         },
         docx: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx',
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/RHPDUOgmGCfyTWeh.docx',
           contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.docx'
         },
@@ -364,9 +364,9 @@ async function startServer() {
   app.get('/api/health/links', async (req, res) => {
     const links = [
       // ToE Downloads
-      { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf', category: 'download' },
-      { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub', category: 'download' },
-      { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx', category: 'download' },
+      { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/MjAfEwkOyPdaMlaa.pdf', category: 'download' },
+      { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/ftFnaHQHPWgCjBAQ.epub', category: 'download' },
+      { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/RHPDUOgmGCfyTWeh.docx', category: 'download' },
       { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YzEwvULTbqoCbmXq.html', category: 'download' },
       { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf', category: 'download' },
       // Sacred Text PDFs (migrated from CloudFront)

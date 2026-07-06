@@ -3457,3 +3457,10 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 ## HTML Download Fix (July 6, 2026)
 - [x] Fix HTML download serving as .txt instead of .html — uploaded v17.4 to S3 as .html, updated content type to text/html and filename to .html
 - [x] Upload toe-full.txt as proper HTML to S3 and update the download endpoint
+
+## v17.4 Download Format Audit (July 6, 2026)
+- [x] Generate v17.4 PDF from toe-full.txt and upload to S3 (3.3MB, 1428 pages)
+- [x] Generate v17.4 EPUB from toe-full.txt and upload to S3 (1.6MB)
+- [x] Generate v17.4 DOCX from toe-full.txt and upload to S3 (1.5MB)
+- [x] Update all S3 URLs in download endpoint (PDF, EPUB, DOCX — was v16.8, now v17.4)
+- [x] Verify all downloads show v17.4 on title page
