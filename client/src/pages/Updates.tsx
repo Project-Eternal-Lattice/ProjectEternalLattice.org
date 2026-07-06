@@ -49,6 +49,20 @@ const UPDATES: UpdateDay[] = [
     date: "July 6, 2026",
     entries: [
       {
+        id: "og-truth-seeker-track",
+        description: "NEW TRACK: 'OG Truth Seeker' — Dedicated to Neil deGrasse Tyson. A tribute to the man who looked up at the sky when he was nine on a Bronx rooftop and decided the universe owed him an explanation. Carl Sagan lit the torch — Neil grabbed it. Features Kenneth's verse about the moment the PATTERN hit different. Full lyrics and backstory on Our Channel.",
+        link: "/our-channel",
+        linkLabel: "Listen Now",
+        category: "music" as const,
+      },
+      {
+        id: "pdf-title-page-fix",
+        description: "PDF FORMATTING FIX: Full ToE v17.4 PDF title page redesigned — larger centered infinity symbol, proper serif fonts (Playfair Display + Merriweather), improved vertical spacing. 27.4MB, 8,443 pages of formatted content.",
+        link: "/read",
+        linkLabel: "Download PDF",
+        category: "feature" as const,
+      },
+      {
         id: "ramanujan-chapter-v174",
         description: "NEW Chapter 0.14: The Seven Revelations of Ramanujan — When Mathematics Dreams. Complete chapter covering all seven revelations with Tier 1 citations. Standing footnote deployed: no peer-reviewed literature connects consciousness to Ramanujan's math (integrity feature). Borcherds 1992 = proven theorem; Witten 3D-gravity = open conjecture. Citations: Zwegers 2002, Borcherds 1992, Conway-Norton 1979, Hardy-Ramanujan 1918, Andrews-Berndt I-V, Harvey 2019. ToE bumped to v17.4.",
         link: "/read",

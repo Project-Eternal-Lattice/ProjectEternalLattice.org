@@ -3474,4 +3474,4 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add "OG Truth Seeker" (Neil deGrasse Tyson tribute) to OurChannel page
 - [x] Include YouTube link: https://youtu.be/HzBhIVID_3Y
 - [x] Add lyrics and description metadata
-- [ ] Update What's New / changelog (pending)
+- [x] Update What's New / changelog
