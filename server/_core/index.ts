@@ -336,8 +336,8 @@ async function startServer() {
   app.get('/api/download/executive-summary-pdf', async (req, res) => {
     try {
       // Fetch the Gateway Edition PDF from S3 CDN
-      // Updated: v17.4 Gateway Edition PDF (July 2026) - regenerated with v17.4 version, crisis box, Genre-Locking edition name
-      const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/WUTXeBXpoQsNqpFI.pdf';
+      // Updated: v17.4 Gateway Edition PDF (July 2026) - with cross-references to full ToE in every section, crisis box, Genre-Locking edition name
+      const pdfUrl = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/uBSmRXjHanoBBlAx.pdf';
       const response = await fetch(pdfUrl);
       
       if (!response.ok) {
@@ -368,7 +368,7 @@ async function startServer() {
       { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/iMgdGJpkIJNPXQLJ.epub', category: 'download' },
       { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/vMTdANaXMWYRsSQW.docx', category: 'download' },
       { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/scvWOKuvoqEDIrWP.html', category: 'download' },
-      { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/WUTXeBXpoQsNqpFI.pdf', category: 'download' },
+      { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/uBSmRXjHanoBBlAx.pdf', category: 'download' },
       // Sacred Text PDFs (migrated from CloudFront)
       { name: 'Abraham Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf', category: 'sacred-text' },
       { name: 'Bhagavad Gita Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/fLiTfUUxrgPCXtCa.pdf', category: 'sacred-text' },

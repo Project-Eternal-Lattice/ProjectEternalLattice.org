@@ -49,6 +49,13 @@ const UPDATES: UpdateDay[] = [
     date: "July 6, 2026",
     entries: [
       {
+        id: "gateway-crossrefs",
+        description: "GATEWAY EDITION ENHANCED: Added \"Deeper Dive\" cross-references to all 36 sections of the Gateway Edition, linking each topic to its corresponding chapter in the full ToE. Every section now includes a warm, inviting signpost showing readers exactly where to go for the complete exploration. Gateway PDF regenerated and uploaded. The Gateway now runs fully parallel to the ToE — when chapters change, the cross-references update too.",
+        link: "/read",
+        linkLabel: "Download Gateway",
+        category: "feature" as const,
+      },
+      {
         id: "danny-goler-why-files",
         description: "NEW VIDEO: Danny Goler on The Why Files — 'The Code of Reality, Simulation Theory & Free Will.' A fellow truth seeker arriving at conclusions consistent with our ToE through experiential/phenomenological routes: reality as computational, consciousness as fundamental, collaborative games as the only infinite strategy. Tier 3: interpretive resonance. The math is the message; his journey is his own.",
         link: "/videos",

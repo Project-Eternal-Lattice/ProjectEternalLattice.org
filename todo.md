@@ -3485,3 +3485,15 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Verify all fixes — word count preserved, structure validated
 - [x] Regenerate PDF (27.4MB, 8443 pages) and uploaded to S3
 - [x] Update What's New page with structural fixes + Gateway v17.2→v17.4
+
+## Gateway Edition Cross-Reference Enhancement (July 6, 2026)
+- [x] Audit Gateway for existing cross-references (found 3 of 39 sections had refs = 8% coverage)
+- [x] Map all 39 Gateway h2 sections to their corresponding full ToE chapters
+- [x] Write Python script to add "Deeper Dive" cross-reference boxes to all 36 sections missing them
+- [x] Add CSS styling for .deeper-dive class (blue left-border, gradient background, warm colors)
+- [x] Run script — all 36 cross-references added successfully
+- [x] Regenerate Gateway PDF from updated HTML (246 KB, includes all cross-refs)
+- [x] Upload Gateway PDF to S3 and update server endpoint URL
+- [x] Update sitemap/health-links with new Gateway PDF URL
+- [x] Update toe-version-update skill with Gateway Cross-Reference Maintenance rule
+- [x] Update What's New page with Gateway enhancement entry
