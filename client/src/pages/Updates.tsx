@@ -49,6 +49,13 @@ const UPDATES: UpdateDay[] = [
     date: "July 6, 2026",
     entries: [
       {
+        id: "kimi-round3-fixes",
+        description: "KIMI REVIEW ROUND 3 — ANALYSIS COMPLETE: Received comprehensive 8-agent review from Kimi (Moonshot AI). Pushed back on 6 false positives (already-fixed items + intentional design choices). Accepted and implemented 8 genuine fixes: Bell's theorem wording corrected to 'local hidden variables,' HeartMath/Schumann frequency error clarified (0.1 Hz \u2260 7.83 Hz), water memory and morphic resonance flagged as controversial, Appendix W predictions disclaimer added, 'Law of One' standardized to 'Law of ONE' throughout (59 instances), convergence coefficient explained. PDFs regenerated and uploaded.",
+        link: "/read",
+        linkLabel: "View ToE",
+        category: "content" as const,
+      },
+      {
         id: "gateway-crossrefs",
         description: "GATEWAY EDITION ENHANCED: Added \"Deeper Dive\" cross-references to all 36 sections of the Gateway Edition, linking each topic to its corresponding chapter in the full ToE. Every section now includes a warm, inviting signpost showing readers exactly where to go for the complete exploration. Gateway PDF regenerated and uploaded. The Gateway now runs fully parallel to the ToE — when chapters change, the cross-references update too.",
         link: "/read",

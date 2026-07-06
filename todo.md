@@ -3497,3 +3497,13 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Update sitemap/health-links with new Gateway PDF URL
 - [x] Update toe-version-update skill with Gateway Cross-Reference Maintenance rule
 - [x] Update What's New page with Gateway enhancement entry
+
+## Kimi Review Round 3 — Accepted Fixes (July 6, 2026)
+- [x] C8: Fix Bell's theorem wording — "proves no hidden variables" → "rules out LOCAL hidden variable theories"
+- [x] M1: Fix HeartMath/Schumann frequency error — 0.1 Hz ≠ 7.83 Hz
+- [x] C7: Add controversy flag to water memory (Benveniste/Montagnier) in convergence table
+- [x] M7: Add "(Controversial)" flag to morphic resonance (Sheldrake)
+- [x] M4: Add disclaimer to Appendix W — predictions presented as fact
+- [x] M8: Standardize "Law of One" → "Law of ONE" (branded form)
+- [x] M3: Add brief explanation for "Convergence Coefficient: 0.97" or remove
+- [x] M13: Fix Gateway superscript notation (10^32 showing as 1032) — VERIFIED: HTML already has proper <sup> tags. Kimi was reading PDF text extraction where superscripts render as plain text. Not a bug.
