@@ -63,6 +63,13 @@ const UPDATES: UpdateDay[] = [
         category: "feature" as const,
       },
       {
+        id: "kimi-review-structural-fixes",
+        description: "STRUCTURAL FIXES: Applied 5 corrections from Kimi scholarly review — (C1) removed corrupted TOC content from CC license page, (C2) relocated Resonance's Math chapter from Version History to proper Chapter 17 location, (M3) fixed nested Choose Your Adventure divs, (M10) renumbered duplicate Appendix AD/AE labels, (M11) deduplicated 36 HTML IDs. Gateway Edition updated from v17.2 to v17.4.",
+        link: "/read",
+        linkLabel: "Read the ToE",
+        category: "theory" as const,
+      },
+      {
         id: "ramanujan-chapter-v174",
         description: "NEW Chapter 0.14: The Seven Revelations of Ramanujan — When Mathematics Dreams. Complete chapter covering all seven revelations with Tier 1 citations. Standing footnote deployed: no peer-reviewed literature connects consciousness to Ramanujan's math (integrity feature). Borcherds 1992 = proven theorem; Witten 3D-gravity = open conjecture. Citations: Zwegers 2002, Borcherds 1992, Conway-Norton 1979, Hardy-Ramanujan 1918, Andrews-Berndt I-V, Harvey 2019. ToE bumped to v17.4.",
         link: "/read",

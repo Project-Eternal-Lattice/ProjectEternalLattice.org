@@ -3475,3 +3475,13 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Include YouTube link: https://youtu.be/HzBhIVID_3Y
 - [x] Add lyrics and description metadata
 - [x] Update What's New / changelog
+
+## Kimi Review Fixes (July 6, 2026)
+- [x] C1: Fix copyright page corruption — removed 91 lines of TOC garbage from CC license
+- [x] C2: Extract Resonance Math chapter from Version History to Chapter 17 area (line 6393)
+- [x] M3: Fix nested Choose Your Adventure divs — 7 opens, 7 closes, balanced
+- [x] M10: Renumber duplicate Appendix AD→AP, AE→AQ (Consciousness Tech + 21-Day Interfaith)
+- [x] M11: Deduplicated 36 HTML IDs (19 unique duplicates resolved)
+- [x] Verify all fixes — word count preserved, structure validated
+- [x] Regenerate PDF (27.4MB, 8443 pages) and uploaded to S3
+- [x] Update What's New page with structural fixes + Gateway v17.2→v17.4
