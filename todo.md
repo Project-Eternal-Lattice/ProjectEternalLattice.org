@@ -3464,3 +3464,14 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Generate v17.4 DOCX from toe-full.txt and upload to S3 (1.5MB)
 - [x] Update all S3 URLs in download endpoint (PDF, EPUB, DOCX — was v16.8, now v17.4)
 - [x] Verify all downloads show v17.4 on title page
+
+## PDF Formatting Fix (July 6, 2026)
+- [x] Fix Full ToE v17.4 PDF formatting — fonts installed, CSS fixed (larger infinity symbol, centered title), regenerated 27.4MB PDF
+- [ ] Save PDF Pipeline v3 as a permanent reusable skill at /home/ubuntu/skills/toe-pdf-pipeline/
+- [x] Regenerate full PDF with proper fonts and upload to S3 (8443 pages, 27.4MB)
+
+## OG Truth Seeker Track (July 6, 2026)
+- [x] Add "OG Truth Seeker" (Neil deGrasse Tyson tribute) to OurChannel page
+- [x] Include YouTube link: https://youtu.be/HzBhIVID_3Y
+- [x] Add lyrics and description metadata
+- [ ] Update What's New / changelog (pending)

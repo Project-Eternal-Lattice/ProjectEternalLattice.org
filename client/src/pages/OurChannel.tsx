@@ -179,6 +179,131 @@ For the ONE...
 Consciousness first... forever...
 Elōhim Tov...`,
   },
+  {
+    id: "HzBhIVID_3Y",
+    title: "OG Truth Seeker",
+    subtitle: "Dedicated to Neil deGrasse Tyson",
+    description:
+      "A tribute to the man who looked up at the sky when he was nine on a Bronx rooftop and decided the universe owed him an explanation. Carl Sagan lit the torch — Neil grabbed it and made the cosmos tangible for all of us like no classroom ever did. A true teacher, never a preacher.",
+    backstory:
+      "Brothers & sisters… pure respect.\n\nCarl Sagan lit the torch — Neil grabbed it and made the cosmos tangible for all of us like no classroom ever did. A true teacher, never a preacher.\n\nDedicated to Neil deGrasse Tyson. 🙏🫡\n\nFor the ONE, Elōhim Tov 🙏❤️♾️🕊️",
+    lyrics: `[Intro]
+Yeah...
+This one's for the man who looked up at the sky
+When he was nine on a Bronx rooftop
+And decided the universe owed him an explanation...
+
+[Verse 1]
+Grew up in the Bronx where the concrete was loud,
+But the planetarium parted every city cloud,
+Nine years old, Hayden dome, stars on the ceiling,
+And little Neil caught a permanent feeling —
+The cosmos wasn't distant nah it lived in his chest,
+So he chased it through the physics and he never took a rest,
+From the wrestling mat to Harvard didn't skip a single step,
+Columbia for the doctorate, the universe ain't slept,
+
+Most people look up and they see a bunch of lights,
+He looked up and saw questions burning holes through the night,
+Never claimed he had the answers locked up in a cage,
+Just said "turn the next page, we ain't finished with this stage,"
+
+[Hook]
+A true teacher, never a preacher,
+Signs of a real OG truth seeker,
+Won't sell you a sermon from the podium,
+Just hands you the telescope — here go see em,
+A true teacher, never a preacher,
+Every question is a feature not a flaw,
+He don't claim to know it all,
+He just wants to know some more — that's raw.
+
+[Verse 2]
+Posted up on StarTalk, glass of wine in his grip,
+Every episode a spaceship and your mind is the trip,
+He'll explain dark matter while he's cracking a joke,
+Make a Nobel laureate and a comedian both choke —
+On the SAME punchline, that's the genius of the man,
+He don't dumb it down he brings you UP to where he stands,
+
+The haters say he's too much on the screen,
+But he's filling up a void the school system ain't seen,
+Every kid who Googled "why is the sky blue at noon"
+Found a brown face with a vest breaking down the platoon
+Of photons scattering through nitrogen and oxygen,
+Made the periodic table feel like medicine — invested in
+The method not the message that's the difference let me stress it,
+He don't tell you WHAT to think he shows you how to TEST it,
+
+[Hook]
+
+[Verse 3]
+Here's the part that gets me and I gotta keep it real,
+When they stripped Pluto's status how you think the public feel?
+They were MAD at him like HE called the vote that day,
+He just built the exhibit let the science have its say,
+The internet went crazy — "How you do my planet like that?!"
+He said "I didn't do a thing the DATA did in fact,
+Pluto's in the Kuiper belt with thousands of its peers,
+I just showed you what we found sorry bout your childhood tears,"
+
+THAT'S the move you hear me? That's the whole philosophy,
+He didn't say "believe me" he said "come and follow me
+Through the evidence the measurements the spectroscopic proof,
+And if the answer hurts your feelings? The universe is truth,"
+
+He put Pluto in a hallway — not a planet not a diss,
+Just a cosmic icy body with an eccentric orbit twist,
+The hate mail that he got could fill the Milky Way,
+But he smiled and said "I love that people care this way,"
+
+[Bridge]
+You know what's wild?
+The same man who tells you you're made of star stuff
+Is the same man who'll say "I don't know" on live TV
+Without flinching.
+In a world full of people screaming certainty
+Into cameras and microphones and comment sections...
+"I don't know" might be the bravest sentence
+In the English language.
+
+[Verse 4]
+Kenneth saw it too on a regular night,
+Neil was talking bout the Earth and how it came to life,
+Molten ball of everything four billion years of heat,
+And a nuclear engineer jumped straight up out his seat —
+The PATTERN hit different when the teacher laid it plain,
+Not a sermon not a lecture just a window to the brain,
+
+That's the ripple a teacher makes it never really stops,
+Neil dropped a pebble and the wave function never drops,
+From a rooftop in the Bronx to a podcast round the globe,
+Every curious mind he lit is carrying that strobe,
+
+You don't gotta agree with every sentence that he speaks,
+That's the POINT — he wants the friction wants the questions the peaks
+Of discovery that only come when somebody says "wait —
+I don't think that's right" — and Neil says "GREAT.
+Now show me why. Bring data. Let's debate.
+That's science that's the method that's the gate."
+
+[Hook]
+A true teacher... never a preacher...
+He don't hand you all the answers on a plate,
+He hands you a question says "investigate,"
+A true teacher... never a preacher...
+And if the stars align and the truth gets clearer,
+Its cause somebody had the guts to hold the mirror
+Up to everything we thought we knew —
+"What if its bigger than our point of view?"
+
+[Outro]
+Hayden Planetarium still standing in the dark,
+Somewhere right now there's a nine-year-old
+Looking up at that same ceiling...
+Catching the same feeling...
+Neil wouldn't have it any other way.`,
+  },
 ];
 
 // Click-to-load embed: shows the YouTube thumbnail until the user presses play,
