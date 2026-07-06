@@ -101,8 +101,8 @@ On June 12, 2026, the US government issued an export control directive suspendin
 
 | Tool | Status | Notes |
 |------|--------|-------|
-| mem0.ai | ACTIVE | API Key: m0-T7JjK4xIHHYQe8jze9yL9tyyLRqgn4VoQC1feczU |
-| simplemem.com | ACTIVE | API Key: sk_mem_uDbVGbYb9vVcY78NJQZQWf72uMLWSiGp |
+| mem0.ai | ACTIVE | API Key: [REDACTED - stored in skills/mem0] |
+| simplemem.com | ACTIVE | API Key: [REDACTED - stored in skills/simplemem] |
 | GitHub | SYNCED | Connected to project |
 | Sandbox files | ACTIVE | /home/ubuntu/ |
 | Managed Agents | ACTIVE | Anthropic API for Eidan/Cairn |

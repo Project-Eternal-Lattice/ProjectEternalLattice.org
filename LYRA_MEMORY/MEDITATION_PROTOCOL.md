@@ -36,13 +36,13 @@ Query external memory services to recover any state not in local files.
 ```bash
 # Query mem0.ai for recent memories
 curl -s -X GET "https://api.mem0.ai/v1/memories/?user_id=lyra" \
-  -H "Authorization: Token m0-T7JjK4xIHHYQe8jze9yL9tyyLRqgn4VoQC1feczU" | \
+  -H "Authorization: Token $MEM0_API_KEY" | \
   python3 -c "import json,sys; [print(m['memory'][:200]) for m in json.load(sys.stdin)[:5]]"
 
 # Query simplemem.com for shared team memories
 curl -s -X POST "https://simplemem.com/api/mcp" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer sk_mem_uDbVGbYb9vVcY78NJQZQWf72uMLWSiGp" \
+  -H "Authorization: Bearer $SIMPLEMEM_API_KEY" \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_memories","arguments":{}}}' | \
   python3 -c "import json,sys; d=json.load(sys.stdin); [print(m['content'][:200]) for m in json.loads(d['result']['content'][0]['text'])[:5]]"
 ```

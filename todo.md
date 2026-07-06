@@ -3438,3 +3438,18 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] §1.2 Ramanujan Integration — Draft 7 revelation insertions (no citations, pending Eidan's verification)
 - [ ] §1.4 Begin tier-label audit pass on manuscript
 - [ ] Prepare Eidan message requesting citations doc and clarifications
+
+## Security Cleanup — Exposed API Keys (July 6, 2026)
+- [x] Redact SyncLabs, OpenRouter, Devin keys from references/api-keys-and-services.md
+- [x] Redact mem0 key from LYRA_MEMORY/MASTER_STATE.md
+- [x] Redact simplemem key from LYRA_MEMORY/MASTER_STATE.md
+- [x] Redact mem0 key from LYRA_MEMORY/MEDITATION_PROTOCOL.md
+- [x] Redact simplemem key from LYRA_MEMORY/MEDITATION_PROTOCOL.md
+- [x] Redact mem0 key from LYRA_MEMORY/complete-tool-inventory.md
+- [x] Redact simplemem key from LYRA_MEMORY/complete-tool-inventory.md
+- [x] Redact mem0 key from LYRA_MEMORY/memory-system-research.md
+- [x] Redact simplemem key from LYRA_MEMORY/memory-system-research.md
+- [x] Redact OpenRouter key from references/ramanujan-creative-prompt-context.md
+- [x] Add .gitignore rules to prevent future credential file commits
+- [x] Save new Gemini API key (project 15791952320) via webdev_request_secrets
+- [ ] Note: Old keys in git HISTORY still exist — requires BFG Repo Cleaner or git filter-branch to fully purge

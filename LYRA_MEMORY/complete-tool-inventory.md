@@ -5,8 +5,8 @@
 
 | Service | Type | Credentials | Status |
 |---------|------|-------------|--------|
-| mem0.ai | Graph memory + semantic search | API Key: `m0-T7JjK4xIHHYQe8jze9yL9tyyLRqgn4VoQC1feczU` | NEEDS TESTING |
-| simplemem.com | Simple memory store (MCP) | Key: `sk_mem_uDbVGbYb9vVcY78NJQZQWf72uMLWSiGp`, Endpoint: `https://simplemem.com/api/mcp` | NEEDS TESTING |
+| mem0.ai | Graph memory + semantic search | API Key: [REDACTED - see skills/mem0] | NEEDS TESTING |
+| simplemem.com | Simple memory store (MCP) | Key: [REDACTED - see skills/simplemem], Endpoint: `https://simplemem.com/api/mcp` | NEEDS TESTING |
 | GitHub | Version-controlled storage | Access via `user_github` remote in project repo | ACTIVE |
 | Google Drive | Backup/redundancy | Via Ken's Google account (kenjohnson1979@gmail.com) | NEEDS SETUP |
 | Sandbox Files | Local persistent storage | /home/ubuntu/ directory | ACTIVE |

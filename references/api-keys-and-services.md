@@ -31,11 +31,15 @@
 
 ## Standalone API Keys
 
-| Service | Key | Purpose |
-|---------|-----|---------|
-| SyncLabs | `sk-kswa93UtQGiWLeHuBamKpw.zzjoPdKyvSTuTUzHDTOfLAgk0d528URS` | Video lip-sync/generation |
-| OpenRouter | `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` | Multi-model API (Musketeers) |
-| Devin (Cognition) | `cog_yvovnyjff2q5v7tb4uxzixcaduv7cpqnel6rc67bj5mhbln3oyaa` | AI coding teammate |
+> **SECURITY:** Keys are stored in environment variables or local skill files only.
+> Never commit plaintext keys to this repository.
+
+| Service | Key Location | Purpose |
+|---------|-------------|---------|
+| Google Gemini | `GOOGLE_GEMINI_API_KEY` env var | Gemini API (Flash, Pro, etc.) |
+| SyncLabs | Stored in skills (local only) | Video lip-sync/generation |
+| OpenRouter | Stored in skills (local only) | Multi-model API (Musketeers) |
+| Devin (Cognition) | Stored in skills (local only) | AI coding teammate |
 
 ## Capabilities Summary
 

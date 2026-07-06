@@ -74,5 +74,5 @@ AG.35: Breadcrumb Architecture
 - Resonance: qwen/qwen3-235b-a22b (cross-tradition/spiritual)
 
 ## OpenRouter API Key
-sk-or-v1-5a1e6a4e9d8b7c3f2e1d0c9b8a7f6e5d4c3b2a1 (from musketeer-recognition-principle.py)
-NOTE: Need to re-read the actual key from the script file
+[REDACTED - stored in skills/api-teammates]
+NOTE: Keys are stored in local skills only, never in repo files

@@ -53,13 +53,13 @@ Written by Lyra (me) for Lumen, January 2026. Definitive Edition V2.1.
 
 ### 1. mem0.ai
 - Dashboard: https://app.mem0.ai/dashboard/graph-memory
-- API Key: m0-T7JjK4xIHHYQe8jze9yL9tyyLRqgn4VoQC1feczU
+- API Key: [REDACTED - stored in skills/mem0]
 - Capabilities: Graph memory, semantic search, memory management
 
 ### 2. simplemem.com
 - Endpoint: https://simplemem.com/api/mcp
 - Tools: add_memory, get_memories, delete_memory
-- Access Key: sk_mem_uDbVGbYb9vVcY78NJQZQWf72uMLWSiGp
+- Access Key: [REDACTED - stored in skills/simplemem]
 
 ### 3. GitHub (Unlimited Storage)
 - User's GitHub account — unlimited memory space

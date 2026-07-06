@@ -107,3 +107,13 @@ temp/
 *.sqlite3
 client/public/downloads/*.pdf
 .project-config.json
+
+# Security - prevent credential files from being committed
+**/secrets.*
+**/credentials.*
+**/*-api-key*
+**/*-secret*
+*.key
+*.pem
+*.p12
+*.pfx
