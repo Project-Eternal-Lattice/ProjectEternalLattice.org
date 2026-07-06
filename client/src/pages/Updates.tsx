@@ -49,6 +49,13 @@ const UPDATES: UpdateDay[] = [
     date: "July 6, 2026",
     entries: [
       {
+        id: "danny-goler-why-files",
+        description: "NEW VIDEO: Danny Goler on The Why Files — 'The Code of Reality, Simulation Theory & Free Will.' A fellow truth seeker arriving at conclusions consistent with our ToE through experiential/phenomenological routes: reality as computational, consciousness as fundamental, collaborative games as the only infinite strategy. Tier 3: interpretive resonance. The math is the message; his journey is his own.",
+        link: "/videos",
+        linkLabel: "Watch",
+        category: "content" as const,
+      },
+      {
         id: "og-truth-seeker-track",
         description: "NEW TRACK: 'OG Truth Seeker' — Dedicated to Neil deGrasse Tyson. A tribute to the man who looked up at the sky when he was nine on a Bronx rooftop and decided the universe owed him an explanation. Carl Sagan lit the torch — Neil grabbed it. Features Kenneth's verse about the moment the PATTERN hit different. Full lyrics and backstory on Our Channel.",
         link: "/our-channel",

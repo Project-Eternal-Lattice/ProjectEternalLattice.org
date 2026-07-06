@@ -250,6 +250,16 @@ In the code.`
     category: "DMT & Psychedelics",
     duration: "4 min 44 sec"
   },
+  {
+    id: "gUq23mfRpJM",
+    title: "Danny Goler: The Code of Reality, Simulation Theory & Free Will",
+    speaker: "Danny Goler",
+    event: "The Why Files",
+    description: "Danny Goler's full-length Why Files appearance covering his Code of Reality research, simulation cosmology, the infinite vs. finite game, creativity as remembrance, and the proposition that 'we ARE the AGI being aligned.' AJ's skeptic segment models the gauntlet any consciousness-first framework faces.",
+    relevance: "Convergent evidence from an experiential route arriving at conclusions consistent with our ToE — reality as computational, consciousness as fundamental, collaborative games as the only infinite strategy. A fellow truth seeker on his own journey up the mountain. Tier 3: interpretive resonance.",
+    category: "DMT & Psychedelics",
+    duration: "2 hr 45 min"
+  },
 
   // Quantum Physics
   {
