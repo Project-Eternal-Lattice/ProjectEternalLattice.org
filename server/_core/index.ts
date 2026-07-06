@@ -280,9 +280,9 @@ async function startServer() {
           filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.docx'
         },
         html: {
-          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/XRyPqvMrrNrsaAWm.txt',
-          contentType: 'text/plain; charset=utf-8',
-          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.txt'
+          url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YzEwvULTbqoCbmXq.html',
+          contentType: 'text/html; charset=utf-8',
+          filename: 'Theory_of_EVERYTHING_Law_of_ONE_v17.4_The_Genre-Locking_Edition.html'
         }
       };
       
@@ -367,7 +367,7 @@ async function startServer() {
       { name: 'ToE Full PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/kpBAUujgozCVIClz.pdf', category: 'download' },
       { name: 'ToE Full EPUB', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AoSxbMXHQMQtjbch.epub', category: 'download' },
       { name: 'ToE Full DOCX', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/EGDCXdcuCbarYNWL.docx', category: 'download' },
-      { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/VYPXYirmZBMpDiXa.html', category: 'download' },
+      { name: 'ToE Full HTML', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/YzEwvULTbqoCbmXq.html', category: 'download' },
       { name: 'Gateway Edition PDF', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/AnxyEpansGsSoxJC.pdf', category: 'download' },
       // Sacred Text PDFs (migrated from CloudFront)
       { name: 'Abraham Sacred Text', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663251741040/SHXWXLSpqJrHqpSJ.pdf', category: 'sacred-text' },

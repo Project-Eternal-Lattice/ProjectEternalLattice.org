@@ -3453,3 +3453,7 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] Add .gitignore rules to prevent future credential file commits
 - [x] Save new Gemini API key (project 15791952320) via webdev_request_secrets
 - [ ] Note: Old keys in git HISTORY still exist — requires BFG Repo Cleaner or git filter-branch to fully purge
+
+## HTML Download Fix (July 6, 2026)
+- [x] Fix HTML download serving as .txt instead of .html — uploaded v17.4 to S3 as .html, updated content type to text/html and filename to .html
+- [x] Upload toe-full.txt as proper HTML to S3 and update the download endpoint
