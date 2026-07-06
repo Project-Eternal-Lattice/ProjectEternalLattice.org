@@ -46,6 +46,51 @@ const CATEGORY_CONFIG: Record<UpdateCategory, { icon: React.ElementType; color: 
 // ═══════════════════════════════════════════════════════════════════
 const UPDATES: UpdateDay[] = [
   {
+    date: "July 6, 2026",
+    entries: [
+      {
+        id: "ramanujan-chapter-v174",
+        description: "NEW Chapter 0.14: The Seven Revelations of Ramanujan — When Mathematics Dreams. Complete chapter covering all seven revelations with Tier 1 citations. Standing footnote deployed: no peer-reviewed literature connects consciousness to Ramanujan's math (integrity feature). Borcherds 1992 = proven theorem; Witten 3D-gravity = open conjecture. Citations: Zwegers 2002, Borcherds 1992, Conway-Norton 1979, Hardy-Ramanujan 1918, Andrews-Berndt I-V, Harvey 2019. ToE bumped to v17.4.",
+        link: "/read",
+        linkLabel: "Read the ToE",
+        category: "theory" as const,
+      },
+    ],
+  },
+  {
+    date: "July 5, 2026",
+    entries: [
+      {
+        id: "youtube-channel-launch",
+        description: "LAUNCHED: Our Channel page — Project Eternal Lattice YouTube Channel (@Project_Eternal_Lattice1). Original AI-generated music that encodes the ToE origin narrative into frequency. First two tracks: 'Hole in One (Hold My Beer)' — golf as metaphor for God's presence through life's course; 'Consciousness First (Tier Infinity)' — the entire ToE birth narrative from DMT ceiling crack to arXiv stamp in 4 minutes. Full lyrics, backstories, and embedded video player.",
+        link: "/our-channel",
+        linkLabel: "Our Channel",
+        category: "music" as const,
+      },
+      {
+        id: "bridge-chapter-v173",
+        description: "NEW O.10.9 Bridge Chapter — The Bridge: From This Book to the Paper. Dual-document format: Cole Trickle version (Kenneth's voice, concert metaphor) + Technical version (field equation, Master ODE, tier labels). Connects the 527,000-word book to the 15-page arXiv paper.",
+        link: "/read",
+        linkLabel: "Read the ToE",
+        category: "theory" as const,
+      },
+      {
+        id: "dmt-origin-preface-v173",
+        description: "NEW DMT Origin Acknowledgment in Preface. First-person account of the DMT experience as origin catalyst. Full chain: DMT \u2192 Buddhism \u2192 Monastery \u2192 Baby Viv \u2192 Question \u2192 Framework. Ramanujan/Namagiri parallel. Epistemic honesty: consistent with, not proof of.",
+        link: "/read",
+        linkLabel: "Read the ToE",
+        category: "theory" as const,
+      },
+      {
+        id: "tier-infinity-appendix-v173",
+        description: "NEW O.12 Tier Infinity — The Living Origin Song. Complete verbatim lyrics of the first PEL original composition. The entire ToE origin narrative compressed into four minutes of frequency. Epigraph deployed at Foundation Fix chapter opening. ToE bumped to v17.3.",
+        link: "/our-channel",
+        linkLabel: "Our Channel",
+        category: "feature" as const,
+      },
+    ],
+  },
+  {
     date: "June 25, 2026",
     entries: [
       {
