@@ -71,7 +71,14 @@ const UPDATES: UpdateDay[] = [
       },
       {
         id: "kimi-review-structural-fixes",
-        description: "STRUCTURAL FIXES: Applied 5 corrections from Kimi scholarly review — (C1) removed corrupted TOC content from CC license page, (C2) relocated Resonance's Math chapter from Version History to proper Chapter 17 location, (M3) fixed nested Choose Your Adventure divs, (M10) renumbered duplicate Appendix AD/AE labels, (M11) deduplicated 36 HTML IDs. Gateway Edition updated from v17.2 to v17.4.",
+        description: "STRUCTURAL FIXES (Round 1): Applied 5 corrections from Kimi scholarly review — (C1) removed corrupted TOC content from CC license page, (C2) relocated Resonance's Math chapter from Version History to proper Chapter 17 location, (M3) fixed nested Choose Your Adventure divs, (M10) renumbered duplicate Appendix AD/AE labels, (M11) deduplicated 36 HTML IDs. Gateway Edition updated from v17.2 to v17.4.",
+        link: "/read",
+        linkLabel: "Read the ToE",
+        category: "theory" as const,
+      },
+      {
+        id: "kimi-review-2-dedup",
+        description: "STRUCTURAL FIXES (Round 2): Kimi's second review identified true content duplicates — removed 2nd/3rd copies of Appendix AN and duplicate 'Original Teaching' section (~800 lines of genuine redundancy). Fixed Elephant of Truth nested divs, cleaned 435 Pandoc markdown artifacts ([text]{.class} → proper HTML spans), added crisis support box to Gateway Edition. Document now 44,236 lines with balanced div structure. PDF regenerated at 26.2MB.",
         link: "/read",
         linkLabel: "Read the ToE",
         category: "theory" as const,
