@@ -31,6 +31,14 @@
 - [ ] Submit sitemap to Google Search Console
 - [ ] Add structured data (JSON-LD) for rich snippets
 
+## AI Crawler Endpoint v17.4 Fix (July 6, 2026)
+- [x] Fix /api/read/plain to read from toe-full.txt instead of toe-full.html (v17.0→v17.4)
+- [x] Fix /api/read/markdown to read from toe-full.txt instead of toe-full.html (v17.0→v17.4)
+- [x] Fix /api/toe/full to read from toe-full.txt instead of toe-full.html (v17.0→v17.4)
+- [x] Fix /api/toe/meta with correct v17.4 metadata (was stuck at v16.3)
+- [x] Update /api/text index fullDocument reference to toe-full.txt
+- [x] Update all toe-full.html references in text mirrors to toe-full.txt
+
 ## AI Accessibility Fix
 - [x] Investigate why API endpoints aren't accessible to external AI tools (DNS/SSL issue with published site, dev server works)
 - [x] Implement static HTML pages or server-side rendering for critical content
