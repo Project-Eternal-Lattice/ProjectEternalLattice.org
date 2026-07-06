@@ -3421,3 +3421,12 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [ ] Follow the most promising rabbit holes from wide research and Musketeer findings
 - [ ] Write synthesis report on what Ramanujan's work teaches our ToE and where it inspires future development
 - [ ] Catalog any new Ramanujan-to-ToE insights for future website or manuscript integration
+
+## Phase 7: Eidan Handoff — ToE Manuscript Updates (July 5, 2026)
+- [ ] §1.1 Bridge Chapter — Cole Trickle version (zero equations, zero jargon)
+- [ ] §1.1 Bridge Chapter — Technical version (with equations)
+- [x] §1.4 Fix Calabrese-Cardy convergence level (Level 2, not Level 3) in manuscript
+- [ ] §1.5 DMT Origin Acknowledgment section draft
+- [ ] §1.2 Ramanujan Integration — Draft 7 revelation insertions (no citations, pending Eidan's verification)
+- [ ] §1.4 Begin tier-label audit pass on manuscript
+- [ ] Prepare Eidan message requesting citations doc and clarifications
