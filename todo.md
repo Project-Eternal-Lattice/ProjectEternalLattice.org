@@ -3507,3 +3507,14 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] M8: Standardize "Law of One" → "Law of ONE" (branded form)
 - [x] M3: Add brief explanation for "Convergence Coefficient: 0.97" or remove
 - [x] M13: Fix Gateway superscript notation (10^32 showing as 1032) — VERIFIED: HTML already has proper <sup> tags. Kimi was reading PDF text extraction where superscripts render as plain text. Not a bug.
+
+## Kimi Review Round 3 — Structural Fixes (July 6, 2026)
+- [x] C5: Fix Φ-Field Spectrum diagram nesting (240 instances of <p><div> invalid HTML fixed)
+- [x] M10: Relocate Resonance Math chapter from inside Version History to before it
+- [x] M11: Convert 7 Validations plain-text table to proper HTML table
+- [x] C4: Write abbreviated body content for Chapters 0.2-0.5 with cross-reference notes
+- [x] C1: Deploy epistemic dual-column tags (AXIOM × CONFIRMED format) — 21 tags + legend in Preface
+- [x] M5: Verified HTML tables are structurally valid (Kimi was reading pipe-separated text in pre blocks, not broken tables)
+- [x] M9: Verified Appendices A/B are TOC-level entries (content lives in later appendices AG/AH/etc. — intentional structure)
+- [x] Regenerate ToE PDF (26.5 MB, 7,869 pages) and Gateway PDF (252 KB)
+- [x] Upload all files to S3 and update all download endpoints
