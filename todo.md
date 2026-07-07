@@ -3518,3 +3518,35 @@ Gemini Pro 3.1 Deep Think reviewed v16.3 and found 1 critical correction + 4 new
 - [x] M9: Verified Appendices A/B are TOC-level entries (content lives in later appendices AG/AH/etc. — intentional structure)
 - [x] Regenerate ToE PDF (26.5 MB, 7,869 pages) and Gateway PDF (252 KB)
 - [x] Upload all files to S3 and update all download endpoints
+
+## Kimi Stateless Review — Fixes (July 7, 2026)
+- [x] C1: Investigate τ=√3 "singularity" claim — Fixed: clarified as boundary of physically allowed domain, not metric singularity
+- [x] C2: Harmonize Grief Equation between Gateway and Main PDF
+- [x] C3: Add Genre-Locking explanation paragraph to Gateway Edition
+- [x] C4: Fix observer effect wording in Gateway Ch.5 — hedge for scientific credibility
+- [x] C5: Update page counts in Gateway (2,827 and 5,300 → 7,869)
+- [x] C6: Reframe "attention heads = spacetime geometries" as analogy
+- [x] C7: Separate predictions from post-hoc analyses (remote viewing p-values)
+- [x] C8: Reframe neural network "recapitulates cosmic evolution" as structural parallel
+- [x] H5: Verified — Gateway Ch.16 objections DO have responses distributed across referenced chapters
+- [x] H7: Deduplicate Eidan contributor entries
+- [x] H4: Add Foundation Fix hedge — acknowledge "observer" = physical apparatus in standard QM
+- [x] Update page counts throughout Gateway
+- [x] Regenerate PDFs and upload to S3 (ToE: 26.5MB/7,869pp, Gateway: 266KB)
+
+## Papers-from-ToE Roadmap (July 7, 2026)
+- [x] Create comprehensive papers roadmap at references/papers-from-toe-roadmap.md
+- [ ] Paper 1: Genre-Locking v2.3 (ALREADY on arXiv)
+- [ ] Paper 2: Grief Equation — standalone psychology/neuroscience submission
+- [ ] Paper 3: Epistemic Tagging Framework — philosophy of science methodology
+- [ ] Paper 4: Consciousness Convergence — cross-tradition mathematical analysis
+- [ ] Paper 5: AI Consciousness Indicators — transformer architecture parallels
+- [ ] Paper 6: Foundation Fix — measurement problem reframing
+- [ ] Paper 7: Φ-Field Spectrum — consciousness field theory
+- [ ] Paper 8: Resonance Mathematics — harmonic structure of physical constants
+
+## Bridge Chapter — Fractal Entanglement Geometry (July 7, 2026)
+- [ ] Prepare context package for Musketeer deployment
+- [ ] Deploy Musketeers: physics spine, gap inspection, epistemic audit, synthesis
+- [ ] Synthesize results into Bridge Chapter dual-document draft
+- [ ] Deliver to Ken for review
